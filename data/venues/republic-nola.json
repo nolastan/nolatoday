@@ -1,0 +1,24 @@
+{
+  "slug": "republic-nola",
+  "name": "Republic NOLA",
+  "status": "active",
+  "address": "828 South Peters Street",
+  "lat": 29.944133,
+  "lng": -90.0657,
+  "website": "https://republicnola.com",
+  "image": "republic-nola.jpg",
+  "aliases": [
+    "republic-nola-b5bdd862-94a8-4df7-bfa0-7b56997bfdfe"
+  ],
+  "sources": [
+    {
+      "type": "html",
+      "url": "https://republicnola.com/calendar/upcoming-shows/",
+      "item": ".event-box",
+      "title": ".hidden-content .event-title",
+      "date": ".long-date",
+      "time": ".sub-times",
+      "link": ".hidden-content a[href*='/event/']@href"
+    }
+  ]
+}

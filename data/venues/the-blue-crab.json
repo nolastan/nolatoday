@@ -1,0 +1,17 @@
+{
+  "slug": "the-blue-crab",
+  "name": "The Blue Crab",
+  "status": "active",
+  "address": "7900 Lakeshore Drive",
+  "lat": 30.02583,
+  "lng": -90.113398,
+  "website": "https://thebluecrabnola.com",
+  "image": "the-blue-crab.jpg",
+  "aliases": [],
+  "sources": [
+    {
+      "type": "ics",
+      "url": "https://calendar.google.com/calendar/ical/thebluecrabnola.com_obtu0il69hauvremeic6v6smio%40group.calendar.google.com/public/basic.ics"
+    }
+  ]
+}

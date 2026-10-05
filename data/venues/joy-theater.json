@@ -1,0 +1,25 @@
+{
+  "slug": "joy-theater",
+  "name": "The Joy Theater",
+  "status": "active",
+  "address": "1200 Canal Street",
+  "lat": 29.956004,
+  "lng": -90.073985,
+  "website": "https://thejoytheater.com",
+  "image": null,
+  "aliases": [],
+  "sources": [
+    {
+      "type": "html",
+      "url": "https://thejoytheater.com/shows/",
+      "item": ".tw-section",
+      "title": ".tw-name",
+      "date": ".tw-event-date",
+      "time": ".tw-event-time",
+      "link": ".tw-name a@href",
+      "exclude": [
+        "\\bday pass\\b"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "slug": "gasa-gasa",
+  "name": "Gasa Gasa",
+  "status": "active",
+  "address": "4920 Freret St",
+  "lat": 29.934842,
+  "lng": -90.107898,
+  "website": "https://gasagasa.com",
+  "image": "gasa-gasa.jpg",
+  "aliases": [],
+  "sources": [
+    {
+      "type": "jsonld",
+      "url": "https://www.ticketweb.com/venue/gasa-gasa-new-orleans-la/253094"
+    }
+  ]
+}

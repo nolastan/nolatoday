@@ -1,0 +1,19 @@
+{
+  "slug": "nola-brewing",
+  "name": "NOLA Brewing",
+  "status": "active",
+  "address": "3001 Tchoupitoulas St.",
+  "lat": 29.919952,
+  "lng": -90.081418,
+  "website": "https://www.nolabrewing.com",
+  "image": "nola-brewing.jpg",
+  "aliases": [],
+  "sources": [
+    {
+      "type": "spothopper",
+      "spotId": 80772,
+      "url": "https://www.nolabrewing.com/new-orleans-irish-channel-nola-brewing-live-music-and-events",
+      "stripTitle": "^FREE LIVE MUSIC:\\s*"
+    }
+  ]
+}

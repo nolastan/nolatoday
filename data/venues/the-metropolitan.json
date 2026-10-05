@@ -1,0 +1,17 @@
+{
+  "slug": "the-metropolitan",
+  "name": "The Metropolitan",
+  "status": "active",
+  "address": "310 Andrew Higgins Blvd",
+  "lat": 29.941848,
+  "lng": -90.068462,
+  "website": "http://www.themetronola.com",
+  "image": null,
+  "aliases": [],
+  "sources": [
+    {
+      "type": "eventbrite",
+      "url": "https://www.eventbrite.com/o/the-metropolitan-17434213154"
+    }
+  ]
+}

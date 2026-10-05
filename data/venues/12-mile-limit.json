@@ -1,0 +1,18 @@
+{
+  "slug": "12-mile-limit",
+  "name": "12 Mile Limit",
+  "status": "active",
+  "address": "500 S. Telemachus Street",
+  "lat": 29.968249,
+  "lng": -90.099867,
+  "website": "https://www.twelvemilelimit.com",
+  "image": "12-mile-limit.jpg",
+  "aliases": [],
+  "sources": [
+    {
+      "type": "spothopper",
+      "spotId": 75769,
+      "url": "https://www.twelvemilelimit.com/new-orleans-mid-city-twelve-mile-limit-events"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "slug": "the-spotted-cat",
+  "name": "The Spotted Cat",
+  "status": "active",
+  "address": "623 Frenchmen Street",
+  "lat": 29.964081,
+  "lng": -90.057633,
+  "website": "https://www.spottedcatmusicclub.com",
+  "image": "the-spotted-cat.jpg",
+  "aliases": [],
+  "sources": [
+    {
+      "type": "gigulator",
+      "site": 1052,
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    }
+  ]
+}

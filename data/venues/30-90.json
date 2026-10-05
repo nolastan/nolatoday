@@ -1,0 +1,18 @@
+{
+  "slug": "30-90",
+  "name": "30°/-90°",
+  "status": "active",
+  "address": "520 Frenchmen Street",
+  "lat": 29.962831,
+  "lng": -90.057775,
+  "website": "https://www.3090-nola.com",
+  "image": "30-90.jpg",
+  "aliases": [],
+  "sources": [
+    {
+      "type": "squarespace",
+      "url": "https://www.3090-nola.com/calendar",
+      "collectionId": "6429e4a895dda1251b28d742"
+    }
+  ]
+}

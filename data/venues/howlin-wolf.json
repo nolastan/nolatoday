@@ -1,0 +1,17 @@
+{
+  "slug": "howlin-wolf",
+  "name": "Howlin' Wolf",
+  "status": "active",
+  "address": "907 South Peters",
+  "lat": 29.942697,
+  "lng": -90.065923,
+  "website": "https://www.thehowlinwolf.com",
+  "image": "howlin-wolf.jpg",
+  "aliases": [],
+  "sources": [
+    {
+      "type": "jsonld",
+      "url": "https://www.ticketweb.com/venue/howlin-wolf-new-orleans-la/15005"
+    }
+  ]
+}

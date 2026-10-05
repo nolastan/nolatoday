@@ -1,0 +1,19 @@
+{
+  "slug": "blue-nile",
+  "name": "Blue Nile",
+  "status": "active",
+  "address": "532 Frenchmen Street",
+  "lat": 29.963144,
+  "lng": -90.05786,
+  "website": "https://www.bluenilelive.com",
+  "image": "blue-nile.jpg",
+  "aliases": [],
+  "sources": [
+    {
+      "type": "squarespace",
+      "url": "https://www.bluenilelive.com/calendar-tickets-",
+      "timeFromTitle": true,
+      "stripTitle": "\\s*•.*$"
+    }
+  ]
+}

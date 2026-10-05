@@ -1,0 +1,17 @@
+{
+  "slug": "the-columns",
+  "name": "The Columns",
+  "status": "active",
+  "address": "3811 St. Charles Avenue",
+  "lat": 29.927436,
+  "lng": -90.096152,
+  "website": "https://thecolumns.com",
+  "image": "the-columns.jpg",
+  "aliases": [],
+  "sources": [
+    {
+      "type": "tribe",
+      "url": "https://thecolumns.com"
+    }
+  ]
+}

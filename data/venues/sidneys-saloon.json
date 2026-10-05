@@ -1,0 +1,18 @@
+{
+  "slug": "sidneys-saloon",
+  "name": "Holy Diver",
+  "status": "active",
+  "address": "1200 St. Bernard Avenue",
+  "lat": 29.968162,
+  "lng": -90.06313,
+  "website": "https://holydivernola.com",
+  "image": "sidneys-saloon.jpg",
+  "aliases": [],
+  "sources": [
+    {
+      "type": "squarespace",
+      "url": "https://holydivernola.com/events-calendar"
+    }
+  ],
+  "note": "Formerly Sidney's Saloon."
+}

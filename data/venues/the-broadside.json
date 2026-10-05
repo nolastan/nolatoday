@@ -1,0 +1,14 @@
+{
+  "slug": "the-broadside",
+  "name": "The Broadside",
+  "status": "active",
+  "address": "600 North Broad Street",
+  "lat": 29.969216,
+  "lng": -90.083954,
+  "website": "https://broadsidenola.com",
+  "image": "the-broadside.jpg",
+  "aliases": [
+    "scatter-jazz"
+  ],
+  "sources": []
+}

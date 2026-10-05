@@ -1,0 +1,23 @@
+{
+  "slug": "santos-bar",
+  "name": "Santos Bar",
+  "status": "active",
+  "address": "1135 Decatur Street",
+  "lat": 29.960593,
+  "lng": -90.059466,
+  "website": "https://www.santosbar.com",
+  "image": "santos-bar.jpg",
+  "aliases": [],
+  "sources": [
+    {
+      "type": "html",
+      "url": "https://www.santosbar.com/",
+      "item": ".tw-section",
+      "title": ".tw-name",
+      "date": ".tw-event-date",
+      "time": ".tw-event-time",
+      "link": ".tw-name a@href",
+      "next": "a.next.page-numbers@href"
+    }
+  ]
+}

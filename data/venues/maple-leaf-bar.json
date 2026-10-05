@@ -1,0 +1,18 @@
+{
+  "slug": "maple-leaf-bar",
+  "name": "Maple Leaf Bar",
+  "status": "active",
+  "address": "8316 Oak Street",
+  "lat": 29.948991,
+  "lng": -90.13199,
+  "website": "https://www.mapleleafbar.com",
+  "image": "maple-leaf-bar.jpg",
+  "aliases": [],
+  "sources": [
+    {
+      "type": "wix",
+      "url": "https://www.mapleleafbar.com/",
+      "eventUrl": "https://www.mapleleafbar.com/events/{slug}"
+    }
+  ]
+}

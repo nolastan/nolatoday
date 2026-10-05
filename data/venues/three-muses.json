@@ -1,0 +1,17 @@
+{
+  "slug": "three-muses",
+  "name": "Three Muses",
+  "status": "active",
+  "address": "536 Frenchmen Street",
+  "lat": 29.963287,
+  "lng": -90.057845,
+  "website": "https://www.3musesnola.com",
+  "image": "three-muses.jpg",
+  "aliases": [],
+  "sources": [
+    {
+      "type": "squarespace",
+      "url": "https://www.3musesnola.com/music"
+    }
+  ]
+}

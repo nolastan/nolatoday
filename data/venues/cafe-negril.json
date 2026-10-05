@@ -1,0 +1,12 @@
+{
+  "slug": "cafe-negril",
+  "name": "Cafe Negril",
+  "status": "active",
+  "address": "606 Frenchmen Street",
+  "lat": 29.963765,
+  "lng": -90.057948,
+  "website": "https://cafenegrilnola.com",
+  "image": "cafe-negril.jpg",
+  "aliases": [],
+  "sources": []
+}

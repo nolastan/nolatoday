@@ -1,0 +1,22 @@
+{
+  "slug": "tips",
+  "name": "Tipitina's",
+  "status": "active",
+  "address": "501 Napoleon Avenue",
+  "lat": 29.917415,
+  "lng": -90.100816,
+  "website": "https://tipitinas.com",
+  "image": "tips.jpg",
+  "aliases": [],
+  "sources": [
+    {
+      "type": "html",
+      "url": "https://tipitinas.com/",
+      "item": ".tw-section",
+      "title": ".tw-name",
+      "date": ".tw-event-date",
+      "time": ".tw-event-time",
+      "link": ".tw-name a@href"
+    }
+  ]
+}

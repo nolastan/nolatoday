@@ -1,0 +1,21 @@
+{
+  "slug": "dos-jefes",
+  "name": "Dos Jefes",
+  "status": "active",
+  "address": "5535 Tchoupitoulas Street",
+  "lat": 29.916553,
+  "lng": -90.11817,
+  "website": "https://dosjefes.com",
+  "image": "dos-jefes.jpg",
+  "aliases": [],
+  "sources": [
+    {
+      "type": "html",
+      "url": "https://dosjefes.com/events/",
+      "item": ".em-event",
+      "title": ".em-item-title",
+      "date": ".em-event-date",
+      "time": ".em-event-time"
+    }
+  ]
+}
