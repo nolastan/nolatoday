@@ -1,0 +1,378 @@
+{
+  "venue": "dba",
+  "events": [
+    {
+      "id": "2cd76cc1036c",
+      "title": "The Jump Hounds",
+      "start": "2026-10-04T21:30:00-05:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "f3f1759578ac",
+      "title": "Secret Six Jazz Band",
+      "start": "2026-10-05T18:00:00-05:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "943e81529387",
+      "title": "Corey Henry & the Treme Funktet : Red Beans & Ricely Yours",
+      "start": "2026-10-05T21:30:00-05:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "30408a90fa4e",
+      "title": "Jelly Roll Stompers",
+      "start": "2026-10-06T18:00:00-05:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "e32a853e40f4",
+      "title": "Bras Band Brass Band",
+      "start": "2026-10-06T21:00:00-05:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "62a8b723e9c4",
+      "title": "The Next Level Band",
+      "start": "2026-10-07T21:00:00-05:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "afdd4eb14f09",
+      "title": "Ethan Santos",
+      "start": "2026-10-08T18:00:00-05:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "807f9e4addc8",
+      "title": "Vegas Cola Band",
+      "start": "2026-10-08T21:00:00-05:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "2ab9ec5f6d72",
+      "title": "Michael Watson & The Alchemy",
+      "start": "2026-10-09T18:00:00-05:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "ba108f7bd032",
+      "title": "The Soul Rebels",
+      "start": "2026-10-09T22:00:00-05:00",
+      "url": "https://www.eventbrite.com/e/the-soul-rebels-at-dba-tickets-2002674920598?aff=oddtdtcreator"
+    },
+    {
+      "id": "7b2990b81827",
+      "title": "Young Lion Showcase",
+      "start": "2026-10-10T14:30:00-05:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "84171400284d",
+      "title": "Zena Moses & Rue Fiya Allstars",
+      "start": "2026-10-10T22:00:00-05:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "2fe32ec2ebb1",
+      "title": "Paradise Jazz Band",
+      "start": "2026-10-11T18:00:00-05:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "2ccc788da418",
+      "title": "The Jump Hounds",
+      "start": "2026-10-11T21:30:00-05:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "37c29d53f280",
+      "title": "Secret Six Jazz Band",
+      "start": "2026-10-12T18:00:00-05:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "1a108854c80a",
+      "title": "Miss Sophie Lee's Dance Hall — Nat & Kat Cajun String Band",
+      "start": "2026-10-13T18:00:00-05:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "1b5220ad4129",
+      "title": "Midnight Brawlers",
+      "start": "2026-10-13T21:00:00-05:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "4099713cc1d0",
+      "title": "The Next Level Band",
+      "start": "2026-10-14T21:00:00-05:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "0dcebecef3eb",
+      "title": "Ethan Santos",
+      "start": "2026-10-15T18:00:00-05:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "5283f7f6cfd6",
+      "title": "Vegas Cola Band",
+      "start": "2026-10-15T21:00:00-05:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "5da0dbad3e68",
+      "title": "Michael Watson & The Alchemy",
+      "start": "2026-10-16T18:00:00-05:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "66c9084865e8",
+      "title": "The Original Pinette Brass Band",
+      "start": "2026-10-16T22:00:00-05:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "5dc69008a5b8",
+      "title": "Young Lion Showcase",
+      "start": "2026-10-17T14:00:00-05:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "d00746704168",
+      "title": "40th Birthday Bash w/ Dark Matter & Special Guests — Khris Royal",
+      "start": "2026-10-17T20:30:00-05:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "95d6d89fbd6a",
+      "title": "Paradise Jazz Band",
+      "start": "2026-10-18T18:00:00-05:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "aaefc87599b9",
+      "title": "The Jump Hounds",
+      "start": "2026-10-18T21:30:00-05:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "0f18a78aaf89",
+      "title": "Secret Six Jazz Band",
+      "start": "2026-10-19T18:00:00-05:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "a625a9944878",
+      "title": "Corey Henry & the Treme Funktet : Red Beans & Ricely Yours",
+      "start": "2026-10-19T21:30:00-05:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "afc3fc307cbe",
+      "title": "Miss Martha & Her Good Time Gang",
+      "start": "2026-10-20T18:00:00-05:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "2a98715df43c",
+      "title": "Bras Band Brass Band",
+      "start": "2026-10-20T21:00:00-05:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "a1c89edc4b64",
+      "title": "The Next Level Band",
+      "start": "2026-10-21T21:00:00-05:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "99349d41e6ab",
+      "title": "Ethan Santos",
+      "start": "2026-10-22T18:00:00-05:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "5d21cfbcaa1c",
+      "title": "Vegas Cola Band",
+      "start": "2026-10-22T21:00:00-05:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "1211fd932546",
+      "title": "Jason Neville Funky Soul Allstars",
+      "start": "2026-10-23",
+      "allDay": true,
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "16399a9281a8",
+      "title": "Michael Watson & The Alchemy",
+      "start": "2026-10-23T18:00:00-05:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "e887b5450b96",
+      "title": "Young Lion Showcase",
+      "start": "2026-10-24T14:00:00-05:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "1a473c0d7c20",
+      "title": "Tuba Skinny",
+      "start": "2026-10-24T18:00:00-05:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "68b137607fa1",
+      "title": "Ari Teitel",
+      "start": "2026-10-24T22:00:00-05:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "6e1674cccbaa",
+      "title": "Paradise Jazz Band",
+      "start": "2026-10-25T18:00:00-05:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "53364f5e3250",
+      "title": "The Jump Hounds",
+      "start": "2026-10-25T21:30:00-05:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "420cfe514594",
+      "title": "Secret Six Jazz Band",
+      "start": "2026-10-26T18:00:00-05:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "9cf20d08bde3",
+      "title": "Corey Henry & the Treme Funktet : Red Beans & Ricely Yours",
+      "start": "2026-10-26T21:30:00-05:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "583ac4a1871c",
+      "title": "T Marie + Bayou JuJu",
+      "start": "2026-10-27T18:00:00-05:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "9048416221e3",
+      "title": "Midnight Brawlers",
+      "start": "2026-10-27T21:00:00-05:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "4b85e9c4cc2d",
+      "title": "The Next Level Band",
+      "start": "2026-10-28T21:00:00-05:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "25a669c5243b",
+      "title": "Ethan Santos",
+      "start": "2026-10-29T18:00:00-05:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "5f87abac96e0",
+      "title": "Vegas Cola Band",
+      "start": "2026-10-29T21:00:00-05:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "6c024a462596",
+      "title": "Michael Watson & The Alchemy",
+      "start": "2026-10-30T18:00:00-05:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "0ffbab7eb94e",
+      "title": "New Breed Brass Band",
+      "start": "2026-10-30T22:00:00-05:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "f26e8111944a",
+      "title": "Young Lion Showcase",
+      "start": "2026-10-31T14:00:00-05:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "ea906a1ab71d",
+      "title": "Bras Band Brass Band",
+      "start": "2026-11-03T21:00:00-06:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "851cc2b7303f",
+      "title": "Michael Watson & The Alchemy",
+      "start": "2026-11-06T18:00:00-06:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "3c43645c3eeb",
+      "title": "The Soul Rebels",
+      "start": "2026-11-06T22:00:00-06:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "17c68c309f52",
+      "title": "First Word Tulane Alumni Party",
+      "start": "2026-11-07T22:00:00-06:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "82292afb4ba6",
+      "title": "Bras Band Brass Band",
+      "start": "2026-11-10T21:00:00-06:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "ba647b0931ff",
+      "title": "Michael Watson & The Alchemy",
+      "start": "2026-11-13T18:00:00-06:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "7cfaeef68049",
+      "title": "Colin Davis & Night People",
+      "start": "2026-11-13T22:00:00-06:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "933bcf98ef6e",
+      "title": "Bras Band Brass Band",
+      "start": "2026-11-17T21:00:00-06:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "24aa169fdc9a",
+      "title": "Michael Watson & The Alchemy",
+      "start": "2026-11-20T18:00:00-06:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "3982deeba6c9",
+      "title": "Bras Band Brass Band",
+      "start": "2026-11-24T21:00:00-06:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "eeb2bb0df54d",
+      "title": "Michael Watson & The Alchemy",
+      "start": "2026-11-27T18:00:00-06:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "e686cb2bdf0e",
+      "title": "The Soul Rebels",
+      "start": "2026-12-04T22:00:00-06:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    }
+  ]
+}

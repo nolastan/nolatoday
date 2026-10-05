@@ -1,0 +1,82 @@
+{
+  "venue": "cafe-istanbul",
+  "events": [
+    {
+      "id": "65db3ed21420",
+      "title": "Poets on Poets",
+      "start": "2026-10-07T22:00:00-05:00",
+      "end": "2026-10-07T23:59:00-05:00",
+      "url": "https://www.cafeistanbulnola.com/upcoming-events/gwy8ljw775mz7m6s7ge6cstbhwn2tb"
+    },
+    {
+      "id": "d660a933a3db",
+      "title": "Opera Creole 15th Anniversary",
+      "start": "2026-10-08T19:00:00-05:00",
+      "end": "2026-10-08T21:00:00-05:00",
+      "url": "https://www.cafeistanbulnola.com/upcoming-events/opera-creole-15th-anniversary"
+    },
+    {
+      "id": "c649f4001b66",
+      "title": "Jai Ho! Dance Party",
+      "start": "2026-10-10T22:00:00-05:00",
+      "end": "2026-10-10T23:00:00-05:00",
+      "url": "https://www.cafeistanbulnola.com/upcoming-events/jai-ho-dance-party"
+    },
+    {
+      "id": "86495b39c8f3",
+      "title": "The Moth",
+      "start": "2026-10-13T19:00:00-05:00",
+      "end": "2026-10-13T21:00:00-05:00",
+      "url": "https://www.cafeistanbulnola.com/upcoming-events/kr7n5jebxals86kgxzfdj2cwr9fpxr"
+    },
+    {
+      "id": "458417c9db78",
+      "title": "Poets on Poets",
+      "start": "2026-10-14T22:00:00-05:00",
+      "end": "2026-10-14T23:59:00-05:00",
+      "url": "https://www.cafeistanbulnola.com/upcoming-events/wnrtker8934psbz5nnksnzyrwn2ghg"
+    },
+    {
+      "id": "ace6ca136c13",
+      "title": "Poets on Poets",
+      "start": "2026-10-21T22:00:00-05:00",
+      "end": "2026-10-21T23:59:00-05:00",
+      "url": "https://www.cafeistanbulnola.com/upcoming-events/staa64842kcz8yfjnkrrxel53pzh2s"
+    },
+    {
+      "id": "02d0320e2e7c",
+      "title": "From Graceland to Neverland",
+      "start": "2026-10-24T20:00:00-05:00",
+      "end": "2026-10-24T23:59:00-05:00",
+      "url": "https://www.cafeistanbulnola.com/upcoming-events/from-graceland-to-neverland"
+    },
+    {
+      "id": "4860233e405c",
+      "title": "Something 2 Do Sundays",
+      "start": "2026-10-25T19:00:00-05:00",
+      "end": "2026-10-25T23:00:00-05:00",
+      "url": "https://www.cafeistanbulnola.com/upcoming-events/something-2-do-sundays"
+    },
+    {
+      "id": "f4a9b267f5e8",
+      "title": "Poets on Poets",
+      "start": "2026-10-28T22:00:00-05:00",
+      "end": "2026-10-28T23:59:00-05:00",
+      "url": "https://www.cafeistanbulnola.com/upcoming-events/e9bpx6c52jdsblw7cj432eb2kde9ky"
+    },
+    {
+      "id": "fb5148fafff6",
+      "title": "Rockstar Halloween",
+      "start": "2026-10-29T20:00:00-05:00",
+      "end": "2026-10-29T23:00:00-05:00",
+      "url": "https://www.cafeistanbulnola.com/upcoming-events/rockstar-halloween"
+    },
+    {
+      "id": "f7b759bd68ac",
+      "title": "The Moth",
+      "start": "2026-12-08T19:00:00-06:00",
+      "end": "2026-12-08T23:00:00-06:00",
+      "url": "https://www.cafeistanbulnola.com/upcoming-events/4ca2kjh53js9nz8t879badakzejf22"
+    }
+  ]
+}

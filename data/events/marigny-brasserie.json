@@ -1,0 +1,40 @@
+{
+  "venue": "marigny-brasserie",
+  "events": [
+    {
+      "id": "82376d42b175",
+      "title": "National Dessert Day",
+      "start": "2026-10-14T11:00:00-05:00",
+      "end": "2026-10-14T23:00:00-05:00",
+      "url": "https://marignybrasserie.com/new-orleans-marigny-marigny-brasserie-events"
+    },
+    {
+      "id": "678b268a83a0",
+      "title": "National Pasta Day",
+      "start": "2026-10-17T11:00:00-05:00",
+      "end": "2026-10-18T00:00:00-05:00",
+      "url": "https://marignybrasserie.com/new-orleans-marigny-marigny-brasserie-events"
+    },
+    {
+      "id": "7d26bc8b85e6",
+      "title": "Halloween",
+      "start": "2026-10-31T11:00:00-05:00",
+      "end": "2026-11-01T00:00:00-05:00",
+      "url": "https://marignybrasserie.com/new-orleans-marigny-marigny-brasserie-events"
+    },
+    {
+      "id": "df29fa6d0230",
+      "title": "National Sandwich Day",
+      "start": "2026-11-03T11:00:00-06:00",
+      "end": "2026-11-04T00:00:00-06:00",
+      "url": "https://marignybrasserie.com/new-orleans-marigny-marigny-brasserie-events"
+    },
+    {
+      "id": "f39b7ff5a1c1",
+      "title": "New Year's Eve",
+      "start": "2026-12-31T11:00:00-06:00",
+      "end": "2026-12-31T22:30:00-06:00",
+      "url": "https://marignybrasserie.com/new-orleans-marigny-marigny-brasserie-events"
+    }
+  ]
+}

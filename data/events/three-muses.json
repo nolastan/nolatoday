@@ -1,0 +1,19 @@
+{
+  "venue": "three-muses",
+  "events": [
+    {
+      "id": "7907fecdcbdd",
+      "title": "Hobo Gadget Junk Band",
+      "start": "2026-10-05T19:30:00-05:00",
+      "end": "2026-10-05T23:30:00-05:00",
+      "url": "https://www.3musesnola.com/music/hobo-gadget-junk-band"
+    },
+    {
+      "id": "28af28c02d86",
+      "title": "Max Baker",
+      "start": "2026-10-06T18:30:00-05:00",
+      "end": "2026-10-06T21:30:00-05:00",
+      "url": "https://www.3musesnola.com/music/max-baker"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "nolatoday",
+  "private": true,
+  "type": "module",
+  "description": "NOLA.Today \u2014 live music venues in New Orleans, scraped by GitHub Actions and published as a static site.",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "scrape": "node scripts/scrape.js",
+    "build": "node scripts/build.js",
+    "validate": "node scripts/validate.js",
+    "serve": "npx --yes serve _site",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "cheerio": "^1.2.0",
+    "luxon": "^3.7.2",
+    "node-ical": "^0.27.3"
+  }
+}

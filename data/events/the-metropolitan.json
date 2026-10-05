@@ -1,0 +1,35 @@
+{
+  "venue": "the-metropolitan",
+  "events": [
+    {
+      "id": "b045d4a41ff2",
+      "title": "Krewe of Boo! presents MONSTER MASH 2026 (Official Parade After-Party)",
+      "start": "2026-10-24T20:00:00-05:00",
+      "url": "https://www.eventbrite.com/e/krewe-of-boo-presents-monster-mash-2026-official-parade-after-party-tickets-1987669721644"
+    },
+    {
+      "id": "5e5b7b038f7e",
+      "title": "Freaky Deaky New Orleans",
+      "start": "2026-10-30T15:00:00-05:00",
+      "url": "https://www.eventbrite.com/e/freaky-deaky-new-orleans-tickets-1998136217214"
+    },
+    {
+      "id": "69a2b20f7edd",
+      "title": "Freaky Deaky After Party- Live at the Metropolitan (Friday)",
+      "start": "2026-10-30T23:00:00-05:00",
+      "url": "https://www.eventbrite.com/e/freaky-deaky-after-party-live-at-the-metropolitan-friday-tickets-2001885225599"
+    },
+    {
+      "id": "a3822f6db313",
+      "title": "Freaky Deaky After Party- Live at the Metropolitan (Saturday)",
+      "start": "2026-10-31T23:00:00-05:00",
+      "url": "https://www.eventbrite.com/e/freaky-deaky-after-party-live-at-the-metropolitan-saturday-tickets-2001886631805"
+    },
+    {
+      "id": "dd611b81a917",
+      "title": "SIDEQUEST- Live at the Metropolitan",
+      "start": "2026-12-04T22:00:00-06:00",
+      "url": "https://www.eventbrite.com/e/sidequest-live-at-the-metropolitan-tickets-2002552086197"
+    }
+  ]
+}

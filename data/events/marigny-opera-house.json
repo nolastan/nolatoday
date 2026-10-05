@@ -1,0 +1,65 @@
+{
+  "venue": "marigny-opera-house",
+  "events": [
+    {
+      "id": "e3cf15d10698",
+      "title": "Vocal Masterclass: Bogdan Mynka",
+      "start": "2026-10-22T18:00:00-05:00",
+      "url": "https://marignyoperahouse.org/upcoming-events/vocal-masterclass-bogdan-mynka/"
+    },
+    {
+      "id": "daab3bd98580",
+      "title": "Halloween 2026 – A Silent Film & Live Music Experience",
+      "start": "2026-10-29T20:00:00-05:00",
+      "url": "https://marignyoperahouse.org/upcoming-events/halloween-2026-a-silent-film-live-music-experience/"
+    },
+    {
+      "id": "dd798682417b",
+      "title": "Vocal Masterclass: Joshua Stewart",
+      "start": "2026-11-10T18:00:00-06:00",
+      "url": "https://marignyoperahouse.org/upcoming-events/vocal-masterclass-joshua-stewart/"
+    },
+    {
+      "id": "9fe59a20fc0a",
+      "title": "Die Sieben Todsünden",
+      "start": "2026-12-11T20:00:00-06:00",
+      "url": "https://marignyoperahouse.org/upcoming-events/die-sieben-todsunden-the-seven-deadly-sins/"
+    },
+    {
+      "id": "0d8a68146006",
+      "title": "Die Sieben Todsünden",
+      "start": "2026-12-12T20:00:00-06:00",
+      "url": "https://marignyoperahouse.org/upcoming-events/die-sieben-todsunden-the-seven-deadly-sins/"
+    },
+    {
+      "id": "e936c55be7ff",
+      "title": "Die Sieben Todsünden",
+      "start": "2026-12-13T20:00:00-06:00",
+      "url": "https://marignyoperahouse.org/upcoming-events/die-sieben-todsunden-the-seven-deadly-sins/"
+    },
+    {
+      "id": "497bc7bc95bc",
+      "title": "Fashion Design Masterclass: Magdalene Paris",
+      "start": "2026-12-15T18:00:00-06:00",
+      "url": "https://marignyoperahouse.org/upcoming-events/fashion-design-masterclass-magdalene-paris/"
+    },
+    {
+      "id": "481c692b7db8",
+      "title": "Die Sieben Todsünden",
+      "start": "2026-12-18T20:00:00-06:00",
+      "url": "https://marignyoperahouse.org/upcoming-events/die-sieben-todsunden-the-seven-deadly-sins/"
+    },
+    {
+      "id": "8b1d3421f518",
+      "title": "Die Sieben Todsünden",
+      "start": "2026-12-19T20:00:00-06:00",
+      "url": "https://marignyoperahouse.org/upcoming-events/die-sieben-todsunden-the-seven-deadly-sins/"
+    },
+    {
+      "id": "02ca06d9bd40",
+      "title": "Die Sieben Todsünden",
+      "start": "2026-12-20T20:00:00-06:00",
+      "url": "https://marignyoperahouse.org/upcoming-events/die-sieben-todsunden-the-seven-deadly-sins/"
+    }
+  ]
+}

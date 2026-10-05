@@ -1,0 +1,77 @@
+{
+  "venue": "republic-nola",
+  "events": [
+    {
+      "id": "3d45b5b6d71c",
+      "title": "Akeem Ali",
+      "start": "2026-10-06T20:00:00-05:00",
+      "url": "https://republicnola.com/event/akeem-ali-2/"
+    },
+    {
+      "id": "cef191601bfb",
+      "title": "Xavier Wulf",
+      "start": "2026-10-07T20:00:00-05:00",
+      "url": "https://republicnola.com/event/xavier-wulf/"
+    },
+    {
+      "id": "2322f88439bf",
+      "title": "Emo Night: AFTER THE RIOT!",
+      "start": "2026-10-10T23:00:00-05:00",
+      "url": "https://republicnola.com/event/emo-night-after-the-riot/"
+    },
+    {
+      "id": "9868dad7bec5",
+      "title": "Said The Sky",
+      "start": "2026-10-16T22:00:00-05:00",
+      "url": "https://republicnola.com/event/said-the-sky-2/"
+    },
+    {
+      "id": "ccc889e81819",
+      "title": "Freakshow New Orleans",
+      "start": "2026-10-17T19:30:00-05:00",
+      "url": "https://republicnola.com/event/freakshow-new-orleans-after-the-fall-2/"
+    },
+    {
+      "id": "5aeac50e1f9b",
+      "title": "Freakshow New Orleans",
+      "start": "2026-10-18T15:00:00-05:00",
+      "url": "https://republicnola.com/event/freakshow-new-orleans-after-the-fall-10-18/"
+    },
+    {
+      "id": "d985a7b6eb9b",
+      "title": "Deathpact",
+      "start": "2026-10-23T23:00:00-05:00",
+      "url": "https://republicnola.com/event/deathpact/"
+    },
+    {
+      "id": "d91f10810dc3",
+      "title": "Boy Harsher",
+      "start": "2026-10-26T20:00:00-05:00",
+      "url": "https://republicnola.com/event/boy-harsher/"
+    },
+    {
+      "id": "7266e897a232",
+      "title": "Freakshow New Orleans",
+      "start": "2026-11-02T19:30:00-06:00",
+      "url": "https://republicnola.com/event/freakshow-new-orleans-after-the-fall-11-02/"
+    },
+    {
+      "id": "f1560f165858",
+      "title": "Daisy Grenade",
+      "start": "2026-11-17T20:00:00-06:00",
+      "url": "https://republicnola.com/event/daisy-grenade/"
+    },
+    {
+      "id": "e97a15d4eb53",
+      "title": "Ravenscoon",
+      "start": "2026-11-25T22:00:00-06:00",
+      "url": "https://republicnola.com/event/ravenscoon-2/"
+    },
+    {
+      "id": "690b498d6f51",
+      "title": "A KNOW GOOD NEW YEAR'S",
+      "start": "2026-12-31T22:00:00-06:00",
+      "url": "https://republicnola.com/event/a-know-good-new-years/"
+    }
+  ]
+}

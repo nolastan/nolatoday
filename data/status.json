@@ -1,0 +1,486 @@
+{
+  "venues": {
+    "12-mile-limit": {
+      "ok": true,
+      "firstSeen": "2026-10-05T00:47:13.521-05:00",
+      "count": 9,
+      "lastRun": "2026-10-05T00:47:13.521-05:00",
+      "lastSuccess": "2026-10-05T00:47:13.521-05:00",
+      "lastNonEmpty": "2026-10-05T00:47:13.521-05:00",
+      "consecutiveFailures": 0,
+      "sources": [
+        {
+          "type": "spothopper",
+          "ok": true,
+          "count": 9
+        }
+      ]
+    },
+    "30-90": {
+      "ok": true,
+      "firstSeen": "2026-10-05T00:47:13.521-05:00",
+      "count": 65,
+      "lastRun": "2026-10-05T00:47:13.521-05:00",
+      "lastSuccess": "2026-10-05T00:47:13.521-05:00",
+      "lastNonEmpty": "2026-10-05T00:47:13.521-05:00",
+      "consecutiveFailures": 0,
+      "sources": [
+        {
+          "type": "squarespace",
+          "ok": true,
+          "count": 65
+        }
+      ]
+    },
+    "bacchanal": {
+      "ok": true,
+      "firstSeen": "2026-10-05T00:47:13.521-05:00",
+      "count": 101,
+      "lastRun": "2026-10-05T00:47:13.521-05:00",
+      "lastSuccess": "2026-10-05T00:47:13.521-05:00",
+      "lastNonEmpty": "2026-10-05T00:47:13.521-05:00",
+      "consecutiveFailures": 0,
+      "sources": [
+        {
+          "type": "ics",
+          "ok": true,
+          "count": 101
+        }
+      ]
+    },
+    "blue-nile": {
+      "ok": true,
+      "firstSeen": "2026-10-05T00:47:13.521-05:00",
+      "count": 46,
+      "lastRun": "2026-10-05T00:47:13.521-05:00",
+      "lastSuccess": "2026-10-05T00:47:13.521-05:00",
+      "lastNonEmpty": "2026-10-05T00:47:13.521-05:00",
+      "consecutiveFailures": 0,
+      "sources": [
+        {
+          "type": "squarespace",
+          "ok": true,
+          "count": 46
+        }
+      ]
+    },
+    "bontemps": {
+      "ok": true,
+      "firstSeen": "2026-10-05T00:47:13.521-05:00",
+      "count": 38,
+      "lastRun": "2026-10-05T00:47:13.521-05:00",
+      "lastSuccess": "2026-10-05T00:47:13.521-05:00",
+      "lastNonEmpty": "2026-10-05T00:47:13.521-05:00",
+      "consecutiveFailures": 0,
+      "sources": [
+        {
+          "type": "spothopper",
+          "ok": true,
+          "count": 38
+        }
+      ]
+    },
+    "cafe-istanbul": {
+      "ok": true,
+      "firstSeen": "2026-10-05T00:47:13.521-05:00",
+      "count": 11,
+      "lastRun": "2026-10-05T00:47:13.521-05:00",
+      "lastSuccess": "2026-10-05T00:47:13.521-05:00",
+      "lastNonEmpty": "2026-10-05T00:47:13.521-05:00",
+      "consecutiveFailures": 0,
+      "sources": [
+        {
+          "type": "squarespace",
+          "ok": true,
+          "count": 11
+        }
+      ]
+    },
+    "dba": {
+      "ok": true,
+      "firstSeen": "2026-10-05T00:47:13.521-05:00",
+      "count": 62,
+      "lastRun": "2026-10-05T00:47:13.521-05:00",
+      "lastSuccess": "2026-10-05T00:47:13.521-05:00",
+      "lastNonEmpty": "2026-10-05T00:47:13.521-05:00",
+      "consecutiveFailures": 0,
+      "sources": [
+        {
+          "type": "gigulator",
+          "ok": true,
+          "count": 62
+        }
+      ]
+    },
+    "dos-jefes": {
+      "ok": true,
+      "firstSeen": "2026-10-05T00:47:13.521-05:00",
+      "count": 23,
+      "lastRun": "2026-10-05T00:47:13.521-05:00",
+      "lastSuccess": "2026-10-05T00:47:13.521-05:00",
+      "lastNonEmpty": "2026-10-05T00:47:13.521-05:00",
+      "consecutiveFailures": 0,
+      "sources": [
+        {
+          "type": "html",
+          "ok": true,
+          "count": 23
+        }
+      ]
+    },
+    "gasa-gasa": {
+      "ok": true,
+      "firstSeen": "2026-10-05T00:47:13.521-05:00",
+      "count": 18,
+      "lastRun": "2026-10-05T00:47:13.521-05:00",
+      "lastSuccess": "2026-10-05T00:47:13.521-05:00",
+      "lastNonEmpty": "2026-10-05T00:47:13.521-05:00",
+      "consecutiveFailures": 0,
+      "sources": [
+        {
+          "type": "jsonld",
+          "ok": true,
+          "count": 18
+        }
+      ]
+    },
+    "house-of-blues": {
+      "ok": true,
+      "firstSeen": "2026-10-05T00:47:13.521-05:00",
+      "count": 24,
+      "lastRun": "2026-10-05T00:47:13.521-05:00",
+      "lastSuccess": "2026-10-05T00:47:13.521-05:00",
+      "lastNonEmpty": "2026-10-05T00:47:13.521-05:00",
+      "consecutiveFailures": 0,
+      "sources": [
+        {
+          "type": "jsonld",
+          "ok": true,
+          "count": 24
+        }
+      ]
+    },
+    "howlin-wolf": {
+      "ok": true,
+      "firstSeen": "2026-10-05T00:47:13.521-05:00",
+      "count": 18,
+      "lastRun": "2026-10-05T00:47:13.521-05:00",
+      "lastSuccess": "2026-10-05T00:47:13.521-05:00",
+      "lastNonEmpty": "2026-10-05T00:47:13.521-05:00",
+      "consecutiveFailures": 0,
+      "sources": [
+        {
+          "type": "jsonld",
+          "ok": true,
+          "count": 18
+        }
+      ]
+    },
+    "joy-theater": {
+      "ok": true,
+      "firstSeen": "2026-10-05T00:47:13.521-05:00",
+      "count": 16,
+      "lastRun": "2026-10-05T00:47:13.521-05:00",
+      "lastSuccess": "2026-10-05T00:47:13.521-05:00",
+      "lastNonEmpty": "2026-10-05T00:47:13.521-05:00",
+      "consecutiveFailures": 0,
+      "sources": [
+        {
+          "type": "html",
+          "ok": true,
+          "count": 16
+        }
+      ]
+    },
+    "maple-leaf-bar": {
+      "ok": true,
+      "firstSeen": "2026-10-05T00:47:13.521-05:00",
+      "count": 6,
+      "lastRun": "2026-10-05T00:47:13.521-05:00",
+      "lastSuccess": "2026-10-05T00:47:13.521-05:00",
+      "lastNonEmpty": "2026-10-05T00:47:13.521-05:00",
+      "consecutiveFailures": 0,
+      "sources": [
+        {
+          "type": "wix",
+          "ok": true,
+          "count": 6
+        }
+      ]
+    },
+    "marigny-brasserie": {
+      "ok": true,
+      "firstSeen": "2026-10-05T00:47:13.521-05:00",
+      "count": 5,
+      "lastRun": "2026-10-05T00:47:13.521-05:00",
+      "lastSuccess": "2026-10-05T00:47:13.521-05:00",
+      "lastNonEmpty": "2026-10-05T00:47:13.521-05:00",
+      "consecutiveFailures": 0,
+      "sources": [
+        {
+          "type": "spothopper",
+          "ok": true,
+          "count": 5
+        }
+      ]
+    },
+    "marigny-opera-house": {
+      "ok": true,
+      "firstSeen": "2026-10-05T00:47:13.521-05:00",
+      "count": 10,
+      "lastRun": "2026-10-05T00:47:13.521-05:00",
+      "lastSuccess": "2026-10-05T00:47:13.521-05:00",
+      "lastNonEmpty": "2026-10-05T00:47:13.521-05:00",
+      "consecutiveFailures": 0,
+      "sources": [
+        {
+          "type": "html",
+          "ok": true,
+          "count": 10
+        }
+      ]
+    },
+    "music-box-village": {
+      "ok": false,
+      "firstSeen": "2026-10-05T00:47:13.521-05:00",
+      "count": 0,
+      "lastRun": "2026-10-05T00:47:13.521-05:00",
+      "lastSuccess": null,
+      "lastNonEmpty": null,
+      "consecutiveFailures": 2,
+      "sources": [
+        {
+          "type": "jsonld",
+          "ok": false,
+          "error": "HTTP 403 for https://www.tixr.com/groups/musicboxvillage"
+        }
+      ],
+      "error": "jsonld: HTTP 403 for https://www.tixr.com/groups/musicboxvillage"
+    },
+    "new-orleans-jazz-museum": {
+      "ok": true,
+      "firstSeen": "2026-10-05T00:47:13.521-05:00",
+      "count": 47,
+      "lastRun": "2026-10-05T00:47:13.521-05:00",
+      "lastSuccess": "2026-10-05T00:47:13.521-05:00",
+      "lastNonEmpty": "2026-10-05T00:47:13.521-05:00",
+      "consecutiveFailures": 0,
+      "sources": [
+        {
+          "type": "squarespace",
+          "ok": true,
+          "count": 47
+        }
+      ]
+    },
+    "nola-brewing": {
+      "ok": true,
+      "firstSeen": "2026-10-05T00:47:13.521-05:00",
+      "count": 7,
+      "lastRun": "2026-10-05T00:47:13.521-05:00",
+      "lastSuccess": "2026-10-05T00:47:13.521-05:00",
+      "lastNonEmpty": "2026-10-05T00:47:13.521-05:00",
+      "consecutiveFailures": 0,
+      "sources": [
+        {
+          "type": "spothopper",
+          "ok": true,
+          "count": 7
+        }
+      ]
+    },
+    "republic-nola": {
+      "ok": true,
+      "firstSeen": "2026-10-05T00:47:13.521-05:00",
+      "count": 12,
+      "lastRun": "2026-10-05T00:47:13.521-05:00",
+      "lastSuccess": "2026-10-05T00:47:13.521-05:00",
+      "lastNonEmpty": "2026-10-05T00:47:13.521-05:00",
+      "consecutiveFailures": 0,
+      "sources": [
+        {
+          "type": "html",
+          "ok": true,
+          "count": 12
+        }
+      ]
+    },
+    "santos-bar": {
+      "ok": true,
+      "firstSeen": "2026-10-05T00:47:13.521-05:00",
+      "count": 28,
+      "lastRun": "2026-10-05T00:47:13.521-05:00",
+      "lastSuccess": "2026-10-05T00:47:13.521-05:00",
+      "lastNonEmpty": "2026-10-05T00:47:13.521-05:00",
+      "consecutiveFailures": 0,
+      "sources": [
+        {
+          "type": "html",
+          "ok": true,
+          "count": 28
+        }
+      ]
+    },
+    "sidneys-saloon": {
+      "ok": true,
+      "firstSeen": "2026-10-05T00:47:13.521-05:00",
+      "count": 10,
+      "lastRun": "2026-10-05T00:47:13.521-05:00",
+      "lastSuccess": "2026-10-05T00:47:13.521-05:00",
+      "lastNonEmpty": "2026-10-05T00:47:13.521-05:00",
+      "consecutiveFailures": 0,
+      "sources": [
+        {
+          "type": "squarespace",
+          "ok": true,
+          "count": 10
+        }
+      ]
+    },
+    "the-allways-lounge": {
+      "ok": true,
+      "firstSeen": "2026-10-05T00:47:13.521-05:00",
+      "count": 309,
+      "lastRun": "2026-10-05T00:47:13.521-05:00",
+      "lastSuccess": "2026-10-05T00:47:13.521-05:00",
+      "lastNonEmpty": "2026-10-05T00:47:13.521-05:00",
+      "consecutiveFailures": 0,
+      "sources": [
+        {
+          "type": "ics",
+          "ok": true,
+          "count": 309
+        }
+      ]
+    },
+    "the-blue-crab": {
+      "ok": true,
+      "firstSeen": "2026-10-05T00:47:13.521-05:00",
+      "count": 30,
+      "lastRun": "2026-10-05T00:47:13.521-05:00",
+      "lastSuccess": "2026-10-05T00:47:13.521-05:00",
+      "lastNonEmpty": "2026-10-05T00:47:13.521-05:00",
+      "consecutiveFailures": 0,
+      "sources": [
+        {
+          "type": "ics",
+          "ok": true,
+          "count": 30
+        }
+      ]
+    },
+    "the-carousel-bar-lounge": {
+      "ok": true,
+      "firstSeen": "2026-10-05T00:47:13.521-05:00",
+      "count": 38,
+      "lastRun": "2026-10-05T00:47:13.521-05:00",
+      "lastSuccess": "2026-10-05T00:47:13.521-05:00",
+      "lastNonEmpty": "2026-10-05T00:47:13.521-05:00",
+      "consecutiveFailures": 0,
+      "sources": [
+        {
+          "type": "html",
+          "ok": true,
+          "count": 38
+        }
+      ]
+    },
+    "the-columns": {
+      "ok": true,
+      "firstSeen": "2026-10-05T00:47:13.521-05:00",
+      "count": 3,
+      "lastRun": "2026-10-05T00:47:13.521-05:00",
+      "lastSuccess": "2026-10-05T00:47:13.521-05:00",
+      "lastNonEmpty": "2026-10-05T00:47:13.521-05:00",
+      "consecutiveFailures": 0,
+      "sources": [
+        {
+          "type": "tribe",
+          "ok": true,
+          "count": 3
+        }
+      ]
+    },
+    "the-metropolitan": {
+      "ok": true,
+      "firstSeen": "2026-10-05T00:47:13.521-05:00",
+      "count": 5,
+      "lastRun": "2026-10-05T00:47:13.521-05:00",
+      "lastSuccess": "2026-10-05T00:47:13.521-05:00",
+      "lastNonEmpty": "2026-10-05T00:47:13.521-05:00",
+      "consecutiveFailures": 0,
+      "sources": [
+        {
+          "type": "eventbrite",
+          "ok": true,
+          "count": 5
+        }
+      ]
+    },
+    "the-rabbit-hole": {
+      "ok": true,
+      "firstSeen": "2026-10-05T00:47:13.521-05:00",
+      "count": 7,
+      "lastRun": "2026-10-05T00:47:13.521-05:00",
+      "lastSuccess": "2026-10-05T00:47:13.521-05:00",
+      "lastNonEmpty": "2026-10-05T00:47:13.521-05:00",
+      "consecutiveFailures": 0,
+      "sources": [
+        {
+          "type": "eventbrite",
+          "ok": true,
+          "count": 7
+        }
+      ]
+    },
+    "the-spotted-cat": {
+      "ok": true,
+      "firstSeen": "2026-10-05T00:47:13.521-05:00",
+      "count": 90,
+      "lastRun": "2026-10-05T00:47:13.521-05:00",
+      "lastSuccess": "2026-10-05T00:47:13.521-05:00",
+      "lastNonEmpty": "2026-10-05T00:47:13.521-05:00",
+      "consecutiveFailures": 0,
+      "sources": [
+        {
+          "type": "gigulator",
+          "ok": true,
+          "count": 90
+        }
+      ]
+    },
+    "three-muses": {
+      "ok": true,
+      "firstSeen": "2026-10-05T00:47:13.521-05:00",
+      "count": 2,
+      "lastRun": "2026-10-05T00:47:13.521-05:00",
+      "lastSuccess": "2026-10-05T00:47:13.521-05:00",
+      "lastNonEmpty": "2026-10-05T00:47:13.521-05:00",
+      "consecutiveFailures": 0,
+      "sources": [
+        {
+          "type": "squarespace",
+          "ok": true,
+          "count": 2
+        }
+      ]
+    },
+    "tips": {
+      "ok": true,
+      "firstSeen": "2026-10-05T00:47:13.521-05:00",
+      "count": 33,
+      "lastRun": "2026-10-05T00:47:13.521-05:00",
+      "lastSuccess": "2026-10-05T00:47:13.521-05:00",
+      "lastNonEmpty": "2026-10-05T00:47:13.521-05:00",
+      "consecutiveFailures": 0,
+      "sources": [
+        {
+          "type": "html",
+          "ok": true,
+          "count": 33
+        }
+      ]
+    }
+  },
+  "generatedAt": "2026-10-05T00:47:13.521-05:00"
+}

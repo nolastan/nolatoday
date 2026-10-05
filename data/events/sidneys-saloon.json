@@ -1,0 +1,75 @@
+{
+  "venue": "sidneys-saloon",
+  "events": [
+    {
+      "id": "4ddcc4af8b99",
+      "title": "ROCKIN ROQUERO: A NIGHT OF LOS SAICOS!",
+      "start": "2026-10-06T22:00:00-05:00",
+      "end": "2026-10-06T23:59:00-05:00",
+      "url": "https://holydivernola.com/events-calendar/rockin-roquero-a-night-of-los-saicos"
+    },
+    {
+      "id": "03e162b45bf5",
+      "title": "POGO MOJO UNDERGROUND DANCE PARTY",
+      "start": "2026-10-08T21:00:00-05:00",
+      "end": "2026-10-08T23:59:00-05:00",
+      "url": "https://holydivernola.com/events-calendar/pogo-mojo-underground-dance-party"
+    },
+    {
+      "id": "1a505f7661bd",
+      "title": "SKULLBASHER | BOG BAT | VINYL BOSSFIGHT | JENN O. CIDE",
+      "start": "2026-10-09T20:00:00-05:00",
+      "end": "2026-10-09T23:59:00-05:00",
+      "url": "https://holydivernola.com/events-calendar/skullbasher-bog-bat-vinyl-bossfight-jenn-o-cide"
+    },
+    {
+      "id": "66e56eb77380",
+      "title": "RAVEYARD",
+      "start": "2026-10-10T20:00:00-05:00",
+      "end": "2026-10-10T23:59:00-05:00",
+      "url": "https://holydivernola.com/events-calendar/raveyard"
+    },
+    {
+      "id": "d335498d04be",
+      "title": "ATTACK DOG / VINNY\"S MIRROR / PARTIAL HANGOUT / SHMOO",
+      "start": "2026-10-12T21:00:00-05:00",
+      "end": "2026-10-12T23:59:00-05:00",
+      "url": "https://holydivernola.com/events-calendar/attack-dog-vinnys-mirror-partial-hangout-shmoo"
+    },
+    {
+      "id": "239df718fda6",
+      "title": "THE TAPE CASSETTES / RARE SEED / RACHEL IS KOZI",
+      "start": "2026-10-18T21:00:00-05:00",
+      "end": "2026-10-18T23:59:00-05:00",
+      "url": "https://holydivernola.com/events-calendar/the-tape-cassettes-rare-seed-rachel-is-kozi"
+    },
+    {
+      "id": "8a07e80742a5",
+      "title": "ACAB ZINE FEST NIGHT 1",
+      "start": "2026-10-23T20:00:00-05:00",
+      "end": "2026-10-23T23:59:00-05:00",
+      "url": "https://holydivernola.com/events-calendar/acab-zine-fest-night-1"
+    },
+    {
+      "id": "7eafe64653b7",
+      "title": "DEVIL MASTER with NINTH CIRCLE, PALE MISERY & DRACULA",
+      "start": "2026-11-07T20:00:00-06:00",
+      "end": "2026-11-07T23:59:00-06:00",
+      "url": "https://holydivernola.com/events-calendar/devil-master-with-ninth-circle-pale-misery-amp-dracula"
+    },
+    {
+      "id": "87505cd66b0f",
+      "title": "KILLED BY FLORIDA | DONKEY PUNCHER | THE SAWED OFFS | JON Q PUBLIC",
+      "start": "2026-11-13T20:00:00-06:00",
+      "end": "2026-11-13T23:59:00-06:00",
+      "url": "https://holydivernola.com/events-calendar/killed-by-florida-donkey-puncher-the-sawed-offs-john-q-public"
+    },
+    {
+      "id": "e8e41a9806ac",
+      "title": "COMMANDER AGARES (Fin) North American Tour 2026 New Orleans",
+      "start": "2026-11-18T21:00:00-06:00",
+      "end": "2026-11-18T23:45:00-06:00",
+      "url": "https://holydivernola.com/events-calendar/commander-agares-fin-north-american-tour-2026-new-orleans"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "venue": "the-rabbit-hole",
+  "events": [
+    {
+      "id": "21e96a7caff1",
+      "title": "Rebirth Brass Band Tuesdays @ The Rabbit Hole",
+      "start": "2026-10-06T21:00:00-05:00",
+      "url": "https://www.eventbrite.com/e/rebirth-brass-band-tuesdays-the-rabbit-hole-tickets-1112074858839"
+    },
+    {
+      "id": "757db68ade95",
+      "title": "Sleep Club",
+      "start": "2026-10-21T20:00:00-05:00",
+      "url": "https://www.eventbrite.com/e/sleep-club-tickets-2001897496301"
+    },
+    {
+      "id": "2552b94d4332",
+      "title": "RAVE TILL THE GRAVE",
+      "start": "2026-10-23T22:00:00-05:00",
+      "url": "https://www.eventbrite.com/e/rave-till-the-grave-tickets-2001898563493"
+    },
+    {
+      "id": "54e7e5a041b3",
+      "title": "The Dead Dance [an early halloween party]",
+      "start": "2026-10-31T17:00:00-05:00",
+      "url": "https://www.eventbrite.com/e/the-dead-dance-an-early-halloween-party-tickets-2001637761427"
+    },
+    {
+      "id": "9e5469828039",
+      "title": "DAFT DISKO",
+      "start": "2026-10-31T22:00:00-05:00",
+      "url": "https://www.eventbrite.com/e/daft-disko-tickets-2001267211101"
+    },
+    {
+      "id": "1f39109ccf05",
+      "title": "Bungalow Collect presents Disco Rap",
+      "start": "2026-11-20T19:30:00-06:00",
+      "url": "https://www.eventbrite.com/e/bungalow-collect-presents-disco-rap-tickets-1999802853167"
+    },
+    {
+      "id": "8b9bdeab7cd7",
+      "title": "HOUSE OF DISCO",
+      "start": "2026-11-20T22:00:00-06:00",
+      "url": "https://www.eventbrite.com/e/house-of-disco-tickets-2002763113385"
+    }
+  ]
+}
