@@ -1,0 +1,21 @@
+{
+  "siteName": "NOLA.Today",
+  "siteUrl": "https://nola.today",
+  "description": "Live music in New Orleans tonight: a map of venues with shows, and full schedules for every club.",
+  "repo": "nolastan/nolatoday",
+  "mapbox": {
+    "tokenEnv": "MAPBOX_TOKEN",
+    "styleDark": "nolastan/cknc9bfbz1teg17p9blgfae26",
+    "styleLight": "mapbox/light-v11",
+    "center": [
+      -90.0715,
+      29.9575
+    ],
+    "zoom": 13
+  },
+  "fathomSite": "GUOLCQBY",
+  "social": {
+    "instagram": "https://instagram.com/nola.today",
+    "facebook": "https://facebook.com/nola.today"
+  }
+}
