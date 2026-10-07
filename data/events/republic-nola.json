@@ -2,12 +2,6 @@
   "venue": "republic-nola",
   "events": [
     {
-      "id": "3d45b5b6d71c",
-      "title": "Akeem Ali",
-      "start": "2026-10-06T20:00:00-05:00",
-      "url": "https://republicnola.com/event/akeem-ali-2/"
-    },
-    {
       "id": "cef191601bfb",
       "title": "Xavier Wulf",
       "start": "2026-10-07T20:00:00-05:00",
@@ -32,6 +26,12 @@
       "url": "https://republicnola.com/event/freakshow-new-orleans-after-the-fall-2/"
     },
     {
+      "id": "bd6f06bb5bea",
+      "title": "REWIND: 2000s",
+      "start": "2026-10-17T23:00:00-05:00",
+      "url": "https://republicnola.com/event/rewind-2000s-4/"
+    },
+    {
       "id": "5aeac50e1f9b",
       "title": "Freakshow New Orleans",
       "start": "2026-10-18T15:00:00-05:00",
@@ -54,6 +54,12 @@
       "title": "Freakshow New Orleans",
       "start": "2026-11-02T19:30:00-06:00",
       "url": "https://republicnola.com/event/freakshow-new-orleans-after-the-fall-11-02/"
+    },
+    {
+      "id": "9742227b92de",
+      "title": "Gasolina: Reggaeton Party",
+      "start": "2026-11-13T22:00:00-06:00",
+      "url": "https://republicnola.com/event/gasolina-reggaeton-party-2/"
     },
     {
       "id": "f1560f165858",

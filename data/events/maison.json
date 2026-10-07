@@ -1,0 +1,23 @@
+{
+  "venue": "maison",
+  "events": [
+    {
+      "id": "9f920f755159",
+      "title": "Open Mic From Hell: The WILDEST comedy show in New Orleans",
+      "start": "2026-10-11T19:30:00-05:00",
+      "url": "https://www.eventbrite.com/e/open-mic-from-hell-the-wildest-comedy-show-in-new-orleans-tickets-2002749676194"
+    },
+    {
+      "id": "18c5d1de96cc",
+      "title": "Halloween Saturday Night On Frenchmen Street",
+      "start": "2026-10-31T22:00:00-05:00",
+      "url": "https://www.eventbrite.com/e/halloween-saturday-night-on-frenchmen-street-the-maison-tickets-2000776658846"
+    },
+    {
+      "id": "f497655357be",
+      "title": "NEW YEARS EVE 2027",
+      "start": "2026-12-31T22:00:00-06:00",
+      "url": "https://www.eventbrite.com/e/new-years-eve-2027-the-maison-tickets-2002751680188"
+    }
+  ]
+}

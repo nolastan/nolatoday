@@ -2,6 +2,12 @@
   "venue": "marigny-opera-house",
   "events": [
     {
+      "id": "ce7a4ca19031",
+      "title": "ML Buch Live at Marigny Opera House with Special Guest, Cashier",
+      "start": "2026-10-14T19:00:00-05:00",
+      "url": "https://marignyoperahouse.org/upcoming-events/ml-buch/"
+    },
+    {
       "id": "e3cf15d10698",
       "title": "Vocal Masterclass: Bogdan Mynka",
       "start": "2026-10-22T18:00:00-05:00",
@@ -14,10 +20,22 @@
       "url": "https://marignyoperahouse.org/upcoming-events/halloween-2026-a-silent-film-live-music-experience/"
     },
     {
+      "id": "2b06b92941bd",
+      "title": "Juice: Halloween Music Massacre",
+      "start": "2026-10-31T20:00:00-05:00",
+      "url": "https://marignyoperahouse.org/upcoming-events/juice-halloween-music-massacre/"
+    },
+    {
       "id": "dd798682417b",
       "title": "Vocal Masterclass: Joshua Stewart",
       "start": "2026-11-10T18:00:00-06:00",
       "url": "https://marignyoperahouse.org/upcoming-events/vocal-masterclass-joshua-stewart/"
+    },
+    {
+      "id": "6df64bbd7c92",
+      "title": "Americana: Tucker Fuller | Philip Glass",
+      "start": "2026-11-12T19:30:00-06:00",
+      "url": "https://marignyoperahouse.org/upcoming-events/americana-tucker-fuller-philip-glass/"
     },
     {
       "id": "9fe59a20fc0a",
@@ -53,12 +71,6 @@
       "id": "8b1d3421f518",
       "title": "Die Sieben Todsünden",
       "start": "2026-12-19T20:00:00-06:00",
-      "url": "https://marignyoperahouse.org/upcoming-events/die-sieben-todsunden-the-seven-deadly-sins/"
-    },
-    {
-      "id": "02ca06d9bd40",
-      "title": "Die Sieben Todsünden",
-      "start": "2026-12-20T20:00:00-06:00",
       "url": "https://marignyoperahouse.org/upcoming-events/die-sieben-todsunden-the-seven-deadly-sins/"
     }
   ]

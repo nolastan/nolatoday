@@ -2,34 +2,6 @@
   "venue": "new-orleans-jazz-museum",
   "events": [
     {
-      "id": "948a35e29f3d",
-      "title": "Trempo Masterclass",
-      "start": "2026-10-05T09:00:00-05:00",
-      "end": "2026-10-05T16:00:00-05:00",
-      "url": "https://nolajazzmuseum.org/events/2026/10/5/trempo"
-    },
-    {
-      "id": "dbe58eb9bb30",
-      "title": "The 40th Anniversary of Paul Simon’s album “Graceland” – A Talk by author of Days of Miracle and Wonder: Paul Simon and the Trials and Triumphs of Graceland, Ashley Khan",
-      "start": "2026-10-05T14:00:00-05:00",
-      "end": "2026-10-05T15:00:00-05:00",
-      "url": "https://nolajazzmuseum.org/events/2026/10/5/paul-simons-graceland-a-talk-by-author-ashley-khan"
-    },
-    {
-      "id": "f649a4e36acd",
-      "title": "Trempo Masterclass",
-      "start": "2026-10-06T09:00:00-05:00",
-      "end": "2026-10-06T16:00:00-05:00",
-      "url": "https://nolajazzmuseum.org/events/2026/10/5/trempo-ktwyg"
-    },
-    {
-      "id": "f6530bb510ff",
-      "title": "George S. Corey's Book Launch",
-      "start": "2026-10-06T17:00:00-05:00",
-      "end": "2026-10-06T18:00:00-05:00",
-      "url": "https://nolajazzmuseum.org/events/2026/10/6/george-corys-book-lunch"
-    },
-    {
       "id": "8694557aa2af",
       "title": "Trempo Masterclass",
       "start": "2026-10-07T09:00:00-05:00",
@@ -77,13 +49,6 @@
       "start": "2026-10-09T19:00:00-05:00",
       "end": "2026-10-09T21:00:00-05:00",
       "url": "https://nolajazzmuseum.org/events/2026/10/9/friends-of-the-cabildo-concert-series-presents-sonny-landreth"
-    },
-    {
-      "id": "8b310a2f47b6",
-      "title": "Cumbiafest",
-      "start": "2026-10-10T18:00:00-05:00",
-      "end": "2026-10-10T21:00:00-05:00",
-      "url": "https://nolajazzmuseum.org/events/2026/10/10/cumbiafest"
     },
     {
       "id": "58d0d555e88a",
@@ -170,6 +135,13 @@
       "url": "https://nolajazzmuseum.org/events/2026/10/20/the-ella-project"
     },
     {
+      "id": "ac5a29ef11c3",
+      "title": "The Jazz Foundation of America (JFA) Present... Abe Thompson Orchestra - \"After the Storm (is Life)\" Album Release Show",
+      "start": "2026-10-21T14:00:00-05:00",
+      "end": "2026-10-21T15:00:00-05:00",
+      "url": "https://nolajazzmuseum.org/events/2026/10/21/jazz-foundation-of-america-jfa-presents"
+    },
+    {
       "id": "8a78f5e4b88f",
       "title": "Gallatin Street Fridays Presented by The Nathan and Priscilla Gordon Foundation brings you Barakat!",
       "start": "2026-10-23T14:00:00-05:00",
@@ -205,6 +177,13 @@
       "url": "https://nolajazzmuseum.org/events/2026/10/29/brass-band-headquarters-donnas-bar-and-grill-exhibition-opening"
     },
     {
+      "id": "d0c512e91421",
+      "title": "Composers Now: Dialogues in New Orleans",
+      "start": "2026-10-29T19:00:00-05:00",
+      "end": "2026-10-29T22:00:00-05:00",
+      "url": "https://nolajazzmuseum.org/events/2026/10/29/composer-now-15th-anniversary-season-with-dialogues-in-new-orleans"
+    },
+    {
       "id": "2005e0e1e7ac",
       "title": "Gallatin Street Fridays Presented by The Nathan and Priscilla Gordon Foundation: The Noah Young Trio",
       "start": "2026-10-30T14:00:00-05:00",
@@ -217,6 +196,13 @@
       "start": "2026-11-02T14:00:00-06:00",
       "end": "2026-11-02T15:00:00-06:00",
       "url": "https://nolajazzmuseum.org/events/2026/10/29/notes-from-the-road-with-robert-mugge-a-filmmakers-journey-through-american-music"
+    },
+    {
+      "id": "436272cba1f1",
+      "title": "George S. Corey’s Book Launch: Kiddos Save Jazz 2!",
+      "start": "2026-11-03T17:00:00-06:00",
+      "end": "2026-11-03T19:00:00-06:00",
+      "url": "https://nolajazzmuseum.org/events/2026/11/3/kiddos-save-jazz-2-along-with-a-tuba-skinny-balcony-concert"
     },
     {
       "id": "790ba16533cc",
@@ -310,6 +296,13 @@
       "url": "https://nolajazzmuseum.org/events/2026/11/14/trempo-masterclass"
     },
     {
+      "id": "bf1dc9c53ffb",
+      "title": "Yelper Party: The Big Easy Bash at The New Orleans Jazz Museum!",
+      "start": "2026-11-14T17:00:00-06:00",
+      "end": "2026-11-14T18:00:00-06:00",
+      "url": "https://nolajazzmuseum.org/events/2026/8/15/big-easy-bash-yelp"
+    },
+    {
       "id": "fa3a900c6f22",
       "title": "Trempo Masterclass",
       "start": "2026-11-15T09:00:00-06:00",
@@ -324,11 +317,25 @@
       "url": "https://nolajazzmuseum.org/events/2026/11/17/the-ella-project"
     },
     {
+      "id": "e777425a347f",
+      "title": "Friends of the Cabildo Concert Series Present The Walrus - New Orleans Beatles Tribute SOLD OUT",
+      "start": "2026-11-20T19:00:00-06:00",
+      "end": "2026-11-20T21:00:00-06:00",
+      "url": "https://nolajazzmuseum.org/events/2026/11/20/friends-of-the-cabildo-concert-series-presents-i-am-the-walrus"
+    },
+    {
       "id": "8d84944b5d4c",
       "title": "Improvisations Gala 2026: The Coolest Night in New Orleans",
       "start": "2026-12-05T19:00:00-06:00",
       "end": "2026-12-05T23:00:00-06:00",
       "url": "https://nolajazzmuseum.org/events/2026/12/5/agwhucp5p13qr1flur0s1vfudxxp7j"
+    },
+    {
+      "id": "469e08175bad",
+      "title": "Cumbiafest",
+      "start": "2026-12-12T18:00:00-06:00",
+      "end": "2026-12-12T21:00:00-06:00",
+      "url": "https://nolajazzmuseum.org/events/2026/10/10/cumbiafest"
     }
   ]
 }

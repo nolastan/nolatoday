@@ -2,20 +2,6 @@
   "venue": "maple-leaf-bar",
   "events": [
     {
-      "id": "d16313b7b107",
-      "title": "George Porter Jr. Trio Ft. Chris Adkins",
-      "start": "2026-10-05T19:00:00-05:00",
-      "end": "2026-10-05T21:00:00-05:00",
-      "url": "https://www.mapleleafbar.com/events/george-porter-jr-trio-ft-chris-adkins-5"
-    },
-    {
-      "id": "34d9741e86ba",
-      "title": "George Porter Jr. Trio Ft. Chris Adkins",
-      "start": "2026-10-05T22:00:00-05:00",
-      "end": "2026-10-06T00:00:00-05:00",
-      "url": "https://www.mapleleafbar.com/events/george-porter-jr-trio-ft-chris-adkins-6"
-    },
-    {
       "id": "367e8185f726",
       "title": "Wayne Maureau’s Vieuxdoo Nouveau",
       "start": "2026-10-07T19:00:00-05:00",
@@ -40,8 +26,21 @@
       "id": "9003998d6513",
       "title": "The Love Muscles",
       "start": "2026-10-09T20:00:00-05:00",
-      "end": "2026-10-10T00:00:00-05:00",
       "url": "https://www.mapleleafbar.com/events/the-love-muscles-2"
+    },
+    {
+      "id": "468167844763",
+      "title": "The Snozzberries",
+      "start": "2026-10-09T23:00:00-05:00",
+      "end": "2026-10-10T02:00:00-05:00",
+      "url": "https://www.mapleleafbar.com/events/the-snozzberries"
+    },
+    {
+      "id": "87f96229e7cc",
+      "title": "Douggies Celebration of Life",
+      "start": "2026-10-10T12:00:00-05:00",
+      "end": "2026-10-10T22:30:00-05:00",
+      "url": "https://www.mapleleafbar.com/events/douggies-celebration-of-life"
     }
   ]
 }

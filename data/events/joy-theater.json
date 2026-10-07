@@ -2,13 +2,6 @@
   "venue": "joy-theater",
   "events": [
     {
-      "id": "b4873f31be4a",
-      "title": "Mike Campbell & The Dirty Knobs",
-      "start": "2026-10-06",
-      "allDay": true,
-      "url": "https://thejoytheater.com/event/mike-campbell-the-dirty-knobs/"
-    },
-    {
       "id": "ec05ea336d5a",
       "title": "Bingo Loco",
       "start": "2026-10-17",

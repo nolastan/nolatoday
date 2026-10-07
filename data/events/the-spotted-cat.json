@@ -2,48 +2,6 @@
   "venue": "the-spotted-cat",
   "events": [
     {
-      "id": "dafaea6839ef",
-      "title": "Pat Casey & The New Sound",
-      "start": "2026-10-04T21:00:00-05:00",
-      "url": "https://www.spottedcatmusicclub.com/calendar"
-    },
-    {
-      "id": "f63d5a96160f",
-      "title": "Jenavieve Cooke & The Winding Boys",
-      "start": "2026-10-05T14:00:00-05:00",
-      "url": "https://www.spottedcatmusicclub.com/calendar"
-    },
-    {
-      "id": "33c378ec34e1",
-      "title": "Dominick Grillo & The Frenchmen Street All-Stars",
-      "start": "2026-10-05T18:00:00-05:00",
-      "url": "https://www.spottedcatmusicclub.com/calendar"
-    },
-    {
-      "id": "ed5d10f33b18",
-      "title": "Saskia Says!",
-      "start": "2026-10-05T21:30:00-05:00",
-      "url": "https://www.spottedcatmusicclub.com/calendar"
-    },
-    {
-      "id": "062eaa308815",
-      "title": "Chris Christy Band",
-      "start": "2026-10-06T14:00:00-05:00",
-      "url": "https://www.spottedcatmusicclub.com/calendar"
-    },
-    {
-      "id": "33254c10dc68",
-      "title": "Sweetie Pies of New Orleans",
-      "start": "2026-10-06T18:00:00-05:00",
-      "url": "https://www.spottedcatmusicclub.com/calendar"
-    },
-    {
-      "id": "91971d8c0f05",
-      "title": "Smoking Time Jazz Club",
-      "start": "2026-10-06T21:30:00-05:00",
-      "url": "https://www.spottedcatmusicclub.com/calendar"
-    },
-    {
       "id": "860e1892fa95",
       "title": "Chris Christy Band",
       "start": "2026-10-07T14:00:00-05:00",

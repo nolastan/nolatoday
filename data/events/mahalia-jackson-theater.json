@@ -1,0 +1,41 @@
+{
+  "venue": "mahalia-jackson-theater",
+  "events": [
+    {
+      "id": "de50af4a025c",
+      "title": "My Hero Academia in Concert",
+      "start": "2026-10-10T19:00:00-05:00",
+      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A70grf"
+    },
+    {
+      "id": "065378109a05",
+      "title": "The Rocky Horror Picture Show (minors must be accompanied by a guardian)",
+      "start": "2026-10-29T19:30:00-05:00",
+      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7PdPA"
+    },
+    {
+      "id": "0064400b2b96",
+      "title": "Anthony Jeselnik",
+      "start": "2026-11-05T19:30:00-06:00",
+      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7PF4A"
+    },
+    {
+      "id": "51a30acdea23",
+      "title": "Anthony Jeselnik: Wrath of Man",
+      "start": "2026-11-05T19:30:00-06:00",
+      "url": "https://us.atgtickets.com/events/anthony-jeselnik/mahalia-jackson-theater/"
+    },
+    {
+      "id": "9fd3d9876e6c",
+      "title": "The Carpenters Songbook - A Live Celebration",
+      "start": "2026-11-08T19:30:00-06:00",
+      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7J3fF"
+    },
+    {
+      "id": "4ff20c3e0cdd",
+      "title": "Outlander in Concert",
+      "start": "2026-12-02T19:00:00-06:00",
+      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7xdxZ"
+    }
+  ]
+}

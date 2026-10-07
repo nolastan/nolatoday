@@ -4,9 +4,9 @@
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
       "count": 9,
-      "lastRun": "2026-10-05T00:47:13.521-05:00",
-      "lastSuccess": "2026-10-05T00:47:13.521-05:00",
-      "lastNonEmpty": "2026-10-05T00:47:13.521-05:00",
+      "lastRun": "2026-10-07T08:38:46.914-05:00",
+      "lastSuccess": "2026-10-07T08:38:46.914-05:00",
+      "lastNonEmpty": "2026-10-07T08:38:46.914-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
@@ -19,48 +19,48 @@
     "30-90": {
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
-      "count": 65,
-      "lastRun": "2026-10-05T00:47:13.521-05:00",
-      "lastSuccess": "2026-10-05T00:47:13.521-05:00",
-      "lastNonEmpty": "2026-10-05T00:47:13.521-05:00",
+      "count": 61,
+      "lastRun": "2026-10-07T08:38:46.914-05:00",
+      "lastSuccess": "2026-10-07T08:38:46.914-05:00",
+      "lastNonEmpty": "2026-10-07T08:38:46.914-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
           "type": "squarespace",
           "ok": true,
-          "count": 65
+          "count": 61
         }
       ]
     },
     "bacchanal": {
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
-      "count": 101,
-      "lastRun": "2026-10-05T00:47:13.521-05:00",
-      "lastSuccess": "2026-10-05T00:47:13.521-05:00",
-      "lastNonEmpty": "2026-10-05T00:47:13.521-05:00",
+      "count": 98,
+      "lastRun": "2026-10-07T08:38:46.914-05:00",
+      "lastSuccess": "2026-10-07T08:38:46.914-05:00",
+      "lastNonEmpty": "2026-10-07T08:38:46.914-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
           "type": "ics",
           "ok": true,
-          "count": 101
+          "count": 98
         }
       ]
     },
     "blue-nile": {
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
-      "count": 46,
-      "lastRun": "2026-10-05T00:47:13.521-05:00",
-      "lastSuccess": "2026-10-05T00:47:13.521-05:00",
-      "lastNonEmpty": "2026-10-05T00:47:13.521-05:00",
+      "count": 45,
+      "lastRun": "2026-10-07T08:38:46.914-05:00",
+      "lastSuccess": "2026-10-07T08:38:46.914-05:00",
+      "lastNonEmpty": "2026-10-07T08:38:46.914-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
           "type": "squarespace",
           "ok": true,
-          "count": 46
+          "count": 45
         }
       ]
     },
@@ -68,9 +68,9 @@
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
       "count": 38,
-      "lastRun": "2026-10-05T00:47:13.521-05:00",
-      "lastSuccess": "2026-10-05T00:47:13.521-05:00",
-      "lastNonEmpty": "2026-10-05T00:47:13.521-05:00",
+      "lastRun": "2026-10-07T08:38:46.914-05:00",
+      "lastSuccess": "2026-10-07T08:38:46.914-05:00",
+      "lastNonEmpty": "2026-10-07T08:38:46.914-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
@@ -84,9 +84,9 @@
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
       "count": 11,
-      "lastRun": "2026-10-05T00:47:13.521-05:00",
-      "lastSuccess": "2026-10-05T00:47:13.521-05:00",
-      "lastNonEmpty": "2026-10-05T00:47:13.521-05:00",
+      "lastRun": "2026-10-07T08:38:46.914-05:00",
+      "lastSuccess": "2026-10-07T08:38:46.914-05:00",
+      "lastNonEmpty": "2026-10-07T08:38:46.914-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
@@ -96,99 +96,165 @@
         }
       ]
     },
+    "chickie-wah-wah": {
+      "ok": true,
+      "firstSeen": "2026-10-07T08:38:46.914-05:00",
+      "count": 25,
+      "lastRun": "2026-10-07T08:38:46.914-05:00",
+      "lastSuccess": "2026-10-07T08:38:46.914-05:00",
+      "lastNonEmpty": "2026-10-07T08:38:46.914-05:00",
+      "consecutiveFailures": 0,
+      "sources": [
+        {
+          "type": "jambase",
+          "ok": true,
+          "count": 25
+        }
+      ]
+    },
     "dba": {
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
-      "count": 62,
-      "lastRun": "2026-10-05T00:47:13.521-05:00",
-      "lastSuccess": "2026-10-05T00:47:13.521-05:00",
-      "lastNonEmpty": "2026-10-05T00:47:13.521-05:00",
+      "count": 104,
+      "lastRun": "2026-10-07T08:38:46.914-05:00",
+      "lastSuccess": "2026-10-07T08:38:46.914-05:00",
+      "lastNonEmpty": "2026-10-07T08:38:46.914-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
           "type": "gigulator",
           "ok": true,
-          "count": 62
+          "count": 104
         }
       ]
     },
     "dos-jefes": {
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
-      "count": 23,
-      "lastRun": "2026-10-05T00:47:13.521-05:00",
-      "lastSuccess": "2026-10-05T00:47:13.521-05:00",
-      "lastNonEmpty": "2026-10-05T00:47:13.521-05:00",
+      "count": 22,
+      "lastRun": "2026-10-07T08:38:46.914-05:00",
+      "lastSuccess": "2026-10-07T08:38:46.914-05:00",
+      "lastNonEmpty": "2026-10-07T08:38:46.914-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
           "type": "html",
+          "ok": true,
+          "count": 22
+        }
+      ]
+    },
+    "fillmore-new-orleans": {
+      "ok": true,
+      "firstSeen": "2026-10-07T08:38:46.914-05:00",
+      "count": 26,
+      "lastRun": "2026-10-07T08:38:46.914-05:00",
+      "lastSuccess": "2026-10-07T08:38:46.914-05:00",
+      "lastNonEmpty": "2026-10-07T08:38:46.914-05:00",
+      "consecutiveFailures": 0,
+      "sources": [
+        {
+          "type": "ticketmaster",
+          "ok": true,
+          "count": 26
+        }
+      ]
+    },
+    "gasa-gasa": {
+      "ok": false,
+      "firstSeen": "2026-10-05T00:47:13.521-05:00",
+      "count": 18,
+      "lastRun": "2026-10-07T08:38:46.914-05:00",
+      "lastSuccess": "2026-10-05T00:47:13.521-05:00",
+      "lastNonEmpty": "2026-10-05T00:47:13.521-05:00",
+      "consecutiveFailures": 1,
+      "sources": [
+        {
+          "type": "jsonld",
+          "ok": false,
+          "error": "HTTP 530 for https://www.ticketweb.com/venue/gasa-gasa-new-orleans-la/253094"
+        }
+      ],
+      "error": "jsonld: HTTP 530 for https://www.ticketweb.com/venue/gasa-gasa-new-orleans-la/253094"
+    },
+    "house-of-blues": {
+      "ok": true,
+      "firstSeen": "2026-10-05T00:47:13.521-05:00",
+      "count": 23,
+      "lastRun": "2026-10-07T08:38:46.914-05:00",
+      "lastSuccess": "2026-10-07T08:38:46.914-05:00",
+      "lastNonEmpty": "2026-10-07T08:38:46.914-05:00",
+      "consecutiveFailures": 0,
+      "sources": [
+        {
+          "type": "jsonld",
           "ok": true,
           "count": 23
         }
       ]
     },
-    "gasa-gasa": {
-      "ok": true,
-      "firstSeen": "2026-10-05T00:47:13.521-05:00",
-      "count": 18,
-      "lastRun": "2026-10-05T00:47:13.521-05:00",
-      "lastSuccess": "2026-10-05T00:47:13.521-05:00",
-      "lastNonEmpty": "2026-10-05T00:47:13.521-05:00",
-      "consecutiveFailures": 0,
-      "sources": [
-        {
-          "type": "jsonld",
-          "ok": true,
-          "count": 18
-        }
-      ]
-    },
-    "house-of-blues": {
-      "ok": true,
-      "firstSeen": "2026-10-05T00:47:13.521-05:00",
-      "count": 24,
-      "lastRun": "2026-10-05T00:47:13.521-05:00",
-      "lastSuccess": "2026-10-05T00:47:13.521-05:00",
-      "lastNonEmpty": "2026-10-05T00:47:13.521-05:00",
-      "consecutiveFailures": 0,
-      "sources": [
-        {
-          "type": "jsonld",
-          "ok": true,
-          "count": 24
-        }
-      ]
-    },
     "howlin-wolf": {
-      "ok": true,
+      "ok": false,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
       "count": 18,
-      "lastRun": "2026-10-05T00:47:13.521-05:00",
+      "lastRun": "2026-10-07T08:38:46.914-05:00",
       "lastSuccess": "2026-10-05T00:47:13.521-05:00",
       "lastNonEmpty": "2026-10-05T00:47:13.521-05:00",
-      "consecutiveFailures": 0,
+      "consecutiveFailures": 1,
       "sources": [
         {
           "type": "jsonld",
-          "ok": true,
-          "count": 18
+          "ok": false,
+          "error": "HTTP 530 for https://www.ticketweb.com/venue/howlin-wolf-new-orleans-la/15005"
         }
-      ]
+      ],
+      "error": "jsonld: HTTP 530 for https://www.ticketweb.com/venue/howlin-wolf-new-orleans-la/15005"
     },
     "joy-theater": {
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
-      "count": 16,
-      "lastRun": "2026-10-05T00:47:13.521-05:00",
-      "lastSuccess": "2026-10-05T00:47:13.521-05:00",
-      "lastNonEmpty": "2026-10-05T00:47:13.521-05:00",
+      "count": 15,
+      "lastRun": "2026-10-07T08:38:46.914-05:00",
+      "lastSuccess": "2026-10-07T08:38:46.914-05:00",
+      "lastNonEmpty": "2026-10-07T08:38:46.914-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
           "type": "html",
           "ok": true,
-          "count": 16
+          "count": 15
+        }
+      ]
+    },
+    "mahalia-jackson-theater": {
+      "ok": true,
+      "firstSeen": "2026-10-07T08:38:46.914-05:00",
+      "count": 6,
+      "lastRun": "2026-10-07T08:38:46.914-05:00",
+      "lastSuccess": "2026-10-07T08:38:46.914-05:00",
+      "lastNonEmpty": "2026-10-07T08:38:46.914-05:00",
+      "consecutiveFailures": 0,
+      "sources": [
+        {
+          "type": "ticketmaster",
+          "ok": true,
+          "count": 6
+        }
+      ]
+    },
+    "maison": {
+      "ok": true,
+      "firstSeen": "2026-10-07T08:38:46.914-05:00",
+      "count": 3,
+      "lastRun": "2026-10-07T08:38:46.914-05:00",
+      "lastSuccess": "2026-10-07T08:38:46.914-05:00",
+      "lastNonEmpty": "2026-10-07T08:38:46.914-05:00",
+      "consecutiveFailures": 0,
+      "sources": [
+        {
+          "type": "eventbrite",
+          "ok": true,
+          "count": 3
         }
       ]
     },
@@ -196,9 +262,9 @@
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
       "count": 6,
-      "lastRun": "2026-10-05T00:47:13.521-05:00",
-      "lastSuccess": "2026-10-05T00:47:13.521-05:00",
-      "lastNonEmpty": "2026-10-05T00:47:13.521-05:00",
+      "lastRun": "2026-10-07T08:38:46.914-05:00",
+      "lastSuccess": "2026-10-07T08:38:46.914-05:00",
+      "lastNonEmpty": "2026-10-07T08:38:46.914-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
@@ -227,16 +293,16 @@
     "marigny-opera-house": {
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
-      "count": 10,
-      "lastRun": "2026-10-05T00:47:13.521-05:00",
-      "lastSuccess": "2026-10-05T00:47:13.521-05:00",
-      "lastNonEmpty": "2026-10-05T00:47:13.521-05:00",
+      "count": 12,
+      "lastRun": "2026-10-07T08:38:46.914-05:00",
+      "lastSuccess": "2026-10-07T08:38:46.914-05:00",
+      "lastNonEmpty": "2026-10-07T08:38:46.914-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
           "type": "html",
           "ok": true,
-          "count": 10
+          "count": 12
         }
       ]
     },
@@ -244,10 +310,10 @@
       "ok": false,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
       "count": 0,
-      "lastRun": "2026-10-05T00:47:13.521-05:00",
+      "lastRun": "2026-10-07T08:38:46.914-05:00",
       "lastSuccess": null,
       "lastNonEmpty": null,
-      "consecutiveFailures": 2,
+      "consecutiveFailures": 3,
       "sources": [
         {
           "type": "jsonld",
@@ -260,16 +326,16 @@
     "new-orleans-jazz-museum": {
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
-      "count": 47,
-      "lastRun": "2026-10-05T00:47:13.521-05:00",
-      "lastSuccess": "2026-10-05T00:47:13.521-05:00",
-      "lastNonEmpty": "2026-10-05T00:47:13.521-05:00",
+      "count": 48,
+      "lastRun": "2026-10-07T08:38:46.914-05:00",
+      "lastSuccess": "2026-10-07T08:38:46.914-05:00",
+      "lastNonEmpty": "2026-10-07T08:38:46.914-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
           "type": "squarespace",
           "ok": true,
-          "count": 47
+          "count": 48
         }
       ]
     },
@@ -277,9 +343,9 @@
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
       "count": 7,
-      "lastRun": "2026-10-05T00:47:13.521-05:00",
-      "lastSuccess": "2026-10-05T00:47:13.521-05:00",
-      "lastNonEmpty": "2026-10-05T00:47:13.521-05:00",
+      "lastRun": "2026-10-07T08:38:46.914-05:00",
+      "lastSuccess": "2026-10-07T08:38:46.914-05:00",
+      "lastNonEmpty": "2026-10-07T08:38:46.914-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
@@ -293,9 +359,9 @@
       "ok": true,
       "firstSeen": "2026-10-07T00:12:43.896-05:00",
       "count": 18,
-      "lastRun": "2026-10-07T00:12:43.896-05:00",
-      "lastSuccess": "2026-10-07T00:12:43.896-05:00",
-      "lastNonEmpty": "2026-10-07T00:12:43.896-05:00",
+      "lastRun": "2026-10-07T08:38:46.914-05:00",
+      "lastSuccess": "2026-10-07T08:38:46.914-05:00",
+      "lastNonEmpty": "2026-10-07T08:38:46.914-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
@@ -308,80 +374,96 @@
     "republic-nola": {
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
-      "count": 12,
-      "lastRun": "2026-10-05T00:47:13.521-05:00",
-      "lastSuccess": "2026-10-05T00:47:13.521-05:00",
-      "lastNonEmpty": "2026-10-05T00:47:13.521-05:00",
+      "count": 13,
+      "lastRun": "2026-10-07T08:38:46.914-05:00",
+      "lastSuccess": "2026-10-07T08:38:46.914-05:00",
+      "lastNonEmpty": "2026-10-07T08:38:46.914-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
           "type": "html",
           "ok": true,
-          "count": 12
+          "count": 13
+        }
+      ]
+    },
+    "saenger-theatre": {
+      "ok": true,
+      "firstSeen": "2026-10-07T08:38:46.914-05:00",
+      "count": 49,
+      "lastRun": "2026-10-07T08:38:46.914-05:00",
+      "lastSuccess": "2026-10-07T08:38:46.914-05:00",
+      "lastNonEmpty": "2026-10-07T08:38:46.914-05:00",
+      "consecutiveFailures": 0,
+      "sources": [
+        {
+          "type": "ticketmaster",
+          "ok": true,
+          "count": 49
         }
       ]
     },
     "santos-bar": {
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
-      "count": 28,
-      "lastRun": "2026-10-05T00:47:13.521-05:00",
-      "lastSuccess": "2026-10-05T00:47:13.521-05:00",
-      "lastNonEmpty": "2026-10-05T00:47:13.521-05:00",
+      "count": 27,
+      "lastRun": "2026-10-07T08:38:46.914-05:00",
+      "lastSuccess": "2026-10-07T08:38:46.914-05:00",
+      "lastNonEmpty": "2026-10-07T08:38:46.914-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
           "type": "html",
           "ok": true,
-          "count": 28
+          "count": 27
         }
       ]
     },
     "sidneys-saloon": {
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
-      "count": 10,
-      "lastRun": "2026-10-05T00:47:13.521-05:00",
-      "lastSuccess": "2026-10-05T00:47:13.521-05:00",
-      "lastNonEmpty": "2026-10-05T00:47:13.521-05:00",
+      "count": 9,
+      "lastRun": "2026-10-07T08:38:46.914-05:00",
+      "lastSuccess": "2026-10-07T08:38:46.914-05:00",
+      "lastNonEmpty": "2026-10-07T08:38:46.914-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
           "type": "squarespace",
           "ok": true,
-          "count": 10
+          "count": 9
         }
       ]
     },
     "snug-harbor": {
       "ok": true,
       "firstSeen": "2026-10-07T00:24:46.231-05:00",
-      "count": 17,
-      "lastRun": "2026-10-07T00:24:46.231-05:00",
-      "lastSuccess": "2026-10-07T00:24:46.231-05:00",
-      "lastNonEmpty": "2026-10-07T00:24:46.231-05:00",
+      "count": 16,
+      "lastRun": "2026-10-07T08:38:46.914-05:00",
+      "lastSuccess": "2026-10-07T08:38:46.914-05:00",
+      "lastNonEmpty": "2026-10-07T08:38:46.914-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
           "type": "jambase",
           "ok": true,
-          "count": 17
+          "count": 16
         }
       ]
     },
     "the-allways-lounge": {
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
-      "count": 309,
-      "lastRun": "2026-10-05T00:47:13.521-05:00",
-      "lastSuccess": "2026-10-05T00:47:13.521-05:00",
-      "lastNonEmpty": "2026-10-05T00:47:13.521-05:00",
+      "count": 305,
+      "lastRun": "2026-10-07T08:38:46.914-05:00",
+      "lastSuccess": "2026-10-07T08:38:46.914-05:00",
+      "lastNonEmpty": "2026-10-07T08:38:46.914-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
           "type": "ics",
           "ok": true,
-          "count": 309
+          "count": 305
         }
       ]
     },
@@ -389,9 +471,9 @@
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
       "count": 30,
-      "lastRun": "2026-10-05T00:47:13.521-05:00",
-      "lastSuccess": "2026-10-05T00:47:13.521-05:00",
-      "lastNonEmpty": "2026-10-05T00:47:13.521-05:00",
+      "lastRun": "2026-10-07T08:38:46.914-05:00",
+      "lastSuccess": "2026-10-07T08:38:46.914-05:00",
+      "lastNonEmpty": "2026-10-07T08:38:46.914-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
@@ -404,16 +486,16 @@
     "the-carousel-bar-lounge": {
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
-      "count": 38,
-      "lastRun": "2026-10-05T00:47:13.521-05:00",
-      "lastSuccess": "2026-10-05T00:47:13.521-05:00",
-      "lastNonEmpty": "2026-10-05T00:47:13.521-05:00",
+      "count": 37,
+      "lastRun": "2026-10-07T08:38:46.914-05:00",
+      "lastSuccess": "2026-10-07T08:38:46.914-05:00",
+      "lastNonEmpty": "2026-10-07T08:38:46.914-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
           "type": "html",
           "ok": true,
-          "count": 38
+          "count": 37
         }
       ]
     },
@@ -421,9 +503,9 @@
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
       "count": 3,
-      "lastRun": "2026-10-05T00:47:13.521-05:00",
-      "lastSuccess": "2026-10-05T00:47:13.521-05:00",
-      "lastNonEmpty": "2026-10-05T00:47:13.521-05:00",
+      "lastRun": "2026-10-07T08:38:46.914-05:00",
+      "lastSuccess": "2026-10-07T08:38:46.914-05:00",
+      "lastNonEmpty": "2026-10-07T08:38:46.914-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
@@ -437,9 +519,9 @@
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
       "count": 5,
-      "lastRun": "2026-10-05T00:47:13.521-05:00",
-      "lastSuccess": "2026-10-05T00:47:13.521-05:00",
-      "lastNonEmpty": "2026-10-05T00:47:13.521-05:00",
+      "lastRun": "2026-10-07T08:38:46.914-05:00",
+      "lastSuccess": "2026-10-07T08:38:46.914-05:00",
+      "lastNonEmpty": "2026-10-07T08:38:46.914-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
@@ -453,9 +535,9 @@
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
       "count": 7,
-      "lastRun": "2026-10-05T00:47:13.521-05:00",
-      "lastSuccess": "2026-10-05T00:47:13.521-05:00",
-      "lastNonEmpty": "2026-10-05T00:47:13.521-05:00",
+      "lastRun": "2026-10-07T08:38:46.914-05:00",
+      "lastSuccess": "2026-10-07T08:38:46.914-05:00",
+      "lastNonEmpty": "2026-10-07T08:38:46.914-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
@@ -468,51 +550,51 @@
     "the-spotted-cat": {
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
-      "count": 90,
-      "lastRun": "2026-10-05T00:47:13.521-05:00",
-      "lastSuccess": "2026-10-05T00:47:13.521-05:00",
-      "lastNonEmpty": "2026-10-05T00:47:13.521-05:00",
+      "count": 83,
+      "lastRun": "2026-10-07T08:38:46.914-05:00",
+      "lastSuccess": "2026-10-07T08:38:46.914-05:00",
+      "lastNonEmpty": "2026-10-07T08:38:46.914-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
           "type": "gigulator",
           "ok": true,
-          "count": 90
+          "count": 83
         }
       ]
     },
     "three-muses": {
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
-      "count": 2,
-      "lastRun": "2026-10-05T00:47:13.521-05:00",
-      "lastSuccess": "2026-10-05T00:47:13.521-05:00",
+      "count": 0,
+      "lastRun": "2026-10-07T08:38:46.914-05:00",
+      "lastSuccess": "2026-10-07T08:38:46.914-05:00",
       "lastNonEmpty": "2026-10-05T00:47:13.521-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
           "type": "squarespace",
           "ok": true,
-          "count": 2
+          "count": 0
         }
       ]
     },
     "tips": {
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
-      "count": 33,
-      "lastRun": "2026-10-05T00:47:13.521-05:00",
-      "lastSuccess": "2026-10-05T00:47:13.521-05:00",
-      "lastNonEmpty": "2026-10-05T00:47:13.521-05:00",
+      "count": 35,
+      "lastRun": "2026-10-07T08:38:46.914-05:00",
+      "lastSuccess": "2026-10-07T08:38:46.914-05:00",
+      "lastNonEmpty": "2026-10-07T08:38:46.914-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
           "type": "html",
           "ok": true,
-          "count": 33
+          "count": 35
         }
       ]
     }
   },
-  "generatedAt": "2026-10-07T00:24:46.231-05:00"
+  "generatedAt": "2026-10-07T08:38:46.914-05:00"
 }

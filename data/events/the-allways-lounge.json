@@ -2,62 +2,6 @@
   "venue": "the-allways-lounge",
   "events": [
     {
-      "id": "0644c6ae58c0",
-      "title": "Repo! the Genetic Opera Shadowcast",
-      "start": "2026-10-04T22:30:00-05:00",
-      "end": "2026-10-05T01:30:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/3127/1791775800000/34"
-    },
-    {
-      "id": "151ca5eafdee",
-      "title": "Meatsuit Maintenance: Company Class",
-      "start": "2026-10-05T14:00:00-05:00",
-      "end": "2026-10-05T15:00:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/4325/1791226800000"
-    },
-    {
-      "id": "9f6f3ee2010c",
-      "title": "Betsy Propane Smoke Show (live music & burlesque)",
-      "start": "2026-10-05T19:00:00-05:00",
-      "end": "2026-10-05T20:30:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/2864/1791244800000"
-    },
-    {
-      "id": "94d01d9cb55c",
-      "title": "I Wrote a Song (a Big gay musical)",
-      "start": "2026-10-05T20:00:00-05:00",
-      "end": "2026-10-05T21:30:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/4314/1791248400000/4"
-    },
-    {
-      "id": "389c3e9f61d5",
-      "title": "Almost Naked Karaoke",
-      "start": "2026-10-05T21:30:00-05:00",
-      "end": "2026-10-05T23:30:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/2269/1791253800000"
-    },
-    {
-      "id": "28d02ef9bb6d",
-      "title": "Freaklesque! (burlesque)",
-      "start": "2026-10-06T19:00:00-05:00",
-      "end": "2026-10-06T20:30:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/4074/1791331200000"
-    },
-    {
-      "id": "407e17904e1f",
-      "title": "Sausage Fest (drag Kings)",
-      "start": "2026-10-06T20:00:00-05:00",
-      "end": "2026-10-06T21:30:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/4365/1791334800000/1"
-    },
-    {
-      "id": "cf36bf4cffb2",
-      "title": "AVANT-HARDE: Outré Cabaret & Burlesque",
-      "start": "2026-10-06T21:30:00-05:00",
-      "end": "2026-10-06T23:00:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/4389/1791340200000"
-    },
-    {
       "id": "3a155e8826f1",
       "title": "Lefty Lucy's Burlesque Bingo",
       "start": "2026-10-07T18:30:00-05:00",
@@ -449,8 +393,8 @@
       "url": "https://tockify.com/allwayslounge/detail/3097/1792625400000"
     },
     {
-      "id": "d47c11439df9",
-      "title": "Not Another Burlesque Show",
+      "id": "330735f28bc6",
+      "title": "The Sorcerers Tale (burlesque)",
       "start": "2026-10-21T19:00:00-05:00",
       "end": "2026-10-21T21:00:00-05:00",
       "url": "https://tockify.com/allwayslounge/detail/4418/1792627200000"
@@ -617,6 +561,12 @@
       "url": "https://tockify.com/allwayslounge/detail/2269/1793068200000"
     },
     {
+      "id": "e9f9046c0670",
+      "title": "Beyond the Veil: New Orleans’ ONLY haunted variety show",
+      "start": "2026-10-27T00:30:00-05:00",
+      "url": "https://tockify.com/allwayslounge/detail/4505/1793156400000/2"
+    },
+    {
       "id": "417baa18b3fc",
       "title": "The Drive In: Horror Movie Night",
       "start": "2026-10-27T19:00:00-05:00",
@@ -629,13 +579,6 @@
       "start": "2026-10-27T19:30:00-05:00",
       "end": "2026-10-27T21:00:00-05:00",
       "url": "https://tockify.com/allwayslounge/detail/2539/1793147400000"
-    },
-    {
-      "id": "a584c88ec9a4",
-      "title": "Beyond the Veil: New Orleans’ ONLY haunted variety show",
-      "start": "2026-10-27T22:00:00-05:00",
-      "end": "2026-10-28T00:30:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/4505/1793156400000/2"
     },
     {
       "id": "96b5e6aca20d",
@@ -1457,6 +1400,13 @@
       "url": "https://tockify.com/allwayslounge/detail/4389/1796182200000"
     },
     {
+      "id": "3bb52e8c57dc",
+      "title": "Mr. Cheeze Holiday Celebration of Life",
+      "start": "2026-12-02T17:00:00-06:00",
+      "end": "2026-12-02T22:00:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/4611/1796252400000"
+    },
+    {
       "id": "fd01732b7cf0",
       "title": "Lefty Lucy's Burlesque Bingo",
       "start": "2026-12-02T18:30:00-06:00",
@@ -2161,6 +2111,27 @@
       "start": "2027-01-02T23:00:00-06:00",
       "end": "2027-01-03T01:00:00-06:00",
       "url": "https://tockify.com/allwayslounge/detail/4209/1798952400000"
+    },
+    {
+      "id": "cd9884dfb5aa",
+      "title": "Swing Night (live music & dance lessons)",
+      "start": "2027-01-03T20:00:00-06:00",
+      "end": "2027-01-03T23:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/1860/1799028000000"
+    },
+    {
+      "id": "74ac4f65f92e",
+      "title": "Betsy Propane Smoke Show (live music & burlesque)",
+      "start": "2027-01-04T19:00:00-06:00",
+      "end": "2027-01-04T20:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/2864/1799110800000"
+    },
+    {
+      "id": "593423670559",
+      "title": "Almost Naked Karaoke",
+      "start": "2027-01-04T21:30:00-06:00",
+      "end": "2027-01-04T23:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/2269/1799119800000"
     }
   ]
 }

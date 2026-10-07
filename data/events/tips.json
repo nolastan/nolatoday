@@ -74,6 +74,12 @@
       "url": "https://tipitinas.com/event/14296254/fais-do-do-with-bruce-daigrepont-cajun-band"
     },
     {
+      "id": "5ec62fbba747",
+      "title": "Flying Mojito Bros",
+      "start": "2026-10-27T23:30:00-05:00",
+      "url": "https://tipitinas.com/event/14360104/flying-mojito-bros"
+    },
+    {
       "id": "4dcc7dda129b",
       "title": "Rakim",
       "start": "2026-10-28T20:00:00-05:00",
@@ -198,6 +204,12 @@
       "title": "Victor Wooten & The Wooten Brothers",
       "start": "2026-12-20T20:00:00-06:00",
       "url": "https://tipitinas.com/event/14987013/victor-wooten-the-wooten-brothers"
+    },
+    {
+      "id": "7ac95d3e76d1",
+      "title": "Gimme Gimme Disco",
+      "start": "2026-12-26T21:00:00-06:00",
+      "url": "https://tipitinas.com/event/14296354/gimme-gimme-disco"
     }
   ]
 }
