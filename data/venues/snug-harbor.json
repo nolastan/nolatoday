@@ -8,5 +8,11 @@
   "website": "https://www.snugjazz.com",
   "image": "snug-harbor.jpg",
   "aliases": [],
-  "sources": []
+  "sources": [
+    {
+      "type": "jsonld",
+      "url": "https://www.songkick.com/venues/285661-snug-harbor",
+      "stripTitle": "\\s+@\\s+Snug Harbor$"
+    }
+  ]
 }

@@ -1,12 +1,13 @@
 {
   "slug": "palm-court-jazz-cafe",
   "name": "Palm Court Jazz Cafe",
-  "status": "active",
+  "status": "closed",
   "address": "1204 Decatur Street",
   "lat": 29.960763,
   "lng": -90.059038,
   "website": "https://www.palmcourtjazzcafe.com",
   "image": null,
   "aliases": [],
-  "sources": []
+  "sources": [],
+  "note": "Palm Court Jazz Cafe has closed; its last show was in June 2024."
 }
