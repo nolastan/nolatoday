@@ -142,16 +142,18 @@ ${siteFooter(ctx)}`;
 /** A static stand-in for an HTTP redirect (GitHub Pages can't send 301s). */
 export function redirectPage(ctx, target) {
   const absolute = new URL(target, ctx.config.siteUrl).toString();
+  // Search engines ignore fragments; keep the canonical on the page itself.
+  const canonical = absolute.replace(/#.*$/, '');
   const local = ctx.url(target);
   return `<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <title>Redirecting…</title>
-<link rel="canonical" href="${esc(absolute)}">
+<link rel="canonical" href="${esc(canonical)}">
 <meta name="robots" content="noindex">
 <meta http-equiv="refresh" content="0; url=${esc(local)}">
-<script>location.replace(${jsonScript(local)} + location.hash);</script>
+<script>location.replace(${jsonScript(local)}${target.includes('#') ? '' : ' + location.hash'});</script>
 </head>
 <body>
 <p>This page has moved to <a href="${esc(local)}">${esc(absolute)}</a>.</p>

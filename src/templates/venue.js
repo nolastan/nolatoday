@@ -93,6 +93,16 @@ export function venuePage(ctx, venue, { events, status }) {
   };
   if (venue.image) jsonLd.image = `${config.siteUrl}${imageUrl}`;
   if (venue.website) jsonLd.sameAs = [venue.website];
+  const stories = venue.stories ?? [];
+  if (stories.length) {
+    jsonLd.subjectOf = stories.map((story) => ({
+      '@type': 'NewsArticle',
+      headline: story.title,
+      datePublished: story.date,
+      url: `${canonical}#${story.slug}`,
+      publisher: { '@type': 'Organization', name: config.siteName, url: config.siteUrl },
+    }));
+  }
   if (!closed && listed.length) jsonLd.event = listed.slice(0, 50).map((e) => eventSchema(ctx, venue, e));
 
   const breadcrumbs = {
@@ -168,6 +178,16 @@ export function venuePage(ctx, venue, { events, status }) {
     </section>`;
   }
 
+  const storySections = stories
+    .map(
+      (story) => `<article class="wrap venue-story" id="${esc(story.slug)}">
+    <h2>${esc(story.title)}</h2>
+    <p class="muted"><time datetime="${esc(story.date)}">${esc(DateTime.fromISO(story.date).toFormat('LLLL d, yyyy'))}</time></p>
+    ${story.body.map((p) => `<p>${esc(p)}</p>`).join('\n    ')}
+  </article>`,
+    )
+    .join('\n  ');
+
   const sourceLinks = (venue.sources ?? []).map((s) => s.url).filter(Boolean);
   const reportUrl = `https://github.com/${config.repo}/issues/new?labels=data&title=${encodeURIComponent(`Venue data: ${venue.name}`)}&body=${encodeURIComponent(`Page: ${canonical}\n\nWhat's wrong?\n`)}`;
 
@@ -176,6 +196,7 @@ export function venuePage(ctx, venue, { events, status }) {
   ${banner}
   ${hero}
   ${schedule}
+  ${storySections}
   <section class="wrap venue-foot muted">
     <p>${sourceLinks.length ? `Schedule source: ${sourceLinks.map((u) => `<a href="${esc(u)}" rel="noopener nofollow">${esc(new URL(u).hostname.replace(/^www\./, ''))}</a>`).join(', ')}. ` : ''}<a href="${esc(reportUrl)}" rel="noopener">Report a problem with this page</a>.</p>
   </section>

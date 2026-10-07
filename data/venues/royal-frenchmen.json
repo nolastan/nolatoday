@@ -9,5 +9,17 @@
   "image": "royal-frenchmen.jpg",
   "aliases": [],
   "sources": [],
-  "note": "The Royal Frenchmen closed its venue indefinitely in September 2025."
+  "note": "The Royal Frenchmen closed its venue indefinitely in September 2025.",
+  "stories": [
+    {
+      "slug": "royal-frenchmen-closes-venue",
+      "title": "Royal Frenchmen Closes Venue",
+      "date": "2022-03-22",
+      "body": [
+        "The Royal Frenchmen Hotel announced an indefinite closure of its bar and venue through an Instagram post. The establishment cited “an attack on live music and events at our venue” as the reason for the shutdown.",
+        "The hotel’s statement emphasized its community contributions: “The Royal Frenchmen Hotel, which has been a supporter of musicians and artists through COVID 19, Hurricane Ida, and beyond, is closed indefinitely…”",
+        "The venue highlighted its role during recent crises, noting it employed musicians during pandemic closures and provided housing for community members following Hurricane Ida. The establishment called on the community to support its right to continue hosting cultural events on Frenchmen Street, describing itself as “actively working to uplift, employ, and create security for musicians in New Orleans.”"
+      ]
+    }
+  ]
 }

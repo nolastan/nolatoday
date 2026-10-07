@@ -135,6 +135,14 @@ function main() {
     if (venueSlugs.has(slug)) throw new Error(`Redirect for "${slug}" would overwrite a venue page`);
     write(`venues/${slug}.html`, redirectPage(ctx, target));
   }
+  // Old /stories/<slug> pages, now kept on the venue page they were about.
+  let storyCount = 0;
+  for (const v of venues) {
+    for (const story of v.stories ?? []) {
+      write(`stories/${story.slug}.html`, redirectPage(ctx, `/venues/${v.slug}#${story.slug}`));
+      storyCount++;
+    }
+  }
   // The old site's directory pages.
   for (const old of ['music', 'food']) write(`${old}.html`, redirectPage(ctx, '/venues'));
 
@@ -158,7 +166,7 @@ function main() {
   );
   write('robots.txt', `User-agent: *\nAllow: /\n\nSitemap: ${config.siteUrl}/sitemap.xml\n`);
 
-  const pages = venues.length + Object.keys(allRedirects).length;
+  const pages = venues.length + Object.keys(allRedirects).length + storyCount;
   console.log(`Built ${pages} venue pages/redirects, ${mapEvents.length} map events → ${path.relative(ROOT, OUT)}/`);
 }
 

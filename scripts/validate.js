@@ -11,11 +11,12 @@ const err = (slug, msg) => errors.push(`${slug}: ${msg}`);
 const STATUSES = new Set(['active', 'closed']);
 // Generous box around greater New Orleans.
 const BOUNDS = { latMin: 29.8, latMax: 30.2, lngMin: -90.35, lngMax: -89.85 };
-const ALLOWED_KEYS = new Set(['slug', 'name', 'status', 'address', 'lat', 'lng', 'website', 'image', 'aliases', 'sources', 'note']);
+const ALLOWED_KEYS = new Set(['slug', 'name', 'status', 'address', 'lat', 'lng', 'website', 'image', 'aliases', 'sources', 'note', 'stories']);
 
 const venues = loadVenues();
 const slugs = new Set(venues.map((v) => v.slug));
 const aliases = new Map();
+const storySlugs = new Map();
 
 for (const v of venues) {
   for (const key of Object.keys(v)) if (!ALLOWED_KEYS.has(key)) err(v.slug, `unknown field "${key}"`);
@@ -46,6 +47,15 @@ for (const v of venues) {
         err(v.slug, `invalid exclude regex ${p}`);
       }
     }
+  }
+  if (v.stories != null && !Array.isArray(v.stories)) err(v.slug, 'stories must be an array');
+  for (const s of v.stories ?? []) {
+    if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(s.slug ?? '')) err(v.slug, `story slug "${s.slug}" must be lowercase-kebab-case`);
+    else if (storySlugs.has(s.slug)) err(v.slug, `story "${s.slug}" is also on ${storySlugs.get(s.slug)}`);
+    else storySlugs.set(s.slug, v.slug);
+    if (!s.title) err(v.slug, `story "${s.slug}" is missing a title`);
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(s.date ?? '')) err(v.slug, `story "${s.slug}" date must be YYYY-MM-DD`);
+    if (!Array.isArray(s.body) || !s.body.length || s.body.some((p) => typeof p !== 'string' || !p)) err(v.slug, `story "${s.slug}" body must be a non-empty array of paragraphs`);
   }
   for (const a of v.aliases ?? []) {
     if (slugs.has(a)) err(v.slug, `alias "${a}" is also a venue slug`);

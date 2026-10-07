@@ -73,7 +73,9 @@ The old site's URLs are preserved:
 - Every page has a canonical URL on `https://nola.today`, and venue pages include `MusicVenue`/`MusicEvent` structured data.
 - `sitemap.xml` and `robots.txt` are generated.
 
-Pages that were dropped (artists, pop-ups, stories, permits) now 404 — see the open issue about them.
+- Old `/stories/<slug>` pages about a venue live on that venue's page (the `stories` field in its venue file); the old URL redirects there.
+
+Other pages that were dropped (artists, pop-ups, the remaining stories, permits) now 404 — see the open issue about them.
 
 ## Going live on nola.today
 
