@@ -138,7 +138,7 @@ export function venuePage(ctx, venue, { events, status }) {
     <div class="venue-hero-text">
       <span class="badge">${closed ? 'Closed' : 'Venue'}</span>
       <h1>${esc(venue.name)}</h1>
-      <p class="venue-address"><a href="${esc(mapsLink(venue))}" rel="noopener">${esc(venue.address)}</a>, New Orleans</p>
+      <p class="venue-address">${esc(venue.address)}, New Orleans</p>
       ${venue.note ? `<p class="venue-note">${esc(venue.note)}</p>` : ''}
       <p class="live-now" data-live-now hidden><span class="live-dot"></span> Live now: <strong data-live-title></strong></p>
       <div class="button-row">
@@ -172,7 +172,7 @@ export function venuePage(ctx, venue, { events, status }) {
     const days = groupByDay(listed);
     schedule = `<section class="wrap schedule">
       <h2>Upcoming shows</h2>
-      <p class="muted schedule-meta">${status?.lastSuccess ? `Updated <time datetime="${esc(status.lastSuccess)}" data-relative>${esc(DateTime.fromISO(status.lastSuccess).setZone(ZONE).toFormat('LLL d, h:mm a'))}</time>. ` : ''}Times are local. Confirm with the venue before you go.</p>
+      ${status?.lastSuccess ? `<p class="muted schedule-meta">Updated <time datetime="${esc(status.lastSuccess)}" data-relative>${esc(DateTime.fromISO(status.lastSuccess).setZone(ZONE).toFormat('LLL d, h:mm a'))}</time>.</p>` : ''}
       ${days
         .map(
           (day) => `<div class="day" data-day="${day.date.toISODate()}">
