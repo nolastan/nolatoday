@@ -8,5 +8,11 @@
   "website": "https://bamboulasmusic.com",
   "image": "bamboulas.jpg",
   "aliases": [],
-  "sources": []
+  "sources": [
+    {
+      "type": "custom",
+      "name": "bamboulas",
+      "url": "https://bamboulasmusic.com/livemusicschedule/"
+    }
+  ]
 }
