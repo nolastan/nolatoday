@@ -46,7 +46,6 @@ ${canonical ? `<meta property="og:url" content="${esc(canonical)}">` : ''}
 <meta property="og:image" content="${esc(ogImage)}">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="${asset('/favicon.ico')}" sizes="any">
-<link rel="icon" href="${asset('/favicon.svg')}" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700&family=Orelega+One&display=swap">
