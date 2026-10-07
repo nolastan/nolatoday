@@ -12,6 +12,8 @@ import { parseSpotHopper } from '../scrapers/spothopper.js';
 import { parseWix } from '../scrapers/wix.js';
 import { parseGigulator } from '../scrapers/gigulator.js';
 import { parseHTML } from '../scrapers/html.js';
+import { parseBuffas } from '../scrapers/custom/buffa-s.js';
+import { parseLooseDate } from '../scripts/lib/dates.js';
 import scrapeTicketmaster, { parseTicketmaster } from '../scrapers/ticketmaster.js';
 import scrapeJamBase, { parseJamBase, quotaProblem } from '../scrapers/jambase.js';
 import { normalizeEvents } from '../scripts/lib/normalize.js';
@@ -260,4 +262,44 @@ test('normalize: excludes non-shows, dedupes, drops past events, applies timeFro
     ['Big Show', '2026-10-09T20:00:00-05:00'],
     ['Wrong TZ', '2026-10-09T22:00:00-05:00'],
   ]);
+});
+
+test('buffa-s: keeps the Chicago instant and drops template, missing, and offset-less times', () => {
+  const page = 'https://www.buffasbar.com/events/';
+  const html = fixture('buffa-s.html');
+  // The html adapter cannot read these stamps. The T in the ISO value
+  // defeats parseDay, so the offset is not reinterpreted as a local clock.
+  assert.equal(parseLooseDate('2026-10-09T18:00:00-07:00'), null);
+  assert.deepEqual(parseHTML(html, {
+    url: page,
+    item: 'article',
+    title: 'h5.post-title a',
+    date: 'time.post-date@datetime',
+    link: 'h5.post-title a@href',
+  }), []);
+
+  const raw = parseBuffas(html, page);
+  assert.deepEqual(raw.map((e) => [e.title, e.start]), [
+    ['T Marie & Bayou Juju', '2026-10-09T18:00:00-07:00'],
+    ['Traditional Jazz Brunch w/ Some Like it Hot!', '2026-10-11T09:00:00-07:00'],
+    ['Tom McDermott w/ Susanne Ortner', '2026-10-22T17:00:00-07:00'],
+    ['Traditional Jazz Brunch w/ Some Like it Hot', '2026-11-01T09:00:00-08:00'],
+    ['Way Later', '2027-03-01T18:00:00-08:00'],
+  ]);
+  assert.equal(raw[1].url, 'https://www.buffasbar.com/events/traditional-jazz-brunch-w-some-like-it-hot-261110');
+  assert.equal(raw.filter((e) => e.title === 'T Marie & Bayou Juju').length, 1);
+
+  const events = normalizeEvents(raw, { venue: 'buffa-s', window });
+  assert.deepEqual(events.map((e) => [e.title, e.start]), [
+    ['T Marie & Bayou Juju', '2026-10-09T20:00:00-05:00'],
+    ['Traditional Jazz Brunch w/ Some Like it Hot!', '2026-10-11T11:00:00-05:00'],
+    ['Tom McDermott w/ Susanne Ortner', '2026-10-22T19:00:00-05:00'],
+    ['Traditional Jazz Brunch w/ Some Like it Hot', '2026-11-01T11:00:00-06:00'],
+  ]);
+  assert.equal(events[0].id, 'e177814a2d12');
+  assert.equal(events.find((e) => e.title === 'Way Later'), undefined);
+  assert.equal(events.find((e) => /No Offset|Missing Time|Malformed|Bad JSON|Template/.test(e.title)), undefined);
+
+  const broken = `<article class="post"><time class="post-date" datetime="2026-10-08T17:00:00-07:00"></time><h5 class="post-title"><a href="https://www.buffasbar.com/events/tom">Tom McDermott w/ Tim Laughlin</a></h5></article><script id="posts_stacks_in_250" type="application/json">{not json</script>`;
+  assert.deepEqual(parseBuffas(broken, page).map((e) => e.start), ['2026-10-08T17:00:00-07:00']);
 });
