@@ -250,6 +250,19 @@ h3 { font-size: 1.3rem; }
   background: var(--bg-elev);
 }
 .venue-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.photo-credit {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  max-width: 100%;
+  padding: 4px 14px 5px;
+  border-top-left-radius: 12px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 0.75rem;
+  line-height: 1.35;
+}
+.photo-credit a { color: inherit; }
 
 .live-now {
   display: inline-flex;

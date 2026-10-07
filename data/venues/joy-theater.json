@@ -6,7 +6,14 @@
   "lat": 29.956004,
   "lng": -90.073985,
   "website": "https://thejoytheater.com",
-  "image": null,
+  "image": "joy-theater.jpg",
+  "imageCredit": {
+    "author": "Paul Sableman",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Joy_Theater_New_Orleans_Mch2015.jpg",
+    "via": "Wikimedia Commons"
+  },
   "aliases": [],
   "sources": [
     {

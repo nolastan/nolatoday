@@ -11,7 +11,7 @@ const err = (slug, msg) => errors.push(`${slug}: ${msg}`);
 const STATUSES = new Set(['active', 'closed']);
 // Generous box around greater New Orleans.
 const BOUNDS = { latMin: 29.8, latMax: 30.2, lngMin: -90.35, lngMax: -89.85 };
-const ALLOWED_KEYS = new Set(['slug', 'name', 'status', 'address', 'lat', 'lng', 'website', 'image', 'aliases', 'sources', 'note', 'stories']);
+const ALLOWED_KEYS = new Set(['slug', 'name', 'status', 'address', 'lat', 'lng', 'website', 'image', 'imageCredit', 'aliases', 'sources', 'note', 'stories']);
 
 const venues = loadVenues();
 const slugs = new Set(venues.map((v) => v.slug));
@@ -30,6 +30,17 @@ for (const v of venues) {
   if (v.image) {
     for (const f of [v.image, v.image.replace(/\.jpg$/, '-600.jpg')]) {
       if (!fs.existsSync(path.join(ROOT, 'public/images/venues', f))) err(v.slug, `image public/images/venues/${f} not found`);
+    }
+  }
+  if (v.imageCredit != null) {
+    const c = v.imageCredit;
+    if (!v.image) err(v.slug, 'imageCredit without an image');
+    if (!c.author || !c.license) err(v.slug, 'imageCredit needs author and license');
+    for (const key of ['licenseUrl', 'source']) {
+      if (!/^https?:\/\//.test(c[key] ?? '')) err(v.slug, `imageCredit.${key} must be an http(s) URL`);
+    }
+    for (const key of Object.keys(c)) {
+      if (!['author', 'license', 'licenseUrl', 'source', 'via'].includes(key)) err(v.slug, `unknown imageCredit field "${key}"`);
     }
   }
   if (!Array.isArray(v.sources)) err(v.slug, 'sources must be an array');

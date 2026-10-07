@@ -79,6 +79,10 @@ export function venuePage(ctx, venue, { events, status }) {
       (upcomingNames.length ? ` Upcoming: ${upcomingNames.join(', ')}.` : ' See who’s playing tonight and this week.');
 
   const imageUrl = venue.image ? `/images/venues/${venue.image}` : null;
+  const credit = venue.imageCredit;
+  const creditHtml = credit
+    ? `<figcaption class="photo-credit">Photo by <a href="${esc(credit.source)}" rel="noopener">${esc(credit.author)}</a>, <a href="${esc(credit.licenseUrl)}" rel="license noopener">${esc(credit.license)}</a>${credit.via ? `, via ${esc(credit.via)}` : ''}</figcaption>`
+    : '';
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -144,7 +148,7 @@ export function venuePage(ctx, venue, { events, status }) {
     </div>
     ${
       imageUrl
-        ? `<figure class="venue-photo"><img src="${asset(imageUrl.replace(/\.jpg$/, '-600.jpg'))}" srcset="${asset(imageUrl.replace(/\.jpg$/, '-600.jpg'))} 600w, ${asset(imageUrl)} 1200w" sizes="(min-width: 900px) 520px, 100vw" alt="${esc(venue.name)}, New Orleans" loading="eager"></figure>`
+        ? `<figure class="venue-photo"><img src="${asset(imageUrl.replace(/\.jpg$/, '-600.jpg'))}" srcset="${asset(imageUrl.replace(/\.jpg$/, '-600.jpg'))} 600w, ${asset(imageUrl)} 1200w" sizes="(min-width: 900px) 520px, 100vw" alt="${esc(venue.name)}, New Orleans" loading="eager">${creditHtml}</figure>`
         : ''
     }
   </section>`;
