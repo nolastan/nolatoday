@@ -1,12 +1,13 @@
 {
   "slug": "checkpoint-charlies",
   "name": "Checkpoint Charlies",
-  "status": "active",
+  "status": "closed",
   "address": "501 Esplanade Avenue",
   "lat": 29.962264,
   "lng": -90.057985,
   "website": null,
   "image": "checkpoint-charlies.jpg",
   "aliases": [],
-  "sources": []
+  "sources": [],
+  "note": "Checkpoint Charlies has permanently closed, as reported by Gambit."
 }
