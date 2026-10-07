@@ -18,7 +18,7 @@ const WEEKDAY = /^(monday|tuesday|wednesday|thursday|friday|saturday|sunday)$/i;
 const DATE = /^(jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|jun(?:e)?|jul(?:y)?|aug(?:ust)?|sep(?:t(?:ember)?)?|oct(?:ober)?|nov(?:ember)?|dec(?:ember)?)\s+\d{1,2}$/i;
 const OPEN = /^open at\b/i;
 const FOOTER = /^bookings\b/i;
-const BOILER = /^(live music schedule|music by new orleans' best musicians|open 7 days\b.*|every day|we play|live music|open 'til close|0ctober music calendar|october music calendar)$/i;
+const BOILER = /^(live music schedule|music by new orleans' best musicians|open 7 days\b.*|every day|we play|live music|open 'til close|(?:0ctober|[a-z]+) music calendar)$/i;
 
 function asReference(value) {
   if (!value) return now();
@@ -57,7 +57,7 @@ function clock(raw) {
   if (!m) return null;
   let hour = Number(m[1]);
   const minute = m[2] ? Number(m[2]) : 0;
-  if (hour > 12 || minute > 59) return null;
+  if (hour < 1 || hour > 12 || minute > 59) return null;
   const meridiem = m[3][0] === 'a' ? 'am' : 'pm';
   if (meridiem === 'pm' && hour < 12) hour += 12;
   if (meridiem === 'am' && hour === 12) hour = 0;

@@ -120,3 +120,19 @@ test('redirect bound stays on the venue host', () => {
   assert.equal(redirectProblem('http://bamboulasmusic.com/livemusicschedule/', pageUrl), 'unexpected_request_host');
   assert.equal(redirectProblem('https://evil.example/bamboulasmusic.com', pageUrl), 'unexpected_request_host');
 });
+
+test('invalid twelve-hour clocks are not emitted and later months keep calendar labels out', () => {
+  const html = (setLine) => `<html><head><title>Bamboula's live music</title></head><body>
+    <h4>NOVEMBER 12</h4><h4>NOVEMBER MUSIC CALENDAR</h4>
+    <h5>Real Set</h5><h5>${setLine}</h5>
+    <h1>BOOKINGS AT BAMBOULA'S</h1><p>514 Frenchmen St.</p></body></html>`;
+  const reference = 'Thu, 12 Nov 2026 12:00:00 GMT';
+  for (const line of ['0AM-2AM', '13PM-2AM', '10PM-2:60AM']) {
+    assert.equal(parseBamboulas(html(line), {url: pageUrl, reference}).events.length, 0);
+  }
+  const parsed = parseBamboulas(html('10PM-2AM'), {url: pageUrl, reference});
+  assert.equal(parsed.events.length, 1);
+  assert.equal(iso(parsed.events[0].start), '2026-11-12T22:00:00-06:00');
+  assert.equal(iso(parsed.events[0].end), '2026-11-13T02:00:00-06:00');
+  assert.equal(parsed.unresolved.length, 0);
+});
