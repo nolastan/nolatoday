@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Validate venue data
+        run: node scripts/validate.js
+
+      - name: Unit tests
+        run: npm test
+
+      - name: Build site
+        run: node scripts/build.js
+
+      # For PRs that touch a venue's sources, run that venue's scraper live so
+      # reviewers (and coding agents) can see it actually returns events.
+      - name: Scrape changed venues
+        if: github.event_name == 'pull_request'
+        run: |
+          git fetch --no-tags --depth=1 origin "${{ github.base_ref }}"
+          changed=$(git diff --name-only "origin/${{ github.base_ref }}" -- data/venues/ | sed -n 's#^data/venues/\(.*\)\.json$#\1#p' | paste -sd, -)
+          if [ -z "$changed" ]; then echo "No venue changes."; exit 0; fi
+          count=$(echo "$changed" | tr ',' '\n' | wc -l)
+          # Bulk data changes are informational; targeted fixes must actually work.
+          if [ "$count" -gt 10 ]; then strict=""; else strict="--strict"; fi
+          node scripts/scrape.js --venue "$changed" --dry $strict

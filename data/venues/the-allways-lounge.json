@@ -1,0 +1,17 @@
+{
+  "slug": "the-allways-lounge",
+  "name": "The AllWays Lounge",
+  "status": "active",
+  "address": "2240 St Claude Avenue",
+  "lat": 29.968569,
+  "lng": -90.055388,
+  "website": "https://www.theallwayslounge.net",
+  "image": "the-allways-lounge.jpg",
+  "aliases": [],
+  "sources": [
+    {
+      "type": "ics",
+      "url": "https://tockify.com/api/feeds/ics/allwayslounge"
+    }
+  ]
+}

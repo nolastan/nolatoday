@@ -1,0 +1,19 @@
+{
+  "slug": "new-orleans-jazz-museum",
+  "name": "New Orleans Jazz Museum",
+  "status": "active",
+  "address": "400 Esplanade Avenue",
+  "lat": 29.961379,
+  "lng": -90.057796,
+  "website": "https://nolajazzmuseum.org",
+  "image": "new-orleans-jazz-museum.jpg",
+  "aliases": [
+    "new-orleans-jazz-museum-5a7e64e5-780e-4f25-99e1-66a051d9942f"
+  ],
+  "sources": [
+    {
+      "type": "squarespace",
+      "url": "https://nolajazzmuseum.org/events"
+    }
+  ]
+}

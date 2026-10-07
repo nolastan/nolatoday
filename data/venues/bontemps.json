@@ -1,0 +1,18 @@
+{
+  "slug": "bontemps",
+  "name": "Le Bon Temps Roule",
+  "status": "active",
+  "address": "4801 Magazine Street",
+  "lat": 29.920544,
+  "lng": -90.106227,
+  "website": "https://lbtrnola.com",
+  "image": "bontemps.jpg",
+  "aliases": [],
+  "sources": [
+    {
+      "type": "spothopper",
+      "spotId": 83161,
+      "url": "https://lbtrnola.com/new-orleans-uptown-le-bon-temps-roule-events"
+    }
+  ]
+}

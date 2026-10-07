@@ -1,0 +1,68 @@
+name: Scrape venues
+
+on:
+  schedule:
+    # Every 6 hours, offset from the top of the hour to dodge the cron rush.
+    - cron: '23 */6 * * *'
+  workflow_dispatch:
+    inputs:
+      venue:
+        description: 'Only scrape these venues (comma-separated slugs). Leave blank for all.'
+        required: false
+
+concurrency:
+  group: scrape
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+      issues: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Scrape
+        run: node scripts/scrape.js ${{ inputs.venue && format('--venue {0}', inputs.venue) || '' }}
+
+      - name: Commit data
+        run: |
+          git config user.name "nolatoday-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          if git diff --cached --quiet; then
+            echo "No data changes."
+            exit 0
+          fi
+          git commit -m "Update venue schedules ($(date -u +'%Y-%m-%d %H:%M UTC'))"
+          for attempt in 1 2 3 4; do
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0
+            sleep $((attempt * 5))
+          done
+          exit 1
+
+      - name: Open/close scraper repair issues
+        # Only the full scheduled/manual run has the complete picture.
+        if: ${{ !inputs.venue }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MAX_NEW_ISSUES: 10
+        run: node scripts/report-issues.js
+
+  # Pushes made with GITHUB_TOKEN don't trigger other workflows, so deploy from here.
+  deploy:
+    needs: scrape
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    uses: ./.github/workflows/deploy.yml

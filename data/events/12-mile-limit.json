@@ -1,0 +1,68 @@
+{
+  "venue": "12-mile-limit",
+  "events": [
+    {
+      "id": "1c8567816ccf",
+      "title": "Bear With Me Comedy Open Mic",
+      "start": "2026-10-05T19:30:00-05:00",
+      "end": "2026-10-05T22:00:00-05:00",
+      "url": "https://www.twelvemilelimit.com/new-orleans-mid-city-twelve-mile-limit-events"
+    },
+    {
+      "id": "1bdda2b21038",
+      "title": "Trivia Night!",
+      "start": "2026-10-07T20:00:00-05:00",
+      "end": "2026-10-07T22:00:00-05:00",
+      "url": "https://www.twelvemilelimit.com/new-orleans-mid-city-twelve-mile-limit-events"
+    },
+    {
+      "id": "e1b8bb72b279",
+      "title": "Purrsday Karaoke!",
+      "start": "2026-10-08T21:00:00-05:00",
+      "end": "2026-10-09T01:00:00-05:00",
+      "url": "https://www.twelvemilelimit.com/new-orleans-mid-city-twelve-mile-limit-events"
+    },
+    {
+      "id": "fe60792484e6",
+      "title": "Heatwave!",
+      "start": "2026-10-10T21:00:00-05:00",
+      "end": "2026-10-11T00:00:00-05:00",
+      "url": "https://www.twelvemilelimit.com/new-orleans-mid-city-twelve-mile-limit-events"
+    },
+    {
+      "id": "34bb2ede629c",
+      "title": "Catch The Wiff",
+      "start": "2026-10-17T21:00:00-05:00",
+      "end": "2026-10-18T01:00:00-05:00",
+      "url": "https://www.twelvemilelimit.com/new-orleans-mid-city-twelve-mile-limit-events"
+    },
+    {
+      "id": "5b14a3c9cebd",
+      "title": "Queer Craft Night",
+      "start": "2026-10-27T19:00:00-05:00",
+      "end": "2026-10-27T21:00:00-05:00",
+      "url": "https://www.twelvemilelimit.com/new-orleans-mid-city-twelve-mile-limit-events"
+    },
+    {
+      "id": "1d3862d426c7",
+      "title": "Bing-Oh!",
+      "start": "2026-10-31T20:00:00-05:00",
+      "end": "2026-10-31T23:00:00-05:00",
+      "url": "https://www.twelvemilelimit.com/new-orleans-mid-city-twelve-mile-limit-events"
+    },
+    {
+      "id": "306ba6b4d75b",
+      "title": "Now That's What I Call Queer",
+      "start": "2026-11-07T21:00:00-06:00",
+      "end": "2026-11-08T01:00:00-06:00",
+      "url": "https://www.twelvemilelimit.com/new-orleans-mid-city-twelve-mile-limit-events"
+    },
+    {
+      "id": "7a0c807a0ebd",
+      "title": "New Year's Eve",
+      "start": "2026-12-31T11:00:00-06:00",
+      "end": "2027-01-01T00:00:00-06:00",
+      "url": "https://www.twelvemilelimit.com/new-orleans-mid-city-twelve-mile-limit-events"
+    }
+  ]
+}

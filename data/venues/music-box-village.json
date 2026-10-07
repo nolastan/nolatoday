@@ -1,0 +1,17 @@
+{
+  "slug": "music-box-village",
+  "name": "Music Box Village",
+  "status": "active",
+  "address": "4557 North Rampart Street",
+  "lat": 29.963282,
+  "lng": -90.030406,
+  "website": "https://musicboxvillage.com",
+  "image": "music-box-village.jpg",
+  "aliases": [],
+  "sources": [
+    {
+      "type": "jsonld",
+      "url": "https://www.tixr.com/groups/musicboxvillage"
+    }
+  ]
+}

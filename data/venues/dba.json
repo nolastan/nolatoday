@@ -1,0 +1,18 @@
+{
+  "slug": "dba",
+  "name": "d.b.a.",
+  "status": "active",
+  "address": "618 Frenchmen Street",
+  "lat": 29.963941,
+  "lng": -90.058038,
+  "website": "https://www.dbaneworleans.com",
+  "image": "dba.jpg",
+  "aliases": [],
+  "sources": [
+    {
+      "type": "gigulator",
+      "site": 1048,
+      "url": "https://www.dbaneworleans.com/shows"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "slug": "bacchanal",
+  "name": "Bacchanal",
+  "status": "active",
+  "address": "600 Poland Avenue",
+  "lat": 29.959784,
+  "lng": -90.033236,
+  "website": "https://www.bacchanalwine.com",
+  "image": "bacchanal.jpg",
+  "aliases": [],
+  "sources": [
+    {
+      "type": "ics",
+      "url": "https://calendar.google.com/calendar/ical/bacchanalwine.com_5ph7ranikdn211398hh5i8advs%40group.calendar.google.com/public/basic.ics"
+    }
+  ]
+}

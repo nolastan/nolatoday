@@ -1,0 +1,17 @@
+{
+  "slug": "house-of-blues",
+  "name": "House of Blues",
+  "status": "active",
+  "address": "225 Decatur Street",
+  "lat": 29.953259,
+  "lng": -90.066127,
+  "website": "https://neworleans.houseofblues.com",
+  "image": null,
+  "aliases": [],
+  "sources": [
+    {
+      "type": "jsonld",
+      "url": "https://neworleans.houseofblues.com/"
+    }
+  ]
+}

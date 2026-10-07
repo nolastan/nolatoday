@@ -1,0 +1,54 @@
+{
+  "venue": "nola-brewing",
+  "events": [
+    {
+      "id": "a5dd8794c627",
+      "title": "The Bluegrass Pickin' Party",
+      "start": "2026-10-05T19:00:00-05:00",
+      "end": "2026-10-05T21:00:00-05:00",
+      "url": "https://www.nolabrewing.com/new-orleans-irish-channel-nola-brewing-live-music-and-events"
+    },
+    {
+      "id": "a69e1f7a97a6",
+      "title": "NWB",
+      "start": "2026-10-09T19:00:00-05:00",
+      "end": "2026-10-09T22:00:00-05:00",
+      "url": "https://www.nolabrewing.com/new-orleans-irish-channel-nola-brewing-live-music-and-events"
+    },
+    {
+      "id": "99543713d0fe",
+      "title": "CLASSIC ROCK NIGHT with MARSHALL BLACK BAND",
+      "start": "2026-10-10T19:00:00-05:00",
+      "end": "2026-10-10T22:00:00-05:00",
+      "url": "https://www.nolabrewing.com/new-orleans-irish-channel-nola-brewing-live-music-and-events"
+    },
+    {
+      "id": "daa1ab9e4398",
+      "title": "FREE LIVE COMEDY: Laughs & Drafts Presented by Craft Comedy",
+      "start": "2026-10-14T19:00:00-05:00",
+      "end": "2026-10-14T21:00:00-05:00",
+      "url": "https://www.nolabrewing.com/new-orleans-irish-channel-nola-brewing-live-music-and-events"
+    },
+    {
+      "id": "e11edd5c4f1f",
+      "title": "Dave Jordan Trio",
+      "start": "2026-10-16T19:00:00-05:00",
+      "end": "2026-10-16T22:00:00-05:00",
+      "url": "https://www.nolabrewing.com/new-orleans-irish-channel-nola-brewing-live-music-and-events"
+    },
+    {
+      "id": "3812d1c36a83",
+      "title": "Gal Holiday and the Honky Tonk Revue",
+      "start": "2026-10-23T19:00:00-05:00",
+      "end": "2026-10-23T22:00:00-05:00",
+      "url": "https://www.nolabrewing.com/new-orleans-irish-channel-nola-brewing-live-music-and-events"
+    },
+    {
+      "id": "a2ee05ba55a7",
+      "title": "SINGO Bingo presented by The Disco Amigos",
+      "start": "2026-12-08T18:00:00-06:00",
+      "end": "2026-12-08T21:00:00-06:00",
+      "url": "https://www.nolabrewing.com/new-orleans-irish-channel-nola-brewing-live-music-and-events"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "slug": "snug-harbor",
+  "name": "Snug Harbor",
+  "status": "active",
+  "address": "626 Frenchmen Street",
+  "lat": 29.964135,
+  "lng": -90.057916,
+  "website": "https://www.snugjazz.com",
+  "image": "snug-harbor.jpg",
+  "aliases": [],
+  "sources": []
+}

@@ -1,0 +1,545 @@
+{
+  "venue": "the-spotted-cat",
+  "events": [
+    {
+      "id": "dafaea6839ef",
+      "title": "Pat Casey & The New Sound",
+      "start": "2026-10-04T21:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "f63d5a96160f",
+      "title": "Jenavieve Cooke & The Winding Boys",
+      "start": "2026-10-05T14:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "33c378ec34e1",
+      "title": "Dominick Grillo & The Frenchmen Street All-Stars",
+      "start": "2026-10-05T18:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "ed5d10f33b18",
+      "title": "Saskia Says!",
+      "start": "2026-10-05T21:30:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "062eaa308815",
+      "title": "Chris Christy Band",
+      "start": "2026-10-06T14:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "33254c10dc68",
+      "title": "Sweetie Pies of New Orleans",
+      "start": "2026-10-06T18:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "91971d8c0f05",
+      "title": "Smoking Time Jazz Club",
+      "start": "2026-10-06T21:30:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "860e1892fa95",
+      "title": "Chris Christy Band",
+      "start": "2026-10-07T14:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "e7318fea9ab5",
+      "title": "Shotgun Jazz Band",
+      "start": "2026-10-07T18:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "9fb950a10191",
+      "title": "Marty Peters & The Party Meters",
+      "start": "2026-10-07T21:30:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "75cd0d9bdba2",
+      "title": "Chris Christy Band",
+      "start": "2026-10-08T14:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "6710b18d48ea",
+      "title": "Miss Sophie Lee",
+      "start": "2026-10-08T18:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "b8165788e662",
+      "title": "Jumbo Shrimp",
+      "start": "2026-10-08T22:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "f7bccf0b41e9",
+      "title": "Paradise Jazz Band",
+      "start": "2026-10-09T14:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "bd2dda1e0f0b",
+      "title": "Colin Davis & The Night People",
+      "start": "2026-10-09T22:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "dbc8799e1111",
+      "title": "New Orleans Cottonmouth Kings",
+      "start": "2026-10-09T22:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "78660912a298",
+      "title": "Shake'em Up Jazz Band",
+      "start": "2026-10-10T18:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "3291dd377ada",
+      "title": "Ethan Santos",
+      "start": "2026-10-10T22:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "c9231cc655fe",
+      "title": "Jacky Blaire & The Hot Biscuits",
+      "start": "2026-10-11T14:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "f8037417172a",
+      "title": "Treme Brass Band",
+      "start": "2026-10-11T18:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "77f0f0d68f43",
+      "title": "Pat Casey & The New Sound",
+      "start": "2026-10-11T21:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "76bc9fe65c7f",
+      "title": "Jenavieve Cooke & The Winding Boys",
+      "start": "2026-10-12T14:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "a7e045cab573",
+      "title": "Dominick Grillo & The Frenchmen Street All-Stars",
+      "start": "2026-10-12T18:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "df244b8d5c96",
+      "title": "Saskia Says!",
+      "start": "2026-10-12T21:30:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "6096c8ef5131",
+      "title": "Chris Christy Band",
+      "start": "2026-10-13T14:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "f1afb3cf93ef",
+      "title": "Sweetie Pies of New Orleans",
+      "start": "2026-10-13T18:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "3e24e5b94804",
+      "title": "Smoking Time Jazz Club",
+      "start": "2026-10-13T21:30:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "db285ff948d7",
+      "title": "Chris Christy Band",
+      "start": "2026-10-14T14:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "605be67f4fa3",
+      "title": "Shotgun Jazz Band",
+      "start": "2026-10-14T18:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "3ed5bed388a4",
+      "title": "Marty Peters & The Party Meters",
+      "start": "2026-10-14T21:30:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "9595cf782284",
+      "title": "Chris Christy Band",
+      "start": "2026-10-15T14:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "2e63c9528ccf",
+      "title": "Jenavieve Cooke & The Winding Boys",
+      "start": "2026-10-15T18:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "b51b690a1663",
+      "title": "Jumbo Shrimp",
+      "start": "2026-10-15T22:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "2131baf4f995",
+      "title": "Paradise Jazz Band",
+      "start": "2026-10-16T14:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "a968e2b90221",
+      "title": "Dirty Tuba",
+      "start": "2026-10-16T22:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "ef724f095d02",
+      "title": "New Orleans Cottonmouth Kings",
+      "start": "2026-10-16T22:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "91007cc89c78",
+      "title": "Twerk Thomson Band",
+      "start": "2026-10-17T14:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "49b0d4984dce",
+      "title": "Panorama Jazz Band",
+      "start": "2026-10-17T18:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "443f0bbd21e2",
+      "title": "The Jump Hounds",
+      "start": "2026-10-17T22:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "f4476c4be43a",
+      "title": "Jacky Blaire & The Hot Biscuits",
+      "start": "2026-10-18T14:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "35ef4dcf145c",
+      "title": "Treme Brass Band",
+      "start": "2026-10-18T18:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "43fd66583a4b",
+      "title": "Pat Casey & The New Sound",
+      "start": "2026-10-18T21:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "088a5776f549",
+      "title": "Jenavieve Cooke & The Winding Boys",
+      "start": "2026-10-19T14:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "f06df1e252c8",
+      "title": "Dominick Grillo & The Frenchmen Street All-Stars",
+      "start": "2026-10-19T18:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "258f9ea06661",
+      "title": "Saskia Says!",
+      "start": "2026-10-19T21:30:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "2f0014d401df",
+      "title": "Chris Christy Band",
+      "start": "2026-10-20T14:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "496dad2022d9",
+      "title": "Sweetie Pies of New Orleans",
+      "start": "2026-10-20T18:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "3978499169ef",
+      "title": "Smoking Time Jazz Club",
+      "start": "2026-10-20T21:30:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "253d3364847b",
+      "title": "Chris Christy Band",
+      "start": "2026-10-21T14:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "db96d0ded52c",
+      "title": "Shotgun Jazz Band",
+      "start": "2026-10-21T18:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "f24fd63d6941",
+      "title": "Marty Peters & The Party Meters",
+      "start": "2026-10-21T21:30:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "2de2f80539d9",
+      "title": "Chris Christy Band",
+      "start": "2026-10-22T14:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "74aa22390964",
+      "title": "Miss Sophie Lee",
+      "start": "2026-10-22T18:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "5391fb82ad00",
+      "title": "Jumbo Shrimp",
+      "start": "2026-10-22T22:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "bd6b14d1f528",
+      "title": "Paradise Jazz Band",
+      "start": "2026-10-23T14:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "ef3acd83610b",
+      "title": "Colin Davis & The Night People",
+      "start": "2026-10-23T22:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "a0ccf83eb7a4",
+      "title": "New Orleans Cottonmouth Kings",
+      "start": "2026-10-23T22:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "47c92e9dad6e",
+      "title": "Shake'em Up Jazz Band",
+      "start": "2026-10-24T18:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "617ced33bcc5",
+      "title": "Dominick Grillo & The Frenchmen Street All-Stars",
+      "start": "2026-10-24T22:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "ebe5e8d4003c",
+      "title": "Jacky Blaire & The Hot Biscuits",
+      "start": "2026-10-25T14:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "a745b11fc60a",
+      "title": "Treme Brass Band",
+      "start": "2026-10-25T18:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "1bb895675fe2",
+      "title": "Pat Casey & The New Sound",
+      "start": "2026-10-25T21:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "323fe1db4b38",
+      "title": "Jenavieve Cooke & The Winding Boys",
+      "start": "2026-10-26T14:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "118c9718c059",
+      "title": "Dominick Grillo & The Frenchmen Street All-Stars",
+      "start": "2026-10-26T18:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "0f9b09d0a216",
+      "title": "Saskia Says!",
+      "start": "2026-10-26T21:30:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "1db0012cbb43",
+      "title": "Chris Christy Band",
+      "start": "2026-10-27T14:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "e7f6998eeda2",
+      "title": "Sweetie Pies of New Orleans",
+      "start": "2026-10-27T18:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "6b2cd6b90c59",
+      "title": "Smoking Time Jazz Club",
+      "start": "2026-10-27T21:30:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "862736ebe645",
+      "title": "Chris Christy Band",
+      "start": "2026-10-28T14:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "da0f10807073",
+      "title": "Shotgun Jazz Band",
+      "start": "2026-10-28T18:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "51e3d15d6816",
+      "title": "Marty Peters & The Party Meters",
+      "start": "2026-10-28T21:30:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "218ad6b8b239",
+      "title": "Chris Christy Band",
+      "start": "2026-10-29T14:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "9abd599cddef",
+      "title": "Jenavieve Cooke & The Winding Boys",
+      "start": "2026-10-29T18:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "2a95ee50d229",
+      "title": "Jumbo Shrimp",
+      "start": "2026-10-29T22:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "e221a5ff5c98",
+      "title": "Paradise Jazz Band",
+      "start": "2026-10-30T14:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "77d401c3c79c",
+      "title": "New Orleans Cottonmouth Kings",
+      "start": "2026-10-30T22:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "bf22ac667459",
+      "title": "Smokin' On Some Brass",
+      "start": "2026-10-30T22:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "2aef81fa9323",
+      "title": "Twerk Thomson Band",
+      "start": "2026-10-31T14:30:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "7ad5e523f20f",
+      "title": "Panorama Jazz Band",
+      "start": "2026-10-31T18:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "22c3e84baf85",
+      "title": "James Martin Band",
+      "start": "2026-10-31T22:00:00-05:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "9a487e9f3f4c",
+      "title": "James Martin Band",
+      "start": "2026-11-06T22:00:00-06:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "dde245cfa6ae",
+      "title": "Kid Chocolate & The Free POC",
+      "start": "2026-11-07T22:00:00-06:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "2fb227a91669",
+      "title": "Treme Brass Band",
+      "start": "2026-11-08T18:00:00-06:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "82dec81cde4c",
+      "title": "Chris Christy Band",
+      "start": "2026-11-11T14:00:00-06:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "66f91c5b4a22",
+      "title": "Chris Christy Band",
+      "start": "2026-11-12T14:00:00-06:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "7522c633a3cc",
+      "title": "Vegas Cola Band",
+      "start": "2026-11-14T22:00:00-06:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "1a885535adc3",
+      "title": "Dirty Tuba",
+      "start": "2026-11-20T22:00:00-06:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "d95c6f695c31",
+      "title": "Khris Royal & Friends",
+      "start": "2026-11-21T22:00:00-06:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "4ec91c922f80",
+      "title": "James Martin Band",
+      "start": "2026-12-04T22:00:00-06:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "6f2cf0ffc41c",
+      "title": "Dirty Tuba",
+      "start": "2026-12-11T22:00:00-06:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    }
+  ]
+}

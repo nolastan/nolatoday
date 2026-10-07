@@ -1,0 +1,22 @@
+{
+  "slug": "the-carousel-bar-lounge",
+  "name": "The Carousel Bar & Lounge",
+  "status": "active",
+  "address": "214 Royal Street",
+  "lat": 29.954256,
+  "lng": -90.067964,
+  "website": "https://www.hotelmonteleone.com/experiences/the-carousel-bar-lounge/",
+  "image": "the-carousel-bar-lounge.jpg",
+  "aliases": [],
+  "sources": [
+    {
+      "type": "html",
+      "url": "https://www.hotelmonteleone.com/events/",
+      "dateHeader": ".events__today-date",
+      "item": "tr.events__daily:has(.carousel-bar.live-music)",
+      "title": ".event__name",
+      "time": ".events__single",
+      "link": ".event__name@href"
+    }
+  ]
+}

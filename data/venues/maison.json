@@ -1,0 +1,12 @@
+{
+  "slug": "maison",
+  "name": "Maison",
+  "status": "active",
+  "address": "508 Frenchmen Street",
+  "lat": 29.962822,
+  "lng": -90.057802,
+  "website": "https://maisonfrenchmen.com",
+  "image": "maison.jpg",
+  "aliases": [],
+  "sources": []
+}

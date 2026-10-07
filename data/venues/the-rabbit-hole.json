@@ -1,0 +1,17 @@
+{
+  "slug": "the-rabbit-hole",
+  "name": "The Rabbit Hole",
+  "status": "active",
+  "address": "1228 Oretha Castle Haley Blvd",
+  "lat": 29.942764,
+  "lng": -90.077777,
+  "website": "https://www.rabbitholenola.com",
+  "image": null,
+  "aliases": [],
+  "sources": [
+    {
+      "type": "eventbrite",
+      "url": "https://www.eventbrite.com/o/the-rabbit-hole-58751661813"
+    }
+  ]
+}

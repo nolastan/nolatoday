@@ -1,0 +1,17 @@
+{
+  "slug": "cafe-istanbul",
+  "name": "Cafe Istanbul",
+  "status": "active",
+  "address": "2372 St Claude Avenue",
+  "lat": 29.968649,
+  "lng": -90.052452,
+  "website": "http://www.cafeistanbulnola.com",
+  "image": "cafe-istanbul.jpg",
+  "aliases": [],
+  "sources": [
+    {
+      "type": "squarespace",
+      "url": "https://www.cafeistanbulnola.com/upcoming-events"
+    }
+  ]
+}

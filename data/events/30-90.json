@@ -1,0 +1,460 @@
+{
+  "venue": "30-90",
+  "events": [
+    {
+      "id": "05cb28cde35d",
+      "title": "Margie Perez",
+      "start": "2026-10-05T18:00:00-05:00",
+      "end": "2026-10-05T21:00:00-05:00",
+      "url": "https://www.3090-nola.com/bands/margie-perez100625-3gdfm-rhxbd-x7xd4-hkbmb-prkk4-xl45y-5gccn-fj6pe-ansfp-4s4pz"
+    },
+    {
+      "id": "5fd0a635a3db",
+      "title": "Piano Man G",
+      "start": "2026-10-05T21:00:00-05:00",
+      "end": "2026-10-05T23:59:00-05:00",
+      "url": "https://www.3090-nola.com/bands/piano-man-g100625-ex2fr-hdcx3-3pk6l-c9lta-ekz6a-eh85w-g3t7x-sg4zj-mhf4z-l55n4-yfsy3-t7yfc"
+    },
+    {
+      "id": "7a757e7680d5",
+      "title": "Sugar & The Daddies",
+      "start": "2026-10-06T18:00:00-05:00",
+      "end": "2026-10-06T21:00:00-05:00",
+      "url": "https://www.3090-nola.com/bands/sugar-daddies100725-yfjha-8d4ra-4k6s9-dz63d-h25d3-6nch8-prpry-2jtd9-ad866-pzrdp-mym44"
+    },
+    {
+      "id": "a7df5f4ecab3",
+      "title": "Higher Heights Reggae",
+      "start": "2026-10-06T21:00:00-05:00",
+      "end": "2026-10-06T23:59:00-05:00",
+      "url": "https://www.3090-nola.com/bands/higher-heights-reggae100725-at8b6-t3znx-w8gh9-cl768-mbpee-4hfrm-pmfcw-trjg5-js4fa-xken4-ltdg8-l6tsf"
+    },
+    {
+      "id": "089dee5ff157",
+      "title": "Josh Benitez Band",
+      "start": "2026-10-07T18:00:00-05:00",
+      "end": "2026-10-07T21:00:00-05:00",
+      "url": "https://www.3090-nola.com/bands/josh-benitez101525-phxdr-ycjgw-54mas-9nzsm-x8sgw-9ehhp-d7bnl-cy5zt-ahzmc"
+    },
+    {
+      "id": "e3b19ccf1e4e",
+      "title": "The Budz",
+      "start": "2026-10-07T21:00:00-05:00",
+      "end": "2026-10-07T23:59:00-05:00",
+      "url": "https://www.3090-nola.com/bands/the-budz100825-p59rw-kbmr8-an5f5-sf8cs-rbjw7-tfc86-28k5y-3p9mp-mem4d-fz4rd-tyz4e"
+    },
+    {
+      "id": "5ff14ff2c6fb",
+      "title": "The Dapper Dandies",
+      "start": "2026-10-08T18:00:00-05:00",
+      "end": "2026-10-08T21:00:00-05:00",
+      "url": "https://www.3090-nola.com/bands/dapper-dandies100825-9k2en-hmm7r-hk62a-8g3aj-sm2fw-4m76t-nxxes-lc4f8-mghxc"
+    },
+    {
+      "id": "1226c483cccc",
+      "title": "Deltaphonic",
+      "start": "2026-10-08T21:00:00-05:00",
+      "end": "2026-10-08T23:59:00-05:00",
+      "url": "https://www.3090-nola.com/bands/deltaphonic101025-xe6es-w8w9h-c6hyc-d9nmp-jhse6-3y53l"
+    },
+    {
+      "id": "d749c782d233",
+      "title": "Mother Ruckus",
+      "start": "2026-10-09T17:00:00-05:00",
+      "end": "2026-10-09T20:00:00-05:00",
+      "url": "https://www.3090-nola.com/bands/vibe-tribe091925-ckk5e-ew2wf-735dj-z6sm4-wh835-dggz2"
+    },
+    {
+      "id": "cf78daea827e",
+      "title": "The New Orleans Johnnys",
+      "start": "2026-10-09T20:00:00-05:00",
+      "end": "2026-10-09T23:00:00-05:00",
+      "url": "https://www.3090-nola.com/bands/new-orleans-johnny101025-bkf8n-7jerd-3fn3n-p385h-kzjya-rc8hw"
+    },
+    {
+      "id": "39b373d0fc0e",
+      "title": "Street LYFE",
+      "start": "2026-10-09T23:00:00-05:00",
+      "end": "2026-10-09T23:59:00-05:00",
+      "url": "https://www.3090-nola.com/bands/street-lyfe100425-9t2m7-4j374-x87k9-z5c6h-7rmk4-c7t2e-8hyl5-mlkd2-a5z5j-z2zdh"
+    },
+    {
+      "id": "463206a9a122",
+      "title": "Daphne Parker Powell",
+      "start": "2026-10-10T17:00:00-05:00",
+      "end": "2026-10-10T20:00:00-05:00",
+      "url": "https://www.3090-nola.com/bands/daphne-parker-powell061525-dtm48-c5hme-fykan-zh9yy-67y2e-cc5a8-cj4a2-ccsag-sxb5t"
+    },
+    {
+      "id": "98406c369d9c",
+      "title": "The Litt Band",
+      "start": "2026-10-10T20:00:00-05:00",
+      "end": "2026-10-10T23:00:00-05:00",
+      "url": "https://www.3090-nola.com/bands/litt-band-lah2l-cctz8"
+    },
+    {
+      "id": "cae735c2057f",
+      "title": "The Soulcial Club",
+      "start": "2026-10-10T23:00:00-05:00",
+      "end": "2026-10-10T23:59:00-05:00",
+      "url": "https://www.3090-nola.com/bands/under-the-covers101825-dx6f6-3y6ag-fa2dn-e6wfy-2msld-5j6zk-3mk6y-s2ytr-2frwh-5f4f8-pw72e-b6yls"
+    },
+    {
+      "id": "feced844698c",
+      "title": "Ryan Scott Long & Friends",
+      "start": "2026-10-11T15:00:00-05:00",
+      "end": "2026-10-11T18:00:00-05:00",
+      "url": "https://www.3090-nola.com/bands/ryan-scott-long-friends"
+    },
+    {
+      "id": "cefefdad0124",
+      "title": "The Andre Lovett Band",
+      "start": "2026-10-11T18:00:00-05:00",
+      "end": "2026-10-11T21:00:00-05:00",
+      "url": "https://www.3090-nola.com/bands/andre-lovett101225-88gj4-zac3h-4ewat-zmehb-yehs5-ahppg-ssm49-9hfp7-hslpc"
+    },
+    {
+      "id": "e80dbba0452f",
+      "title": "Manic Mixtape",
+      "start": "2026-10-11T21:00:00-05:00",
+      "end": "2026-10-11T23:59:00-05:00",
+      "url": "https://www.3090-nola.com/bands/manic-mixtape101225-zw4dz-w79mk-ngdgf-lr5a2-sbg3p-nm4dw-w854x-2wf9k-smalx"
+    },
+    {
+      "id": "4a12c16522cf",
+      "title": "The Dapper Dandies",
+      "start": "2026-10-12T18:00:00-05:00",
+      "end": "2026-10-12T21:00:00-05:00",
+      "url": "https://www.3090-nola.com/bands/dapper-dandies100825-9k2en-hmm7r-hk62a-8g3aj-sm2fw-4m76t-nxxes-lc4f8-ssbjc"
+    },
+    {
+      "id": "4af2f04691b4",
+      "title": "Velvet Collective",
+      "start": "2026-10-12T21:00:00-05:00",
+      "end": "2026-10-12T23:59:00-05:00",
+      "url": "https://www.3090-nola.com/bands/velvet-collective-l9p5f-ft3x5-r63pk-x4ryg-98d5t-rhwrx-2y6wt-mdxg4"
+    },
+    {
+      "id": "cc10063cf92a",
+      "title": "Justin Donovan",
+      "start": "2026-10-13T18:00:00-05:00",
+      "end": "2026-10-13T21:00:00-05:00",
+      "url": "https://www.3090-nola.com/bands/justin-donovan-znd4x-6mhh4-2krzf-hg8sf-x8y58-cawzn-nxs8s-3llg2-p7m39"
+    },
+    {
+      "id": "372b3f3c400d",
+      "title": "Kayla Jasmine",
+      "start": "2026-10-13T21:00:00-05:00",
+      "end": "2026-10-13T23:59:00-05:00",
+      "url": "https://www.3090-nola.com/bands/kayla-jasmine100925-prelh-rk9kz-7t969-yh6b3-5mk7d-tfgee-8lbrh-6j6n9-8djzx-rc8m7"
+    },
+    {
+      "id": "bae4315d3bc4",
+      "title": "Tetrad",
+      "start": "2026-10-14T18:00:00-05:00",
+      "end": "2026-10-14T21:00:00-05:00",
+      "url": "https://www.3090-nola.com/bands/danger-barnes-wilson101625-c2ype-a7pt6-73khr-6c2s9-brgx9-r87yy-kerjc"
+    },
+    {
+      "id": "2f51a28b2d14",
+      "title": "The Magicians Band",
+      "start": "2026-10-14T21:00:00-05:00",
+      "end": "2026-10-14T23:59:00-05:00",
+      "url": "https://www.3090-nola.com/bands/magicians-band-bn546-sghl2"
+    },
+    {
+      "id": "c052817c748e",
+      "title": "Decaturadio",
+      "start": "2026-10-15T18:00:00-05:00",
+      "end": "2026-10-15T21:00:00-05:00",
+      "url": "https://www.3090-nola.com/bands/decaturadio101925-4xmdj-b6h5w-wesr6-7md4y-7ehtz-bk79x-n7atw-mk4t3-f5pjp-cdfgx"
+    },
+    {
+      "id": "bd9329a8ed12",
+      "title": "Kim In The Wind",
+      "start": "2026-10-15T21:00:00-05:00",
+      "end": "2026-10-15T23:59:00-05:00",
+      "url": "https://www.3090-nola.com/bands/kim-in-the-wind101525-9gn4b-xm7je-d5jr3-bkgs9-7574h-f5t3r-rcapr-r8755-62ef9-szj35-3n27c-man8f"
+    },
+    {
+      "id": "d27efc9e8127",
+      "title": "Jeff Chaz Blues Band",
+      "start": "2026-10-16T14:00:00-05:00",
+      "end": "2026-10-16T17:00:00-05:00",
+      "url": "https://www.3090-nola.com/bands/jeff-chaz101125-cyrpg-bj4mm-95wsa-8me48-rypyz-tpj2r-9f8en-b3yw2-pczjc-lb9ap-c6g95-x8zrl-c8zp8"
+    },
+    {
+      "id": "da254275b096",
+      "title": "Josh Benitez Band",
+      "start": "2026-10-16T17:00:00-05:00",
+      "end": "2026-10-16T20:00:00-05:00",
+      "url": "https://www.3090-nola.com/bands/josh-benitez101525-phxdr-ycjgw-54mas-9nzsm-x8sgw-9ehhp-d7bnl-cy5zt-ahzmc-xjrzz"
+    },
+    {
+      "id": "ce11360f9330",
+      "title": "OTRA",
+      "start": "2026-10-16T20:00:00-05:00",
+      "end": "2026-10-16T23:00:00-05:00",
+      "url": "https://www.3090-nola.com/bands/otra"
+    },
+    {
+      "id": "b3d4193975a0",
+      "title": "Strange Roux",
+      "start": "2026-10-16T23:00:00-05:00",
+      "end": "2026-10-16T23:59:00-05:00",
+      "url": "https://www.3090-nola.com/bands/strange-roux-cp4dt-dn64y-zzng7-ekkns-aw7ep-2ts2b"
+    },
+    {
+      "id": "dabc4c67e9ee",
+      "title": "Personal Space",
+      "start": "2026-10-17T14:00:00-05:00",
+      "end": "2026-10-17T18:00:00-05:00",
+      "url": "https://www.3090-nola.com/bands/personal-space100325-29z6y-mbt7k-kjt5c-5zz2j-x7c2p-e3g26"
+    },
+    {
+      "id": "57dd12b8c520",
+      "title": "The Sleazeball Orchestra",
+      "start": "2026-10-17T17:00:00-05:00",
+      "end": "2026-10-17T20:00:00-05:00",
+      "url": "https://www.3090-nola.com/bands/sleazeball-orchestra102425-8gaap-xykjj-4xks5-fy9z6-988pw-baf4w-3ymft-6ra9x-5wlna-cjnzx-w8nwn"
+    },
+    {
+      "id": "3ec29996e02c",
+      "title": "Tyler Kinchen & The Right Pieces",
+      "start": "2026-10-17T20:00:00-05:00",
+      "end": "2026-10-17T23:00:00-05:00",
+      "url": "https://www.3090-nola.com/bands/tk-right-pieces110825-5pm74-thw2a-s5y6w-7rjk9-pt55j-y8s8a-r3spj-7jmad"
+    },
+    {
+      "id": "e2deb8eb9f39",
+      "title": "Daphne Parker Powell",
+      "start": "2026-10-18T15:00:00-05:00",
+      "end": "2026-10-18T18:00:00-05:00",
+      "url": "https://www.3090-nola.com/bands/daphne-parker-powell061525-dtm48-c5hme-fykan-zh9yy-67y2e-cc5a8-cj4a2-ccsag-sxb5t-d5286"
+    },
+    {
+      "id": "e6ff08c99693",
+      "title": "KreweDeBauchery",
+      "start": "2026-10-18T18:00:00-05:00",
+      "end": "2026-10-18T21:00:00-05:00",
+      "url": "https://www.3090-nola.com/bands/krewedebauchery-2ctga-pl659-5ycfg"
+    },
+    {
+      "id": "96eccc519f70",
+      "title": "SingleMaltPlease",
+      "start": "2026-10-18T21:00:00-05:00",
+      "end": "2026-10-18T23:59:00-05:00",
+      "url": "https://www.3090-nola.com/bands/singlemaltplease113025-g8f57-3hh9f-alswf-sz6lj-weyr9-ypa9s-xkycn-dfyhn-ty4sh"
+    },
+    {
+      "id": "b5e7e2d25832",
+      "title": "Margie Perez",
+      "start": "2026-10-19T18:00:00-05:00",
+      "end": "2026-10-19T21:00:00-05:00",
+      "url": "https://www.3090-nola.com/bands/margie-perez100625-3gdfm-rhxbd-x7xd4-hkbmb-prkk4-xl45y-5gccn-fj6pe-ansfp-fs6ab"
+    },
+    {
+      "id": "51915c819598",
+      "title": "Piano Man G",
+      "start": "2026-10-19T21:00:00-05:00",
+      "end": "2026-10-19T23:59:00-05:00",
+      "url": "https://www.3090-nola.com/bands/piano-man-g100625-ex2fr-hdcx3-3pk6l-c9lta-ekz6a-eh85w-g3t7x-sg4zj-mhf4z-l55n4-yfsy3-m3l9j"
+    },
+    {
+      "id": "4ed51c592838",
+      "title": "Sugar & The Daddies",
+      "start": "2026-10-20T18:00:00-05:00",
+      "end": "2026-10-20T21:00:00-05:00",
+      "url": "https://www.3090-nola.com/bands/sugar-daddies100725-yfjha-8d4ra-4k6s9-dz63d-h25d3-6nch8-prpry-2jtd9-ad866-pzrdp-2fpzd"
+    },
+    {
+      "id": "34eec5273ba2",
+      "title": "Higher Heights Reggae",
+      "start": "2026-10-20T21:00:00-05:00",
+      "end": "2026-10-20T23:59:00-05:00",
+      "url": "https://www.3090-nola.com/bands/higher-heights-reggae100725-at8b6-t3znx-w8gh9-cl768-mbpee-4hfrm-pmfcw-trjg5-js4fa-xken4-ltdg8-rab96"
+    },
+    {
+      "id": "252b9ef3733b",
+      "title": "Jeff Chaz Blues Band",
+      "start": "2026-10-21T18:00:00-05:00",
+      "end": "2026-10-21T21:00:00-05:00",
+      "url": "https://www.3090-nola.com/bands/jeff-chaz101125-cyrpg-bj4mm-95wsa-8me48-rypyz-tpj2r-9f8en-b3yw2-pczjc-lb9ap-c6g95-x8zrl-fy59b"
+    },
+    {
+      "id": "786b9d409e2f",
+      "title": "The Budz",
+      "start": "2026-10-21T21:00:00-05:00",
+      "end": "2026-10-21T23:59:00-05:00",
+      "url": "https://www.3090-nola.com/bands/the-budz100825-p59rw-kbmr8-an5f5-sf8cs-rbjw7-tfc86-28k5y-3p9mp-mem4d-fz4rd-tyz4e-jj6z3"
+    },
+    {
+      "id": "289c414067b9",
+      "title": "The Dapper Dandies",
+      "start": "2026-10-22T18:00:00-05:00",
+      "end": "2026-10-22T21:00:00-05:00",
+      "url": "https://www.3090-nola.com/bands/dapper-dandies100825-9k2en-hmm7r-hk62a-8g3aj-sm2fw-4m76t-nxxes-lc4f8-28rmx"
+    },
+    {
+      "id": "3eb3501b7910",
+      "title": "The Frequency Koneckt",
+      "start": "2026-10-22T21:00:00-05:00",
+      "end": "2026-10-23T00:00:00-05:00",
+      "url": "https://www.3090-nola.com/bands/vibe-tribe091925-ckk5e-86939-7zgsg-d9j8c-g8cjh-hf2m5-e7pgh-7g4cp-yr53d"
+    },
+    {
+      "id": "1a6bf53f2136",
+      "title": "Making Space",
+      "start": "2026-10-23T14:00:00-05:00",
+      "end": "2026-10-23T17:00:00-05:00",
+      "url": "https://www.3090-nola.com/bands/making-space-nzfez"
+    },
+    {
+      "id": "29488e726c55",
+      "title": "Richard Rourke & The Easy",
+      "start": "2026-10-23T17:00:00-05:00",
+      "end": "2026-10-23T20:00:00-05:00",
+      "url": "https://www.3090-nola.com/bands/richard-rourke-the-easy102325-7blx6-pa9pp-2etr3-925zk-nr2fa-nyj99"
+    },
+    {
+      "id": "e97379d6957c",
+      "title": "Kyle Sharamitaro Band",
+      "start": "2026-10-23T20:00:00-05:00",
+      "end": "2026-10-23T23:00:00-05:00",
+      "url": "https://www.3090-nola.com/bands/kyle-sharamitaro101725-kdjgh-r5fnk-lbbyn-8eaa3-esday-s7496"
+    },
+    {
+      "id": "a17951c04ac5",
+      "title": "T. Cherrelle & Lou’s Bayou",
+      "start": "2026-10-23T23:00:00-05:00",
+      "end": "2026-10-23T23:59:00-05:00",
+      "url": "https://www.3090-nola.com/bands/t-cherrelle092025-4nc3b-jy7fg-hnap3-gsmbz-8hyer-hpwct-7r96w-99ga7-ar8am-awzee-n8szh-74ljs-w4dmp-a9eky"
+    },
+    {
+      "id": "6a40cb952988",
+      "title": "Mother Ruckus",
+      "start": "2026-10-24T14:00:00-05:00",
+      "end": "2026-10-24T18:00:00-05:00",
+      "url": "https://www.3090-nola.com/bands/vibe-tribe091925-ckk5e-ew2wf-735dj-z6sm4-wh835-dggz2-9wwnn"
+    },
+    {
+      "id": "b649784d9ba2",
+      "title": "Anne Elise & The Swamp Circus",
+      "start": "2026-10-24T17:00:00-05:00",
+      "end": "2026-10-24T20:00:00-05:00",
+      "url": "https://www.3090-nola.com/bands/anne-elise-swamp-circus101925-xde6g-rpea7-9rdzm-x5fxe-43lsw-pk8f2-fbef6-gg3xz-3bhtc"
+    },
+    {
+      "id": "a048399c7389",
+      "title": "Hotline",
+      "start": "2026-10-24T20:00:00-05:00",
+      "end": "2026-10-24T23:00:00-05:00",
+      "url": "https://www.3090-nola.com/bands/hotline111525-wtrdn-lgfga-662h2-9kd4f-5a8f4-7w2dc-4a2x9-3296m-mn3z5-cnbel"
+    },
+    {
+      "id": "253dc85dd87b",
+      "title": "The Kazzettes",
+      "start": "2026-10-24T23:00:00-05:00",
+      "end": "2026-10-24T23:59:00-05:00",
+      "url": "https://www.3090-nola.com/bands/kazzettes-6xz68-7j4bl-ys8ye-jg3ae"
+    },
+    {
+      "id": "59a24950124d",
+      "title": "The Andre Lovett Band",
+      "start": "2026-10-25T18:00:00-05:00",
+      "end": "2026-10-25T21:00:00-05:00",
+      "url": "https://www.3090-nola.com/bands/andre-lovett101225-88gj4-zac3h-4ewat-zmehb-yehs5-ahppg-ssm49-9hfp7-266yp"
+    },
+    {
+      "id": "28e63e34fe5d",
+      "title": "Manic Mixtape",
+      "start": "2026-10-25T21:00:00-05:00",
+      "end": "2026-10-25T23:59:00-05:00",
+      "url": "https://www.3090-nola.com/bands/manic-mixtape101225-zw4dz-w79mk-ngdgf-lr5a2-sbg3p-nm4dw-w854x-2wf9k-yxhj2"
+    },
+    {
+      "id": "fd116f334ee8",
+      "title": "The Dapper Dandies",
+      "start": "2026-10-26T18:00:00-05:00",
+      "end": "2026-10-26T21:00:00-05:00",
+      "url": "https://www.3090-nola.com/bands/dapper-dandies100825-9k2en-hmm7r-hk62a-8g3aj-sm2fw-4m76t-nxxes-lc4f8-wma8j"
+    },
+    {
+      "id": "b65885fb83d2",
+      "title": "Velvet Collective",
+      "start": "2026-10-26T21:00:00-05:00",
+      "end": "2026-10-26T23:59:00-05:00",
+      "url": "https://www.3090-nola.com/bands/velvet-collective-l9p5f-ft3x5-r63pk-x4ryg-98d5t-rhwrx-2y6wt-45bzm"
+    },
+    {
+      "id": "e5f93ce4681c",
+      "title": "Justin Donovan",
+      "start": "2026-10-27T18:00:00-05:00",
+      "end": "2026-10-27T21:00:00-05:00",
+      "url": "https://www.3090-nola.com/bands/justin-donovan-znd4x-6mhh4-2krzf-hg8sf-x8y58-cawzn-nxs8s-3llg2-66x8b"
+    },
+    {
+      "id": "ec814600e653",
+      "title": "Kayla Jasmine",
+      "start": "2026-10-27T21:00:00-05:00",
+      "end": "2026-10-27T23:59:00-05:00",
+      "url": "https://www.3090-nola.com/bands/kayla-jasmine100925-prelh-rk9kz-7t969-yh6b3-5mk7d-tfgee-8lbrh-6j6n9-8djzx-6afah"
+    },
+    {
+      "id": "c69c2059ccff",
+      "title": "Tetrad",
+      "start": "2026-10-28T18:00:00-05:00",
+      "end": "2026-10-28T21:00:00-05:00",
+      "url": "https://www.3090-nola.com/bands/danger-barnes-wilson101625-c2ype-a7pt6-73khr-6c2s9-brgx9-r87yy-swb95"
+    },
+    {
+      "id": "d096966224db",
+      "title": "Kim In The Wind",
+      "start": "2026-10-28T21:00:00-05:00",
+      "end": "2026-10-28T23:59:00-05:00",
+      "url": "https://www.3090-nola.com/bands/kim-in-the-wind101525-9gn4b-xm7je-d5jr3-bkgs9-7574h-f5t3r-rcapr-r8755-62ef9-szj35-3n27c-aw4ax"
+    },
+    {
+      "id": "8f9e96ce1e47",
+      "title": "Xcitement",
+      "start": "2026-10-29T21:00:00-05:00",
+      "end": "2026-10-29T23:59:00-05:00",
+      "url": "https://www.3090-nola.com/bands/xcitement101625-2gapa-h2whe-mfx2h-kzr6w-9wpwl-hp6cg-9r8rp-5679s-xerlf-d83fx-y4s38-697jx"
+    },
+    {
+      "id": "b458901612d0",
+      "title": "Scotty Yost & The Most",
+      "start": "2026-10-30T14:00:00-05:00",
+      "end": "2026-10-30T17:00:00-05:00",
+      "url": "https://www.3090-nola.com/bands/scotty-yost-the-most101725-mjfk7-37cxk-7cp82-65n7t-tp674-gg2lf-g9x8t-brxx7-k48zr-3dnz6"
+    },
+    {
+      "id": "3ecc819905d7",
+      "title": "Sean Hobbes + The Hi Res",
+      "start": "2026-10-30T17:00:00-05:00",
+      "end": "2026-10-30T20:00:00-05:00",
+      "url": "https://www.3090-nola.com/bands/sean-hobbes-hi-res092625-jtjzn-2wfkj-f235w-s4gzl-f64yn-npgls-d8g42-pnt5z-tj5h8"
+    },
+    {
+      "id": "7a66c81cfc0e",
+      "title": "Half Shell Boogie",
+      "start": "2026-10-30T20:00:00-05:00",
+      "end": "2026-10-30T23:00:00-05:00",
+      "url": "https://www.3090-nola.com/bands/half-shell-boogie101325-w5azr-fmhde-pg5ww-n53sf-k9488-etahs-g4x3k-6wr9l"
+    },
+    {
+      "id": "6a94c96b6087",
+      "title": "The Soulcial Club",
+      "start": "2026-10-30T23:00:00-05:00",
+      "end": "2026-10-30T23:59:00-05:00",
+      "url": "https://www.3090-nola.com/bands/under-the-covers101825-dx6f6-3y6ag-fa2dn-e6wfy-2msld-5j6zk-3mk6y-s2ytr-2frwh-5f4f8-pw72e"
+    },
+    {
+      "id": "e411667d7aae",
+      "title": "Bangarang Peter",
+      "start": "2026-10-31T14:00:00-05:00",
+      "end": "2026-10-31T17:00:00-05:00",
+      "url": "https://www.3090-nola.com/bands/bangarang-peter-r85tp"
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "venue": "joy-theater",
+  "events": [
+    {
+      "id": "b4873f31be4a",
+      "title": "Mike Campbell & The Dirty Knobs",
+      "start": "2026-10-06",
+      "allDay": true,
+      "url": "https://thejoytheater.com/event/mike-campbell-the-dirty-knobs/"
+    },
+    {
+      "id": "ec05ea336d5a",
+      "title": "Bingo Loco",
+      "start": "2026-10-17",
+      "allDay": true,
+      "url": "https://thejoytheater.com/event/bingo-loco/"
+    },
+    {
+      "id": "da6ecd6b5913",
+      "title": "Vivacious Burlesque Experience: DEVIL’S NIGHT",
+      "start": "2026-10-18",
+      "allDay": true,
+      "url": "https://thejoytheater.com/event/vivacious-burlesque-experience-devils-night/"
+    },
+    {
+      "id": "837b255b66b2",
+      "title": "Soccer Mommy & Snail Mail",
+      "start": "2026-10-20",
+      "allDay": true,
+      "url": "https://thejoytheater.com/event/soccer-mommy-snail-mail/"
+    },
+    {
+      "id": "71e07d64d93a",
+      "title": "Snarky Puppy – Somni US Tour ’26",
+      "start": "2026-10-22",
+      "allDay": true,
+      "url": "https://thejoytheater.com/event/snarky-puppy-somni-us-tour-26/"
+    },
+    {
+      "id": "aeb370ff1822",
+      "title": "Hot In Herre: 2000s Dance Party",
+      "start": "2026-10-23",
+      "allDay": true,
+      "url": "https://thejoytheater.com/event/hot-in-herre-2000s-dance-party/"
+    },
+    {
+      "id": "ff36a2e338de",
+      "title": "BAAB Presents: Unholy Mountain w/ The Devil’s Horns",
+      "start": "2026-10-24",
+      "allDay": true,
+      "url": "https://thejoytheater.com/event/baab-presents-unholy-mountain-w-the-devils-horns/"
+    },
+    {
+      "id": "c10fd30a85e4",
+      "title": "PROF",
+      "start": "2026-10-26",
+      "allDay": true,
+      "url": "https://thejoytheater.com/event/prof/"
+    },
+    {
+      "id": "1e181ad0e2aa",
+      "title": "Atlanta Rhythm Section",
+      "start": "2026-10-28",
+      "allDay": true,
+      "url": "https://thejoytheater.com/event/atlanta-rhythm-section/"
+    },
+    {
+      "id": "a5359cb91abc",
+      "title": "Kevin Scott’s ZAMBI-Ween",
+      "start": "2026-10-31",
+      "allDay": true,
+      "url": "https://thejoytheater.com/event/kevin-scotts-zambi-ween/"
+    },
+    {
+      "id": "cc0e9df71d8c",
+      "title": "ZOLTAN KASZAS: WORLDWIDE(ish) TOUR",
+      "start": "2026-11-06",
+      "allDay": true,
+      "url": "https://thejoytheater.com/event/zoltan-kaszas-worldwideish-tour/"
+    },
+    {
+      "id": "7b45ef7c5c21",
+      "title": "Shaddy Feelgood: GOODMORNING!! 2 hosted by Kerwin Claiborne",
+      "start": "2026-11-14",
+      "allDay": true,
+      "url": "https://thejoytheater.com/event/shaddy-feelgood-goodmorning-2-hosted-by-kerwin-claiborne/"
+    },
+    {
+      "id": "7d340799c797",
+      "title": "Kurt Vile & the Violators",
+      "start": "2026-11-18",
+      "allDay": true,
+      "url": "https://thejoytheater.com/event/kurt-vile-the-violators/"
+    },
+    {
+      "id": "9f4205cbad23",
+      "title": "Boogie T",
+      "start": "2026-11-28",
+      "allDay": true,
+      "url": "https://thejoytheater.com/event/boogie-t/"
+    },
+    {
+      "id": "d0ab7a92b526",
+      "title": "Kitchen Dwellers (Billy Strings After-Party)",
+      "start": "2026-12-04",
+      "allDay": true,
+      "url": "https://thejoytheater.com/event/kitchen-dwellers-billy-strings-after-party/"
+    },
+    {
+      "id": "d20ecad3d932",
+      "title": "Kitchen Dwellers (Billy Strings After-Party)",
+      "start": "2026-12-05",
+      "allDay": true,
+      "url": "https://thejoytheater.com/event/kitchen-dwellers-billy-strings-after-party-2/"
+    }
+  ]
+}

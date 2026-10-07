@@ -1,0 +1,22 @@
+{
+  "slug": "marigny-opera-house",
+  "name": "Marigny Opera House",
+  "status": "active",
+  "address": "725 Saint Ferdinand Street",
+  "lat": 29.964984,
+  "lng": -90.049066,
+  "website": "https://marignyoperahouse.org",
+  "image": null,
+  "aliases": [],
+  "sources": [
+    {
+      "type": "html",
+      "url": "https://marignyoperahouse.org/upcoming-events/",
+      "item": "article.mec-event-article",
+      "title": ".mec-event-title",
+      "date": ".mec-event-d",
+      "time": ".mec-start-time",
+      "link": ".mec-event-title a@href"
+    }
+  ]
+}

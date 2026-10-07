@@ -1,0 +1,12 @@
+{
+  "slug": "siberia",
+  "name": "Siberia",
+  "status": "active",
+  "address": "2227 St. Claude Ave",
+  "lat": 29.969004,
+  "lng": -90.05591,
+  "website": "https://www.siberianola.com",
+  "image": "siberia.jpg",
+  "aliases": [],
+  "sources": []
+}

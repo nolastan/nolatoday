@@ -1,0 +1,12 @@
+{
+  "slug": "hi-ho",
+  "name": "Hi-Ho Lounge",
+  "status": "active",
+  "address": "2239 St. Claude Avenue",
+  "lat": 29.968981,
+  "lng": -90.055427,
+  "website": "https://hihonola.com",
+  "image": "hi-ho.jpg",
+  "aliases": [],
+  "sources": []
+}

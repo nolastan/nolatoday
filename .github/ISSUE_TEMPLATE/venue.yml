@@ -1,0 +1,30 @@
+name: Venue correction or suggestion
+description: Wrong info, a closed venue, a missing venue, or a better schedule source
+labels: [data]
+body:
+  - type: input
+    id: venue
+    attributes:
+      label: Venue
+      description: Name or nola.today link
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What's this about?
+      options:
+        - Schedule is wrong or missing
+        - Venue has closed
+        - Address, website or photo is wrong
+        - Add a venue that's missing
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: Where does the venue publish its schedule? Links help.
+    validations:
+      required: true
