@@ -29,6 +29,10 @@ function groupByDay(events) {
   return [...days.values()];
 }
 
+function storyDate(iso) {
+  return `<time datetime="${esc(iso)}">${esc(DateTime.fromISO(iso).toFormat('LLLL d, yyyy'))}</time>`;
+}
+
 function formatTime(e) {
   if (e.allDay) return 'All day';
   return e.dt.toFormat(e.dt.minute ? 'h:mm a' : 'h a').toLowerCase();
@@ -93,6 +97,23 @@ export function venuePage(ctx, venue, { events, status }) {
   };
   if (venue.image) jsonLd.image = `${config.siteUrl}${imageUrl}`;
   if (venue.website) jsonLd.sameAs = [venue.website];
+  const stories = venue.stories ?? [];
+  if (stories.length) {
+    jsonLd.subjectOf = stories.map((story) => {
+      const article = {
+        '@type': 'NewsArticle',
+        headline: story.title,
+        datePublished: story.date,
+        url: `${canonical}#${story.slug}`,
+        publisher: { '@type': 'Organization', name: config.siteName, url: config.siteUrl },
+      };
+      if (story.summary) article.description = story.summary;
+      if (story.updated) article.dateModified = story.updated;
+      if (story.author) article.author = { '@type': 'Person', name: story.author };
+      if (story.image) article.image = `${config.siteUrl}/images/stories/${story.image}`;
+      return article;
+    });
+  }
   if (!closed && listed.length) jsonLd.event = listed.slice(0, 50).map((e) => eventSchema(ctx, venue, e));
 
   const breadcrumbs = {
@@ -168,6 +189,18 @@ export function venuePage(ctx, venue, { events, status }) {
     </section>`;
   }
 
+  const storySections = stories
+    .map(
+      (story) => `<article class="wrap venue-story" id="${esc(story.slug)}">
+    <h2>${esc(story.title)}</h2>
+    ${story.summary ? `<p class="story-summary">${esc(story.summary)}</p>` : ''}
+    <p class="muted">${story.author ? `By ${esc(story.author)} · ` : ''}${storyDate(story.date)}${story.updated ? ` (Updated ${storyDate(story.updated)})` : ''}</p>
+    ${story.image ? `<figure class="story-photo"><img src="${asset(`/images/stories/${story.image}`)}" alt="${esc(story.title)}" loading="lazy" decoding="async"></figure>` : ''}
+    ${story.body.map((p) => `<p>${esc(p)}</p>`).join('\n    ')}
+  </article>`,
+    )
+    .join('\n  ');
+
   const sourceLinks = (venue.sources ?? []).map((s) => s.url).filter(Boolean);
   const reportUrl = `https://github.com/${config.repo}/issues/new?labels=data&title=${encodeURIComponent(`Venue data: ${venue.name}`)}&body=${encodeURIComponent(`Page: ${canonical}\n\nWhat's wrong?\n`)}`;
 
@@ -176,6 +209,7 @@ export function venuePage(ctx, venue, { events, status }) {
   ${banner}
   ${hero}
   ${schedule}
+  ${storySections}
   <section class="wrap venue-foot muted">
     <p>${sourceLinks.length ? `Schedule source: ${sourceLinks.map((u) => `<a href="${esc(u)}" rel="noopener nofollow">${esc(new URL(u).hostname.replace(/^www\./, ''))}</a>`).join(', ')}. ` : ''}<a href="${esc(reportUrl)}" rel="noopener">Report a problem with this page</a>.</p>
   </section>
