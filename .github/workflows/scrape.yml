@@ -34,6 +34,7 @@ jobs:
       - name: Scrape
         env:
           TICKETMASTER_API_KEY: ${{ secrets.TICKETMASTER_API_KEY }}
+          JAMBASE_API_KEY: ${{ secrets.JAMBASE_API_KEY }}
         run: node scripts/scrape.js ${{ inputs.venue && format('--venue {0}', inputs.venue) || '' }}
 
       - name: Commit data

@@ -48,6 +48,7 @@ Repair issues are opened automatically and name the venue, the error, and the cu
    - SpotHopper sites (`static.spotapps.co`, `spot_id=` in the HTML) → `spothopper`
    - Bill's Gigulator widget (`billsgigulator.com/app/sqs/<id>`) → `gigulator`
    - Ticketmaster or Live Nation ticketing → `ticketmaster` with the Discovery venue id: the `KovZ…` in the venue's livenation.com URL, or `TICKETMASTER_API_KEY=… node scripts/ticketmaster-venues.js <name>`
+   - Listed on JamBase (`jambase.com/venue/…`) but the venue's own site has no usable feed → `jambase` with the JamBase venue id from `JAMBASE_API_KEY=… node scripts/jambase-venues.js <name>`. The key is on a free plan with 1,000 calls a month, so use it only where no direct source works
    - Anything server-rendered → `html` with CSS selectors
 3. **Try a config** before saving it: `node scripts/scrape.js --try '{"type":"html","url":"…","item":".event","title":"h3","date":".date"}'`
 4. **Save** the working config in the venue's `sources`, then run `node scripts/scrape.js --venue <slug> --dry` again.
@@ -72,6 +73,7 @@ Please don't scrape sites whose `robots.txt` forbids it, and don't add sources b
 | `wix` | `url` (page with the events widget), `eventUrl?` (`https://…/{slug}`) |
 | `gigulator` | `site` (numeric id), `url?` |
 | `ticketmaster` | `venueId` (Discovery id, `KovZ…`). Needs the `TICKETMASTER_API_KEY` env var (an Actions secret in CI); parking and VIP add-on listings are dropped |
+| `jambase` | `venueId` (`jambase:<id>`), `url` (the venue's `jambase.com/venue/…` page, shown as the schedule source: attribution is required). Needs the `JAMBASE_API_KEY` env var (an Actions secret in CI). All jambase venues in a run share one API request; the run is skipped when the monthly quota runs low. Cancelled and postponed shows are dropped |
 | `html` | `url`/`urls`, `item`, `title`, `date`, `time?`, `link?`, `dateHeader?`, `next?`, `maxPages?` — selectors are CSS, `sel@attr` reads an attribute |
 
 Options every source accepts (applied when events are normalized):

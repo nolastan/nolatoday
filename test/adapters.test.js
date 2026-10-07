@@ -13,6 +13,7 @@ import { parseWix } from '../scrapers/wix.js';
 import { parseGigulator } from '../scrapers/gigulator.js';
 import { parseHTML } from '../scrapers/html.js';
 import scrapeTicketmaster, { parseTicketmaster } from '../scrapers/ticketmaster.js';
+import scrapeJamBase, { parseJamBase, quotaProblem } from '../scrapers/jambase.js';
 import { normalizeEvents } from '../scripts/lib/normalize.js';
 import { ZONE } from '../scripts/lib/time.js';
 
@@ -117,6 +118,112 @@ test('ticketmaster: a missing API key is a clear error', async () => {
     await assert.rejects(scrapeTicketmaster({ venueId: 'KovZ917ALJx' }), /TICKETMASTER_API_KEY is not set/);
   } finally {
     if (saved !== undefined) process.env.TICKETMASTER_API_KEY = saved;
+  }
+});
+
+test('jambase: per-venue events, local times, custom titles, drops cancelled and postponed shows', () => {
+  const { events } = JSON.parse(fixture('jambase.json'));
+  const snug = normalize(parseJamBase(events, 'jambase:111'));
+  assert.deepEqual(snug.map((e) => [e.start, e.title]), [
+    ['2026-10-12T19:30:00-05:00', 'Charmaine Neville Band'],
+    ['2026-10-12T21:30:00-05:00', 'Charmaine Neville Band'],
+    ['2026-10-14T19:30:00-05:00', 'Uptown Jazz Orchestra'],
+  ]);
+  assert.equal(snug[0].url, 'https://www.jambase.com/show/charmaine-neville-band-snug-harbor-20261012');
+
+  const chickie = normalize(parseJamBase(events, 'jambase:222'));
+  assert.deepEqual(chickie.map((e) => [e.start, e.title]), [
+    ['2026-10-06T20:00:00-05:00', 'Chris Smither: Album Release Show'],
+    ['2026-10-09', 'John Boutté'],
+  ]);
+  assert.equal(chickie[1].allDay, true);
+});
+
+test('jambase: quota guard', () => {
+  const quota = { plan: 'developer', quota: 1000, usedCalls: 300, remainingCalls: 700, overageCalls: 0, noMonthlyCap: false, limitType: 'soft', periodEnd: '2026-11-01T00:00:00.000Z' };
+  assert.equal(quotaProblem(quota), null);
+  assert.match(quotaProblem({ ...quota, usedCalls: 950, remainingCalls: 50 }), /50 of 1000 calls left until 2026-11-01/);
+  assert.match(quotaProblem({ ...quota, remainingCalls: 0, overageCalls: 3 }), /3 calls over/);
+  assert.match(quotaProblem({ ...quota, remainingCalls: null }), /did not report/);
+  assert.equal(quotaProblem({ ...quota, quota: null, remainingCalls: null, noMonthlyCap: true, limitType: 'no_monthly_cap' }), null);
+});
+
+// Stub fetch for the API calls; records each request.
+async function withJamBase(responses, fn) {
+  const saved = { fetch: globalThis.fetch, key: process.env.JAMBASE_API_KEY };
+  const calls = [];
+  process.env.JAMBASE_API_KEY = 'jbd_test';
+  globalThis.fetch = async (url, init) => {
+    const u = new URL(url);
+    calls.push({ path: u.pathname, params: Object.fromEntries(u.searchParams), auth: init.headers.authorization });
+    const [status, body] = responses(u);
+    return new Response(JSON.stringify(body), { status, headers: { 'content-type': 'application/json' } });
+  };
+  try {
+    return await fn(calls);
+  } finally {
+    globalThis.fetch = saved.fetch;
+    if (saved.key === undefined) delete process.env.JAMBASE_API_KEY;
+    else process.env.JAMBASE_API_KEY = saved.key;
+  }
+}
+
+const roomyQuota = { plan: 'developer', quota: 1000, remainingCalls: 800, overageCalls: 0, noMonthlyCap: false, limitType: 'soft' };
+
+test('jambase: one batched request per run for every jambase venue, following pages', async () => {
+  const { events } = JSON.parse(fixture('jambase.json'));
+  const venues = [
+    { slug: 'snug-harbor', sources: [{ type: 'jsonld', url: 'https://example.com' }, { type: 'jambase', venueId: 'jambase:111' }] },
+    { slug: 'chickie-wah-wah', sources: [{ type: 'jambase', venueId: '222' }] },
+    { slug: 'other', sources: [{ type: 'ics', url: 'https://example.com/c.ics' }] },
+  ];
+  await withJamBase(
+    (u) => {
+      if (u.pathname === '/v3/quota') return [200, roomyQuota];
+      const page = Number(u.searchParams.get('page'));
+      return [200, { success: true, pagination: { page, totalPages: 2 }, events: page === 1 ? events.slice(0, 3) : events.slice(3) }];
+    },
+    async (calls) => {
+      const ctx = { window, venues };
+      const [snug, chickie] = await Promise.all([
+        scrapeJamBase(venues[0].sources[1], { ...ctx, venue: venues[0] }),
+        scrapeJamBase(venues[1].sources[0], { ...ctx, venue: venues[1] }),
+      ]);
+      assert.equal(snug.length, 3);
+      assert.equal(chickie.length, 2);
+      assert.deepEqual(calls.map((c) => [c.path, c.params.page]), [['/v3/quota', undefined], ['/v3/events', '1'], ['/v3/events', '2']]);
+      assert.equal(calls[1].params.venueId, 'jambase:111|jambase:222');
+      assert.equal(calls[1].params.eventDateTo, '2026-11-05');
+      assert.equal(calls[1].params.eventDateFrom, undefined);
+      assert.equal(calls[1].auth, 'Bearer jbd_test');
+    },
+  );
+});
+
+test('jambase: skips the run when the quota is low, and never retries a failed call', async () => {
+  await withJamBase(
+    () => [200, { ...roomyQuota, remainingCalls: 20, periodEnd: '2026-11-01T00:00:00Z' }],
+    async (calls) => {
+      await assert.rejects(scrapeJamBase({ venueId: 'jambase:111' }, { window, venues: [] }), /quota is low \(20 of 1000 calls left until 2026-11-01\)/);
+      assert.deepEqual(calls.map((c) => c.path), ['/v3/quota']);
+    },
+  );
+  await withJamBase(
+    (u) => (u.pathname === '/v3/quota' ? [200, roomyQuota] : [429, { success: false }]),
+    async (calls) => {
+      await assert.rejects(scrapeJamBase({ venueId: 'jambase:111' }, { window, venues: [] }), /HTTP 429/);
+      assert.deepEqual(calls.map((c) => c.path), ['/v3/quota', '/v3/events']);
+    },
+  );
+});
+
+test('jambase: a missing API key is a clear error', async () => {
+  const saved = process.env.JAMBASE_API_KEY;
+  delete process.env.JAMBASE_API_KEY;
+  try {
+    await assert.rejects(scrapeJamBase({ venueId: 'jambase:111' }, { venues: [] }), /JAMBASE_API_KEY is not set/);
+  } finally {
+    if (saved !== undefined) process.env.JAMBASE_API_KEY = saved;
   }
 });
 

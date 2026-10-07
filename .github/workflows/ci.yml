@@ -33,6 +33,7 @@ jobs:
         env:
           # Empty for PRs from forks, which don't get secrets.
           TICKETMASTER_API_KEY: ${{ secrets.TICKETMASTER_API_KEY }}
+          JAMBASE_API_KEY: ${{ secrets.JAMBASE_API_KEY }}
         run: |
           git fetch --no-tags --depth=1 origin "${{ github.base_ref }}"
           changed=$(git diff --name-only "origin/${{ github.base_ref }}" -- data/venues/ | sed -n 's#^data/venues/\(.*\)\.json$#\1#p' | paste -sd, -)
