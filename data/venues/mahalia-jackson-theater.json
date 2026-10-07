@@ -1,0 +1,17 @@
+{
+  "slug": "mahalia-jackson-theater",
+  "name": "Mahalia Jackson Theater for the Performing Arts",
+  "status": "active",
+  "address": "1419 Basin Street",
+  "lat": 29.963201,
+  "lng": -90.069398,
+  "website": "https://www.mahaliajacksontheater.com",
+  "image": null,
+  "aliases": [],
+  "sources": [
+    {
+      "type": "ticketmaster",
+      "venueId": "KovZpaKkke"
+    }
+  ]
+}

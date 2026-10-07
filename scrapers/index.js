@@ -7,12 +7,13 @@ import spothopper from './spothopper.js';
 import wix from './wix.js';
 import html from './html.js';
 import gigulator from './gigulator.js';
+import ticketmaster from './ticketmaster.js';
 
 /**
  * Generic adapters, selected by a source's "type". Venue-specific scrapers
  * live in ./custom/<name>.js and are selected with { type: "custom", name }.
  */
-export const adapters = { ics, tribe, squarespace, jsonld, eventbrite, spothopper, wix, html, gigulator };
+export const adapters = { ics, tribe, squarespace, jsonld, eventbrite, spothopper, wix, html, gigulator, ticketmaster };
 
 export async function runSource(source, ctx) {
   if (source.type === 'custom') {

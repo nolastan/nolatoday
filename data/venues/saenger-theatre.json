@@ -15,5 +15,10 @@
     "via": "Wikimedia Commons"
   },
   "aliases": [],
-  "sources": []
+  "sources": [
+    {
+      "type": "ticketmaster",
+      "venueId": "KovZpZAJ7e1A"
+    }
+  ]
 }

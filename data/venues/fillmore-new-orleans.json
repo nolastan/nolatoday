@@ -8,5 +8,10 @@
   "website": "https://www.fillmorenola.com",
   "image": null,
   "aliases": [],
-  "sources": []
+  "sources": [
+    {
+      "type": "ticketmaster",
+      "venueId": "KovZ917ALJx"
+    }
+  ]
 }

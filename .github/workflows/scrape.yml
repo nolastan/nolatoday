@@ -32,6 +32,8 @@ jobs:
       - run: npm ci
 
       - name: Scrape
+        env:
+          TICKETMASTER_API_KEY: ${{ secrets.TICKETMASTER_API_KEY }}
         run: node scripts/scrape.js ${{ inputs.venue && format('--venue {0}', inputs.venue) || '' }}
 
       - name: Commit data

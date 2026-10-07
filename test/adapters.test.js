@@ -12,6 +12,7 @@ import { parseSpotHopper } from '../scrapers/spothopper.js';
 import { parseWix } from '../scrapers/wix.js';
 import { parseGigulator } from '../scrapers/gigulator.js';
 import { parseHTML } from '../scrapers/html.js';
+import scrapeTicketmaster, { parseTicketmaster } from '../scrapers/ticketmaster.js';
 import { normalizeEvents } from '../scripts/lib/normalize.js';
 import { ZONE } from '../scripts/lib/time.js';
 
@@ -95,6 +96,28 @@ test("gigulator: carries the date forward to repeat rows", () => {
       ['2026-10-09T22:30:00-05:00', 'The Jump Hounds', 'https://tix.example/jump'],
     ],
   );
+});
+
+test('ticketmaster: local date + time, UTC fallback, drops add-ons, cancellations and TBD dates', () => {
+  const events = normalize(parseTicketmaster(JSON.parse(fixture('ticketmaster.json'))));
+  assert.deepEqual(events.map((e) => [e.start, e.title]), [
+    ['2026-10-09T20:00:00-05:00', 'Trombone Shorty & Orleans Avenue'],
+    ['2026-10-16T21:00:00-05:00', 'Galactic'],
+    ['2026-10-24', 'Mardi Gras Ball'],
+  ]);
+  assert.equal(events[0].url, 'https://www.ticketmaster.com/event/1B006123ABCD1234');
+  assert.equal(events[2].allDay, true);
+  assert.deepEqual(parseTicketmaster({ page: { totalElements: 0 } }), [], 'no _embedded when a venue has no events');
+});
+
+test('ticketmaster: a missing API key is a clear error', async () => {
+  const saved = process.env.TICKETMASTER_API_KEY;
+  delete process.env.TICKETMASTER_API_KEY;
+  try {
+    await assert.rejects(scrapeTicketmaster({ venueId: 'KovZ917ALJx' }), /TICKETMASTER_API_KEY is not set/);
+  } finally {
+    if (saved !== undefined) process.env.TICKETMASTER_API_KEY = saved;
+  }
 });
 
 test('html: selectors, date headers, missing times become all-day', () => {
