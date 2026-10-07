@@ -200,9 +200,7 @@ h3 { font-size: 1.3rem; }
 }
 .footer-inner { display: flex; flex-wrap: wrap; gap: 24px 48px; justify-content: space-between; }
 .footer-inner p { max-width: 36em; margin: 8px 0 0; font-size: 0.95rem; }
-.footer-nav { display: flex; flex-wrap: wrap; gap: 8px 20px; align-content: flex-start; }
-.footer-nav a { color: var(--muted); font-weight: 600; text-decoration: none; }
-.footer-nav a:hover { color: var(--text); }
+.colophon { color: var(--muted); }
 
 /* Venue page ------------------------------------------------------------ */
 .map-banner {
