@@ -138,7 +138,7 @@ export function venuePage(ctx, venue, { events, status }) {
     <div class="venue-hero-text">
       <span class="badge">${closed ? 'Closed' : 'Venue'}</span>
       <h1>${esc(venue.name)}</h1>
-      <p class="venue-address"><a href="${esc(mapsLink(venue))}" rel="noopener">${esc(venue.address)}</a>, New Orleans</p>
+      <p class="venue-address">${esc(venue.address)}, New Orleans</p>
       ${venue.note ? `<p class="venue-note">${esc(venue.note)}</p>` : ''}
       <p class="live-now" data-live-now hidden><span class="live-dot"></span> Live now: <strong data-live-title></strong></p>
       <div class="button-row">

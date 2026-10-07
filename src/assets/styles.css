@@ -237,8 +237,7 @@ h3 { font-size: 1.3rem; }
   .venue-hero { grid-template-columns: 1fr 520px; margin-top: -96px; }
 }
 .venue-hero h1 { margin-bottom: 8px; text-shadow: 0 2px 18px var(--bg); }
-.venue-address { margin: 0; font-size: 1.2rem; }
-.venue-address a { color: var(--muted); }
+.venue-address { margin: 0; font-size: 1.2rem; color: var(--muted); }
 .venue-note { color: var(--muted); font-style: italic; margin: 8px 0 0; }
 .venue-photo {
   position: relative;
