@@ -54,7 +54,10 @@ for (const v of venues) {
     else if (storySlugs.has(s.slug)) err(v.slug, `story "${s.slug}" is also on ${storySlugs.get(s.slug)}`);
     else storySlugs.set(s.slug, v.slug);
     if (!s.title) err(v.slug, `story "${s.slug}" is missing a title`);
-    if (!/^\d{4}-\d{2}-\d{2}$/.test(s.date ?? '')) err(v.slug, `story "${s.slug}" date must be YYYY-MM-DD`);
+    for (const key of ['date', 'updated']) {
+      if ((key === 'date' || s[key] != null) && !/^\d{4}-\d{2}-\d{2}$/.test(s[key] ?? '')) err(v.slug, `story "${s.slug}" ${key} must be YYYY-MM-DD`);
+    }
+    if (s.image && !fs.existsSync(path.join(ROOT, 'public/images/stories', s.image))) err(v.slug, `image public/images/stories/${s.image} not found`);
     if (!Array.isArray(s.body) || !s.body.length || s.body.some((p) => typeof p !== 'string' || !p)) err(v.slug, `story "${s.slug}" body must be a non-empty array of paragraphs`);
   }
   for (const a of v.aliases ?? []) {

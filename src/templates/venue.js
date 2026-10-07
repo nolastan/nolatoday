@@ -29,6 +29,10 @@ function groupByDay(events) {
   return [...days.values()];
 }
 
+function storyDate(iso) {
+  return `<time datetime="${esc(iso)}">${esc(DateTime.fromISO(iso).toFormat('LLLL d, yyyy'))}</time>`;
+}
+
 function formatTime(e) {
   if (e.allDay) return 'All day';
   return e.dt.toFormat(e.dt.minute ? 'h:mm a' : 'h a').toLowerCase();
@@ -95,13 +99,20 @@ export function venuePage(ctx, venue, { events, status }) {
   if (venue.website) jsonLd.sameAs = [venue.website];
   const stories = venue.stories ?? [];
   if (stories.length) {
-    jsonLd.subjectOf = stories.map((story) => ({
-      '@type': 'NewsArticle',
-      headline: story.title,
-      datePublished: story.date,
-      url: `${canonical}#${story.slug}`,
-      publisher: { '@type': 'Organization', name: config.siteName, url: config.siteUrl },
-    }));
+    jsonLd.subjectOf = stories.map((story) => {
+      const article = {
+        '@type': 'NewsArticle',
+        headline: story.title,
+        datePublished: story.date,
+        url: `${canonical}#${story.slug}`,
+        publisher: { '@type': 'Organization', name: config.siteName, url: config.siteUrl },
+      };
+      if (story.summary) article.description = story.summary;
+      if (story.updated) article.dateModified = story.updated;
+      if (story.author) article.author = { '@type': 'Person', name: story.author };
+      if (story.image) article.image = `${config.siteUrl}/images/stories/${story.image}`;
+      return article;
+    });
   }
   if (!closed && listed.length) jsonLd.event = listed.slice(0, 50).map((e) => eventSchema(ctx, venue, e));
 
@@ -182,7 +193,9 @@ export function venuePage(ctx, venue, { events, status }) {
     .map(
       (story) => `<article class="wrap venue-story" id="${esc(story.slug)}">
     <h2>${esc(story.title)}</h2>
-    <p class="muted"><time datetime="${esc(story.date)}">${esc(DateTime.fromISO(story.date).toFormat('LLLL d, yyyy'))}</time></p>
+    ${story.summary ? `<p class="story-summary">${esc(story.summary)}</p>` : ''}
+    <p class="muted">${story.author ? `By ${esc(story.author)} · ` : ''}${storyDate(story.date)}${story.updated ? ` (Updated ${storyDate(story.updated)})` : ''}</p>
+    ${story.image ? `<figure class="story-photo"><img src="${asset(`/images/stories/${story.image}`)}" alt="${esc(story.title)}" loading="lazy" decoding="async"></figure>` : ''}
     ${story.body.map((p) => `<p>${esc(p)}</p>`).join('\n    ')}
   </article>`,
     )

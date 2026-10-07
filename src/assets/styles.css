@@ -313,6 +313,9 @@ h3 { font-size: 1.3rem; }
 .venue-story > * { max-width: 720px; }
 .venue-story h2 { margin-bottom: 4px; }
 .venue-story p { margin: 0 0 1em; }
+.venue-story .story-summary { font-size: 1.2rem; margin-bottom: 4px; }
+.story-photo { margin: 0 0 1em; }
+.story-photo img { display: block; max-width: 100%; height: auto; border-radius: var(--radius); }
 .venue-foot { margin-top: 40px; font-size: 0.95rem; }
 
 /* Directory ------------------------------------------------------------- */

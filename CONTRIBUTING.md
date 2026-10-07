@@ -26,7 +26,7 @@ Most work on this repo is keeping venue schedules flowing: fixing a scraper that
 - **`aliases`**: old slugs that should redirect here (e.g. a merged duplicate).
 - **`image`**: a file in `public/images/venues/`. Provide `<slug>.jpg` (max 1200px) **and** `<slug>-600.jpg`.
 - **`sources`**: one or more schedule sources; events from all of them are merged and de-duplicated.
-- **`stories`** (optional): news stories from the old site's `/stories/<slug>` pages, shown on the venue page. Each is `{ "slug", "title", "date": "YYYY-MM-DD", "body": ["paragraph", …] }`. The build writes a redirect from `/stories/<slug>` to `/venues/<venue>#<slug>`, so keep `slug` exactly as the old URL had it.
+- **`stories`** (optional): news stories from the old site's `/stories/<slug>` pages, shown on the venue page. Each is `{ "slug", "title", "date": "YYYY-MM-DD", "body": ["paragraph", …] }`, plus optional `summary`, `author`, `updated` (YYYY-MM-DD) and `image` (a file in `public/images/stories/`). Copy the text exactly as the old page had it. The build writes a redirect from `/stories/<slug>` to `/venues/<venue>#<slug>`, so keep `slug` exactly as the old URL had it.
 
 Venues that aren't music venues at all go in `data/redirects.json` instead (old slug → `/venues`).
 
