@@ -6,7 +6,14 @@
   "lat": 29.960763,
   "lng": -90.059038,
   "website": "https://www.palmcourtjazzcafe.com",
-  "image": null,
+  "image": "palm-court-jazz-cafe.jpg",
+  "imageCredit": {
+    "author": "Infrogmation of New Orleans",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+    "source": "https://www.flickr.com/photos/infrogmation/6935255588/",
+    "via": "Flickr"
+  },
   "aliases": [],
   "sources": [],
   "note": "Palm Court Jazz Cafe has closed; its last show was in June 2024."

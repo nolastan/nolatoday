@@ -6,7 +6,14 @@
   "lat": 29.941191,
   "lng": -90.078739,
   "website": "https://www.thejazzmarket.org",
-  "image": null,
+  "image": "new-orleans-jazz-market.jpg",
+  "imageCredit": {
+    "author": "NewUrbanism",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+    "source": "https://www.flickr.com/photos/newurbanism/49532861101/",
+    "via": "Flickr"
+  },
   "aliases": [],
   "sources": []
 }

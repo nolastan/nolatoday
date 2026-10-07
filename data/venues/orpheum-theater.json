@@ -6,7 +6,14 @@
   "lat": 29.954543,
   "lng": -90.072827,
   "website": "https://orpheumnola.com",
-  "image": null,
+  "image": "orpheum-theater.jpg",
+  "imageCredit": {
+    "author": "ajay_suresh",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "source": "https://www.flickr.com/photos/ajay_suresh/55150818497/",
+    "via": "Flickr"
+  },
   "aliases": [],
   "sources": []
 }

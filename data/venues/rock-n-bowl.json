@@ -6,7 +6,14 @@
   "lat": 29.960307,
   "lng": -90.115521,
   "website": "https://www.rocknbowl.com",
-  "image": null,
+  "image": "rock-n-bowl.jpg",
+  "imageCredit": {
+    "author": "Infrogmation of New Orleans",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+    "source": "https://www.flickr.com/photos/infrogmation/3527088476/",
+    "via": "Flickr"
+  },
   "aliases": [],
   "sources": []
 }
