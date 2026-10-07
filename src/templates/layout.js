@@ -78,20 +78,16 @@ export function siteHeader(ctx, { current } = {}) {
 }
 
 export function siteFooter(ctx) {
-  const { config, url } = ctx;
+  const { url } = ctx;
   return `<footer class="site-footer">
   <div class="wrap footer-inner">
     <div>
       <a class="brand" href="${url('/')}">NOLA<span>.</span>Today</a>
       <p class="muted">Mapping live music in New Orleans. Schedules are gathered automatically from venue websites and ticketing pages — always confirm with the venue before heading out.</p>
     </div>
-    <nav class="footer-nav" aria-label="Footer">
-      <a href="${url('/')}">Map</a>
-      <a href="${url('/venues')}">Venues</a>
-      ${config.social?.instagram ? `<a href="${esc(config.social.instagram)}" rel="noopener">Instagram</a>` : ''}
-      ${config.social?.facebook ? `<a href="${esc(config.social.facebook)}" rel="noopener">Facebook</a>` : ''}
-      <a href="https://github.com/${esc(config.repo)}" rel="noopener">GitHub</a>
-    </nav>
+    <p class="colophon">NOLA.Today is an
+      <a href="https://github.com/nolastan/nolatoday">open source</a> project by <a href="https://stanfordrosenthal.com">Stanford Rosenthal</a>.
+    </p>
   </div>
 </footer>`;
 }
