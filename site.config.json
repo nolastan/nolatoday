@@ -13,5 +13,22 @@
     ],
     "zoom": 13
   },
-  "fathomSite": "GUOLCQBY"
+  "fathomSite": "GUOLCQBY",
+  "referrals": [
+    {
+      "icon": "hotel",
+      "text": "Get $25 off a hotel in New Orleans.",
+      "url": "https://www.hoteltonight.com/invite/SROSENTHAL7"
+    },
+    {
+      "icon": "luggage",
+      "text": "Get $5 off luggage storage in New Orleans.",
+      "url": "https://bounce.com/s/settings/referral-code-received?utm_source=referrer_link&coupon=BOUNCE-L9GB4PBQH"
+    },
+    {
+      "icon": "earplugs",
+      "text": "Protect your hearing with Loop earplugs.",
+      "url": "https://rwrd.io/ref_VC9OCU3"
+    }
+  ]
 }

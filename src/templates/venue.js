@@ -12,6 +12,31 @@ export function staticMapUrl(ctx, venue, { theme, width, height, zoom = 14.5, re
   return `https://api.mapbox.com/styles/v1/${style}/static/${pin}/${venue.lng},${(venue.lat - 0.0007).toFixed(6)},${zoom},0/${width}x${height}${retina ? '@2x' : ''}?access_token=${mapbox.token}&attribution=false&logo=false`;
 }
 
+const svg = (paths) =>
+  `<svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${paths}</svg>`;
+const REFERRAL_ICONS = {
+  hotel: svg('<path d="M3 5v14M3 15h18v4M21 15v-3a3 3 0 0 0-3-3h-7v6"/><circle cx="7" cy="12" r="2"/>'),
+  luggage: svg('<rect x="6" y="7" width="12" height="13" rx="2"/><path d="M9.5 7V4h5v3M10 11v5M14 11v5M9 20v1.5M15 20v1.5"/>'),
+  earplugs: svg('<path d="M7 9a5 5 0 0 1 10 0c0 3-3 4-3 7a3 3 0 0 1-5.5 1.6"/><path d="M10 9.5a2 2 0 0 1 4 0c0 1.2-1 1.6-1.5 2.3"/>'),
+};
+
+/** Referral links from site.config.json, set apart from the schedule and disclosed as referrals. */
+function referralSection(config) {
+  const links = config.referrals ?? [];
+  if (!links.length) return '';
+  return `<aside class="wrap referrals" aria-labelledby="referrals-heading">
+    <h2 id="referrals-heading">Before you go</h2>
+    <ul class="referral-list">
+      ${links
+        .map(
+          (r) => `<li><a class="referral" href="${esc(r.url)}" rel="sponsored noopener">${REFERRAL_ICONS[r.icon] ?? ''}<span>${esc(r.text)}</span><span class="referral-arrow" aria-hidden="true">→</span></a></li>`,
+        )
+        .join('\n      ')}
+    </ul>
+    <p class="muted referral-note">Referral links: NOLA.Today may get a credit when you use them.</p>
+  </aside>`;
+}
+
 function mapsLink(venue) {
   const q = encodeURIComponent(`${venue.name}, ${venue.address}, New Orleans, LA`);
   return `https://www.google.com/maps/search/?api=1&query=${q}`;
@@ -214,6 +239,7 @@ export function venuePage(ctx, venue, { events, status }) {
   ${hero}
   ${schedule}
   ${storySections}
+  ${referralSection(config)}
   <section class="wrap venue-foot muted">
     <p>${sourceLinks.length ? `Schedule source: ${sourceLinks.map((u) => `<a href="${esc(u)}" rel="noopener nofollow">${esc(new URL(u).hostname.replace(/^www\./, ''))}</a>`).join(', ')}. ` : ''}<a href="${esc(reportUrl)}" rel="noopener">Report a problem with this page</a>.</p>
   </section>
