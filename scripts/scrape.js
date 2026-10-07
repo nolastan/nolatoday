@@ -43,12 +43,13 @@ function withTimeout(promise, ms, label) {
   ]).finally(() => clearTimeout(timer));
 }
 
-async function scrapeVenue(venue, { window = window_() } = {}) {
+// `venues` is everything scraped in this run, so API adapters can batch requests.
+async function scrapeVenue(venue, { window = window_(), venues = [venue] } = {}) {
   const results = [];
   for (const source of venue.sources ?? []) {
     const label = `${venue.slug} [${source.type}${source.name ? ':' + source.name : ''}]`;
     try {
-      const raw = await withTimeout(runSource(source, { venue, window }), SOURCE_TIMEOUT_MS, label);
+      const raw = await withTimeout(runSource(source, { venue, window, venues }), SOURCE_TIMEOUT_MS, label);
       if (!Array.isArray(raw)) throw new Error('Scraper did not return an array');
       const events = normalizeEvents(raw, { venue: venue.slug, source, window });
       results.push({ source, ok: true, raw: raw.length, events });
@@ -104,7 +105,7 @@ async function main() {
   let empty = 0;
 
   await pool(venues, CONCURRENCY, async (venue) => {
-    const results = await scrapeVenue(venue, { window });
+    const results = await scrapeVenue(venue, { window, venues });
     const succeeded = results.filter((r) => r.ok);
     const errors = results.filter((r) => !r.ok).map((r) => `${r.source.type}: ${r.error}`);
     const previous = loadEvents(venue.slug).events.filter((e) => (e.end ?? e.start) >= window.from.toISODate());

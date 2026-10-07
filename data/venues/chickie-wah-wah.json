@@ -8,5 +8,11 @@
   "website": "https://chickiewahwah.com",
   "image": "chickie-wah-wah.jpg",
   "aliases": [],
-  "sources": []
+  "sources": [
+    {
+      "type": "jambase",
+      "venueId": "jambase:65930",
+      "url": "https://www.jambase.com/venue/chickie-wah-wah"
+    }
+  ]
 }

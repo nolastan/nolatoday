@@ -10,9 +10,9 @@
   "aliases": [],
   "sources": [
     {
-      "type": "jsonld",
-      "url": "https://www.songkick.com/venues/285661-snug-harbor",
-      "stripTitle": "\\s+@\\s+Snug Harbor$"
+      "type": "jambase",
+      "venueId": "jambase:357128",
+      "url": "https://www.jambase.com/venue/snug-harbor-4"
     }
   ]
 }

@@ -1,0 +1,107 @@
+{
+  "success": true,
+  "pagination": {
+    "page": 1,
+    "perPage": 100,
+    "totalItems": 7,
+    "totalPages": 1
+  },
+  "events": [
+    {
+      "@type": "Concert",
+      "identifier": "jambase:900001",
+      "name": "Charmaine Neville Band at Snug Harbor",
+      "url": "https://www.jambase.com/show/charmaine-neville-band-snug-harbor-20261012",
+      "startDate": "2026-10-12T19:30:00",
+      "eventStatus": "scheduled",
+      "location": {
+        "@type": "MusicVenue",
+        "identifier": "jambase:111",
+        "name": "Snug Harbor"
+      }
+    },
+    {
+      "@type": "Concert",
+      "identifier": "jambase:900002",
+      "name": "Charmaine Neville Band",
+      "url": "https://www.jambase.com/show/charmaine-neville-band-snug-harbor-20261012-2",
+      "startDate": "2026-10-12T21:30:00-05:00",
+      "eventStatus": "scheduled",
+      "location": {
+        "@type": "MusicVenue",
+        "identifier": "jambase:111",
+        "name": "Snug Harbor"
+      }
+    },
+    {
+      "@type": "Concert",
+      "identifier": "jambase:900003",
+      "name": "Uptown Jazz Orchestra at Snug Harbor",
+      "url": "https://www.jambase.com/show/uptown-jazz-orchestra-snug-harbor-20261014",
+      "startDate": "2026-10-14T19:30:00",
+      "eventStatus": "rescheduled",
+      "previousStartDate": "2026-10-07T19:30:00",
+      "location": {
+        "@type": "MusicVenue",
+        "identifier": "jambase:111",
+        "name": "Snug Harbor"
+      }
+    },
+    {
+      "@type": "Concert",
+      "identifier": "jambase:900004",
+      "name": "Nolatet at Snug Harbor",
+      "url": "https://www.jambase.com/show/nolatet-snug-harbor-20261016",
+      "startDate": "2026-10-16T19:30:00",
+      "eventStatus": "cancelled",
+      "location": {
+        "@type": "MusicVenue",
+        "identifier": "jambase:111",
+        "name": "Snug Harbor"
+      }
+    },
+    {
+      "@type": "Concert",
+      "identifier": "jambase:900005",
+      "name": "Chris Smither",
+      "x-customTitle": "Chris Smither: Album Release Show",
+      "url": "https://www.jambase.com/show/chris-smither-chickie-wah-wah-20261006",
+      "startDate": "2026-10-06T20:00:00",
+      "eventStatus": "scheduled",
+      "location": {
+        "@type": "MusicVenue",
+        "identifier": "jambase:222",
+        "name": "Chickie Wah Wah"
+      }
+    },
+    {
+      "@type": "Concert",
+      "identifier": "jambase:900006",
+      "name": "S.G. Goodman at Chickie Wah Wah",
+      "url": "https://www.jambase.com/show/s-g-goodman-chickie-wah-wah-20261007",
+      "startDate": "2026-10-07T20:00:00",
+      "eventStatus": "postponed",
+      "location": {
+        "@type": "MusicVenue",
+        "identifier": "jambase:222",
+        "name": "Chickie Wah Wah"
+      }
+    },
+    {
+      "@type": "Concert",
+      "identifier": "jambase:900007",
+      "name": "John Boutté at Chickie Wah Wah",
+      "url": "https://www.jambase.com/show/john-boutte-chickie-wah-wah-20261009",
+      "startDate": "2026-10-09",
+      "eventStatus": "scheduled",
+      "location": {
+        "@type": "MusicVenue",
+        "identifier": "jambase:222",
+        "name": "Chickie Wah Wah"
+      }
+    }
+  ],
+  "request": {
+    "url": "/v3/events?venueId=jambase:111|jambase:222&eventDateTo=2026-11-05&perPage=100&page=1"
+  }
+}

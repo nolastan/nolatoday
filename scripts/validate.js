@@ -51,6 +51,8 @@ for (const v of venues) {
     } else if (!adapters[s.type]) {
       err(v.slug, `unknown source type "${s.type}"`);
     }
+    // The JamBase API plan requires attribution; the venue page links source urls.
+    if (s.type === 'jambase' && !/^https:\/\/www\.jambase\.com\/venue\//.test(s.url ?? '')) err(v.slug, 'jambase sources need a "url" (the jambase.com/venue/… page) for attribution');
     for (const p of s.exclude ?? []) {
       try {
         new RegExp(p);
