@@ -90,8 +90,7 @@ export default async function scrapeJamBase(source, ctx = {}) {
   return parseJamBase(await batchFor(venueId, ctx), venueId);
 }
 
-// The website's titles end in " - New Orleans - <Venue> - <Date>".
-const TITLE_SUFFIX = /\s+-\s+New Orleans\s+-\s+.*$/i;
+const escapeRegExp = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
 /** Events at venueId from a /v3/events response's `events`. */
 export function parseJamBase(events, venueId) {
@@ -101,7 +100,10 @@ export function parseJamBase(events, venueId) {
     .filter((e) => !e.deletionStatus && e.eventStatus !== 'cancelled' && e.eventStatus !== 'postponed')
     .map((e) => {
       if (!e.startDate) return null;
-      const title = (e['x-customTitle'] || e.name || '').replace(TITLE_SUFFIX, '');
+      // Names read "<Artist> at <Venue>".
+      const venueName = e.location?.name;
+      let title = e['x-customTitle'] || e.name || '';
+      if (venueName) title = title.replace(new RegExp(`\\s+at\\s+${escapeRegExp(venueName)}$`, 'i'), '');
       // startDate is New Orleans time, with or without an offset.
       return { uid: `jambase-${e.identifier}`, title, start: e.startDate, url: e.url };
     })

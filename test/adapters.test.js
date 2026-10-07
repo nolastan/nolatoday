@@ -121,7 +121,7 @@ test('ticketmaster: a missing API key is a clear error', async () => {
   }
 });
 
-test('jambase: per-venue events, local times, custom titles, drops cancelled and postponed shows', () => {
+test('jambase: per-venue events, local times, strips "at <venue>", custom titles, drops cancelled and postponed shows', () => {
   const { events } = JSON.parse(fixture('jambase.json'));
   const snug = normalize(parseJamBase(events, 'jambase:111'));
   assert.deepEqual(snug.map((e) => [e.start, e.title]), [
