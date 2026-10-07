@@ -524,7 +524,8 @@ h3 { font-size: 1.3rem; }
 }
 
 /* Mapbox popups, restyled */
-.mapboxgl-popup { max-width: min(320px, 86vw) !important; }
+/* Fixed width so every card is the same size; long text wraps. */
+.mapboxgl-popup { width: min(320px, 86vw); max-width: none !important; }
 .mapboxgl-popup-content {
   padding: 0 !important;
   overflow: hidden;
@@ -560,13 +561,13 @@ h3 { font-size: 1.3rem; }
   inset: 0;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.05));
 }
-.popup-banner h3 { position: relative; margin: 0; font-size: 1.35rem; color: #fff; }
+.popup-banner h3 { position: relative; margin: 0; font-size: 1.35rem; color: #fff; overflow-wrap: anywhere; }
 .popup-banner:hover h3 { text-decoration: underline; }
 .popup-gigs { list-style: none; margin: 0; padding: 4px 14px 6px; max-height: 240px; overflow-y: auto; }
 .popup-gigs li { padding: 8px 0; border-bottom: 1px solid color-mix(in srgb, currentColor 18%, transparent); }
 .popup-gigs li:last-child { border-bottom: 0; }
 .popup-time { display: block; font-weight: 700; font-size: 0.9rem; opacity: 0.85; }
-.popup-title { font-size: 1.1rem; font-weight: 600; line-height: 1.25; }
+.popup-title { font-size: 1.1rem; font-weight: 600; line-height: 1.25; overflow-wrap: anywhere; }
 .popup-live { color: var(--marker); font-weight: 700; }
 .popup-more {
   display: block;
