@@ -6,7 +6,14 @@
   "lat": 29.953259,
   "lng": -90.066127,
   "website": "https://neworleans.houseofblues.com",
-  "image": null,
+  "image": "house-of-blues.jpg",
+  "imageCredit": {
+    "author": "Gary J. Wood",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "source": "https://www.flickr.com/photos/garyjwood/3793815494/",
+    "via": "Flickr"
+  },
   "aliases": [],
   "sources": [
     {

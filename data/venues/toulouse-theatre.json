@@ -6,7 +6,14 @@
   "lat": 29.957032,
   "lng": -90.064749,
   "website": "https://toulousetheatre.com",
-  "image": null,
+  "image": "toulouse-theatre.jpg",
+  "imageCredit": {
+    "author": "Eden, Janine and Jim",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+    "source": "https://www.flickr.com/photos/edenpictures/52826580906/",
+    "via": "Flickr"
+  },
   "aliases": [],
   "sources": []
 }

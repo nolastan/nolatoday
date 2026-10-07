@@ -6,7 +6,14 @@
   "lat": 29.970962,
   "lng": -90.066779,
   "website": "https://www.kermitslounge.com",
-  "image": null,
+  "image": "kermits-treme-mother-in-law-lounge.jpg",
+  "imageCredit": {
+    "author": "Jeff Hitchcock",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+    "source": "https://www.flickr.com/photos/arbron/51557081940/",
+    "via": "Flickr"
+  },
   "aliases": [],
   "sources": []
 }
