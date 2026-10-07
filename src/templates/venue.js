@@ -172,7 +172,7 @@ export function venuePage(ctx, venue, { events, status }) {
     const days = groupByDay(listed);
     schedule = `<section class="wrap schedule">
       <h2>Upcoming shows</h2>
-      <p class="muted schedule-meta">${status?.lastSuccess ? `Updated <time datetime="${esc(status.lastSuccess)}" data-relative>${esc(DateTime.fromISO(status.lastSuccess).setZone(ZONE).toFormat('LLL d, h:mm a'))}</time>. ` : ''}Times are local. Confirm with the venue before you go.</p>
+      ${status?.lastSuccess ? `<p class="muted schedule-meta">Updated <time datetime="${esc(status.lastSuccess)}" data-relative>${esc(DateTime.fromISO(status.lastSuccess).setZone(ZONE).toFormat('LLL d, h:mm a'))}</time>.</p>` : ''}
       ${days
         .map(
           (day) => `<div class="day" data-day="${day.date.toISODate()}">
