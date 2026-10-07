@@ -92,6 +92,14 @@
     });
   }
 
+  function hasShows(day) {
+    return select(day).some(function (ev) { return data.venues[ev.v]; });
+  }
+
+  function button(day) {
+    return buttons.filter(function (b) { return b.dataset.day === day; })[0];
+  }
+
   function popupHtml(slug, venue, events, now) {
     var href = cfg.base + '/venues/' + slug;
     var banner = venue.image
@@ -173,13 +181,20 @@
     })
     .then(function (json) {
       data = json;
-      var anyLive = select('live').length > 0;
-      var liveBtn = buttons.filter(function (b) { return b.dataset.day === 'live'; })[0];
+      var anyLive = hasShows('live');
+      var liveBtn = button('live');
       if (liveBtn) {
         liveBtn.disabled = !anyLive;
         liveBtn.title = anyLive ? 'Shows happening now' : 'Nothing is live right now';
       }
-      var start = function () { choose(0); };
+      // Nothing left tonight: skip straight to tomorrow rather than an empty map.
+      var anyToday = hasShows(0);
+      var todayBtn = button('0');
+      if (todayBtn && !anyToday) {
+        todayBtn.disabled = true;
+        todayBtn.title = 'No more shows listed tonight';
+      }
+      var start = function () { choose(anyToday ? 0 : 1); };
       if (map.loaded()) start();
       else map.once('load', start);
     })
