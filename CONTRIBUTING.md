@@ -25,6 +25,7 @@ Most work on this repo is keeping venue schedules flowing: fixing a scraper that
 - **`status`**: `active` (scraped, on the map) or `closed` (page stays up with a "closed" notice; no `sources`). Add a one-sentence `note` explaining a closure or rename.
 - **`aliases`**: old slugs that should redirect here (e.g. a merged duplicate).
 - **`image`**: a file in `public/images/venues/`. Provide `<slug>.jpg` (max 1200px) **and** `<slug>-600.jpg`.
+- **`imageCredit`** (optional): required for any photo that isn't the site's own, e.g. a Creative Commons image. `{ "author", "license": "CC BY 2.0", "licenseUrl", "source" (the photo's page), "via"? ("Wikimedia Commons") }`. Shown over the photo as "Photo by …, CC BY 2.0, via Wikimedia Commons". Only resize such photos; cropping or editing a share-alike (`BY-SA`) image makes the edited file share-alike too.
 - **`sources`**: one or more schedule sources; events from all of them are merged and de-duplicated.
 - **`stories`** (optional): news stories from the old site's `/stories/<slug>` pages, shown on the venue page. Each is `{ "slug", "title", "date": "YYYY-MM-DD", "body": ["paragraph", …] }`, plus optional `summary`, `author`, `updated` (YYYY-MM-DD) and `image` (a file in `public/images/stories/`). Copy the text exactly as the old page had it. The build writes a redirect from `/stories/<slug>` to `/venues/<venue>#<slug>`, so keep `slug` exactly as the old URL had it.
 
