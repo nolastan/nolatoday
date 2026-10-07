@@ -8,5 +8,11 @@
   "website": "https://maisonfrenchmen.com",
   "image": "maison.jpg",
   "aliases": [],
-  "sources": []
+  "sources": [
+    {
+      "type": "eventbrite",
+      "url": "https://www.eventbrite.com/o/the-maison-11841357308",
+      "stripTitle": "\\s+@\\s+The Maison$"
+    }
+  ]
 }

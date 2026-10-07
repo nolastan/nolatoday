@@ -8,5 +8,10 @@
   "website": "https://chickiewahwah.com",
   "image": "chickie-wah-wah.jpg",
   "aliases": [],
-  "sources": []
+  "sources": [
+    {
+      "type": "jsonld",
+      "url": "https://www.ticketweb.com/venue/chickie-wah-wah-new-orleans-la/746974"
+    }
+  ]
 }
