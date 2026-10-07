@@ -1,0 +1,107 @@
+{
+  "venue": "snug-harbor",
+  "events": [
+    {
+      "id": "ab218fead34d",
+      "title": "Kelly Love Jones",
+      "start": "2026-10-06T21:30:00-05:00",
+      "url": "https://www.jambase.com/show/kelly-love-jones-snug-harbor-20261006-2"
+    },
+    {
+      "id": "b849c5694ed9",
+      "title": "Jason Marsalis",
+      "start": "2026-10-09T19:30:00-05:00",
+      "url": "https://www.jambase.com/show/jason-marsalis-snug-harbor-20261009"
+    },
+    {
+      "id": "07dfb8c7992b",
+      "title": "Jason Marsalis",
+      "start": "2026-10-09T21:30:00-05:00",
+      "url": "https://www.jambase.com/show/jason-marsalis-snug-harbor-20261009-2"
+    },
+    {
+      "id": "1bad6d9003f3",
+      "title": "Charmaine Neville Band",
+      "start": "2026-10-12T19:30:00-05:00",
+      "url": "https://www.jambase.com/show/charmaine-neville-band-snug-harbor-20261012-2"
+    },
+    {
+      "id": "d842a6901d59",
+      "title": "Charmaine Neville Band",
+      "start": "2026-10-12T21:30:00-05:00",
+      "url": "https://www.jambase.com/show/charmaine-neville-band-snug-harbor-20261012"
+    },
+    {
+      "id": "ff69b7561ea6",
+      "title": "Uptown Jazz Orchestra",
+      "start": "2026-10-14T19:30:00-05:00",
+      "url": "https://www.jambase.com/show/uptown-jazz-orchestra-snug-harbor-20261014-2"
+    },
+    {
+      "id": "4afa75119d91",
+      "title": "Uptown Jazz Orchestra",
+      "start": "2026-10-14T21:30:00-05:00",
+      "url": "https://www.jambase.com/show/uptown-jazz-orchestra-snug-harbor-20261014"
+    },
+    {
+      "id": "b01449169dd4",
+      "title": "Nolatet",
+      "start": "2026-10-16T19:30:00-05:00",
+      "url": "https://www.jambase.com/show/nolatet-snug-harbor-20261016"
+    },
+    {
+      "id": "0a2bae4125df",
+      "title": "Nolatet",
+      "start": "2026-10-16T21:30:00-05:00",
+      "url": "https://www.jambase.com/show/nolatet-snug-harbor-20261016-2"
+    },
+    {
+      "id": "d35295f05860",
+      "title": "ELEW",
+      "start": "2026-10-17T19:30:00-05:00",
+      "url": "https://www.jambase.com/show/elew-snug-harbor-20261017"
+    },
+    {
+      "id": "8ec340d48abc",
+      "title": "Charmaine Neville Band",
+      "start": "2026-10-19T19:30:00-05:00",
+      "url": "https://www.jambase.com/show/charmaine-neville-band-snug-harbor-20261019-2"
+    },
+    {
+      "id": "1c0603b6e52d",
+      "title": "Charmaine Neville Band",
+      "start": "2026-10-19T21:30:00-05:00",
+      "url": "https://www.jambase.com/show/charmaine-neville-band-snug-harbor-20261019"
+    },
+    {
+      "id": "cd4b69fbab69",
+      "title": "Stanton Moore",
+      "start": "2026-10-25T19:00:00-05:00",
+      "url": "https://www.jambase.com/show/stanton-moore-snug-harbor-20261025"
+    },
+    {
+      "id": "b63b38c751a3",
+      "title": "Charmaine Neville Band",
+      "start": "2026-10-26T19:30:00-05:00",
+      "url": "https://www.jambase.com/show/charmaine-neville-band-snug-harbor-20261026"
+    },
+    {
+      "id": "3befa419118b",
+      "title": "Charmaine Neville Band",
+      "start": "2026-10-26T21:30:00-05:00",
+      "url": "https://www.jambase.com/show/charmaine-neville-band-snug-harbor-20261026-2"
+    },
+    {
+      "id": "29d68fe5287f",
+      "title": "Uptown Jazz Orchestra",
+      "start": "2026-10-28T19:30:00-05:00",
+      "url": "https://www.jambase.com/show/uptown-jazz-orchestra-snug-harbor-20261028"
+    },
+    {
+      "id": "7e2b3f03e60b",
+      "title": "Uptown Jazz Orchestra",
+      "start": "2026-10-28T21:30:00-05:00",
+      "url": "https://www.jambase.com/show/uptown-jazz-orchestra-snug-harbor-20261028-2"
+    }
+  ]
+}

@@ -353,6 +353,22 @@
         }
       ]
     },
+    "snug-harbor": {
+      "ok": true,
+      "firstSeen": "2026-10-07T00:24:46.231-05:00",
+      "count": 17,
+      "lastRun": "2026-10-07T00:24:46.231-05:00",
+      "lastSuccess": "2026-10-07T00:24:46.231-05:00",
+      "lastNonEmpty": "2026-10-07T00:24:46.231-05:00",
+      "consecutiveFailures": 0,
+      "sources": [
+        {
+          "type": "jambase",
+          "ok": true,
+          "count": 17
+        }
+      ]
+    },
     "the-allways-lounge": {
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
@@ -498,5 +514,5 @@
       ]
     }
   },
-  "generatedAt": "2026-10-07T00:12:43.896-05:00"
+  "generatedAt": "2026-10-07T00:24:46.231-05:00"
 }
