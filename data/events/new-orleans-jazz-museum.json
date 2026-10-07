@@ -2,20 +2,6 @@
   "venue": "new-orleans-jazz-museum",
   "events": [
     {
-      "id": "8694557aa2af",
-      "title": "Trempo Masterclass",
-      "start": "2026-10-07T09:00:00-05:00",
-      "end": "2026-10-07T16:00:00-05:00",
-      "url": "https://nolajazzmuseum.org/events/2026/10/5/trempo-ktwyg-b8wxl"
-    },
-    {
-      "id": "c30aed6d7ca2",
-      "title": "The Jazz Foundation of America (JFA) Present Louis Ford and His New Orleans Flairs",
-      "start": "2026-10-07T14:00:00-05:00",
-      "end": "2026-10-07T15:00:00-05:00",
-      "url": "https://nolajazzmuseum.org/events/2026/10/21/jazz-foundation-of-america-jfa-presents-36ref"
-    },
-    {
       "id": "252518f8fa7e",
       "title": "Trempo Masterclass",
       "start": "2026-10-08T09:00:00-05:00",

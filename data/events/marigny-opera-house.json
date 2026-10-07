@@ -8,10 +8,22 @@
       "url": "https://marignyoperahouse.org/upcoming-events/ml-buch/"
     },
     {
+      "id": "bb1742f4f9cc",
+      "title": "Gavin Eckler Quartet Live at Marigny Opera House",
+      "start": "2026-10-15T19:30:00-05:00",
+      "url": "https://marignyoperahouse.org/upcoming-events/gavin-eckler/"
+    },
+    {
       "id": "e3cf15d10698",
       "title": "Vocal Masterclass: Bogdan Mynka",
       "start": "2026-10-22T18:00:00-05:00",
       "url": "https://marignyoperahouse.org/upcoming-events/vocal-masterclass-bogdan-mynka/"
+    },
+    {
+      "id": "40c381478b94",
+      "title": "Harriet Tubman Herself",
+      "start": "2026-10-27T20:00:00-05:00",
+      "url": "https://marignyoperahouse.org/upcoming-events/harriet-tubman-herself/"
     },
     {
       "id": "daab3bd98580",
@@ -60,18 +72,6 @@
       "title": "Fashion Design Masterclass: Magdalene Paris",
       "start": "2026-12-15T18:00:00-06:00",
       "url": "https://marignyoperahouse.org/upcoming-events/fashion-design-masterclass-magdalene-paris/"
-    },
-    {
-      "id": "481c692b7db8",
-      "title": "Die Sieben Todsünden",
-      "start": "2026-12-18T20:00:00-06:00",
-      "url": "https://marignyoperahouse.org/upcoming-events/die-sieben-todsunden-the-seven-deadly-sins/"
-    },
-    {
-      "id": "8b1d3421f518",
-      "title": "Die Sieben Todsünden",
-      "start": "2026-12-19T20:00:00-06:00",
-      "url": "https://marignyoperahouse.org/upcoming-events/die-sieben-todsunden-the-seven-deadly-sins/"
     }
   ]
 }
