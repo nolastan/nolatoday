@@ -98,7 +98,7 @@ test("gigulator: carries the date forward to repeat rows", () => {
   );
 });
 
-test('ticketmaster: local date + time, UTC fallback, drops add-ons, cancellations and TBD dates', () => {
+test('ticketmaster: local date + time, UTC fallback, drops add-ons, day passes, cancellations and TBD dates', () => {
   const events = normalize(parseTicketmaster(JSON.parse(fixture('ticketmaster.json'))));
   assert.deepEqual(events.map((e) => [e.start, e.title]), [
     ['2026-10-09T20:00:00-05:00', 'Trombone Shorty & Orleans Avenue'],

@@ -44,8 +44,8 @@ export default async function scrapeTicketmaster(source, { window } = {}) {
   return parseTicketmaster(data);
 }
 
-// Parking passes, VIP packages and similar add-ons are listed as separate events.
-const ADD_ON = /\bparking\b|\bvip (package|upgrade|experience)s?\b/i;
+// Parking passes, VIP packages, multi-day passes and similar add-ons are listed as separate events.
+const ADD_ON = /\bparking\b|\bvip (package|upgrade|experience)s?\b|\b\d+[- ]day (ticket|pass)\b/i;
 
 export function parseTicketmaster(data) {
   return (data._embedded?.events ?? [])

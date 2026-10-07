@@ -7,11 +7,34 @@
         "id": "vvG1aZ9KbpQk2V",
         "url": "https://www.ticketmaster.com/event/1B006123ABCD1234",
         "dates": {
-          "start": { "localDate": "2026-10-09", "localTime": "20:00:00", "dateTime": "2026-10-10T01:00:00Z", "dateTBD": false, "dateTBA": false, "timeTBA": false, "noSpecificTime": false },
+          "start": {
+            "localDate": "2026-10-09",
+            "localTime": "20:00:00",
+            "dateTime": "2026-10-10T01:00:00Z",
+            "dateTBD": false,
+            "dateTBA": false,
+            "timeTBA": false,
+            "noSpecificTime": false
+          },
           "timezone": "America/Chicago",
-          "status": { "code": "onsale" }
+          "status": {
+            "code": "onsale"
+          }
         },
-        "classifications": [{ "primary": true, "segment": { "name": "Music" }, "genre": { "name": "Jazz" }, "type": { "name": "Undefined" } }]
+        "classifications": [
+          {
+            "primary": true,
+            "segment": {
+              "name": "Music"
+            },
+            "genre": {
+              "name": "Jazz"
+            },
+            "type": {
+              "name": "Undefined"
+            }
+          }
+        ]
       },
       {
         "name": "PARKING: Trombone Shorty & Orleans Avenue",
@@ -19,45 +42,120 @@
         "id": "vvG1aZ9KbpQk2W",
         "url": "https://www.ticketmaster.com/event/1B006123ABCD1235",
         "dates": {
-          "start": { "localDate": "2026-10-09", "localTime": "18:00:00", "dateTime": "2026-10-09T23:00:00Z" },
-          "status": { "code": "onsale" }
+          "start": {
+            "localDate": "2026-10-09",
+            "localTime": "18:00:00",
+            "dateTime": "2026-10-09T23:00:00Z"
+          },
+          "status": {
+            "code": "onsale"
+          }
         },
-        "classifications": [{ "primary": true, "segment": { "name": "Miscellaneous" }, "type": { "name": "Upsell" } }]
+        "classifications": [
+          {
+            "primary": true,
+            "segment": {
+              "name": "Miscellaneous"
+            },
+            "type": {
+              "name": "Upsell"
+            }
+          }
+        ]
       },
       {
         "name": "Galactic - VIP Package",
         "type": "event",
         "id": "vvG1aZ9KbpQk2X",
         "url": "https://www.ticketmaster.com/event/1B006123ABCD1236",
-        "dates": { "start": { "localDate": "2026-10-16", "localTime": "19:00:00" }, "status": { "code": "onsale" } }
+        "dates": {
+          "start": {
+            "localDate": "2026-10-16",
+            "localTime": "19:00:00"
+          },
+          "status": {
+            "code": "onsale"
+          }
+        }
+      },
+      {
+        "name": "3 Day Ticket - Galactic",
+        "type": "event",
+        "id": "vvG1aZ9KbpQk32",
+        "dates": {
+          "start": {
+            "localDate": "2026-10-16",
+            "noSpecificTime": true
+          },
+          "status": {
+            "code": "onsale"
+          }
+        }
       },
       {
         "name": "Galactic",
         "type": "event",
         "id": "vvG1aZ9KbpQk2Y",
         "url": "https://www.ticketmaster.com/event/1B006123ABCD1237",
-        "dates": { "start": { "dateTime": "2026-10-17T02:00:00Z" }, "status": { "code": "onsale" } }
+        "dates": {
+          "start": {
+            "dateTime": "2026-10-17T02:00:00Z"
+          },
+          "status": {
+            "code": "onsale"
+          }
+        }
       },
       {
         "name": "Cancelled Tour Stop",
         "type": "event",
         "id": "vvG1aZ9KbpQk2Z",
-        "dates": { "start": { "localDate": "2026-10-20", "localTime": "20:00:00" }, "status": { "code": "cancelled" } }
+        "dates": {
+          "start": {
+            "localDate": "2026-10-20",
+            "localTime": "20:00:00"
+          },
+          "status": {
+            "code": "cancelled"
+          }
+        }
       },
       {
         "name": "Mardi Gras Ball",
         "type": "event",
         "id": "vvG1aZ9KbpQk30",
         "url": "https://www.ticketmaster.com/event/1B006123ABCD1239",
-        "dates": { "start": { "localDate": "2026-10-24", "timeTBA": true, "noSpecificTime": true }, "status": { "code": "onsale" } }
+        "dates": {
+          "start": {
+            "localDate": "2026-10-24",
+            "timeTBA": true,
+            "noSpecificTime": true
+          },
+          "status": {
+            "code": "onsale"
+          }
+        }
       },
       {
         "name": "Date To Be Announced",
         "type": "event",
         "id": "vvG1aZ9KbpQk31",
-        "dates": { "start": { "dateTBD": true, "dateTBA": true }, "status": { "code": "onsale" } }
+        "dates": {
+          "start": {
+            "dateTBD": true,
+            "dateTBA": true
+          },
+          "status": {
+            "code": "onsale"
+          }
+        }
       }
     ]
   },
-  "page": { "size": 200, "totalElements": 7, "totalPages": 1, "number": 0 }
+  "page": {
+    "size": 200,
+    "totalElements": 8,
+    "totalPages": 1,
+    "number": 0
+  }
 }
