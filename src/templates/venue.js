@@ -29,7 +29,7 @@ function referralSection(config) {
     <ul class="referral-list">
       ${links
         .map(
-          (r) => `<li><a class="referral" href="${esc(r.url)}" rel="sponsored noopener">${REFERRAL_ICONS[r.icon] ?? ''}<span>${esc(r.text)}</span><span class="referral-arrow" aria-hidden="true">→</span></a></li>`,
+          (r) => `<li><a class="referral" href="${esc(r.url)}" rel="sponsored noopener">${REFERRAL_ICONS[r.icon] ?? ''}<span class="referral-text">${esc(r.text)}</span><span class="referral-arrow" aria-hidden="true">→</span></a></li>`,
         )
         .join('\n      ')}
     </ul>
