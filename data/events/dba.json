@@ -2,12 +2,6 @@
   "venue": "dba",
   "events": [
     {
-      "id": "62a8b723e9c4",
-      "title": "The Next Level Band",
-      "start": "2026-10-07T21:00:00-05:00",
-      "url": "https://www.dbaneworleans.com/shows"
-    },
-    {
       "id": "afdd4eb14f09",
       "title": "Ethan Santos",
       "start": "2026-10-08T18:00:00-05:00",
