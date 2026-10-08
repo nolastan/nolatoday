@@ -2,20 +2,6 @@
   "venue": "new-orleans-jazz-museum",
   "events": [
     {
-      "id": "252518f8fa7e",
-      "title": "Trempo Masterclass",
-      "start": "2026-10-08T09:00:00-05:00",
-      "end": "2026-10-08T16:00:00-05:00",
-      "url": "https://nolajazzmuseum.org/events/2026/10/5/trempo-ktwyg-b8wxl-hx68g"
-    },
-    {
-      "id": "7225b509a013",
-      "title": "Live Jazz at the New Orleans Jazz Museum!",
-      "start": "2026-10-08T14:00:00-05:00",
-      "end": "2026-10-08T15:00:00-05:00",
-      "url": "https://nolajazzmuseum.org/events/2026/10/8/live-jazz-at-the-new-orleans-jazz-museum"
-    },
-    {
       "id": "4aebc56ce018",
       "title": "Trempo Masterclass",
       "start": "2026-10-09T09:00:00-05:00",
