@@ -2,12 +2,6 @@
   "venue": "bontemps",
   "events": [
     {
-      "id": "73974892977a",
-      "title": "Wednesday Late Night Funbox Karaoke",
-      "start": "2026-10-07T22:00:00-05:00",
-      "url": "https://lbtrnola.com/new-orleans-uptown-le-bon-temps-roule-events"
-    },
-    {
       "id": "d3fb2dee33ec",
       "title": "Blue Tang People",
       "start": "2026-10-08T23:00:00-05:00",
@@ -23,6 +17,12 @@
       "id": "bab8c48caefc",
       "title": "Jackson's Flying Circus",
       "start": "2026-10-10T23:00:00-05:00",
+      "url": "https://lbtrnola.com/new-orleans-uptown-le-bon-temps-roule-events"
+    },
+    {
+      "id": "bfbfbb6ceddd",
+      "title": "Wednesday Late Night Funbox Karaoke",
+      "start": "2026-10-14T22:00:00-05:00",
       "url": "https://lbtrnola.com/new-orleans-uptown-le-bon-temps-roule-events"
     },
     {
@@ -199,6 +199,7 @@
       "id": "62b3a657a717",
       "title": "Jamie Bernstein and Zen Cowboys",
       "start": "2026-12-12T16:00:00-06:00",
+      "end": "2026-12-12T23:00:00-06:00",
       "url": "https://lbtrnola.com/new-orleans-uptown-le-bon-temps-roule-events"
     },
     {

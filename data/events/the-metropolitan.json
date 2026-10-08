@@ -2,6 +2,12 @@
   "venue": "the-metropolitan",
   "events": [
     {
+      "id": "b5b1d8c516be",
+      "title": "LYNX NOIR × FURBALL NYC PRESENTS FUR & FANG: HAUNTED MANOR",
+      "start": "2026-10-23T21:30:00-05:00",
+      "url": "https://www.eventbrite.com/e/lynx-noir-furball-nyc-presents-fur-fang-haunted-manor-tickets-2003075239964"
+    },
+    {
       "id": "b045d4a41ff2",
       "title": "Krewe of Boo! presents MONSTER MASH 2026 (Official Parade After-Party)",
       "start": "2026-10-24T20:00:00-05:00",

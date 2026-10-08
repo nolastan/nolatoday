@@ -2,27 +2,6 @@
   "venue": "the-allways-lounge",
   "events": [
     {
-      "id": "3a155e8826f1",
-      "title": "Lefty Lucy's Burlesque Bingo",
-      "start": "2026-10-07T18:30:00-05:00",
-      "end": "2026-10-07T20:30:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/3097/1791415800000"
-    },
-    {
-      "id": "e4f63275ef99",
-      "title": "Miss Leatherette pageant for the Lords of Leather.",
-      "start": "2026-10-07T19:00:00-05:00",
-      "end": "2026-10-07T22:00:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/4485/1791417600000"
-    },
-    {
-      "id": "cdff2ed5861c",
-      "title": "Esoterotica (original erotic readings)",
-      "start": "2026-10-07T21:00:00-05:00",
-      "end": "2026-10-07T22:30:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/196/1791424800000"
-    },
-    {
       "id": "3cc02a1602b8",
       "title": "Ballet for all Bodies",
       "start": "2026-10-08T15:30:00-05:00",
@@ -2139,6 +2118,20 @@
       "start": "2027-01-04T21:30:00-06:00",
       "end": "2027-01-04T23:30:00-06:00",
       "url": "https://tockify.com/allwayslounge/detail/2269/1799119800000"
+    },
+    {
+      "id": "196cad37b991",
+      "title": "Freaklesque! (burlesque)",
+      "start": "2027-01-05T19:00:00-06:00",
+      "end": "2027-01-05T20:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/4074/1799197200000"
+    },
+    {
+      "id": "ac6d8e8bd740",
+      "title": "AVANT-HARDE: Outré Cabaret & Burlesque",
+      "start": "2027-01-05T21:30:00-06:00",
+      "end": "2027-01-05T23:00:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/4389/1799206200000"
     }
   ]
 }

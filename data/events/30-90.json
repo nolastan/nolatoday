@@ -2,20 +2,6 @@
   "venue": "30-90",
   "events": [
     {
-      "id": "089dee5ff157",
-      "title": "Josh Benitez Band",
-      "start": "2026-10-07T18:00:00-05:00",
-      "end": "2026-10-07T21:00:00-05:00",
-      "url": "https://www.3090-nola.com/bands/josh-benitez101525-phxdr-ycjgw-54mas-9nzsm-x8sgw-9ehhp-d7bnl-cy5zt-ahzmc"
-    },
-    {
-      "id": "e3b19ccf1e4e",
-      "title": "The Budz",
-      "start": "2026-10-07T21:00:00-05:00",
-      "end": "2026-10-07T23:59:00-05:00",
-      "url": "https://www.3090-nola.com/bands/the-budz100825-p59rw-kbmr8-an5f5-sf8cs-rbjw7-tfc86-28k5y-3p9mp-mem4d-fz4rd-tyz4e"
-    },
-    {
       "id": "5ff14ff2c6fb",
       "title": "The Dapper Dandies",
       "start": "2026-10-08T18:00:00-05:00",

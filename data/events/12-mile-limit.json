@@ -2,13 +2,6 @@
   "venue": "12-mile-limit",
   "events": [
     {
-      "id": "1bdda2b21038",
-      "title": "Trivia Night!",
-      "start": "2026-10-07T20:00:00-05:00",
-      "end": "2026-10-07T22:00:00-05:00",
-      "url": "https://www.twelvemilelimit.com/new-orleans-mid-city-twelve-mile-limit-events"
-    },
-    {
       "id": "e1b8bb72b279",
       "title": "Purrsday Karaoke!",
       "start": "2026-10-08T21:00:00-05:00",
@@ -27,6 +20,13 @@
       "title": "Bear With Me Comedy Open Mic",
       "start": "2026-10-12T19:30:00-05:00",
       "end": "2026-10-12T22:00:00-05:00",
+      "url": "https://www.twelvemilelimit.com/new-orleans-mid-city-twelve-mile-limit-events"
+    },
+    {
+      "id": "7d15052fdac9",
+      "title": "Trivia Night!",
+      "start": "2026-10-14T20:00:00-05:00",
+      "end": "2026-10-14T22:00:00-05:00",
       "url": "https://www.twelvemilelimit.com/new-orleans-mid-city-twelve-mile-limit-events"
     },
     {

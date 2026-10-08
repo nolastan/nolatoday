@@ -2,18 +2,6 @@
   "venue": "bacchanal",
   "events": [
     {
-      "id": "d3892cec613e",
-      "title": "Raphael Bas",
-      "start": "2026-10-07T12:00:00-05:00",
-      "end": "2026-10-07T15:00:00-05:00"
-    },
-    {
-      "id": "f2cf1e3c6922",
-      "title": "Jesse Morrow",
-      "start": "2026-10-07T18:00:00-05:00",
-      "end": "2026-10-07T21:00:00-05:00"
-    },
-    {
       "id": "86de4f91e1dd",
       "title": "Raphael Bas",
       "start": "2026-10-08T12:00:00-05:00",
