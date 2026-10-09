@@ -2,18 +2,6 @@
   "venue": "the-spotted-cat",
   "events": [
     {
-      "id": "75cd0d9bdba2",
-      "title": "Chris Christy Band",
-      "start": "2026-10-08T14:00:00-05:00",
-      "url": "https://www.spottedcatmusicclub.com/calendar"
-    },
-    {
-      "id": "6710b18d48ea",
-      "title": "Miss Sophie Lee",
-      "start": "2026-10-08T18:00:00-05:00",
-      "url": "https://www.spottedcatmusicclub.com/calendar"
-    },
-    {
       "id": "b8165788e662",
       "title": "Jumbo Shrimp",
       "start": "2026-10-08T22:00:00-05:00",

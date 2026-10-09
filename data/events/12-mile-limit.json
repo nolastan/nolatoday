@@ -2,13 +2,6 @@
   "venue": "12-mile-limit",
   "events": [
     {
-      "id": "e1b8bb72b279",
-      "title": "Purrsday Karaoke!",
-      "start": "2026-10-08T21:00:00-05:00",
-      "end": "2026-10-09T01:00:00-05:00",
-      "url": "https://www.twelvemilelimit.com/new-orleans-mid-city-twelve-mile-limit-events"
-    },
-    {
       "id": "fe60792484e6",
       "title": "Heatwave!",
       "start": "2026-10-10T21:00:00-05:00",
@@ -27,6 +20,13 @@
       "title": "Trivia Night!",
       "start": "2026-10-14T20:00:00-05:00",
       "end": "2026-10-14T22:00:00-05:00",
+      "url": "https://www.twelvemilelimit.com/new-orleans-mid-city-twelve-mile-limit-events"
+    },
+    {
+      "id": "c4f6977e591f",
+      "title": "Purrsday Karaoke!",
+      "start": "2026-10-15T21:00:00-05:00",
+      "end": "2026-10-16T01:00:00-05:00",
       "url": "https://www.twelvemilelimit.com/new-orleans-mid-city-twelve-mile-limit-events"
     },
     {

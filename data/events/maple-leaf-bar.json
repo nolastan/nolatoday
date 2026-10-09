@@ -2,20 +2,6 @@
   "venue": "maple-leaf-bar",
   "events": [
     {
-      "id": "801ab333821d",
-      "title": "Booker & Beyond - Shea Siraj",
-      "start": "2026-10-08T18:00:00-05:00",
-      "end": "2026-10-08T22:00:00-05:00",
-      "url": "https://www.mapleleafbar.com/events/booker-beyond-shea-siraj"
-    },
-    {
-      "id": "bf1ab752c07d",
-      "title": "Johnny Vidacovich Trio Ft. Ashlin Parker & Joe Ashlar",
-      "start": "2026-10-08T20:00:00-05:00",
-      "end": "2026-10-09T00:00:00-05:00",
-      "url": "https://www.mapleleafbar.com/events/johnny-vidacovich-trio-ft-ashlin-parker-joe-ashlar-1"
-    },
-    {
       "id": "9003998d6513",
       "title": "The Love Muscles",
       "start": "2026-10-09T20:00:00-05:00",
@@ -41,6 +27,20 @@
       "start": "2026-10-11T19:00:00-05:00",
       "end": "2026-10-11T23:00:00-05:00",
       "url": "https://www.mapleleafbar.com/events/kieko-komaki-donald-magee-seizo-shibayama"
+    },
+    {
+      "id": "723d44da2ce9",
+      "title": "George Porter Jr. Trio Ft. Chris Adkins",
+      "start": "2026-10-12T19:00:00-05:00",
+      "end": "2026-10-12T21:00:00-05:00",
+      "url": "https://www.mapleleafbar.com/events/george-porter-jr-trio-ft-chris-adkins-7"
+    },
+    {
+      "id": "f95978882ee7",
+      "title": "George Porter Jr. Trio Ft. Chris Adkins",
+      "start": "2026-10-12T22:00:00-05:00",
+      "end": "2026-10-13T00:00:00-05:00",
+      "url": "https://www.mapleleafbar.com/events/george-porter-jr-trio-ft-chris-adkins-8"
     }
   ]
 }
