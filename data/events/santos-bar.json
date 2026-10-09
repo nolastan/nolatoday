@@ -2,12 +2,6 @@
   "venue": "santos-bar",
   "events": [
     {
-      "id": "b93269adb096",
-      "title": "UNSANE OCCUPATIONAL HAZARD TOUR: with SUPLECS & NEST",
-      "start": "2026-10-08T22:00:00-05:00",
-      "url": "https://www.santosbar.com/tm-event/unsane/"
-    },
-    {
       "id": "f0ce5f21a5e6",
       "title": "PACO PRESENTS",
       "start": "2026-10-09T22:00:00-05:00",
@@ -120,12 +114,6 @@
       "title": "BLACK MASS KARAOKE with KJ*EJ",
       "start": "2026-11-23T20:00:00-06:00",
       "url": "https://www.santosbar.com/tm-event/black-mass-karaoke-with-kjej-2026-11-23/"
-    },
-    {
-      "id": "a8135969066d",
-      "title": "CHAMBRE NOIR",
-      "start": "2026-11-25T21:00:00-06:00",
-      "url": "https://www.santosbar.com/tm-event/chambre-noir-2026-11-25/"
     },
     {
       "id": "33ffc8dc42a6",
