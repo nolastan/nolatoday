@@ -2,20 +2,6 @@
   "venue": "new-orleans-jazz-museum",
   "events": [
     {
-      "id": "4aebc56ce018",
-      "title": "Trempo Masterclass",
-      "start": "2026-10-09T09:00:00-05:00",
-      "end": "2026-10-09T16:00:00-05:00",
-      "url": "https://nolajazzmuseum.org/events/2026/10/5/trempo-ktwyg-b8wxl-hx68g-ged6g"
-    },
-    {
-      "id": "eeada99441ba",
-      "title": "Hispanic Heritage Month Celebration: Alesia and Sasong",
-      "start": "2026-10-09T14:00:00-05:00",
-      "end": "2026-10-09T15:00:00-05:00",
-      "url": "https://nolajazzmuseum.org/events/2026/10/9/hispanic-heritage-month-show"
-    },
-    {
       "id": "21464974a045",
       "title": "Friends of the Cabildo Concert Series Present Sonny Landreth",
       "start": "2026-10-09T19:00:00-05:00",
