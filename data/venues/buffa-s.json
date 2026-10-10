@@ -8,5 +8,11 @@
   "website": "https://www.buffasbar.com",
   "image": "buffa-s.jpg",
   "aliases": [],
-  "sources": []
+  "sources": [
+    {
+      "type": "custom",
+      "name": "buffa-s",
+      "url": "https://www.buffasbar.com/events/"
+    }
+  ]
 }
