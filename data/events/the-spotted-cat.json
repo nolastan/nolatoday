@@ -2,18 +2,6 @@
   "venue": "the-spotted-cat",
   "events": [
     {
-      "id": "bd2dda1e0f0b",
-      "title": "Colin Davis & The Night People",
-      "start": "2026-10-09T22:00:00-05:00",
-      "url": "https://www.spottedcatmusicclub.com/calendar"
-    },
-    {
-      "id": "dbc8799e1111",
-      "title": "New Orleans Cottonmouth Kings",
-      "start": "2026-10-09T22:00:00-05:00",
-      "url": "https://www.spottedcatmusicclub.com/calendar"
-    },
-    {
       "id": "1610c7d4621a",
       "title": "Popcorn",
       "start": "2026-10-10T14:30:00-05:00",

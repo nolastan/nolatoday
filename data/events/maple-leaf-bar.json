@@ -2,13 +2,6 @@
   "venue": "maple-leaf-bar",
   "events": [
     {
-      "id": "468167844763",
-      "title": "The Snozzberries",
-      "start": "2026-10-09T23:00:00-05:00",
-      "end": "2026-10-10T02:00:00-05:00",
-      "url": "https://www.mapleleafbar.com/events/the-snozzberries"
-    },
-    {
       "id": "87f96229e7cc",
       "title": "Douggies Celebration of Life",
       "start": "2026-10-10T12:00:00-05:00",
@@ -35,6 +28,13 @@
       "start": "2026-10-12T22:00:00-05:00",
       "end": "2026-10-13T00:00:00-05:00",
       "url": "https://www.mapleleafbar.com/events/george-porter-jr-trio-ft-chris-adkins-8"
+    },
+    {
+      "id": "907fa9c168f6",
+      "title": "Very Good Tuesday Ft. Miles Blackwell, Ari Teitel, Eddie Christmas, Lorenzo Loeza",
+      "start": "2026-10-13T20:30:00-05:00",
+      "end": "2026-10-14T00:30:00-05:00",
+      "url": "https://www.mapleleafbar.com/events/very-good-tuesday-ft-miles-blackwell-ari-teitel-eddie-christmas-lorenzo-loeza"
     }
   ]
 }
