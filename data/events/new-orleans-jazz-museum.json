@@ -2,13 +2,6 @@
   "venue": "new-orleans-jazz-museum",
   "events": [
     {
-      "id": "21464974a045",
-      "title": "Friends of the Cabildo Concert Series Present Sonny Landreth",
-      "start": "2026-10-09T19:00:00-05:00",
-      "end": "2026-10-09T21:00:00-05:00",
-      "url": "https://nolajazzmuseum.org/events/2026/10/9/friends-of-the-cabildo-concert-series-presents-sonny-landreth"
-    },
-    {
       "id": "58d0d555e88a",
       "title": "Trempo Masterclass",
       "start": "2026-10-12T09:00:00-05:00",

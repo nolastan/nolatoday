@@ -2,12 +2,6 @@
   "venue": "the-spotted-cat",
   "events": [
     {
-      "id": "f7bccf0b41e9",
-      "title": "Paradise Jazz Band",
-      "start": "2026-10-09T14:00:00-05:00",
-      "url": "https://www.spottedcatmusicclub.com/calendar"
-    },
-    {
       "id": "bd2dda1e0f0b",
       "title": "Colin Davis & The Night People",
       "start": "2026-10-09T22:00:00-05:00",

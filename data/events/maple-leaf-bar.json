@@ -2,12 +2,6 @@
   "venue": "maple-leaf-bar",
   "events": [
     {
-      "id": "9003998d6513",
-      "title": "The Love Muscles",
-      "start": "2026-10-09T20:00:00-05:00",
-      "url": "https://www.mapleleafbar.com/events/the-love-muscles-2"
-    },
-    {
       "id": "468167844763",
       "title": "The Snozzberries",
       "start": "2026-10-09T23:00:00-05:00",

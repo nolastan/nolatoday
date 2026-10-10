@@ -2,20 +2,6 @@
   "venue": "the-allways-lounge",
   "events": [
     {
-      "id": "47b16a72df7b",
-      "title": "Queer Mountain (original queer storytelling)",
-      "start": "2026-10-09T19:00:00-05:00",
-      "end": "2026-10-09T20:30:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/1504/1791590400000"
-    },
-    {
-      "id": "061b9eef5527",
-      "title": "Bayou Blues Burlesque",
-      "start": "2026-10-09T20:00:00-05:00",
-      "end": "2026-10-09T21:30:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/3920/1791594000000"
-    },
-    {
       "id": "42f4b9333cb7",
       "title": "CLASS: A Classic New Orleans Burlesque Show",
       "start": "2026-10-09T22:30:00-05:00",
@@ -2111,6 +2097,20 @@
       "start": "2027-01-06T21:00:00-06:00",
       "end": "2027-01-06T22:30:00-06:00",
       "url": "https://tockify.com/allwayslounge/detail/196/1799290800000"
+    },
+    {
+      "id": "ca7333bb0949",
+      "title": "Van Ella Bordella (burlesque)",
+      "start": "2027-01-07T19:00:00-06:00",
+      "end": "2027-01-07T21:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/1768/1799370000000"
+    },
+    {
+      "id": "48f2fad31c95",
+      "title": "CHAOTIC GOOD TIME: THE SELECT-YOUR-OWN-ADVENTURE BURLESQUE & VARIETY SHOW",
+      "start": "2027-01-07T22:00:00-06:00",
+      "end": "2027-01-07T23:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/4395/1799380800000"
     }
   ]
 }

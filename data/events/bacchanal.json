@@ -2,18 +2,6 @@
   "venue": "bacchanal",
   "events": [
     {
-      "id": "f67aa9583ca6",
-      "title": "David Sigler",
-      "start": "2026-10-09T13:00:00-05:00",
-      "end": "2026-10-09T16:00:00-05:00"
-    },
-    {
-      "id": "a9c2ecc2e600",
-      "title": "Willie Green",
-      "start": "2026-10-09T19:00:00-05:00",
-      "end": "2026-10-09T22:00:00-05:00"
-    },
-    {
       "id": "a5648a09c0c6",
       "title": "Miles Berry",
       "start": "2026-10-10T13:00:00-05:00",
