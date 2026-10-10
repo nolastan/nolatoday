@@ -8,7 +8,18 @@
  *      DRY_RUN=1 — print what would happen
  */
 import { loadVenues, loadStatus } from './lib/data.js';
-import { diagnose, issueTitle, issueBody, parseMarker, LABEL, KIND_LABELS } from './lib/diagnose.js';
+import {
+  diagnose,
+  issueTitle,
+  issueBody,
+  issueDisposition,
+  closeReason,
+  quotaProbeHoldTitle,
+  quotaProbeHoldBody,
+  parseMarker,
+  LABEL,
+  KIND_LABELS,
+} from './lib/diagnose.js';
 
 const token = process.env.GITHUB_TOKEN;
 const repo = process.env.GITHUB_REPOSITORY;
@@ -73,17 +84,25 @@ async function main() {
     if (m) existingKeys.set(`${m.slug}|${m.kind}`, issue);
   }
 
-  // Close issues whose problem has gone away.
+  // Close issues whose problem has gone away. A quota-probe failure is not recovery.
   for (const [key, issue] of existingKeys) {
-    if (wanted.has(key)) continue;
     const [slug] = key.split('|');
     const venue = venues.find((v) => v.slug === slug);
     const entry = status.venues?.[slug];
-    const why = !venue
-      ? 'the venue was removed from `data/venues/`'
-      : venue.status !== 'active'
-        ? `the venue is now marked \`${venue.status}\``
-        : `the latest run found ${entry?.count ?? 0} upcoming events`;
+    const action = issueDisposition({ wanted, key, entry, venueActive: venue?.status === 'active' });
+    if (action === 'keep') continue;
+    if (action === 'hold') {
+      const body = quotaProbeHoldBody({ slug, venue, entry }, { repo });
+      const title = quotaProbeHoldTitle(venue);
+      if (issue.body !== body || issue.title !== title) {
+        console.log(`Holding #${issue.number} (${key}): unmetered JamBase quota probe, source unchanged`);
+        await gh('PATCH', `/repos/${repo}/issues/${issue.number}`, { body, title });
+      } else {
+        console.log(`Holding #${issue.number} (${key}): quota probe note already current`);
+      }
+      continue;
+    }
+    const why = closeReason({ venue, entry });
     console.log(`Closing #${issue.number} (${key}): ${why}`);
     await gh('POST', `/repos/${repo}/issues/${issue.number}/comments`, {
       body: `Resolved automatically: ${why}.`,
