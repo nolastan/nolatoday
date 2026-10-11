@@ -2,12 +2,6 @@
   "venue": "the-spotted-cat",
   "events": [
     {
-      "id": "3291dd377ada",
-      "title": "Ethan Santos",
-      "start": "2026-10-10T22:00:00-05:00",
-      "url": "https://www.spottedcatmusicclub.com/calendar"
-    },
-    {
       "id": "c9231cc655fe",
       "title": "Jacky Blaire & The Hot Biscuits",
       "start": "2026-10-11T14:00:00-05:00",
@@ -1049,6 +1043,12 @@
       "id": "5cb755e12ec1",
       "title": "Dominick Grillo & The Frenchmen Street All-Stars",
       "start": "2026-12-28T18:00:00-06:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "b6877a00f31f",
+      "title": "New Orleans Cottonmouth Kings",
+      "start": "2027-01-08T22:00:00-06:00",
       "url": "https://www.spottedcatmusicclub.com/calendar"
     }
   ]
