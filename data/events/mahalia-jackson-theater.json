@@ -2,12 +2,6 @@
   "venue": "mahalia-jackson-theater",
   "events": [
     {
-      "id": "de50af4a025c",
-      "title": "My Hero Academia in Concert",
-      "start": "2026-10-10T19:00:00-05:00",
-      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A70grf"
-    },
-    {
       "id": "065378109a05",
       "title": "The Rocky Horror Picture Show (minors must be accompanied by a guardian)",
       "start": "2026-10-29T19:30:00-05:00",

@@ -2,12 +2,6 @@
   "venue": "the-blue-crab",
   "events": [
     {
-      "id": "93a2e6772118",
-      "title": "Mach-V",
-      "start": "2026-10-10T12:00:00-05:00",
-      "end": "2026-10-10T16:00:00-05:00"
-    },
-    {
       "id": "f357cbdf68eb",
       "title": "Bad Habit",
       "start": "2026-10-11T16:00:00-05:00",

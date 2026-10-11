@@ -2,13 +2,6 @@
   "venue": "cafe-istanbul",
   "events": [
     {
-      "id": "c649f4001b66",
-      "title": "Jai Ho! Dance Party",
-      "start": "2026-10-10T22:00:00-05:00",
-      "end": "2026-10-10T23:00:00-05:00",
-      "url": "https://www.cafeistanbulnola.com/upcoming-events/jai-ho-dance-party"
-    },
-    {
       "id": "86495b39c8f3",
       "title": "The Moth",
       "start": "2026-10-13T19:00:00-05:00",

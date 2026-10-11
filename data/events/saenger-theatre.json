@@ -2,12 +2,6 @@
   "venue": "saenger-theatre",
   "events": [
     {
-      "id": "03b2299d3ca2",
-      "title": "Parcels",
-      "start": "2026-10-10T20:00:00-05:00",
-      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7xkoY"
-    },
-    {
       "id": "bc9536099884",
       "title": "Tom Jones",
       "start": "2026-10-12T20:01:00-05:00",

@@ -2,47 +2,6 @@
   "venue": "the-allways-lounge",
   "events": [
     {
-      "id": "42f4b9333cb7",
-      "title": "CLASS: A Classic New Orleans Burlesque Show",
-      "start": "2026-10-09T22:30:00-05:00",
-      "end": "2026-10-10T01:00:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/4307/1791603000000/21"
-    },
-    {
-      "id": "e38d9a2f4645",
-      "title": "Studio 504 (burlesque)",
-      "start": "2026-10-09T23:00:00-05:00",
-      "end": "2026-10-10T01:30:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/3765/1791604800000/24"
-    },
-    {
-      "id": "58dd5657fa97",
-      "title": "Diva presents: LADIES NIGHT! (burlesque)",
-      "start": "2026-10-10T17:00:00-05:00",
-      "end": "2026-10-10T18:30:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/4333/1791669600000/10"
-    },
-    {
-      "id": "17ee5e37e2e0",
-      "title": "Crossroads Cabaret",
-      "start": "2026-10-10T19:00:00-05:00",
-      "end": "2026-10-10T21:30:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/4406/1791590400000/2"
-    },
-    {
-      "id": "ff64b3315ba3",
-      "title": "Ficheraz: Live Latin Band & Burlesque",
-      "start": "2026-10-10T20:00:00-05:00",
-      "end": "2026-10-10T21:30:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/3680/1791680400000"
-    },
-    {
-      "id": "1c26b5cc9033",
-      "title": "Bri & The Sparkling Diamonds “New Orleans Burlesque”",
-      "start": "2026-10-10T22:30:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/3788/1791084600000/31"
-    },
-    {
       "id": "a6f52621caaf",
       "title": "Thru the AllWays Looking Glass (variety /drag/burlesque)",
       "start": "2026-10-10T23:00:00-05:00",
@@ -2111,6 +2070,34 @@
       "start": "2027-01-07T22:00:00-06:00",
       "end": "2027-01-07T23:30:00-06:00",
       "url": "https://tockify.com/allwayslounge/detail/4395/1799380800000"
+    },
+    {
+      "id": "b0b8e2f210b7",
+      "title": "Queer Mountain (original queer storytelling)",
+      "start": "2027-01-08T19:00:00-06:00",
+      "end": "2027-01-08T20:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/1504/1799456400000"
+    },
+    {
+      "id": "a1db962b3fef",
+      "title": "Bayou Blues Burlesque",
+      "start": "2027-01-08T20:00:00-06:00",
+      "end": "2027-01-08T21:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/3920/1799460000000"
+    },
+    {
+      "id": "ec7dbaa75814",
+      "title": "Psychedelic Speakeasy (burlesque)",
+      "start": "2027-01-08T22:30:00-06:00",
+      "end": "2027-01-09T00:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/4564/1799469000000"
+    },
+    {
+      "id": "cd75f4583003",
+      "title": "Digital circus cabaret",
+      "start": "2027-01-08T23:00:00-06:00",
+      "end": "2027-01-09T01:00:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/4594/1799470800000"
     }
   ]
 }

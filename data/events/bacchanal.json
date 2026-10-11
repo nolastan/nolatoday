@@ -2,18 +2,6 @@
   "venue": "bacchanal",
   "events": [
     {
-      "id": "a5648a09c0c6",
-      "title": "Miles Berry",
-      "start": "2026-10-10T13:00:00-05:00",
-      "end": "2026-10-10T16:00:00-05:00"
-    },
-    {
-      "id": "effbde5dcbad",
-      "title": "Bayou Manouche",
-      "start": "2026-10-10T19:00:00-05:00",
-      "end": "2026-10-10T22:00:00-05:00"
-    },
-    {
       "id": "72c17c7fea08",
       "title": "Christien Bold",
       "start": "2026-10-11T13:00:00-05:00",
@@ -570,6 +558,12 @@
       "title": "Raphael Bas",
       "start": "2027-01-07T12:00:00-06:00",
       "end": "2027-01-07T15:00:00-06:00"
+    },
+    {
+      "id": "5b268d4fd2a1",
+      "title": "Willie Green",
+      "start": "2027-01-08T19:00:00-06:00",
+      "end": "2027-01-08T22:00:00-06:00"
     }
   ]
 }

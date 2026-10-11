@@ -2,13 +2,6 @@
   "venue": "maple-leaf-bar",
   "events": [
     {
-      "id": "87f96229e7cc",
-      "title": "Douggies Celebration of Life",
-      "start": "2026-10-10T12:00:00-05:00",
-      "end": "2026-10-10T22:30:00-05:00",
-      "url": "https://www.mapleleafbar.com/events/douggies-celebration-of-life"
-    },
-    {
       "id": "ad8aae458442",
       "title": "Kieko Komaki - Donald Magee - Seizo Shibayama",
       "start": "2026-10-11T19:00:00-05:00",
@@ -35,6 +28,20 @@
       "start": "2026-10-13T20:30:00-05:00",
       "end": "2026-10-14T00:30:00-05:00",
       "url": "https://www.mapleleafbar.com/events/very-good-tuesday-ft-miles-blackwell-ari-teitel-eddie-christmas-lorenzo-loeza"
+    },
+    {
+      "id": "c8b65d980560",
+      "title": "Happy Organ Hour with Joe Ashlar, Stanton Moore, Danny Abel & Brad Walker",
+      "start": "2026-10-14T19:00:00-05:00",
+      "end": "2026-10-14T23:00:00-05:00",
+      "url": "https://www.mapleleafbar.com/events/happy-organ-hour-with-joe-ashlar-stanton-moore-danny-abel-brad-walker"
+    },
+    {
+      "id": "1c22f4904c58",
+      "title": "Booker & Beyond - Yoshitaka \"Z2\" Tsuji",
+      "start": "2026-10-15T18:00:00-05:00",
+      "end": "2026-10-15T19:30:00-05:00",
+      "url": "https://www.mapleleafbar.com/events/booker-beyond-yoshitaka-z2-tsuji"
     }
   ]
 }
