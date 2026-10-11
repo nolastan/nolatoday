@@ -4,7 +4,16 @@ import { DateTime } from 'luxon';
 import { parseLooseDate, parseTime } from '../scripts/lib/dates.js';
 import { inferYear, ZONE } from '../scripts/lib/time.js';
 import { extractJSONValue } from '../scripts/lib/extract.js';
-import { diagnose, issueBody, parseMarker, marker } from '../scripts/lib/diagnose.js';
+import {
+  diagnose,
+  issueBody,
+  issueDisposition,
+  closeReason,
+  quotaProbeHoldBody,
+  quotaProbeHoldTitle,
+  parseMarker,
+  marker,
+} from '../scripts/lib/diagnose.js';
 
 const ref = DateTime.fromISO('2026-10-05T12:00:00', { zone: ZONE });
 
@@ -72,6 +81,99 @@ test('diagnose: classifies broken, empty, and source-less venues', () => {
   const body = issueBody(diagnose(venues, status, now)[0], { repo: 'o/r' });
   assert.deepEqual(parseMarker(body), { slug: 'broken', kind: 'broken' });
   assert.match(body, /HTTP 404/);
+  assert.match(body, /Find where the venue publishes its schedule/);
   assert.match(body, /node scripts\/scrape\.js --venue broken --dry/);
   assert.equal(parseMarker(marker('a-b', 'empty')).slug, 'a-b');
+});
+
+// Copied from data/status.json at 9ae911957039dbb80f6e72ecd78b8355af8ca12f.
+// generatedAt 2026-10-10T07:45:22.364-05:00. Issues 80 and 81 quoted this error.
+const QUOTA_PROBE = 'HTTP 503 for https://api.data.jambase.com/v3/quota';
+
+function quotaEntry(count) {
+  return {
+    ok: false,
+    consecutiveFailures: 2,
+    count,
+    lastSuccess: '2026-10-09T17:46:09.479-05:00',
+    lastRun: '2026-10-10T07:45:22.364-05:00',
+    error: `jambase: ${QUOTA_PROBE}`,
+    sources: [{ type: 'jambase', ok: false, error: QUOTA_PROBE }],
+  };
+}
+
+test('diagnose: the recorded JamBase quota probe is not a venue-source repair', () => {
+  const now = DateTime.fromISO('2026-10-10T12:45:35Z');
+  const venues = [
+    { slug: 'snug-harbor', name: 'Snug Harbor', status: 'active', address: '626 Frenchmen Street', website: 'https://www.snugjazz.com', sources: [{ type: 'jambase', venueId: 'jambase:357128' }] },
+    { slug: 'chickie-wah-wah', name: 'Chickie Wah Wah', status: 'active', address: '2828 Canal Street', website: 'https://chickiewahwah.com', sources: [{ type: 'jambase', venueId: 'jambase:65930' }] },
+    { slug: 'events-down', name: 'Events Down', status: 'active', address: '1 St', sources: [{ type: 'jambase', venueId: 'jambase:1' }] },
+    { slug: 'not-found', name: 'Not Found', status: 'active', address: '1 St', sources: [{ type: 'ics', url: 'https://example.test/cal.ics' }] },
+    { slug: 'forbidden', name: 'Forbidden', status: 'active', address: '1 St', sources: [{ type: 'jsonld', url: 'https://example.test/tixr' }] },
+    { slug: 'quota-low', name: 'Quota Low', status: 'active', address: '1 St', sources: [{ type: 'jambase', venueId: 'jambase:2' }] },
+    { slug: 'mixed', name: 'Mixed', status: 'active', address: '1 St', sources: [{ type: 'jambase' }, { type: 'ics', url: 'https://example.test/cal.ics' }] },
+    { slug: 'probe-500', name: 'Probe 500', status: 'active', address: '1 St', sources: [{ type: 'jambase' }] },
+    { slug: 'probe-401', name: 'Probe 401', status: 'active', address: '1 St', sources: [{ type: 'jambase' }] },
+    { slug: 'probe-502', name: 'Probe 502', status: 'active', address: '1 St', sources: [{ type: 'jambase' }] },
+  ];
+  const eventsError = 'HTTP 503 for https://api.data.jambase.com/v3/events?venueId=jambase%3A1&perPage=100&page=1';
+  const status = {
+    venues: {
+      'snug-harbor': quotaEntry(16),
+      'chickie-wah-wah': quotaEntry(24),
+      'events-down': { ok: false, consecutiveFailures: 2, error: `jambase: ${eventsError}`, sources: [{ type: 'jambase', ok: false, error: eventsError }] },
+      'not-found': { ok: false, consecutiveFailures: 2, error: 'ics: HTTP 404 for https://example.test/cal.ics', sources: [{ type: 'ics', ok: false, error: 'HTTP 404 for https://example.test/cal.ics' }] },
+      forbidden: { ok: false, consecutiveFailures: 2, error: 'jsonld: HTTP 403 for https://example.test/tixr', sources: [{ type: 'jsonld', ok: false, error: 'HTTP 403 for https://example.test/tixr' }] },
+      'quota-low': {
+        ok: false,
+        consecutiveFailures: 2,
+        error: 'jambase: JamBase API quota is low (20 of 1000 calls left until 2026-11-01); skipped this run to avoid overage charges',
+        sources: [{ type: 'jambase', ok: false, error: 'JamBase API quota is low (20 of 1000 calls left until 2026-11-01); skipped this run to avoid overage charges' }],
+      },
+      mixed: {
+        ok: false,
+        consecutiveFailures: 2,
+        error: `jambase: ${QUOTA_PROBE} | ics: HTTP 404 for https://example.test/cal.ics`,
+        sources: [
+          { type: 'jambase', ok: false, error: QUOTA_PROBE },
+          { type: 'ics', ok: false, error: 'HTTP 404 for https://example.test/cal.ics' },
+        ],
+      },
+      'probe-500': { ok: false, consecutiveFailures: 2, error: 'jambase: HTTP 500 for https://api.data.jambase.com/v3/quota', sources: [{ type: 'jambase', ok: false, error: 'HTTP 500 for https://api.data.jambase.com/v3/quota' }] },
+      'probe-401': { ok: false, consecutiveFailures: 2, error: 'jambase: HTTP 401 for https://api.data.jambase.com/v3/quota', sources: [{ type: 'jambase', ok: false, error: 'HTTP 401 for https://api.data.jambase.com/v3/quota' }] },
+      'probe-502': { ok: false, consecutiveFailures: 2, error: 'HTTP 502 for https://api.data.jambase.com/v3/quota' },
+    },
+  };
+  assert.deepEqual(diagnose(venues, status, now).map((problem) => `${problem.kind}:${problem.slug}`), [
+    'broken:events-down',
+    'broken:not-found',
+    'broken:forbidden',
+    'broken:quota-low',
+    'broken:mixed',
+    'broken:probe-500',
+    'broken:probe-401',
+  ]);
+
+  const entry = status.venues['snug-harbor'];
+  const venue = venues[0];
+  assert.equal(issueDisposition({ wanted: new Set(), key: 'snug-harbor|broken', entry, venueActive: true }), 'hold');
+  assert.equal(issueDisposition({ wanted: new Set(['snug-harbor|broken']), key: 'snug-harbor|broken', entry, venueActive: true }), 'keep');
+  assert.equal(issueDisposition({ wanted: new Set(), key: 'snug-harbor|broken', entry, venueActive: false }), 'close');
+  assert.equal(
+    issueDisposition({
+      wanted: new Set(),
+      key: 'snug-harbor|broken',
+      entry: { ok: true, count: 16, consecutiveFailures: 0 },
+      venueActive: true,
+    }),
+    'close',
+  );
+  assert.equal(issueDisposition({ wanted: new Set(), key: 'not-found|broken', entry: status.venues['not-found'], venueActive: true }), 'close');
+  const held = quotaProbeHoldBody({ slug: venue.slug, venue, entry }, { repo: 'nolastan/nolatoday' });
+  assert.equal(quotaProbeHoldTitle(venue), 'JamBase quota probe failed: Snug Harbor');
+  assert.match(held, /HTTP 503 for https:\/\/api\.data\.jambase\.com\/v3\/quota/);
+  assert.match(held, /2026-10-09T17:46:09\.479-05:00/);
+  assert.doesNotMatch(held, /Find where the venue publishes/);
+  assert.equal(parseMarker(held).kind, 'broken');
+  assert.match(closeReason({ venue, entry }), /found 16 upcoming events/);
 });

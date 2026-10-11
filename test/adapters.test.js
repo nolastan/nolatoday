@@ -13,7 +13,7 @@ import { parseWix } from '../scrapers/wix.js';
 import { parseGigulator } from '../scrapers/gigulator.js';
 import { parseHTML } from '../scrapers/html.js';
 import scrapeTicketmaster, { parseTicketmaster } from '../scrapers/ticketmaster.js';
-import scrapeJamBase, { parseJamBase, quotaProblem } from '../scrapers/jambase.js';
+import scrapeJamBase, { parseJamBase, quotaProblem, readQuota, QUOTA_PROBE_ATTEMPTS, isQuotaProbeMessage } from '../scrapers/jambase.js';
 import { normalizeEvents } from '../scripts/lib/normalize.js';
 import { ZONE } from '../scripts/lib/time.js';
 
@@ -213,6 +213,134 @@ test('jambase: skips the run when the quota is low, and never retries a failed c
     async (calls) => {
       await assert.rejects(scrapeJamBase({ venueId: 'jambase:111' }, { window, venues: [] }), /HTTP 429/);
       assert.deepEqual(calls.map((c) => c.path), ['/v3/quota', '/v3/events']);
+    },
+  );
+});
+
+test('jambase: retries only the unmetered quota probe and never calls events while it is down', async () => {
+  assert.equal(QUOTA_PROBE_ATTEMPTS, 3);
+  assert.equal(isQuotaProbeMessage('HTTP 503 for https://api.data.jambase.com/v3/quota'), true);
+  assert.equal(isQuotaProbeMessage('jambase: HTTP 504 for https://api.data.jambase.com/v3/quota'), true);
+  assert.equal(isQuotaProbeMessage('HTTP 500 for https://api.data.jambase.com/v3/quota'), false);
+  assert.equal(isQuotaProbeMessage('HTTP 401 for https://api.data.jambase.com/v3/quota'), false);
+  assert.equal(isQuotaProbeMessage('HTTP 503 for https://api.data.jambase.com/v3/events?venueId=jambase:357128'), false);
+
+  const outage = new Error('HTTP 503 for https://api.data.jambase.com/v3/quota');
+  const quota = { ...roomyQuota };
+  let calls = 0;
+  const got = await readQuota(
+    async () => {
+      calls += 1;
+      if (calls < 3) throw outage;
+      return quota;
+    },
+    { wait: async () => {} },
+  );
+  assert.equal(got, quota);
+  assert.equal(calls, 3);
+
+  calls = 0;
+  await assert.rejects(
+    readQuota(
+      async () => {
+        calls += 1;
+        throw outage;
+      },
+      { wait: async () => {} },
+    ),
+    /HTTP 503 for https:\/\/api\.data\.jambase\.com\/v3\/quota$/,
+  );
+  assert.equal(calls, 3);
+
+  for (const message of [
+    'HTTP 401 for https://api.data.jambase.com/v3/quota',
+    'HTTP 500 for https://api.data.jambase.com/v3/quota',
+    'HTTP 503 for https://api.data.jambase.com/v3/events?venueId=jambase:357128',
+    'fetch failed',
+  ]) {
+    calls = 0;
+    await assert.rejects(
+      readQuota(
+        async () => {
+          calls += 1;
+          throw new Error(message);
+        },
+        { wait: async () => {} },
+      ),
+      new RegExp(message.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')),
+    );
+    assert.equal(calls, 1, message);
+  }
+});
+
+test('jambase: a quota probe 503 is retried and does not fetch events until quota is known', async () => {
+  let quotaHits = 0;
+  await withJamBase(
+    (u) => {
+      if (u.pathname === '/v3/quota') {
+        quotaHits += 1;
+        if (quotaHits < 3) return [503, { title: 'unavailable' }];
+        return [200, roomyQuota];
+      }
+      return [200, { success: true, pagination: { page: 1, totalPages: 1 }, events: [] }];
+    },
+    async (calls) => {
+      const events = await scrapeJamBase({ venueId: 'jambase:357128' }, { window, venues: [] });
+      assert.deepEqual(events, []);
+      assert.deepEqual(
+        calls.map((call) => call.path),
+        ['/v3/quota', '/v3/quota', '/v3/quota', '/v3/events'],
+      );
+      assert.equal(calls[0].auth, 'Bearer jbd_test');
+    },
+  );
+});
+
+test('jambase: an exhausted quota probe does not call the metered events endpoint', async () => {
+  await withJamBase(
+    (u) => (u.pathname === '/v3/quota' ? [503, {}] : [200, { events: [{ identifier: 'should-not-run' }] }]),
+    async (calls) => {
+      await assert.rejects(
+        scrapeJamBase({ venueId: 'jambase:65930' }, { window, venues: [] }),
+        (err) => {
+          assert.equal(err.message, 'HTTP 503 for https://api.data.jambase.com/v3/quota');
+          assert.equal(err.message.includes('jbd_test'), false);
+          return true;
+        },
+      );
+      assert.deepEqual(calls.map((call) => call.path), ['/v3/quota', '/v3/quota', '/v3/quota']);
+    },
+  );
+});
+
+test('jambase: events 503, quota 401, and a network error fail closed without probe retries', async () => {
+  await withJamBase(
+    (u) => (u.pathname === '/v3/quota' ? [200, roomyQuota] : [503, {}]),
+    async (calls) => {
+      await assert.rejects(
+        scrapeJamBase({ venueId: 'jambase:111' }, { window, venues: [] }),
+        /HTTP 503 for https:\/\/api\.data\.jambase\.com\/v3\/events\?/,
+      );
+      assert.deepEqual(calls.map((call) => call.path), ['/v3/quota', '/v3/events']);
+    },
+  );
+  await withJamBase(
+    () => [401, { title: 'Unauthorized', detail: 'Missing Authorization header' }],
+    async (calls) => {
+      await assert.rejects(
+        scrapeJamBase({ venueId: 'jambase:111' }, { window, venues: [] }),
+        /HTTP 401 for https:\/\/api\.data\.jambase\.com\/v3\/quota$/,
+      );
+      assert.deepEqual(calls.map((call) => call.path), ['/v3/quota']);
+    },
+  );
+  await withJamBase(
+    () => {
+      throw new TypeError('fetch failed');
+    },
+    async (calls) => {
+      await assert.rejects(scrapeJamBase({ venueId: 'jambase:111' }, { window, venues: [] }), /fetch failed/);
+      assert.deepEqual(calls.map((call) => call.path), ['/v3/quota']);
     },
   );
 });

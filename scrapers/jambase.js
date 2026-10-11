@@ -1,13 +1,18 @@
 import { fetchJSON } from '../scripts/lib/http.js';
+import { isQuotaProbeMessage, QUOTA_PROBE_ATTEMPTS } from '../scripts/lib/jambase-quota.js';
+
+export { QUOTA_PROBE_ATTEMPTS, isQuotaProbeMessage };
 
 /**
  * Venues listed on JamBase, via the JamBase Data API (v3). Needs the
  * JAMBASE_API_KEY environment variable (an Actions secret in CI).
  *
  * The free Developer plan allows 1,000 calls a month and bills overage, so
- * every jambase venue in a run shares one request (venueId=a|b, plus a page
- * per extra 100 events), nothing is retried, and the run is skipped when the
- * monthly quota runs low. Find a venue's id with
+ * every jambase venue in a run shares one events request (venueId=a|b, plus a
+ * page per extra 100 events). Event calls are not retried. The unmetered
+ * quota probe is repeated up to three times on HTTP 502, 503, or 504. The run
+ * is skipped when the monthly quota runs low, before any events call. Find a
+ * venue's id with
  *   node scripts/jambase-venues.js <name>
  *
  * source: { type: "jambase", venueId: "jambase:12345", url: "https://www.jambase.com/venue/…" }
@@ -37,6 +42,23 @@ export async function jambaseAPI(path, params = {}) {
   }
 }
 
+const probeWait = (attempt) => new Promise((resolve) => setTimeout(resolve, 200 * attempt));
+
+/**
+ * Read the unmetered quota probe. Retry only a 502/503/504 for that exact URL.
+ * Any other error, including an exhausted probe, is thrown before events.
+ */
+export async function readQuota(getQuota, { attempts = QUOTA_PROBE_ATTEMPTS, wait = probeWait } = {}) {
+  for (let attempt = 1; attempt <= attempts; attempt++) {
+    try {
+      return await getQuota();
+    } catch (err) {
+      if (!isQuotaProbeMessage(err?.message ?? err) || attempt === attempts) throw err;
+      await wait(attempt);
+    }
+  }
+}
+
 /** Why the run should be skipped, given a GET /v3/quota response, or null if there's room. */
 export function quotaProblem(quota) {
   if (quota.noMonthlyCap || quota.limitType === 'unlimited') return null;
@@ -53,7 +75,7 @@ const venueKey = (id) => (/^\d+$/.test(String(id)) ? `jambase:${id}` : String(id
 const batches = new WeakMap();
 
 async function loadBatch(ids, window) {
-  const quota = await jambaseAPI('quota'); // not metered
+  const quota = await readQuota(() => jambaseAPI('quota')); // not metered
   const problem = quotaProblem(quota);
   if (problem) throw new Error(`JamBase API quota is low (${problem}); skipped this run to avoid overage charges`);
 

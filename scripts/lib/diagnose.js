@@ -1,4 +1,7 @@
 import { DateTime } from 'luxon';
+import { isUnmeteredQuotaOutage } from './jambase-quota.js';
+
+export { isUnmeteredQuotaOutage };
 
 export const LABEL = 'scraper';
 export const KIND_LABELS = {
@@ -38,6 +41,9 @@ export function diagnose(venues, status, now = DateTime.now()) {
     }
     if (!entry) continue; // never scraped yet
     if (!entry.ok && (entry.consecutiveFailures ?? 0) >= THRESHOLDS.failuresBeforeIssue) {
+      // The quota probe is not a venue schedule. Keep the failure in status,
+      // and do not ask for a replacement source.
+      if (isUnmeteredQuotaOutage(entry)) continue;
       problems.push({ slug: venue.slug, kind: 'broken', venue, entry });
       continue;
     }
@@ -50,6 +56,53 @@ export function diagnose(venues, status, now = DateTime.now()) {
     }
   }
   return problems;
+}
+
+/**
+ * What to do with an already-open repair issue.
+ * `hold` keeps a broken issue open without calling the failure recovered.
+ */
+export function issueDisposition({ wanted, key, entry, venueActive }) {
+  if (wanted.has(key)) return 'keep';
+  const kind = String(key ?? '').split('|')[1];
+  if (kind === 'broken' && venueActive && isUnmeteredQuotaOutage(entry)) return 'hold';
+  return 'close';
+}
+
+export function closeReason({ venue, entry }) {
+  if (!venue) return 'the venue was removed from `data/venues/`';
+  if (venue.status !== 'active') return `the venue is now marked \`${venue.status}\``;
+  return `the latest run found ${entry?.count ?? 0} upcoming events`;
+}
+
+export function quotaProbeHoldTitle(venue) {
+  return `JamBase quota probe failed: ${venue.name}`;
+}
+
+export function quotaProbeHoldBody({ slug, venue, entry }, { repo } = {}) {
+  const file = `data/venues/${slug}.json`;
+  const lines = [
+    marker(slug, 'broken'),
+    '',
+    `The JamBase source for **${venue.name}** is unchanged. The latest failure is the unmetered quota probe, not a missing schedule.`,
+    '',
+    '**Error**',
+    '```',
+    entry?.error ?? 'unknown',
+    '```',
+    '',
+    `Last successful run: ${entry?.lastSuccess ?? 'never'}`,
+    '',
+    '**Venue**',
+    `- Data file: [\`${file}\`](${repo ? `https://github.com/${repo}/blob/main/${file}` : file})`,
+    `- Address: ${venue.address}`,
+    `- Website: ${venue.website ?? '_unknown_'}`,
+    '',
+    'Do not replace this source while that probe error is the only failure. An HTTP 401, 403, or 404, a low remaining-calls skip, or a failure of `/v3/events` is a different repair.',
+    '',
+    'This issue stays open until a later run records a successful scrape.',
+  ];
+  return lines.join('\n');
 }
 
 export function issueTitle({ venue, kind }) {
