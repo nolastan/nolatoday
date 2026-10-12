@@ -2,34 +2,6 @@
   "venue": "the-allways-lounge",
   "events": [
     {
-      "id": "a6f52621caaf",
-      "title": "Thru the AllWays Looking Glass (variety /drag/burlesque)",
-      "start": "2026-10-10T23:00:00-05:00",
-      "end": "2026-10-11T02:00:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/4351/1791691200000/9"
-    },
-    {
-      "id": "1b10013a8483",
-      "title": "Sapphic Speakeasy.",
-      "start": "2026-10-11T17:00:00-05:00",
-      "end": "2026-10-11T19:00:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/4172/1791756000000/8"
-    },
-    {
-      "id": "59b04147c534",
-      "title": "King Sh!t (drag)",
-      "start": "2026-10-11T19:00:00-05:00",
-      "end": "2026-10-11T21:00:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/4596/1791763200000"
-    },
-    {
-      "id": "b13b2491daa8",
-      "title": "Swing Night (live music & dance lessons)",
-      "start": "2026-10-11T20:00:00-05:00",
-      "end": "2026-10-11T23:30:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/1860/1791766800000"
-    },
-    {
       "id": "29daf1d0d80a",
       "title": "Meatsuit Maintenance: Company Class",
       "start": "2026-10-12T14:00:00-05:00",
@@ -2105,6 +2077,34 @@
       "start": "2027-01-09T17:00:00-06:00",
       "end": "2027-01-09T18:30:00-06:00",
       "url": "https://tockify.com/allwayslounge/detail/4470/1799535600000"
+    },
+    {
+      "id": "cb83cae9ff73",
+      "title": "Van Ella Bordella (burlesque)",
+      "start": "2027-01-09T19:00:00-06:00",
+      "end": "2027-01-09T21:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/1997/1799542800000/107"
+    },
+    {
+      "id": "1d9f458d6df8",
+      "title": "Ficheraz: Live Latin Band & Burlesque",
+      "start": "2027-01-09T20:00:00-06:00",
+      "end": "2027-01-09T21:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/3680/1799546400000"
+    },
+    {
+      "id": "f21a0a019360",
+      "title": "Burlesque Bingo ANNIVERSARY EXTRAVAGANZA!",
+      "start": "2027-01-09T22:30:00-06:00",
+      "end": "2027-01-10T01:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/4497/1799555400000"
+    },
+    {
+      "id": "99c159442272",
+      "title": "Variété DeVille* – New Orleans Cabaret & Variety",
+      "start": "2027-01-09T23:00:00-06:00",
+      "end": "2027-01-10T01:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/3694/1799557200000/41"
     }
   ]
 }

@@ -2,12 +2,6 @@
   "venue": "the-blue-crab",
   "events": [
     {
-      "id": "f357cbdf68eb",
-      "title": "Bad Habit",
-      "start": "2026-10-11T16:00:00-05:00",
-      "end": "2026-10-11T20:00:00-05:00"
-    },
-    {
       "id": "ac75e81e3483",
       "title": "Rock & Soul",
       "start": "2026-10-16T17:00:00-05:00",

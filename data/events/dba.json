@@ -2,12 +2,6 @@
   "venue": "dba",
   "events": [
     {
-      "id": "2fe32ec2ebb1",
-      "title": "Paradise Jazz Band",
-      "start": "2026-10-11T18:00:00-05:00",
-      "url": "https://www.dbaneworleans.com/shows"
-    },
-    {
       "id": "2ccc788da418",
       "title": "The Jump Hounds",
       "start": "2026-10-11T21:30:00-05:00",
@@ -71,7 +65,7 @@
       "id": "66c9084865e8",
       "title": "The Original Pinette Brass Band",
       "start": "2026-10-16T22:00:00-05:00",
-      "url": "https://www.dbaneworleans.com/shows"
+      "url": "https://www.eventbrite.com/e/the-original-pinettes-brass-band-tickets-2003274112798?aff=oddtdtcreator"
     },
     {
       "id": "5dc69008a5b8",
@@ -325,12 +319,18 @@
       "id": "3c43645c3eeb",
       "title": "The Soul Rebels",
       "start": "2026-11-06T22:00:00-06:00",
-      "url": "https://www.dbaneworleans.com/shows"
+      "url": "https://www.eventbrite.com/e/the-soul-rebels-at-dba-tickets-2003274188023?aff=oddtdtcreator"
     },
     {
       "id": "d22f5aa2ea34",
       "title": "Young Lion Showcase",
       "start": "2026-11-07T14:30:00-06:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "414bda696eee",
+      "title": "Tuba Skinny",
+      "start": "2026-11-07T18:00:00-06:00",
       "url": "https://www.dbaneworleans.com/shows"
     },
     {
@@ -478,6 +478,12 @@
       "url": "https://www.dbaneworleans.com/shows"
     },
     {
+      "id": "3b1259238035",
+      "title": "Tuba Skinny",
+      "start": "2026-11-21T18:00:00-06:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
       "id": "f7f3a0236a49",
       "title": "Paradise Jazz Band",
       "start": "2026-11-22T18:00:00-06:00",
@@ -565,6 +571,24 @@
       "id": "e686cb2bdf0e",
       "title": "The Soul Rebels",
       "start": "2026-12-04T22:00:00-06:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "1b7419202ca5",
+      "title": "Tuba Skinny",
+      "start": "2026-12-12T18:00:00-06:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "fe769386d5f1",
+      "title": "Tuba Skinny",
+      "start": "2026-12-19T18:00:00-06:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "85d0f526805b",
+      "title": "Tuba Skinny",
+      "start": "2026-12-26T18:00:00-06:00",
       "url": "https://www.dbaneworleans.com/shows"
     }
   ]

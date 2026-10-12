@@ -2,12 +2,6 @@
   "venue": "dos-jefes",
   "events": [
     {
-      "id": "289072faa9a8",
-      "title": "PETER NU",
-      "start": "2026-10-11T20:00:00-05:00",
-      "url": "https://dosjefes.com/events/peter-nu/"
-    },
-    {
       "id": "af2061ecf961",
       "title": "JOHN FOHL",
       "start": "2026-10-12T20:30:00-05:00",

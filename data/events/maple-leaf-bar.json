@@ -2,13 +2,6 @@
   "venue": "maple-leaf-bar",
   "events": [
     {
-      "id": "ad8aae458442",
-      "title": "Kieko Komaki - Donald Magee - Seizo Shibayama",
-      "start": "2026-10-11T19:00:00-05:00",
-      "end": "2026-10-11T23:00:00-05:00",
-      "url": "https://www.mapleleafbar.com/events/kieko-komaki-donald-magee-seizo-shibayama"
-    },
-    {
       "id": "723d44da2ce9",
       "title": "George Porter Jr. Trio Ft. Chris Adkins",
       "start": "2026-10-12T19:00:00-05:00",
@@ -42,6 +35,12 @@
       "start": "2026-10-15T18:00:00-05:00",
       "end": "2026-10-15T19:30:00-05:00",
       "url": "https://www.mapleleafbar.com/events/booker-beyond-yoshitaka-z2-tsuji"
+    },
+    {
+      "id": "2551639fd620",
+      "title": "Johnny Vidacovich Trio FT. George Porter Jr. & June Yamagishi",
+      "start": "2026-10-15T20:00:00-05:00",
+      "url": "https://www.mapleleafbar.com/events/johnny-vidacovich-trio-ft-george-porter-jr-june-yamagishi"
     }
   ]
 }
