@@ -2,12 +2,6 @@
   "venue": "saenger-theatre",
   "events": [
     {
-      "id": "bc9536099884",
-      "title": "Tom Jones",
-      "start": "2026-10-12T20:01:00-05:00",
-      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A70Uv6"
-    },
-    {
       "id": "ba1e764d712d",
       "title": "The Lion King",
       "start": "2026-10-21T19:30:00-05:00",

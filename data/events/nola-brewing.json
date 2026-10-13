@@ -2,13 +2,6 @@
   "venue": "nola-brewing",
   "events": [
     {
-      "id": "a3451db94d3d",
-      "title": "The Bluegrass Pickin' Party",
-      "start": "2026-10-12T19:00:00-05:00",
-      "end": "2026-10-12T21:00:00-05:00",
-      "url": "https://www.nolabrewing.com/new-orleans-irish-channel-nola-brewing-live-music-and-events"
-    },
-    {
       "id": "daa1ab9e4398",
       "title": "FREE LIVE COMEDY: Laughs & Drafts Presented by Craft Comedy",
       "start": "2026-10-14T19:00:00-05:00",
@@ -20,6 +13,13 @@
       "title": "Dave Jordan Trio",
       "start": "2026-10-16T19:00:00-05:00",
       "end": "2026-10-16T22:00:00-05:00",
+      "url": "https://www.nolabrewing.com/new-orleans-irish-channel-nola-brewing-live-music-and-events"
+    },
+    {
+      "id": "425983bb6bc2",
+      "title": "The NOLA Treblemakers",
+      "start": "2026-10-17T19:00:00-05:00",
+      "end": "2026-10-17T22:00:00-05:00",
       "url": "https://www.nolabrewing.com/new-orleans-irish-channel-nola-brewing-live-music-and-events"
     },
     {

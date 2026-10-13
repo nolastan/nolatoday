@@ -2,34 +2,6 @@
   "venue": "the-allways-lounge",
   "events": [
     {
-      "id": "29daf1d0d80a",
-      "title": "Meatsuit Maintenance: Company Class",
-      "start": "2026-10-12T14:00:00-05:00",
-      "end": "2026-10-12T15:00:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/4325/1791831600000"
-    },
-    {
-      "id": "73e6a5471a0e",
-      "title": "Betsy Propane Smoke Show (live music & burlesque)",
-      "start": "2026-10-12T19:00:00-05:00",
-      "end": "2026-10-12T20:30:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/2864/1791849600000"
-    },
-    {
-      "id": "d67c1487acdd",
-      "title": "Trixie Minxs' ENCORE Graduate Showcase (burlesque)",
-      "start": "2026-10-12T20:00:00-05:00",
-      "end": "2026-10-12T22:00:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/4582/1791853200000/1"
-    },
-    {
-      "id": "cadc1532cebb",
-      "title": "Almost Naked Karaoke",
-      "start": "2026-10-12T21:30:00-05:00",
-      "end": "2026-10-12T23:30:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/2269/1791858600000"
-    },
-    {
       "id": "9f8122b8c98a",
       "title": "Becky Retz friend's wake",
       "start": "2026-10-13T19:00:00-05:00",
@@ -2126,6 +2098,13 @@
       "start": "2027-01-10T19:00:00-06:00",
       "end": "2027-01-10T21:30:00-06:00",
       "url": "https://tockify.com/allwayslounge/detail/1997/1799629200000/108"
+    },
+    {
+      "id": "46b5fe841bce",
+      "title": "Swing Night (live music & dance lessons)",
+      "start": "2027-01-10T20:00:00-06:00",
+      "end": "2027-01-10T23:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/1860/1799632800000"
     }
   ]
 }

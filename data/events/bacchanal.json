@@ -2,18 +2,6 @@
   "venue": "bacchanal",
   "events": [
     {
-      "id": "70b7d513c2b7",
-      "title": "Raphael Bas",
-      "start": "2026-10-12T12:00:00-05:00",
-      "end": "2026-10-12T15:00:00-05:00"
-    },
-    {
-      "id": "63323bdbe407",
-      "title": "Boma Bango",
-      "start": "2026-10-12T18:00:00-05:00",
-      "end": "2026-10-12T21:00:00-05:00"
-    },
-    {
       "id": "398aa0e7d07d",
       "title": "Raphael Bas",
       "start": "2026-10-13T12:00:00-05:00",
