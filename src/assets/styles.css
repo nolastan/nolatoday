@@ -537,15 +537,21 @@ h3 { font-size: 1.3rem; }
   transition: inset 0.2s ease;
 }
 .marker:hover::after, .marker:focus-visible::after, .marker.is-open::after { inset: 0; }
+/* Animate transform + opacity only: both run on the compositor, so they stay in
+   sync. Animating inset (layout, main thread) alongside opacity (compositor)
+   let Safari flash a full-size, full-opacity disc at each loop boundary. */
 .marker.live::before {
-  inset: 50%;
+  inset: 0;
+  transform: scale(0);
+  opacity: 0;
+  will-change: transform, opacity;
   animation: ripple 4s cubic-bezier(0, 0.1, 0.7, 1) infinite;
   animation-delay: var(--delay, 0s);
   pointer-events: none;
 }
 @keyframes ripple {
-  0% { inset: 50%; opacity: 1; }
-  50%, 100% { inset: -150%; opacity: 0; }
+  0% { transform: scale(0); opacity: 1; }
+  50%, 100% { transform: scale(4); opacity: 0; }
 }
 @media (prefers-reduced-motion: reduce) {
   .marker.live::before, .live-dot { animation: none; }
