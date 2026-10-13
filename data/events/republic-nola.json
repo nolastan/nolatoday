@@ -26,6 +26,13 @@
       "url": "https://republicnola.com/event/rewind-2000s-4/"
     },
     {
+      "id": "bcf395c9d256",
+      "title": "Haus Obscura",
+      "start": "2026-10-18",
+      "allDay": true,
+      "url": "https://republicnola.com/event/haus-obscura/"
+    },
+    {
       "id": "5aeac50e1f9b",
       "title": "Freakshow New Orleans",
       "start": "2026-10-18T15:00:00-05:00",
@@ -46,7 +53,8 @@
     {
       "id": "5792e7cd6598",
       "title": "Emo Night: NINE YEAR SADIVERSARY",
-      "start": "2026-10-31T23:00:00-05:00"
+      "start": "2026-10-31T23:00:00-05:00",
+      "url": "https://republicnola.com/event/emo-night-nine-year-sadiversary/"
     },
     {
       "id": "7266e897a232",

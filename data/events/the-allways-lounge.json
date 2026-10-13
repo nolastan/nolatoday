@@ -1548,6 +1548,13 @@
       "url": "https://tockify.com/allwayslounge/detail/3705/1797136200000/40"
     },
     {
+      "id": "7a6f9ef6479a",
+      "title": "Tears&Tassels (burlesque)",
+      "start": "2026-12-12T23:00:00-06:00",
+      "end": "2026-12-13T01:00:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/4613/1797138000000"
+    },
+    {
       "id": "2bccb1a086d4",
       "title": "Van Ella Bordella (burlesque)",
       "start": "2026-12-13T19:00:00-06:00",
@@ -2105,6 +2112,20 @@
       "start": "2027-01-09T23:00:00-06:00",
       "end": "2027-01-10T01:30:00-06:00",
       "url": "https://tockify.com/allwayslounge/detail/3694/1799557200000/41"
+    },
+    {
+      "id": "11d6c44699f9",
+      "title": "DeVille+Musselwhite Salon (live music & burlesque)",
+      "start": "2027-01-10T17:00:00-06:00",
+      "end": "2027-01-10T18:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/4559/1799622000000"
+    },
+    {
+      "id": "f12dcbf795bc",
+      "title": "Van Ella Bordella (burlesque)",
+      "start": "2027-01-10T19:00:00-06:00",
+      "end": "2027-01-10T21:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/1997/1799629200000/108"
     }
   ]
 }

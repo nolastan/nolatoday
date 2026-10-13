@@ -2,12 +2,6 @@
   "venue": "chickie-wah-wah",
   "events": [
     {
-      "id": "940e37f3b269",
-      "title": "Ward Davis",
-      "start": "2026-10-12T20:00:00-05:00",
-      "url": "https://www.jambase.com/show/ward-davis-chickie-wah-wah-20261012"
-    },
-    {
       "id": "50862f8919cc",
       "title": "J & The Causeways",
       "start": "2026-10-17T19:00:00-05:00",
@@ -138,6 +132,12 @@
       "title": "The Lemon Twigs",
       "start": "2026-12-15T19:00:00-06:00",
       "url": "https://www.jambase.com/show/the-lemon-twigs-chickie-wah-wah-20261215"
+    },
+    {
+      "id": "0fb97f37c664",
+      "title": "Morning 40 Federation",
+      "start": "2026-12-31T21:30:00-06:00",
+      "url": "https://www.jambase.com/show/morning-40-federation-chickie-wah-wah-20261231"
     }
   ]
 }
