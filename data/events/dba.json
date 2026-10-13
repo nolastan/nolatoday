@@ -38,6 +38,12 @@
       "url": "https://www.dbaneworleans.com/shows"
     },
     {
+      "id": "979780debb8b",
+      "title": "Dirty Little Friday — Happy Hour",
+      "start": "2026-10-16T16:00:00-05:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
       "id": "5da0dbad3e68",
       "title": "Michael Watson & The Alchemy",
       "start": "2026-10-16T18:00:00-05:00",
@@ -129,6 +135,12 @@
       "url": "https://www.dbaneworleans.com/shows"
     },
     {
+      "id": "cd8de1ddd795",
+      "title": "Dirty Little Friday — Happy Hour",
+      "start": "2026-10-23T16:00:00-05:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
       "id": "16399a9281a8",
       "title": "Michael Watson & The Alchemy",
       "start": "2026-10-23T18:00:00-05:00",
@@ -207,6 +219,12 @@
       "url": "https://www.dbaneworleans.com/shows"
     },
     {
+      "id": "d567e247e130",
+      "title": "Dirty Little Friday — Happy Hour",
+      "start": "2026-10-30T16:00:00-05:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
       "id": "6c024a462596",
       "title": "Michael Watson & The Alchemy",
       "start": "2026-10-30T18:00:00-05:00",
@@ -223,6 +241,12 @@
       "title": "Lyndsey Smith",
       "start": "2026-10-31",
       "allDay": true,
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "01fa2e92b8d7",
+      "title": "Brunch Like Hell — DJ Knock Knock",
+      "start": "2026-10-31T11:00:00-05:00",
       "url": "https://www.dbaneworleans.com/shows"
     },
     {
@@ -466,6 +490,12 @@
       "url": "https://www.dbaneworleans.com/shows"
     },
     {
+      "id": "655ab1f562c0",
+      "title": "Dwayne Dopsie + the Zydeco Hellraisers",
+      "start": "2026-11-21T22:00:00-06:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
       "id": "f7f3a0236a49",
       "title": "Paradise Jazz Band",
       "start": "2026-11-22T18:00:00-06:00",
@@ -559,6 +589,12 @@
       "id": "1b7419202ca5",
       "title": "Tuba Skinny",
       "start": "2026-12-12T18:00:00-06:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "9bb751f9bef6",
+      "title": "Dwayne Dopsie + the Zydeco Hellraisers",
+      "start": "2026-12-12T22:00:00-06:00",
       "url": "https://www.dbaneworleans.com/shows"
     },
     {

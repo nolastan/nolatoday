@@ -72,6 +72,13 @@
       "url": "https://nolajazzmuseum.org/events/2026/10/18/freedom-at-the-mat-freedom-fete"
     },
     {
+      "id": "e562eb923dc2",
+      "title": "The Cultural Center for New Orleans in the South of France with BassX",
+      "start": "2026-10-20T16:00:00-05:00",
+      "end": "2026-10-20T17:00:00-05:00",
+      "url": "https://nolajazzmuseum.org/events/2026/10/20/the-cultural-center-for-new-orleans-in-the-south-of-france-event"
+    },
+    {
       "id": "9488b602edcd",
       "title": "The Ella Project",
       "start": "2026-10-20T17:30:00-05:00",
@@ -142,17 +149,10 @@
       "url": "https://nolajazzmuseum.org/events/2026/10/29/notes-from-the-road-with-robert-mugge-a-filmmakers-journey-through-american-music"
     },
     {
-      "id": "436272cba1f1",
-      "title": "George S. Corey’s Book Launch: Kiddos Save Jazz 2!",
-      "start": "2026-11-03T17:00:00-06:00",
-      "end": "2026-11-03T19:00:00-06:00",
-      "url": "https://nolajazzmuseum.org/events/2026/11/3/kiddos-save-jazz-2-along-with-a-tuba-skinny-balcony-concert"
-    },
-    {
-      "id": "790ba16533cc",
+      "id": "d9ab2d153d8e",
       "title": "The Ella Project",
-      "start": "2026-11-03T17:30:00-06:00",
-      "end": "2026-11-03T19:30:00-06:00",
+      "start": "2026-11-02T17:30:00-06:00",
+      "end": "2026-11-02T19:30:00-06:00",
       "url": "https://nolajazzmuseum.org/events/2026/11/3/the-ella-project"
     },
     {
@@ -273,6 +273,13 @@
       "start": "2026-12-05T19:00:00-06:00",
       "end": "2026-12-05T23:00:00-06:00",
       "url": "https://nolajazzmuseum.org/events/2026/12/5/agwhucp5p13qr1flur0s1vfudxxp7j"
+    },
+    {
+      "id": "68290b90fe98",
+      "title": "George S. Corey’s Book Launch: Kiddos Save Jazz 2!",
+      "start": "2026-12-08T17:00:00-06:00",
+      "end": "2026-12-08T19:00:00-06:00",
+      "url": "https://nolajazzmuseum.org/events/2026/11/3/kiddos-save-jazz-2-along-with-a-tuba-skinny-balcony-concert"
     },
     {
       "id": "469e08175bad",
