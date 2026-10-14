@@ -2,27 +2,6 @@
   "venue": "the-allways-lounge",
   "events": [
     {
-      "id": "9f8122b8c98a",
-      "title": "Becky Retz friend's wake",
-      "start": "2026-10-13T19:00:00-05:00",
-      "end": "2026-10-13T22:00:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/4554/1791936000000"
-    },
-    {
-      "id": "a5cf90453981",
-      "title": "Sincerely, Fantasy. THE Thing to do in New Orleans’ On A Tuesday! (songs, theatre, sideshow)",
-      "start": "2026-10-13T19:00:00-05:00",
-      "end": "2026-10-13T20:30:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/959/1791936000000"
-    },
-    {
-      "id": "a623a90240f9",
-      "title": "Nicolita Capdevielle (burlesque storytelling,dance,drag)",
-      "start": "2026-10-13T22:00:00-05:00",
-      "end": "2026-10-13T23:30:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/4433/1791946800000"
-    },
-    {
       "id": "64018d72f187",
       "title": "Rhinestone Cowpoke (line dancing class)",
       "start": "2026-10-14T19:00:00-05:00",
@@ -394,12 +373,6 @@
       "url": "https://tockify.com/allwayslounge/detail/2269/1793068200000"
     },
     {
-      "id": "e9f9046c0670",
-      "title": "Beyond the Veil: New Orleans’ ONLY haunted variety show",
-      "start": "2026-10-27T00:30:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/4505/1793156400000/2"
-    },
-    {
       "id": "417baa18b3fc",
       "title": "The Drive In: Horror Movie Night",
       "start": "2026-10-27T19:00:00-05:00",
@@ -412,6 +385,13 @@
       "start": "2026-10-27T19:30:00-05:00",
       "end": "2026-10-27T21:00:00-05:00",
       "url": "https://tockify.com/allwayslounge/detail/2539/1793147400000"
+    },
+    {
+      "id": "bcef5e35a8ce",
+      "title": "Beyond the Veil: New Orleans’ ONLY haunted variety show",
+      "start": "2026-10-27T22:30:00-05:00",
+      "end": "2026-10-27T23:30:00-05:00",
+      "url": "https://tockify.com/allwayslounge/detail/4505/1793156400000/2"
     },
     {
       "id": "96b5e6aca20d",
@@ -1464,6 +1444,13 @@
       "url": "https://tockify.com/allwayslounge/detail/4432/1796961600000"
     },
     {
+      "id": "1b5efe2f8d56",
+      "title": "Daniel Bulllard dsa benefit burlesque",
+      "start": "2026-12-10T22:30:00-06:00",
+      "end": "2026-12-11T01:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/4614/1796963400000"
+    },
+    {
       "id": "0eb36ee3e99a",
       "title": "Queer Mountain (original queer storytelling)",
       "start": "2026-12-11T19:00:00-06:00",
@@ -2105,6 +2092,20 @@
       "start": "2027-01-10T20:00:00-06:00",
       "end": "2027-01-10T23:30:00-06:00",
       "url": "https://tockify.com/allwayslounge/detail/1860/1799632800000"
+    },
+    {
+      "id": "f035d3ddb4b6",
+      "title": "Betsy Propane Smoke Show (live music & burlesque)",
+      "start": "2027-01-11T19:00:00-06:00",
+      "end": "2027-01-11T20:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/2864/1799715600000"
+    },
+    {
+      "id": "430b640c81f0",
+      "title": "Almost Naked Karaoke",
+      "start": "2027-01-11T21:30:00-06:00",
+      "end": "2027-01-11T23:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/2269/1799724600000"
     }
   ]
 }

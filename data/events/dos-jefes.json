@@ -2,12 +2,6 @@
   "venue": "dos-jefes",
   "events": [
     {
-      "id": "3d3a3676e6b8",
-      "title": "Tom Hook",
-      "start": "2026-10-13T20:30:00-05:00",
-      "url": "https://dosjefes.com/events/tom-hook-2025-08-12/"
-    },
-    {
       "id": "ef137737d899",
       "title": "Tangiers Combo",
       "start": "2026-10-14T20:30:00-05:00",
