@@ -2,13 +2,6 @@
   "venue": "maple-leaf-bar",
   "events": [
     {
-      "id": "907fa9c168f6",
-      "title": "Very Good Tuesday Ft. Miles Blackwell, Ari Teitel, Eddie Christmas, Lorenzo Loeza",
-      "start": "2026-10-13T20:30:00-05:00",
-      "end": "2026-10-14T00:30:00-05:00",
-      "url": "https://www.mapleleafbar.com/events/very-good-tuesday-ft-miles-blackwell-ari-teitel-eddie-christmas-lorenzo-loeza"
-    },
-    {
       "id": "c8b65d980560",
       "title": "Happy Organ Hour with Joe Ashlar, Stanton Moore, Danny Abel & Brad Walker",
       "start": "2026-10-14T19:00:00-05:00",
@@ -41,6 +34,12 @@
       "start": "2026-10-16T23:00:00-05:00",
       "end": "2026-10-17T02:00:00-05:00",
       "url": "https://www.mapleleafbar.com/events/joe-marcineks-dead-funk-summit-all-star-super-jam"
+    },
+    {
+      "id": "de7c0b599020",
+      "title": "Smokers World",
+      "start": "2026-10-17T20:00:00-05:00",
+      "url": "https://www.mapleleafbar.com/events/smokers-world"
     }
   ]
 }
