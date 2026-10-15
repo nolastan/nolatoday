@@ -44,11 +44,11 @@
       "url": "https://nolajazzmuseum.org/events/2026/10/20/the-cultural-center-for-new-orleans-in-the-south-of-france-event"
     },
     {
-      "id": "9488b602edcd",
-      "title": "The Ella Project",
+      "id": "36d8fdf6f3e8",
+      "title": "Crescendo 2026: Publishing and Revenue Streams",
       "start": "2026-10-20T17:30:00-05:00",
       "end": "2026-10-20T19:30:00-05:00",
-      "url": "https://nolajazzmuseum.org/events/2026/10/20/the-ella-project"
+      "url": "https://nolajazzmuseum.org/events/2026/10/20/the-ella-project-crescendo"
     },
     {
       "id": "ac5a29ef11c3",
@@ -65,11 +65,18 @@
       "url": "https://nolajazzmuseum.org/events/2026/10/23/gallatin-street-fridays-presented-by-the-nathan-and-priscilla-gordon-foundation"
     },
     {
-      "id": "a0c683d1a81b",
-      "title": "The Ella Project",
+      "id": "6dc4f404413e",
+      "title": "Rampart: Protecting Artist Legacies",
+      "start": "2026-10-27T14:00:00-05:00",
+      "end": "2026-10-27T15:30:00-05:00",
+      "url": "https://nolajazzmuseum.org/events/2026/10/27/the-ella-project-rampart-panel"
+    },
+    {
+      "id": "295360373e5f",
+      "title": "Crescendo: Record Deals and Contracts",
       "start": "2026-10-27T17:30:00-05:00",
       "end": "2026-10-27T19:30:00-05:00",
-      "url": "https://nolajazzmuseum.org/events/2026/10/27/the-ella-project"
+      "url": "https://nolajazzmuseum.org/events/2026/10/27/the-ella-project-crescendo-2026-record-deals-and-contracts"
     },
     {
       "id": "a8bdcbb5d439",
