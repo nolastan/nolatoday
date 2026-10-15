@@ -2,18 +2,6 @@
   "venue": "snug-harbor",
   "events": [
     {
-      "id": "ff69b7561ea6",
-      "title": "Uptown Jazz Orchestra",
-      "start": "2026-10-14T19:30:00-05:00",
-      "url": "https://www.jambase.com/show/uptown-jazz-orchestra-snug-harbor-20261014-2"
-    },
-    {
-      "id": "4afa75119d91",
-      "title": "Uptown Jazz Orchestra",
-      "start": "2026-10-14T21:30:00-05:00",
-      "url": "https://www.jambase.com/show/uptown-jazz-orchestra-snug-harbor-20261014"
-    },
-    {
       "id": "b01449169dd4",
       "title": "Nolatet",
       "start": "2026-10-16T19:30:00-05:00",

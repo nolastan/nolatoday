@@ -2,24 +2,6 @@
   "venue": "the-spotted-cat",
   "events": [
     {
-      "id": "db285ff948d7",
-      "title": "Chris Christy Band",
-      "start": "2026-10-14T14:00:00-05:00",
-      "url": "https://www.spottedcatmusicclub.com/calendar"
-    },
-    {
-      "id": "605be67f4fa3",
-      "title": "Shotgun Jazz Band",
-      "start": "2026-10-14T18:00:00-05:00",
-      "url": "https://www.spottedcatmusicclub.com/calendar"
-    },
-    {
-      "id": "3ed5bed388a4",
-      "title": "Marty Peters & The Party Meters",
-      "start": "2026-10-14T21:30:00-05:00",
-      "url": "https://www.spottedcatmusicclub.com/calendar"
-    },
-    {
       "id": "9595cf782284",
       "title": "Chris Christy Band",
       "start": "2026-10-15T14:00:00-05:00",

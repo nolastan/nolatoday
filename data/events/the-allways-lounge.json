@@ -2,27 +2,6 @@
   "venue": "the-allways-lounge",
   "events": [
     {
-      "id": "64018d72f187",
-      "title": "Rhinestone Cowpoke (line dancing class)",
-      "start": "2026-10-14T19:00:00-05:00",
-      "end": "2026-10-14T21:00:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/1383/1792022400000"
-    },
-    {
-      "id": "c0dcdcb89255",
-      "title": "Whodunit (mystery dinner theater)",
-      "start": "2026-10-14T19:30:00-05:00",
-      "end": "2026-10-14T21:30:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/3993/1792024200000"
-    },
-    {
-      "id": "0603a920ff8d",
-      "title": "Mystery Science Theatre 3000 (burlesque)",
-      "start": "2026-10-14T22:00:00-05:00",
-      "end": "2026-10-14T23:30:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/4539/1792033200000"
-    },
-    {
       "id": "b04ecaf224ba",
       "title": "Ballet for all Bodies",
       "start": "2026-10-15T15:30:00-05:00",

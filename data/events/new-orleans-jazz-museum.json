@@ -2,13 +2,6 @@
   "venue": "new-orleans-jazz-museum",
   "events": [
     {
-      "id": "3b75effac865",
-      "title": "Friends of the Cabildo Film Series Present Ancestral Artistry",
-      "start": "2026-10-14T18:00:00-05:00",
-      "end": "2026-10-14T20:00:00-05:00",
-      "url": "https://nolajazzmuseum.org/events/2026/10/14/friends-of-the-cabildo-film-series-presents-creole-artistry"
-    },
-    {
       "id": "66ad8a73381b",
       "title": "Trempo Masterclass",
       "start": "2026-10-15T09:00:00-05:00",

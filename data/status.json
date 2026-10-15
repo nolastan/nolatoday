@@ -3,96 +3,96 @@
     "12-mile-limit": {
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
-      "count": 10,
-      "lastRun": "2026-10-14T23:54:54.016-05:00",
-      "lastSuccess": "2026-10-14T23:54:54.016-05:00",
-      "lastNonEmpty": "2026-10-14T23:54:54.016-05:00",
+      "count": 9,
+      "lastRun": "2026-10-15T06:45:59.046-05:00",
+      "lastSuccess": "2026-10-15T06:45:59.046-05:00",
+      "lastNonEmpty": "2026-10-15T06:45:59.046-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
           "type": "spothopper",
           "ok": true,
-          "count": 10
+          "count": 9
         }
       ]
     },
     "30-90": {
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
-      "count": 44,
-      "lastRun": "2026-10-14T23:54:54.016-05:00",
-      "lastSuccess": "2026-10-14T23:54:54.016-05:00",
-      "lastNonEmpty": "2026-10-14T23:54:54.016-05:00",
+      "count": 42,
+      "lastRun": "2026-10-15T06:45:59.046-05:00",
+      "lastSuccess": "2026-10-15T06:45:59.046-05:00",
+      "lastNonEmpty": "2026-10-15T06:45:59.046-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
           "type": "squarespace",
           "ok": true,
-          "count": 44
+          "count": 42
         }
       ]
     },
     "bacchanal": {
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
-      "count": 125,
-      "lastRun": "2026-10-14T23:54:54.016-05:00",
-      "lastSuccess": "2026-10-14T23:54:54.016-05:00",
-      "lastNonEmpty": "2026-10-14T23:54:54.016-05:00",
+      "count": 123,
+      "lastRun": "2026-10-15T06:45:59.046-05:00",
+      "lastSuccess": "2026-10-15T06:45:59.046-05:00",
+      "lastNonEmpty": "2026-10-15T06:45:59.046-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
           "type": "ics",
           "ok": true,
-          "count": 125
+          "count": 123
         }
       ]
     },
     "blue-nile": {
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
-      "count": 36,
-      "lastRun": "2026-10-14T23:54:54.016-05:00",
-      "lastSuccess": "2026-10-14T23:54:54.016-05:00",
-      "lastNonEmpty": "2026-10-14T23:54:54.016-05:00",
+      "count": 35,
+      "lastRun": "2026-10-15T06:45:59.046-05:00",
+      "lastSuccess": "2026-10-15T06:45:59.046-05:00",
+      "lastNonEmpty": "2026-10-15T06:45:59.046-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
           "type": "squarespace",
           "ok": true,
-          "count": 36
+          "count": 35
         }
       ]
     },
     "bontemps": {
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
-      "count": 36,
-      "lastRun": "2026-10-14T23:54:54.016-05:00",
-      "lastSuccess": "2026-10-14T23:54:54.016-05:00",
-      "lastNonEmpty": "2026-10-14T23:54:54.016-05:00",
+      "count": 35,
+      "lastRun": "2026-10-15T06:45:59.046-05:00",
+      "lastSuccess": "2026-10-15T06:45:59.046-05:00",
+      "lastNonEmpty": "2026-10-15T06:45:59.046-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
           "type": "spothopper",
           "ok": true,
-          "count": 36
+          "count": 35
         }
       ]
     },
     "cafe-istanbul": {
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
-      "count": 7,
-      "lastRun": "2026-10-14T23:54:54.016-05:00",
-      "lastSuccess": "2026-10-14T23:54:54.016-05:00",
-      "lastNonEmpty": "2026-10-14T23:54:54.016-05:00",
+      "count": 6,
+      "lastRun": "2026-10-15T06:45:59.046-05:00",
+      "lastSuccess": "2026-10-15T06:45:59.046-05:00",
+      "lastNonEmpty": "2026-10-15T06:45:59.046-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
           "type": "squarespace",
           "ok": true,
-          "count": 7
+          "count": 6
         }
       ]
     },
@@ -100,9 +100,9 @@
       "ok": true,
       "firstSeen": "2026-10-07T08:38:46.914-05:00",
       "count": 22,
-      "lastRun": "2026-10-14T23:54:54.016-05:00",
-      "lastSuccess": "2026-10-14T23:54:54.016-05:00",
-      "lastNonEmpty": "2026-10-14T23:54:54.016-05:00",
+      "lastRun": "2026-10-15T06:45:59.046-05:00",
+      "lastSuccess": "2026-10-15T06:45:59.046-05:00",
+      "lastNonEmpty": "2026-10-15T06:45:59.046-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
@@ -115,48 +115,48 @@
     "dba": {
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
-      "count": 101,
-      "lastRun": "2026-10-14T23:54:54.016-05:00",
-      "lastSuccess": "2026-10-14T23:54:54.016-05:00",
-      "lastNonEmpty": "2026-10-14T23:54:54.016-05:00",
+      "count": 99,
+      "lastRun": "2026-10-15T06:45:59.046-05:00",
+      "lastSuccess": "2026-10-15T06:45:59.046-05:00",
+      "lastNonEmpty": "2026-10-15T06:45:59.046-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
           "type": "gigulator",
           "ok": true,
-          "count": 101
+          "count": 99
         }
       ]
     },
     "dos-jefes": {
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
-      "count": 15,
-      "lastRun": "2026-10-14T23:54:54.016-05:00",
-      "lastSuccess": "2026-10-14T23:54:54.016-05:00",
-      "lastNonEmpty": "2026-10-14T23:54:54.016-05:00",
+      "count": 14,
+      "lastRun": "2026-10-15T06:45:59.046-05:00",
+      "lastSuccess": "2026-10-15T06:45:59.046-05:00",
+      "lastNonEmpty": "2026-10-15T06:45:59.046-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
           "type": "html",
           "ok": true,
-          "count": 15
+          "count": 14
         }
       ]
     },
     "fillmore-new-orleans": {
       "ok": true,
       "firstSeen": "2026-10-07T08:38:46.914-05:00",
-      "count": 21,
-      "lastRun": "2026-10-14T23:54:54.016-05:00",
-      "lastSuccess": "2026-10-14T23:54:54.016-05:00",
-      "lastNonEmpty": "2026-10-14T23:54:54.016-05:00",
+      "count": 20,
+      "lastRun": "2026-10-15T06:45:59.046-05:00",
+      "lastSuccess": "2026-10-15T06:45:59.046-05:00",
+      "lastNonEmpty": "2026-10-15T06:45:59.046-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
           "type": "ticketmaster",
           "ok": true,
-          "count": 21
+          "count": 20
         }
       ]
     },
@@ -164,10 +164,10 @@
       "ok": false,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
       "count": 18,
-      "lastRun": "2026-10-14T23:54:54.016-05:00",
+      "lastRun": "2026-10-15T06:45:59.046-05:00",
       "lastSuccess": "2026-10-05T00:47:13.521-05:00",
       "lastNonEmpty": "2026-10-05T00:47:13.521-05:00",
-      "consecutiveFailures": 24,
+      "consecutiveFailures": 25,
       "sources": [
         {
           "type": "jsonld",
@@ -180,16 +180,16 @@
     "house-of-blues": {
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
-      "count": 22,
-      "lastRun": "2026-10-14T23:54:54.016-05:00",
-      "lastSuccess": "2026-10-14T23:54:54.016-05:00",
-      "lastNonEmpty": "2026-10-14T23:54:54.016-05:00",
+      "count": 21,
+      "lastRun": "2026-10-15T06:45:59.046-05:00",
+      "lastSuccess": "2026-10-15T06:45:59.046-05:00",
+      "lastNonEmpty": "2026-10-15T06:45:59.046-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
           "type": "jsonld",
           "ok": true,
-          "count": 22
+          "count": 21
         }
       ]
     },
@@ -197,10 +197,10 @@
       "ok": false,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
       "count": 18,
-      "lastRun": "2026-10-14T23:54:54.016-05:00",
+      "lastRun": "2026-10-15T06:45:59.046-05:00",
       "lastSuccess": "2026-10-05T00:47:13.521-05:00",
       "lastNonEmpty": "2026-10-05T00:47:13.521-05:00",
-      "consecutiveFailures": 24,
+      "consecutiveFailures": 25,
       "sources": [
         {
           "type": "jsonld",
@@ -214,9 +214,9 @@
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
       "count": 17,
-      "lastRun": "2026-10-14T23:54:54.016-05:00",
-      "lastSuccess": "2026-10-14T23:54:54.016-05:00",
-      "lastNonEmpty": "2026-10-14T23:54:54.016-05:00",
+      "lastRun": "2026-10-15T06:45:59.046-05:00",
+      "lastSuccess": "2026-10-15T06:45:59.046-05:00",
+      "lastNonEmpty": "2026-10-15T06:45:59.046-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
@@ -230,9 +230,9 @@
       "ok": true,
       "firstSeen": "2026-10-07T08:38:46.914-05:00",
       "count": 5,
-      "lastRun": "2026-10-14T23:54:54.016-05:00",
-      "lastSuccess": "2026-10-14T23:54:54.016-05:00",
-      "lastNonEmpty": "2026-10-14T23:54:54.016-05:00",
+      "lastRun": "2026-10-15T06:45:59.046-05:00",
+      "lastSuccess": "2026-10-15T06:45:59.046-05:00",
+      "lastNonEmpty": "2026-10-15T06:45:59.046-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
@@ -246,9 +246,9 @@
       "ok": true,
       "firstSeen": "2026-10-07T08:38:46.914-05:00",
       "count": 3,
-      "lastRun": "2026-10-14T23:54:54.016-05:00",
-      "lastSuccess": "2026-10-14T23:54:54.016-05:00",
-      "lastNonEmpty": "2026-10-14T23:54:54.016-05:00",
+      "lastRun": "2026-10-15T06:45:59.046-05:00",
+      "lastSuccess": "2026-10-15T06:45:59.046-05:00",
+      "lastNonEmpty": "2026-10-15T06:45:59.046-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
@@ -262,9 +262,9 @@
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
       "count": 6,
-      "lastRun": "2026-10-14T23:54:54.016-05:00",
-      "lastSuccess": "2026-10-14T23:54:54.016-05:00",
-      "lastNonEmpty": "2026-10-14T23:54:54.016-05:00",
+      "lastRun": "2026-10-15T06:45:59.046-05:00",
+      "lastSuccess": "2026-10-15T06:45:59.046-05:00",
+      "lastNonEmpty": "2026-10-15T06:45:59.046-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
@@ -294,9 +294,9 @@
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
       "count": 12,
-      "lastRun": "2026-10-14T23:54:54.016-05:00",
-      "lastSuccess": "2026-10-14T23:54:54.016-05:00",
-      "lastNonEmpty": "2026-10-14T23:54:54.016-05:00",
+      "lastRun": "2026-10-15T06:45:59.046-05:00",
+      "lastSuccess": "2026-10-15T06:45:59.046-05:00",
+      "lastNonEmpty": "2026-10-15T06:45:59.046-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
@@ -310,10 +310,10 @@
       "ok": false,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
       "count": 0,
-      "lastRun": "2026-10-14T23:54:54.016-05:00",
+      "lastRun": "2026-10-15T06:45:59.046-05:00",
       "lastSuccess": null,
       "lastNonEmpty": null,
-      "consecutiveFailures": 26,
+      "consecutiveFailures": 27,
       "sources": [
         {
           "type": "jsonld",
@@ -326,32 +326,32 @@
     "new-orleans-jazz-museum": {
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
-      "count": 37,
-      "lastRun": "2026-10-14T23:54:54.016-05:00",
-      "lastSuccess": "2026-10-14T23:54:54.016-05:00",
-      "lastNonEmpty": "2026-10-14T23:54:54.016-05:00",
+      "count": 36,
+      "lastRun": "2026-10-15T06:45:59.046-05:00",
+      "lastSuccess": "2026-10-15T06:45:59.046-05:00",
+      "lastNonEmpty": "2026-10-15T06:45:59.046-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
           "type": "squarespace",
           "ok": true,
-          "count": 37
+          "count": 36
         }
       ]
     },
     "nola-brewing": {
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
-      "count": 12,
-      "lastRun": "2026-10-14T23:54:54.016-05:00",
-      "lastSuccess": "2026-10-14T23:54:54.016-05:00",
-      "lastNonEmpty": "2026-10-14T23:54:54.016-05:00",
+      "count": 11,
+      "lastRun": "2026-10-15T06:45:59.046-05:00",
+      "lastSuccess": "2026-10-15T06:45:59.046-05:00",
+      "lastNonEmpty": "2026-10-15T06:45:59.046-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
           "type": "spothopper",
           "ok": true,
-          "count": 12
+          "count": 11
         }
       ]
     },
@@ -359,9 +359,9 @@
       "ok": true,
       "firstSeen": "2026-10-07T00:12:43.896-05:00",
       "count": 18,
-      "lastRun": "2026-10-14T23:54:54.016-05:00",
-      "lastSuccess": "2026-10-14T23:54:54.016-05:00",
-      "lastNonEmpty": "2026-10-14T23:54:54.016-05:00",
+      "lastRun": "2026-10-15T06:45:59.046-05:00",
+      "lastSuccess": "2026-10-15T06:45:59.046-05:00",
+      "lastNonEmpty": "2026-10-15T06:45:59.046-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
@@ -375,9 +375,9 @@
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
       "count": 16,
-      "lastRun": "2026-10-14T23:54:54.016-05:00",
-      "lastSuccess": "2026-10-14T23:54:54.016-05:00",
-      "lastNonEmpty": "2026-10-14T23:54:54.016-05:00",
+      "lastRun": "2026-10-15T06:45:59.046-05:00",
+      "lastSuccess": "2026-10-15T06:45:59.046-05:00",
+      "lastNonEmpty": "2026-10-15T06:45:59.046-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
@@ -391,9 +391,9 @@
       "ok": true,
       "firstSeen": "2026-10-07T08:38:46.914-05:00",
       "count": 48,
-      "lastRun": "2026-10-14T23:54:54.016-05:00",
-      "lastSuccess": "2026-10-14T23:54:54.016-05:00",
-      "lastNonEmpty": "2026-10-14T23:54:54.016-05:00",
+      "lastRun": "2026-10-15T06:45:59.046-05:00",
+      "lastSuccess": "2026-10-15T06:45:59.046-05:00",
+      "lastNonEmpty": "2026-10-15T06:45:59.046-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
@@ -406,64 +406,64 @@
     "santos-bar": {
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
-      "count": 25,
-      "lastRun": "2026-10-14T23:54:54.016-05:00",
-      "lastSuccess": "2026-10-14T23:54:54.016-05:00",
-      "lastNonEmpty": "2026-10-14T23:54:54.016-05:00",
+      "count": 24,
+      "lastRun": "2026-10-15T06:45:59.046-05:00",
+      "lastSuccess": "2026-10-15T06:45:59.046-05:00",
+      "lastNonEmpty": "2026-10-15T06:45:59.046-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
           "type": "html",
           "ok": true,
-          "count": 25
+          "count": 24
         }
       ]
     },
     "sidneys-saloon": {
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
-      "count": 8,
-      "lastRun": "2026-10-14T23:54:54.016-05:00",
-      "lastSuccess": "2026-10-14T23:54:54.016-05:00",
-      "lastNonEmpty": "2026-10-14T23:54:54.016-05:00",
+      "count": 7,
+      "lastRun": "2026-10-15T06:45:59.046-05:00",
+      "lastSuccess": "2026-10-15T06:45:59.046-05:00",
+      "lastNonEmpty": "2026-10-15T06:45:59.046-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
           "type": "squarespace",
           "ok": true,
-          "count": 8
+          "count": 7
         }
       ]
     },
     "snug-harbor": {
       "ok": true,
       "firstSeen": "2026-10-07T00:24:46.231-05:00",
-      "count": 12,
-      "lastRun": "2026-10-14T23:54:54.016-05:00",
-      "lastSuccess": "2026-10-14T23:54:54.016-05:00",
-      "lastNonEmpty": "2026-10-14T23:54:54.016-05:00",
+      "count": 10,
+      "lastRun": "2026-10-15T06:45:59.046-05:00",
+      "lastSuccess": "2026-10-15T06:45:59.046-05:00",
+      "lastNonEmpty": "2026-10-15T06:45:59.046-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
           "type": "jambase",
           "ok": true,
-          "count": 12
+          "count": 10
         }
       ]
     },
     "the-allways-lounge": {
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
-      "count": 303,
-      "lastRun": "2026-10-14T23:54:54.016-05:00",
-      "lastSuccess": "2026-10-14T23:54:54.016-05:00",
-      "lastNonEmpty": "2026-10-14T23:54:54.016-05:00",
+      "count": 300,
+      "lastRun": "2026-10-15T06:45:59.046-05:00",
+      "lastSuccess": "2026-10-15T06:45:59.046-05:00",
+      "lastNonEmpty": "2026-10-15T06:45:59.046-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
           "type": "ics",
           "ok": true,
-          "count": 303
+          "count": 300
         }
       ]
     },
@@ -471,9 +471,9 @@
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
       "count": 26,
-      "lastRun": "2026-10-14T23:54:54.016-05:00",
-      "lastSuccess": "2026-10-14T23:54:54.016-05:00",
-      "lastNonEmpty": "2026-10-14T23:54:54.016-05:00",
+      "lastRun": "2026-10-15T06:45:59.046-05:00",
+      "lastSuccess": "2026-10-15T06:45:59.046-05:00",
+      "lastNonEmpty": "2026-10-15T06:45:59.046-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
@@ -486,16 +486,16 @@
     "the-carousel-bar-lounge": {
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
-      "count": 27,
-      "lastRun": "2026-10-14T23:54:54.016-05:00",
-      "lastSuccess": "2026-10-14T23:54:54.016-05:00",
-      "lastNonEmpty": "2026-10-14T23:54:54.016-05:00",
+      "count": 26,
+      "lastRun": "2026-10-15T06:45:59.046-05:00",
+      "lastSuccess": "2026-10-15T06:45:59.046-05:00",
+      "lastNonEmpty": "2026-10-15T06:45:59.046-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
           "type": "html",
           "ok": true,
-          "count": 27
+          "count": 26
         }
       ]
     },
@@ -503,9 +503,9 @@
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
       "count": 1,
-      "lastRun": "2026-10-14T23:54:54.016-05:00",
-      "lastSuccess": "2026-10-14T23:54:54.016-05:00",
-      "lastNonEmpty": "2026-10-14T23:54:54.016-05:00",
+      "lastRun": "2026-10-15T06:45:59.046-05:00",
+      "lastSuccess": "2026-10-15T06:45:59.046-05:00",
+      "lastNonEmpty": "2026-10-15T06:45:59.046-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
@@ -519,9 +519,9 @@
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
       "count": 6,
-      "lastRun": "2026-10-14T23:54:54.016-05:00",
-      "lastSuccess": "2026-10-14T23:54:54.016-05:00",
-      "lastNonEmpty": "2026-10-14T23:54:54.016-05:00",
+      "lastRun": "2026-10-15T06:45:59.046-05:00",
+      "lastSuccess": "2026-10-15T06:45:59.046-05:00",
+      "lastNonEmpty": "2026-10-15T06:45:59.046-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
@@ -535,9 +535,9 @@
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
       "count": 7,
-      "lastRun": "2026-10-14T23:54:54.016-05:00",
-      "lastSuccess": "2026-10-14T23:54:54.016-05:00",
-      "lastNonEmpty": "2026-10-14T23:54:54.016-05:00",
+      "lastRun": "2026-10-15T06:45:59.046-05:00",
+      "lastSuccess": "2026-10-15T06:45:59.046-05:00",
+      "lastNonEmpty": "2026-10-15T06:45:59.046-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
@@ -550,16 +550,16 @@
     "the-spotted-cat": {
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
-      "count": 167,
-      "lastRun": "2026-10-14T23:54:54.016-05:00",
-      "lastSuccess": "2026-10-14T23:54:54.016-05:00",
-      "lastNonEmpty": "2026-10-14T23:54:54.016-05:00",
+      "count": 164,
+      "lastRun": "2026-10-15T06:45:59.046-05:00",
+      "lastSuccess": "2026-10-15T06:45:59.046-05:00",
+      "lastNonEmpty": "2026-10-15T06:45:59.046-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
           "type": "gigulator",
           "ok": true,
-          "count": 167
+          "count": 164
         }
       ]
     },
@@ -567,8 +567,8 @@
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
       "count": 0,
-      "lastRun": "2026-10-14T23:54:54.016-05:00",
-      "lastSuccess": "2026-10-14T23:54:54.016-05:00",
+      "lastRun": "2026-10-15T06:45:59.046-05:00",
+      "lastSuccess": "2026-10-15T06:45:59.046-05:00",
       "lastNonEmpty": "2026-10-12T19:51:52.794-05:00",
       "consecutiveFailures": 0,
       "sources": [
@@ -583,9 +583,9 @@
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
       "count": 34,
-      "lastRun": "2026-10-14T23:54:54.016-05:00",
-      "lastSuccess": "2026-10-14T23:54:54.016-05:00",
-      "lastNonEmpty": "2026-10-14T23:54:54.016-05:00",
+      "lastRun": "2026-10-15T06:45:59.046-05:00",
+      "lastSuccess": "2026-10-15T06:45:59.046-05:00",
+      "lastNonEmpty": "2026-10-15T06:45:59.046-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
@@ -596,5 +596,5 @@
       ]
     }
   },
-  "generatedAt": "2026-10-14T23:54:54.016-05:00"
+  "generatedAt": "2026-10-15T06:45:59.046-05:00"
 }
