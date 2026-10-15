@@ -2,13 +2,6 @@
   "venue": "new-orleans-jazz-museum",
   "events": [
     {
-      "id": "44a45e1bf583",
-      "title": "Trempo Masterclass",
-      "start": "2026-10-14T09:00:00-05:00",
-      "end": "2026-10-14T16:00:00-05:00",
-      "url": "https://nolajazzmuseum.org/events/2026/10/5/trempo-ktwyg-b8wxl-hx68g-ged6g-228yg-wktjb-4chce"
-    },
-    {
       "id": "3b75effac865",
       "title": "Friends of the Cabildo Film Series Present Ancestral Artistry",
       "start": "2026-10-14T18:00:00-05:00",
