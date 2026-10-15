@@ -2,6 +2,18 @@
   "venue": "santos-bar",
   "events": [
     {
+      "id": "a14d15025895",
+      "title": "ELECTRO CLASH",
+      "start": "2026-10-15T23:00:00-05:00",
+      "url": "https://www.santosbar.com/tm-event/electro-clash/"
+    },
+    {
+      "id": "aef70a9ddb69",
+      "title": "PRESSURE BEAT (upstairs)",
+      "start": "2026-10-16T22:00:00-05:00",
+      "url": "https://www.santosbar.com/tm-event/pressure-beat-upstairs/"
+    },
+    {
       "id": "3cd20fc2d041",
       "title": "TEMPO PRESENTS: LAST CALL",
       "start": "2026-10-16T23:59:00-05:00",
@@ -38,6 +50,12 @@
       "url": "https://www.santosbar.com/tm-event/juno-dunes-with-chill-buddy-ciara-elise/"
     },
     {
+      "id": "38034cef2c99",
+      "title": "KREWE DE LUNE PRESENTS: SPACEBALL REVEAL! (upstairs)",
+      "start": "2026-10-24T21:00:00-05:00",
+      "url": "https://www.santosbar.com/tm-event/krewe-de-lune-presents-spaceball-reveal/"
+    },
+    {
       "id": "e09d6e2ff290",
       "title": "BLACK MASS KARAOKE with KJ*EJ",
       "start": "2026-10-26T20:00:00-05:00",
@@ -54,6 +72,12 @@
       "title": "DEATHCHARGE with COME TO RUIN",
       "start": "2026-10-30T21:00:00-05:00",
       "url": "https://www.santosbar.com/tm-event/deathcharge-with-come-to-ruin/"
+    },
+    {
+      "id": "fce71161d5ce",
+      "title": "HALLOWEEN with HUNNO",
+      "start": "2026-10-31T20:00:00-05:00",
+      "url": "https://www.santosbar.com/tm-event/halloween-with-hunno/"
     },
     {
       "id": "6c1ba1f2cdce",
