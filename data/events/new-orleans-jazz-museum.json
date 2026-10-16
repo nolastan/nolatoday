@@ -2,13 +2,6 @@
   "venue": "new-orleans-jazz-museum",
   "events": [
     {
-      "id": "16493e077fc9",
-      "title": "Hispanic Heritage Month Celebration: Arco Latino",
-      "start": "2026-10-16T14:00:00-05:00",
-      "end": "2026-10-16T15:00:00-05:00",
-      "url": "https://nolajazzmuseum.org/events/2026/10/16/hispanic-heritage-month-show"
-    },
-    {
       "id": "bfe3da6e776b",
       "title": "BRAT",
       "start": "2026-10-16T18:00:00-05:00",
