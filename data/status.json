@@ -4,9 +4,9 @@
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
       "count": 9,
-      "lastRun": "2026-10-16T06:40:24.489-05:00",
-      "lastSuccess": "2026-10-16T06:40:24.489-05:00",
-      "lastNonEmpty": "2026-10-16T06:40:24.489-05:00",
+      "lastRun": "2026-10-16T11:48:34.680-05:00",
+      "lastSuccess": "2026-10-16T11:48:34.680-05:00",
+      "lastNonEmpty": "2026-10-16T11:48:34.680-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
@@ -20,9 +20,9 @@
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
       "count": 40,
-      "lastRun": "2026-10-16T06:40:24.489-05:00",
-      "lastSuccess": "2026-10-16T06:40:24.489-05:00",
-      "lastNonEmpty": "2026-10-16T06:40:24.489-05:00",
+      "lastRun": "2026-10-16T11:48:34.680-05:00",
+      "lastSuccess": "2026-10-16T11:48:34.680-05:00",
+      "lastNonEmpty": "2026-10-16T11:48:34.680-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
@@ -36,9 +36,9 @@
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
       "count": 122,
-      "lastRun": "2026-10-16T06:40:24.489-05:00",
-      "lastSuccess": "2026-10-16T06:40:24.489-05:00",
-      "lastNonEmpty": "2026-10-16T06:40:24.489-05:00",
+      "lastRun": "2026-10-16T11:48:34.680-05:00",
+      "lastSuccess": "2026-10-16T11:48:34.680-05:00",
+      "lastNonEmpty": "2026-10-16T11:48:34.680-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
@@ -52,9 +52,9 @@
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
       "count": 33,
-      "lastRun": "2026-10-16T06:40:24.489-05:00",
-      "lastSuccess": "2026-10-16T06:40:24.489-05:00",
-      "lastNonEmpty": "2026-10-16T06:40:24.489-05:00",
+      "lastRun": "2026-10-16T11:48:34.680-05:00",
+      "lastSuccess": "2026-10-16T11:48:34.680-05:00",
+      "lastNonEmpty": "2026-10-16T11:48:34.680-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
@@ -68,9 +68,9 @@
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
       "count": 34,
-      "lastRun": "2026-10-16T06:40:24.489-05:00",
-      "lastSuccess": "2026-10-16T06:40:24.489-05:00",
-      "lastNonEmpty": "2026-10-16T06:40:24.489-05:00",
+      "lastRun": "2026-10-16T11:48:34.680-05:00",
+      "lastSuccess": "2026-10-16T11:48:34.680-05:00",
+      "lastNonEmpty": "2026-10-16T11:48:34.680-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
@@ -84,9 +84,9 @@
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
       "count": 9,
-      "lastRun": "2026-10-16T06:40:24.489-05:00",
-      "lastSuccess": "2026-10-16T06:40:24.489-05:00",
-      "lastNonEmpty": "2026-10-16T06:40:24.489-05:00",
+      "lastRun": "2026-10-16T11:48:34.680-05:00",
+      "lastSuccess": "2026-10-16T11:48:34.680-05:00",
+      "lastNonEmpty": "2026-10-16T11:48:34.680-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
@@ -100,9 +100,9 @@
       "ok": true,
       "firstSeen": "2026-10-07T08:38:46.914-05:00",
       "count": 22,
-      "lastRun": "2026-10-16T06:40:24.489-05:00",
-      "lastSuccess": "2026-10-16T06:40:24.489-05:00",
-      "lastNonEmpty": "2026-10-16T06:40:24.489-05:00",
+      "lastRun": "2026-10-16T11:48:34.680-05:00",
+      "lastSuccess": "2026-10-16T11:48:34.680-05:00",
+      "lastNonEmpty": "2026-10-16T11:48:34.680-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
@@ -116,9 +116,9 @@
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
       "count": 97,
-      "lastRun": "2026-10-16T06:40:24.489-05:00",
-      "lastSuccess": "2026-10-16T06:40:24.489-05:00",
-      "lastNonEmpty": "2026-10-16T06:40:24.489-05:00",
+      "lastRun": "2026-10-16T11:48:34.680-05:00",
+      "lastSuccess": "2026-10-16T11:48:34.680-05:00",
+      "lastNonEmpty": "2026-10-16T11:48:34.680-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
@@ -129,29 +129,28 @@
       ]
     },
     "dos-jefes": {
-      "ok": false,
+      "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
-      "count": 14,
-      "lastRun": "2026-10-16T06:40:24.489-05:00",
-      "lastSuccess": "2026-10-15T23:45:05.123-05:00",
-      "lastNonEmpty": "2026-10-15T23:45:05.123-05:00",
-      "consecutiveFailures": 1,
+      "count": 13,
+      "lastRun": "2026-10-16T11:48:34.680-05:00",
+      "lastSuccess": "2026-10-16T11:48:34.680-05:00",
+      "lastNonEmpty": "2026-10-16T11:48:34.680-05:00",
+      "consecutiveFailures": 0,
       "sources": [
         {
           "type": "html",
-          "ok": false,
-          "error": "HTTP 403 for https://dosjefes.com/events/"
+          "ok": true,
+          "count": 13
         }
-      ],
-      "error": "html: HTTP 403 for https://dosjefes.com/events/"
+      ]
     },
     "fillmore-new-orleans": {
       "ok": true,
       "firstSeen": "2026-10-07T08:38:46.914-05:00",
       "count": 19,
-      "lastRun": "2026-10-16T06:40:24.489-05:00",
-      "lastSuccess": "2026-10-16T06:40:24.489-05:00",
-      "lastNonEmpty": "2026-10-16T06:40:24.489-05:00",
+      "lastRun": "2026-10-16T11:48:34.680-05:00",
+      "lastSuccess": "2026-10-16T11:48:34.680-05:00",
+      "lastNonEmpty": "2026-10-16T11:48:34.680-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
@@ -165,10 +164,10 @@
       "ok": false,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
       "count": 18,
-      "lastRun": "2026-10-16T06:40:24.489-05:00",
+      "lastRun": "2026-10-16T11:48:34.680-05:00",
       "lastSuccess": "2026-10-05T00:47:13.521-05:00",
       "lastNonEmpty": "2026-10-05T00:47:13.521-05:00",
-      "consecutiveFailures": 29,
+      "consecutiveFailures": 30,
       "sources": [
         {
           "type": "jsonld",
@@ -182,9 +181,9 @@
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
       "count": 21,
-      "lastRun": "2026-10-16T06:40:24.489-05:00",
-      "lastSuccess": "2026-10-16T06:40:24.489-05:00",
-      "lastNonEmpty": "2026-10-16T06:40:24.489-05:00",
+      "lastRun": "2026-10-16T11:48:34.680-05:00",
+      "lastSuccess": "2026-10-16T11:48:34.680-05:00",
+      "lastNonEmpty": "2026-10-16T11:48:34.680-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
@@ -198,10 +197,10 @@
       "ok": false,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
       "count": 18,
-      "lastRun": "2026-10-16T06:40:24.489-05:00",
+      "lastRun": "2026-10-16T11:48:34.680-05:00",
       "lastSuccess": "2026-10-05T00:47:13.521-05:00",
       "lastNonEmpty": "2026-10-05T00:47:13.521-05:00",
-      "consecutiveFailures": 29,
+      "consecutiveFailures": 30,
       "sources": [
         {
           "type": "jsonld",
@@ -215,9 +214,9 @@
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
       "count": 17,
-      "lastRun": "2026-10-16T06:40:24.489-05:00",
-      "lastSuccess": "2026-10-16T06:40:24.489-05:00",
-      "lastNonEmpty": "2026-10-16T06:40:24.489-05:00",
+      "lastRun": "2026-10-16T11:48:34.680-05:00",
+      "lastSuccess": "2026-10-16T11:48:34.680-05:00",
+      "lastNonEmpty": "2026-10-16T11:48:34.680-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
@@ -231,9 +230,9 @@
       "ok": true,
       "firstSeen": "2026-10-07T08:38:46.914-05:00",
       "count": 5,
-      "lastRun": "2026-10-16T06:40:24.489-05:00",
-      "lastSuccess": "2026-10-16T06:40:24.489-05:00",
-      "lastNonEmpty": "2026-10-16T06:40:24.489-05:00",
+      "lastRun": "2026-10-16T11:48:34.680-05:00",
+      "lastSuccess": "2026-10-16T11:48:34.680-05:00",
+      "lastNonEmpty": "2026-10-16T11:48:34.680-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
@@ -247,9 +246,9 @@
       "ok": true,
       "firstSeen": "2026-10-07T08:38:46.914-05:00",
       "count": 3,
-      "lastRun": "2026-10-16T06:40:24.489-05:00",
-      "lastSuccess": "2026-10-16T06:40:24.489-05:00",
-      "lastNonEmpty": "2026-10-16T06:40:24.489-05:00",
+      "lastRun": "2026-10-16T11:48:34.680-05:00",
+      "lastSuccess": "2026-10-16T11:48:34.680-05:00",
+      "lastNonEmpty": "2026-10-16T11:48:34.680-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
@@ -263,9 +262,9 @@
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
       "count": 5,
-      "lastRun": "2026-10-16T06:40:24.489-05:00",
-      "lastSuccess": "2026-10-16T06:40:24.489-05:00",
-      "lastNonEmpty": "2026-10-16T06:40:24.489-05:00",
+      "lastRun": "2026-10-16T11:48:34.680-05:00",
+      "lastSuccess": "2026-10-16T11:48:34.680-05:00",
+      "lastNonEmpty": "2026-10-16T11:48:34.680-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
@@ -295,9 +294,9 @@
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
       "count": 12,
-      "lastRun": "2026-10-16T06:40:24.489-05:00",
-      "lastSuccess": "2026-10-16T06:40:24.489-05:00",
-      "lastNonEmpty": "2026-10-16T06:40:24.489-05:00",
+      "lastRun": "2026-10-16T11:48:34.680-05:00",
+      "lastSuccess": "2026-10-16T11:48:34.680-05:00",
+      "lastNonEmpty": "2026-10-16T11:48:34.680-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
@@ -311,10 +310,10 @@
       "ok": false,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
       "count": 0,
-      "lastRun": "2026-10-16T06:40:24.489-05:00",
+      "lastRun": "2026-10-16T11:48:34.680-05:00",
       "lastSuccess": null,
       "lastNonEmpty": null,
-      "consecutiveFailures": 31,
+      "consecutiveFailures": 32,
       "sources": [
         {
           "type": "jsonld",
@@ -328,9 +327,9 @@
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
       "count": 28,
-      "lastRun": "2026-10-16T06:40:24.489-05:00",
-      "lastSuccess": "2026-10-16T06:40:24.489-05:00",
-      "lastNonEmpty": "2026-10-16T06:40:24.489-05:00",
+      "lastRun": "2026-10-16T11:48:34.680-05:00",
+      "lastSuccess": "2026-10-16T11:48:34.680-05:00",
+      "lastNonEmpty": "2026-10-16T11:48:34.680-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
@@ -344,9 +343,9 @@
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
       "count": 12,
-      "lastRun": "2026-10-16T06:40:24.489-05:00",
-      "lastSuccess": "2026-10-16T06:40:24.489-05:00",
-      "lastNonEmpty": "2026-10-16T06:40:24.489-05:00",
+      "lastRun": "2026-10-16T11:48:34.680-05:00",
+      "lastSuccess": "2026-10-16T11:48:34.680-05:00",
+      "lastNonEmpty": "2026-10-16T11:48:34.680-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
@@ -360,9 +359,9 @@
       "ok": true,
       "firstSeen": "2026-10-07T00:12:43.896-05:00",
       "count": 18,
-      "lastRun": "2026-10-16T06:40:24.489-05:00",
-      "lastSuccess": "2026-10-16T06:40:24.489-05:00",
-      "lastNonEmpty": "2026-10-16T06:40:24.489-05:00",
+      "lastRun": "2026-10-16T11:48:34.680-05:00",
+      "lastSuccess": "2026-10-16T11:48:34.680-05:00",
+      "lastNonEmpty": "2026-10-16T11:48:34.680-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
@@ -373,29 +372,28 @@
       ]
     },
     "republic-nola": {
-      "ok": false,
+      "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
       "count": 15,
-      "lastRun": "2026-10-16T06:40:24.489-05:00",
-      "lastSuccess": "2026-10-15T23:45:05.123-05:00",
-      "lastNonEmpty": "2026-10-15T23:45:05.123-05:00",
-      "consecutiveFailures": 1,
+      "lastRun": "2026-10-16T11:48:34.680-05:00",
+      "lastSuccess": "2026-10-16T11:48:34.680-05:00",
+      "lastNonEmpty": "2026-10-16T11:48:34.680-05:00",
+      "consecutiveFailures": 0,
       "sources": [
         {
           "type": "html",
-          "ok": false,
-          "error": "HTTP 403 for https://republicnola.com/calendar/upcoming-shows/"
+          "ok": true,
+          "count": 15
         }
-      ],
-      "error": "html: HTTP 403 for https://republicnola.com/calendar/upcoming-shows/"
+      ]
     },
     "saenger-theatre": {
       "ok": true,
       "firstSeen": "2026-10-07T08:38:46.914-05:00",
       "count": 48,
-      "lastRun": "2026-10-16T06:40:24.489-05:00",
-      "lastSuccess": "2026-10-16T06:40:24.489-05:00",
-      "lastNonEmpty": "2026-10-16T06:40:24.489-05:00",
+      "lastRun": "2026-10-16T11:48:34.680-05:00",
+      "lastSuccess": "2026-10-16T11:48:34.680-05:00",
+      "lastNonEmpty": "2026-10-16T11:48:34.680-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
@@ -409,9 +407,9 @@
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
       "count": 28,
-      "lastRun": "2026-10-16T06:40:24.489-05:00",
-      "lastSuccess": "2026-10-16T06:40:24.489-05:00",
-      "lastNonEmpty": "2026-10-16T06:40:24.489-05:00",
+      "lastRun": "2026-10-16T11:48:34.680-05:00",
+      "lastSuccess": "2026-10-16T11:48:34.680-05:00",
+      "lastNonEmpty": "2026-10-16T11:48:34.680-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
@@ -425,9 +423,9 @@
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
       "count": 9,
-      "lastRun": "2026-10-16T06:40:24.489-05:00",
-      "lastSuccess": "2026-10-16T06:40:24.489-05:00",
-      "lastNonEmpty": "2026-10-16T06:40:24.489-05:00",
+      "lastRun": "2026-10-16T11:48:34.680-05:00",
+      "lastSuccess": "2026-10-16T11:48:34.680-05:00",
+      "lastNonEmpty": "2026-10-16T11:48:34.680-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
@@ -441,9 +439,9 @@
       "ok": true,
       "firstSeen": "2026-10-07T00:24:46.231-05:00",
       "count": 10,
-      "lastRun": "2026-10-16T06:40:24.489-05:00",
-      "lastSuccess": "2026-10-16T06:40:24.489-05:00",
-      "lastNonEmpty": "2026-10-16T06:40:24.489-05:00",
+      "lastRun": "2026-10-16T11:48:34.680-05:00",
+      "lastSuccess": "2026-10-16T11:48:34.680-05:00",
+      "lastNonEmpty": "2026-10-16T11:48:34.680-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
@@ -457,9 +455,9 @@
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
       "count": 298,
-      "lastRun": "2026-10-16T06:40:24.489-05:00",
-      "lastSuccess": "2026-10-16T06:40:24.489-05:00",
-      "lastNonEmpty": "2026-10-16T06:40:24.489-05:00",
+      "lastRun": "2026-10-16T11:48:34.680-05:00",
+      "lastSuccess": "2026-10-16T11:48:34.680-05:00",
+      "lastNonEmpty": "2026-10-16T11:48:34.680-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
@@ -473,9 +471,9 @@
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
       "count": 26,
-      "lastRun": "2026-10-16T06:40:24.489-05:00",
-      "lastSuccess": "2026-10-16T06:40:24.489-05:00",
-      "lastNonEmpty": "2026-10-16T06:40:24.489-05:00",
+      "lastRun": "2026-10-16T11:48:34.680-05:00",
+      "lastSuccess": "2026-10-16T11:48:34.680-05:00",
+      "lastNonEmpty": "2026-10-16T11:48:34.680-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
@@ -489,9 +487,9 @@
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
       "count": 25,
-      "lastRun": "2026-10-16T06:40:24.489-05:00",
-      "lastSuccess": "2026-10-16T06:40:24.489-05:00",
-      "lastNonEmpty": "2026-10-16T06:40:24.489-05:00",
+      "lastRun": "2026-10-16T11:48:34.680-05:00",
+      "lastSuccess": "2026-10-16T11:48:34.680-05:00",
+      "lastNonEmpty": "2026-10-16T11:48:34.680-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
@@ -502,29 +500,28 @@
       ]
     },
     "the-columns": {
-      "ok": false,
+      "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
       "count": 1,
-      "lastRun": "2026-10-16T06:40:24.489-05:00",
-      "lastSuccess": "2026-10-15T23:45:05.123-05:00",
-      "lastNonEmpty": "2026-10-15T23:45:05.123-05:00",
-      "consecutiveFailures": 1,
+      "lastRun": "2026-10-16T11:48:34.680-05:00",
+      "lastSuccess": "2026-10-16T11:48:34.680-05:00",
+      "lastNonEmpty": "2026-10-16T11:48:34.680-05:00",
+      "consecutiveFailures": 0,
       "sources": [
         {
           "type": "tribe",
-          "ok": false,
-          "error": "HTTP 403 for https://thecolumns.com/wp-json/tribe/events/v1/events?per_page=50&start_date=2026-10-16+00%3A00%3A00&end_date=2027-01-14+06%3A40%3A24"
+          "ok": true,
+          "count": 1
         }
-      ],
-      "error": "tribe: HTTP 403 for https://thecolumns.com/wp-json/tribe/events/v1/events?per_page=50&start_date=2026-10-16+00%3A00%3A00&end_date=2027-01-14+06%3A40%3A24"
+      ]
     },
     "the-metropolitan": {
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
       "count": 6,
-      "lastRun": "2026-10-16T06:40:24.489-05:00",
-      "lastSuccess": "2026-10-16T06:40:24.489-05:00",
-      "lastNonEmpty": "2026-10-16T06:40:24.489-05:00",
+      "lastRun": "2026-10-16T11:48:34.680-05:00",
+      "lastSuccess": "2026-10-16T11:48:34.680-05:00",
+      "lastNonEmpty": "2026-10-16T11:48:34.680-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
@@ -538,9 +535,9 @@
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
       "count": 7,
-      "lastRun": "2026-10-16T06:40:24.489-05:00",
-      "lastSuccess": "2026-10-16T06:40:24.489-05:00",
-      "lastNonEmpty": "2026-10-16T06:40:24.489-05:00",
+      "lastRun": "2026-10-16T11:48:34.680-05:00",
+      "lastSuccess": "2026-10-16T11:48:34.680-05:00",
+      "lastNonEmpty": "2026-10-16T11:48:34.680-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
@@ -554,9 +551,9 @@
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
       "count": 161,
-      "lastRun": "2026-10-16T06:40:24.489-05:00",
-      "lastSuccess": "2026-10-16T06:40:24.489-05:00",
-      "lastNonEmpty": "2026-10-16T06:40:24.489-05:00",
+      "lastRun": "2026-10-16T11:48:34.680-05:00",
+      "lastSuccess": "2026-10-16T11:48:34.680-05:00",
+      "lastNonEmpty": "2026-10-16T11:48:34.680-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
@@ -570,9 +567,9 @@
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
       "count": 4,
-      "lastRun": "2026-10-16T06:40:24.489-05:00",
-      "lastSuccess": "2026-10-16T06:40:24.489-05:00",
-      "lastNonEmpty": "2026-10-16T06:40:24.489-05:00",
+      "lastRun": "2026-10-16T11:48:34.680-05:00",
+      "lastSuccess": "2026-10-16T11:48:34.680-05:00",
+      "lastNonEmpty": "2026-10-16T11:48:34.680-05:00",
       "consecutiveFailures": 0,
       "sources": [
         {
@@ -583,22 +580,21 @@
       ]
     },
     "tips": {
-      "ok": false,
+      "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
       "count": 33,
-      "lastRun": "2026-10-16T06:40:24.489-05:00",
-      "lastSuccess": "2026-10-15T23:45:05.123-05:00",
-      "lastNonEmpty": "2026-10-15T23:45:05.123-05:00",
-      "consecutiveFailures": 1,
+      "lastRun": "2026-10-16T11:48:34.680-05:00",
+      "lastSuccess": "2026-10-16T11:48:34.680-05:00",
+      "lastNonEmpty": "2026-10-16T11:48:34.680-05:00",
+      "consecutiveFailures": 0,
       "sources": [
         {
           "type": "html",
-          "ok": false,
-          "error": "HTTP 403 for https://tipitinas.com/"
+          "ok": true,
+          "count": 33
         }
-      ],
-      "error": "html: HTTP 403 for https://tipitinas.com/"
+      ]
     }
   },
-  "generatedAt": "2026-10-16T06:40:24.489-05:00"
+  "generatedAt": "2026-10-16T11:48:34.680-05:00"
 }
