@@ -2,12 +2,6 @@
   "venue": "santos-bar",
   "events": [
     {
-      "id": "a14d15025895",
-      "title": "ELECTRO CLASH",
-      "start": "2026-10-15T23:00:00-05:00",
-      "url": "https://www.santosbar.com/tm-event/electro-clash/"
-    },
-    {
       "id": "aef70a9ddb69",
       "title": "PRESSURE BEAT (upstairs)",
       "start": "2026-10-16T22:00:00-05:00",

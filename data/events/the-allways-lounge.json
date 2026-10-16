@@ -2,41 +2,6 @@
   "venue": "the-allways-lounge",
   "events": [
     {
-      "id": "b04ecaf224ba",
-      "title": "Ballet for all Bodies",
-      "start": "2026-10-15T15:30:00-05:00",
-      "end": "2026-10-15T16:30:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/4558/1792096200000"
-    },
-    {
-      "id": "4df16d391c18",
-      "title": "True Crime Drag Show",
-      "start": "2026-10-15T19:00:00-05:00",
-      "end": "2026-10-15T20:30:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/4601/1792108800000"
-    },
-    {
-      "id": "907d4f6497c7",
-      "title": "Van Ella Bordella (burlesque)",
-      "start": "2026-10-15T19:00:00-05:00",
-      "end": "2026-10-15T21:30:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/1768/1792108800000"
-    },
-    {
-      "id": "a97024292825",
-      "title": "Bodice Rippers Burlesque Book Club",
-      "start": "2026-10-15T22:30:00-05:00",
-      "end": "2026-10-15T23:30:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/4414/1792121400000"
-    },
-    {
-      "id": "ccb6025e52d5",
-      "title": "Scholastic Book Scare",
-      "start": "2026-10-15T22:30:00-05:00",
-      "end": "2026-10-15T23:55:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/4501/1792121400000"
-    },
-    {
       "id": "9afa5a8add1c",
       "title": "Henrietta's Baudy Brothel Sing A-Long",
       "start": "2026-10-16T17:00:00-05:00",

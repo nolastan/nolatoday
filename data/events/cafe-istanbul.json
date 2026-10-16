@@ -2,9 +2,17 @@
   "venue": "cafe-istanbul",
   "events": [
     {
+      "id": "657ce93c5ab1",
+      "title": "Brass & Bones Cabaret",
+      "start": "2026-10-16T07:00:00-05:00",
+      "end": "2026-10-16T21:00:00-05:00",
+      "url": "https://www.cafeistanbulnola.com/upcoming-events/9aksajm7wzg3glekt24wjgwpkh47n3"
+    },
+    {
       "id": "a09e9eed8cb2",
       "title": "Latin Night",
       "start": "2026-10-16T23:00:00-05:00",
+      "end": "2026-10-16T23:59:00-05:00",
       "url": "https://www.cafeistanbulnola.com/upcoming-events/latin-night-4"
     },
     {
