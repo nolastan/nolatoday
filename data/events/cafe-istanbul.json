@@ -2,6 +2,12 @@
   "venue": "cafe-istanbul",
   "events": [
     {
+      "id": "a09e9eed8cb2",
+      "title": "Latin Night",
+      "start": "2026-10-16T23:00:00-05:00",
+      "url": "https://www.cafeistanbulnola.com/upcoming-events/latin-night-4"
+    },
+    {
       "id": "ace6ca136c13",
       "title": "Poets on Poets",
       "start": "2026-10-21T22:00:00-05:00",
@@ -35,6 +41,13 @@
       "start": "2026-10-29T20:00:00-05:00",
       "end": "2026-10-29T23:00:00-05:00",
       "url": "https://www.cafeistanbulnola.com/upcoming-events/rockstar-halloween"
+    },
+    {
+      "id": "7eefb141efaf",
+      "title": "Conjure into the Magical real!",
+      "start": "2026-11-06T19:30:00-06:00",
+      "end": "2026-11-06T21:30:00-06:00",
+      "url": "https://www.cafeistanbulnola.com/upcoming-events/conjure-into-the-magical-real"
     },
     {
       "id": "f7b759bd68ac",

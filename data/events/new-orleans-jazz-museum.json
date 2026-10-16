@@ -2,13 +2,6 @@
   "venue": "new-orleans-jazz-museum",
   "events": [
     {
-      "id": "66ad8a73381b",
-      "title": "Trempo Masterclass",
-      "start": "2026-10-15T09:00:00-05:00",
-      "end": "2026-10-15T16:00:00-05:00",
-      "url": "https://nolajazzmuseum.org/events/2026/10/5/trempo-ktwyg-b8wxl-hx68g-ged6g-228yg-wktjb-4chce-h3cfk"
-    },
-    {
       "id": "16493e077fc9",
       "title": "Hispanic Heritage Month Celebration: Arco Latino",
       "start": "2026-10-16T14:00:00-05:00",
