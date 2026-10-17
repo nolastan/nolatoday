@@ -2,12 +2,6 @@
   "venue": "tips",
   "events": [
     {
-      "id": "6941299dd3e7",
-      "title": "Let Me Stand Next To Your Fire",
-      "start": "2026-10-16T23:59:00-05:00",
-      "url": "https://tipitinas.com/event/15044203/let-me-stand-next-to-your-fire"
-    },
-    {
       "id": "a144dc6ea12a",
       "title": "DJ Soul Sister's 80's Party - No Parking On The Dance Floor",
       "start": "2026-10-17T21:00:00-05:00",
@@ -198,6 +192,12 @@
       "title": "Gimme Gimme Disco",
       "start": "2026-12-26T21:00:00-06:00",
       "url": "https://tipitinas.com/event/14296354/gimme-gimme-disco"
+    },
+    {
+      "id": "be435db60c6f",
+      "title": "The Radiators 2.0",
+      "start": "2027-01-14T21:00:00-06:00",
+      "url": "https://tipitinas.com/event/14385544/the-radiators-2-0"
     }
   ]
 }
