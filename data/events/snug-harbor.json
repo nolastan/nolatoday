@@ -2,18 +2,6 @@
   "venue": "snug-harbor",
   "events": [
     {
-      "id": "b01449169dd4",
-      "title": "Nolatet",
-      "start": "2026-10-16T19:30:00-05:00",
-      "url": "https://www.jambase.com/show/nolatet-snug-harbor-20261016"
-    },
-    {
-      "id": "0a2bae4125df",
-      "title": "Nolatet",
-      "start": "2026-10-16T21:30:00-05:00",
-      "url": "https://www.jambase.com/show/nolatet-snug-harbor-20261016-2"
-    },
-    {
       "id": "d35295f05860",
       "title": "ELEW",
       "start": "2026-10-17T19:30:00-05:00",

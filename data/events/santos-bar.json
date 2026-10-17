@@ -2,18 +2,6 @@
   "venue": "santos-bar",
   "events": [
     {
-      "id": "aef70a9ddb69",
-      "title": "PRESSURE BEAT (upstairs)",
-      "start": "2026-10-16T22:00:00-05:00",
-      "url": "https://www.santosbar.com/tm-event/pressure-beat-upstairs/"
-    },
-    {
-      "id": "3cd20fc2d041",
-      "title": "TEMPO PRESENTS: LAST CALL",
-      "start": "2026-10-16T23:59:00-05:00",
-      "url": "https://www.santosbar.com/tm-event/tempo-presents-last-call/"
-    },
-    {
       "id": "74a1f0d481f1",
       "title": "NOX presents: NO SIGNAL",
       "start": "2026-10-17T22:00:00-05:00",

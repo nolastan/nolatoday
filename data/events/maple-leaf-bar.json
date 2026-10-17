@@ -2,13 +2,6 @@
   "venue": "maple-leaf-bar",
   "events": [
     {
-      "id": "e3619fc3a007",
-      "title": "Joe Marcinek’s Dead Funk Summit All Star Super Jam",
-      "start": "2026-10-16T23:00:00-05:00",
-      "end": "2026-10-17T02:00:00-05:00",
-      "url": "https://www.mapleleafbar.com/events/joe-marcineks-dead-funk-summit-all-star-super-jam"
-    },
-    {
       "id": "de7c0b599020",
       "title": "Smokers World",
       "start": "2026-10-17T20:00:00-05:00",
@@ -41,6 +34,13 @@
       "start": "2026-10-19T22:00:00-05:00",
       "end": "2026-10-20T00:00:00-05:00",
       "url": "https://www.mapleleafbar.com/events/george-porter-jr-trio-ft-chris-adkins-10"
+    },
+    {
+      "id": "fb6aaf68b4e3",
+      "title": "Very Good Tuesday Ft. Pastor J, Alvin Ford Jr, J Blakk, Ari Teitel",
+      "start": "2026-10-20T20:30:00-05:00",
+      "end": "2026-10-21T00:30:00-05:00",
+      "url": "https://www.mapleleafbar.com/events/very-good-tuesday-ft-pastor-j-alvin-ford-jr-j-blakk-ari-teitel"
     }
   ]
 }

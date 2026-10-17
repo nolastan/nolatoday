@@ -2,24 +2,6 @@
   "venue": "the-spotted-cat",
   "events": [
     {
-      "id": "2131baf4f995",
-      "title": "Paradise Jazz Band",
-      "start": "2026-10-16T14:00:00-05:00",
-      "url": "https://www.spottedcatmusicclub.com/calendar"
-    },
-    {
-      "id": "a968e2b90221",
-      "title": "Dirty Tuba",
-      "start": "2026-10-16T22:00:00-05:00",
-      "url": "https://www.spottedcatmusicclub.com/calendar"
-    },
-    {
-      "id": "ef724f095d02",
-      "title": "New Orleans Cottonmouth Kings",
-      "start": "2026-10-16T22:00:00-05:00",
-      "url": "https://www.spottedcatmusicclub.com/calendar"
-    },
-    {
       "id": "91007cc89c78",
       "title": "Twerk Thomson Band",
       "start": "2026-10-17T14:00:00-05:00",

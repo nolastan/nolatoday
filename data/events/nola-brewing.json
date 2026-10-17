@@ -2,13 +2,6 @@
   "venue": "nola-brewing",
   "events": [
     {
-      "id": "e11edd5c4f1f",
-      "title": "Dave Jordan Trio",
-      "start": "2026-10-16T19:00:00-05:00",
-      "end": "2026-10-16T22:00:00-05:00",
-      "url": "https://www.nolabrewing.com/new-orleans-irish-channel-nola-brewing-live-music-and-events"
-    },
-    {
       "id": "425983bb6bc2",
       "title": "The NOLA Treblemakers",
       "start": "2026-10-17T19:00:00-05:00",
