@@ -2,13 +2,6 @@
   "venue": "new-orleans-jazz-museum",
   "events": [
     {
-      "id": "5724548a9d07",
-      "title": "Dominican NOLA Fest",
-      "start": "2026-10-17T11:00:00-05:00",
-      "end": "2026-10-17T19:30:00-05:00",
-      "url": "https://nolajazzmuseum.org/events/2026/10/17/dominican-nola-fest"
-    },
-    {
       "id": "c9a80ca857f7",
       "title": "Freedom at the Mat: Freedom Fête",
       "start": "2026-10-18T14:30:00-05:00",

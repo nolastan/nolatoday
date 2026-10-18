@@ -2,12 +2,6 @@
   "venue": "tips",
   "events": [
     {
-      "id": "a144dc6ea12a",
-      "title": "DJ Soul Sister's 80's Party - No Parking On The Dance Floor",
-      "start": "2026-10-17T21:00:00-05:00",
-      "url": "https://tipitinas.com/event/14280354/dj-soul-sisters-80s-party-no-parking-on-the-dance-floor"
-    },
-    {
       "id": "f1970d38fd80",
       "title": "Black Joe Lewis & JD Simo With Luther Dickinson",
       "start": "2026-10-22T20:00:00-05:00",
@@ -198,6 +192,12 @@
       "title": "The Radiators 2.0",
       "start": "2027-01-14T21:00:00-06:00",
       "url": "https://tipitinas.com/event/14385544/the-radiators-2-0"
+    },
+    {
+      "id": "998a63fd3d33",
+      "title": "The Radiators 2.0",
+      "start": "2027-01-15T21:00:00-06:00",
+      "url": "https://tipitinas.com/event/14370564/the-radiators-2-0"
     }
   ]
 }
