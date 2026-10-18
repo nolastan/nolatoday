@@ -2,12 +2,6 @@
   "venue": "republic-nola",
   "events": [
     {
-      "id": "bd6f06bb5bea",
-      "title": "REWIND: 2000s",
-      "start": "2026-10-17T23:00:00-05:00",
-      "url": "https://republicnola.com/event/rewind-2000s-4/"
-    },
-    {
       "id": "bcf395c9d256",
       "title": "Haus Obscura",
       "start": "2026-10-18",
