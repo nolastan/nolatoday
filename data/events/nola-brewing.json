@@ -2,13 +2,6 @@
   "venue": "nola-brewing",
   "events": [
     {
-      "id": "425983bb6bc2",
-      "title": "The NOLA Treblemakers",
-      "start": "2026-10-17T19:00:00-05:00",
-      "end": "2026-10-17T22:00:00-05:00",
-      "url": "https://www.nolabrewing.com/new-orleans-irish-channel-nola-brewing-live-music-and-events"
-    },
-    {
       "id": "431215f1bebc",
       "title": "Brisket, Babka & Beats featuring performances by Where Y'acht and The Shanks",
       "start": "2026-10-18T15:00:00-05:00",

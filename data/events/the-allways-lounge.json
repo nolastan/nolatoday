@@ -2,34 +2,6 @@
   "venue": "the-allways-lounge",
   "events": [
     {
-      "id": "a961d9075add",
-      "title": "Burning Hell Burlesque",
-      "start": "2026-10-16T22:30:00-05:00",
-      "end": "2026-10-17T00:30:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/3230/1792207800000"
-    },
-    {
-      "id": "d7df7a7c2071",
-      "title": "Beetlejuice (Tim Burton Burlesque)",
-      "start": "2026-10-16T23:00:00-05:00",
-      "end": "2026-10-17T02:00:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/4421/1792209600000"
-    },
-    {
-      "id": "a5e2cf1526d8",
-      "title": "Van Ella Bordella (burlesque)",
-      "start": "2026-10-17T19:00:00-05:00",
-      "end": "2026-10-17T21:30:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/1997/1792281600000/90"
-    },
-    {
-      "id": "a63576edcfec",
-      "title": "Broadville Follies (musical theater variety)",
-      "start": "2026-10-17T19:30:00-05:00",
-      "end": "2026-10-17T21:00:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/4161/1792283400000"
-    },
-    {
       "id": "ab6eb3794f1a",
       "title": "Vampyre Cabaret (burlesque,camp & live music)",
       "start": "2026-10-17T22:30:00-05:00",

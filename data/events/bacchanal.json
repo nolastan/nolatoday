@@ -2,18 +2,6 @@
   "venue": "bacchanal",
   "events": [
     {
-      "id": "9f40143682af",
-      "title": "Miles Berry",
-      "start": "2026-10-17T13:00:00-05:00",
-      "end": "2026-10-17T16:00:00-05:00"
-    },
-    {
-      "id": "02c20556a9fd",
-      "title": "Pete Olynciw",
-      "start": "2026-10-17T19:00:00-05:00",
-      "end": "2026-10-17T22:00:00-05:00"
-    },
-    {
       "id": "d65e485f900f",
       "title": "Arnold Little",
       "start": "2026-10-18T13:00:00-05:00",

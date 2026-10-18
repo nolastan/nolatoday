@@ -2,13 +2,6 @@
   "venue": "joy-theater",
   "events": [
     {
-      "id": "ec05ea336d5a",
-      "title": "Bingo Loco",
-      "start": "2026-10-17",
-      "allDay": true,
-      "url": "https://thejoytheater.com/event/bingo-loco/"
-    },
-    {
       "id": "da6ecd6b5913",
       "title": "Vivacious Burlesque Experience: DEVIL’S NIGHT",
       "start": "2026-10-18",

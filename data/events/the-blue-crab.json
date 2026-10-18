@@ -2,12 +2,6 @@
   "venue": "the-blue-crab",
   "events": [
     {
-      "id": "c9f844ebdc26",
-      "title": "Redline",
-      "start": "2026-10-17T16:00:00-05:00",
-      "end": "2026-10-17T20:00:00-05:00"
-    },
-    {
       "id": "39086fc38f30",
       "title": "Rare Groove",
       "start": "2026-10-18T16:00:00-05:00",
