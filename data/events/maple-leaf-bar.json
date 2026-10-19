@@ -23,6 +23,13 @@
       "url": "https://www.mapleleafbar.com/events/very-good-tuesday-ft-pastor-j-alvin-ford-jr-j-blakk-ari-teitel"
     },
     {
+      "id": "a5b94fc6a120",
+      "title": "Ashlar Organ Time Ft. Danny Abel & Alfred Jordan",
+      "start": "2026-10-21T19:00:00-05:00",
+      "end": "2026-10-21T23:00:00-05:00",
+      "url": "https://www.mapleleafbar.com/events/ashlar-organ-time-ft-danny-abel-alfred-jordan"
+    },
+    {
       "id": "ea534784b786",
       "title": "Booker & Beyond - Tom Worrell",
       "start": "2026-10-22T18:00:00-05:00",
@@ -35,12 +42,6 @@
       "start": "2026-10-22T20:00:00-05:00",
       "end": "2026-10-23T00:00:00-05:00",
       "url": "https://www.mapleleafbar.com/events/johnny-vidacovich-trio-ft-oscar-rossignoli-amina-scott"
-    },
-    {
-      "id": "a2e0587513b1",
-      "title": "Guitarmy",
-      "start": "2026-10-23T20:00:00-05:00",
-      "url": "https://www.mapleleafbar.com/events/guitarmy"
     }
   ]
 }
