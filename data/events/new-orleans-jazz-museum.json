@@ -2,13 +2,6 @@
   "venue": "new-orleans-jazz-museum",
   "events": [
     {
-      "id": "c9a80ca857f7",
-      "title": "Freedom at the Mat: Freedom Fête",
-      "start": "2026-10-18T14:30:00-05:00",
-      "end": "2026-10-18T17:30:00-05:00",
-      "url": "https://nolajazzmuseum.org/events/2026/10/18/freedom-at-the-mat-freedom-fete"
-    },
-    {
       "id": "e562eb923dc2",
       "title": "The Cultural Center for New Orleans in the South of France with BassX",
       "start": "2026-10-20T16:00:00-05:00",
