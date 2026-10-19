@@ -2,18 +2,6 @@
   "venue": "dba",
   "events": [
     {
-      "id": "95d6d89fbd6a",
-      "title": "Paradise Jazz Band",
-      "start": "2026-10-18T18:00:00-05:00",
-      "url": "https://www.dbaneworleans.com/shows"
-    },
-    {
-      "id": "aaefc87599b9",
-      "title": "The Jump Hounds",
-      "start": "2026-10-18T21:30:00-05:00",
-      "url": "https://www.dbaneworleans.com/shows"
-    },
-    {
       "id": "0f18a78aaf89",
       "title": "Secret Six Jazz Band",
       "start": "2026-10-19T18:00:00-05:00",

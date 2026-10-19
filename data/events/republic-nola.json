@@ -2,19 +2,6 @@
   "venue": "republic-nola",
   "events": [
     {
-      "id": "bcf395c9d256",
-      "title": "Haus Obscura",
-      "start": "2026-10-18",
-      "allDay": true,
-      "url": "https://republicnola.com/event/haus-obscura/"
-    },
-    {
-      "id": "5aeac50e1f9b",
-      "title": "Freakshow New Orleans",
-      "start": "2026-10-18T15:00:00-05:00",
-      "url": "https://republicnola.com/event/freakshow-new-orleans-after-the-fall-10-18/"
-    },
-    {
       "id": "d985a7b6eb9b",
       "title": "Deathpact",
       "start": "2026-10-23T23:00:00-05:00",

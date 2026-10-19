@@ -2,13 +2,6 @@
   "venue": "maple-leaf-bar",
   "events": [
     {
-      "id": "0a0f61126ec2",
-      "title": "Pastor J and the Funky Revival",
-      "start": "2026-10-18T20:00:00-05:00",
-      "end": "2026-10-19T00:00:00-05:00",
-      "url": "https://www.mapleleafbar.com/events/pastor-j-and-the-funky-revival"
-    },
-    {
       "id": "7e8988cf41a9",
       "title": "George Porter Jr. Trio Ft. Chris Adkins",
       "start": "2026-10-19T19:00:00-05:00",
@@ -42,6 +35,12 @@
       "start": "2026-10-22T20:00:00-05:00",
       "end": "2026-10-23T00:00:00-05:00",
       "url": "https://www.mapleleafbar.com/events/johnny-vidacovich-trio-ft-oscar-rossignoli-amina-scott"
+    },
+    {
+      "id": "a2e0587513b1",
+      "title": "Guitarmy",
+      "start": "2026-10-23T20:00:00-05:00",
+      "url": "https://www.mapleleafbar.com/events/guitarmy"
     }
   ]
 }
