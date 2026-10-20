@@ -62,10 +62,40 @@
       "url": "https://dosjefes.com/events/dale-spalding/"
     },
     {
+      "id": "9f5baf19eeca",
+      "title": "Captain Spalding",
+      "start": "2026-11-01T20:00:00-06:00",
+      "url": "https://dosjefes.com/events/captain-larry-spalding/"
+    },
+    {
       "id": "2284d2fbb20c",
       "title": "JOHN FOHL",
       "start": "2026-11-02T20:30:00-06:00",
       "url": "https://dosjefes.com/events/john-fohl-3-2026-11-02/"
+    },
+    {
+      "id": "3be725e16101",
+      "title": "Tom Hook",
+      "start": "2026-11-03T20:30:00-06:00",
+      "url": "https://dosjefes.com/events/tom-hook-2025-08-05/"
+    },
+    {
+      "id": "f5bd06fd0ef3",
+      "title": "Kris Tokarski",
+      "start": "2026-11-04T20:30:00-06:00",
+      "url": "https://dosjefes.com/events/the-kris-tokarski-trio/"
+    },
+    {
+      "id": "af1d84077948",
+      "title": "THE AFRODIZIAC'S JAZZ",
+      "start": "2026-11-07T21:00:00-06:00",
+      "url": "https://dosjefes.com/events/the-afro-disiacs/"
+    },
+    {
+      "id": "86fbaae9672b",
+      "title": "JOHN FOHL",
+      "start": "2026-11-09T20:30:00-06:00",
+      "url": "https://dosjefes.com/events/john-fohl-3-2026-11-09/"
     }
   ]
 }
