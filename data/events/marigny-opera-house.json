@@ -2,6 +2,12 @@
   "venue": "marigny-opera-house",
   "events": [
     {
+      "id": "ff995c48cf0e",
+      "title": "Marigny Opera Ballet 2026-2027 Encore Subscription",
+      "start": "2026-10-20T12:00:00-05:00",
+      "url": "https://marignyoperahouse.org/upcoming-events/marigny-opera-ballet-2026-2027-encore-subscription/"
+    },
+    {
       "id": "e3cf15d10698",
       "title": "Vocal Masterclass: Bogdan Mynka",
       "start": "2026-10-22T18:00:00-05:00",
