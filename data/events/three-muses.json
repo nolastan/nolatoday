@@ -1,4 +1,19 @@
 {
   "venue": "three-muses",
-  "events": []
+  "events": [
+    {
+      "id": "e58daebd0f18",
+      "title": "Betty Shirley",
+      "start": "2026-10-21T20:00:00-05:00",
+      "end": "2026-10-21T23:00:00-05:00",
+      "url": "https://www.3musesnola.com/music/betty-shirley-1"
+    },
+    {
+      "id": "e57acb025f48",
+      "title": "Hobo Gadget Junk Band",
+      "start": "2026-10-22T19:30:00-05:00",
+      "end": "2026-10-22T23:30:00-05:00",
+      "url": "https://www.3musesnola.com/music/hobo-gadget-junk-band"
+    }
+  ]
 }
