@@ -2,18 +2,6 @@
   "venue": "bacchanal",
   "events": [
     {
-      "id": "a1a5b8480e8c",
-      "title": "Raphael Bas",
-      "start": "2026-10-19T12:00:00-05:00",
-      "end": "2026-10-19T15:00:00-05:00"
-    },
-    {
-      "id": "aaec0f48b73f",
-      "title": "Byron Asher",
-      "start": "2026-10-19T18:00:00-05:00",
-      "end": "2026-10-19T21:00:00-05:00"
-    },
-    {
       "id": "3f2905afa10d",
       "title": "Raphael Bas",
       "start": "2026-10-20T12:00:00-05:00",

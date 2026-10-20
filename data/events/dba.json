@@ -2,12 +2,6 @@
   "venue": "dba",
   "events": [
     {
-      "id": "0f18a78aaf89",
-      "title": "Secret Six Jazz Band",
-      "start": "2026-10-19T18:00:00-05:00",
-      "url": "https://www.dbaneworleans.com/shows"
-    },
-    {
       "id": "a625a9944878",
       "title": "Corey Henry & the Treme Funktet : Red Beans & Ricely Yours",
       "start": "2026-10-19T21:30:00-05:00",
@@ -156,14 +150,14 @@
       "id": "0ffbab7eb94e",
       "title": "New Breed Brass Band",
       "start": "2026-10-30T22:00:00-05:00",
-      "url": "https://www.dbaneworleans.com/shows"
+      "url": "https://www.eventbrite.com/e/2003645150582?aff=oddtdtcreator"
     },
     {
       "id": "8f0903bdc16b",
       "title": "Lyndsey Smith",
       "start": "2026-10-31",
       "allDay": true,
-      "url": "https://www.dbaneworleans.com/shows"
+      "url": "https://www.eventbrite.com/e/lyndsey-smith-halloween-night-at-dba-tickets-2003645349176"
     },
     {
       "id": "01fa2e92b8d7",

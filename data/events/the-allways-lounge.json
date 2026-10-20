@@ -2,41 +2,6 @@
   "venue": "the-allways-lounge",
   "events": [
     {
-      "id": "0145ef28cc6b",
-      "title": "Pinky DeVille presents: Heathen's Halloween.(burlesque)",
-      "start": "2026-10-18T22:30:00-05:00",
-      "end": "2026-10-19T01:30:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/4589/1792380600000"
-    },
-    {
-      "id": "6e5f38eb8526",
-      "title": "Meatsuit Maintenance: Company Class",
-      "start": "2026-10-19T14:00:00-05:00",
-      "end": "2026-10-19T15:00:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/4325/1792436400000"
-    },
-    {
-      "id": "98f30b433b63",
-      "title": "Betsy Propane Smoke Show (live music & burlesque)",
-      "start": "2026-10-19T19:00:00-05:00",
-      "end": "2026-10-19T20:30:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/2864/1792454400000"
-    },
-    {
-      "id": "6bb8a9d7ec03",
-      "title": "justin Betweener :Calls from Inside (drag)",
-      "start": "2026-10-19T20:00:00-05:00",
-      "end": "2026-10-19T22:00:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/4595/1792458000000"
-    },
-    {
-      "id": "0c57c417bc51",
-      "title": "Almost Naked Karaoke",
-      "start": "2026-10-19T21:30:00-05:00",
-      "end": "2026-10-19T23:30:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/2269/1792463400000"
-    },
-    {
       "id": "ec238842e36b",
       "title": "Cabaret of Legends, a Burlesque Revue inspired by Myths, Folklore, and Legends",
       "start": "2026-10-20T18:30:00-05:00",
@@ -336,6 +301,13 @@
       "start": "2026-10-30T23:00:00-05:00",
       "end": "2026-10-31T01:30:00-05:00",
       "url": "https://tockify.com/allwayslounge/detail/4134/1793419200000"
+    },
+    {
+      "id": "7b15c5199350",
+      "title": "THE BLOOD & GLITTER BURLESQUE SPOOKSHOW",
+      "start": "2026-10-31T17:00:00-05:00",
+      "end": "2026-10-31T18:30:00-05:00",
+      "url": "https://tockify.com/allwayslounge/detail/4396/1793484000000/1"
     },
     {
       "id": "034b24ef0056",
@@ -2078,6 +2050,27 @@
       "start": "2027-01-16T23:00:00-06:00",
       "end": "2027-01-17T01:00:00-06:00",
       "url": "https://tockify.com/allwayslounge/detail/3788/1800160200000/38"
+    },
+    {
+      "id": "f249d8da0466",
+      "title": "Noobs (burlesque newbies)",
+      "start": "2027-01-17T18:30:00-06:00",
+      "end": "2027-01-17T19:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/3989/1800232200000"
+    },
+    {
+      "id": "ea3f14dd5de0",
+      "title": "Van Ella Bordella (burlesque)",
+      "start": "2027-01-17T19:00:00-06:00",
+      "end": "2027-01-17T21:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/1997/1800234000000/109"
+    },
+    {
+      "id": "46c8a0624c84",
+      "title": "Swing Night (live music & dance lessons)",
+      "start": "2027-01-17T20:00:00-06:00",
+      "end": "2027-01-17T23:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/1860/1800237600000"
     }
   ]
 }

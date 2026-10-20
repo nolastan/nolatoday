@@ -2,13 +2,6 @@
   "venue": "nola-brewing",
   "events": [
     {
-      "id": "c934fd3f04c8",
-      "title": "The Bluegrass Pickin' Party",
-      "start": "2026-10-19T19:00:00-05:00",
-      "end": "2026-10-19T21:00:00-05:00",
-      "url": "https://www.nolabrewing.com/new-orleans-irish-channel-nola-brewing-live-music-and-events"
-    },
-    {
       "id": "3812d1c36a83",
       "title": "Gal Holiday and the Honky Tonk Revue",
       "start": "2026-10-23T19:00:00-05:00",
@@ -19,6 +12,13 @@
       "id": "938a913a6773",
       "title": "The Tanglers",
       "start": "2026-10-24T19:00:00-05:00",
+      "url": "https://www.nolabrewing.com/new-orleans-irish-channel-nola-brewing-live-music-and-events"
+    },
+    {
+      "id": "6669333718d1",
+      "title": "The Bluegrass Pickin' Party",
+      "start": "2026-10-26T19:00:00-05:00",
+      "end": "2026-10-26T21:00:00-05:00",
       "url": "https://www.nolabrewing.com/new-orleans-irish-channel-nola-brewing-live-music-and-events"
     },
     {
