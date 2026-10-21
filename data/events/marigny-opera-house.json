@@ -32,6 +32,12 @@
       "url": "https://marignyoperahouse.org/upcoming-events/juice-halloween-music-massacre/"
     },
     {
+      "id": "fe32c9ad7546",
+      "title": "Liam Escame Quintet Live at Marigny Opera House",
+      "start": "2026-11-09T20:00:00-06:00",
+      "url": "https://marignyoperahouse.org/upcoming-events/liam-escame-quintet-live/"
+    },
+    {
       "id": "dd798682417b",
       "title": "Vocal Masterclass: Joshua Stewart",
       "start": "2026-11-10T18:00:00-06:00",
@@ -66,12 +72,6 @@
       "title": "Fashion Design Masterclass: Magdalene Paris",
       "start": "2026-12-15T18:00:00-06:00",
       "url": "https://marignyoperahouse.org/upcoming-events/fashion-design-masterclass-magdalene-paris/"
-    },
-    {
-      "id": "481c692b7db8",
-      "title": "Die Sieben Todsünden",
-      "start": "2026-12-18T20:00:00-06:00",
-      "url": "https://marignyoperahouse.org/upcoming-events/die-sieben-todsunden-the-seven-deadly-sins/"
     }
   ]
 }
