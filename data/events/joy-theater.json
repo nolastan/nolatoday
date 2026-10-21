@@ -2,13 +2,6 @@
   "venue": "joy-theater",
   "events": [
     {
-      "id": "837b255b66b2",
-      "title": "Soccer Mommy & Snail Mail",
-      "start": "2026-10-20",
-      "allDay": true,
-      "url": "https://thejoytheater.com/event/soccer-mommy-snail-mail/"
-    },
-    {
       "id": "71e07d64d93a",
       "title": "Snarky Puppy – Somni US Tour ’26",
       "start": "2026-10-22",

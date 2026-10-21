@@ -2,27 +2,6 @@
   "venue": "the-allways-lounge",
   "events": [
     {
-      "id": "ec238842e36b",
-      "title": "Cabaret of Legends, a Burlesque Revue inspired by Myths, Folklore, and Legends",
-      "start": "2026-10-20T18:30:00-05:00",
-      "end": "2026-10-20T20:30:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/4523/1792539000000"
-    },
-    {
-      "id": "903408358761",
-      "title": "Scooby-Doo Screening",
-      "start": "2026-10-20T20:00:00-05:00",
-      "end": "2026-10-20T22:00:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/4615/1792544400000"
-    },
-    {
-      "id": "35a17dcff11c",
-      "title": "Sundown Striptease (burlesque)",
-      "start": "2026-10-20T21:30:00-05:00",
-      "end": "2026-10-20T23:00:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/2404/1792549800000"
-    },
-    {
       "id": "b02069bd5d60",
       "title": "Lefty Lucy's Burlesque Bingo",
       "start": "2026-10-21T18:30:00-05:00",
@@ -2071,6 +2050,20 @@
       "start": "2027-01-17T20:00:00-06:00",
       "end": "2027-01-17T23:30:00-06:00",
       "url": "https://tockify.com/allwayslounge/detail/1860/1800237600000"
+    },
+    {
+      "id": "9acff6141ad9",
+      "title": "Betsy Propane Smoke Show (live music & burlesque)",
+      "start": "2027-01-18T19:00:00-06:00",
+      "end": "2027-01-18T20:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/2864/1800320400000"
+    },
+    {
+      "id": "cf67931bb0f8",
+      "title": "Almost Naked Karaoke",
+      "start": "2027-01-18T21:30:00-06:00",
+      "end": "2027-01-18T23:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/2269/1800329400000"
     }
   ]
 }

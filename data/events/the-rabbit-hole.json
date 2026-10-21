@@ -2,12 +2,6 @@
   "venue": "the-rabbit-hole",
   "events": [
     {
-      "id": "7944e272a267",
-      "title": "Rebirth Brass Band Tuesdays @ The Rabbit Hole",
-      "start": "2026-10-20T21:00:00-05:00",
-      "url": "https://www.eventbrite.com/e/rebirth-brass-band-tuesdays-the-rabbit-hole-tickets-1112074858839"
-    },
-    {
       "id": "757db68ade95",
       "title": "Sleep Club",
       "start": "2026-10-21T20:00:00-05:00",
@@ -18,6 +12,12 @@
       "title": "RAVE TILL THE GRAVE",
       "start": "2026-10-23T22:00:00-05:00",
       "url": "https://www.eventbrite.com/e/rave-till-the-grave-tickets-2001898563493"
+    },
+    {
+      "id": "ebdca60948e5",
+      "title": "Rebirth Brass Band Tuesdays @ The Rabbit Hole",
+      "start": "2026-10-27T21:00:00-05:00",
+      "url": "https://www.eventbrite.com/e/rebirth-brass-band-tuesdays-the-rabbit-hole-tickets-1112074858839"
     },
     {
       "id": "54e7e5a041b3",
