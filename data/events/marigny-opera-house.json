@@ -50,6 +50,18 @@
       "url": "https://marignyoperahouse.org/upcoming-events/americana-tucker-fuller-philip-glass/"
     },
     {
+      "id": "e0866e0f64ca",
+      "title": "The Desanctified Fashion Show",
+      "start": "2026-11-19T20:00:00-06:00",
+      "url": "https://marignyoperahouse.org/upcoming-events/desanctified-fashion-show/"
+    },
+    {
+      "id": "004b44081402",
+      "title": "21st Annual DRAWATHON",
+      "start": "2026-11-28T12:00:00-06:00",
+      "url": "https://marignyoperahouse.org/upcoming-events/drawathon/"
+    },
+    {
       "id": "9fe59a20fc0a",
       "title": "Die Sieben Todsünden",
       "start": "2026-12-11T20:00:00-06:00",
@@ -60,18 +72,6 @@
       "title": "Die Sieben Todsünden",
       "start": "2026-12-12T20:00:00-06:00",
       "url": "https://marignyoperahouse.org/upcoming-events/die-sieben-todsunden-the-seven-deadly-sins/"
-    },
-    {
-      "id": "d8b5a58720ab",
-      "title": "Die Sieben Todsünden",
-      "start": "2026-12-13T16:00:00-06:00",
-      "url": "https://marignyoperahouse.org/upcoming-events/die-sieben-todsunden-the-seven-deadly-sins/"
-    },
-    {
-      "id": "497bc7bc95bc",
-      "title": "Fashion Design Masterclass: Magdalene Paris",
-      "start": "2026-12-15T18:00:00-06:00",
-      "url": "https://marignyoperahouse.org/upcoming-events/fashion-design-masterclass-magdalene-paris/"
     }
   ]
 }
