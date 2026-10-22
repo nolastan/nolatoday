@@ -2,27 +2,6 @@
   "venue": "the-allways-lounge",
   "events": [
     {
-      "id": "b02069bd5d60",
-      "title": "Lefty Lucy's Burlesque Bingo",
-      "start": "2026-10-21T18:30:00-05:00",
-      "end": "2026-10-21T20:30:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/3097/1792625400000"
-    },
-    {
-      "id": "330735f28bc6",
-      "title": "The Sorcerers Tale (burlesque)",
-      "start": "2026-10-21T19:00:00-05:00",
-      "end": "2026-10-21T21:00:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/4418/1792627200000"
-    },
-    {
-      "id": "21a100f686b9",
-      "title": "Esoterotica (original erotic readings)",
-      "start": "2026-10-21T21:00:00-05:00",
-      "end": "2026-10-21T22:30:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/196/1792634400000"
-    },
-    {
       "id": "757aac24776d",
       "title": "Ballet for all Bodies",
       "start": "2026-10-22T15:30:00-05:00",
@@ -2064,6 +2043,13 @@
       "start": "2027-01-18T21:30:00-06:00",
       "end": "2027-01-18T23:30:00-06:00",
       "url": "https://tockify.com/allwayslounge/detail/2269/1800329400000"
+    },
+    {
+      "id": "443632d91712",
+      "title": "Sundown Striptease (burlesque)",
+      "start": "2027-01-19T21:30:00-06:00",
+      "end": "2027-01-19T23:00:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/2404/1800415800000"
     }
   ]
 }

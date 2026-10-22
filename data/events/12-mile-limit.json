@@ -2,13 +2,6 @@
   "venue": "12-mile-limit",
   "events": [
     {
-      "id": "750a51990599",
-      "title": "Trivia Night!",
-      "start": "2026-10-21T20:00:00-05:00",
-      "end": "2026-10-21T22:00:00-05:00",
-      "url": "https://www.twelvemilelimit.com/new-orleans-mid-city-twelve-mile-limit-events"
-    },
-    {
       "id": "8bd6441a5c0e",
       "title": "Purrsday Karaoke!",
       "start": "2026-10-22T21:00:00-05:00",
@@ -27,6 +20,13 @@
       "title": "Queer Craft Night",
       "start": "2026-10-27T19:00:00-05:00",
       "end": "2026-10-27T21:00:00-05:00",
+      "url": "https://www.twelvemilelimit.com/new-orleans-mid-city-twelve-mile-limit-events"
+    },
+    {
+      "id": "44249b242a25",
+      "title": "Trivia Night!",
+      "start": "2026-10-28T20:00:00-05:00",
+      "end": "2026-10-28T22:00:00-05:00",
       "url": "https://www.twelvemilelimit.com/new-orleans-mid-city-twelve-mile-limit-events"
     },
     {

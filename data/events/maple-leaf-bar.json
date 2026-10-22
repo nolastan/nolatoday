@@ -2,13 +2,6 @@
   "venue": "maple-leaf-bar",
   "events": [
     {
-      "id": "a5b94fc6a120",
-      "title": "Ashlar Organ Time Ft. Danny Abel & Alfred Jordan",
-      "start": "2026-10-21T19:00:00-05:00",
-      "end": "2026-10-21T23:00:00-05:00",
-      "url": "https://www.mapleleafbar.com/events/ashlar-organ-time-ft-danny-abel-alfred-jordan"
-    },
-    {
       "id": "ea534784b786",
       "title": "Booker & Beyond - Tom Worrell",
       "start": "2026-10-22T18:00:00-05:00",
@@ -40,6 +33,13 @@
       "title": "Jon Cleary & the Absolute Monster Gentlemen",
       "start": "2026-10-24T20:00:00-05:00",
       "url": "https://www.mapleleafbar.com/events/jon-cleary-the-absolute-monster-gentlemen-1"
+    },
+    {
+      "id": "a2162144bc47",
+      "title": "Roland Guerin Progfunk",
+      "start": "2026-10-24T23:00:00-05:00",
+      "end": "2026-10-25T01:00:00-05:00",
+      "url": "https://www.mapleleafbar.com/events/roland-guerin-progfunk-1"
     }
   ]
 }
