@@ -2,27 +2,6 @@
   "venue": "the-allways-lounge",
   "events": [
     {
-      "id": "757aac24776d",
-      "title": "Ballet for all Bodies",
-      "start": "2026-10-22T15:30:00-05:00",
-      "end": "2026-10-22T16:30:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/4558/1792701000000"
-    },
-    {
-      "id": "c249bb66b531",
-      "title": "Van Ella Bordella (burlesque)",
-      "start": "2026-10-22T19:00:00-05:00",
-      "end": "2026-10-22T21:30:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/1768/1792713600000"
-    },
-    {
-      "id": "982757225123",
-      "title": "LEGS: Stand-Up Comedy & Burlesque",
-      "start": "2026-10-22T19:30:00-05:00",
-      "end": "2026-10-22T21:00:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/4227/1792715400000"
-    },
-    {
       "id": "2c2a514e7c74",
       "title": "FILTH HORROR",
       "start": "2026-10-22T22:30:00-05:00",
@@ -2057,6 +2036,20 @@
       "start": "2027-01-19T21:30:00-06:00",
       "end": "2027-01-19T23:00:00-06:00",
       "url": "https://tockify.com/allwayslounge/detail/2404/1800415800000"
+    },
+    {
+      "id": "d7a7e31e673a",
+      "title": "Lefty Lucy's Burlesque Bingo",
+      "start": "2027-01-20T18:30:00-06:00",
+      "end": "2027-01-20T20:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/3097/1800491400000"
+    },
+    {
+      "id": "e2db085e9fdf",
+      "title": "Esoterotica (original erotic readings)",
+      "start": "2027-01-20T21:00:00-06:00",
+      "end": "2027-01-20T22:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/196/1800500400000"
     }
   ]
 }

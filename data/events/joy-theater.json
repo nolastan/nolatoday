@@ -2,13 +2,6 @@
   "venue": "joy-theater",
   "events": [
     {
-      "id": "71e07d64d93a",
-      "title": "Snarky Puppy – Somni US Tour ’26",
-      "start": "2026-10-22",
-      "allDay": true,
-      "url": "https://thejoytheater.com/event/snarky-puppy-somni-us-tour-26/"
-    },
-    {
       "id": "ff36a2e338de",
       "title": "BAAB Presents: Unholy Mountain w/ The Devil’s Horns",
       "start": "2026-10-24",
