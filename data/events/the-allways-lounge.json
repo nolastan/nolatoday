@@ -2050,6 +2050,27 @@
       "start": "2027-01-20T21:00:00-06:00",
       "end": "2027-01-20T22:30:00-06:00",
       "url": "https://tockify.com/allwayslounge/detail/196/1800500400000"
+    },
+    {
+      "id": "d24c7b7c3e19",
+      "title": "Red Radio After Dark (Burlesque)",
+      "start": "2027-01-21T19:00:00-06:00",
+      "end": "2027-01-21T20:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/4616/1800579600000"
+    },
+    {
+      "id": "813122a5b33d",
+      "title": "Van Ella Bordella (burlesque)",
+      "start": "2027-01-21T19:00:00-06:00",
+      "end": "2027-01-21T21:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/1768/1800579600000"
+    },
+    {
+      "id": "3c9e0017afef",
+      "title": "Bodice Rippers Burlesque Book Club",
+      "start": "2027-01-21T22:30:00-06:00",
+      "end": "2027-01-21T23:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/4414/1800592200000"
     }
   ]
 }

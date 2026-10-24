@@ -2,13 +2,6 @@
   "venue": "new-orleans-jazz-museum",
   "events": [
     {
-      "id": "8a78f5e4b88f",
-      "title": "Gallatin Street Fridays Presented by The Nathan and Priscilla Gordon Foundation brings you Barakat!",
-      "start": "2026-10-23T14:00:00-05:00",
-      "end": "2026-10-23T15:00:00-05:00",
-      "url": "https://nolajazzmuseum.org/events/2026/10/23/gallatin-street-fridays-presented-by-the-nathan-and-priscilla-gordon-foundation"
-    },
-    {
       "id": "6dc4f404413e",
       "title": "Rampart: Protecting Artist Legacies",
       "start": "2026-10-27T14:00:00-05:00",
