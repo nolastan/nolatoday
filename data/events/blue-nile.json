@@ -2,13 +2,6 @@
   "venue": "blue-nile",
   "events": [
     {
-      "id": "94898d8d75e2",
-      "title": "DJ Jess (Balcony Room)",
-      "start": "2026-10-23T22:00:00-05:00",
-      "end": "2026-10-24T00:01:00-05:00",
-      "url": "https://www.bluenilelive.com/calendar-tickets-/dj-jess-oct-2026"
-    },
-    {
       "id": "3320a48b879c",
       "title": "The Caesar Brothers' FunkBox",
       "start": "2026-10-24T19:30:00-05:00",
@@ -182,13 +175,6 @@
       "start": "2026-11-27T22:00:00-06:00",
       "end": "2026-11-28T00:01:00-06:00",
       "url": "https://www.bluenilelive.com/calendar-tickets-/dj-wbr-2026-9xydz-swl8k-tyr68-tyxp9-r5k8y"
-    },
-    {
-      "id": "489c8d64c621",
-      "title": "The Caesar Brothers' FunkBox",
-      "start": "2026-11-28T19:30:00-06:00",
-      "end": "2026-11-28T20:30:00-06:00",
-      "url": "https://www.bluenilelive.com/calendar-tickets-/ltwg4hrgwz96ylw-6xts7-dsrkj-ak4ra-rjz5p-mhf9k-czx8b-gbksm-zs6jc-k64t4-t7kdj-9ragd-ba2ew-8kkng-5a853-csmja-m89h4"
     }
   ]
 }

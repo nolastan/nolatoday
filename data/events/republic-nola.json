@@ -2,12 +2,6 @@
   "venue": "republic-nola",
   "events": [
     {
-      "id": "d985a7b6eb9b",
-      "title": "Deathpact",
-      "start": "2026-10-23T23:00:00-05:00",
-      "url": "https://republicnola.com/event/deathpact/"
-    },
-    {
       "id": "53ef4c58aefd",
       "title": "REWIND: 2010s",
       "start": "2026-10-24T23:00:00-05:00",
