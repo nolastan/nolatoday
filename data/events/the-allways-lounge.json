@@ -2,34 +2,6 @@
   "venue": "the-allways-lounge",
   "events": [
     {
-      "id": "2c2a514e7c74",
-      "title": "FILTH HORROR",
-      "start": "2026-10-22T22:30:00-05:00",
-      "end": "2026-10-23T01:30:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/4312/1792726200000"
-    },
-    {
-      "id": "cbbd7040d329",
-      "title": "Harlot's Hush (burlesque & live music)",
-      "start": "2026-10-22T22:30:00-05:00",
-      "end": "2026-10-23T00:30:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/4413/1792726200000"
-    },
-    {
-      "id": "6faca0ee0b8b",
-      "title": "KIKI KLUBHOUSE OF WHORRORS: Part IV/6",
-      "start": "2026-10-23T19:00:00-05:00",
-      "end": "2026-10-23T20:30:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/4578/1792800000000"
-    },
-    {
-      "id": "af768eca6350",
-      "title": "The New Orleans High Society (live jazz & burlesque)",
-      "start": "2026-10-23T20:00:00-05:00",
-      "end": "2026-10-23T21:30:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/3475/1792803600000"
-    },
-    {
       "id": "08504a934218",
       "title": "FILTH HORROR",
       "start": "2026-10-23T22:30:00-05:00",

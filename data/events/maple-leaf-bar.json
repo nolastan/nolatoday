@@ -2,19 +2,6 @@
   "venue": "maple-leaf-bar",
   "events": [
     {
-      "id": "a2e0587513b1",
-      "title": "Guitarmy",
-      "start": "2026-10-23T20:00:00-05:00",
-      "url": "https://www.mapleleafbar.com/events/guitarmy"
-    },
-    {
-      "id": "b1a429cfad9a",
-      "title": "Caleb Tokarska - Album Release Show",
-      "start": "2026-10-23T22:00:00-05:00",
-      "end": "2026-10-24T02:00:00-05:00",
-      "url": "https://www.mapleleafbar.com/events/caleb-tokarska-album-release-show"
-    },
-    {
       "id": "cdf0a7a72f93",
       "title": "Jon Cleary & the Absolute Monster Gentlemen",
       "start": "2026-10-24T20:00:00-05:00",
@@ -40,6 +27,13 @@
       "start": "2026-10-26T19:00:00-05:00",
       "end": "2026-10-26T21:00:00-05:00",
       "url": "https://www.mapleleafbar.com/events/george-porter-jr-trio-featuring-chris-adkins-7"
+    },
+    {
+      "id": "eab74387da50",
+      "title": "George Porter Jr. Trio Featuring Chris Adkins",
+      "start": "2026-10-26T22:00:00-05:00",
+      "end": "2026-10-27T00:00:00-05:00",
+      "url": "https://www.mapleleafbar.com/events/george-porter-jr-trio-featuring-chris-adkins-8"
     }
   ]
 }

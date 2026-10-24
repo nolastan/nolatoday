@@ -2,24 +2,6 @@
   "venue": "the-spotted-cat",
   "events": [
     {
-      "id": "bd6b14d1f528",
-      "title": "Paradise Jazz Band",
-      "start": "2026-10-23T14:00:00-05:00",
-      "url": "https://www.spottedcatmusicclub.com/calendar"
-    },
-    {
-      "id": "ef3acd83610b",
-      "title": "Colin Davis & The Night People",
-      "start": "2026-10-23T22:00:00-05:00",
-      "url": "https://www.spottedcatmusicclub.com/calendar"
-    },
-    {
-      "id": "a0ccf83eb7a4",
-      "title": "New Orleans Cottonmouth Kings",
-      "start": "2026-10-23T22:00:00-05:00",
-      "url": "https://www.spottedcatmusicclub.com/calendar"
-    },
-    {
       "id": "87635a57d756",
       "title": "Popcorn",
       "start": "2026-10-24T14:30:00-05:00",

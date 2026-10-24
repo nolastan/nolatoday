@@ -2,12 +2,6 @@
   "venue": "the-blue-crab",
   "events": [
     {
-      "id": "75bc1d51405c",
-      "title": "Redline",
-      "start": "2026-10-23T17:00:00-05:00",
-      "end": "2026-10-23T21:00:00-05:00"
-    },
-    {
       "id": "534b580a7eae",
       "title": "Time Zone Band",
       "start": "2026-10-24T15:00:00-05:00",
