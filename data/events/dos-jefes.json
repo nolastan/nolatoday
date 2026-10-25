@@ -2,12 +2,6 @@
   "venue": "dos-jefes",
   "events": [
     {
-      "id": "4ddcf54e33f9",
-      "title": "MISS BETTY SHIRLEY",
-      "start": "2026-10-24T21:00:00-05:00",
-      "url": "https://dosjefes.com/events/betty-shirley/"
-    },
-    {
       "id": "ed624cfd825a",
       "title": "Tangiers Combo",
       "start": "2026-10-25T20:00:00-05:00",

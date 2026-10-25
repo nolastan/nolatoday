@@ -2,34 +2,6 @@
   "venue": "30-90",
   "events": [
     {
-      "id": "6a40cb952988",
-      "title": "Mother Ruckus",
-      "start": "2026-10-24T14:00:00-05:00",
-      "end": "2026-10-24T18:00:00-05:00",
-      "url": "https://www.3090-nola.com/bands/vibe-tribe091925-ckk5e-ew2wf-735dj-z6sm4-wh835-dggz2-9wwnn"
-    },
-    {
-      "id": "b649784d9ba2",
-      "title": "Anne Elise & The Swamp Circus",
-      "start": "2026-10-24T17:00:00-05:00",
-      "end": "2026-10-24T20:00:00-05:00",
-      "url": "https://www.3090-nola.com/bands/anne-elise-swamp-circus101925-xde6g-rpea7-9rdzm-x5fxe-43lsw-pk8f2-fbef6-gg3xz-3bhtc"
-    },
-    {
-      "id": "a048399c7389",
-      "title": "Hotline",
-      "start": "2026-10-24T20:00:00-05:00",
-      "end": "2026-10-24T23:00:00-05:00",
-      "url": "https://www.3090-nola.com/bands/hotline111525-wtrdn-lgfga-662h2-9kd4f-5a8f4-7w2dc-4a2x9-3296m-mn3z5-cnbel"
-    },
-    {
-      "id": "253dc85dd87b",
-      "title": "The Kazzettes",
-      "start": "2026-10-24T23:00:00-05:00",
-      "end": "2026-10-24T23:59:00-05:00",
-      "url": "https://www.3090-nola.com/bands/kazzettes-6xz68-7j4bl-ys8ye-jg3ae"
-    },
-    {
       "id": "59a24950124d",
       "title": "The Andre Lovett Band",
       "start": "2026-10-25T18:00:00-05:00",

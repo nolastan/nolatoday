@@ -2,41 +2,6 @@
   "venue": "the-allways-lounge",
   "events": [
     {
-      "id": "08504a934218",
-      "title": "FILTH HORROR",
-      "start": "2026-10-23T22:30:00-05:00",
-      "end": "2026-10-24T01:30:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/4312/1792812600000/1"
-    },
-    {
-      "id": "27223807167a",
-      "title": "Lieder & Lingerie (burlesque & live music)",
-      "start": "2026-10-23T22:30:00-05:00",
-      "end": "2026-10-24T01:30:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/4516/1792812600000"
-    },
-    {
-      "id": "244796251c77",
-      "title": "Pink Show (burlesque)",
-      "start": "2026-10-24T17:00:00-05:00",
-      "end": "2026-10-24T18:30:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/4397/1792879200000/7"
-    },
-    {
-      "id": "5e53a553531b",
-      "title": "Van Ella Bordella (burlesque)",
-      "start": "2026-10-24T19:00:00-05:00",
-      "end": "2026-10-24T21:30:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/1997/1792886400000/91"
-    },
-    {
-      "id": "c1fc11417c28",
-      "title": "Bayou Blues Burlesque",
-      "start": "2026-10-24T20:00:00-05:00",
-      "end": "2026-10-24T21:30:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/3920/1792890000000"
-    },
-    {
       "id": "80591a07c441",
       "title": "Illuminations: Burlesque In the Dark",
       "start": "2026-10-24T22:30:00-05:00",

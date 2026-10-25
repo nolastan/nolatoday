@@ -2,13 +2,6 @@
   "venue": "joy-theater",
   "events": [
     {
-      "id": "ff36a2e338de",
-      "title": "BAAB Presents: Unholy Mountain w/ The Devil’s Horns",
-      "start": "2026-10-24",
-      "allDay": true,
-      "url": "https://thejoytheater.com/event/baab-presents-unholy-mountain-w-the-devils-horns/"
-    },
-    {
       "id": "c10fd30a85e4",
       "title": "PROF",
       "start": "2026-10-26",

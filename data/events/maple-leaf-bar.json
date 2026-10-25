@@ -2,19 +2,6 @@
   "venue": "maple-leaf-bar",
   "events": [
     {
-      "id": "cdf0a7a72f93",
-      "title": "Jon Cleary & the Absolute Monster Gentlemen",
-      "start": "2026-10-24T20:00:00-05:00",
-      "url": "https://www.mapleleafbar.com/events/jon-cleary-the-absolute-monster-gentlemen-1"
-    },
-    {
-      "id": "a2162144bc47",
-      "title": "Roland Guerin Progfunk",
-      "start": "2026-10-24T23:00:00-05:00",
-      "end": "2026-10-25T01:00:00-05:00",
-      "url": "https://www.mapleleafbar.com/events/roland-guerin-progfunk-1"
-    },
-    {
       "id": "a0164c4633c3",
       "title": "Joe Krown Trio Ft. Papa Mali",
       "start": "2026-10-25T21:00:00-05:00",
@@ -41,6 +28,13 @@
       "start": "2026-10-27T20:30:00-05:00",
       "end": "2026-10-28T00:30:00-05:00",
       "url": "https://www.mapleleafbar.com/events/very-good-tuesday-ft-victor-campbell-chris-senac-ari-teitel-aurelien-barnes-trenten-oneal"
+    },
+    {
+      "id": "70ec69eb7043",
+      "title": "Happy Organ Hour with Joe Ashlar, Stanton Moore, & Chris Adkins",
+      "start": "2026-10-28T19:00:00-05:00",
+      "end": "2026-10-28T23:00:00-05:00",
+      "url": "https://www.mapleleafbar.com/events/happy-organ-hour-with-joe-ashlar-stanton-moore-chris-adkins-1"
     }
   ]
 }
