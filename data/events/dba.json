@@ -2,12 +2,6 @@
   "venue": "dba",
   "events": [
     {
-      "id": "53364f5e3250",
-      "title": "The Jump Hounds",
-      "start": "2026-10-25T21:30:00-05:00",
-      "url": "https://www.dbaneworleans.com/shows"
-    },
-    {
       "id": "420cfe514594",
       "title": "Secret Six Jazz Band",
       "start": "2026-10-26T18:00:00-05:00",
