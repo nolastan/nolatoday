@@ -26,6 +26,12 @@
       "url": "https://dosjefes.com/events/the-mark-coleman-band/"
     },
     {
+      "id": "c85c2c9c158c",
+      "title": "BassX",
+      "start": "2026-10-30T21:00:00-05:00",
+      "url": "https://dosjefes.com/events/bassx/"
+    },
+    {
       "id": "475333140f0a",
       "title": "THE DALE SPALDING TRIO w/ TOM HOOK",
       "start": "2026-10-31T21:00:00-05:00",
@@ -56,16 +62,76 @@
       "url": "https://dosjefes.com/events/the-kris-tokarski-trio/"
     },
     {
+      "id": "b99040e061a9",
+      "title": "Anna Laura Quinn",
+      "start": "2026-11-05T20:30:00-06:00",
+      "url": "https://dosjefes.com/events/anna-laura-quinn/"
+    },
+    {
+      "id": "5afdf663aaac",
+      "title": "BassX",
+      "start": "2026-11-06T00:00:00-06:00",
+      "url": "https://dosjefes.com/events/bassx-2/"
+    },
+    {
       "id": "af1d84077948",
       "title": "THE AFRODIZIAC'S JAZZ",
       "start": "2026-11-07T21:00:00-06:00",
       "url": "https://dosjefes.com/events/the-afro-disiacs/"
     },
     {
+      "id": "ec3adb39f01e",
+      "title": "Mikayla Braun",
+      "start": "2026-11-08T20:00:00-06:00",
+      "url": "https://dosjefes.com/events/mikayla-braun/"
+    },
+    {
       "id": "86fbaae9672b",
       "title": "JOHN FOHL",
       "start": "2026-11-09T20:30:00-06:00",
       "url": "https://dosjefes.com/events/john-fohl-3-2026-11-09/"
+    },
+    {
+      "id": "ce980a88ebc4",
+      "title": "Tom Hook",
+      "start": "2026-11-10T20:30:00-06:00",
+      "url": "https://dosjefes.com/events/tom-hook-2025-08-12/"
+    },
+    {
+      "id": "179c96671e3b",
+      "title": "Z2",
+      "start": "2026-11-11T20:30:00-06:00",
+      "url": "https://dosjefes.com/events/z2-3/"
+    },
+    {
+      "id": "71c4b771dfcb",
+      "title": "THE MARK COLEMAN BAND",
+      "start": "2026-11-12T20:30:00-06:00",
+      "url": "https://dosjefes.com/events/mark-coleman-todd-duke-2-2023-06-15/"
+    },
+    {
+      "id": "583e769a05f2",
+      "title": "The Joe Krown Trio",
+      "start": "2026-11-13T21:00:00-06:00",
+      "url": "https://dosjefes.com/events/the-joe-krown-trio-2/"
+    },
+    {
+      "id": "d73889f3ceb9",
+      "title": "Sunpie & the La. Sunspots",
+      "start": "2026-11-14T21:00:00-06:00",
+      "url": "https://dosjefes.com/events/sunpie-the-la-sunspots-2/"
+    },
+    {
+      "id": "1c079ead4e25",
+      "title": "Joplin Parnell",
+      "start": "2026-11-15T20:00:00-06:00",
+      "url": "https://dosjefes.com/events/joplin-parnell/"
+    },
+    {
+      "id": "c525a0f9e467",
+      "title": "Dale Spalding",
+      "start": "2026-11-16T20:30:00-06:00",
+      "url": "https://dosjefes.com/events/dale-spalding-4/"
     }
   ]
 }
