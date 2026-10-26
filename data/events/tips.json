@@ -2,18 +2,6 @@
   "venue": "tips",
   "events": [
     {
-      "id": "3842154412e9",
-      "title": "Sunday Youth Music Labs",
-      "start": "2026-10-25T13:00:00-05:00",
-      "url": "https://tipitinas.com/event/14296514/sunday-youth-music-labs"
-    },
-    {
-      "id": "df0fc776f487",
-      "title": "Fais Do-Do With Bruce Daigrepont Cajun Band",
-      "start": "2026-10-25T17:15:00-05:00",
-      "url": "https://tipitinas.com/event/14296254/fais-do-do-with-bruce-daigrepont-cajun-band"
-    },
-    {
       "id": "5ec62fbba747",
       "title": "Flying Mojito Bros",
       "start": "2026-10-27T23:30:00-05:00",
@@ -192,6 +180,12 @@
       "title": "The Radiators 2.0",
       "start": "2027-01-16T21:00:00-06:00",
       "url": "https://tipitinas.com/event/14370584/the-radiators-2-0"
+    },
+    {
+      "id": "63a646f02c81",
+      "title": "Eddie 9V",
+      "start": "2027-01-23T21:00:00-06:00",
+      "url": "https://tipitinas.com/event/14218594/eddie-9v"
     }
   ]
 }

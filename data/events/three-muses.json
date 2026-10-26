@@ -2,13 +2,6 @@
   "venue": "three-muses",
   "events": [
     {
-      "id": "89c89cfd2d5e",
-      "title": "New Orleans Rug Cutters",
-      "start": "2026-10-25T19:30:00-05:00",
-      "end": "2026-10-25T23:30:00-05:00",
-      "url": "https://www.3musesnola.com/music/new-orleans-rug-cutters"
-    },
-    {
       "id": "9df169bb43f7",
       "title": "Trombone Charlotte",
       "start": "2026-10-26T19:30:00-05:00",

@@ -2,12 +2,6 @@
   "venue": "dba",
   "events": [
     {
-      "id": "6e1674cccbaa",
-      "title": "Paradise Jazz Band",
-      "start": "2026-10-25T18:00:00-05:00",
-      "url": "https://www.dbaneworleans.com/shows"
-    },
-    {
       "id": "53364f5e3250",
       "title": "The Jump Hounds",
       "start": "2026-10-25T21:30:00-05:00",

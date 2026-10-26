@@ -2,9 +2,9 @@
   "venue": "marigny-opera-house",
   "events": [
     {
-      "id": "f141f069377b",
+      "id": "a80f9d6b6c84",
       "title": "Marigny Opera Ballet 2026-2027 Encore Subscription",
-      "start": "2026-10-25T12:00:00-05:00",
+      "start": "2026-10-26T12:00:00-05:00",
       "url": "https://marignyoperahouse.org/upcoming-events/marigny-opera-ballet-2026-2027-encore-subscription/"
     },
     {
@@ -18,12 +18,6 @@
       "title": "Halloween 2026 – A Silent Film & Live Music Experience",
       "start": "2026-10-29T20:00:00-05:00",
       "url": "https://marignyoperahouse.org/upcoming-events/halloween-2026-a-silent-film-live-music-experience/"
-    },
-    {
-      "id": "2b06b92941bd",
-      "title": "Juice: Halloween Music Massacre",
-      "start": "2026-10-31T20:00:00-05:00",
-      "url": "https://marignyoperahouse.org/upcoming-events/juice-halloween-music-massacre/"
     },
     {
       "id": "fe32c9ad7546",
@@ -72,6 +66,12 @@
       "title": "Die Sieben Todsünden",
       "start": "2026-12-13T16:00:00-06:00",
       "url": "https://marignyoperahouse.org/upcoming-events/die-sieben-todsunden-the-seven-deadly-sins/"
+    },
+    {
+      "id": "497bc7bc95bc",
+      "title": "Fashion Design Masterclass: Magdalene Paris",
+      "start": "2026-12-15T18:00:00-06:00",
+      "url": "https://marignyoperahouse.org/upcoming-events/fashion-design-masterclass-magdalene-paris/"
     }
   ]
 }

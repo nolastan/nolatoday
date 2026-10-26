@@ -2,41 +2,6 @@
   "venue": "the-allways-lounge",
   "events": [
     {
-      "id": "80591a07c441",
-      "title": "Illuminations: Burlesque In the Dark",
-      "start": "2026-10-24T22:30:00-05:00",
-      "end": "2026-10-25T00:30:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/4236/1792899000000/6"
-    },
-    {
-      "id": "5aea2b379161",
-      "title": "Variété DeVille* – New Orleans Cabaret & Variety",
-      "start": "2026-10-24T23:00:00-05:00",
-      "end": "2026-10-25T01:30:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/3694/1792900800000/36"
-    },
-    {
-      "id": "79bc24dd60cd",
-      "title": "Femmes Fatales du Blues (burlesque live music)",
-      "start": "2026-10-25T17:00:00-05:00",
-      "end": "2026-10-25T18:30:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/4598/1792965600000"
-    },
-    {
-      "id": "9cc56e979f1b",
-      "title": "Van Ella Bordella (burlesque)",
-      "start": "2026-10-25T19:00:00-05:00",
-      "end": "2026-10-25T21:30:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/1997/1792972800000/92"
-    },
-    {
-      "id": "dcb9102c1845",
-      "title": "Swing Night (live music & dance lessons)",
-      "start": "2026-10-25T20:00:00-05:00",
-      "end": "2026-10-25T23:30:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/1860/1792976400000"
-    },
-    {
       "id": "99818ae86a80",
       "title": "Nightmare Circus (burlesque & sideshow)",
       "start": "2026-10-25T23:00:00-05:00",
@@ -2029,6 +1994,27 @@
       "start": "2027-01-22T23:00:00-06:00",
       "end": "2027-01-23T01:30:00-06:00",
       "url": "https://tockify.com/allwayslounge/detail/4544/1800680400000"
+    },
+    {
+      "id": "8d50986f55e6",
+      "title": "Van Ella Bordella (burlesque)",
+      "start": "2027-01-23T19:00:00-06:00",
+      "end": "2027-01-23T21:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/1997/1800752400000/110"
+    },
+    {
+      "id": "88a8f374a116",
+      "title": "Bayou Blues Burlesque",
+      "start": "2027-01-23T20:00:00-06:00",
+      "end": "2027-01-23T21:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/3920/1800756000000"
+    },
+    {
+      "id": "b585cbec6d66",
+      "title": "Nouvelle Follies: Parisian Glamour Meets Underworld Burlesque",
+      "start": "2027-01-23T22:30:00-06:00",
+      "end": "2027-01-24T00:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/4473/1800765000000"
     }
   ]
 }

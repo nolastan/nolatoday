@@ -1,17 +1,4 @@
 {
   "venue": "howlin-wolf",
-  "events": [
-    {
-      "id": "3aca926c6db9",
-      "title": "Minx Burlesque",
-      "start": "2026-10-25T18:00:00-05:00",
-      "url": "https://www.ticketweb.com/event/minx-burlesque-howlin-wolf-tickets/14273174"
-    },
-    {
-      "id": "a56667035841",
-      "title": "The Grammy Winning Hot 8 Brass Band",
-      "start": "2026-10-25T22:30:00-05:00",
-      "url": "https://www.ticketweb.com/event/the-grammy-winning-hot-8-howlin-wolf-tickets/14241734"
-    }
-  ]
+  "events": []
 }
