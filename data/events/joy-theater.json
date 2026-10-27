@@ -2,13 +2,6 @@
   "venue": "joy-theater",
   "events": [
     {
-      "id": "c10fd30a85e4",
-      "title": "PROF",
-      "start": "2026-10-26",
-      "allDay": true,
-      "url": "https://thejoytheater.com/event/prof/"
-    },
-    {
       "id": "1e181ad0e2aa",
       "title": "Atlanta Rhythm Section",
       "start": "2026-10-28",

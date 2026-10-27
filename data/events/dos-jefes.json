@@ -2,12 +2,6 @@
   "venue": "dos-jefes",
   "events": [
     {
-      "id": "7fbb49b100b8",
-      "title": "JOHN FOHL",
-      "start": "2026-10-26T20:30:00-05:00",
-      "url": "https://dosjefes.com/events/john-fohl-3-2026-10-26/"
-    },
-    {
       "id": "60420735594e",
       "title": "Raphael Bas",
       "start": "2026-10-27T20:30:00-05:00",
