@@ -2,6 +2,13 @@
   "venue": "cafe-istanbul",
   "events": [
     {
+      "id": "62f89338e5d0",
+      "title": "Degenerate Picnik",
+      "start": "2026-10-27T22:00:00-05:00",
+      "end": "2026-10-27T23:59:00-05:00",
+      "url": "https://www.cafeistanbulnola.com/upcoming-events/degenerate-picnik-1"
+    },
+    {
       "id": "f4a9b267f5e8",
       "title": "Poets on Poets",
       "start": "2026-10-28T22:00:00-05:00",
