@@ -2,12 +2,6 @@
   "venue": "the-rabbit-hole",
   "events": [
     {
-      "id": "ebdca60948e5",
-      "title": "Rebirth Brass Band Tuesdays @ The Rabbit Hole",
-      "start": "2026-10-27T21:00:00-05:00",
-      "url": "https://www.eventbrite.com/e/rebirth-brass-band-tuesdays-the-rabbit-hole-tickets-1112074858839"
-    },
-    {
       "id": "54e7e5a041b3",
       "title": "The Dead Dance [an early halloween party]",
       "start": "2026-10-31T17:00:00-05:00",
@@ -18,6 +12,12 @@
       "title": "DAFT DISKO",
       "start": "2026-10-31T22:00:00-05:00",
       "url": "https://www.eventbrite.com/e/daft-disko-tickets-2001267211101"
+    },
+    {
+      "id": "a5550639a2c7",
+      "title": "Rebirth Brass Band Tuesdays @ The Rabbit Hole",
+      "start": "2026-11-03T21:00:00-06:00",
+      "url": "https://www.eventbrite.com/e/rebirth-brass-band-tuesdays-the-rabbit-hole-tickets-1112074858839"
     },
     {
       "id": "1f39109ccf05",

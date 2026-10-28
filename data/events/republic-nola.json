@@ -2,13 +2,6 @@
   "venue": "republic-nola",
   "events": [
     {
-      "id": "74279ccbd793",
-      "title": "Haus Obscura",
-      "start": "2026-10-27",
-      "allDay": true,
-      "url": "https://republicnola.com/event/haus-obscura/"
-    },
-    {
       "id": "a9e967327f1e",
       "title": "REWIND: KULT KLASSICS",
       "start": "2026-10-30T22:00:00-05:00",

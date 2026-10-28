@@ -2,20 +2,6 @@
   "venue": "new-orleans-jazz-museum",
   "events": [
     {
-      "id": "fe14a07abec7",
-      "title": "Balcony Concert sponsored by Positive Vibrations presents The George Brown Band",
-      "start": "2026-10-27T17:00:00-05:00",
-      "end": "2026-10-27T18:00:00-05:00",
-      "url": "https://nolajazzmuseum.org/events/2026/10/27/balcony-concert-sponsored-by-positive-vibrations-presents-george-brown"
-    },
-    {
-      "id": "295360373e5f",
-      "title": "Crescendo: Record Deals and Contracts",
-      "start": "2026-10-27T17:30:00-05:00",
-      "end": "2026-10-27T19:30:00-05:00",
-      "url": "https://nolajazzmuseum.org/events/2026/10/27/the-ella-project-crescendo-2026-record-deals-and-contracts"
-    },
-    {
       "id": "a8bdcbb5d439",
       "title": "Louisiana Folklife Celebration of Fred J. Johnson Jr.",
       "start": "2026-10-28T14:00:00-05:00",

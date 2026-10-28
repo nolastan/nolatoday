@@ -2,13 +2,6 @@
   "venue": "maple-leaf-bar",
   "events": [
     {
-      "id": "713187811dc2",
-      "title": "Very Good Tuesday Ft. Victor Campbell, Chris Senac, Ari Teitel, Aurelien Barnes, Trenten O'neal",
-      "start": "2026-10-27T20:30:00-05:00",
-      "end": "2026-10-28T00:30:00-05:00",
-      "url": "https://www.mapleleafbar.com/events/very-good-tuesday-ft-victor-campbell-chris-senac-ari-teitel-aurelien-barnes-trenten-oneal"
-    },
-    {
       "id": "70ec69eb7043",
       "title": "Happy Organ Hour with Joe Ashlar, Stanton Moore, & Chris Adkins",
       "start": "2026-10-28T19:00:00-05:00",
@@ -42,6 +35,13 @@
       "start": "2026-10-30T16:00:00-05:00",
       "end": "2026-10-30T18:00:00-05:00",
       "url": "https://www.mapleleafbar.com/events/polytoxic"
+    },
+    {
+      "id": "641af921e1a0",
+      "title": "WSP Bus Ticket Package 10/30",
+      "start": "2026-10-30T16:00:00-05:00",
+      "end": "2026-10-30T20:00:00-05:00",
+      "url": "https://www.mapleleafbar.com/events/wsp-bus-ticket-package-10-30"
     }
   ]
 }
