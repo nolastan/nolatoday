@@ -2,13 +2,6 @@
   "venue": "new-orleans-jazz-museum",
   "events": [
     {
-      "id": "9f5ef0ee240d",
-      "title": "Imox Jazz from Guatemala",
-      "start": "2026-10-29T14:00:00-05:00",
-      "end": "2026-10-29T15:00:00-05:00",
-      "url": "https://nolajazzmuseum.org/events/2026/10/29/imox-jazz"
-    },
-    {
       "id": "eb503be74422",
       "title": "Brass Band Headquarters: Donna's Bar and Grill Exhibition Opening",
       "start": "2026-10-29T18:00:00-05:00",
