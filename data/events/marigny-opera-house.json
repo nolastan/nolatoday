@@ -2,6 +2,12 @@
   "venue": "marigny-opera-house",
   "events": [
     {
+      "id": "1b8b5af03011",
+      "title": "Marigny Opera Ballet 2026-2027 Encore Subscription",
+      "start": "2026-10-29T12:00:00-05:00",
+      "url": "https://marignyoperahouse.org/upcoming-events/marigny-opera-ballet-2026-2027-encore-subscription/"
+    },
+    {
       "id": "daab3bd98580",
       "title": "Halloween 2026 – A Silent Film & Live Music Experience",
       "start": "2026-10-29T20:00:00-05:00",
