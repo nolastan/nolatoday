@@ -2,13 +2,6 @@
   "venue": "joy-theater",
   "events": [
     {
-      "id": "1e181ad0e2aa",
-      "title": "Atlanta Rhythm Section",
-      "start": "2026-10-28",
-      "allDay": true,
-      "url": "https://thejoytheater.com/event/atlanta-rhythm-section/"
-    },
-    {
       "id": "c6cc7ab55205",
       "title": "Kevin Scott’s ZAMBI-Ween (10/30 LATE NIGHT)",
       "start": "2026-10-30",

@@ -2,13 +2,6 @@
   "venue": "three-muses",
   "events": [
     {
-      "id": "fb801ee3ceda",
-      "title": "Betty Shirley",
-      "start": "2026-10-28T20:00:00-05:00",
-      "end": "2026-10-28T23:00:00-05:00",
-      "url": "https://www.3musesnola.com/music/betty-shirley-2"
-    },
-    {
       "id": "7bdee0c798ec",
       "title": "And Then Came Humans",
       "start": "2026-10-29T19:30:00-05:00",

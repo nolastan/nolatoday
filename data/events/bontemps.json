@@ -2,12 +2,6 @@
   "venue": "bontemps",
   "events": [
     {
-      "id": "9430ab71fa30",
-      "title": "Wednesday Late Night Funbox Karaoke",
-      "start": "2026-10-28T22:00:00-05:00",
-      "url": "https://lbtrnola.com/new-orleans-uptown-le-bon-temps-roule-events"
-    },
-    {
       "id": "7ba7b600899a",
       "title": "The Soul Rebels",
       "start": "2026-10-29T23:00:00-05:00",
@@ -30,6 +24,12 @@
       "id": "dd62946f4c52",
       "title": "Billy Iuso & Friends",
       "start": "2026-10-31T23:00:00-05:00",
+      "url": "https://lbtrnola.com/new-orleans-uptown-le-bon-temps-roule-events"
+    },
+    {
+      "id": "70651ee71301",
+      "title": "Wednesday Late Night Funbox Karaoke",
+      "start": "2026-11-04T22:00:00-06:00",
       "url": "https://lbtrnola.com/new-orleans-uptown-le-bon-temps-roule-events"
     },
     {

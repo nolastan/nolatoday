@@ -2,18 +2,6 @@
   "venue": "marigny-opera-house",
   "events": [
     {
-      "id": "f1ac02ee7765",
-      "title": "Marigny Opera Ballet 2026-2027 Encore Subscription",
-      "start": "2026-10-28T12:00:00-05:00",
-      "url": "https://marignyoperahouse.org/upcoming-events/marigny-opera-ballet-2026-2027-encore-subscription/"
-    },
-    {
-      "id": "7b86c4130ae1",
-      "title": "Harriet Tubman Herself",
-      "start": "2026-10-28T20:00:00-05:00",
-      "url": "https://marignyoperahouse.org/upcoming-events/harriet-tubman-herself/"
-    },
-    {
       "id": "daab3bd98580",
       "title": "Halloween 2026 – A Silent Film & Live Music Experience",
       "start": "2026-10-29T20:00:00-05:00",
@@ -48,6 +36,12 @@
       "title": "21st Annual DRAWATHON",
       "start": "2026-11-28T12:00:00-06:00",
       "url": "https://marignyoperahouse.org/upcoming-events/drawathon/"
+    },
+    {
+      "id": "80c37909e3f7",
+      "title": "NEW ORLEANS IN HARMONY; A HOLIDAY CELEBRATION OF VOCAL MUSIC – NOLA VOX",
+      "start": "2026-12-03T19:30:00-06:00",
+      "url": "https://marignyoperahouse.org/upcoming-events/new-orleans-in-harmony/"
     },
     {
       "id": "9fe59a20fc0a",

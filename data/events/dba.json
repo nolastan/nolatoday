@@ -2,12 +2,6 @@
   "venue": "dba",
   "events": [
     {
-      "id": "380246f218d5",
-      "title": "Johanna Rose & The Dreamboats",
-      "start": "2026-10-28T18:00:00-05:00",
-      "url": "https://www.dbaneworleans.com/shows"
-    },
-    {
       "id": "4b85e9c4cc2d",
       "title": "The Next Level Band",
       "start": "2026-10-28T21:00:00-05:00",
@@ -45,8 +39,8 @@
       "url": "https://www.eventbrite.com/e/lyndsey-smith-halloween-night-at-dba-tickets-2003645349176"
     },
     {
-      "id": "01fa2e92b8d7",
-      "title": "Brunch Like Hell — DJ Knock Knock",
+      "id": "e34c7e344024",
+      "title": "Brunch Like Hell — BRUNCH LIKE HELL",
       "start": "2026-10-31T11:00:00-05:00",
       "url": "https://www.eventbrite.com/e/brunch-like-hell-tickets-2003476494126?aff=oddtdtcreator"
     },
