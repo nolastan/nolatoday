@@ -2,18 +2,6 @@
   "venue": "bacchanal",
   "events": [
     {
-      "id": "48ded038e20f",
-      "title": "Raphael Bas",
-      "start": "2026-10-29T12:00:00-05:00",
-      "end": "2026-10-29T15:00:00-05:00"
-    },
-    {
-      "id": "0bec31782069",
-      "title": "Raphael Bas",
-      "start": "2026-10-29T18:00:00-05:00",
-      "end": "2026-10-29T21:00:00-05:00"
-    },
-    {
       "id": "d618ee1a6f1f",
       "title": "David Sigler",
       "start": "2026-10-30T13:00:00-05:00",

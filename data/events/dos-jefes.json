@@ -2,12 +2,6 @@
   "venue": "dos-jefes",
   "events": [
     {
-      "id": "5b50a068f417",
-      "title": "THE MARK COLEMAN BAND",
-      "start": "2026-10-29T20:30:00-05:00",
-      "url": "https://dosjefes.com/events/the-mark-coleman-band/"
-    },
-    {
       "id": "c85c2c9c158c",
       "title": "BassX",
       "start": "2026-10-30T21:00:00-05:00",

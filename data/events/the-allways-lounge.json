@@ -2,27 +2,6 @@
   "venue": "the-allways-lounge",
   "events": [
     {
-      "id": "35bbd2f98817",
-      "title": "GDP PRESENTS: 2 Studs In A Pod w/ The Homie On The Side (burlesque)",
-      "start": "2026-10-29T18:00:00-05:00",
-      "end": "2026-10-29T21:00:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/4291/1793331000000/4"
-    },
-    {
-      "id": "1704bd7361af",
-      "title": "Van Ella Bordella (burlesque)",
-      "start": "2026-10-29T19:00:00-05:00",
-      "end": "2026-10-29T21:30:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/1768/1793318400000"
-    },
-    {
-      "id": "2876bea11734",
-      "title": "The Devil made me do it!",
-      "start": "2026-10-29T22:00:00-05:00",
-      "end": "2026-10-29T23:30:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/4502/1793329200000"
-    },
-    {
       "id": "6c8c3b7b038c",
       "title": "Wives of Horror (burlesque)",
       "start": "2026-10-29T22:30:00-05:00",
@@ -1980,6 +1959,20 @@
       "start": "2027-01-26T20:00:00-06:00",
       "end": "2027-01-26T22:00:00-06:00",
       "url": "https://tockify.com/allwayslounge/detail/4582/1801015200000"
+    },
+    {
+      "id": "0bff7ea548e6",
+      "title": "Rhinestone Cowpoke (line dancing class)",
+      "start": "2027-01-27T19:00:00-06:00",
+      "end": "2027-01-27T21:00:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/4299/1801098000000"
+    },
+    {
+      "id": "82548cf21d03",
+      "title": "WE Hear You Have Goblins:a live fantasy improv adventure (drag)",
+      "start": "2027-01-27T20:30:00-06:00",
+      "end": "2027-01-27T22:00:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/3681/1801103400000"
     }
   ]
 }

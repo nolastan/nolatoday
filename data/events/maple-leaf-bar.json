@@ -2,20 +2,6 @@
   "venue": "maple-leaf-bar",
   "events": [
     {
-      "id": "13ed1f7a3ad7",
-      "title": "Booker & Beyond - Davis Rogan",
-      "start": "2026-10-29T18:00:00-05:00",
-      "end": "2026-10-29T19:30:00-05:00",
-      "url": "https://www.mapleleafbar.com/events/booker-beyond-davis-rogan"
-    },
-    {
-      "id": "50ce5678070a",
-      "title": "Johnny Vidacovich Trio Ft. Brad Walker & Chris Senac",
-      "start": "2026-10-29T20:00:00-05:00",
-      "end": "2026-10-30T00:00:00-05:00",
-      "url": "https://www.mapleleafbar.com/events/johnny-vidacovich-trio-ft-brad-walker-chris-senac"
-    },
-    {
       "id": "4dea3bccded2",
       "title": "BLOODKIN",
       "start": "2026-10-29T22:00:00-05:00",
@@ -41,6 +27,20 @@
       "title": "Sunpie and Return of the Loup Garou Band",
       "start": "2026-10-30T20:00:00-05:00",
       "url": "https://www.mapleleafbar.com/events/sunpie-and-return-of-the-loup-garou-band"
+    },
+    {
+      "id": "6bfc2a8dbefe",
+      "title": "BLOODKIN",
+      "start": "2026-10-30T23:00:00-05:00",
+      "end": "2026-10-31T03:00:00-05:00",
+      "url": "https://www.mapleleafbar.com/events/bloodkin"
+    },
+    {
+      "id": "41e7967378b1",
+      "title": "Johnny Sketch & The Dirty Notes",
+      "start": "2026-10-31T16:00:00-05:00",
+      "end": "2026-10-31T19:00:00-05:00",
+      "url": "https://www.mapleleafbar.com/events/johnny-sketch-the-dirty-notes-2"
     }
   ]
 }
