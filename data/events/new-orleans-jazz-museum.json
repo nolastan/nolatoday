@@ -2,13 +2,6 @@
   "venue": "new-orleans-jazz-museum",
   "events": [
     {
-      "id": "2005e0e1e7ac",
-      "title": "Gallatin Street Fridays Presented by The Nathan and Priscilla Gordon Foundation: The Noah Young Trio",
-      "start": "2026-10-30T14:00:00-05:00",
-      "end": "2026-10-30T15:00:00-05:00",
-      "url": "https://nolajazzmuseum.org/events/2026/10/30/gallatin-street-fridays-presented-by-the-nathan-and-priscilla-gordon-foundation"
-    },
-    {
       "id": "ae0b7da922de",
       "title": "Quotes from the Road, the Lecture and Presentation with Robert Mugge",
       "start": "2026-11-02T14:00:00-06:00",
@@ -23,11 +16,39 @@
       "url": "https://nolajazzmuseum.org/events/2026/11/3/the-ella-project"
     },
     {
+      "id": "f520af8aa642",
+      "title": "Steelpan Showcase",
+      "start": "2026-11-04T13:00:00-06:00",
+      "end": "2026-11-04T14:00:00-06:00",
+      "url": "https://nolajazzmuseum.org/events/2026/11/4/steel-pan-showcase"
+    },
+    {
+      "id": "c3bdb5ba879b",
+      "title": "The Jazz Foundation of America (JFA) Present the Ben Fox Trio",
+      "start": "2026-11-04T14:00:00-06:00",
+      "end": "2026-11-04T15:00:00-06:00",
+      "url": "https://nolajazzmuseum.org/events/2026/11/4/jazz-foundation-of-america-jfa-presents"
+    },
+    {
       "id": "833505f06d4f",
       "title": "Friends of the Cabildo Film Series Present Irma Thomas",
       "start": "2026-11-04T18:00:00-06:00",
       "end": "2026-11-04T20:00:00-06:00",
       "url": "https://nolajazzmuseum.org/events/2026/11/4/friends-of-the-cabildo-film-series-presents-irma-thomas"
+    },
+    {
+      "id": "cd15ff3b5999",
+      "title": "Gallatin Street Fridays Presented by The Nathan and Priscilla Gordon Foundation: Mark Braud’s Colossus Brass Band",
+      "start": "2026-11-06T14:00:00-06:00",
+      "end": "2026-11-06T15:00:00-06:00",
+      "url": "https://nolajazzmuseum.org/events/2026/11/6/gallatin-street-fridays-presented-by-the-nathan-and-priscilla-gordon-foundation"
+    },
+    {
+      "id": "6201fd5d5561",
+      "title": "Balcony Concert sponsored by Positive Vibrations Foundation",
+      "start": "2026-11-10T17:00:00-06:00",
+      "end": "2026-11-10T18:00:00-06:00",
+      "url": "https://nolajazzmuseum.org/events/2026/10/10/balcony-concert-sponsored-by-positive-vibrations"
     },
     {
       "id": "3945d8dd0dda",
@@ -65,6 +86,20 @@
       "url": "https://nolajazzmuseum.org/events/2026/8/15/big-easy-bash-yelp"
     },
     {
+      "id": "61de5546e422",
+      "title": "The Ella Project Panel Discussion",
+      "start": "2026-11-17T14:00:00-06:00",
+      "end": "2026-11-17T15:00:00-06:00",
+      "url": "https://nolajazzmuseum.org/events/2026/11/17/the-ella-project-panel-discussion"
+    },
+    {
+      "id": "908164a27b38",
+      "title": "Balcony Concert sponsored by Positive Vibrations Foundation",
+      "start": "2026-11-17T17:00:00-06:00",
+      "end": "2026-11-17T18:00:00-06:00",
+      "url": "https://nolajazzmuseum.org/events/2026/10/10/balcony-concert-sponsored-by-positive-vibrations-y7rye"
+    },
+    {
       "id": "5cdc149dac29",
       "title": "The Ella Project",
       "start": "2026-11-17T17:30:00-06:00",
@@ -72,11 +107,39 @@
       "url": "https://nolajazzmuseum.org/events/2026/11/17/the-ella-project"
     },
     {
+      "id": "86a074cf8377",
+      "title": "The Jazz Foundation of America (JFA) Present... Karen and Norbert Stachel with LehCats",
+      "start": "2026-11-18T14:00:00-06:00",
+      "end": "2026-11-18T15:00:00-06:00",
+      "url": "https://nolajazzmuseum.org/events/2026/11/18/jazz-foundation-of-america-jfa-presents"
+    },
+    {
+      "id": "08ca4260811c",
+      "title": "Byron Asher’s Skrontch Music",
+      "start": "2026-11-19T18:00:00-06:00",
+      "end": "2026-11-19T19:30:00-06:00",
+      "url": "https://nolajazzmuseum.org/events/2026/11/19/byron-asher-skrontch-performance"
+    },
+    {
+      "id": "a47dffe19ba2",
+      "title": "Gallatin Street Fridays Presented by The Nathan and Priscilla Gordon Foundation: Piano Hour with Keiko Komaki",
+      "start": "2026-11-20T14:00:00-06:00",
+      "end": "2026-11-20T15:00:00-06:00",
+      "url": "https://nolajazzmuseum.org/events/2026/12/4/gallatin-street-fridays-presented-by-the-nathan-and-priscilla-gordon-foundation-99xmy"
+    },
+    {
       "id": "e777425a347f",
       "title": "Friends of the Cabildo Concert Series Present The Walrus - New Orleans Beatles Tribute SOLD OUT",
       "start": "2026-11-20T19:00:00-06:00",
       "end": "2026-11-20T21:00:00-06:00",
       "url": "https://nolajazzmuseum.org/events/2026/11/20/friends-of-the-cabildo-concert-series-presents-i-am-the-walrus"
+    },
+    {
+      "id": "b9f0659ad816",
+      "title": "Balcony Concert sponsored by Positive Vibrations Foundation",
+      "start": "2026-11-24T17:00:00-06:00",
+      "end": "2026-11-24T18:00:00-06:00",
+      "url": "https://nolajazzmuseum.org/events/2026/10/10/balcony-concert-sponsored-by-positive-vibrations-sncas"
     },
     {
       "id": "8d84944b5d4c",
@@ -98,6 +161,13 @@
       "start": "2026-12-12T18:00:00-06:00",
       "end": "2026-12-12T21:00:00-06:00",
       "url": "https://nolajazzmuseum.org/events/2026/10/10/cumbiafest"
+    },
+    {
+      "id": "b93c9f2493bb",
+      "title": "Friends of the Cabildo Concert Series: Professor Longhair's Birthday",
+      "start": "2026-12-18T19:00:00-06:00",
+      "end": "2026-12-18T21:00:00-06:00",
+      "url": "https://nolajazzmuseum.org/events/2026/12/18/friends-of-the-cabildo-concert-series-presents-booker-professor-longhairs-birthday"
     }
   ]
 }

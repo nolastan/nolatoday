@@ -2,11 +2,67 @@
   "venue": "cafe-istanbul",
   "events": [
     {
+      "id": "15a11aef22bd",
+      "title": "Club Chido After Dark",
+      "start": "2026-10-31T23:00:00-05:00",
+      "end": "2026-10-31T23:59:00-05:00",
+      "url": "https://www.cafeistanbulnola.com/upcoming-events/club-chido-after-dark"
+    },
+    {
+      "id": "5366485d89cb",
+      "title": "Jean Fest",
+      "start": "2026-11-03T21:00:00-06:00",
+      "end": "2026-11-03T23:59:00-06:00",
+      "url": "https://www.cafeistanbulnola.com/upcoming-events/jean-fest"
+    },
+    {
+      "id": "1eec0a82d67c",
+      "title": "The Spotlight Show",
+      "start": "2026-11-04T19:00:00-06:00",
+      "end": "2026-11-04T22:00:00-06:00",
+      "url": "https://www.cafeistanbulnola.com/upcoming-events/lbrsh86dfecyn5dy752e2zarry6b6t"
+    },
+    {
+      "id": "da7ffb32f342",
+      "title": "Poets on Poets",
+      "start": "2026-11-04T22:00:00-06:00",
+      "end": "2026-11-04T23:59:00-06:00",
+      "url": "https://www.cafeistanbulnola.com/upcoming-events/p42pwkys89ssegtmebshnntlk2635t"
+    },
+    {
       "id": "7eefb141efaf",
       "title": "Conjure into the Magical real!",
       "start": "2026-11-06T19:30:00-06:00",
       "end": "2026-11-06T21:30:00-06:00",
       "url": "https://www.cafeistanbulnola.com/upcoming-events/conjure-into-the-magical-real"
+    },
+    {
+      "id": "7badc1ecc3ec",
+      "title": "Sudan Grand Marshall Brunch",
+      "start": "2026-11-07T15:00:00-06:00",
+      "end": "2026-11-07T19:00:00-06:00",
+      "url": "https://www.cafeistanbulnola.com/upcoming-events/sudan-grand-marshall-brunch"
+    },
+    {
+      "id": "0df0fd1f442f",
+      "title": "Poets on Poets",
+      "start": "2026-11-11T22:00:00-06:00",
+      "end": "2026-11-11T23:59:00-06:00",
+      "url": "https://www.cafeistanbulnola.com/upcoming-events/llkrey4amkst4he7n7h8s82h43alwr"
+    },
+    {
+      "id": "ed020a2dd805",
+      "title": "Poets on Poets",
+      "start": "2026-11-18T22:00:00-06:00",
+      "end": "2026-11-18T23:59:00-06:00",
+      "url": "https://www.cafeistanbulnola.com/upcoming-events/tkdzfy9w7t84thzlrspnk48p9cfjc2"
+    },
+    {
+      "id": "30bc1f41820a",
+      "title": "Poets on Poets",
+      "start": "2026-11-25T22:00:00-06:00",
+      "end": "2026-11-25T23:59:00-06:00",
+      "url": "https://www.cafeistanbulnola.com/upcoming-events/47sthk52d559klaxytphf2xgw4zhwk"
     },
     {
       "id": "f7b759bd68ac",
