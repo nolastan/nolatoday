@@ -2,12 +2,6 @@
   "venue": "the-spotted-cat",
   "events": [
     {
-      "id": "2a95ee50d229",
-      "title": "Jumbo Shrimp",
-      "start": "2026-10-29T22:00:00-05:00",
-      "url": "https://www.spottedcatmusicclub.com/calendar"
-    },
-    {
       "id": "e221a5ff5c98",
       "title": "Paradise Jazz Band",
       "start": "2026-10-30T14:00:00-05:00",
