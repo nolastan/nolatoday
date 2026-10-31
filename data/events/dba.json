@@ -2,12 +2,6 @@
   "venue": "dba",
   "events": [
     {
-      "id": "0ffbab7eb94e",
-      "title": "New Breed Brass Band",
-      "start": "2026-10-30T22:00:00-05:00",
-      "url": "https://www.eventbrite.com/e/2003645150582?aff=oddtdtcreator"
-    },
-    {
       "id": "8f0903bdc16b",
       "title": "Lyndsey Smith",
       "start": "2026-10-31",
@@ -396,6 +390,12 @@
       "id": "85d0f526805b",
       "title": "Tuba Skinny",
       "start": "2026-12-26T18:00:00-06:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "66026804111d",
+      "title": "Toyesauce",
+      "start": "2027-01-28T22:00:00-06:00",
       "url": "https://www.dbaneworleans.com/shows"
     }
   ]
