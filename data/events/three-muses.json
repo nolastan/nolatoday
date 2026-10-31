@@ -2,13 +2,6 @@
   "venue": "three-muses",
   "events": [
     {
-      "id": "4b29da67b5bb",
-      "title": "Jelly Roll Stompers",
-      "start": "2026-10-30T19:30:00-05:00",
-      "end": "2026-10-30T23:30:00-05:00",
-      "url": "https://www.3musesnola.com/music/jelly-roll-stompers-2"
-    },
-    {
       "id": "be2dda27c0d8",
       "title": "New Orleans Rug Cutters",
       "start": "2026-10-31T20:00:00-05:00",

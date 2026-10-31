@@ -2,12 +2,6 @@
   "venue": "the-blue-crab",
   "events": [
     {
-      "id": "62cc6523a920",
-      "title": "Redline",
-      "start": "2026-10-30T17:00:00-05:00",
-      "end": "2026-10-30T21:00:00-05:00"
-    },
-    {
       "id": "6baf51baa6ce",
       "title": "ASAP Band",
       "start": "2026-10-31T12:00:00-05:00",

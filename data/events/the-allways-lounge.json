@@ -2,34 +2,6 @@
   "venue": "the-allways-lounge",
   "events": [
     {
-      "id": "6c8c3b7b038c",
-      "title": "Wives of Horror (burlesque)",
-      "start": "2026-10-29T22:30:00-05:00",
-      "end": "2026-10-30T01:30:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/4557/1793331000000"
-    },
-    {
-      "id": "3e1d1152e9a4",
-      "title": "Tribute to Zombie (burlesque)",
-      "start": "2026-10-30T17:00:00-05:00",
-      "end": "2026-10-30T18:30:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/4569/1793397600000"
-    },
-    {
-      "id": "2d086a757127",
-      "title": "Muffy Vanderbilt Presents: Hocus Pocus (drag)",
-      "start": "2026-10-30T19:00:00-05:00",
-      "end": "2026-10-30T20:30:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/4426/1793404800000/8"
-    },
-    {
-      "id": "54e4c4b6beef",
-      "title": "OOPS ALL WITCHES (BURLESQUE)",
-      "start": "2026-10-30T20:00:00-05:00",
-      "end": "2026-10-30T21:30:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/4172/1793397600000/9"
-    },
-    {
       "id": "b339a097fbd3",
       "title": "Rocky Horror Striptease Show",
       "start": "2026-10-30T22:30:00-05:00",
@@ -1973,6 +1945,27 @@
       "start": "2027-01-27T20:30:00-06:00",
       "end": "2027-01-27T22:00:00-06:00",
       "url": "https://tockify.com/allwayslounge/detail/3681/1801103400000"
+    },
+    {
+      "id": "401525d60bf3",
+      "title": "Van Ella Bordella (burlesque)",
+      "start": "2027-01-28T19:00:00-06:00",
+      "end": "2027-01-28T21:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/1768/1801184400000"
+    },
+    {
+      "id": "39daad4bc851",
+      "title": "LEGS: Stand-Up Comedy & Burlesque",
+      "start": "2027-01-28T19:30:00-06:00",
+      "end": "2027-01-28T21:00:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/4227/1801186200000"
+    },
+    {
+      "id": "aa812687061c",
+      "title": "Harlot's Hush (burlesque & live music)",
+      "start": "2027-01-28T22:30:00-06:00",
+      "end": "2027-01-29T00:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/4413/1801197000000"
     }
   ]
 }

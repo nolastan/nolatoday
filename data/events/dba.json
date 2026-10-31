@@ -2,18 +2,6 @@
   "venue": "dba",
   "events": [
     {
-      "id": "d567e247e130",
-      "title": "Dirty Little Friday — Happy Hour",
-      "start": "2026-10-30T16:00:00-05:00",
-      "url": "https://www.dbaneworleans.com/shows"
-    },
-    {
-      "id": "6c024a462596",
-      "title": "Michael Watson & The Alchemy",
-      "start": "2026-10-30T18:00:00-05:00",
-      "url": "https://www.dbaneworleans.com/shows"
-    },
-    {
       "id": "0ffbab7eb94e",
       "title": "New Breed Brass Band",
       "start": "2026-10-30T22:00:00-05:00",
