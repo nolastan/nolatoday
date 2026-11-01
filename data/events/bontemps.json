@@ -2,19 +2,6 @@
   "venue": "bontemps",
   "events": [
     {
-      "id": "af4e17474d74",
-      "title": "Halloween",
-      "start": "2026-10-31T11:00:00-05:00",
-      "end": "2026-11-01T00:00:00-05:00",
-      "url": "https://lbtrnola.com/new-orleans-uptown-le-bon-temps-roule-events"
-    },
-    {
-      "id": "dd62946f4c52",
-      "title": "Billy Iuso & Friends",
-      "start": "2026-10-31T23:00:00-05:00",
-      "url": "https://lbtrnola.com/new-orleans-uptown-le-bon-temps-roule-events"
-    },
-    {
       "id": "70651ee71301",
       "title": "Wednesday Late Night Funbox Karaoke",
       "start": "2026-11-04T22:00:00-06:00",
@@ -151,6 +138,7 @@
       "id": "62b3a657a717",
       "title": "Jamie Bernstein and Zen Cowboys",
       "start": "2026-12-12T16:00:00-06:00",
+      "end": "2026-12-12T23:00:00-06:00",
       "url": "https://lbtrnola.com/new-orleans-uptown-le-bon-temps-roule-events"
     },
     {

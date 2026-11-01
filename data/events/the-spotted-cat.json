@@ -2,18 +2,6 @@
   "venue": "the-spotted-cat",
   "events": [
     {
-      "id": "2aef81fa9323",
-      "title": "Twerk Thomson Band",
-      "start": "2026-10-31T14:30:00-05:00",
-      "url": "https://www.spottedcatmusicclub.com/calendar"
-    },
-    {
-      "id": "7ad5e523f20f",
-      "title": "Panorama Jazz Band",
-      "start": "2026-10-31T18:00:00-05:00",
-      "url": "https://www.spottedcatmusicclub.com/calendar"
-    },
-    {
       "id": "22c3e84baf85",
       "title": "James Martin Band",
       "start": "2026-10-31T22:00:00-05:00",

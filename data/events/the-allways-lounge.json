@@ -2,41 +2,6 @@
   "venue": "the-allways-lounge",
   "events": [
     {
-      "id": "b339a097fbd3",
-      "title": "Rocky Horror Striptease Show",
-      "start": "2026-10-30T22:30:00-05:00",
-      "end": "2026-10-31T01:30:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/3127/1793417400000/35"
-    },
-    {
-      "id": "51d0de9da1d2",
-      "title": "All Hallows’ Tease ( burlesque)",
-      "start": "2026-10-30T23:00:00-05:00",
-      "end": "2026-10-31T01:30:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/4134/1793419200000"
-    },
-    {
-      "id": "7b15c5199350",
-      "title": "THE BLOOD & GLITTER BURLESQUE SPOOKSHOW",
-      "start": "2026-10-31T17:00:00-05:00",
-      "end": "2026-10-31T18:30:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/4396/1793484000000/1"
-    },
-    {
-      "id": "034b24ef0056",
-      "title": "Hadestown : musicals in burlesque",
-      "start": "2026-10-31T19:00:00-05:00",
-      "end": "2026-10-31T22:00:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/4239/1793491200000/1"
-    },
-    {
-      "id": "9f06a70a7f97",
-      "title": "THE BLOOD & GLITTER BURLESQUE SPOOKSHOW",
-      "start": "2026-10-31T19:30:00-05:00",
-      "end": "2026-10-31T21:00:00-05:00",
-      "url": "https://tockify.com/allwayslounge/detail/4396/1793493000000"
-    },
-    {
       "id": "7eb9e89a5aa5",
       "title": "Hadestown : musicals in burlesque",
       "start": "2026-10-31T22:30:00-05:00",
@@ -1966,6 +1931,27 @@
       "start": "2027-01-28T22:30:00-06:00",
       "end": "2027-01-29T00:30:00-06:00",
       "url": "https://tockify.com/allwayslounge/detail/4413/1801197000000"
+    },
+    {
+      "id": "fa0d26eea4b3",
+      "title": "Comedy Queen Pageant",
+      "start": "2027-01-29T19:00:00-06:00",
+      "end": "2027-01-29T21:00:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/4481/1801270800000"
+    },
+    {
+      "id": "c149ec0a8f01",
+      "title": "CLASS: A Classic New Orleans Burlesque Show",
+      "start": "2027-01-29T22:30:00-06:00",
+      "end": "2027-01-30T01:00:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/4307/1801283400000/25"
+    },
+    {
+      "id": "ed89f5a8ebb1",
+      "title": "Le Vampyre Cabaret presents: Vamp Lounge",
+      "start": "2027-01-29T23:00:00-06:00",
+      "end": "2027-01-30T01:00:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/4023/1801285200000/22"
     }
   ]
 }

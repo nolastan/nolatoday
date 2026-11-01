@@ -2,13 +2,6 @@
   "venue": "three-muses",
   "events": [
     {
-      "id": "be2dda27c0d8",
-      "title": "New Orleans Rug Cutters",
-      "start": "2026-10-31T20:00:00-05:00",
-      "end": "2026-10-31T23:59:00-05:00",
-      "url": "https://www.3musesnola.com/music/new-orleans-rug-cutters-1"
-    },
-    {
       "id": "07e4deb38c28",
       "title": "Perry Gordon Jazz",
       "start": "2026-11-01T19:30:00-06:00",

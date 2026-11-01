@@ -1,17 +1,4 @@
 {
   "venue": "the-carousel-bar-lounge",
-  "events": [
-    {
-      "id": "59ab4ef14e3b",
-      "title": "NAYO JONES EXPERIENCE",
-      "start": "2026-10-30T21:00:00-05:00",
-      "url": "https://www.hotelmonteleone.com/events/nayo-jones-experience/"
-    },
-    {
-      "id": "41413798bb3e",
-      "title": "LENA PRIMA & BAND",
-      "start": "2026-10-31T21:00:00-05:00",
-      "url": "https://www.hotelmonteleone.com/events/lena-prima-band-3/"
-    }
-  ]
+  "events": []
 }
