@@ -2,12 +2,6 @@
   "venue": "the-spotted-cat",
   "events": [
     {
-      "id": "22c3e84baf85",
-      "title": "James Martin Band",
-      "start": "2026-10-31T22:00:00-05:00",
-      "url": "https://www.spottedcatmusicclub.com/calendar"
-    },
-    {
       "id": "4720f233ff34",
       "title": "Jacky Blaire & The Hot Biscuits",
       "start": "2026-11-01T14:00:00-06:00",

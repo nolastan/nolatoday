@@ -2,13 +2,6 @@
   "venue": "maple-leaf-bar",
   "events": [
     {
-      "id": "0d1e2935ba3b",
-      "title": "BLOODKIN",
-      "start": "2026-10-31T23:00:00-05:00",
-      "end": "2026-11-01T02:00:00-06:00",
-      "url": "https://www.mapleleafbar.com/events/bloodkin-1"
-    },
-    {
       "id": "f38235d90d02",
       "title": "Higher Ground",
       "start": "2026-11-01T20:00:00-06:00",
@@ -35,6 +28,13 @@
       "start": "2026-11-03T20:30:00-06:00",
       "end": "2026-11-04T00:00:00-06:00",
       "url": "https://www.mapleleafbar.com/events/very-good-tuesday-ft-solomon-fox-deven-trusclair-austin-clements-max-bronstein"
+    },
+    {
+      "id": "95e2e4bb2050",
+      "title": "Happy Organ Hour with Joe Ashlar, Stanton Moore, & Ari Teitel",
+      "start": "2026-11-04T19:00:00-06:00",
+      "end": "2026-11-04T23:00:00-06:00",
+      "url": "https://www.mapleleafbar.com/events/happy-organ-hour-with-joe-ashlar-stanton-moore-ari-teitel-1"
     }
   ]
 }
