@@ -5,8 +5,13 @@
   "address": "4401 Banks Street",
   "lat": 29.974512,
   "lng": -90.106436,
-  "website": null,
+  "website": "https://www.banksstreetbarnola.net",
   "image": null,
   "aliases": [],
-  "sources": []
+  "sources": [
+    {
+      "type": "wix",
+      "url": "https://www.banksstreetbarnola.net/"
+    }
+  ]
 }
