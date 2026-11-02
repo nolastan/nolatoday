@@ -2,12 +2,6 @@
   "venue": "dos-jefes",
   "events": [
     {
-      "id": "9f5baf19eeca",
-      "title": "Captain Spalding",
-      "start": "2026-11-01T20:00:00-06:00",
-      "url": "https://dosjefes.com/events/captain-larry-spalding/"
-    },
-    {
       "id": "2284d2fbb20c",
       "title": "JOHN FOHL",
       "start": "2026-11-02T20:30:00-06:00",

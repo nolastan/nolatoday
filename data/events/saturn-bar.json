@@ -1,0 +1,173 @@
+{
+  "venue": "saturn-bar",
+  "events": [
+    {
+      "id": "f43a207eed3c",
+      "title": "Piano Night w BC Coogan",
+      "start": "2026-11-02T20:30:00-06:00",
+      "end": "2026-11-03T00:30:00-06:00",
+      "url": "https://dice.fm/event/6aba8eb72b92010001c861dc"
+    },
+    {
+      "id": "b30515d33128",
+      "title": "Fluttermite and Banjovy",
+      "start": "2026-11-03T21:00:00-06:00",
+      "end": "2026-11-04T01:00:00-06:00",
+      "url": "https://dice.fm/event/6adf94d33e36e20001ff6208"
+    },
+    {
+      "id": "ff3ad68927a9",
+      "title": "Dandelion Delivery Service/Hex Windham/Tashi Delay",
+      "start": "2026-11-04T21:00:00-06:00",
+      "end": "2026-11-05T01:00:00-06:00",
+      "url": "https://dice.fm/event/6abd26fa6904e200015b6dc8"
+    },
+    {
+      "id": "72b82ea6f1b2",
+      "title": "Valerie Sassyfras & Denton Hatcher",
+      "start": "2026-11-05T21:00:00-06:00",
+      "end": "2026-11-06T01:00:00-06:00",
+      "url": "https://dice.fm/event/6aba8fc65371c200014ee2c5"
+    },
+    {
+      "id": "01c61a222fd1",
+      "title": "Latin Night with La Tran-K",
+      "start": "2026-11-06T22:00:00-06:00",
+      "end": "2026-11-07T02:00:00-06:00",
+      "url": "https://dice.fm/event/6aba8fee0ac8550001cbceaa"
+    },
+    {
+      "id": "f846acb509cc",
+      "title": "Valparaiso Men's Chorus",
+      "start": "2026-11-07T22:00:00-06:00",
+      "end": "2026-11-08T02:00:00-06:00",
+      "url": "https://dice.fm/event/6ac15363f2b2bf0001b868e4"
+    },
+    {
+      "id": "d3c857502ffc",
+      "title": "Piano Night w BC Coogan",
+      "start": "2026-11-09T20:30:00-06:00",
+      "end": "2026-11-10T00:30:00-06:00",
+      "url": "https://dice.fm/event/6aba90952b92010001f79d06"
+    },
+    {
+      "id": "56729b53dee5",
+      "title": "Baile Ritmo Presents: ¡CUMBIA! with Los Guiros and DJ C'est Funk",
+      "start": "2026-11-10T21:00:00-06:00",
+      "end": "2026-11-11T01:00:00-06:00",
+      "url": "https://dice.fm/event/6aba90b2d5c9ee00017dfc6f"
+    },
+    {
+      "id": "597812e160cd",
+      "title": "Ever More Nest/Tom Andes/Paul Faith & the B.P.",
+      "start": "2026-11-11T20:00:00-06:00",
+      "end": "2026-11-12T00:00:00-06:00",
+      "url": "https://dice.fm/event/6abddad46c22d50001c71cad"
+    },
+    {
+      "id": "fbe9fa1cb979",
+      "title": "Tina Beef, Glass Machine, Mere of Light, Nail Club",
+      "start": "2026-11-12T21:00:00-06:00",
+      "end": "2026-11-13T01:00:00-06:00",
+      "url": "https://dice.fm/event/6ae0da32bdb58d0001f33dd4"
+    },
+    {
+      "id": "1f7082831338",
+      "title": "Mod Dance Party",
+      "start": "2026-11-14T22:00:00-06:00",
+      "end": "2026-11-15T02:00:00-06:00",
+      "url": "https://dice.fm/event/6aba91444479fc000172ea89"
+    },
+    {
+      "id": "4c5236c12b3f",
+      "title": "Minka and Hey Thanks",
+      "start": "2026-11-15T21:00:00-06:00",
+      "end": "2026-11-16T01:00:00-06:00",
+      "url": "https://dice.fm/event/6a76593a7c6c26000134bddb"
+    },
+    {
+      "id": "3ebc7871c9b1",
+      "title": "Piano Night w BC Coogan",
+      "start": "2026-11-16T20:30:00-06:00",
+      "end": "2026-11-17T00:30:00-06:00",
+      "url": "https://dice.fm/event/6aba91670ac8550001c2ae2b"
+    },
+    {
+      "id": "03f9073b7384",
+      "title": "Drunk Picasso Clothing Swap",
+      "start": "2026-11-17T17:00:00-06:00",
+      "end": "2026-11-17T21:00:00-06:00",
+      "url": "https://dice.fm/event/6aba91854479fc00019b07c4"
+    },
+    {
+      "id": "5e0855442de4",
+      "title": "Toothbug, URQ, Fiddler's Green",
+      "start": "2026-11-18T21:00:00-06:00",
+      "end": "2026-11-19T01:00:00-06:00",
+      "url": "https://dice.fm/event/6aba91e6c3942f000106a23f"
+    },
+    {
+      "id": "2b78c1927304",
+      "title": "SLAAP Cabaret",
+      "start": "2026-11-20T21:00:00-06:00",
+      "end": "2026-11-21T01:00:00-06:00",
+      "url": "https://dice.fm/event/6aba922341806b0001f23a9e"
+    },
+    {
+      "id": "4e45130ea479",
+      "title": "Piano Night w BC Coogan",
+      "start": "2026-11-23T20:30:00-06:00",
+      "end": "2026-11-24T00:30:00-06:00",
+      "url": "https://dice.fm/event/6aba924c5371c20001be8054"
+    },
+    {
+      "id": "ddc7a1b0485e",
+      "title": "North by North, The Pause, The Band Melrose",
+      "start": "2026-11-24T21:00:00-06:00",
+      "end": "2026-11-25T01:00:00-06:00",
+      "url": "https://dice.fm/event/6aba932f4479fc0001693a08"
+    },
+    {
+      "id": "c0864e81690b",
+      "title": "Piano Night w BC Coogan",
+      "start": "2026-11-30T20:30:00-06:00",
+      "end": "2026-12-01T00:30:00-06:00",
+      "url": "https://dice.fm/event/6ac154771dd6f100017d93be"
+    },
+    {
+      "id": "e09cee97c837",
+      "title": "Latin Night with La Tran-K",
+      "start": "2026-12-04T22:00:00-06:00",
+      "end": "2026-12-05T02:00:00-06:00",
+      "url": "https://dice.fm/event/6aba948aeaf6f50001599d54"
+    },
+    {
+      "id": "09d7060eb4b6",
+      "title": "Baile Ritmo Presents: ¡CUMBIA! with Los Guiros and DJ C'est Funk",
+      "start": "2026-12-08T21:00:00-06:00",
+      "end": "2026-12-09T01:00:00-06:00",
+      "url": "https://dice.fm/event/6ac154f82aefc50001065cd9"
+    },
+    {
+      "id": "7164f998de97",
+      "title": "Mod Dance Party",
+      "start": "2026-12-12T22:00:00-06:00",
+      "end": "2026-12-13T02:00:00-06:00",
+      "url": "https://dice.fm/event/6ac15519e1bbc200012375b1"
+    },
+    {
+      "id": "eea55fc50cef",
+      "title": "Drunk Picasso Clothing Swap",
+      "start": "2026-12-15T17:00:00-06:00",
+      "end": "2026-12-15T21:00:00-06:00",
+      "url": "https://dice.fm/event/6ac15539a7ef5500010e77a7"
+    },
+    {
+      "id": "bdc303b7dfea",
+      "title": "SLAAP Cabaret",
+      "start": "2026-12-18T21:00:00-06:00",
+      "end": "2026-12-19T01:00:00-06:00",
+      "url": "https://dice.fm/event/6ac15557f2b2bf00011d05af"
+    }
+  ]
+}

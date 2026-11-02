@@ -2,34 +2,40 @@
   "venue": "gasa-gasa",
   "events": [
     {
-      "id": "53554169eb61",
-      "title": "Alash Ensemble",
-      "start": "2026-11-01T20:30:00-06:00",
-      "url": "https://www.ticketweb.com/event/alash-ensemble-gasa-gasa-tickets/14990763"
-    },
-    {
-      "id": "61928cbd9a6f",
-      "title": "The Brook & The Bluff, RYMAN",
-      "start": "2026-11-03T20:00:00-06:00",
-      "url": "https://www.ticketweb.com/event/the-brook-the-bluff-gasa-gasa-tickets/15017553"
-    },
-    {
-      "id": "6d39088f7f9b",
-      "title": "Laney Jones, Felix Rabito, and Tasche de la Rocha",
-      "start": "2026-11-04T20:00:00-06:00",
-      "url": "https://www.ticketweb.com/event/laney-jones-felix-rabito-and-gasa-gasa-tickets/14346354"
-    },
-    {
-      "id": "dc380f6a7b6e",
-      "title": "Daikaiju with The Nancies and STGMA",
+      "id": "3ba6011eaa81",
+      "title": "Daikaiju",
       "start": "2026-11-06T21:00:00-06:00",
-      "url": "https://www.ticketweb.com/event/daikaiju-with-the-nancies-and-gasa-gasa-tickets/14344204"
+      "url": "https://www.jambase.com/show/daikaiju-gasa-gasa-20261106"
     },
     {
-      "id": "5e1d5fc28717",
-      "title": "Eli Winter, Mike Baggetta",
-      "start": "2026-11-09T21:00:00-06:00",
-      "url": "https://www.ticketweb.com/event/eli-winter-mike-baggetta-gasa-gasa-tickets/14990423"
+      "id": "1d403ec54cde",
+      "title": "Radiator Hospital",
+      "start": "2026-11-10T21:00:00-06:00",
+      "url": "https://www.jambase.com/show/radiator-hospital-gasa-gasa-20261110"
+    },
+    {
+      "id": "f8b076b912e0",
+      "title": "Sir Woman",
+      "start": "2026-11-24T20:00:00-06:00",
+      "url": "https://www.jambase.com/show/sir-woman-gasa-gasa-20261124"
+    },
+    {
+      "id": "4f9290f15d40",
+      "title": "Gal Holiday and the Honky Tonk Revue",
+      "start": "2026-11-27T21:00:00-06:00",
+      "url": "https://www.jambase.com/show/gal-holiday-and-the-honky-tonk-revue-gasa-gasa-20261127"
+    },
+    {
+      "id": "5806fdea4abc",
+      "title": "The Casualties",
+      "start": "2026-12-03T20:00:00-06:00",
+      "url": "https://www.jambase.com/show/the-casualties-gasa-gasa-20261203"
+    },
+    {
+      "id": "522c33bcd0c1",
+      "title": "Venna",
+      "start": "2026-12-09T21:00:00-06:00",
+      "url": "https://www.jambase.com/show/venna-gasa-gasa-20261209"
     }
   ]
 }

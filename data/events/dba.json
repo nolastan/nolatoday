@@ -2,12 +2,6 @@
   "venue": "dba",
   "events": [
     {
-      "id": "3b04ef51abb3",
-      "title": "Paradise Jazz Band",
-      "start": "2026-11-01T18:00:00-06:00",
-      "url": "https://www.dbaneworleans.com/shows"
-    },
-    {
       "id": "58647d46941d",
       "title": "The Jump Hounds",
       "start": "2026-11-01T21:30:00-06:00",
@@ -23,6 +17,12 @@
       "id": "b7084e420421",
       "title": "Corey Henry & the Treme Funktet : Red Beans & Ricely Yours",
       "start": "2026-11-02T21:30:00-06:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "8af4413049ca",
+      "title": "Gal Holiday & The Honky Tonk Review",
+      "start": "2026-11-03T18:00:00-06:00",
       "url": "https://www.dbaneworleans.com/shows"
     },
     {
@@ -80,12 +80,6 @@
       "url": "https://www.dbaneworleans.com/shows"
     },
     {
-      "id": "17c68c309f52",
-      "title": "First Word Tulane Alumni Party",
-      "start": "2026-11-07T22:00:00-06:00",
-      "url": "https://www.dbaneworleans.com/shows"
-    },
-    {
       "id": "a80710dd5c0b",
       "title": "Paradise Jazz Band",
       "start": "2026-11-08T18:00:00-06:00",
@@ -107,6 +101,12 @@
       "id": "eaa1f8fb0022",
       "title": "Corey Henry & the Treme Funktet : Red Beans & Ricely Yours",
       "start": "2026-11-09T21:30:00-06:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "abd97420e40b",
+      "title": "Les Femmes Farouches",
+      "start": "2026-11-10T18:00:00-06:00",
       "url": "https://www.dbaneworleans.com/shows"
     },
     {
@@ -188,6 +188,12 @@
       "url": "https://www.dbaneworleans.com/shows"
     },
     {
+      "id": "f5c1eae66a93",
+      "title": "Nat & Kat Cajun String Band",
+      "start": "2026-11-17T18:00:00-06:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
       "id": "933bcf98ef6e",
       "title": "Bras Band Brass Band",
       "start": "2026-11-17T21:00:00-06:00",
@@ -263,6 +269,12 @@
       "id": "b2f43aca0b37",
       "title": "Corey Henry & the Treme Funktet : Red Beans & Ricely Yours",
       "start": "2026-11-23T21:30:00-06:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "93c760d3adab",
+      "title": "T Marie + Bayou JuJu",
+      "start": "2026-11-24T18:00:00-06:00",
       "url": "https://www.dbaneworleans.com/shows"
     },
     {

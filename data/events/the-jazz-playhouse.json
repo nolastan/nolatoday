@@ -1,0 +1,53 @@
+{
+  "venue": "the-jazz-playhouse",
+  "events": [
+    {
+      "id": "bdaf62a69781",
+      "title": "The Sam Lobley Trio at The Jazz Playhouse",
+      "start": "2026-11-03T19:30:00-06:00",
+      "url": "https://www.eventbrite.com/e/the-sam-lobley-trio-at-the-jazz-playhouse-tickets-1981817757261"
+    },
+    {
+      "id": "d8264ee51ddd",
+      "title": "Sierra & The Green Notes at the Jazz Playhouse",
+      "start": "2026-11-04T19:30:00-06:00",
+      "url": "https://www.eventbrite.com/e/sierra-the-green-notes-at-the-jazz-playhouse-tickets-1984011695389"
+    },
+    {
+      "id": "b40ee30aa30f",
+      "title": "Brass-A-Holics at The Jazz Playhouse",
+      "start": "2026-11-05T19:30:00-06:00",
+      "url": "https://www.eventbrite.com/e/brass-a-holics-at-the-jazz-playhouse-tickets-1980262460326"
+    },
+    {
+      "id": "340f3962d2ac",
+      "title": "Trixie Minx's Burlesque Ballroom at The Jazz Playhouse, feat. Romy Kaye",
+      "start": "2026-11-06T20:00:00-06:00",
+      "url": "https://www.eventbrite.com/e/trixie-minxs-burlesque-ballroom-at-the-jazz-playhouse-feat-romy-kaye-tickets-1980019228814"
+    },
+    {
+      "id": "4c23a626057e",
+      "title": "Richard 'Piano' Scott at The Jazz Playhouse",
+      "start": "2026-11-08T19:30:00-06:00",
+      "url": "https://www.eventbrite.com/e/richard-piano-scott-at-the-jazz-playhouse-tickets-1983991925256"
+    },
+    {
+      "id": "5d946d295db9",
+      "title": "Funkin' It Up with Big Sam at the Jazz Playhouse",
+      "start": "2026-11-11T19:30:00-06:00",
+      "url": "https://www.eventbrite.com/e/funkin-it-up-with-big-sam-at-the-jazz-playhouse-tickets-1721312755789"
+    },
+    {
+      "id": "31f00d9668bd",
+      "title": "The Nayo Jones Experience at The Jazz Playhouse",
+      "start": "2026-11-14T20:00:00-06:00",
+      "url": "https://www.eventbrite.com/e/the-nayo-jones-experience-at-the-jazz-playhouse-tickets-1979622492164"
+    },
+    {
+      "id": "2c943f18caeb",
+      "title": "Brass, Beats, & Bubbly: New Years Eve 2027 with the Brass-A-Holics",
+      "start": "2026-12-31T21:30:00-06:00",
+      "url": "https://www.eventbrite.com/e/brass-beats-bubbly-new-years-eve-2027-with-the-brass-a-holics-tickets-2003692983652"
+    }
+  ]
+}

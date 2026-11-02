@@ -2,20 +2,6 @@
   "venue": "maple-leaf-bar",
   "events": [
     {
-      "id": "0d1e2935ba3b",
-      "title": "BLOODKIN",
-      "start": "2026-10-31T23:00:00-05:00",
-      "end": "2026-11-01T02:00:00-06:00",
-      "url": "https://www.mapleleafbar.com/events/bloodkin-1"
-    },
-    {
-      "id": "f38235d90d02",
-      "title": "Higher Ground",
-      "start": "2026-11-01T20:00:00-06:00",
-      "end": "2026-11-01T23:00:00-06:00",
-      "url": "https://www.mapleleafbar.com/events/higher-ground-7"
-    },
-    {
       "id": "4a33618260b8",
       "title": "George Porter Jr. Trio Ft. Chris Adkins (7pm)",
       "start": "2026-11-02T19:00:00-06:00",
@@ -28,6 +14,34 @@
       "start": "2026-11-02T22:00:00-06:00",
       "end": "2026-11-03T02:00:00-06:00",
       "url": "https://www.mapleleafbar.com/events/george-porter-jr-trio-ft-chris-adkins-10pm-3"
+    },
+    {
+      "id": "d30835c266e0",
+      "title": "Very Good Tuesday Ft. Solomon Fox, Deven Trusclair, Austin Clements, & Max Bronstein",
+      "start": "2026-11-03T20:30:00-06:00",
+      "end": "2026-11-04T00:00:00-06:00",
+      "url": "https://www.mapleleafbar.com/events/very-good-tuesday-ft-solomon-fox-deven-trusclair-austin-clements-max-bronstein"
+    },
+    {
+      "id": "95e2e4bb2050",
+      "title": "Happy Organ Hour with Joe Ashlar, Stanton Moore, & Ari Teitel",
+      "start": "2026-11-04T19:00:00-06:00",
+      "end": "2026-11-04T23:00:00-06:00",
+      "url": "https://www.mapleleafbar.com/events/happy-organ-hour-with-joe-ashlar-stanton-moore-ari-teitel-1"
+    },
+    {
+      "id": "8843546ff969",
+      "title": "Booker & Beyond - Ross Hoppe",
+      "start": "2026-11-05T18:00:00-06:00",
+      "end": "2026-11-05T19:30:00-06:00",
+      "url": "https://www.mapleleafbar.com/events/booker-beyond-ross-hoppe"
+    },
+    {
+      "id": "c0e0c55096dd",
+      "title": "Scott Pemberton",
+      "start": "2026-11-06T20:00:00-06:00",
+      "end": "2026-11-06T22:00:00-06:00",
+      "url": "https://www.mapleleafbar.com/events/scott-pemberton"
     }
   ]
 }

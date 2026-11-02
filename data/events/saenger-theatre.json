@@ -2,12 +2,6 @@
   "venue": "saenger-theatre",
   "events": [
     {
-      "id": "505f5d0e0f99",
-      "title": "The Lion King",
-      "start": "2026-11-01T18:30:00-06:00",
-      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-POd"
-    },
-    {
       "id": "d79f126c9f7b",
       "title": "The Lion King",
       "start": "2026-11-03T19:30:00-06:00",
@@ -234,6 +228,12 @@
       "title": "The Notebook",
       "start": "2027-01-30T14:00:00-06:00",
       "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-P-S"
+    },
+    {
+      "id": "816bdd35f2b5",
+      "title": "The Notebook",
+      "start": "2027-01-30T19:30:00-06:00",
+      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-P-V"
     }
   ]
 }

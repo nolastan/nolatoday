@@ -1,0 +1,35 @@
+{
+  "venue": "civic-theater",
+  "events": [
+    {
+      "id": "44fed48170dd",
+      "title": "Bitch Cabal feat. Mannequin Pussy & Wednesday",
+      "start": "2026-11-10T19:00:00-06:00",
+      "url": "https://www.ticketmaster.com/bitch-cabal-feat-mannequin-pussy-wednesday-new-orleans-louisiana-11-10-2026/event/1B0064D6BC68931A"
+    },
+    {
+      "id": "e50685a81041",
+      "title": "The Renaissance Room with The Renaissance Orchestra",
+      "start": "2026-11-14T20:00:00-06:00",
+      "url": "https://www.ticketmaster.com/the-renaissance-room-with-the-renaissance-new-orleans-louisiana-11-14-2026/event/1B006521301CBD46"
+    },
+    {
+      "id": "2c5e460f1673",
+      "title": "Hot Mulligan North American Fall Tour",
+      "start": "2026-11-17T19:00:00-06:00",
+      "url": "https://www.ticketmaster.com/hot-mulligan-north-american-fall-tour-new-orleans-louisiana-11-17-2026/event/1B0064D2CBFFDC2C"
+    },
+    {
+      "id": "4a9b77d9e366",
+      "title": "Atsuko Okatsuka: The Big Bowl Tour",
+      "start": "2026-12-11T19:00:00-06:00",
+      "url": "https://www.ticketmaster.com/atsuko-okatsuka-the-big-bowl-tour-new-orleans-louisiana-12-11-2026/event/1B0065108CC551AA"
+    },
+    {
+      "id": "bcad9f615209",
+      "title": "DJ Soul Sister's New Year's Eve Soul Train",
+      "start": "2026-12-31T22:00:00-06:00",
+      "url": "https://www.ticketmaster.com/dj-soul-sisters-new-years-eve-new-orleans-louisiana-12-31-2026/event/1B0065298C635D56"
+    }
+  ]
+}

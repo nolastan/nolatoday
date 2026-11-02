@@ -1,4 +1,71 @@
 {
   "venue": "howlin-wolf",
-  "events": []
+  "events": [
+    {
+      "id": "6aca62293d89",
+      "title": "Hot 8 Brass Band",
+      "start": "2026-11-01T22:30:00-06:00",
+      "url": "https://www.jambase.com/show/hot-8-brass-band-howlin-wolf-20261101"
+    },
+    {
+      "id": "fb10390b1043",
+      "title": "Honey Island Swamp Band",
+      "start": "2026-11-05T21:00:00-06:00",
+      "url": "https://www.jambase.com/show/honey-island-swamp-band-howlin-wolf-20261105"
+    },
+    {
+      "id": "115b0d6d6255",
+      "title": "Hot 8 Brass Band",
+      "start": "2026-11-08T22:30:00-06:00",
+      "url": "https://www.jambase.com/show/hot-8-brass-band-howlin-wolf-20261108"
+    },
+    {
+      "id": "3d08a4b7550a",
+      "title": "Hot 8 Brass Band",
+      "start": "2026-11-15T22:30:00-06:00",
+      "url": "https://www.jambase.com/show/hot-8-brass-band-howlin-wolf-20261115"
+    },
+    {
+      "id": "abc6332a004a",
+      "title": "Hot 8 Brass Band",
+      "start": "2026-11-22T22:30:00-06:00",
+      "url": "https://www.jambase.com/show/hot-8-brass-band-howlin-wolf-20261122"
+    },
+    {
+      "id": "d7be382b7902",
+      "title": "Black Dog (Led Zeppelin Tribute)",
+      "start": "2026-11-25T19:00:00-06:00",
+      "url": "https://www.jambase.com/show/black-dog-led-zeppelin-tribute-howlin-wolf-den-20261125"
+    },
+    {
+      "id": "092ccc47fa54",
+      "title": "Hot 8 Brass Band",
+      "start": "2026-11-29T22:30:00-06:00",
+      "url": "https://www.jambase.com/show/hot-8-brass-band-howlin-wolf-20261129"
+    },
+    {
+      "id": "ba8ebb81add3",
+      "title": "Hot 8 Brass Band",
+      "start": "2026-12-06T22:30:00-06:00",
+      "url": "https://www.jambase.com/show/hot-8-brass-band-howlin-wolf-20261206"
+    },
+    {
+      "id": "0f88c19061d3",
+      "title": "Hot 8 Brass Band",
+      "start": "2026-12-13T22:30:00-06:00",
+      "url": "https://www.jambase.com/show/hot-8-brass-band-howlin-wolf-20261213"
+    },
+    {
+      "id": "b1721ff4e88b",
+      "title": "Hot 8 Brass Band",
+      "start": "2026-12-20T22:30:00-06:00",
+      "url": "https://www.jambase.com/show/hot-8-brass-band-howlin-wolf-20261220"
+    },
+    {
+      "id": "6c1f59fd52d0",
+      "title": "Hot 8 Brass Band",
+      "start": "2026-12-27T22:30:00-06:00",
+      "url": "https://www.jambase.com/show/hot-8-brass-band-howlin-wolf-20261227"
+    }
+  ]
 }
