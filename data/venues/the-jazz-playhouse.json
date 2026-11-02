@@ -8,5 +8,10 @@
   "website": "https://thejazzplayhouse.com",
   "image": null,
   "aliases": [],
-  "sources": []
+  "sources": [
+    {
+      "type": "eventbrite",
+      "url": "https://www.eventbrite.com/o/the-jazz-playhouse-18158520058"
+    }
+  ]
 }

@@ -8,5 +8,10 @@
   "website": "https://neutralgroundcoffeehouse.org",
   "image": "neutral-ground-coffee-house.jpg",
   "aliases": [],
-  "sources": []
+  "sources": [
+    {
+      "type": "tribe",
+      "url": "https://neutralgroundcoffeehouse.org"
+    }
+  ]
 }

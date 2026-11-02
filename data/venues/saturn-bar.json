@@ -8,5 +8,10 @@
   "website": "https://www.thesaturnbar.com",
   "image": "saturn-bar.jpg",
   "aliases": [],
-  "sources": []
+  "sources": [
+    {
+      "type": "jsonld",
+      "url": "https://dice.fm/venue/saturn-bar-nen8"
+    }
+  ]
 }

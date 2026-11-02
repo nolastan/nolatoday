@@ -1,12 +1,13 @@
 {
   "slug": "live-oak-cafe",
   "name": "Live Oak Cafe",
-  "status": "active",
+  "status": "closed",
   "address": "8140 Oak Street",
   "lat": 29.947893,
   "lng": -90.130707,
   "website": null,
   "image": "live-oak-cafe.jpg",
   "aliases": [],
-  "sources": []
+  "sources": [],
+  "note": "Live Oak Cafe permanently closed in May 2022; its website domain has since lapsed."
 }

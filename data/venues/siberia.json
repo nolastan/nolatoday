@@ -8,5 +8,10 @@
   "website": "https://www.siberianola.com",
   "image": "siberia.jpg",
   "aliases": [],
-  "sources": []
+  "sources": [
+    {
+      "type": "jsonld",
+      "url": "https://dice.fm/venue/siberia-arv2"
+    }
+  ]
 }
