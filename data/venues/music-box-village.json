@@ -10,8 +10,9 @@
   "aliases": [],
   "sources": [
     {
-      "type": "jsonld",
-      "url": "https://www.tixr.com/groups/musicboxvillage"
+      "type": "jambase",
+      "venueId": "jambase:4094130",
+      "url": "https://www.jambase.com/venue/music-box-village"
     }
   ]
 }
