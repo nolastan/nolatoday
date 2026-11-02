@@ -10,8 +10,14 @@
   "aliases": [],
   "sources": [
     {
-      "type": "jsonld",
-      "url": "https://www.ticketweb.com/venue/howlin-wolf-new-orleans-la/15005"
+      "type": "jambase",
+      "venueId": "jambase:62281",
+      "url": "https://www.jambase.com/venue/howlin-wolf"
+    },
+    {
+      "type": "jambase",
+      "venueId": "jambase:382079",
+      "url": "https://www.jambase.com/venue/howlin-wolf-den"
     }
   ]
 }

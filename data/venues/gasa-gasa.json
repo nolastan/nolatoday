@@ -10,8 +10,9 @@
   "aliases": [],
   "sources": [
     {
-      "type": "jsonld",
-      "url": "https://www.ticketweb.com/venue/gasa-gasa-new-orleans-la/253094"
+      "type": "jambase",
+      "venueId": "jambase:73517",
+      "url": "https://www.jambase.com/venue/gasa-gasa"
     }
   ]
 }
