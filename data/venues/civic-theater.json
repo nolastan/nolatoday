@@ -8,5 +8,10 @@
   "website": "https://civicnola.com",
   "image": "civic-theater.jpg",
   "aliases": [],
-  "sources": []
+  "sources": [
+    {
+      "type": "ticketmaster",
+      "venueId": "KovZpZAEeA7A"
+    }
+  ]
 }
