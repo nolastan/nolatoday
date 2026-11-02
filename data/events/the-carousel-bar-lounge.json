@@ -1,4 +1,29 @@
 {
   "venue": "the-carousel-bar-lounge",
-  "events": []
+  "events": [
+    {
+      "id": "777d1074df08",
+      "title": "THE IGUANAS",
+      "start": "2026-11-08T19:00:00-06:00",
+      "url": "https://www.hotelmonteleone.com/events/the-iguanas-8/"
+    },
+    {
+      "id": "e36a98a60f6d",
+      "title": "THE IGUANAS",
+      "start": "2026-11-15T19:00:00-06:00",
+      "url": "https://www.hotelmonteleone.com/events/the-iguanas-8/"
+    },
+    {
+      "id": "c92d821973c1",
+      "title": "THE IGUANAS",
+      "start": "2026-11-22T19:00:00-06:00",
+      "url": "https://www.hotelmonteleone.com/events/the-iguanas-8/"
+    },
+    {
+      "id": "ca821a9c0d8a",
+      "title": "THE IGUANAS",
+      "start": "2026-11-29T19:00:00-06:00",
+      "url": "https://www.hotelmonteleone.com/events/the-iguanas-8/"
+    }
+  ]
 }

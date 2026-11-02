@@ -2,13 +2,6 @@
   "venue": "new-orleans-jazz-museum",
   "events": [
     {
-      "id": "ae0b7da922de",
-      "title": "Quotes from the Road, the Lecture and Presentation with Robert Mugge",
-      "start": "2026-11-02T14:00:00-06:00",
-      "end": "2026-11-02T15:00:00-06:00",
-      "url": "https://nolajazzmuseum.org/events/2026/10/29/notes-from-the-road-with-robert-mugge-a-filmmakers-journey-through-american-music"
-    },
-    {
       "id": "d9ab2d153d8e",
       "title": "The Ella Project",
       "start": "2026-11-02T17:30:00-06:00",
@@ -44,8 +37,8 @@
       "url": "https://nolajazzmuseum.org/events/2026/11/6/gallatin-street-fridays-presented-by-the-nathan-and-priscilla-gordon-foundation"
     },
     {
-      "id": "6201fd5d5561",
-      "title": "Balcony Concert sponsored by Positive Vibrations Foundation",
+      "id": "ff8ddbc7cb3e",
+      "title": "Balcony Show sponsored by the Positive Vibrations Foundation",
       "start": "2026-11-10T17:00:00-06:00",
       "end": "2026-11-10T18:00:00-06:00",
       "url": "https://nolajazzmuseum.org/events/2026/10/10/balcony-concert-sponsored-by-positive-vibrations"
@@ -93,8 +86,8 @@
       "url": "https://nolajazzmuseum.org/events/2026/11/17/the-ella-project-panel-discussion"
     },
     {
-      "id": "908164a27b38",
-      "title": "Balcony Concert sponsored by Positive Vibrations Foundation",
+      "id": "842bc03ef360",
+      "title": "Balcony Show sponsored by the Positive Vibrations Foundation",
       "start": "2026-11-17T17:00:00-06:00",
       "end": "2026-11-17T18:00:00-06:00",
       "url": "https://nolajazzmuseum.org/events/2026/10/10/balcony-concert-sponsored-by-positive-vibrations-y7rye"
@@ -135,11 +128,32 @@
       "url": "https://nolajazzmuseum.org/events/2026/11/20/friends-of-the-cabildo-concert-series-presents-i-am-the-walrus"
     },
     {
-      "id": "b9f0659ad816",
-      "title": "Balcony Concert sponsored by Positive Vibrations Foundation",
+      "id": "370a9eb61cbc",
+      "title": "Balcony Show sponsored by the Positive Vibrations Foundation",
       "start": "2026-11-24T17:00:00-06:00",
       "end": "2026-11-24T18:00:00-06:00",
       "url": "https://nolajazzmuseum.org/events/2026/10/10/balcony-concert-sponsored-by-positive-vibrations-sncas"
+    },
+    {
+      "id": "87d0999e4139",
+      "title": "Balcony Show sponsored by the Positive Vibrations Foundation",
+      "start": "2026-12-01T17:00:00-06:00",
+      "end": "2026-12-01T18:00:00-06:00",
+      "url": "https://nolajazzmuseum.org/events/2026/10/10/balcony-concert-sponsored-by-positive-vibrations-sncas-fp554"
+    },
+    {
+      "id": "78ff470e619e",
+      "title": "The Jazz Foundation of America (JFA) Show",
+      "start": "2026-12-02T14:00:00-06:00",
+      "end": "2026-12-02T15:00:00-06:00",
+      "url": "https://nolajazzmuseum.org/events/2026/12/2/jazz-foundation-of-america-jfa-presents"
+    },
+    {
+      "id": "4e17534c94d1",
+      "title": "Gallatin Street Fridays Presented by The Nathan and Priscilla Gordon Foundation",
+      "start": "2026-12-04T14:00:00-06:00",
+      "end": "2026-12-04T15:00:00-06:00",
+      "url": "https://nolajazzmuseum.org/events/2026/12/4/gallatin-street-fridays-presented-by-the-nathan-and-priscilla-gordon-foundation"
     },
     {
       "id": "8d84944b5d4c",
@@ -149,11 +163,39 @@
       "url": "https://nolajazzmuseum.org/events/2026/12/5/agwhucp5p13qr1flur0s1vfudxxp7j"
     },
     {
+      "id": "cf758a047edf",
+      "title": "Balcony Show sponsored by the Positive Vibrations Foundation",
+      "start": "2026-12-08T17:00:00-06:00",
+      "end": "2026-12-08T18:00:00-06:00",
+      "url": "https://nolajazzmuseum.org/events/2026/10/10/balcony-concert-sponsored-by-positive-vibrations-sncas-fp554-9kk75"
+    },
+    {
       "id": "68290b90fe98",
       "title": "George S. Corey’s Book Launch: Kiddos Save Jazz 2!",
       "start": "2026-12-08T17:00:00-06:00",
       "end": "2026-12-08T19:00:00-06:00",
       "url": "https://nolajazzmuseum.org/events/2026/11/3/kiddos-save-jazz-2-along-with-a-tuba-skinny-balcony-concert"
+    },
+    {
+      "id": "0c61423f38af",
+      "title": "Stanton Moore’s 14th Annual Spirit of New Orleans Drum Camp",
+      "start": "2026-12-11T09:00:00-06:00",
+      "end": "2026-12-11T17:30:00-06:00",
+      "url": "https://nolajazzmuseum.org/events/2026/12/11/spirit-of-new-orleans-drum-camp"
+    },
+    {
+      "id": "38343243ac0d",
+      "title": "Gallatin Street Fridays Presented by the Nathan and Priscilla Gordon Foundation",
+      "start": "2026-12-11T14:00:00-06:00",
+      "end": "2026-12-11T15:00:00-06:00",
+      "url": "https://nolajazzmuseum.org/events/2026/12/11/gallatin-street-fridays-presented-by-the-nathan-and-priscilla-gordon-foundation"
+    },
+    {
+      "id": "3fd17e36fc93",
+      "title": "Stanton Moore’s 14th Annual Spirit of New Orleans Drum Camp",
+      "start": "2026-12-12T09:00:00-06:00",
+      "end": "2026-12-12T17:30:00-06:00",
+      "url": "https://nolajazzmuseum.org/events/2026/12/12/spirit-of-new-orleans-drum-camp"
     },
     {
       "id": "469e08175bad",
@@ -163,11 +205,151 @@
       "url": "https://nolajazzmuseum.org/events/2026/10/10/cumbiafest"
     },
     {
+      "id": "66d7b3100ad8",
+      "title": "Stanton Moore’s 14th Annual Spirit of New Orleans Drum Camp",
+      "start": "2026-12-13T09:00:00-06:00",
+      "end": "2026-12-13T20:00:00-06:00",
+      "url": "https://nolajazzmuseum.org/events/2026/12/13/spirit-of-new-orleans-drum-camp"
+    },
+    {
+      "id": "57d64be41999",
+      "title": "Balcony Show sponsored by the Positive Vibrations Foundation presents the Carl LeBlanc Holiday Show",
+      "start": "2026-12-15T17:00:00-06:00",
+      "end": "2026-12-15T18:00:00-06:00",
+      "url": "https://nolajazzmuseum.org/events/2026/12/15/carl-leblance-holiday-show"
+    },
+    {
+      "id": "5cf1aff86052",
+      "title": "The Jazz Foundation of America (JFA) Show",
+      "start": "2026-12-16T14:00:00-06:00",
+      "end": "2026-12-16T15:00:00-06:00",
+      "url": "https://nolajazzmuseum.org/events/2026/12/16/jazz-foundation-of-america-jfa-presents"
+    },
+    {
+      "id": "ef2c54e4ea19",
+      "title": "Gallatin Street Fridays Presented by the Nathan and Priscilla Gordon Foundation",
+      "start": "2026-12-18T14:00:00-06:00",
+      "end": "2026-12-18T15:00:00-06:00",
+      "url": "https://nolajazzmuseum.org/events/2026/12/18/gallatin-street-fridays-presented-by-the-nathan-and-priscilla-gordon-foundation"
+    },
+    {
       "id": "b93c9f2493bb",
       "title": "Friends of the Cabildo Concert Series: Professor Longhair's Birthday",
       "start": "2026-12-18T19:00:00-06:00",
       "end": "2026-12-18T21:00:00-06:00",
       "url": "https://nolajazzmuseum.org/events/2026/12/18/friends-of-the-cabildo-concert-series-presents-booker-professor-longhairs-birthday"
+    },
+    {
+      "id": "0f5250cabe3b",
+      "title": "The Barbarin Family Foundation of Jazz Christmas Event",
+      "start": "2026-12-19T15:00:00-06:00",
+      "end": "2026-12-19T23:00:00-06:00",
+      "url": "https://nolajazzmuseum.org/events/2026/12/19/the-barbarin-family-foundation-of-jazz-christmas-event"
+    },
+    {
+      "id": "bfb4c018f050",
+      "title": "Balcony Show sponsored by the Positive Vibrations Foundation",
+      "start": "2026-12-22T17:00:00-06:00",
+      "end": "2026-12-22T18:00:00-06:00",
+      "url": "https://nolajazzmuseum.org/events/2026/12/15/carl-leblance-holiday-show-7ahjf"
+    },
+    {
+      "id": "225b9ae08a6e",
+      "title": "Balcony Show sponsored by the Positive Vibrations Foundation",
+      "start": "2026-12-29T17:00:00-06:00",
+      "end": "2026-12-29T18:00:00-06:00",
+      "url": "https://nolajazzmuseum.org/events/2026/12/15/carl-leblance-holiday-show-7ahjf-zk6sc"
+    },
+    {
+      "id": "991e227a80c9",
+      "title": "Balcony Show sponsored by the Positive Vibrations Foundation",
+      "start": "2027-01-05T17:00:00-06:00",
+      "end": "2027-01-05T18:00:00-06:00",
+      "url": "https://nolajazzmuseum.org/events/2026/12/15/carl-leblance-holiday-show-7ahjf-zk6sc-bx8lt"
+    },
+    {
+      "id": "47a9e9d15085",
+      "title": "The Jazz Foundation of America (JFA) Show",
+      "start": "2027-01-06T14:00:00-06:00",
+      "end": "2027-01-06T15:00:00-06:00",
+      "url": "https://nolajazzmuseum.org/events/2027/1/6/jazz-foundation-of-america-jfa-presents"
+    },
+    {
+      "id": "016e4d07100a",
+      "title": "Stanton Moore’s Hands-on Rudiment Application Camp",
+      "start": "2027-01-08T09:00:00-06:00",
+      "end": "2027-01-08T17:30:00-06:00",
+      "url": "https://nolajazzmuseum.org/events/2027/1/8/rudiment-application-camp"
+    },
+    {
+      "id": "066540a590ec",
+      "title": "Gallatin Street Fridays Presented by the Nathan and Priscilla Gordon Foundation",
+      "start": "2027-01-08T14:00:00-06:00",
+      "end": "2027-01-08T15:00:00-06:00",
+      "url": "https://nolajazzmuseum.org/events/2026/12/18/gallatin-street-fridays-presented-by-the-nathan-and-priscilla-gordon-foundation-hzmxk"
+    },
+    {
+      "id": "c8f660027a3e",
+      "title": "Stanton Moore’s Hands-on Rudiment Application Camp",
+      "start": "2027-01-09T09:00:00-06:00",
+      "end": "2027-01-09T17:30:00-06:00",
+      "url": "https://nolajazzmuseum.org/events/2027/1/8/rudiment-application-camp-cfrbk"
+    },
+    {
+      "id": "c1f6c8c82610",
+      "title": "Stanton Moore’s Hands-on Rudiment Application Camp",
+      "start": "2027-01-10T09:00:00-06:00",
+      "end": "2027-01-10T17:30:00-06:00",
+      "url": "https://nolajazzmuseum.org/events/2027/1/8/rudiment-application-camp-cfrbk-jtl6s"
+    },
+    {
+      "id": "32b701df4e71",
+      "title": "Balcony Show sponsored by the Positive Vibrations Foundation",
+      "start": "2027-01-12T17:00:00-06:00",
+      "end": "2027-01-12T18:00:00-06:00",
+      "url": "https://nolajazzmuseum.org/events/2026/12/15/carl-leblance-holiday-show-7ahjf-zk6sc-bx8lt-nk895"
+    },
+    {
+      "id": "ae91f0f44359",
+      "title": "Gallatin Street Fridays Presented by the Nathan and Priscilla Gordon Foundation",
+      "start": "2027-01-15T14:00:00-06:00",
+      "end": "2027-01-15T15:00:00-06:00",
+      "url": "https://nolajazzmuseum.org/events/2026/12/18/gallatin-street-fridays-presented-by-the-nathan-and-priscilla-gordon-foundation-hzmxk-l42eg"
+    },
+    {
+      "id": "39ad7047afd5",
+      "title": "Balcony Show sponsored by the Positive Vibrations Foundation",
+      "start": "2027-01-19T17:00:00-06:00",
+      "end": "2027-01-19T18:00:00-06:00",
+      "url": "https://nolajazzmuseum.org/events/2026/12/15/carl-leblance-holiday-show-7ahjf-zk6sc-bx8lt-nk895-d4mpt"
+    },
+    {
+      "id": "db6b2b3bf470",
+      "title": "The Jazz Foundation of America (JFA) Show",
+      "start": "2027-01-20T14:00:00-06:00",
+      "end": "2027-01-20T15:00:00-06:00",
+      "url": "https://nolajazzmuseum.org/events/2027/1/6/jazz-foundation-of-america-jfa-presents-6fbkr"
+    },
+    {
+      "id": "8a0cda3cda9a",
+      "title": "Gallatin Street Fridays Presented by the Nathan and Priscilla Gordon Foundation",
+      "start": "2027-01-22T14:00:00-06:00",
+      "end": "2027-01-22T15:00:00-06:00",
+      "url": "https://nolajazzmuseum.org/events/2026/12/18/gallatin-street-fridays-presented-by-the-nathan-and-priscilla-gordon-foundation-hzmxk-l42eg-2f9xr"
+    },
+    {
+      "id": "e95f16658ca3",
+      "title": "Balcony Show sponsored by the Positive Vibrations Foundation",
+      "start": "2027-01-26T17:00:00-06:00",
+      "end": "2027-01-26T18:00:00-06:00",
+      "url": "https://nolajazzmuseum.org/events/2026/12/15/carl-leblance-holiday-show-7ahjf-zk6sc-bx8lt-nk895-d4mpt-a59k9"
+    },
+    {
+      "id": "9d4170e6c305",
+      "title": "Gallatin Street Fridays Presented by the Nathan and Priscilla Gordon Foundation",
+      "start": "2027-01-29T14:00:00-06:00",
+      "end": "2027-01-29T15:00:00-06:00",
+      "url": "https://nolajazzmuseum.org/events/2026/12/18/gallatin-street-fridays-presented-by-the-nathan-and-priscilla-gordon-foundation-hzmxk-l42eg-2f9xr-8sery"
     }
   ]
 }

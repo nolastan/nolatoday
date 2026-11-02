@@ -2,6 +2,12 @@
   "venue": "maison",
   "events": [
     {
+      "id": "c315f959e7c3",
+      "title": "Open Mic From Hell: The WILDEST comedy show in New Orleans",
+      "start": "2026-11-08T19:30:00-06:00",
+      "url": "https://www.eventbrite.com/e/open-mic-from-hell-the-wildest-comedy-show-in-new-orleans-tickets-2002749676194"
+    },
+    {
       "id": "f497655357be",
       "title": "NEW YEARS EVE 2027",
       "start": "2026-12-31T22:00:00-06:00",
