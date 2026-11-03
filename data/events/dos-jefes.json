@@ -2,12 +2,6 @@
   "venue": "dos-jefes",
   "events": [
     {
-      "id": "2284d2fbb20c",
-      "title": "JOHN FOHL",
-      "start": "2026-11-02T20:30:00-06:00",
-      "url": "https://dosjefes.com/events/john-fohl-3-2026-11-02/"
-    },
-    {
       "id": "3be725e16101",
       "title": "Tom Hook",
       "start": "2026-11-03T20:30:00-06:00",
@@ -174,6 +168,12 @@
       "title": "JOHN FOHL",
       "start": "2026-12-07T20:30:00-06:00",
       "url": "https://dosjefes.com/events/john-fohl-2-2026-12-07/"
+    },
+    {
+      "id": "ecd276bc2a3e",
+      "title": "JOHN FOHL",
+      "start": "2026-12-14T20:30:00-06:00",
+      "url": "https://dosjefes.com/events/john-fohl-2-2026-12-14/"
     }
   ]
 }

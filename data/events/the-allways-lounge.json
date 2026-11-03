@@ -2,27 +2,6 @@
   "venue": "the-allways-lounge",
   "events": [
     {
-      "id": "bd00994ed9a5",
-      "title": "Betsy Propane Smoke Show (live music & burlesque)",
-      "start": "2026-11-02T19:00:00-06:00",
-      "end": "2026-11-02T20:30:00-06:00",
-      "url": "https://tockify.com/allwayslounge/detail/2864/1793667600000"
-    },
-    {
-      "id": "e3311d13926c",
-      "title": "Vampyre Cabaret (burlesque,camp & live music)",
-      "start": "2026-11-02T20:00:00-06:00",
-      "end": "2026-11-02T22:00:00-06:00",
-      "url": "https://tockify.com/allwayslounge/detail/3705/1793671200000/41"
-    },
-    {
-      "id": "e91d991755a3",
-      "title": "Almost Naked Karaoke",
-      "start": "2026-11-02T21:30:00-06:00",
-      "end": "2026-11-02T23:30:00-06:00",
-      "url": "https://tockify.com/allwayslounge/detail/2269/1793676600000"
-    },
-    {
       "id": "891c29077988",
       "title": "Freaklesque! (burlesque)",
       "start": "2026-11-03T19:00:00-06:00",
@@ -1952,6 +1931,13 @@
       "start": "2027-01-30T22:30:00-06:00",
       "end": "2027-01-31T00:00:00-06:00",
       "url": "https://tockify.com/allwayslounge/detail/1716/1801369800000"
+    },
+    {
+      "id": "1f5fc317a6e8",
+      "title": "Swing Night (live music & dance lessons)",
+      "start": "2027-01-31T20:00:00-06:00",
+      "end": "2027-01-31T23:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/1860/1801447200000"
     }
   ]
 }

@@ -2,13 +2,6 @@
   "venue": "maple-leaf-bar",
   "events": [
     {
-      "id": "4a33618260b8",
-      "title": "George Porter Jr. Trio Ft. Chris Adkins (7pm)",
-      "start": "2026-11-02T19:00:00-06:00",
-      "end": "2026-11-02T23:00:00-06:00",
-      "url": "https://www.mapleleafbar.com/events/george-porter-jr-trio-ft-chris-adkins-7pm-3"
-    },
-    {
       "id": "18817a47e69f",
       "title": "George Porter Jr. Trio Ft. Chris Adkins (10pm)",
       "start": "2026-11-02T22:00:00-06:00",
@@ -42,6 +35,13 @@
       "start": "2026-11-06T20:00:00-06:00",
       "end": "2026-11-06T22:00:00-06:00",
       "url": "https://www.mapleleafbar.com/events/scott-pemberton"
+    },
+    {
+      "id": "d4aacdd79871",
+      "title": "Honey Island Swamp Band",
+      "start": "2026-11-06T22:00:00-06:00",
+      "end": "2026-11-07T02:00:00-06:00",
+      "url": "https://www.mapleleafbar.com/events/honey-island-swamp-band-2"
     }
   ]
 }
