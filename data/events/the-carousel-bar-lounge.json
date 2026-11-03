@@ -2,10 +2,136 @@
   "venue": "the-carousel-bar-lounge",
   "events": [
     {
+      "id": "3b58acee7ca5",
+      "title": "NAOMIE APRIL",
+      "start": "2026-11-03T20:00:00-06:00",
+      "url": "https://www.hotelmonteleone.com/events/naomie-april/"
+    },
+    {
+      "id": "0654bad40a4a",
+      "title": "JAMES MARTIN BAND",
+      "start": "2026-11-04T20:00:00-06:00",
+      "url": "https://www.hotelmonteleone.com/events/james-martin-band/"
+    },
+    {
+      "id": "3424470c357c",
+      "title": "LESLIE MARTIN",
+      "start": "2026-11-05T17:30:00-06:00",
+      "url": "https://www.hotelmonteleone.com/events/leslie-martin/"
+    },
+    {
+      "id": "f8ab1c7c6b4f",
+      "title": "LENA PRIMA & BAND",
+      "start": "2026-11-05T21:00:00-06:00",
+      "url": "https://www.hotelmonteleone.com/events/lena-prima-band-3/"
+    },
+    {
+      "id": "e4aa986ca06b",
+      "title": "ROYAL CARAVAN BRASS BAND",
+      "start": "2026-11-06T12:30:00-06:00",
+      "url": "https://www.hotelmonteleone.com/events/royal-street-brass-band-2/"
+    },
+    {
+      "id": "05ed3dabd2bb",
+      "title": "RICHARD “PIANO” SCOTT TRIO",
+      "start": "2026-11-06T16:00:00-06:00",
+      "url": "https://www.hotelmonteleone.com/events/richard-piano-scott-trio/"
+    },
+    {
+      "id": "5bc567c3a343",
+      "title": "NAYO JONES EXPERIENCE",
+      "start": "2026-11-06T21:00:00-06:00",
+      "url": "https://www.hotelmonteleone.com/events/nayo-jones-experience/"
+    },
+    {
+      "id": "a5457d9dddc3",
+      "title": "BIG JOE KENNEDY",
+      "start": "2026-11-07T14:00:00-06:00",
+      "url": "https://www.hotelmonteleone.com/events/big-joe-kennedy/"
+    },
+    {
+      "id": "2737a2e3e552",
+      "title": "AL “LIL’ FATS” JACKSON TRIO",
+      "start": "2026-11-07T17:30:00-06:00",
+      "url": "https://www.hotelmonteleone.com/events/al-lil-fats-jackson-trio/"
+    },
+    {
+      "id": "462704ef32e7",
+      "title": "LENA PRIMA & BAND",
+      "start": "2026-11-07T21:00:00-06:00",
+      "url": "https://www.hotelmonteleone.com/events/lena-prima-band-3/"
+    },
+    {
       "id": "777d1074df08",
       "title": "THE IGUANAS",
       "start": "2026-11-08T19:00:00-06:00",
       "url": "https://www.hotelmonteleone.com/events/the-iguanas-8/"
+    },
+    {
+      "id": "6555b5b1281e",
+      "title": "TOM HOOK",
+      "start": "2026-11-09T20:00:00-06:00",
+      "url": "https://www.hotelmonteleone.com/events/tom-hook-4/"
+    },
+    {
+      "id": "fc628c24512b",
+      "title": "NAOMIE APRIL",
+      "start": "2026-11-10T20:00:00-06:00",
+      "url": "https://www.hotelmonteleone.com/events/naomie-april/"
+    },
+    {
+      "id": "c94e8f737042",
+      "title": "JAMES MARTIN BAND",
+      "start": "2026-11-11T20:00:00-06:00",
+      "url": "https://www.hotelmonteleone.com/events/james-martin-band/"
+    },
+    {
+      "id": "e9574215b48c",
+      "title": "LESLIE MARTIN",
+      "start": "2026-11-12T17:30:00-06:00",
+      "url": "https://www.hotelmonteleone.com/events/leslie-martin/"
+    },
+    {
+      "id": "5b24e2d5d13f",
+      "title": "LENA PRIMA & BAND",
+      "start": "2026-11-12T21:00:00-06:00",
+      "url": "https://www.hotelmonteleone.com/events/lena-prima-band-3/"
+    },
+    {
+      "id": "925091ff8a19",
+      "title": "ROYAL CARAVAN BRASS BAND",
+      "start": "2026-11-13T12:30:00-06:00",
+      "url": "https://www.hotelmonteleone.com/events/royal-street-brass-band-2/"
+    },
+    {
+      "id": "ef528b3b4989",
+      "title": "RICHARD “PIANO” SCOTT TRIO",
+      "start": "2026-11-13T16:00:00-06:00",
+      "url": "https://www.hotelmonteleone.com/events/richard-piano-scott-trio/"
+    },
+    {
+      "id": "f31b514a3d6b",
+      "title": "NAYO JONES EXPERIENCE",
+      "start": "2026-11-13T21:00:00-06:00",
+      "url": "https://www.hotelmonteleone.com/events/nayo-jones-experience/"
+    },
+    {
+      "id": "eb484f5aa90a",
+      "title": "BIG JOE KENNEDY",
+      "start": "2026-11-14T14:00:00-06:00",
+      "url": "https://www.hotelmonteleone.com/events/big-joe-kennedy/"
+    },
+    {
+      "id": "5d606ea3068a",
+      "title": "AL “LIL’ FATS” JACKSON TRIO",
+      "start": "2026-11-14T17:30:00-06:00",
+      "url": "https://www.hotelmonteleone.com/events/al-lil-fats-jackson-trio/"
+    },
+    {
+      "id": "c88df9166d87",
+      "title": "LENA PRIMA & BAND",
+      "start": "2026-11-14T21:00:00-06:00",
+      "url": "https://www.hotelmonteleone.com/events/lena-prima-band-3/"
     },
     {
       "id": "e36a98a60f6d",
@@ -14,16 +140,148 @@
       "url": "https://www.hotelmonteleone.com/events/the-iguanas-8/"
     },
     {
+      "id": "0621d38f8645",
+      "title": "TOM HOOK",
+      "start": "2026-11-16T20:00:00-06:00",
+      "url": "https://www.hotelmonteleone.com/events/tom-hook-4/"
+    },
+    {
+      "id": "58b78ea326fa",
+      "title": "NAOMIE APRIL",
+      "start": "2026-11-17T20:00:00-06:00",
+      "url": "https://www.hotelmonteleone.com/events/naomie-april/"
+    },
+    {
+      "id": "1c88a1123a18",
+      "title": "JAMES MARTIN BAND",
+      "start": "2026-11-18T20:00:00-06:00",
+      "url": "https://www.hotelmonteleone.com/events/james-martin-band/"
+    },
+    {
+      "id": "97886eae4ad7",
+      "title": "LESLIE MARTIN",
+      "start": "2026-11-19T17:30:00-06:00",
+      "url": "https://www.hotelmonteleone.com/events/leslie-martin/"
+    },
+    {
+      "id": "337d1d01d498",
+      "title": "LENA PRIMA & BAND",
+      "start": "2026-11-19T21:00:00-06:00",
+      "url": "https://www.hotelmonteleone.com/events/lena-prima-band-3/"
+    },
+    {
+      "id": "7f65a3e8cb20",
+      "title": "ROYAL CARAVAN BRASS BAND",
+      "start": "2026-11-20T12:30:00-06:00",
+      "url": "https://www.hotelmonteleone.com/events/royal-street-brass-band-2/"
+    },
+    {
+      "id": "d6a133dc1c5d",
+      "title": "RICHARD “PIANO” SCOTT TRIO",
+      "start": "2026-11-20T16:00:00-06:00",
+      "url": "https://www.hotelmonteleone.com/events/richard-piano-scott-trio/"
+    },
+    {
+      "id": "c60e385d4386",
+      "title": "NAYO JONES EXPERIENCE",
+      "start": "2026-11-20T21:00:00-06:00",
+      "url": "https://www.hotelmonteleone.com/events/nayo-jones-experience/"
+    },
+    {
+      "id": "e7c9f80bf543",
+      "title": "BIG JOE KENNEDY",
+      "start": "2026-11-21T14:00:00-06:00",
+      "url": "https://www.hotelmonteleone.com/events/big-joe-kennedy/"
+    },
+    {
+      "id": "40b4cdcc365a",
+      "title": "AL “LIL’ FATS” JACKSON TRIO",
+      "start": "2026-11-21T17:30:00-06:00",
+      "url": "https://www.hotelmonteleone.com/events/al-lil-fats-jackson-trio/"
+    },
+    {
+      "id": "8b0517c5c1cf",
+      "title": "LENA PRIMA & BAND",
+      "start": "2026-11-21T21:00:00-06:00",
+      "url": "https://www.hotelmonteleone.com/events/lena-prima-band-3/"
+    },
+    {
       "id": "c92d821973c1",
       "title": "THE IGUANAS",
       "start": "2026-11-22T19:00:00-06:00",
       "url": "https://www.hotelmonteleone.com/events/the-iguanas-8/"
     },
     {
+      "id": "a4aaeb6f6091",
+      "title": "NAOMIE APRIL",
+      "start": "2026-11-24T20:00:00-06:00",
+      "url": "https://www.hotelmonteleone.com/events/naomie-april/"
+    },
+    {
+      "id": "82a138fc726b",
+      "title": "JAMES MARTIN BAND",
+      "start": "2026-11-25T20:00:00-06:00",
+      "url": "https://www.hotelmonteleone.com/events/james-martin-band/"
+    },
+    {
+      "id": "5e01856c222b",
+      "title": "LESLIE MARTIN",
+      "start": "2026-11-26T17:30:00-06:00",
+      "url": "https://www.hotelmonteleone.com/events/leslie-martin/"
+    },
+    {
+      "id": "c9d30a91ac7a",
+      "title": "LENA PRIMA & BAND",
+      "start": "2026-11-26T21:00:00-06:00",
+      "url": "https://www.hotelmonteleone.com/events/lena-prima-band-3/"
+    },
+    {
+      "id": "990010e6e488",
+      "title": "ROYAL CARAVAN BRASS BAND",
+      "start": "2026-11-27T12:30:00-06:00",
+      "url": "https://www.hotelmonteleone.com/events/royal-street-brass-band-2/"
+    },
+    {
+      "id": "ce9c75ae0b76",
+      "title": "RICHARD “PIANO” SCOTT TRIO",
+      "start": "2026-11-27T16:00:00-06:00",
+      "url": "https://www.hotelmonteleone.com/events/richard-piano-scott-trio/"
+    },
+    {
+      "id": "d03915ae42cf",
+      "title": "NAYO JONES EXPERIENCE",
+      "start": "2026-11-27T21:00:00-06:00",
+      "url": "https://www.hotelmonteleone.com/events/nayo-jones-experience/"
+    },
+    {
+      "id": "1763e9dff46e",
+      "title": "BIG JOE KENNEDY",
+      "start": "2026-11-28T14:00:00-06:00",
+      "url": "https://www.hotelmonteleone.com/events/big-joe-kennedy/"
+    },
+    {
+      "id": "5b2d2ced412a",
+      "title": "AL “LIL’ FATS” JACKSON TRIO",
+      "start": "2026-11-28T17:30:00-06:00",
+      "url": "https://www.hotelmonteleone.com/events/al-lil-fats-jackson-trio/"
+    },
+    {
+      "id": "5c335c7839d4",
+      "title": "LENA PRIMA & BAND",
+      "start": "2026-11-28T21:00:00-06:00",
+      "url": "https://www.hotelmonteleone.com/events/lena-prima-band-3/"
+    },
+    {
       "id": "ca821a9c0d8a",
       "title": "THE IGUANAS",
       "start": "2026-11-29T19:00:00-06:00",
       "url": "https://www.hotelmonteleone.com/events/the-iguanas-8/"
+    },
+    {
+      "id": "f3dcf5176f44",
+      "title": "TOM HOOK",
+      "start": "2026-11-30T20:00:00-06:00",
+      "url": "https://www.hotelmonteleone.com/events/tom-hook-5/"
     }
   ]
 }

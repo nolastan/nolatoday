@@ -2,13 +2,6 @@
   "venue": "siberia",
   "events": [
     {
-      "id": "192557b906b9",
-      "title": "Rock The Vote with Kate Fagan, Alex McMurray, and Nail Club",
-      "start": "2026-11-02T21:00:00-06:00",
-      "end": "2026-11-03T01:00:00-06:00",
-      "url": "https://dice.fm/event/6abfe4c12aefc50001a47ad2"
-    },
-    {
       "id": "b8ed2a63651e",
       "title": "Foot E. & The Twinkle Toes with Ayla Ray and Scally",
       "start": "2026-11-03T21:00:00-06:00",
@@ -154,6 +147,13 @@
       "start": "2026-11-29T21:00:00-06:00",
       "end": "2026-11-30T01:00:00-06:00",
       "url": "https://dice.fm/event/6ad4d0f1aadbc900012908f7"
+    },
+    {
+      "id": "a82a043537d3",
+      "title": "Taylor Mroski with Izzy Cahse and Autumn Dominguez",
+      "start": "2026-12-01T21:00:00-06:00",
+      "end": "2026-12-02T01:00:00-06:00",
+      "url": "https://dice.fm/event/6ae9f9f253eca80001c35b3b"
     },
     {
       "id": "57469243d51a",

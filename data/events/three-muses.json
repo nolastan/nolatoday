@@ -1,4 +1,33 @@
 {
   "venue": "three-muses",
-  "events": []
+  "events": [
+    {
+      "id": "453b9bf8455c",
+      "title": "Becky Lynn Blanca & the Sweetie Pies",
+      "start": "2026-11-04T20:00:00-06:00",
+      "end": "2026-11-04T23:00:00-06:00",
+      "url": "https://www.3musesnola.com/music/q8icm1d33v952adyxaqafid3dzfk8n"
+    },
+    {
+      "id": "787e1e64c7ae",
+      "title": "Bad Penny Pleasuremakers",
+      "start": "2026-11-06T19:30:00-06:00",
+      "end": "2026-11-06T23:30:00-06:00",
+      "url": "https://www.3musesnola.com/music/bad-penny-pleasuremakers-1"
+    },
+    {
+      "id": "24cff7c27f7f",
+      "title": "Jenavieve Cooke",
+      "start": "2026-11-07T19:30:00-06:00",
+      "end": "2026-11-07T23:30:00-06:00",
+      "url": "https://www.3musesnola.com/music/jenavieve-cooke-1"
+    },
+    {
+      "id": "a49a4cb0b936",
+      "title": "Perry Gordon Jazz",
+      "start": "2026-11-08T19:30:00-06:00",
+      "end": "2026-11-08T23:30:00-06:00",
+      "url": "https://www.3musesnola.com/music/perry-gordon-jazz"
+    }
+  ]
 }
