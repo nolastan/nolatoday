@@ -2,13 +2,6 @@
   "venue": "maple-leaf-bar",
   "events": [
     {
-      "id": "d30835c266e0",
-      "title": "Very Good Tuesday Ft. Solomon Fox, Deven Trusclair, Austin Clements, & Max Bronstein",
-      "start": "2026-11-03T20:30:00-06:00",
-      "end": "2026-11-04T00:00:00-06:00",
-      "url": "https://www.mapleleafbar.com/events/very-good-tuesday-ft-solomon-fox-deven-trusclair-austin-clements-max-bronstein"
-    },
-    {
       "id": "95e2e4bb2050",
       "title": "Happy Organ Hour with Joe Ashlar, Stanton Moore, & Ari Teitel",
       "start": "2026-11-04T19:00:00-06:00",
@@ -42,6 +35,13 @@
       "start": "2026-11-06T22:00:00-06:00",
       "end": "2026-11-07T02:00:00-06:00",
       "url": "https://www.mapleleafbar.com/events/honey-island-swamp-band-2"
+    },
+    {
+      "id": "526b2f3e6657",
+      "title": "Soul Project",
+      "start": "2026-11-07T19:00:00-06:00",
+      "end": "2026-11-07T23:00:00-06:00",
+      "url": "https://www.mapleleafbar.com/events/soul-project"
     }
   ]
 }

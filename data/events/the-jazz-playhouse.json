@@ -2,12 +2,6 @@
   "venue": "the-jazz-playhouse",
   "events": [
     {
-      "id": "bdaf62a69781",
-      "title": "The Sam Lobley Trio at The Jazz Playhouse",
-      "start": "2026-11-03T19:30:00-06:00",
-      "url": "https://www.eventbrite.com/e/the-sam-lobley-trio-at-the-jazz-playhouse-tickets-1981817757261"
-    },
-    {
       "id": "d8264ee51ddd",
       "title": "Sierra & The Green Notes at the Jazz Playhouse",
       "start": "2026-11-04T19:30:00-06:00",
@@ -30,6 +24,12 @@
       "title": "Richard 'Piano' Scott at The Jazz Playhouse",
       "start": "2026-11-08T19:30:00-06:00",
       "url": "https://www.eventbrite.com/e/richard-piano-scott-at-the-jazz-playhouse-tickets-1983991925256"
+    },
+    {
+      "id": "d643fa398cfd",
+      "title": "The Sam Lobley Trio at The Jazz Playhouse",
+      "start": "2026-11-10T19:30:00-06:00",
+      "url": "https://www.eventbrite.com/e/the-sam-lobley-trio-at-the-jazz-playhouse-tickets-1981817757261"
     },
     {
       "id": "5d946d295db9",

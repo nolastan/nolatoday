@@ -2,18 +2,6 @@
   "venue": "the-spotted-cat",
   "events": [
     {
-      "id": "4f83fdcf3c0a",
-      "title": "Chris Christy Band",
-      "start": "2026-11-03T14:00:00-06:00",
-      "url": "https://www.spottedcatmusicclub.com/calendar"
-    },
-    {
-      "id": "b6a4c3acb0a6",
-      "title": "Sweetie Pies of New Orleans",
-      "start": "2026-11-03T18:00:00-06:00",
-      "url": "https://www.spottedcatmusicclub.com/calendar"
-    },
-    {
       "id": "571c33276e5c",
       "title": "Smoking Time Jazz Club",
       "start": "2026-11-03T21:30:00-06:00",
@@ -338,12 +326,6 @@
       "url": "https://www.spottedcatmusicclub.com/calendar"
     },
     {
-      "id": "d95c6f695c31",
-      "title": "Khris Royal & Friends",
-      "start": "2026-11-21T22:00:00-06:00",
-      "url": "https://www.spottedcatmusicclub.com/calendar"
-    },
-    {
       "id": "771ec7e68d82",
       "title": "Jacky Blaire & The Hot Biscuits",
       "start": "2026-11-22T14:00:00-06:00",
@@ -416,6 +398,12 @@
       "url": "https://www.spottedcatmusicclub.com/calendar"
     },
     {
+      "id": "f24dc2f44e8e",
+      "title": "Tom Saunders Hot Cats",
+      "start": "2026-11-26T18:00:00-06:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
       "id": "75b2caa879d5",
       "title": "Paradise Jazz Band",
       "start": "2026-11-27T14:00:00-06:00",
@@ -428,9 +416,21 @@
       "url": "https://www.spottedcatmusicclub.com/calendar"
     },
     {
+      "id": "85d180905917",
+      "title": "Popcorn",
+      "start": "2026-11-28T14:00:00-06:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
       "id": "4faa0674fd9f",
       "title": "Shake'em Up Jazz Band",
       "start": "2026-11-28T18:00:00-06:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
+      "id": "1d6dcf47ab5c",
+      "title": "Dominick Grillo & The Frenchmen Street All-Stars",
+      "start": "2026-11-28T22:00:00-06:00",
       "url": "https://www.spottedcatmusicclub.com/calendar"
     },
     {

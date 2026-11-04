@@ -2,27 +2,6 @@
   "venue": "the-allways-lounge",
   "events": [
     {
-      "id": "891c29077988",
-      "title": "Freaklesque! (burlesque)",
-      "start": "2026-11-03T19:00:00-06:00",
-      "end": "2026-11-03T20:30:00-06:00",
-      "url": "https://tockify.com/allwayslounge/detail/4074/1793754000000"
-    },
-    {
-      "id": "2faf65511640",
-      "title": "The Art of Kissing workshop",
-      "start": "2026-11-03T19:30:00-06:00",
-      "end": "2026-11-03T21:00:00-06:00",
-      "url": "https://tockify.com/allwayslounge/detail/4593/1793755800000"
-    },
-    {
-      "id": "567154775f03",
-      "title": "AVANT-HARDE: Outré Cabaret & Burlesque",
-      "start": "2026-11-03T21:30:00-06:00",
-      "end": "2026-11-03T23:00:00-06:00",
-      "url": "https://tockify.com/allwayslounge/detail/4389/1793763000000"
-    },
-    {
       "id": "168258cb3d26",
       "title": "Lefty Lucy's Burlesque Bingo",
       "start": "2026-11-04T18:30:00-06:00",
@@ -1931,6 +1910,20 @@
       "start": "2027-01-31T20:00:00-06:00",
       "end": "2027-01-31T23:30:00-06:00",
       "url": "https://tockify.com/allwayslounge/detail/1860/1801447200000"
+    },
+    {
+      "id": "f2ccaf458d3b",
+      "title": "Betsy Propane Smoke Show (live music & burlesque)",
+      "start": "2027-02-01T19:00:00-06:00",
+      "end": "2027-02-01T20:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/2864/1801530000000"
+    },
+    {
+      "id": "6ce2031612d8",
+      "title": "Almost Naked Karaoke",
+      "start": "2027-02-01T21:30:00-06:00",
+      "end": "2027-02-01T23:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/2269/1801539000000"
     }
   ]
 }

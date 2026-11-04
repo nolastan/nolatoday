@@ -2,12 +2,6 @@
   "venue": "dba",
   "events": [
     {
-      "id": "8af4413049ca",
-      "title": "Gal Holiday & The Honky Tonk Review",
-      "start": "2026-11-03T18:00:00-06:00",
-      "url": "https://www.dbaneworleans.com/shows"
-    },
-    {
       "id": "ea906a1ab71d",
       "title": "Bras Band Brass Band",
       "start": "2026-11-03T21:00:00-06:00",
@@ -209,6 +203,12 @@
       "id": "24aa169fdc9a",
       "title": "Michael Watson & The Alchemy",
       "start": "2026-11-20T18:00:00-06:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "da18f0631367",
+      "title": "Kortana",
+      "start": "2026-11-20T22:00:00-06:00",
       "url": "https://www.dbaneworleans.com/shows"
     },
     {

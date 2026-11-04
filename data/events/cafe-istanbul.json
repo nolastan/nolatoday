@@ -2,13 +2,6 @@
   "venue": "cafe-istanbul",
   "events": [
     {
-      "id": "5366485d89cb",
-      "title": "Jean Fest",
-      "start": "2026-11-03T21:00:00-06:00",
-      "end": "2026-11-03T23:59:00-06:00",
-      "url": "https://www.cafeistanbulnola.com/upcoming-events/jean-fest"
-    },
-    {
       "id": "1eec0a82d67c",
       "title": "The Spotlight Show",
       "start": "2026-11-04T19:00:00-06:00",
@@ -30,6 +23,13 @@
       "url": "https://www.cafeistanbulnola.com/upcoming-events/conjure-into-the-magical-real"
     },
     {
+      "id": "e730e5233f25",
+      "title": "Ara's Love Foundation",
+      "start": "2026-11-07T11:00:00-06:00",
+      "end": "2026-11-07T14:00:00-06:00",
+      "url": "https://www.cafeistanbulnola.com/upcoming-events/aras-love-foundation"
+    },
+    {
       "id": "7badc1ecc3ec",
       "title": "Sudan Grand Marshall Brunch",
       "start": "2026-11-07T15:00:00-06:00",
@@ -37,11 +37,25 @@
       "url": "https://www.cafeistanbulnola.com/upcoming-events/sudan-grand-marshall-brunch"
     },
     {
+      "id": "b322692a3df2",
+      "title": "Ara's Love",
+      "start": "2026-11-08T18:00:00-06:00",
+      "end": "2026-11-08T22:00:00-06:00",
+      "url": "https://www.cafeistanbulnola.com/upcoming-events/aras-love"
+    },
+    {
       "id": "0df0fd1f442f",
       "title": "Poets on Poets",
       "start": "2026-11-11T22:00:00-06:00",
       "end": "2026-11-11T23:59:00-06:00",
       "url": "https://www.cafeistanbulnola.com/upcoming-events/llkrey4amkst4he7n7h8s82h43alwr"
+    },
+    {
+      "id": "52b5fd021e0f",
+      "title": "WORK",
+      "start": "2026-11-13T22:00:00-06:00",
+      "end": "2026-11-13T23:59:00-06:00",
+      "url": "https://www.cafeistanbulnola.com/upcoming-events/work"
     },
     {
       "id": "ed020a2dd805",
@@ -56,6 +70,13 @@
       "start": "2026-11-25T22:00:00-06:00",
       "end": "2026-11-25T23:59:00-06:00",
       "url": "https://www.cafeistanbulnola.com/upcoming-events/47sthk52d559klaxytphf2xgw4zhwk"
+    },
+    {
+      "id": "9d329bdc920c",
+      "title": "Lavender & Velvet",
+      "start": "2026-12-04T21:00:00-06:00",
+      "end": "2026-12-04T22:00:00-06:00",
+      "url": "https://www.cafeistanbulnola.com/upcoming-events/lavender-velvet"
     },
     {
       "id": "f7b759bd68ac",
