@@ -2,9 +2,9 @@
   "venue": "the-rabbit-hole",
   "events": [
     {
-      "id": "a5550639a2c7",
+      "id": "b83172d0c175",
       "title": "Rebirth Brass Band Tuesdays @ The Rabbit Hole",
-      "start": "2026-11-03T21:00:00-06:00",
+      "start": "2026-11-10T21:00:00-06:00",
       "url": "https://www.eventbrite.com/e/rebirth-brass-band-tuesdays-the-rabbit-hole-tickets-1112074858839"
     },
     {
@@ -18,6 +18,12 @@
       "title": "HOUSE OF DISCO",
       "start": "2026-11-20T22:00:00-06:00",
       "url": "https://www.eventbrite.com/e/house-of-disco-tickets-2002763113385"
+    },
+    {
+      "id": "c760399a5eb3",
+      "title": "MILKSHAKE (2000's R&B + Hip Hop)",
+      "start": "2026-12-12T22:00:00-06:00",
+      "url": "https://www.eventbrite.com/e/milkshake-2000s-rb-hip-hop-tickets-2004378245288"
     }
   ]
 }

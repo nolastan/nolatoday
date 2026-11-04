@@ -2,13 +2,6 @@
   "venue": "new-orleans-jazz-museum",
   "events": [
     {
-      "id": "f520af8aa642",
-      "title": "Steelpan Showcase",
-      "start": "2026-11-04T13:00:00-06:00",
-      "end": "2026-11-04T14:00:00-06:00",
-      "url": "https://nolajazzmuseum.org/events/2026/11/4/steel-pan-showcase"
-    },
-    {
       "id": "c3bdb5ba879b",
       "title": "The Jazz Foundation of America (JFA) Present the Ben Fox Trio",
       "start": "2026-11-04T14:00:00-06:00",

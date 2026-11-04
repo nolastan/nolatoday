@@ -2,12 +2,6 @@
   "venue": "dba",
   "events": [
     {
-      "id": "ea906a1ab71d",
-      "title": "Bras Band Brass Band",
-      "start": "2026-11-03T21:00:00-06:00",
-      "url": "https://www.dbaneworleans.com/shows"
-    },
-    {
       "id": "16e3d44f9bf9",
       "title": "Jenavieve & The Winding Boys",
       "start": "2026-11-04T18:00:00-06:00",
@@ -281,6 +275,12 @@
       "id": "eeb2bb0df54d",
       "title": "Michael Watson & The Alchemy",
       "start": "2026-11-27T18:00:00-06:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "e5411e009105",
+      "title": "Ado Soul and the Tribe",
+      "start": "2026-11-27T22:00:00-06:00",
       "url": "https://www.dbaneworleans.com/shows"
     },
     {
