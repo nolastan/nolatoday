@@ -2,12 +2,6 @@
   "venue": "santos-bar",
   "events": [
     {
-      "id": "adbfee683039",
-      "title": "CHAMBRE NOIR",
-      "start": "2026-11-04T21:00:00-06:00",
-      "url": "https://www.santosbar.com/tm-event/chambre-noir-2026-11-04/"
-    },
-    {
       "id": "397d65ceca5b",
       "title": "ELECTRO CLASH",
       "start": "2026-11-05T22:00:00-06:00",

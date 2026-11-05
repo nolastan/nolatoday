@@ -72,8 +72,8 @@
       "url": "https://nolajazzmuseum.org/events/2026/11/17/the-ella-project"
     },
     {
-      "id": "86a074cf8377",
-      "title": "The Jazz Foundation of America (JFA) Present... Karen and Norbert Stachel with LehCats",
+      "id": "8dda63e98b90",
+      "title": "Jazz Foundation of America presents: Karen and Norbert Stachel with LehCats",
       "start": "2026-11-18T14:00:00-06:00",
       "end": "2026-11-18T15:00:00-06:00",
       "url": "https://nolajazzmuseum.org/events/2026/11/18/jazz-foundation-of-america-jfa-presents"
@@ -82,7 +82,7 @@
       "id": "08ca4260811c",
       "title": "Byron Asher’s Skrontch Music",
       "start": "2026-11-19T18:00:00-06:00",
-      "end": "2026-11-19T19:30:00-06:00",
+      "end": "2026-11-19T20:15:00-06:00",
       "url": "https://nolajazzmuseum.org/events/2026/11/19/byron-asher-skrontch-performance"
     },
     {
@@ -114,8 +114,8 @@
       "url": "https://nolajazzmuseum.org/events/2026/10/10/balcony-concert-sponsored-by-positive-vibrations-sncas-fp554"
     },
     {
-      "id": "78ff470e619e",
-      "title": "The Jazz Foundation of America (JFA) Show",
+      "id": "86becae2bd05",
+      "title": "Jazz Foundation of America",
       "start": "2026-12-02T14:00:00-06:00",
       "end": "2026-12-02T15:00:00-06:00",
       "url": "https://nolajazzmuseum.org/events/2026/12/2/jazz-foundation-of-america-jfa-presents"
@@ -191,8 +191,8 @@
       "url": "https://nolajazzmuseum.org/events/2026/12/15/carl-leblance-holiday-show"
     },
     {
-      "id": "5cf1aff86052",
-      "title": "The Jazz Foundation of America (JFA) Show",
+      "id": "44c01f589faa",
+      "title": "Jazz Foundation of America",
       "start": "2026-12-16T14:00:00-06:00",
       "end": "2026-12-16T15:00:00-06:00",
       "url": "https://nolajazzmuseum.org/events/2026/12/16/jazz-foundation-of-america-jfa-presents"
@@ -240,8 +240,8 @@
       "url": "https://nolajazzmuseum.org/events/2026/12/15/carl-leblance-holiday-show-7ahjf-zk6sc-bx8lt"
     },
     {
-      "id": "47a9e9d15085",
-      "title": "The Jazz Foundation of America (JFA) Show",
+      "id": "1d23b29d2825",
+      "title": "Jazz Foundation of America",
       "start": "2027-01-06T14:00:00-06:00",
       "end": "2027-01-06T15:00:00-06:00",
       "url": "https://nolajazzmuseum.org/events/2027/1/6/jazz-foundation-of-america-jfa-presents"
@@ -296,8 +296,8 @@
       "url": "https://nolajazzmuseum.org/events/2026/12/15/carl-leblance-holiday-show-7ahjf-zk6sc-bx8lt-nk895-d4mpt"
     },
     {
-      "id": "db6b2b3bf470",
-      "title": "The Jazz Foundation of America (JFA) Show",
+      "id": "b94eec62118a",
+      "title": "Jazz Foundation of America",
       "start": "2027-01-20T14:00:00-06:00",
       "end": "2027-01-20T15:00:00-06:00",
       "url": "https://nolajazzmuseum.org/events/2027/1/6/jazz-foundation-of-america-jfa-presents-6fbkr"
@@ -329,6 +329,13 @@
       "start": "2027-02-02T17:00:00-06:00",
       "end": "2027-02-02T18:00:00-06:00",
       "url": "https://nolajazzmuseum.org/events/2026/12/15/carl-leblance-holiday-show-7ahjf-zk6sc-bx8lt-nk895-d4mpt-a59k9-5d6y8"
+    },
+    {
+      "id": "34ef1a281e77",
+      "title": "Jazz Foundation of America",
+      "start": "2027-02-03T14:00:00-06:00",
+      "end": "2027-02-03T15:00:00-06:00",
+      "url": "https://nolajazzmuseum.org/events/2027/1/6/jazz-foundation-of-america-jfa-presents-6fbkr-a35td"
     }
   ]
 }

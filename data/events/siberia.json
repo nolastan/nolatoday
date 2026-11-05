@@ -2,13 +2,6 @@
   "venue": "siberia",
   "events": [
     {
-      "id": "efa24584b197",
-      "title": "Wax Monkey with Atom Cat",
-      "start": "2026-11-04T21:00:00-06:00",
-      "end": "2026-11-05T01:00:00-06:00",
-      "url": "https://dice.fm/event/6a74f4b7c0e27f0001b77ef4"
-    },
-    {
       "id": "1c8310c6a955",
       "title": "Transfusion with Social Daze and Jaded",
       "start": "2026-11-05T21:00:00-06:00",
