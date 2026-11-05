@@ -2,12 +2,6 @@
   "venue": "bontemps",
   "events": [
     {
-      "id": "70651ee71301",
-      "title": "Wednesday Late Night Funbox Karaoke",
-      "start": "2026-11-04T22:00:00-06:00",
-      "url": "https://lbtrnola.com/new-orleans-uptown-le-bon-temps-roule-events"
-    },
-    {
       "id": "8da52a59bf91",
       "title": "The Soul Rebels",
       "start": "2026-11-05T23:00:00-06:00",
@@ -26,6 +20,12 @@
       "url": "https://lbtrnola.com/new-orleans-uptown-le-bon-temps-roule-events"
     },
     {
+      "id": "0567f30edbb7",
+      "title": "Wednesday Late Night Funbox Karaoke",
+      "start": "2026-11-11T22:00:00-06:00",
+      "url": "https://lbtrnola.com/new-orleans-uptown-le-bon-temps-roule-events"
+    },
+    {
       "id": "a51c5a415abd",
       "title": "The Soul Rebels",
       "start": "2026-11-12T23:00:00-06:00",
@@ -35,6 +35,7 @@
       "id": "a43023598723",
       "title": "Good Enough For Good Times",
       "start": "2026-11-13T21:00:00-06:00",
+      "end": "2026-11-13T23:00:00-06:00",
       "url": "https://lbtrnola.com/new-orleans-uptown-le-bon-temps-roule-events"
     },
     {
@@ -111,14 +112,8 @@
       "url": "https://lbtrnola.com/new-orleans-uptown-le-bon-temps-roule-events"
     },
     {
-      "id": "cc3db8fcc78b",
+      "id": "5b69a61437ab",
       "title": "Hash Cabbage",
-      "start": "2026-12-04T23:00:00-06:00",
-      "url": "https://lbtrnola.com/new-orleans-uptown-le-bon-temps-roule-events"
-    },
-    {
-      "id": "a375523003be",
-      "title": "Basch Jernigan",
       "start": "2026-12-05T23:00:00-06:00",
       "url": "https://lbtrnola.com/new-orleans-uptown-le-bon-temps-roule-events"
     },

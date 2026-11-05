@@ -2,12 +2,6 @@
   "venue": "dos-jefes",
   "events": [
     {
-      "id": "f5bd06fd0ef3",
-      "title": "Kris Tokarski",
-      "start": "2026-11-04T20:30:00-06:00",
-      "url": "https://dosjefes.com/events/the-kris-tokarski-trio/"
-    },
-    {
       "id": "b99040e061a9",
       "title": "Anna Laura Quinn",
       "start": "2026-11-05T20:30:00-06:00",
@@ -174,6 +168,12 @@
       "title": "JOHN FOHL",
       "start": "2026-12-21T20:30:00-06:00",
       "url": "https://dosjefes.com/events/john-fohl-2-2026-12-21/"
+    },
+    {
+      "id": "17211b5fb3e0",
+      "title": "JOHN FOHL",
+      "start": "2026-12-28T20:30:00-06:00",
+      "url": "https://dosjefes.com/events/john-fohl-2-2026-12-28/"
     }
   ]
 }

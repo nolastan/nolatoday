@@ -2,20 +2,6 @@
   "venue": "new-orleans-jazz-museum",
   "events": [
     {
-      "id": "c3bdb5ba879b",
-      "title": "The Jazz Foundation of America (JFA) Present the Ben Fox Trio",
-      "start": "2026-11-04T14:00:00-06:00",
-      "end": "2026-11-04T15:00:00-06:00",
-      "url": "https://nolajazzmuseum.org/events/2026/11/4/jazz-foundation-of-america-jfa-presents"
-    },
-    {
-      "id": "833505f06d4f",
-      "title": "Friends of the Cabildo Film Series Present Irma Thomas",
-      "start": "2026-11-04T18:00:00-06:00",
-      "end": "2026-11-04T20:00:00-06:00",
-      "url": "https://nolajazzmuseum.org/events/2026/11/4/friends-of-the-cabildo-film-series-presents-irma-thomas"
-    },
-    {
       "id": "cd15ff3b5999",
       "title": "Gallatin Street Fridays Presented by The Nathan and Priscilla Gordon Foundation: Mark Braud’s Colossus Brass Band",
       "start": "2026-11-06T14:00:00-06:00",
@@ -336,6 +322,13 @@
       "start": "2027-01-29T14:00:00-06:00",
       "end": "2027-01-29T15:00:00-06:00",
       "url": "https://nolajazzmuseum.org/events/2026/12/18/gallatin-street-fridays-presented-by-the-nathan-and-priscilla-gordon-foundation-hzmxk-l42eg-2f9xr-8sery"
+    },
+    {
+      "id": "8ee34e364ef8",
+      "title": "Balcony Show sponsored by the Positive Vibrations Foundation",
+      "start": "2027-02-02T17:00:00-06:00",
+      "end": "2027-02-02T18:00:00-06:00",
+      "url": "https://nolajazzmuseum.org/events/2026/12/15/carl-leblance-holiday-show-7ahjf-zk6sc-bx8lt-nk895-d4mpt-a59k9-5d6y8"
     }
   ]
 }

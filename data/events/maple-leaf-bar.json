@@ -2,13 +2,6 @@
   "venue": "maple-leaf-bar",
   "events": [
     {
-      "id": "95e2e4bb2050",
-      "title": "Happy Organ Hour with Joe Ashlar, Stanton Moore, & Ari Teitel",
-      "start": "2026-11-04T19:00:00-06:00",
-      "end": "2026-11-04T23:00:00-06:00",
-      "url": "https://www.mapleleafbar.com/events/happy-organ-hour-with-joe-ashlar-stanton-moore-ari-teitel-1"
-    },
-    {
       "id": "8843546ff969",
       "title": "Booker & Beyond - Ross Hoppe",
       "start": "2026-11-05T18:00:00-06:00",

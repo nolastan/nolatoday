@@ -2,12 +2,6 @@
   "venue": "saenger-theatre",
   "events": [
     {
-      "id": "178607df78b1",
-      "title": "The Lion King",
-      "start": "2026-11-04T19:30:00-06:00",
-      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-POA"
-    },
-    {
       "id": "6d920036bd8d",
       "title": "The Lion King",
       "start": "2026-11-05T19:30:00-06:00",
@@ -54,6 +48,12 @@
       "title": "Ali Siddiq",
       "start": "2026-11-28T20:00:00-06:00",
       "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7J3FJ"
+    },
+    {
+      "id": "a1d287d9dbd1",
+      "title": "Ali Siddiq",
+      "start": "2026-11-29T18:00:00-06:00",
+      "url": "https://www.ticketmaster.com/event/Z7r9jZ1AA7UoO"
     },
     {
       "id": "e3353fea1dc9",

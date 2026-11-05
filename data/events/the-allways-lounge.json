@@ -2,27 +2,6 @@
   "venue": "the-allways-lounge",
   "events": [
     {
-      "id": "168258cb3d26",
-      "title": "Lefty Lucy's Burlesque Bingo",
-      "start": "2026-11-04T18:30:00-06:00",
-      "end": "2026-11-04T20:30:00-06:00",
-      "url": "https://tockify.com/allwayslounge/detail/3097/1793838600000"
-    },
-    {
-      "id": "f4256d131611",
-      "title": "CILA PUCCADELLA presents: THE WEIGHT OF THE SUN & THE NORTHERN LIGHTS",
-      "start": "2026-11-04T19:00:00-06:00",
-      "end": "2026-11-04T21:30:00-06:00",
-      "url": "https://tockify.com/allwayslounge/detail/4518/1793840400000"
-    },
-    {
-      "id": "6691286b47e8",
-      "title": "Esoterotica (original erotic readings)",
-      "start": "2026-11-04T21:00:00-06:00",
-      "end": "2026-11-04T22:30:00-06:00",
-      "url": "https://tockify.com/allwayslounge/detail/196/1793847600000"
-    },
-    {
       "id": "7ac347b1198c",
       "title": "Van Ella Bordella (burlesque)",
       "start": "2026-11-05T19:00:00-06:00",
@@ -1924,6 +1903,20 @@
       "start": "2027-02-01T21:30:00-06:00",
       "end": "2027-02-01T23:30:00-06:00",
       "url": "https://tockify.com/allwayslounge/detail/2269/1801539000000"
+    },
+    {
+      "id": "5a2712aadb2e",
+      "title": "Freaklesque! (burlesque)",
+      "start": "2027-02-02T19:00:00-06:00",
+      "end": "2027-02-02T20:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/4074/1801616400000"
+    },
+    {
+      "id": "68a7c70dc5b0",
+      "title": "AVANT-HARDE: Outré Cabaret & Burlesque",
+      "start": "2027-02-02T21:30:00-06:00",
+      "end": "2027-02-02T23:00:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/4389/1801625400000"
     }
   ]
 }

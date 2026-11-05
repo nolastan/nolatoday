@@ -2,12 +2,6 @@
   "venue": "tips",
   "events": [
     {
-      "id": "aba8108bc850",
-      "title": "Nick Shoulders",
-      "start": "2026-11-04T20:00:00-06:00",
-      "url": "https://tipitinas.com/event/14793943/nick-shoulders"
-    },
-    {
       "id": "c4be8eaf72cf",
       "title": "Bowling For Soup",
       "start": "2026-11-06T19:30:00-06:00",
@@ -84,6 +78,12 @@
       "title": "Sunday Youth Music Labs",
       "start": "2026-11-29T13:00:00-06:00",
       "url": "https://tipitinas.com/event/14296544/sunday-youth-music-labs"
+    },
+    {
+      "id": "534fdf73faed",
+      "title": "Fais Do-Do With Bruce Daigrepont Cajun Band",
+      "start": "2026-11-29T17:15:00-06:00",
+      "url": "https://tipitinas.com/event/14296304/fais-do-do-with-bruce-daigrepont-cajun-band"
     },
     {
       "id": "c6cd1ad5120e",

@@ -2,18 +2,11 @@
   "venue": "cafe-istanbul",
   "events": [
     {
-      "id": "1eec0a82d67c",
-      "title": "The Spotlight Show",
-      "start": "2026-11-04T19:00:00-06:00",
-      "end": "2026-11-04T22:00:00-06:00",
-      "url": "https://www.cafeistanbulnola.com/upcoming-events/lbrsh86dfecyn5dy752e2zarry6b6t"
-    },
-    {
-      "id": "da7ffb32f342",
-      "title": "Poets on Poets",
-      "start": "2026-11-04T22:00:00-06:00",
-      "end": "2026-11-04T23:59:00-06:00",
-      "url": "https://www.cafeistanbulnola.com/upcoming-events/p42pwkys89ssegtmebshnntlk2635t"
+      "id": "c872bc7df2f7",
+      "title": "P.R.I.M.E POETRY",
+      "start": "2026-11-05T18:00:00-06:00",
+      "end": "2026-11-05T21:00:00-06:00",
+      "url": "https://www.cafeistanbulnola.com/upcoming-events/prime-poetry"
     },
     {
       "id": "7eefb141efaf",
@@ -56,6 +49,13 @@
       "start": "2026-11-13T22:00:00-06:00",
       "end": "2026-11-13T23:59:00-06:00",
       "url": "https://www.cafeistanbulnola.com/upcoming-events/work"
+    },
+    {
+      "id": "dafd0bf3e704",
+      "title": "Karen Stachel, Norbert Stachel & LehCats",
+      "start": "2026-11-17T20:00:00-06:00",
+      "end": "2026-11-17T22:00:00-06:00",
+      "url": "https://www.cafeistanbulnola.com/upcoming-events/karen-stachel-norbert-stachel-lehcats"
     },
     {
       "id": "ed020a2dd805",
