@@ -2,9 +2,9 @@
   "venue": "dos-jefes",
   "events": [
     {
-      "id": "5afdf663aaac",
+      "id": "4299245ab0fc",
       "title": "BassX",
-      "start": "2026-11-06T00:00:00-06:00",
+      "start": "2026-11-06T21:00:00-06:00",
       "url": "https://dosjefes.com/events/bassx-2/"
     },
     {
@@ -120,6 +120,12 @@
       "title": "THE MARK COLEMAN BAND",
       "start": "2026-11-25T20:30:00-06:00",
       "url": "https://dosjefes.com/events/mark-coleman-todd-duke-2-2021-05-27/"
+    },
+    {
+      "id": "03691192f694",
+      "title": "Jay Dufour & the Strange Gang",
+      "start": "2026-11-26T20:30:00-06:00",
+      "url": "https://dosjefes.com/events/jay-dufour-dem-jaywalkers/"
     },
     {
       "id": "4ab7a08cec84",

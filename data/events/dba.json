@@ -2,12 +2,6 @@
   "venue": "dba",
   "events": [
     {
-      "id": "ee92b15bf038",
-      "title": "Vegas Cola Band",
-      "start": "2026-11-05T21:00:00-06:00",
-      "url": "https://www.dbaneworleans.com/shows"
-    },
-    {
       "id": "851cc2b7303f",
       "title": "Michael Watson & The Alchemy",
       "start": "2026-11-06T18:00:00-06:00",
