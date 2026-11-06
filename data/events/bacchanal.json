@@ -2,18 +2,6 @@
   "venue": "bacchanal",
   "events": [
     {
-      "id": "d5c876817aba",
-      "title": "Raphael Bas",
-      "start": "2026-11-05T12:00:00-06:00",
-      "end": "2026-11-05T15:00:00-06:00"
-    },
-    {
-      "id": "721232bb278d",
-      "title": "Raphael Bas",
-      "start": "2026-11-05T18:00:00-06:00",
-      "end": "2026-11-05T21:00:00-06:00"
-    },
-    {
       "id": "e632a85c9a24",
       "title": "David Sigler",
       "start": "2026-11-06T13:00:00-06:00",

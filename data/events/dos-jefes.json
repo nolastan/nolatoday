@@ -2,12 +2,6 @@
   "venue": "dos-jefes",
   "events": [
     {
-      "id": "b99040e061a9",
-      "title": "Anna Laura Quinn",
-      "start": "2026-11-05T20:30:00-06:00",
-      "url": "https://dosjefes.com/events/anna-laura-quinn/"
-    },
-    {
       "id": "5afdf663aaac",
       "title": "BassX",
       "start": "2026-11-06T00:00:00-06:00",
@@ -38,10 +32,10 @@
       "url": "https://dosjefes.com/events/tom-hook-2025-08-12/"
     },
     {
-      "id": "179c96671e3b",
-      "title": "Z2",
+      "id": "b888c19887d0",
+      "title": "Basch Jernigan",
       "start": "2026-11-11T20:30:00-06:00",
-      "url": "https://dosjefes.com/events/z2-3/"
+      "url": "https://dosjefes.com/events/basch-jernigan/"
     },
     {
       "id": "71c4b771dfcb",

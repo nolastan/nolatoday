@@ -2,20 +2,6 @@
   "venue": "maple-leaf-bar",
   "events": [
     {
-      "id": "8843546ff969",
-      "title": "Booker & Beyond - Ross Hoppe",
-      "start": "2026-11-05T18:00:00-06:00",
-      "end": "2026-11-05T19:30:00-06:00",
-      "url": "https://www.mapleleafbar.com/events/booker-beyond-ross-hoppe"
-    },
-    {
-      "id": "3bd4235d12de",
-      "title": "Alvin Ford Jr. Ft. Brian Coogan, Brad Walker, Cliff Hines, & Chris Senac",
-      "start": "2026-11-05T21:00:00-06:00",
-      "end": "2026-11-06T00:00:00-06:00",
-      "url": "https://www.mapleleafbar.com/events/alvin-ford-jr-ft-brian-coogan-brad-walker-cliff-hines-chris-senac"
-    },
-    {
       "id": "c0e0c55096dd",
       "title": "Scott Pemberton",
       "start": "2026-11-06T20:00:00-06:00",
@@ -42,6 +28,20 @@
       "start": "2026-11-09T19:00:00-06:00",
       "end": "2026-11-09T21:30:00-06:00",
       "url": "https://www.mapleleafbar.com/events/george-porter-jr-trio-ft-chris-adkins-7pm-4"
+    },
+    {
+      "id": "d8f22161d5f9",
+      "title": "George Porter Jr. Trio Ft. Chris Adkins (10pm)",
+      "start": "2026-11-09T22:00:00-06:00",
+      "end": "2026-11-10T00:00:00-06:00",
+      "url": "https://www.mapleleafbar.com/events/george-porter-jr-trio-ft-chris-adkins-10pm-4"
+    },
+    {
+      "id": "422ebc51130c",
+      "title": "Very Good Tuesdays Ft. Amina Scott, Skerik, David Torkanowsky, Ari Teitel, John Maestas, & Thomas Glass",
+      "start": "2026-11-10T19:30:00-06:00",
+      "end": "2026-11-11T00:00:00-06:00",
+      "url": "https://www.mapleleafbar.com/events/very-good-tuesdays-ft-amina-scott-skerik-david-torkanowsky-ari-teitel-john-maestas-thomas-glass"
     }
   ]
 }

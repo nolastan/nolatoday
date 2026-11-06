@@ -2,12 +2,6 @@
   "venue": "saenger-theatre",
   "events": [
     {
-      "id": "6d920036bd8d",
-      "title": "The Lion King",
-      "start": "2026-11-05T19:30:00-06:00",
-      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-PO6"
-    },
-    {
       "id": "7623d3587499",
       "title": "The Lion King",
       "start": "2026-11-06T19:30:00-06:00",
