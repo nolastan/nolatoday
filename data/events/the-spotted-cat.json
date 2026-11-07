@@ -2,18 +2,6 @@
   "venue": "the-spotted-cat",
   "events": [
     {
-      "id": "9a487e9f3f4c",
-      "title": "James Martin Band",
-      "start": "2026-11-06T22:00:00-06:00",
-      "url": "https://www.spottedcatmusicclub.com/calendar"
-    },
-    {
-      "id": "d797e3e262d6",
-      "title": "New Orleans Cottonmouth Kings",
-      "start": "2026-11-06T22:00:00-06:00",
-      "url": "https://www.spottedcatmusicclub.com/calendar"
-    },
-    {
       "id": "23242c5947e4",
       "title": "Twerk Thomson Band",
       "start": "2026-11-07T14:00:00-06:00",

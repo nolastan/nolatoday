@@ -2,12 +2,6 @@
   "venue": "gasa-gasa",
   "events": [
     {
-      "id": "3ba6011eaa81",
-      "title": "Daikaiju",
-      "start": "2026-11-06T21:00:00-06:00",
-      "url": "https://www.jambase.com/show/daikaiju-gasa-gasa-20261106"
-    },
-    {
       "id": "1d403ec54cde",
       "title": "Radiator Hospital",
       "start": "2026-11-10T21:00:00-06:00",
