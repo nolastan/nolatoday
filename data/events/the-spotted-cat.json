@@ -2,12 +2,6 @@
   "venue": "the-spotted-cat",
   "events": [
     {
-      "id": "cc29c9c4fb31",
-      "title": "Paradise Jazz Band",
-      "start": "2026-11-06T14:00:00-06:00",
-      "url": "https://www.spottedcatmusicclub.com/calendar"
-    },
-    {
       "id": "9a487e9f3f4c",
       "title": "James Martin Band",
       "start": "2026-11-06T22:00:00-06:00",

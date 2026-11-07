@@ -2,27 +2,6 @@
   "venue": "the-allways-lounge",
   "events": [
     {
-      "id": "bbf910520eef",
-      "title": "Henrietta's Baudy Brothel Sing A-Long",
-      "start": "2026-11-06T17:00:00-06:00",
-      "end": "2026-11-06T18:30:00-06:00",
-      "url": "https://tockify.com/allwayslounge/detail/4429/1794006000000"
-    },
-    {
-      "id": "23808e6eacd5",
-      "title": "Nouvelle Follies: Parisian Glamour Meets Underworld Burlesque",
-      "start": "2026-11-06T19:00:00-06:00",
-      "end": "2026-11-06T21:00:00-06:00",
-      "url": "https://tockify.com/allwayslounge/detail/4385/1794013200000/13"
-    },
-    {
-      "id": "d3b5ca045889",
-      "title": "Bayou Blues Burlesque",
-      "start": "2026-11-06T20:00:00-06:00",
-      "end": "2026-11-06T21:30:00-06:00",
-      "url": "https://tockify.com/allwayslounge/detail/3920/1794016800000"
-    },
-    {
       "id": "e0b7497f0fd0",
       "title": "CLASS: A Classic New Orleans Burlesque Show",
       "start": "2026-11-06T22:30:00-06:00",
@@ -1910,6 +1889,20 @@
       "start": "2027-02-03T21:00:00-06:00",
       "end": "2027-02-03T22:30:00-06:00",
       "url": "https://tockify.com/allwayslounge/detail/196/1801710000000"
+    },
+    {
+      "id": "86138450d507",
+      "title": "Van Ella Bordella (burlesque)",
+      "start": "2027-02-04T19:00:00-06:00",
+      "end": "2027-02-04T21:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/1768/1801789200000"
+    },
+    {
+      "id": "3748e341e870",
+      "title": "CHAOTIC GOOD TIME: THE SELECT-YOUR-OWN-ADVENTURE BURLESQUE & VARIETY SHOW",
+      "start": "2027-02-04T22:00:00-06:00",
+      "end": "2027-02-04T23:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/4395/1801800000000"
     }
   ]
 }

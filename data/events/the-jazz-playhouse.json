@@ -2,12 +2,6 @@
   "venue": "the-jazz-playhouse",
   "events": [
     {
-      "id": "340f3962d2ac",
-      "title": "Trixie Minx's Burlesque Ballroom at The Jazz Playhouse, feat. Romy Kaye",
-      "start": "2026-11-06T20:00:00-06:00",
-      "url": "https://www.eventbrite.com/e/trixie-minxs-burlesque-ballroom-at-the-jazz-playhouse-feat-romy-kaye-tickets-1980019228814"
-    },
-    {
       "id": "4c23a626057e",
       "title": "Richard 'Piano' Scott at The Jazz Playhouse",
       "start": "2026-11-08T19:30:00-06:00",
@@ -30,6 +24,12 @@
       "title": "Brass-A-Holics at The Jazz Playhouse",
       "start": "2026-11-12T19:30:00-06:00",
       "url": "https://www.eventbrite.com/e/brass-a-holics-at-the-jazz-playhouse-tickets-1980262460326"
+    },
+    {
+      "id": "86d43d72c249",
+      "title": "Trixie Minx's Burlesque Ballroom at The Jazz Playhouse, feat. Romy Kaye",
+      "start": "2026-11-13T20:00:00-06:00",
+      "url": "https://www.eventbrite.com/e/trixie-minxs-burlesque-ballroom-at-the-jazz-playhouse-feat-romy-kaye-tickets-1980019228814"
     },
     {
       "id": "31f00d9668bd",

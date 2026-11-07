@@ -2,13 +2,6 @@
   "venue": "joy-theater",
   "events": [
     {
-      "id": "cc0e9df71d8c",
-      "title": "ZOLTAN KASZAS: WORLDWIDE(ish) TOUR",
-      "start": "2026-11-06",
-      "allDay": true,
-      "url": "https://thejoytheater.com/event/zoltan-kaszas-worldwideish-tour/"
-    },
-    {
       "id": "7b45ef7c5c21",
       "title": "Shaddy Feelgood: GOODMORNING!! 2 hosted by Kerwin Claiborne",
       "start": "2026-11-14",

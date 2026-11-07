@@ -2,13 +2,6 @@
   "venue": "new-orleans-jazz-museum",
   "events": [
     {
-      "id": "cd15ff3b5999",
-      "title": "Gallatin Street Fridays Presented by The Nathan and Priscilla Gordon Foundation: Mark Braud’s Colossus Brass Band",
-      "start": "2026-11-06T14:00:00-06:00",
-      "end": "2026-11-06T15:00:00-06:00",
-      "url": "https://nolajazzmuseum.org/events/2026/11/6/gallatin-street-fridays-presented-by-the-nathan-and-priscilla-gordon-foundation"
-    },
-    {
       "id": "ff8ddbc7cb3e",
       "title": "Balcony Show sponsored by the Positive Vibrations Foundation",
       "start": "2026-11-10T17:00:00-06:00",

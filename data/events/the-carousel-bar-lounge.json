@@ -2,24 +2,6 @@
   "venue": "the-carousel-bar-lounge",
   "events": [
     {
-      "id": "f8ab1c7c6b4f",
-      "title": "LENA PRIMA & BAND",
-      "start": "2026-11-05T21:00:00-06:00",
-      "url": "https://www.hotelmonteleone.com/events/lena-prima-band-3/"
-    },
-    {
-      "id": "e4aa986ca06b",
-      "title": "ROYAL CARAVAN BRASS BAND",
-      "start": "2026-11-06T12:30:00-06:00",
-      "url": "https://www.hotelmonteleone.com/events/royal-street-brass-band-2/"
-    },
-    {
-      "id": "05ed3dabd2bb",
-      "title": "RICHARD “PIANO” SCOTT TRIO",
-      "start": "2026-11-06T16:00:00-06:00",
-      "url": "https://www.hotelmonteleone.com/events/richard-piano-scott-trio/"
-    },
-    {
       "id": "5bc567c3a343",
       "title": "NAYO JONES EXPERIENCE",
       "start": "2026-11-06T21:00:00-06:00",
