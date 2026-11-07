@@ -2,12 +2,6 @@
   "venue": "santos-bar",
   "events": [
     {
-      "id": "86b8d25c09ba",
-      "title": "RESURRECTION GOTH NIGHT",
-      "start": "2026-11-06T22:00:00-06:00",
-      "url": "https://www.santosbar.com/tm-event/resurrection-goth-night-2026-11-06/"
-    },
-    {
       "id": "10901ded71dd",
       "title": "DROP THAT BEAT (downstairs)",
       "start": "2026-11-08T20:00:00-06:00",
@@ -60,6 +54,12 @@
       "title": "CHAMBRE NOIR",
       "start": "2026-11-18T21:00:00-06:00",
       "url": "https://www.santosbar.com/tm-event/chambre-noir-2026-11-18/"
+    },
+    {
+      "id": "04c0c1172c08",
+      "title": "THE GREAT NOLA TRENDKILL AFTER PARTY",
+      "start": "2026-11-20T23:15:00-06:00",
+      "url": "https://www.santosbar.com/tm-event/the-great-nola-trendkill-after-party/"
     },
     {
       "id": "3cbdaaa54918",
