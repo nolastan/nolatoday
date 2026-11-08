@@ -2,18 +2,6 @@
   "venue": "dba",
   "events": [
     {
-      "id": "d22f5aa2ea34",
-      "title": "Young Lion Showcase",
-      "start": "2026-11-07T14:30:00-06:00",
-      "url": "https://www.dbaneworleans.com/shows"
-    },
-    {
-      "id": "414bda696eee",
-      "title": "Tuba Skinny",
-      "start": "2026-11-07T18:00:00-06:00",
-      "url": "https://www.dbaneworleans.com/shows"
-    },
-    {
       "id": "a80710dd5c0b",
       "title": "Paradise Jazz Band",
       "start": "2026-11-08T18:00:00-06:00",

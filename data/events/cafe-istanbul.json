@@ -2,13 +2,6 @@
   "venue": "cafe-istanbul",
   "events": [
     {
-      "id": "7badc1ecc3ec",
-      "title": "Sudan Grand Marshall Brunch",
-      "start": "2026-11-07T15:00:00-06:00",
-      "end": "2026-11-07T19:00:00-06:00",
-      "url": "https://www.cafeistanbulnola.com/upcoming-events/sudan-grand-marshall-brunch"
-    },
-    {
       "id": "b322692a3df2",
       "title": "Ara's Love",
       "start": "2026-11-08T18:00:00-06:00",

@@ -2,12 +2,6 @@
   "venue": "tips",
   "events": [
     {
-      "id": "68906ef1478e",
-      "title": "Dinosaur Jr.",
-      "start": "2026-11-07T20:00:00-06:00",
-      "url": "https://tipitinas.com/event/14204374/dinosaur-jr"
-    },
-    {
       "id": "c8b8551e85e2",
       "title": "Red Rockers Present Anarchy in the USA",
       "start": "2026-11-14T20:00:00-06:00",
@@ -174,6 +168,12 @@
       "title": "Eddie 9V",
       "start": "2027-01-23T21:00:00-06:00",
       "url": "https://tipitinas.com/event/14218594/eddie-9v"
+    },
+    {
+      "id": "9845cb9ac4df",
+      "title": "Tab Benoit w/ Duane Betts",
+      "start": "2027-02-05T22:00:00-06:00",
+      "url": "https://tipitinas.com/event/15008633/tab-benoit-w-duane-betts"
     }
   ]
 }

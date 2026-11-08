@@ -2,41 +2,6 @@
   "venue": "the-allways-lounge",
   "events": [
     {
-      "id": "e0b7497f0fd0",
-      "title": "CLASS: A Classic New Orleans Burlesque Show",
-      "start": "2026-11-06T22:30:00-06:00",
-      "end": "2026-11-07T01:00:00-06:00",
-      "url": "https://tockify.com/allwayslounge/detail/4307/1794025800000/22"
-    },
-    {
-      "id": "3dafee3c9753",
-      "title": "Variété DeVille* – New Orleans Cabaret & Variety",
-      "start": "2026-11-06T23:00:00-06:00",
-      "end": "2026-11-07T01:30:00-06:00",
-      "url": "https://tockify.com/allwayslounge/detail/3694/1794027600000/37"
-    },
-    {
-      "id": "810432afb77a",
-      "title": "Happy Hour w/ Bri & The Sparkling Diamonds “New Orleans Burlesque”",
-      "start": "2026-11-07T18:00:00-06:00",
-      "end": "2026-11-07T19:00:00-06:00",
-      "url": "https://tockify.com/allwayslounge/detail/4228/1794096000000"
-    },
-    {
-      "id": "180ec14f095b",
-      "title": "Van Ella Bordella (burlesque)",
-      "start": "2026-11-07T19:00:00-06:00",
-      "end": "2026-11-07T21:30:00-06:00",
-      "url": "https://tockify.com/allwayslounge/detail/1997/1794099600000/93"
-    },
-    {
-      "id": "4d431209bc4e",
-      "title": "The New Orleans High Society (live jazz & burlesque)",
-      "start": "2026-11-07T20:00:00-06:00",
-      "end": "2026-11-07T21:30:00-06:00",
-      "url": "https://tockify.com/allwayslounge/detail/3475/1794103200000"
-    },
-    {
       "id": "52cbfebac197",
       "title": "Rock N Romance (burlesque & live music)",
       "start": "2026-11-07T22:30:00-06:00",
@@ -1896,6 +1861,41 @@
       "start": "2027-02-04T22:00:00-06:00",
       "end": "2027-02-04T23:30:00-06:00",
       "url": "https://tockify.com/allwayslounge/detail/4395/1801800000000"
+    },
+    {
+      "id": "bf7f354eee6d",
+      "title": "Henrietta's Baudy Brothel Sing A-Long",
+      "start": "2027-02-05T17:00:00-06:00",
+      "end": "2027-02-05T18:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/4429/1801868400000"
+    },
+    {
+      "id": "958e58238943",
+      "title": "Nouvelle Follies: Parisian Glamour Meets Underworld Burlesque",
+      "start": "2027-02-05T19:00:00-06:00",
+      "end": "2027-02-05T20:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/4472/1801875600000"
+    },
+    {
+      "id": "251b14c85e06",
+      "title": "Bayou Blues Burlesque",
+      "start": "2027-02-05T20:00:00-06:00",
+      "end": "2027-02-05T21:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/3920/1801879200000"
+    },
+    {
+      "id": "2cc6aafbf5ab",
+      "title": "Illuminations: Burlesque In the Dark",
+      "start": "2027-02-05T22:30:00-06:00",
+      "end": "2027-02-06T00:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/4236/1801888200000/10"
+    },
+    {
+      "id": "dd3eb737e6d4",
+      "title": "Variété DeVille* – New Orleans Cabaret & Variety",
+      "start": "2027-02-05T23:00:00-06:00",
+      "end": "2027-02-06T01:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/3694/1801890000000/42"
     }
   ]
 }

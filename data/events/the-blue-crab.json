@@ -2,12 +2,6 @@
   "venue": "the-blue-crab",
   "events": [
     {
-      "id": "0c84b3602571",
-      "title": "Monster Crawfish",
-      "start": "2026-11-07T17:00:00-06:00",
-      "end": "2026-11-07T21:00:00-06:00"
-    },
-    {
       "id": "c22f910cb0ef",
       "title": "Rare Groove",
       "start": "2026-11-08T15:30:00-06:00",
@@ -246,6 +240,12 @@
       "title": "Rare Groove",
       "start": "2027-01-31T17:00:00-06:00",
       "end": "2027-01-31T21:00:00-06:00"
+    },
+    {
+      "id": "958ebc1f5ee6",
+      "title": "Monster Crawfish",
+      "start": "2027-02-05T17:00:00-06:00",
+      "end": "2027-02-05T21:00:00-06:00"
     }
   ]
 }
