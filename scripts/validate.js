@@ -4,6 +4,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { ROOT, DATA_DIR, loadVenues, readJSON } from './lib/data.js';
 import { adapters } from '../scrapers/index.js';
+import { MANUAL_DIR, KINDS, checkManual } from '../scrapers/manual.js';
 
 const errors = [];
 const err = (slug, msg) => errors.push(`${slug}: ${msg}`);
@@ -53,6 +54,10 @@ for (const v of venues) {
     }
     // The JamBase API plan requires attribution; the venue page links source urls.
     if (s.type === 'jambase' && !/^https:\/\/www\.jambase\.com\/venue\//.test(s.url ?? '')) err(v.slug, 'jambase sources need a "url" (the jambase.com/venue/… page) for attribution');
+    if (s.type === 'manual') {
+      if (!fs.existsSync(path.join(MANUAL_DIR, `${v.slug}.json`))) err(v.slug, `manual source but data/manual/${v.slug}.json not found`);
+      for (const k of s.kinds ?? []) if (!KINDS.includes(k)) err(v.slug, `unknown manual kind "${k}"`);
+    }
     for (const p of s.exclude ?? []) {
       try {
         new RegExp(p);
@@ -78,6 +83,28 @@ for (const v of venues) {
     if (aliases.has(a)) err(v.slug, `alias "${a}" is also claimed by ${aliases.get(a)}`);
     aliases.set(a, v.slug);
   }
+}
+
+// Schedules written into the repo (e.g. by Meta Muse from Instagram).
+const bySlug = new Map(venues.map((v) => [v.slug, v]));
+for (const f of fs.existsSync(MANUAL_DIR) ? fs.readdirSync(MANUAL_DIR) : []) {
+  const where = `data/manual/${f}`;
+  if (!f.endsWith('.json')) {
+    err(where, 'only <slug>.json files belong here');
+    continue;
+  }
+  const slug = f.replace(/\.json$/, '');
+  const venue = bySlug.get(slug);
+  if (!venue) err(where, `no venue "${slug}" in data/venues/`);
+  else if (!venue.sources?.some((s) => s.type === 'manual')) err(where, `add { "type": "manual" } to data/venues/${slug}.json sources so it's read`);
+  let data;
+  try {
+    data = JSON.parse(fs.readFileSync(path.join(MANUAL_DIR, f), 'utf8'));
+  } catch (e) {
+    err(where, `invalid JSON: ${e.message}`);
+    continue;
+  }
+  for (const problem of checkManual(data, slug)) err(where, problem);
 }
 
 const redirects = readJSON(path.join(DATA_DIR, 'redirects.json'), {});
