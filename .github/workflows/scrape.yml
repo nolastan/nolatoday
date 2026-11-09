@@ -9,6 +9,11 @@ on:
       venue:
         description: 'Only scrape these venues (comma-separated slugs). Leave blank for all.'
         required: false
+  # Schedules written into the repo (e.g. by Meta Muse from Instagram) go live
+  # right away instead of waiting for the next scheduled run.
+  push:
+    branches: [main]
+    paths: ['data/manual/**']
 
 concurrency:
   group: scrape
@@ -23,6 +28,9 @@ jobs:
       issues: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          # A push run needs the pushed range to see which manual files changed.
+          fetch-depth: ${{ github.event_name == 'push' && 0 || 1 }}
 
       - uses: actions/setup-node@v4
         with:
@@ -31,11 +39,36 @@ jobs:
 
       - run: npm ci
 
+      # Manual files are pushed straight to main, so check them here; a bad file
+      # fails this run (and emails the repo owner) instead of going live.
+      - name: Validate venue data
+        if: github.event_name == 'push'
+        run: node scripts/validate.js
+
+      - name: Pick venues
+        id: pick
+        env:
+          INPUT_VENUE: ${{ inputs.venue }}
+          BEFORE: ${{ github.event.before }}
+        run: |
+          venue="$INPUT_VENUE"
+          if [ "${{ github.event_name }}" = push ]; then
+            if git cat-file -e "$BEFORE^{commit}" 2>/dev/null; then
+              files=$(git diff --name-only "$BEFORE" HEAD -- data/manual/)
+            else
+              files=$(ls data/manual/*.json)
+            fi
+            venue=$(echo "$files" | sed -n 's#^data/manual/\(.*\)\.json$#\1#p' | paste -sd, -)
+          fi
+          echo "venue=$venue" >> "$GITHUB_OUTPUT"
+
       - name: Scrape
+        if: github.event_name != 'push' || steps.pick.outputs.venue != ''
         env:
           TICKETMASTER_API_KEY: ${{ secrets.TICKETMASTER_API_KEY }}
           JAMBASE_API_KEY: ${{ secrets.JAMBASE_API_KEY }}
-        run: node scripts/scrape.js ${{ inputs.venue && format('--venue {0}', inputs.venue) || '' }}
+          VENUE: ${{ steps.pick.outputs.venue }}
+        run: node scripts/scrape.js ${VENUE:+--venue "$VENUE"}
 
       - name: Commit data
         run: |
@@ -55,7 +88,7 @@ jobs:
 
       - name: Open/close scraper repair issues
         # Only the full scheduled/manual run has the complete picture.
-        if: ${{ !inputs.venue }}
+        if: ${{ github.event_name != 'push' && !inputs.venue }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           MAX_NEW_ISSUES: 10

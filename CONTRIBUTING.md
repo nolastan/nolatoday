@@ -50,6 +50,7 @@ Repair issues are opened automatically and name the venue, the error, and the cu
    - Ticketmaster or Live Nation ticketing → `ticketmaster` with the Discovery venue id: the `KovZ…` in the venue's livenation.com URL, or `TICKETMASTER_API_KEY=… node scripts/ticketmaster-venues.js <name>`
    - Listed on JamBase (`jambase.com/venue/…`) but the venue's own site has no usable feed → `jambase` with the JamBase venue id from `JAMBASE_API_KEY=… node scripts/jambase-venues.js <name>`. The key is on a free plan with 1,000 calls a month, so use it only where no direct source works
    - Anything server-rendered → `html` with CSS selectors
+   - Schedule posted only on Instagram or other social media → `manual` (see [Manual schedules](#manual-schedules))
 3. **Try a config** before saving it: `node scripts/scrape.js --try '{"type":"html","url":"…","item":".event","title":"h3","date":".date"}'`
 4. **Save** the working config in the venue's `sources`, then run `node scripts/scrape.js --venue <slug> --dry` again.
 5. If no generic adapter fits, write `scrapers/custom/<name>.js` (below) and reference it as `{ "type": "custom", "name": "<name>" }`.
@@ -75,6 +76,7 @@ Please don't scrape sites whose `robots.txt` forbids it, and don't add sources b
 | `ticketmaster` | `venueId` (Discovery id, `KovZ…`). Needs the `TICKETMASTER_API_KEY` env var (an Actions secret in CI); parking and VIP add-on listings are dropped |
 | `jambase` | `venueId` (`jambase:<id>`), `url` (the venue's `jambase.com/venue/…` page, shown as the schedule source: attribution is required). Needs the `JAMBASE_API_KEY` env var (an Actions secret in CI). All jambase venues in a run share one API request; the run is skipped when the monthly quota runs low. Cancelled and postponed shows are dropped |
 | `html` | `url`/`urls`, `item`, `title`, `date`, `time?`, `link?`, `dateHeader?`, `next?`, `maxPages?` — selectors are CSS, `sel@attr` reads an attribute |
+| `manual` | `kinds?` (default `["music"]`). Reads `data/manual/<slug>.json`; see [Manual schedules](#manual-schedules) |
 
 Options every source accepts (applied when events are normalized):
 
@@ -84,6 +86,46 @@ Options every source accepts (applied when events are normalized):
 | `include` | regex; keep only matching titles |
 | `stripTitle` | regex removed from titles (e.g. `"\\s*•.*$"`) |
 | `timeFromTitle` | `true` to take the time from the title when the source's timezone is wrong |
+
+### Manual schedules
+
+Some venues only post their schedule on Instagram, which we can't scrape. For those, a person or an agent (currently Meta Muse, which reads the venue's posts) writes the schedule to `data/manual/<slug>.json`, and the venue gets `{ "type": "manual" }` in its `sources`. Pushing a change under `data/manual/` to `main` validates the files and rescrapes those venues straight away, so the site updates within a few minutes.
+
+```json
+{
+  "venue": "bar-redux",
+  "updated": "2026-11-09",
+  "from": "https://www.instagram.com/p/DfdHNi-hUog/",
+  "events": [
+    {
+      "date": "2026-11-13",
+      "time": "21:00",
+      "doors": "20:00",
+      "title": "Children of Judas, Redder Moon, Stripper Funeral, DJ Mange",
+      "price": "$10",
+      "kind": "music",
+      "url": "https://www.instagram.com/p/DfdHNi-hUog/"
+    }
+  ]
+}
+```
+
+| Field | Rules |
+| --- | --- |
+| `venue` | the venue slug; must match the file name |
+| `updated` | `YYYY-MM-DD` the schedule was last checked |
+| `from` | optional: the account or post the schedule came from |
+| `events[].date` | `YYYY-MM-DD`, with the year |
+| `events[].time` | show start, 24-hour New Orleans time (`"21:00"`), or `null` if the post gives none (the event shows as all-day) |
+| `events[].doors` | optional door time, same format; used as the start when `time` is `null` |
+| `events[].end` | optional end time, same format; an end earlier than the start means after midnight |
+| `events[].title` | the performers (`"Band A, Band B"`) or the event's name. No dates, times, prices or emoji |
+| `events[].kind` | `music`, `dj`, `trivia`, `comedy`, `sports`, `special` or `other`. Only `music` is shown unless the source sets `kinds` |
+| `events[].price` | optional, free text (`"$10"`, `"free"`); stored but not shown yet |
+| `events[].url` | optional: the post announcing it |
+| `events[].note` | optional, free text; not shown |
+
+Replace the whole file each time; past events are dropped automatically. Don't add a `manual` source for a venue that already has a working feed, or its shows appear twice under slightly different titles.
 
 ### Custom scrapers
 
