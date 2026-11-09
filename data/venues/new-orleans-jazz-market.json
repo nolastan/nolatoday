@@ -5,7 +5,7 @@
   "address": "1436 Oretha Castle Haley Boulevard",
   "lat": 29.941191,
   "lng": -90.078739,
-  "website": "https://www.thejazzmarket.org",
+  "website": "https://jazzandbluesmarket.com",
   "image": "new-orleans-jazz-market.jpg",
   "imageCredit": {
     "author": "NewUrbanism",
@@ -15,5 +15,10 @@
     "via": "Flickr"
   },
   "aliases": [],
-  "sources": []
+  "sources": [
+    {
+      "type": "ticketmaster",
+      "venueId": "KovZ917AaR7"
+    }
+  ]
 }

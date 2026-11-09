@@ -16,6 +16,7 @@ test('parseLooseDate handles the formats venue sites use', () => {
     ['10.07', 'Show: 10:00PM', '2026-10-07T22:00'],
     ['22 Oct', '6:00 pm', '2026-10-22T18:00'],
     ['2026-10-09', '20:00', '2026-10-09T20:00'],
+    ['Nov1', '2:30pm', '2026-11-01T14:30'],
     ['Thursday, October 8, 2026, 8:00 PM – 11:59 PM', '', '2026-10-08T20:00'],
   ];
   for (const [date, time, expected] of cases) {

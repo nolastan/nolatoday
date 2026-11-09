@@ -8,5 +8,10 @@
   "website": "https://southporthall.com",
   "image": null,
   "aliases": [],
-  "sources": []
+  "sources": [
+    {
+      "type": "eventbrite",
+      "url": "https://www.eventbrite.com/o/southport-hall-20106480998"
+    }
+  ]
 }
