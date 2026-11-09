@@ -2,12 +2,6 @@
   "venue": "dba",
   "events": [
     {
-      "id": "e7f5168ffd31",
-      "title": "The Jump Hounds",
-      "start": "2026-11-08T21:30:00-06:00",
-      "url": "https://www.dbaneworleans.com/shows"
-    },
-    {
       "id": "ed7db90a0017",
       "title": "Secret Six Jazz Band",
       "start": "2026-11-09T18:00:00-06:00",
@@ -233,6 +227,12 @@
       "id": "74892cc7b03a",
       "title": "Young Lion Showcase",
       "start": "2026-11-28T14:30:00-06:00",
+      "url": "https://www.dbaneworleans.com/shows"
+    },
+    {
+      "id": "ac3abb1d55ad",
+      "title": "Tuba Skinny",
+      "start": "2026-11-28T18:00:00-06:00",
       "url": "https://www.dbaneworleans.com/shows"
     },
     {

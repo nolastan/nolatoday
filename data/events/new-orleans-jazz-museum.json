@@ -2,8 +2,8 @@
   "venue": "new-orleans-jazz-museum",
   "events": [
     {
-      "id": "ff8ddbc7cb3e",
-      "title": "Balcony Show sponsored by the Positive Vibrations Foundation",
+      "id": "28200b1a336f",
+      "title": "Balcony Show sponsored by the Positive Vibrations Foundation: Bullseye Brass Band",
       "start": "2026-11-10T17:00:00-06:00",
       "end": "2026-11-10T18:00:00-06:00",
       "url": "https://nolajazzmuseum.org/events/2026/10/10/balcony-concert-sponsored-by-positive-vibrations"
@@ -37,11 +37,18 @@
       "url": "https://nolajazzmuseum.org/events/2026/11/13/noai"
     },
     {
-      "id": "bf1dc9c53ffb",
+      "id": "5570992e3ef2",
       "title": "Yelper Party: The Big Easy Bash at The New Orleans Jazz Museum!",
-      "start": "2026-11-14T17:00:00-06:00",
-      "end": "2026-11-14T18:00:00-06:00",
+      "start": "2026-11-14T13:00:00-06:00",
+      "end": "2026-11-14T16:00:00-06:00",
       "url": "https://nolajazzmuseum.org/events/2026/8/15/big-easy-bash-yelp"
+    },
+    {
+      "id": "495d40d81e3e",
+      "title": "Yala Baby Artsplay!™ Workshop: Hello Friend!",
+      "start": "2026-11-15T10:30:00-06:00",
+      "end": "2026-11-15T11:30:00-06:00",
+      "url": "https://nolajazzmuseum.org/events/2026/11/15/yala-baby-artsplay-workshop-hello-friend"
     },
     {
       "id": "e919fbd3e8c9",
@@ -93,6 +100,13 @@
       "url": "https://nolajazzmuseum.org/events/2026/11/20/friends-of-the-cabildo-concert-series-presents-i-am-the-walrus"
     },
     {
+      "id": "8adcecbb6916",
+      "title": "Yala Baby Artsplay!™ Workshop: Express Yourself!",
+      "start": "2026-11-22T10:30:00-06:00",
+      "end": "2026-11-22T23:30:00-06:00",
+      "url": "https://nolajazzmuseum.org/events/2026/11/22/free-yala-baby-artsplay-workshop-express-yourself"
+    },
+    {
       "id": "370a9eb61cbc",
       "title": "Balcony Show sponsored by the Positive Vibrations Foundation",
       "start": "2026-11-24T17:00:00-06:00",
@@ -126,6 +140,13 @@
       "start": "2026-12-05T19:00:00-06:00",
       "end": "2026-12-05T23:00:00-06:00",
       "url": "https://nolajazzmuseum.org/events/2026/12/5/agwhucp5p13qr1flur0s1vfudxxp7j"
+    },
+    {
+      "id": "edbcff95c86d",
+      "title": "Yala Baby Artsplay!™ Workshop: Tiny Motor Scooters!",
+      "start": "2026-12-06T10:30:00-06:00",
+      "end": "2026-12-06T11:30:00-06:00",
+      "url": "https://nolajazzmuseum.org/events/2026/12/6/yala-baby-artsplay-workshop-tiny-motor-scooters"
     },
     {
       "id": "cf758a047edf",
@@ -177,6 +198,13 @@
       "url": "https://nolajazzmuseum.org/events/2026/12/13/spirit-of-new-orleans-drum-camp"
     },
     {
+      "id": "b009683694ad",
+      "title": "Yala Baby Artsplay!™ Workshop: Baby Balancing Acts",
+      "start": "2026-12-13T10:30:00-06:00",
+      "end": "2026-12-13T23:30:00-06:00",
+      "url": "https://nolajazzmuseum.org/events/2026/12/13/yala-baby-artsplay-workshop-baby-balancing-acts"
+    },
+    {
       "id": "57d64be41999",
       "title": "Balcony Show sponsored by the Positive Vibrations Foundation presents the Carl LeBlanc Holiday Show",
       "start": "2026-12-15T17:00:00-06:00",
@@ -210,6 +238,13 @@
       "start": "2026-12-19T15:00:00-06:00",
       "end": "2026-12-19T23:00:00-06:00",
       "url": "https://nolajazzmuseum.org/events/2026/12/19/the-barbarin-family-foundation-of-jazz-christmas-event"
+    },
+    {
+      "id": "e857603ffae5",
+      "title": "Yala Baby Artsplay™ Workshop: Tiny Household Helpers",
+      "start": "2026-12-20T10:30:00-06:00",
+      "end": "2026-12-20T11:30:00-06:00",
+      "url": "https://nolajazzmuseum.org/events/2026/12/20/yala-baby-artsplay-workshop-tiny-household-helpers"
     },
     {
       "id": "bfb4c018f050",
