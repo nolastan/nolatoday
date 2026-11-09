@@ -45,7 +45,8 @@ export function parseDay(text, reference = now()) {
   }
   // "October 9, 2026" / "Oct. 9" / "9 October 2026"
   const monthRe = '(jan|feb|mar|apr|may|jun|jul|aug|sept?|oct|nov|dec)[a-z]*\\.?';
-  if ((m = text.match(new RegExp(`\\b${monthRe}\\s+(\\d{1,2})(?:,?\\s+(\\d{4}))?`, 'i')))) {
+  // Also "Nov1", which is how month/day spans in adjacent elements read as text.
+  if ((m = text.match(new RegExp(`\\b${monthRe}\\s*(\\d{1,2})(?:,?\\s+(\\d{4}))?`, 'i')))) {
     const month = MONTHS[m[1].toLowerCase()];
     const dayN = +m[2];
     return make(m[3] ? +m[3] : inferYear(month, dayN, reference), month, dayN);

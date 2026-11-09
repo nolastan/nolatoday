@@ -10,5 +10,13 @@
   "aliases": [
     "scatter-jazz"
   ],
-  "sources": []
+  "sources": [
+    {
+      "type": "html",
+      "url": "https://broadsidenola.simpletix.com/",
+      "item": "#showlist .list-box",
+      "title": ".st_event_list_display_body_event_title",
+      "date": ".event_date_time"
+    }
+  ]
 }

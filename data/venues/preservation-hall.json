@@ -15,5 +15,16 @@
     "via": "Wikimedia Commons"
   },
   "aliases": [],
-  "sources": []
+  "sources": [
+    {
+      "type": "html",
+      "url": "https://www.preservationhall.com/calendar/",
+      "dateHeader": ".day__labels",
+      "item": "li.event",
+      "title": ".event__title",
+      "time": ".action__time",
+      "next": "a.next__link@href",
+      "maxPages": 3
+    }
+  ]
 }

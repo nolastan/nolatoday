@@ -15,5 +15,11 @@
     "via": "Flickr"
   },
   "aliases": [],
-  "sources": []
+  "sources": [
+    {
+      "type": "wix",
+      "url": "https://www.rocknbowl.com/new-orleans",
+      "stripTitle": "\\s*\\|\\s*\\d{1,2}-\\d{1,2}-\\d{2,4}\\s*$"
+    }
+  ]
 }
