@@ -1,4 +1,125 @@
 {
   "venue": "12-mile-limit",
-  "events": []
+  "events": [
+    {
+      "id": "ac2d92356eaa",
+      "title": "Bear With Me Comedy Open Mic",
+      "start": "2026-11-09T19:30:00-06:00",
+      "url": "https://twelvemilelimit.com/events/bear-with-me-comedy-open-mic?date=2026-11-09"
+    },
+    {
+      "id": "2109a1627c96",
+      "title": "Trivia Night!",
+      "start": "2026-11-11T20:00:00-06:00",
+      "url": "https://twelvemilelimit.com/events/trivia-night?date=2026-11-11"
+    },
+    {
+      "id": "48dd8ce0a7d4",
+      "title": "Purrsday Karaoke!",
+      "start": "2026-11-12T21:00:00-06:00",
+      "url": "https://twelvemilelimit.com/events/purrsday-karaoke?date=2026-11-12"
+    },
+    {
+      "id": "780a3b0c44d3",
+      "title": "Heatwave!",
+      "start": "2026-11-14T21:00:00-06:00",
+      "url": "https://twelvemilelimit.com/events/heatwave?date=2026-11-14"
+    },
+    {
+      "id": "54bc29d99cd4",
+      "title": "Bear With Me Comedy Open Mic",
+      "start": "2026-11-16T19:30:00-06:00",
+      "url": "https://twelvemilelimit.com/events/bear-with-me-comedy-open-mic?date=2026-11-16"
+    },
+    {
+      "id": "12c0ca37874f",
+      "title": "Trivia Night!",
+      "start": "2026-11-18T20:00:00-06:00",
+      "url": "https://twelvemilelimit.com/events/trivia-night?date=2026-11-18"
+    },
+    {
+      "id": "a89580b92fda",
+      "title": "Purrsday Karaoke!",
+      "start": "2026-11-19T21:00:00-06:00",
+      "url": "https://twelvemilelimit.com/events/purrsday-karaoke?date=2026-11-19"
+    },
+    {
+      "id": "3987074d7238",
+      "title": "Catch The Wiff",
+      "start": "2026-11-21T21:00:00-06:00",
+      "url": "https://twelvemilelimit.com/events/catch-the-wiff?date=2026-11-21"
+    },
+    {
+      "id": "3835df2ff814",
+      "title": "Bear With Me Comedy Open Mic",
+      "start": "2026-11-23T19:30:00-06:00",
+      "url": "https://twelvemilelimit.com/events/bear-with-me-comedy-open-mic?date=2026-11-23"
+    },
+    {
+      "id": "40cc078e0abb",
+      "title": "Queer Craft Night",
+      "start": "2026-11-24T19:00:00-06:00",
+      "url": "https://twelvemilelimit.com/events/queer-craft-night?date=2026-11-24"
+    },
+    {
+      "id": "325967950044",
+      "title": "Trivia Night!",
+      "start": "2026-11-25T20:00:00-06:00",
+      "url": "https://twelvemilelimit.com/events/trivia-night?date=2026-11-25"
+    },
+    {
+      "id": "055632c609ed",
+      "title": "Purrsday Karaoke!",
+      "start": "2026-11-26T21:00:00-06:00",
+      "url": "https://twelvemilelimit.com/events/purrsday-karaoke?date=2026-11-26"
+    },
+    {
+      "id": "0c88ddbdd7cf",
+      "title": "Bing-Oh!",
+      "start": "2026-11-28T20:00:00-06:00",
+      "url": "https://twelvemilelimit.com/events/bing-oh?date=2026-11-28"
+    },
+    {
+      "id": "083c8ecbd810",
+      "title": "Bear With Me Comedy Open Mic",
+      "start": "2026-11-30T19:30:00-06:00",
+      "url": "https://twelvemilelimit.com/events/bear-with-me-comedy-open-mic?date=2026-11-30"
+    },
+    {
+      "id": "168d1801030c",
+      "title": "Trivia Night!",
+      "start": "2026-12-02T20:00:00-06:00",
+      "url": "https://twelvemilelimit.com/events/trivia-night?date=2026-12-02"
+    },
+    {
+      "id": "1ce3015db262",
+      "title": "Purrsday Karaoke!",
+      "start": "2026-12-03T21:00:00-06:00",
+      "url": "https://twelvemilelimit.com/events/purrsday-karaoke?date=2026-12-03"
+    },
+    {
+      "id": "78121d291933",
+      "title": "Bear With Me Comedy Open Mic",
+      "start": "2026-12-07T19:30:00-06:00",
+      "url": "https://twelvemilelimit.com/events/bear-with-me-comedy-open-mic?date=2026-12-07"
+    },
+    {
+      "id": "4d6f4aab33a0",
+      "title": "Trivia Night!",
+      "start": "2026-12-09T20:00:00-06:00",
+      "url": "https://twelvemilelimit.com/events/trivia-night?date=2026-12-09"
+    },
+    {
+      "id": "ebe87b667679",
+      "title": "Purrsday Karaoke!",
+      "start": "2026-12-10T21:00:00-06:00",
+      "url": "https://twelvemilelimit.com/events/purrsday-karaoke?date=2026-12-10"
+    },
+    {
+      "id": "1f8399796531",
+      "title": "Heatwave!",
+      "start": "2026-12-12T21:00:00-06:00",
+      "url": "https://twelvemilelimit.com/events/heatwave?date=2026-12-12"
+    }
+  ]
 }

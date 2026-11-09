@@ -2,6 +2,27 @@
   "venue": "banks-street-bar",
   "events": [
     {
+      "id": "438d9ad10e80",
+      "title": "Yacht Rock Line Dancing With Giddy Up Two Step",
+      "start": "2026-11-09T18:00:00-06:00",
+      "end": "2026-11-09T20:00:00-06:00",
+      "url": "https://www.banksstreetbarnola.net/event-details/yacht-rock-line-dancing-with-giddy-up-two-step"
+    },
+    {
+      "id": "a4ff078becc1",
+      "title": "Vet Jams",
+      "start": "2026-11-10T19:00:00-06:00",
+      "end": "2026-11-10T23:00:00-06:00",
+      "url": "https://www.banksstreetbarnola.net/event-details/vet-jams-2026-11-10-19-00"
+    },
+    {
+      "id": "06e23f1eb6f5",
+      "title": "Giddy Up Two Step Beginner and Lower Intermediate",
+      "start": "2026-11-11T18:00:00-06:00",
+      "end": "2026-11-11T22:00:00-06:00",
+      "url": "https://www.banksstreetbarnola.net/event-details/giddy-up-two-step-beginner-and-lower-intermediate-2"
+    },
+    {
       "id": "14dcdf3f4c02",
       "title": "Mary Mortem + Dremm +Palefade + Bullshit Machine",
       "start": "2026-11-12T20:00:00-06:00",
@@ -9,18 +30,18 @@
       "url": "https://www.banksstreetbarnola.net/event-details/mary-mortem-dremm-palefade-bullshit-machine"
     },
     {
+      "id": "1c6369c28ae0",
+      "title": "Honest Man Happy Hour with Domenic Fusca",
+      "start": "2026-11-13T13:00:00-06:00",
+      "end": "2026-11-13T15:00:00-06:00",
+      "url": "https://www.banksstreetbarnola.net/event-details/honest-man-happy-hour-with-domenic-fusca-2026-11-13-13-00"
+    },
+    {
       "id": "cd5f2b3a58b6",
       "title": "Valerie Sassyfrass + Grits & Greens",
       "start": "2026-11-14T20:00:00-06:00",
       "end": "2026-11-15T00:00:00-06:00",
       "url": "https://www.banksstreetbarnola.net/event-details/valerie-sassyfrass-grits-greens"
-    },
-    {
-      "id": "94d14efdecc4",
-      "title": "Psydonia + Closur + All In The Family",
-      "start": "2026-11-27T20:00:00-06:00",
-      "end": "2026-11-28T00:00:00-06:00",
-      "url": "https://www.banksstreetbarnola.net/event-details/psydonia-closur-all-in-the-family"
     }
   ]
 }

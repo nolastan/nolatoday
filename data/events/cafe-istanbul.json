@@ -2,13 +2,6 @@
   "venue": "cafe-istanbul",
   "events": [
     {
-      "id": "b322692a3df2",
-      "title": "Ara's Love",
-      "start": "2026-11-08T18:00:00-06:00",
-      "end": "2026-11-08T22:00:00-06:00",
-      "url": "https://www.cafeistanbulnola.com/upcoming-events/aras-love"
-    },
-    {
       "id": "0df0fd1f442f",
       "title": "Poets on Poets",
       "start": "2026-11-11T22:00:00-06:00",

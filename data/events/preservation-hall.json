@@ -1,0 +1,179 @@
+{
+  "venue": "preservation-hall",
+  "events": [
+    {
+      "id": "c05706098b27",
+      "title": "Preservation Brass",
+      "start": "2026-11-09T17:00:00-06:00",
+      "url": "https://www.preservationhall.com/events/preservation-brass/"
+    },
+    {
+      "id": "c051292036c7",
+      "title": "Preservation All-Stars ft. Mark Braud",
+      "start": "2026-11-10T17:00:00-06:00",
+      "url": "https://www.preservationhall.com/events/june-1st-preservation-all-stars-feat-mark-braud/"
+    },
+    {
+      "id": "c1e38554ad2e",
+      "title": "Preservation All-Stars ft Aurélien Barnes",
+      "start": "2026-11-11T17:00:00-06:00",
+      "url": "https://www.preservationhall.com/events/preservation-all-stars-ft-aurelien-barnes/"
+    },
+    {
+      "id": "6f6a9f220d8a",
+      "title": "Preservation All-Stars ft. Wendell Brunious",
+      "start": "2026-11-12T17:00:00-06:00",
+      "url": "https://www.preservationhall.com/events/june-1st-preservation-all-stars-feat-wendell-brunious/"
+    },
+    {
+      "id": "ad412f645068",
+      "title": "Preservation All-Stars ft. Mark Braud",
+      "start": "2026-11-13T17:00:00-06:00",
+      "url": "https://www.preservationhall.com/events/june-1st-preservation-all-stars-feat-mark-braud/"
+    },
+    {
+      "id": "f704d158a045",
+      "title": "Wendell Brunious and the Preservation Hall Legacy Band",
+      "start": "2026-11-14T14:30:00-06:00",
+      "url": "https://www.preservationhall.com/events/a-celebration-of-allan-sandy-feat-wednell-brunious-and-the-preservation-hall-legacy-band/"
+    },
+    {
+      "id": "757e786c57ae",
+      "title": "Preservation All-Stars",
+      "start": "2026-11-14T17:00:00-06:00",
+      "url": "https://www.preservationhall.com/events/preservation-all-stars/"
+    },
+    {
+      "id": "8ce7eba46142",
+      "title": "Leroy Jones and the Preservation Jazz Masters",
+      "start": "2026-11-15T14:30:00-06:00",
+      "url": "https://www.preservationhall.com/events/leroy-jones-and-the-preservation-jazz-masters/"
+    },
+    {
+      "id": "59ee3ce3f42a",
+      "title": "Preservation Legacy Band ft. Gregg Stafford",
+      "start": "2026-11-15T17:00:00-06:00",
+      "url": "https://www.preservationhall.com/events/preservation-legacy-band-ft-gregg-stafford/"
+    },
+    {
+      "id": "55aa1a5d3325",
+      "title": "Preservation Brass",
+      "start": "2026-11-16T17:00:00-06:00",
+      "url": "https://www.preservationhall.com/events/preservation-brass/"
+    },
+    {
+      "id": "84a1678b25cc",
+      "title": "Preservation All-Stars",
+      "start": "2026-11-17T17:00:00-06:00",
+      "url": "https://www.preservationhall.com/events/preservation-all-stars/"
+    },
+    {
+      "id": "532ea876d34f",
+      "title": "Preservation All-Stars ft. Branden Lewis",
+      "start": "2026-11-18T17:00:00-06:00",
+      "url": "https://www.preservationhall.com/events/preservation-all-stars-ft-branden-lewis/"
+    },
+    {
+      "id": "222be85ff770",
+      "title": "Preservation All-Stars ft. Wendell Brunious",
+      "start": "2026-11-19T17:00:00-06:00",
+      "url": "https://www.preservationhall.com/events/june-1st-preservation-all-stars-feat-wendell-brunious/"
+    },
+    {
+      "id": "dc82d488aeba",
+      "title": "Preservation Hall Matinee Series Presents Clint Maedgen",
+      "start": "2026-11-20T14:30:00-06:00",
+      "url": "https://www.preservationhall.com/events/preservation-hall-matinee-series-presents-clint-maedgen/"
+    },
+    {
+      "id": "60464c2cda33",
+      "title": "Preservation All-Stars ft. Mark Braud",
+      "start": "2026-11-20T17:00:00-06:00",
+      "url": "https://www.preservationhall.com/events/june-1st-preservation-all-stars-feat-mark-braud/"
+    },
+    {
+      "id": "79410fd66c39",
+      "title": "Wendell Brunious and the Preservation Hall Legacy Band",
+      "start": "2026-11-21T14:30:00-06:00",
+      "url": "https://www.preservationhall.com/events/a-celebration-of-allan-sandy-feat-wednell-brunious-and-the-preservation-hall-legacy-band/"
+    },
+    {
+      "id": "da4f4c714e79",
+      "title": "Preservation All-Stars",
+      "start": "2026-11-21T17:00:00-06:00",
+      "url": "https://www.preservationhall.com/events/preservation-all-stars/"
+    },
+    {
+      "id": "af2c540a66eb",
+      "title": "Leroy Jones and the Preservation Jazz Masters",
+      "start": "2026-11-22T14:30:00-06:00",
+      "url": "https://www.preservationhall.com/events/leroy-jones-and-the-preservation-jazz-masters/"
+    },
+    {
+      "id": "f05778607703",
+      "title": "Preservation Legacy Band ft. Gregg Stafford",
+      "start": "2026-11-22T17:00:00-06:00",
+      "url": "https://www.preservationhall.com/events/preservation-legacy-band-ft-gregg-stafford/"
+    },
+    {
+      "id": "ccce98ed4d54",
+      "title": "Preservation Brass",
+      "start": "2026-11-23T17:00:00-06:00",
+      "url": "https://www.preservationhall.com/events/preservation-brass/"
+    },
+    {
+      "id": "b78e1c1e94ce",
+      "title": "Preservation All-Stars",
+      "start": "2026-11-24T17:00:00-06:00",
+      "url": "https://www.preservationhall.com/events/preservation-all-stars/"
+    },
+    {
+      "id": "959b98cf37bf",
+      "title": "Preservation All-Stars ft. Branden Lewis",
+      "start": "2026-11-25T17:00:00-06:00",
+      "url": "https://www.preservationhall.com/events/preservation-all-stars-ft-branden-lewis/"
+    },
+    {
+      "id": "4d6f2edc6395",
+      "title": "Preservation All-Stars ft. Wendell Brunious",
+      "start": "2026-11-26T17:00:00-06:00",
+      "url": "https://www.preservationhall.com/events/june-1st-preservation-all-stars-feat-wendell-brunious/"
+    },
+    {
+      "id": "90881d7019cf",
+      "title": "Preservation All-Stars ft Aurélien Barnes",
+      "start": "2026-11-27T17:00:00-06:00",
+      "url": "https://www.preservationhall.com/events/preservation-all-stars-ft-aurelien-barnes/"
+    },
+    {
+      "id": "0e876b2948c3",
+      "title": "Wendell Brunious and the Preservation Hall Legacy Band",
+      "start": "2026-11-28T14:30:00-06:00",
+      "url": "https://www.preservationhall.com/events/a-celebration-of-allan-sandy-feat-wednell-brunious-and-the-preservation-hall-legacy-band/"
+    },
+    {
+      "id": "3cfa80e19cae",
+      "title": "Preservation All-Stars",
+      "start": "2026-11-28T17:00:00-06:00",
+      "url": "https://www.preservationhall.com/events/preservation-all-stars/"
+    },
+    {
+      "id": "685474cd87c8",
+      "title": "Leroy Jones and the Preservation Jazz Masters",
+      "start": "2026-11-29T14:30:00-06:00",
+      "url": "https://www.preservationhall.com/events/leroy-jones-and-the-preservation-jazz-masters/"
+    },
+    {
+      "id": "0a2b63a90c63",
+      "title": "Preservation All-Stars ft. Andrew Baham",
+      "start": "2026-11-29T17:00:00-06:00",
+      "url": "https://www.preservationhall.com/events/preservation-all-stars-ft-andrew-baham/"
+    },
+    {
+      "id": "34743c9e87f4",
+      "title": "Preservation Brass",
+      "start": "2026-11-30T17:00:00-06:00",
+      "url": "https://www.preservationhall.com/events/preservation-brass/"
+    }
+  ]
+}

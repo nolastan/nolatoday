@@ -1,0 +1,29 @@
+{
+  "venue": "southport-hall",
+  "events": [
+    {
+      "id": "b488985ea710",
+      "title": "Upon A Burning Body",
+      "start": "2026-11-13T19:00:00-06:00",
+      "url": "https://www.eventbrite.com/e/upon-a-burning-body-tickets-2002157906194"
+    },
+    {
+      "id": "7b16003a4b03",
+      "title": "Friendsgiving Party",
+      "start": "2026-11-27T20:00:00-06:00",
+      "url": "https://www.eventbrite.com/e/friendsgiving-party-tickets-2004249404923"
+    },
+    {
+      "id": "d95261ef0426",
+      "title": "Mothership: A Tribute to Led Zeppelin",
+      "start": "2026-12-26T20:00:00-06:00",
+      "url": "https://www.eventbrite.com/e/mothership-a-tribute-to-led-zeppelin-tickets-1999854322112"
+    },
+    {
+      "id": "f6a555e505d0",
+      "title": "DIO\"S LEGACY - A Tribute to Ronnie James Dio",
+      "start": "2027-01-22T20:00:00-06:00",
+      "url": "https://www.eventbrite.com/e/dios-legacy-a-tribute-to-ronnie-james-dio-tickets-2004286753634"
+    }
+  ]
+}

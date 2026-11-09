@@ -2,12 +2,6 @@
   "venue": "saenger-theatre",
   "events": [
     {
-      "id": "0e1420110584",
-      "title": "The Lion King",
-      "start": "2026-11-08T18:30:00-06:00",
-      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-POK"
-    },
-    {
       "id": "2af8de5c468f",
       "title": "Rocky In Concert",
       "start": "2026-11-17T19:30:00-06:00",

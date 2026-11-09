@@ -1,0 +1,117 @@
+{
+  "venue": "rock-n-bowl",
+  "events": [
+    {
+      "id": "4c6977bc8311",
+      "title": "Latin Night with DJ Nayo",
+      "start": "2026-11-10T19:00:00-06:00",
+      "end": "2026-11-10T23:00:00-06:00",
+      "url": "https://www.rocknbowl.com/event-details/latin-night-with-dj-nayo-2026-11-10-19-00"
+    },
+    {
+      "id": "8d13033b140b",
+      "title": "Geno Delafose & French Rockin' Boogie",
+      "start": "2026-11-12T20:00:00-06:00",
+      "url": "https://www.rocknbowl.com/event-details/geno-delafose-french-rockin-boogie-11-12-26-1"
+    },
+    {
+      "id": "afd29f8db432",
+      "title": "Rock Show NOLA: MTV Revisited",
+      "start": "2026-11-13T20:30:00-06:00",
+      "url": "https://www.rocknbowl.com/event-details/rock-show-nola-mtv-revisited-11-13-26"
+    },
+    {
+      "id": "f77a5040f945",
+      "title": "One Last Breath: Tribute to Creed",
+      "start": "2026-11-14T21:30:00-06:00",
+      "url": "https://www.rocknbowl.com/event-details/one-last-breath-tribute-to-creed-11-14-26"
+    },
+    {
+      "id": "58c5fbeb4d03",
+      "title": "Javier Olondo & AsheSon",
+      "start": "2026-11-17T20:00:00-06:00",
+      "url": "https://www.rocknbowl.com/event-details/javier-olondo-asheson-11-17-26"
+    },
+    {
+      "id": "5983d8bab524",
+      "title": "Nathan & the Zydeco Cha Chas",
+      "start": "2026-11-19T20:00:00-06:00",
+      "end": "2026-11-19T23:00:00-06:00",
+      "url": "https://www.rocknbowl.com/event-details/nathan-the-zydeco-cha-chas-11-19-26"
+    },
+    {
+      "id": "43c4a47b86b2",
+      "title": "Rouge Krewe",
+      "start": "2026-11-20T20:30:00-06:00",
+      "url": "https://www.rocknbowl.com/event-details/rouge-krewe-11-20-26"
+    },
+    {
+      "id": "845286ca6573",
+      "title": "Nashville South",
+      "start": "2026-11-21T20:30:00-06:00",
+      "url": "https://www.rocknbowl.com/event-details/nashville-south-11-21-26"
+    },
+    {
+      "id": "edad28b29348",
+      "title": "Latin Night with DJ Nayo",
+      "start": "2026-11-24T19:00:00-06:00",
+      "end": "2026-11-24T23:00:00-06:00",
+      "url": "https://www.rocknbowl.com/event-details/latin-night-with-dj-nayo-2026-11-24-19-00"
+    },
+    {
+      "id": "3ed37f1ca46b",
+      "title": "Neutral Snap",
+      "start": "2026-11-25T20:30:00-06:00",
+      "url": "https://www.rocknbowl.com/event-details/neutral-snap-11-25-26"
+    },
+    {
+      "id": "3050e296ca40",
+      "title": "Bucktown Allstars",
+      "start": "2026-11-27T20:30:00-06:00",
+      "url": "https://www.rocknbowl.com/event-details/bucktown-allstars-11-27-26"
+    },
+    {
+      "id": "2783e65d3865",
+      "title": "Rock, Ride & Rescue with Bag of Donuts",
+      "start": "2026-11-28T20:30:00-06:00",
+      "url": "https://www.rocknbowl.com/event-details/rock-ride-rescue-with-bag-of-donuts-11-28-26"
+    },
+    {
+      "id": "a7a286956164",
+      "title": "The Wiseguys",
+      "start": "2026-12-04T20:30:00-06:00",
+      "url": "https://www.rocknbowl.com/event-details/the-wiseguys-12-4-26"
+    },
+    {
+      "id": "666a7886a11e",
+      "title": "Troy Marks & No Idea",
+      "start": "2026-12-05T20:30:00-06:00",
+      "url": "https://www.rocknbowl.com/event-details/troy-marks-no-idea-12-5-26"
+    },
+    {
+      "id": "cf670aec2dac",
+      "title": "Geno Delafose & French Rockin' Boogie",
+      "start": "2026-12-10T20:00:00-06:00",
+      "url": "https://www.rocknbowl.com/event-details/geno-delafose-french-rockin-boogie-12-10-26"
+    },
+    {
+      "id": "72ee55f0bcd5",
+      "title": "Stache Gordon: A Tribute to Queen",
+      "start": "2026-12-11T20:30:00-06:00",
+      "end": "2026-12-12T00:00:00-06:00",
+      "url": "https://www.rocknbowl.com/event-details/stache-gordon-a-tribute-to-queen-12-11-26"
+    },
+    {
+      "id": "c4241ae94e73",
+      "title": "The Mixed Nuts",
+      "start": "2026-12-12T20:30:00-06:00",
+      "url": "https://www.rocknbowl.com/event-details/the-mixed-nuts-12-12-26-1"
+    },
+    {
+      "id": "09fccaa8986b",
+      "title": "Few Blue",
+      "start": "2026-12-18T20:30:00-06:00",
+      "url": "https://www.rocknbowl.com/event-details/few-blue-12-18-26"
+    }
+  ]
+}

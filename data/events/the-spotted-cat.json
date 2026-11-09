@@ -2,18 +2,6 @@
   "venue": "the-spotted-cat",
   "events": [
     {
-      "id": "35c4c04fc279",
-      "title": "Jacky Blaire & The Hot Biscuits",
-      "start": "2026-11-08T14:00:00-06:00",
-      "url": "https://www.spottedcatmusicclub.com/calendar"
-    },
-    {
-      "id": "2fb227a91669",
-      "title": "Treme Brass Band",
-      "start": "2026-11-08T18:00:00-06:00",
-      "url": "https://www.spottedcatmusicclub.com/calendar"
-    },
-    {
       "id": "bcdd324e213d",
       "title": "Pat Casey & The New Sound",
       "start": "2026-11-08T21:00:00-06:00",
@@ -500,6 +488,12 @@
       "url": "https://www.spottedcatmusicclub.com/calendar"
     },
     {
+      "id": "7273ee92fe77",
+      "title": "Kid Chocolate & The Free POC",
+      "start": "2026-12-12T22:00:00-06:00",
+      "url": "https://www.spottedcatmusicclub.com/calendar"
+    },
+    {
       "id": "18d6ee2b65d2",
       "title": "Jenavieve Cooke & The Winding Boys",
       "start": "2026-12-14T14:00:00-06:00",
@@ -539,18 +533,6 @@
       "id": "786ab38985dd",
       "title": "Dominick Grillo & The Frenchmen Street All-Stars",
       "start": "2026-12-21T18:00:00-06:00",
-      "url": "https://www.spottedcatmusicclub.com/calendar"
-    },
-    {
-      "id": "e2a8248dd69c",
-      "title": "Paradise Jazz Band",
-      "start": "2026-12-25T14:00:00-06:00",
-      "url": "https://www.spottedcatmusicclub.com/calendar"
-    },
-    {
-      "id": "3f7976ebfe13",
-      "title": "New Orleans Cottonmouth Kings",
-      "start": "2026-12-25T22:00:00-06:00",
       "url": "https://www.spottedcatmusicclub.com/calendar"
     },
     {
