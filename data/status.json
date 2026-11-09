@@ -96,6 +96,22 @@
         }
       ]
     },
+    "bar-redux": {
+      "ok": true,
+      "firstSeen": "2026-11-09T17:58:39.821-06:00",
+      "count": 3,
+      "lastRun": "2026-11-09T17:58:39.821-06:00",
+      "lastSuccess": "2026-11-09T17:58:39.821-06:00",
+      "lastNonEmpty": "2026-11-09T17:58:39.821-06:00",
+      "consecutiveFailures": 0,
+      "sources": [
+        {
+          "type": "manual",
+          "ok": true,
+          "count": 3
+        }
+      ]
+    },
     "blue-nile": {
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
@@ -661,6 +677,22 @@
         }
       ]
     },
+    "st-roch-tavern": {
+      "ok": true,
+      "firstSeen": "2026-11-09T17:58:39.821-06:00",
+      "count": 4,
+      "lastRun": "2026-11-09T17:58:39.821-06:00",
+      "lastSuccess": "2026-11-09T17:58:39.821-06:00",
+      "lastNonEmpty": "2026-11-09T17:58:39.821-06:00",
+      "consecutiveFailures": 0,
+      "sources": [
+        {
+          "type": "manual",
+          "ok": true,
+          "count": 4
+        }
+      ]
+    },
     "the-allways-lounge": {
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
@@ -838,5 +870,5 @@
       ]
     }
   },
-  "generatedAt": "2026-11-09T16:33:24.314-06:00"
+  "generatedAt": "2026-11-09T17:58:39.821-06:00"
 }

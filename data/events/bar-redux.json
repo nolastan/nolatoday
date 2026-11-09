@@ -1,0 +1,23 @@
+{
+  "venue": "bar-redux",
+  "events": [
+    {
+      "id": "7598b0d33d57",
+      "title": "Children of Judas, Redder Moon, Stripper Funeral, DJ Mange",
+      "start": "2026-11-13T21:00:00-06:00",
+      "url": "https://www.instagram.com/p/DfdHNi-hUog/"
+    },
+    {
+      "id": "9d4a142c9eff",
+      "title": "Stumps & Co. with Lynn Drury",
+      "start": "2026-11-17T21:00:00-06:00",
+      "url": "https://www.instagram.com/p/DfdGBV5vQmP/"
+    },
+    {
+      "id": "5f4c9b8b951c",
+      "title": "Dandelioness, Chasm Comfort, Night Ride Radio (DJ set)",
+      "start": "2026-11-21T21:00:00-06:00",
+      "url": "https://www.instagram.com/p/DfdGZ14ht2p/"
+    }
+  ]
+}

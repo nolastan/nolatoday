@@ -1,0 +1,29 @@
+{
+  "venue": "st-roch-tavern",
+  "events": [
+    {
+      "id": "63d9eb61077d",
+      "title": "Andrew Jobin, Kristina Murray",
+      "start": "2026-11-09T21:00:00-06:00",
+      "url": "https://www.instagram.com/p/DfIbWZ5Nzb-/"
+    },
+    {
+      "id": "3422b11bb966",
+      "title": "Lesser Man, Bane and the Gators",
+      "start": "2026-11-16T21:00:00-06:00",
+      "url": "https://www.instagram.com/p/DfIbWZ5Nzb-/"
+    },
+    {
+      "id": "486ecf432205",
+      "title": "The Pink Stones, Camille Wind Weatherford",
+      "start": "2026-11-23T21:00:00-06:00",
+      "url": "https://www.instagram.com/p/DfIbWZ5Nzb-/"
+    },
+    {
+      "id": "a85eae0111d9",
+      "title": "Red McAdam, Christopher Seymore",
+      "start": "2026-11-30T21:00:00-06:00",
+      "url": "https://www.instagram.com/p/DfIbWZ5Nzb-/"
+    }
+  ]
+}
