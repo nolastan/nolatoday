@@ -15,15 +15,5 @@
     "via": "Flickr"
   },
   "aliases": [],
-  "sources": [
-    {
-      "type": "ticketmaster",
-      "venueId": "Z7r9jZa7IE"
-    },
-    {
-      "type": "jambase",
-      "venueId": "jambase:8053735",
-      "url": "https://www.jambase.com/venue/toulouse-theatre"
-    }
-  ]
+  "sources": []
 }
