@@ -5,8 +5,17 @@
   "address": "2239 St. Claude Avenue",
   "lat": 29.968981,
   "lng": -90.055427,
-  "website": "https://hihonola.com",
+  "website": "https://www.hiholoungenola.com",
   "image": "hi-ho.jpg",
   "aliases": [],
-  "sources": []
+  "sources": [
+    {
+      "type": "ics",
+      "url": "https://calendar.google.com/calendar/ical/c_fe5682f4e480f47d9d38f6ecf47d6b7c9569f5252c33879744ced98b2363ab4c%40group.calendar.google.com/public/basic.ics",
+      "exclude": [
+        "^Saints Game",
+        "^Taco Tuesday$"
+      ]
+    }
+  ]
 }
