@@ -8,5 +8,14 @@
   "website": "https://www.21stamendmentlalouisiane.com",
   "image": null,
   "aliases": [],
-  "sources": []
+  "sources": [
+    {
+      "type": "custom",
+      "name": "21st-amendment",
+      "url": "https://www.21stamendmentlalouisiane.com/events.html",
+      "exclude": [
+        "^TBD$"
+      ]
+    }
+  ]
 }
