@@ -76,7 +76,7 @@ Please don't scrape sites whose `robots.txt` forbids it, and don't add sources b
 | `ticketmaster` | `venueId` (Discovery id, `KovZ…`). Needs the `TICKETMASTER_API_KEY` env var (an Actions secret in CI); parking and VIP add-on listings are dropped |
 | `jambase` | `venueId` (`jambase:<id>`), `url` (the venue's `jambase.com/venue/…` page, shown as the schedule source: attribution is required). Needs the `JAMBASE_API_KEY` env var (an Actions secret in CI). All jambase venues in a run share one API request; the run is skipped when the monthly quota runs low. Cancelled and postponed shows are dropped |
 | `html` | `url`/`urls`, `item`, `title`, `date`, `time?`, `link?`, `dateHeader?`, `next?`, `maxPages?` — selectors are CSS, `sel@attr` reads an attribute |
-| `manual` | `kinds?` (default `["music"]`). Reads `data/manual/<slug>.json`; see [Manual schedules](#manual-schedules) |
+| `manual` | `url` (the venue's Instagram page, shown as the schedule source), `kinds?` (default `["music"]`). Reads `data/manual/<slug>.json`; see [Manual schedules](#manual-schedules) |
 
 Options every source accepts (applied when events are normalized):
 
@@ -89,7 +89,7 @@ Options every source accepts (applied when events are normalized):
 
 ### Manual schedules
 
-Some venues only post their schedule on Instagram, which we can't scrape. For those, a person or an agent (currently Meta Muse, which reads the venue's posts) writes the schedule to `data/manual/<slug>.json`, and the venue gets `{ "type": "manual" }` in its `sources`. Pushing a change under `data/manual/` to `main` validates the files and rescrapes those venues straight away, so the site updates within a few minutes.
+Some venues only post their schedule on Instagram, which we can't scrape. For those, a person or an agent (currently Meta Muse, which reads the venue's posts) writes the schedule to `data/manual/<slug>.json`, and the venue gets `{ "type": "manual", "url": "https://www.instagram.com/<handle>/" }` in its `sources`; the venue page links that `url` as the schedule source. Pushing a change under `data/manual/` to `main` validates the files and rescrapes those venues straight away, so the site updates within a few minutes.
 
 ```json
 {
