@@ -11,6 +11,7 @@ import crypto from 'node:crypto';
 import { DateTime } from 'luxon';
 import { ROOT, readJSON, loadVenues, loadEvents, loadStatus, DATA_DIR } from './lib/data.js';
 import { ZONE } from './lib/time.js';
+import { isScheduleUrl, venuePageUrls } from './lib/normalize.js';
 import { venuePage } from '../src/templates/venue.js';
 import { homePage, venuesPage, redirectPage, notFoundPage } from '../src/templates/pages.js';
 
@@ -69,6 +70,9 @@ function main() {
   const eventsBySlug = new Map();
   for (const v of venues) {
     const events = v.status === 'active' ? loadEvents(v.slug).events.filter((e) => (e.end ?? e.start) >= startOfToday) : [];
+    // Only link events to their own page; drop links to the venue's general schedule (older scrapes kept them).
+    const pageUrls = venuePageUrls(v);
+    for (const e of events) if (e.url && isScheduleUrl(e.url, pageUrls)) delete e.url;
     eventsBySlug.set(v.slug, events);
   }
 
