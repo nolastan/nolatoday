@@ -241,7 +241,7 @@ export function venuePage(ctx, venue, { events, status }) {
   ${storySections}
   ${referralSection(config)}
   <section class="wrap venue-foot muted">
-    <p>${sourceLinks.length ? `Schedule source: ${sourceLinks.map((u) => `<a href="${esc(u)}" rel="noopener nofollow">${esc(new URL(u).hostname.replace(/^www\./, ''))}</a>`).join(', ')}. ` : ''}<a href="${esc(reportUrl)}" rel="noopener">Report a problem with this page</a>.</p>
+    <p>${sourceLinks.length ? `Schedule source: ${sourceLinks.map(sourceLink).join(', ')}. ` : ''}<a href="${esc(reportUrl)}" rel="noopener">Report a problem with this page</a>.</p>
   </section>
 </main>
 ${siteFooter(ctx)}`;
@@ -255,4 +255,13 @@ ${siteFooter(ctx)}`;
     head: `<script type="application/ld+json">${jsonScript(jsonLd)}</script>\n<script type="application/ld+json">${jsonScript(breadcrumbs)}</script>`,
     body,
   });
+}
+
+/** A schedule source link: "@handle on Instagram" for Instagram profiles, else the site's hostname. */
+export function sourceLink(url) {
+  const u = new URL(url);
+  const host = u.hostname.replace(/^www\./, '');
+  const handle = host === 'instagram.com' && /^\/([A-Za-z0-9._]+)\/?$/.exec(u.pathname)?.[1];
+  const link = (text) => `<a href="${esc(url)}" rel="noopener nofollow">${esc(text)}</a>`;
+  return handle ? `${link(`@${handle}`)} on Instagram` : link(host);
 }
