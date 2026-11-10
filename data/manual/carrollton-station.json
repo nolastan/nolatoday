@@ -1,0 +1,32 @@
+{
+  "venue": "carrollton-station",
+  "updated": "2026-11-09",
+  "from": "https://www.instagram.com/reel/DfYeBgLsXZ1/",
+  "events": [
+    {
+      "date": "2026-11-13",
+      "time": "21:00",
+      "title": "Dizzy, Chess, Rachel Is Kozi",
+      "kind": "music",
+      "url": "https://www.instagram.com/reel/DfYeBgLsXZ1/",
+      "note": "Friday the 13th costume party"
+    },
+    {
+      "date": "2026-11-14",
+      "time": "20:00",
+      "title": "Paul Faith, The Barstool Prophets, Baschington, Evermore Nest, Kelly Love Jones",
+      "kind": "music",
+      "url": "https://www.instagram.com/p/Dew9Bchm2wP/",
+      "note": "Album release show for 'ALL WILL BE MADE'"
+    },
+    {
+      "date": "2026-11-15",
+      "time": "17:00",
+      "title": "Izzy Chase, Miko, Laura Walls, Mary May, Lynda Lee, Ciara Elise, Calitonic, Judah Rue, Feeferella, Across Phoenix, Vinny's Mirror",
+      "price": "$5-10 sliding scale",
+      "kind": "music",
+      "url": "https://www.instagram.com/p/DeNNqbzgfpf/",
+      "note": "Chimera Fest, 21+"
+    }
+  ]
+}

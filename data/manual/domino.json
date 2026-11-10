@@ -16,8 +16,24 @@
       "time": "21:00",
       "title": "DJ Kini Kini, Xavier Molina",
       "price": "$5",
-      "kind": "dj",
+      "kind": "music",
       "url": "https://www.instagram.com/p/DfYQfLjI_jt/"
+    },
+    {
+      "date": "2026-11-13",
+      "time": null,
+      "title": "Half Raccoon, Lisbon Girls, Leftys Right Hand",
+      "kind": "music",
+      "url": "https://www.instagram.com/p/DfYt-ytNgQk/"
+    },
+    {
+      "date": "2026-11-14",
+      "time": "22:00",
+      "title": "Elliot from Earth, Katiee",
+      "price": "$10",
+      "kind": "music",
+      "url": "https://www.instagram.com/p/DfU5dkTlmKY/",
+      "note": "SOUP DJ takeover"
     },
     {
       "date": "2026-11-15",
@@ -29,6 +45,16 @@
       "url": "https://www.instagram.com/p/DfhnlaIIa0c/"
     },
     {
+      "date": "2026-11-17",
+      "time": "20:00",
+      "doors": "19:00",
+      "title": "Life of Riley, Neon 3D CD Party, Calitonic, Mango",
+      "price": "$10",
+      "kind": "music",
+      "url": "https://www.instagram.com/p/DfSXV9Szww7/",
+      "note": "21+"
+    },
+    {
       "date": "2026-11-21",
       "time": "20:00",
       "title": "Grocery Bag, Across Phoenix, Aidan Pilley",
@@ -36,6 +62,13 @@
       "kind": "music",
       "url": "https://www.instagram.com/p/DfU98KuIdi8/",
       "note": "18+"
+    },
+    {
+      "date": "2026-11-22",
+      "time": null,
+      "title": "Donny's Demeanor",
+      "kind": "music",
+      "url": "https://www.instagram.com/p/DfDJ2eHmVDv/"
     }
   ]
 }

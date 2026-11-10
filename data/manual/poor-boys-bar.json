@@ -5,12 +5,39 @@
   "events": [
     {
       "date": "2026-11-13",
+      "time": null,
+      "title": "DJ Mickey Perez, bênibê",
+      "kind": "music",
+      "url": "https://www.instagram.com/p/DfQlINFEfAy/",
+      "note": "Batucada Groove presents; same night as the 6-10pm show"
+    },
+    {
+      "date": "2026-11-13",
       "time": "18:00",
       "title": "Stinking Lizaveta, Deathbird Earth, Spickle",
       "price": "$15",
       "kind": "music",
       "url": "https://www.instagram.com/p/DfYabozjGVV/",
       "note": "All ages, 6-10pm"
+    },
+    {
+      "date": "2026-11-14",
+      "time": "23:00",
+      "title": "Dreams Is Lucid, DJ Krewe, D1ME, Noble, Q Rosborough",
+      "price": "$10",
+      "kind": "music",
+      "url": "https://www.instagram.com/p/DfQKE2RPZE2/",
+      "note": "House, techno, hip hop, electronic"
+    },
+    {
+      "date": "2026-11-21",
+      "time": "00:00",
+      "end": "05:00",
+      "title": "Jamil, Made by Marco Alexander, Rakimbeau",
+      "price": "$10",
+      "kind": "music",
+      "url": "https://www.instagram.com/p/DfhyCT_qaWN/",
+      "note": "WORK (vol 3), Caribbean + international dance party, midnight-5am"
     }
   ]
 }

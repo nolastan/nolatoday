@@ -8,5 +8,7 @@
   "website": null,
   "image": "carrollton-station.jpg",
   "aliases": [],
-  "sources": []
+  "sources": [
+    { "type": "manual" }
+  ]
 }

@@ -8,5 +8,7 @@
   "website": null,
   "image": null,
   "aliases": [],
-  "sources": []
+  "sources": [
+    { "type": "manual" }
+  ]
 }
