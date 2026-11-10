@@ -100,15 +100,31 @@
       "ok": true,
       "firstSeen": "2026-11-09T17:58:39.821-06:00",
       "count": 3,
-      "lastRun": "2026-11-09T17:58:39.821-06:00",
-      "lastSuccess": "2026-11-09T17:58:39.821-06:00",
-      "lastNonEmpty": "2026-11-09T17:58:39.821-06:00",
+      "lastRun": "2026-11-09T18:16:00.481-06:00",
+      "lastSuccess": "2026-11-09T18:16:00.481-06:00",
+      "lastNonEmpty": "2026-11-09T18:16:00.481-06:00",
       "consecutiveFailures": 0,
       "sources": [
         {
           "type": "manual",
           "ok": true,
           "count": 3
+        }
+      ]
+    },
+    "bjs": {
+      "ok": true,
+      "firstSeen": "2026-11-09T18:16:00.481-06:00",
+      "count": 1,
+      "lastRun": "2026-11-09T18:16:00.481-06:00",
+      "lastSuccess": "2026-11-09T18:16:00.481-06:00",
+      "lastNonEmpty": "2026-11-09T18:16:00.481-06:00",
+      "consecutiveFailures": 0,
+      "sources": [
+        {
+          "type": "manual",
+          "ok": true,
+          "count": 1
         }
       ]
     },
@@ -221,6 +237,22 @@
           "type": "gigulator",
           "ok": true,
           "count": 53
+        }
+      ]
+    },
+    "domino": {
+      "ok": true,
+      "firstSeen": "2026-11-09T18:16:00.481-06:00",
+      "count": 3,
+      "lastRun": "2026-11-09T18:16:00.481-06:00",
+      "lastSuccess": "2026-11-09T18:16:00.481-06:00",
+      "lastNonEmpty": "2026-11-09T18:16:00.481-06:00",
+      "consecutiveFailures": 0,
+      "sources": [
+        {
+          "type": "manual",
+          "ok": true,
+          "count": 3
         }
       ]
     },
@@ -517,6 +549,22 @@
         }
       ]
     },
+    "poor-boys-bar": {
+      "ok": true,
+      "firstSeen": "2026-11-09T18:16:00.481-06:00",
+      "count": 1,
+      "lastRun": "2026-11-09T18:16:00.481-06:00",
+      "lastSuccess": "2026-11-09T18:16:00.481-06:00",
+      "lastNonEmpty": "2026-11-09T18:16:00.481-06:00",
+      "consecutiveFailures": 0,
+      "sources": [
+        {
+          "type": "manual",
+          "ok": true,
+          "count": 1
+        }
+      ]
+    },
     "preservation-hall": {
       "ok": true,
       "firstSeen": "2026-11-09T00:55:36.194-06:00",
@@ -681,9 +729,9 @@
       "ok": true,
       "firstSeen": "2026-11-09T17:58:39.821-06:00",
       "count": 4,
-      "lastRun": "2026-11-09T17:58:39.821-06:00",
-      "lastSuccess": "2026-11-09T17:58:39.821-06:00",
-      "lastNonEmpty": "2026-11-09T17:58:39.821-06:00",
+      "lastRun": "2026-11-09T18:16:00.481-06:00",
+      "lastSuccess": "2026-11-09T18:16:00.481-06:00",
+      "lastNonEmpty": "2026-11-09T18:16:00.481-06:00",
       "consecutiveFailures": 0,
       "sources": [
         {
@@ -870,5 +918,5 @@
       ]
     }
   },
-  "generatedAt": "2026-11-09T17:58:39.821-06:00"
+  "generatedAt": "2026-11-09T18:16:00.481-06:00"
 }
