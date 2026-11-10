@@ -76,3 +76,24 @@ test('diagnose: classifies broken, empty, and source-less venues', () => {
   assert.match(body, /node scripts\/scrape\.js --venue broken --dry/);
   assert.equal(parseMarker(marker('a-b', 'empty')).slug, 'a-b');
 });
+
+test('isScheduleUrl drops links to a venue’s general pages, keeps event pages and posts', async () => {
+  const { isScheduleUrl, normalizeEvents } = await import('../scripts/lib/normalize.js');
+  const pages = ['https://www.venue.example/events.html', 'https://venue.example'];
+  assert.equal(isScheduleUrl('http://venue.example/events.html?x=1#top', pages), true);
+  assert.equal(isScheduleUrl('https://other.example/', pages), true); // bare domain
+  assert.equal(isScheduleUrl('https://venue.example/events/jazz-night/', pages), false);
+  assert.equal(isScheduleUrl('https://www.instagram.com/p/DfIbWZ5Nzb-/', ['https://www.instagram.com/strochtavern/']), false);
+  assert.equal(isScheduleUrl('https://www.instagram.com/strochtavern', ['https://www.instagram.com/strochtavern/']), true);
+
+  const window = { from: DateTime.fromISO('2026-10-01', { zone: ZONE }), to: DateTime.fromISO('2026-12-01', { zone: ZONE }) };
+  const events = normalizeEvents(
+    [
+      { title: 'A', start: '2026-10-09T20:00:00-05:00', url: 'https://venue.example/calendar/' },
+      { title: 'B', start: '2026-10-10T20:00:00-05:00', url: 'https://venue.example/e/b' },
+    ],
+    { venue: 't', source: { url: 'https://venue.example/calendar' }, window },
+  );
+  assert.equal(events[0].url, undefined);
+  assert.equal(events[1].url, 'https://venue.example/e/b');
+});

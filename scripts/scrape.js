@@ -12,7 +12,7 @@
 import path from 'node:path';
 import { parseArgs } from 'node:util';
 import { runSource } from '../scrapers/index.js';
-import { normalizeEvents } from './lib/normalize.js';
+import { normalizeEvents, venuePageUrls } from './lib/normalize.js';
 import { loadVenues, loadEvents, loadStatus, writeJSON, EVENTS_DIR, STATUS_FILE } from './lib/data.js';
 import { now, iso } from './lib/time.js';
 
@@ -51,7 +51,7 @@ async function scrapeVenue(venue, { window = window_(), venues = [venue] } = {})
     try {
       const raw = await withTimeout(runSource(source, { venue, window, venues }), SOURCE_TIMEOUT_MS, label);
       if (!Array.isArray(raw)) throw new Error('Scraper did not return an array');
-      const events = normalizeEvents(raw, { venue: venue.slug, source, window });
+      const events = normalizeEvents(raw, { venue: venue.slug, source, window, pageUrls: venuePageUrls(venue) });
       results.push({ source, ok: true, raw: raw.length, events });
     } catch (err) {
       results.push({ source, ok: false, error: err?.message ?? String(err) });

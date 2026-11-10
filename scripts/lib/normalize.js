@@ -26,11 +26,38 @@ export function cleanTitle(title) {
     .trim();
 }
 
+// Compare URLs loosely: ignore protocol, www., trailing slash, query and hash.
+function urlKey(url) {
+  try {
+    const u = new URL(url);
+    return `${u.hostname.replace(/^www\./, '')}${u.pathname.replace(/\/+$/, '')}`.toLowerCase();
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * True when an event link is just a venue's homepage or schedule page rather
+ * than a page for that event. `pageUrls` are the venue's website and source URLs.
+ */
+export function isScheduleUrl(url, pageUrls = []) {
+  const key = urlKey(url);
+  if (!key) return true;
+  if (!key.includes('/')) return true; // bare domain
+  return pageUrls.some((p) => p && urlKey(p) === key);
+}
+
+/** The URLs that count as a venue's general pages: its website and every source URL. */
+export function venuePageUrls(venue) {
+  return [venue?.website, ...(venue?.sources ?? []).flatMap((s) => [s.url, ...(s.urls ?? [])])].filter(Boolean);
+}
+
 /**
  * Turn raw scraper output into the stored event shape, dropping invalid,
  * excluded, out-of-window and duplicate events.
  */
-export function normalizeEvents(raw, { venue, source = {}, window } = {}) {
+export function normalizeEvents(raw, { venue, source = {}, window, pageUrls = [] } = {}) {
+  pageUrls = [...pageUrls, source.url, ...(source.urls ?? [])];
   const from = window?.from ?? now().startOf('day');
   const to = window?.to ?? now().plus({ days: 90 });
   const exclude = [...DEFAULT_EXCLUDE, ...(source.exclude ?? []).map((p) => new RegExp(p, 'i'))];
@@ -71,7 +98,7 @@ export function normalizeEvents(raw, { venue, source = {}, window } = {}) {
     };
     if (end) event.end = iso(end);
     if (allDay) event.allDay = true;
-    if (e.url && /^https?:\/\//.test(e.url)) event.url = e.url;
+    if (e.url && /^https?:\/\//.test(e.url) && !isScheduleUrl(e.url, pageUrls)) event.url = e.url;
     out.set(key, event);
   }
 
