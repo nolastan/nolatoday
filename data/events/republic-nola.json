@@ -50,10 +50,22 @@
       "url": "https://republicnola.com/event/a-know-good-new-years/"
     },
     {
+      "id": "9b36ddbab010",
+      "title": "Anime Rave",
+      "start": "2027-01-08T21:00:00-06:00",
+      "url": "https://republicnola.com/event/anime-rave/"
+    },
+    {
       "id": "d00f4250310c",
       "title": "TYNAN",
       "start": "2027-01-23T23:00:00-06:00",
       "url": "https://republicnola.com/event/tynan/"
+    },
+    {
+      "id": "78d2d5721de6",
+      "title": "YDG",
+      "start": "2027-02-07T23:00:00-06:00",
+      "url": "https://republicnola.com/event/ydg-2/"
     }
   ]
 }
