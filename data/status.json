@@ -99,32 +99,32 @@
     "bar-redux": {
       "ok": true,
       "firstSeen": "2026-11-09T17:58:39.821-06:00",
-      "count": 3,
-      "lastRun": "2026-11-09T18:16:00.481-06:00",
-      "lastSuccess": "2026-11-09T18:16:00.481-06:00",
-      "lastNonEmpty": "2026-11-09T18:16:00.481-06:00",
+      "count": 4,
+      "lastRun": "2026-11-09T18:33:18.846-06:00",
+      "lastSuccess": "2026-11-09T18:33:18.846-06:00",
+      "lastNonEmpty": "2026-11-09T18:33:18.846-06:00",
       "consecutiveFailures": 0,
       "sources": [
         {
           "type": "manual",
           "ok": true,
-          "count": 3
+          "count": 4
         }
       ]
     },
     "bjs": {
       "ok": true,
       "firstSeen": "2026-11-09T18:16:00.481-06:00",
-      "count": 1,
-      "lastRun": "2026-11-09T18:16:00.481-06:00",
-      "lastSuccess": "2026-11-09T18:16:00.481-06:00",
-      "lastNonEmpty": "2026-11-09T18:16:00.481-06:00",
+      "count": 3,
+      "lastRun": "2026-11-09T18:33:18.846-06:00",
+      "lastSuccess": "2026-11-09T18:33:18.846-06:00",
+      "lastNonEmpty": "2026-11-09T18:33:18.846-06:00",
       "consecutiveFailures": 0,
       "sources": [
         {
           "type": "manual",
           "ok": true,
-          "count": 1
+          "count": 3
         }
       ]
     },
@@ -192,6 +192,22 @@
         }
       ]
     },
+    "carrollton-station": {
+      "ok": true,
+      "firstSeen": "2026-11-09T18:33:18.846-06:00",
+      "count": 3,
+      "lastRun": "2026-11-09T18:33:18.846-06:00",
+      "lastSuccess": "2026-11-09T18:33:18.846-06:00",
+      "lastNonEmpty": "2026-11-09T18:33:18.846-06:00",
+      "consecutiveFailures": 0,
+      "sources": [
+        {
+          "type": "manual",
+          "ok": true,
+          "count": 3
+        }
+      ]
+    },
     "chickie-wah-wah": {
       "ok": true,
       "firstSeen": "2026-10-07T08:38:46.914-05:00",
@@ -224,6 +240,22 @@
         }
       ]
     },
+    "culture-park": {
+      "ok": true,
+      "firstSeen": "2026-11-09T18:33:18.846-06:00",
+      "count": 1,
+      "lastRun": "2026-11-09T18:33:18.846-06:00",
+      "lastSuccess": "2026-11-09T18:33:18.846-06:00",
+      "lastNonEmpty": "2026-11-09T18:33:18.846-06:00",
+      "consecutiveFailures": 0,
+      "sources": [
+        {
+          "type": "manual",
+          "ok": true,
+          "count": 1
+        }
+      ]
+    },
     "dba": {
       "ok": true,
       "firstSeen": "2026-10-05T00:47:13.521-05:00",
@@ -243,16 +275,16 @@
     "domino": {
       "ok": true,
       "firstSeen": "2026-11-09T18:16:00.481-06:00",
-      "count": 3,
-      "lastRun": "2026-11-09T18:16:00.481-06:00",
-      "lastSuccess": "2026-11-09T18:16:00.481-06:00",
-      "lastNonEmpty": "2026-11-09T18:16:00.481-06:00",
+      "count": 8,
+      "lastRun": "2026-11-09T18:33:18.846-06:00",
+      "lastSuccess": "2026-11-09T18:33:18.846-06:00",
+      "lastNonEmpty": "2026-11-09T18:33:18.846-06:00",
       "consecutiveFailures": 0,
       "sources": [
         {
           "type": "manual",
           "ok": true,
-          "count": 3
+          "count": 8
         }
       ]
     },
@@ -533,6 +565,22 @@
         }
       ]
     },
+    "okay-bar": {
+      "ok": true,
+      "firstSeen": "2026-11-09T18:33:18.846-06:00",
+      "count": 5,
+      "lastRun": "2026-11-09T18:33:18.846-06:00",
+      "lastSuccess": "2026-11-09T18:33:18.846-06:00",
+      "lastNonEmpty": "2026-11-09T18:33:18.846-06:00",
+      "consecutiveFailures": 0,
+      "sources": [
+        {
+          "type": "manual",
+          "ok": true,
+          "count": 5
+        }
+      ]
+    },
     "orpheum-theater": {
       "ok": true,
       "firstSeen": "2026-10-07T00:12:43.896-05:00",
@@ -552,16 +600,16 @@
     "poor-boys-bar": {
       "ok": true,
       "firstSeen": "2026-11-09T18:16:00.481-06:00",
-      "count": 1,
-      "lastRun": "2026-11-09T18:16:00.481-06:00",
-      "lastSuccess": "2026-11-09T18:16:00.481-06:00",
-      "lastNonEmpty": "2026-11-09T18:16:00.481-06:00",
+      "count": 4,
+      "lastRun": "2026-11-09T18:33:18.846-06:00",
+      "lastSuccess": "2026-11-09T18:33:18.846-06:00",
+      "lastNonEmpty": "2026-11-09T18:33:18.846-06:00",
       "consecutiveFailures": 0,
       "sources": [
         {
           "type": "manual",
           "ok": true,
-          "count": 1
+          "count": 4
         }
       ]
     },
@@ -729,9 +777,9 @@
       "ok": true,
       "firstSeen": "2026-11-09T17:58:39.821-06:00",
       "count": 4,
-      "lastRun": "2026-11-09T18:16:00.481-06:00",
-      "lastSuccess": "2026-11-09T18:16:00.481-06:00",
-      "lastNonEmpty": "2026-11-09T18:16:00.481-06:00",
+      "lastRun": "2026-11-09T18:33:18.846-06:00",
+      "lastSuccess": "2026-11-09T18:33:18.846-06:00",
+      "lastNonEmpty": "2026-11-09T18:33:18.846-06:00",
       "consecutiveFailures": 0,
       "sources": [
         {
@@ -916,7 +964,23 @@
           "count": 29
         }
       ]
+    },
+    "vaughan-s-lounge": {
+      "ok": true,
+      "firstSeen": "2026-11-09T18:33:18.846-06:00",
+      "count": 1,
+      "lastRun": "2026-11-09T18:33:18.846-06:00",
+      "lastSuccess": "2026-11-09T18:33:18.846-06:00",
+      "lastNonEmpty": "2026-11-09T18:33:18.846-06:00",
+      "consecutiveFailures": 0,
+      "sources": [
+        {
+          "type": "manual",
+          "ok": true,
+          "count": 1
+        }
+      ]
     }
   },
-  "generatedAt": "2026-11-09T18:16:00.481-06:00"
+  "generatedAt": "2026-11-09T18:33:18.846-06:00"
 }
