@@ -2,95 +2,82 @@
   "venue": "nola-brewing",
   "events": [
     {
-      "id": "572a52d80ee1",
-      "title": "The Bluegrass Pickin' Party",
-      "start": "2026-11-09T19:00:00-06:00",
-      "end": "2026-11-09T21:00:00-06:00",
-      "url": "https://www.nolabrewing.com/new-orleans-irish-channel-nola-brewing-live-music-and-events"
-    },
-    {
       "id": "718127acec59",
       "title": "FREE LIVE COMEDY: Laughs & Drafts Presented by Craft Comedy",
       "start": "2026-11-11T19:00:00-06:00",
-      "end": "2026-11-11T21:00:00-06:00",
-      "url": "https://www.nolabrewing.com/new-orleans-irish-channel-nola-brewing-live-music-and-events"
+      "end": "2026-11-11T21:00:00-06:00"
     },
     {
       "id": "a77469cc3714",
       "title": "Sunpie & The Louisiana SunSpots",
       "start": "2026-11-13T19:00:00-06:00",
-      "end": "2026-11-13T22:00:00-06:00",
-      "url": "https://www.nolabrewing.com/new-orleans-irish-channel-nola-brewing-live-music-and-events"
+      "end": "2026-11-13T22:00:00-06:00"
+    },
+    {
+      "id": "b3de680593a7",
+      "title": "The Bluegrass Pickin' Party",
+      "start": "2026-11-16T19:00:00-06:00",
+      "end": "2026-11-16T21:00:00-06:00"
     },
     {
       "id": "6f2ef4c32882",
       "title": "The Great Meat Raffle featuring Struggle Bus",
       "start": "2026-11-19T17:30:00-06:00",
-      "end": "2026-11-19T21:00:00-06:00",
-      "url": "https://www.nolabrewing.com/new-orleans-irish-channel-nola-brewing-live-music-and-events"
+      "end": "2026-11-19T21:00:00-06:00"
     },
     {
       "id": "de587f83955c",
       "title": "Maw Maw",
       "start": "2026-11-20T19:00:00-06:00",
-      "end": "2026-11-20T22:00:00-06:00",
-      "url": "https://www.nolabrewing.com/new-orleans-irish-channel-nola-brewing-live-music-and-events"
+      "end": "2026-11-20T22:00:00-06:00"
     },
     {
       "id": "22e96b4d6936",
       "title": "Carey Hudson",
       "start": "2026-11-21T19:00:00-06:00",
-      "end": "2026-11-21T22:00:00-06:00",
-      "url": "https://www.nolabrewing.com/new-orleans-irish-channel-nola-brewing-live-music-and-events"
+      "end": "2026-11-21T22:00:00-06:00"
     },
     {
       "id": "3964083b64ae",
       "title": "Jackson's Flying Circus",
       "start": "2026-11-25T17:00:00-06:00",
-      "end": "2026-11-25T20:00:00-06:00",
-      "url": "https://www.nolabrewing.com/new-orleans-irish-channel-nola-brewing-live-music-and-events"
+      "end": "2026-11-25T20:00:00-06:00"
     },
     {
       "id": "27795e81130a",
       "title": "Mullitt",
       "start": "2026-11-27T19:00:00-06:00",
-      "end": "2026-11-27T22:00:00-06:00",
-      "url": "https://www.nolabrewing.com/new-orleans-irish-channel-nola-brewing-live-music-and-events"
+      "end": "2026-11-27T22:00:00-06:00"
     },
     {
       "id": "4b4ccd3e28d8",
       "title": "Marc Paradis Trio",
       "start": "2026-11-28T19:00:00-06:00",
-      "end": "2026-11-28T22:00:00-06:00",
-      "url": "https://www.nolabrewing.com/new-orleans-irish-channel-nola-brewing-live-music-and-events"
+      "end": "2026-11-28T22:00:00-06:00"
     },
     {
       "id": "a2ee05ba55a7",
       "title": "SINGO Bingo presented by The Disco Amigos",
       "start": "2026-12-08T18:00:00-06:00",
-      "end": "2026-12-08T21:00:00-06:00",
-      "url": "https://www.nolabrewing.com/new-orleans-irish-channel-nola-brewing-live-music-and-events"
+      "end": "2026-12-08T21:00:00-06:00"
     },
     {
       "id": "585ec45a923e",
       "title": "Live Music: The Zips",
       "start": "2027-01-02T19:00:00-06:00",
-      "end": "2027-01-02T22:00:00-06:00",
-      "url": "https://www.nolabrewing.com/new-orleans-irish-channel-nola-brewing-live-music-and-events"
+      "end": "2027-01-02T22:00:00-06:00"
     },
     {
       "id": "95b826f8584b",
       "title": "SINGO Bingo presented by The Disco Amigos",
       "start": "2027-01-12T18:00:00-06:00",
-      "end": "2027-01-12T21:00:00-06:00",
-      "url": "https://www.nolabrewing.com/new-orleans-irish-channel-nola-brewing-live-music-and-events"
+      "end": "2027-01-12T21:00:00-06:00"
     },
     {
       "id": "6c43ed289788",
       "title": "FREE LIVE COMEDY: Laughs & Drafts by Craft Comedy",
       "start": "2027-01-13T19:00:00-06:00",
-      "end": "2027-01-13T21:00:00-06:00",
-      "url": "https://www.nolabrewing.com/new-orleans-irish-channel-nola-brewing-live-music-and-events"
+      "end": "2027-01-13T21:00:00-06:00"
     }
   ]
 }

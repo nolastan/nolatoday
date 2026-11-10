@@ -2,12 +2,6 @@
   "venue": "preservation-hall",
   "events": [
     {
-      "id": "c05706098b27",
-      "title": "Preservation Brass",
-      "start": "2026-11-09T17:00:00-06:00",
-      "url": "https://www.preservationhall.com/events/preservation-brass/"
-    },
-    {
       "id": "c051292036c7",
       "title": "Preservation All-Stars ft. Mark Braud",
       "start": "2026-11-10T17:00:00-06:00",

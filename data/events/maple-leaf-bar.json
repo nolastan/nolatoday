@@ -2,20 +2,6 @@
   "venue": "maple-leaf-bar",
   "events": [
     {
-      "id": "52943db07a95",
-      "title": "George Porter Jr. Trio Ft. Chris Adkins (7pm)",
-      "start": "2026-11-09T19:00:00-06:00",
-      "end": "2026-11-09T21:30:00-06:00",
-      "url": "https://www.mapleleafbar.com/events/george-porter-jr-trio-ft-chris-adkins-7pm-4"
-    },
-    {
-      "id": "d8f22161d5f9",
-      "title": "George Porter Jr. Trio Ft. Chris Adkins (10pm)",
-      "start": "2026-11-09T22:00:00-06:00",
-      "end": "2026-11-10T00:00:00-06:00",
-      "url": "https://www.mapleleafbar.com/events/george-porter-jr-trio-ft-chris-adkins-10pm-4"
-    },
-    {
       "id": "422ebc51130c",
       "title": "Very Good Tuesdays Ft. Amina Scott, Skerik, David Torkanowsky, Ari Teitel, John Maestas, & Thomas Glass",
       "start": "2026-11-10T19:30:00-06:00",
@@ -42,6 +28,20 @@
       "start": "2026-11-12T20:00:00-06:00",
       "end": "2026-11-13T00:00:00-06:00",
       "url": "https://www.mapleleafbar.com/events/johnny-vidacovich-trio-ft-mike-dillon-james-singleton"
+    },
+    {
+      "id": "9809151289ac",
+      "title": "She Might Be A Beast",
+      "start": "2026-11-14T20:00:00-06:00",
+      "end": "2026-11-14T22:00:00-06:00",
+      "url": "https://www.mapleleafbar.com/events/she-might-be-a-beast"
+    },
+    {
+      "id": "adb4579a74fe",
+      "title": "George Porter Jr. Trio Ft. Chris Adkins (7pm)",
+      "start": "2026-11-16T19:00:00-06:00",
+      "end": "2026-11-16T21:30:00-06:00",
+      "url": "https://www.mapleleafbar.com/events/george-porter-jr-trio-ft-chris-adkins-7pm-5"
     }
   ]
 }

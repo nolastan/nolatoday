@@ -2,12 +2,6 @@
   "venue": "12-mile-limit",
   "events": [
     {
-      "id": "ac2d92356eaa",
-      "title": "Bear With Me Comedy Open Mic",
-      "start": "2026-11-09T19:30:00-06:00",
-      "url": "https://twelvemilelimit.com/events/bear-with-me-comedy-open-mic?date=2026-11-09"
-    },
-    {
       "id": "2109a1627c96",
       "title": "Trivia Night!",
       "start": "2026-11-11T20:00:00-06:00",
@@ -120,6 +114,12 @@
       "title": "Heatwave!",
       "start": "2026-12-12T21:00:00-06:00",
       "url": "https://twelvemilelimit.com/events/heatwave?date=2026-12-12"
+    },
+    {
+      "id": "2b5a969b6a1c",
+      "title": "Bear With Me Comedy Open Mic",
+      "start": "2026-12-14T19:30:00-06:00",
+      "url": "https://twelvemilelimit.com/events/bear-with-me-comedy-open-mic?date=2026-12-14"
     }
   ]
 }

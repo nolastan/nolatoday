@@ -2,13 +2,6 @@
   "venue": "banks-street-bar",
   "events": [
     {
-      "id": "438d9ad10e80",
-      "title": "Yacht Rock Line Dancing With Giddy Up Two Step",
-      "start": "2026-11-09T18:00:00-06:00",
-      "end": "2026-11-09T20:00:00-06:00",
-      "url": "https://www.banksstreetbarnola.net/event-details/yacht-rock-line-dancing-with-giddy-up-two-step"
-    },
-    {
       "id": "a4ff078becc1",
       "title": "Vet Jams",
       "start": "2026-11-10T19:00:00-06:00",
@@ -42,6 +35,13 @@
       "start": "2026-11-14T20:00:00-06:00",
       "end": "2026-11-15T00:00:00-06:00",
       "url": "https://www.banksstreetbarnola.net/event-details/valerie-sassyfrass-grits-greens"
+    },
+    {
+      "id": "596fe1357794",
+      "title": "Nate Todd & The Stranglers",
+      "start": "2026-11-18T20:00:00-06:00",
+      "end": "2026-11-19T00:00:00-06:00",
+      "url": "https://www.banksstreetbarnola.net/event-details/nate-todd-the-stranglers"
     }
   ]
 }

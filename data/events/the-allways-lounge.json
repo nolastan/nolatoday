@@ -2,20 +2,6 @@
   "venue": "the-allways-lounge",
   "events": [
     {
-      "id": "ab72c7501235",
-      "title": "Nine inch Nails Pretty Hate Machine",
-      "start": "2026-11-08T23:00:00-06:00",
-      "end": "2026-11-09T02:00:00-06:00",
-      "url": "https://tockify.com/allwayslounge/detail/4478/1794200400000"
-    },
-    {
-      "id": "d9f6fdf515fc",
-      "title": "Betsy Propane Smoke Show (live music & burlesque)",
-      "start": "2026-11-09T19:00:00-06:00",
-      "end": "2026-11-09T20:30:00-06:00",
-      "url": "https://tockify.com/allwayslounge/detail/2864/1794272400000"
-    },
-    {
       "id": "d71fbbb32587",
       "title": "Sincerely, Fantasy. THE Thing to do in New Orleans’ On A Tuesday! (songs, theatre, sideshow)",
       "start": "2026-11-10T19:00:00-06:00",
@@ -1882,6 +1868,13 @@
       "start": "2027-02-06T22:30:00-06:00",
       "end": "2027-02-07T01:00:00-06:00",
       "url": "https://tockify.com/allwayslounge/detail/4209/1801976400000"
+    },
+    {
+      "id": "e66c634872c1",
+      "title": "Swing Night (live music & dance lessons)",
+      "start": "2027-02-07T20:00:00-06:00",
+      "end": "2027-02-07T23:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/1860/1802052000000"
     }
   ]
 }

@@ -2,466 +2,382 @@
   "venue": "bamboulas",
   "events": [
     {
-      "id": "e714534a33ea",
-      "title": "KAT KILEY EXPERIENCE",
-      "start": "2026-11-08T21:00:00-06:00",
-      "end": "2026-11-09T00:00:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
-    },
-    {
-      "id": "5e7760eed140",
-      "title": "THE NEW ORLEANS RUG CUTTERS",
-      "start": "2026-11-09T12:00:00-06:00",
-      "end": "2026-11-09T16:00:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
-    },
-    {
-      "id": "c43d74670773",
-      "title": "jon roniger band",
-      "start": "2026-11-09T16:30:00-06:00",
-      "end": "2026-11-09T21:30:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
-    },
-    {
       "id": "c853d823da7c",
       "title": "ted hefko & the thousandaires",
       "start": "2026-11-09T21:00:00-06:00",
-      "end": "2026-11-10T00:00:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-10T00:00:00-06:00"
     },
     {
       "id": "1183969276e3",
       "title": "fk-rRERA mUSIC gROUP",
       "start": "2026-11-10T12:00:00-06:00",
-      "end": "2026-11-10T16:00:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-10T16:00:00-06:00"
     },
     {
       "id": "e31014b0d5b4",
       "title": "GISELLE ANGUIZOLA QUARTET",
       "start": "2026-11-10T16:30:00-06:00",
-      "end": "2026-11-10T20:30:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-10T20:30:00-06:00"
     },
     {
       "id": "7d00bce5c87f",
       "title": "CATIE B & THE HAND ME DOWNS",
       "start": "2026-11-10T21:00:00-06:00",
-      "end": "2026-11-11T00:00:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-11T00:00:00-06:00"
     },
     {
       "id": "5f15cb37a271",
       "title": "JACKY BLAIR AND THE HOT BISCUITS",
       "start": "2026-11-11T12:00:00-06:00",
-      "end": "2026-11-11T16:00:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-11T16:00:00-06:00"
     },
     {
       "id": "be385468bf6d",
       "title": "Swingin' with john saavedra",
       "start": "2026-11-11T16:30:00-06:00",
-      "end": "2026-11-11T20:30:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-11T20:30:00-06:00"
     },
     {
       "id": "9c849d4b5755",
       "title": "JELLY ROLL STOMPERS",
       "start": "2026-11-11T21:00:00-06:00",
-      "end": "2026-11-12T00:00:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-12T00:00:00-06:00"
     },
     {
       "id": "631185f308f0",
       "title": "J.J. and the A-Ok's",
       "start": "2026-11-12T12:00:00-06:00",
-      "end": "2026-11-12T16:00:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-12T16:00:00-06:00"
     },
     {
       "id": "a87c5e90198f",
       "title": "cristina kaminis & the mix",
       "start": "2026-11-12T16:30:00-06:00",
-      "end": "2026-11-12T20:30:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-12T20:30:00-06:00"
     },
     {
       "id": "2316b6834b5c",
       "title": "WOLFE JOHN'S BAND",
       "start": "2026-11-12T21:00:00-06:00",
-      "end": "2026-11-13T00:00:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-13T00:00:00-06:00"
     },
     {
       "id": "7a08f2a7dfa5",
       "title": "THE NEW ORLEANS RUG CUTTERS",
       "start": "2026-11-13T11:00:00-06:00",
-      "end": "2026-11-13T13:45:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-13T13:45:00-06:00"
     },
     {
       "id": "6a525b068bf0",
       "title": "FELIPE ANTONIO'S QUINTETO",
       "start": "2026-11-13T14:15:00-06:00",
-      "end": "2026-11-13T18:00:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-13T18:00:00-06:00"
     },
     {
       "id": "674b37065673",
       "title": "LES GETREX AND CREOLE COOKIN'",
       "start": "2026-11-13T18:30:00-06:00",
-      "end": "2026-11-13T21:30:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-13T21:30:00-06:00"
     },
     {
       "id": "d775951d3054",
       "title": "KAT KILEY EXPERIENCE",
       "start": "2026-11-13T22:00:00-06:00",
-      "end": "2026-11-14T02:00:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-14T02:00:00-06:00"
     },
     {
       "id": "32f15d1215e1",
       "title": "james mCclaskey & the rhythm band",
       "start": "2026-11-14T13:30:00-06:00",
-      "end": "2026-11-14T18:00:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-14T18:00:00-06:00"
     },
     {
       "id": "e7188af741ea",
       "title": "JOHNNY MASTRO BLUES",
       "start": "2026-11-14T18:30:00-06:00",
-      "end": "2026-11-14T21:30:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-14T21:30:00-06:00"
     },
     {
       "id": "b8abd26573a5",
       "title": "SIERRA GREEN",
       "start": "2026-11-14T22:00:00-06:00",
-      "end": "2026-11-15T02:00:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-15T02:00:00-06:00"
     },
     {
       "id": "bb79fc6383f3",
       "title": "THE JAY dUFOUR bAND",
       "start": "2026-11-15T11:00:00-06:00",
-      "end": "2026-11-15T13:00:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-15T13:00:00-06:00"
     },
     {
       "id": "54dbbb819b03",
       "title": "lAURA Doyle Quartet",
       "start": "2026-11-15T13:30:00-06:00",
-      "end": "2026-11-15T17:00:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-15T17:00:00-06:00"
     },
     {
       "id": "fb8425259d68",
       "title": "MIDNIGHT BRAWLERS",
       "start": "2026-11-15T17:30:00-06:00",
-      "end": "2026-11-15T20:30:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-15T20:30:00-06:00"
     },
     {
       "id": "c2d2bbfcbf3c",
       "title": "kat kiley EXPERIENCE",
       "start": "2026-11-15T21:00:00-06:00",
-      "end": "2026-11-16T00:00:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-16T00:00:00-06:00"
     },
     {
       "id": "0344f23be3f8",
       "title": "THE NEW ORLEANS RUG CUTTERS",
       "start": "2026-11-16T12:00:00-06:00",
-      "end": "2026-11-16T16:00:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-16T16:00:00-06:00"
     },
     {
       "id": "a5ba22d86038",
       "title": "jon roniger band",
       "start": "2026-11-16T16:30:00-06:00",
-      "end": "2026-11-16T21:30:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-16T21:30:00-06:00"
     },
     {
       "id": "416665638054",
       "title": "ted hefko & the thousandaires",
       "start": "2026-11-16T21:00:00-06:00",
-      "end": "2026-11-17T00:00:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-17T00:00:00-06:00"
     },
     {
       "id": "d6c4d011af9f",
       "title": "fk-rRERA mUSIC gROUP",
       "start": "2026-11-17T12:00:00-06:00",
-      "end": "2026-11-17T16:00:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-17T16:00:00-06:00"
     },
     {
       "id": "3778ce54df52",
       "title": "GISELLE anguizola QUARTET",
       "start": "2026-11-17T16:30:00-06:00",
-      "end": "2026-11-17T20:30:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-17T20:30:00-06:00"
     },
     {
       "id": "6ecc35683b01",
       "title": "CAiTIE B & THE HAND ME DOWNS",
       "start": "2026-11-17T21:00:00-06:00",
-      "end": "2026-11-18T00:00:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-18T00:00:00-06:00"
     },
     {
       "id": "602c25dec43f",
       "title": "JACKY BLAIR AND THE HOT BISCUITS",
       "start": "2026-11-18T12:00:00-06:00",
-      "end": "2026-11-18T16:00:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-18T16:00:00-06:00"
     },
     {
       "id": "b0ad4e590f1e",
       "title": "Swingin' with john saavedra",
       "start": "2026-11-18T16:30:00-06:00",
-      "end": "2026-11-18T20:30:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-18T20:30:00-06:00"
     },
     {
       "id": "796734485cf4",
       "title": "THE JELLY ROLL STOMPERS",
       "start": "2026-11-18T21:00:00-06:00",
-      "end": "2026-11-19T00:00:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-19T00:00:00-06:00"
     },
     {
       "id": "79b0740a9c77",
       "title": "J.J. and the A-Ok's",
       "start": "2026-11-19T12:00:00-06:00",
-      "end": "2026-11-19T16:00:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-19T16:00:00-06:00"
     },
     {
       "id": "35f58980503b",
       "title": "CRISTINA KAMINIS AND THE MIX",
       "start": "2026-11-19T16:30:00-06:00",
-      "end": "2026-11-19T20:30:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-19T20:30:00-06:00"
     },
     {
       "id": "f7e6a15ccd3e",
       "title": "WOLFE JOHNS BAND",
       "start": "2026-11-19T21:00:00-06:00",
-      "end": "2026-11-20T00:00:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-20T00:00:00-06:00"
     },
     {
       "id": "cde0508ee8e8",
       "title": "THE NEW ORLEANS RUG CUTTERS",
       "start": "2026-11-20T11:00:00-06:00",
-      "end": "2026-11-20T13:45:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-20T13:45:00-06:00"
     },
     {
       "id": "5a9937ac4b8c",
       "title": "FELIPE ANTONIO'S QUINTETO",
       "start": "2026-11-20T14:15:00-06:00",
-      "end": "2026-11-20T18:00:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-20T18:00:00-06:00"
     },
     {
       "id": "5e5d33bb295a",
       "title": "LES GETREX AND CREOLE COOKIN'",
       "start": "2026-11-20T18:30:00-06:00",
-      "end": "2026-11-20T21:30:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-20T21:30:00-06:00"
     },
     {
       "id": "933b80ad3be7",
       "title": "KAT KILEY EXPERIENCE",
       "start": "2026-11-20T22:00:00-06:00",
-      "end": "2026-11-21T02:00:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-21T02:00:00-06:00"
     },
     {
       "id": "f1e81247b1bd",
       "title": "james mCclaskey & the rhythm band",
       "start": "2026-11-21T14:15:00-06:00",
-      "end": "2026-11-21T18:00:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-21T18:00:00-06:00"
     },
     {
       "id": "5ea74522e715",
       "title": "JOHNNY MASTRO",
       "start": "2026-11-21T18:30:00-06:00",
-      "end": "2026-11-21T21:30:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-21T21:30:00-06:00"
     },
     {
       "id": "3bbc28114626",
       "title": "THE JAY dUFOUR bAND",
       "start": "2026-11-22T11:00:00-06:00",
-      "end": "2026-11-22T13:00:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-22T13:00:00-06:00"
     },
     {
       "id": "9b7c7edb4461",
       "title": "lAURA Doyle Quartet",
       "start": "2026-11-22T13:30:00-06:00",
-      "end": "2026-11-22T17:00:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-22T17:00:00-06:00"
     },
     {
       "id": "97239ca287e9",
       "title": "the midnight brawlers",
       "start": "2026-11-22T17:30:00-06:00",
-      "end": "2026-11-22T20:30:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-22T20:30:00-06:00"
     },
     {
       "id": "7a3259146685",
       "title": "kat kiley EXPERIENCE",
       "start": "2026-11-22T21:00:00-06:00",
-      "end": "2026-11-23T00:00:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-23T00:00:00-06:00"
     },
     {
       "id": "9e0e229a049b",
       "title": "THE NEW ORLEANS RUG CUTTERS",
       "start": "2026-11-23T12:00:00-06:00",
-      "end": "2026-11-23T16:00:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-23T16:00:00-06:00"
     },
     {
       "id": "fc6be4501518",
       "title": "jon roniger band",
       "start": "2026-11-23T16:30:00-06:00",
-      "end": "2026-11-23T21:30:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-23T21:30:00-06:00"
     },
     {
       "id": "b84013f2b7a3",
       "title": "ted hefko & the thousandaires",
       "start": "2026-11-23T21:00:00-06:00",
-      "end": "2026-11-24T00:00:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-24T00:00:00-06:00"
     },
     {
       "id": "50ea3c2b63d3",
       "title": "fk-rRERA mUSIC gROUP",
       "start": "2026-11-24T12:00:00-06:00",
-      "end": "2026-11-24T16:00:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-24T16:00:00-06:00"
     },
     {
       "id": "e4a1db8e6ad3",
       "title": "GISELLE anguizola QUARTET",
       "start": "2026-11-24T16:30:00-06:00",
-      "end": "2026-11-24T20:30:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-24T20:30:00-06:00"
     },
     {
       "id": "225765e672b4",
       "title": "CAiTIE B & THE HAND ME DOWNS",
       "start": "2026-11-24T21:00:00-06:00",
-      "end": "2026-11-25T00:00:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-25T00:00:00-06:00"
     },
     {
       "id": "cdcf1f444800",
       "title": "JACKY BLAIR AND THE HOT BISCUITS",
       "start": "2026-11-25T12:00:00-06:00",
-      "end": "2026-11-25T16:00:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-25T16:00:00-06:00"
     },
     {
       "id": "6512e09f8668",
       "title": "Swingin' with john saavedra",
       "start": "2026-11-25T16:30:00-06:00",
-      "end": "2026-11-25T20:30:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-25T20:30:00-06:00"
     },
     {
       "id": "a1d4f80a9aad",
       "title": "THE JELLY ROLL STOMPERS",
       "start": "2026-11-25T21:00:00-06:00",
-      "end": "2026-11-26T00:00:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-26T00:00:00-06:00"
     },
     {
       "id": "1bbde7774354",
       "title": "J.J. and the A-Ok's",
       "start": "2026-11-26T16:30:00-06:00",
-      "end": "2026-11-26T20:30:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-26T20:30:00-06:00"
     },
     {
       "id": "49a0d60100eb",
       "title": "WOLFE JOHNS BAND",
       "start": "2026-11-26T21:00:00-06:00",
-      "end": "2026-11-27T00:00:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-27T00:00:00-06:00"
     },
     {
       "id": "00d238cf650e",
       "title": "THE NEW ORLEANS RUG CUTTERS",
       "start": "2026-11-27T11:00:00-06:00",
-      "end": "2026-11-27T13:45:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-27T13:45:00-06:00"
     },
     {
       "id": "2bf94dd304cc",
       "title": "FELIPE ANTONIO'S QUINTETO",
       "start": "2026-11-27T14:15:00-06:00",
-      "end": "2026-11-27T18:00:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-27T18:00:00-06:00"
     },
     {
       "id": "fc0895770e8d",
       "title": "LES GETREX AND CREOLE COOKIN'",
       "start": "2026-11-27T18:30:00-06:00",
-      "end": "2026-11-27T21:30:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-27T21:30:00-06:00"
     },
     {
       "id": "fc5945d6f7f8",
       "title": "james mCclaskey & the rhythm band",
       "start": "2026-11-28T14:15:00-06:00",
-      "end": "2026-11-28T18:00:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-28T18:00:00-06:00"
     },
     {
       "id": "b4c8b7e70127",
       "title": "JOHNNY MASTRO",
       "start": "2026-11-28T18:30:00-06:00",
-      "end": "2026-11-28T21:30:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-28T21:30:00-06:00"
     },
     {
       "id": "4e22a64967b7",
       "title": "THE JAY dUFOUR bAND",
       "start": "2026-11-29T11:00:00-06:00",
-      "end": "2026-11-29T13:00:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-29T13:00:00-06:00"
     },
     {
       "id": "476cd9aa9501",
       "title": "lAURA Doyle Quartet",
       "start": "2026-11-29T13:30:00-06:00",
-      "end": "2026-11-29T17:00:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-29T17:00:00-06:00"
     },
     {
       "id": "76e9a80307f4",
       "title": "the midnight brawlers",
       "start": "2026-11-29T17:30:00-06:00",
-      "end": "2026-11-29T20:30:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-29T20:30:00-06:00"
     },
     {
       "id": "4eeb727ebbf0",
       "title": "CAiTIE B & THE HAND ME DOWNS",
       "start": "2026-11-29T21:00:00-06:00",
-      "end": "2026-11-30T00:00:00-06:00",
-      "url": "https://bamboulasmusic.com/livemusicschedule/"
+      "end": "2026-11-30T00:00:00-06:00"
     }
   ]
 }
