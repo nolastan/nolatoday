@@ -2,20 +2,6 @@
   "venue": "new-orleans-jazz-museum",
   "events": [
     {
-      "id": "28200b1a336f",
-      "title": "Balcony Show sponsored by the Positive Vibrations Foundation: Bullseye Brass Band",
-      "start": "2026-11-10T17:00:00-06:00",
-      "end": "2026-11-10T18:00:00-06:00",
-      "url": "https://nolajazzmuseum.org/events/2026/10/10/balcony-concert-sponsored-by-positive-vibrations"
-    },
-    {
-      "id": "3945d8dd0dda",
-      "title": "The Ella Project",
-      "start": "2026-11-10T17:30:00-06:00",
-      "end": "2026-11-10T19:30:00-06:00",
-      "url": "https://nolajazzmuseum.org/events/2026/11/10/the-ella-project"
-    },
-    {
       "id": "2cfd68e817be",
       "title": "The New Orleans Arts & Ideas Festival (NOAI)",
       "start": "2026-11-11T16:00:00-06:00",

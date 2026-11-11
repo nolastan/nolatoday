@@ -2,18 +2,6 @@
   "venue": "bacchanal",
   "events": [
     {
-      "id": "b58191839039",
-      "title": "Raphael Bas",
-      "start": "2026-11-10T12:00:00-06:00",
-      "end": "2026-11-10T15:00:00-06:00"
-    },
-    {
-      "id": "c3c10b10d814",
-      "title": "Tangiers Combo",
-      "start": "2026-11-10T18:00:00-06:00",
-      "end": "2026-11-10T21:00:00-06:00"
-    },
-    {
       "id": "010adc7bc0e0",
       "title": "Raphael Bas",
       "start": "2026-11-11T12:00:00-06:00",

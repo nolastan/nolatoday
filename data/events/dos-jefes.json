@@ -2,12 +2,6 @@
   "venue": "dos-jefes",
   "events": [
     {
-      "id": "ce980a88ebc4",
-      "title": "Tom Hook",
-      "start": "2026-11-10T20:30:00-06:00",
-      "url": "https://dosjefes.com/events/tom-hook-2025-08-12/"
-    },
-    {
       "id": "b888c19887d0",
       "title": "Basch Jernigan",
       "start": "2026-11-11T20:30:00-06:00",

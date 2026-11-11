@@ -86,11 +86,25 @@
       "url": "https://dice.fm/event/6aba924c5371c20001be8054"
     },
     {
-      "id": "ddc7a1b0485e",
-      "title": "North by North, The Pause, The Band Melrose",
+      "id": "37aa35c3299e",
+      "title": "North by North, The Pause, The Bomb Pulse, Mango",
       "start": "2026-11-24T21:00:00-06:00",
       "end": "2026-11-25T01:00:00-06:00",
       "url": "https://dice.fm/event/6aba932f4479fc0001693a08"
+    },
+    {
+      "id": "621ffa658ff3",
+      "title": "IT'S GIVING w/ Abuelita, Otto, & Elliot from Earth",
+      "start": "2026-11-26T22:00:00-06:00",
+      "end": "2026-11-27T02:00:00-06:00",
+      "url": "https://dice.fm/event/6af3b941f16e8f0001f0101e"
+    },
+    {
+      "id": "43222cca41dd",
+      "title": "MIDNIGHT MATSURI w/ Sana, Phlegm, Heelturn, & more",
+      "start": "2026-11-28T22:00:00-06:00",
+      "end": "2026-11-29T04:00:00-06:00",
+      "url": "https://dice.fm/event/6af3b9a847e85500010ae0c0"
     },
     {
       "id": "c0864e81690b",
@@ -100,11 +114,25 @@
       "url": "https://dice.fm/event/6ac154771dd6f100017d93be"
     },
     {
+      "id": "d0e48d89cd29",
+      "title": "Wolves Don't Bark, dandelioness, Mira Lazuli",
+      "start": "2026-12-02T21:00:00-06:00",
+      "end": "2026-12-03T01:00:00-06:00",
+      "url": "https://dice.fm/event/6af3b7739b05790001585b3b"
+    },
+    {
       "id": "e09cee97c837",
       "title": "Latin Night with La Tran-K",
       "start": "2026-12-04T22:00:00-06:00",
       "end": "2026-12-05T02:00:00-06:00",
       "url": "https://dice.fm/event/6aba948aeaf6f50001599d54"
+    },
+    {
+      "id": "543a3c016d9e",
+      "title": "Piano Night w BC Coogan",
+      "start": "2026-12-07T20:30:00-06:00",
+      "end": "2026-12-08T00:30:00-06:00",
+      "url": "https://dice.fm/event/6af3baece492660001cbb2f8"
     },
     {
       "id": "09d7060eb4b6",

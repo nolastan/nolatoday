@@ -2,13 +2,6 @@
   "venue": "rock-n-bowl",
   "events": [
     {
-      "id": "4c6977bc8311",
-      "title": "Latin Night with DJ Nayo",
-      "start": "2026-11-10T19:00:00-06:00",
-      "end": "2026-11-10T23:00:00-06:00",
-      "url": "https://www.rocknbowl.com/event-details/latin-night-with-dj-nayo-2026-11-10-19-00"
-    },
-    {
       "id": "8d13033b140b",
       "title": "Geno Delafose & French Rockin' Boogie",
       "start": "2026-11-12T20:00:00-06:00",
@@ -112,6 +105,12 @@
       "title": "Few Blue",
       "start": "2026-12-18T20:30:00-06:00",
       "url": "https://www.rocknbowl.com/event-details/few-blue-12-18-26"
+    },
+    {
+      "id": "da07de72b4ee",
+      "title": "The Chee Weez presents Rock Royalty",
+      "start": "2026-12-19T20:30:00-06:00",
+      "url": "https://www.rocknbowl.com/event-details/the-chee-weez-presents-rock-royalty-12-19-26"
     }
   ]
 }
