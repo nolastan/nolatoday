@@ -2,11 +2,6 @@
   "venue": "dba",
   "events": [
     {
-      "id": "82292afb4ba6",
-      "title": "Bras Band Brass Band",
-      "start": "2026-11-10T21:00:00-06:00"
-    },
-    {
       "id": "bd79e5a5a8ab",
       "title": "Jenavieve & The Winding Boys",
       "start": "2026-11-11T18:00:00-06:00"
@@ -40,6 +35,11 @@
       "id": "9978c9665810",
       "title": "Young Lion Showcase",
       "start": "2026-11-14T14:30:00-06:00"
+    },
+    {
+      "id": "5a06793a67c4",
+      "title": "Hobo Gadget Junk Band",
+      "start": "2026-11-14T18:00:00-06:00"
     },
     {
       "id": "846d07cf9397",
