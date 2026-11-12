@@ -102,7 +102,7 @@
       '<a class="popup-banner popup-banner--parade" href="' + href + '"><h3>' + esc(p.n) + '</h3></a>' +
       '<ul class="popup-gigs">' +
       '<li><span class="popup-time">' + esc(when) + live + '</span><span class="popup-title">' + esc(KIND[p.c] || KIND.other) + '</span></li>' +
-      (p.a ? '<li><span class="popup-time">Starts at</span><span class="popup-title">' + esc(p.a) + '</span></li>' : '') +
+      (p.a ? '<li><span class="popup-time">Starts on</span><span class="popup-title">' + esc(p.a) + '</span></li>' : '') +
       (p.g ? '' : '<li><span class="popup-time">Route</span><span class="popup-title">Not published as a line. See the parade page.</span></li>') +
       '</ul>' +
       '<a class="popup-more" href="' + href + '">Route and details →</a>'

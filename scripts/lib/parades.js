@@ -15,6 +15,7 @@ import { ZONE } from './time.js';
 export const PARADES_DIR = path.join(DATA_DIR, 'parades');
 export const PARADES_FILE = path.join(PARADES_DIR, 'parades.geojson');
 export const KREWES_FILE = path.join(PARADES_DIR, 'krewes.json');
+export const WEBSITES_FILE = path.join(PARADES_DIR, 'websites.json');
 
 /** The official sources the pipeline reads. `id` is what a feature's `source_layer` refers to. */
 export const SOURCES = {
@@ -522,16 +523,48 @@ export function loadKrewes() {
   return readJSON(KREWES_FILE, []);
 }
 
+/** Each organization's own website, by slug. Hand-kept: a link out, never a source of parade data. */
+export function loadWebsites() {
+  const sites = readJSON(WEBSITES_FILE, {});
+  for (const [slug, href] of Object.entries(sites)) {
+    if (!/^https:\/\/[^\s]+$/.test(href)) throw new Error(`websites.json: ${slug} needs an https address, got "${href}"`);
+  }
+  return sites;
+}
+
 /** What to call a parade on the site: the krewe's name when registered, else the city's label. */
 export function displayName(properties) {
   return properties.krewe ?? properties.name;
 }
 
 /**
+ * The street a parade starts on, from the city's start address: "3301 Higgins Blvd (Thrive 9th Ward)"
+ * becomes "Higgins Blvd". The house number and any place name are dropped; corners are kept.
+ */
+export function startStreet(address) {
+  if (!address) return null;
+  const street = String(address)
+    .replace(/\([^)]*\)?/g, ' ')
+    .replace(/\s+-\s+.*$/, '')
+    .split(/\s+(?:and|&)\s+/i)
+    .map((part) =>
+      part
+        .trim()
+        .replace(/^\d+[A-Za-z]?\s+/, '')
+        .replace(/\s+\d+$/, '')
+        .replace(/[.,\s]+$/, '')
+        .replace(/\b[a-z][a-z']*\b/g, (w) => w[0].toUpperCase() + w.slice(1)),
+    )
+    .filter((part) => /[A-Za-z]/.test(part))
+    .join(' and ');
+  return street || null;
+}
+
+/**
  * Parades grouped by the organization that puts them on, for the site's pages:
  * one page per krewe or club, holding every parade of theirs the city has listed.
  */
-export function paradeOrgs(features, today) {
+export function paradeOrgs(features, today, { websites = {} } = {}) {
   const orgs = new Map();
   for (const f of features) {
     const p = f.properties;
@@ -547,6 +580,7 @@ export function paradeOrgs(features, today) {
     org.featured = org.upcoming[0] ?? org.past[0];
     org.name = displayName(org.featured.properties);
     org.category = org.featured.properties.category;
+    org.website = websites[org.slug] ?? null;
     out.push(org);
   }
   // Soonest upcoming first, then the rest by most recent.
@@ -567,6 +601,7 @@ export function mapParade(f) {
   if (f.geometry) item.g = simplify(f.geometry);
   if (p.start_point) item.p = p.start_point;
   else if (f.geometry) item.p = linesOf(item.g)[0][0];
-  if (p.start_address) item.a = p.start_address;
+  const street = startStreet(p.start_address);
+  if (street) item.a = street;
   return item;
 }
