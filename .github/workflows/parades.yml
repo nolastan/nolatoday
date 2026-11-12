@@ -1,0 +1,66 @@
+name: Update parades
+
+on:
+  schedule:
+    # Twice a day. The city's permit feed is refreshed once a day; its Carnival layers change a few times a season.
+    - cron: '41 4,16 * * *'
+  workflow_dispatch:
+
+# Shares the scraper's queue so the two never push at the same moment.
+concurrency:
+  group: scrape
+  cancel-in-progress: false
+
+jobs:
+  parades:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      # Exits 1 when a source is down or changed shape (nothing is written), or when the
+      # city published a Carnival row too incomplete to use (the rest is still written).
+      - name: Pull official parade data
+        id: pull
+        continue-on-error: true
+        run: node scripts/parades.js
+
+      - name: Commit data
+        run: |
+          git config user.name "nolatoday-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/parades/
+          if git diff --cached --quiet; then
+            echo "No parade changes."
+            exit 0
+          fi
+          git commit -m "Update parades ($(date -u +'%Y-%m-%d %H:%M UTC'))"
+          for attempt in 1 2 3 4; do
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0
+            sleep $((attempt * 5))
+          done
+          exit 1
+
+      - name: Report a failed pull
+        if: steps.pull.outcome == 'failure'
+        run: |
+          echo "::error::scripts/parades.js reported a problem with the official data. See the 'Pull official parade data' step."
+          exit 1
+
+  # Pushes made with GITHUB_TOKEN don't trigger other workflows, so deploy from here.
+  deploy:
+    needs: parades
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    uses: ./.github/workflows/deploy.yml

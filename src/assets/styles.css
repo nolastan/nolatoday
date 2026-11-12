@@ -574,6 +574,26 @@ h3 { font-size: 1.3rem; }
 }
 .popup-more:hover { text-decoration: underline; }
 
+/* Parades ---------------------------------------------------------------- */
+.site-nav a { white-space: nowrap; }
+.map-bottom { gap: 10px; }
+.map-banner--route { height: clamp(220px, 34vw, 420px); }
+.parade-hero { grid-template-columns: 1fr !important; }
+.parade-card .card-media { color: var(--marker); background: var(--bg-elev-2); }
+.route-thumb { position: absolute; inset: 0; width: 100%; height: 100%; }
+.parade-attribution { margin: 56px 0 0; max-width: 760px; font-size: 0.95rem; }
+.parade-attribution h2 { font-size: 1.3rem; }
+/* A parade's starting point on the map: a ring, to tell it from a venue's dot. */
+.marker--parade::after { background: var(--bg); box-shadow: 0 0 0 4px var(--marker); inset: 30%; }
+.marker--parade:hover::after, .marker--parade:focus-visible::after, .marker--parade.is-open::after { inset: 20%; }
+.popup-banner--parade { min-height: 64px; background: linear-gradient(135deg, var(--teal-deep), #b4530a); }
+@media (max-width: 480px) {
+  .site-header { gap: 8px; padding-inline: 12px; }
+  .site-header .brand { font-size: 1.25rem; }
+  .site-nav { gap: 0; }
+  .site-nav a { padding: 8px 7px; font-size: 0.95rem; }
+}
+
 /* Privacy policy and other plain text pages */
 .prose-page { padding: 48px 16px 64px; max-width: 760px; }
 .prose-page h2 { font-size: 1.5rem; margin-top: 2em; }

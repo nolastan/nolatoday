@@ -1,0 +1,56 @@
+[
+ {
+  "permitnumber": "26-00494-SPMA",
+  "address": "713 Saint Louis St",
+  "currentstatus": "Finaled",
+  "d_create": "2026-01-07T00:00:00.000",
+  "descr": "Krewe of Lafcadio Mardi Gras Marching Parade 2026- 713 St Louis St (Antoine's) 2-14-2026\r\nRoute: 713 Saint Louis St right on Burgundy St. Right in Saint Ann St. Left on Chartres. Left on Barracks. Left on Royal. Left on Iberville. Left on Chartres. Left on Saint Louis St. Disband.  Disband: 713 St Louis St (Antoine's)\r\nFormation: 1:30 PM  \r\nStart: 2:00 PM\r\nEnd: 4:00 PM",
+  "latitude": "29.956739",
+  "longitude": "-90.066421"
+ },
+ {
+  "permitnumber": "26-25432-SPMA",
+  "address": "701 N Rampart St",
+  "currentstatus": "Application Review",
+  "d_create": "2026-08-28T00:00:00.000",
+  "descr": "Krewe Mosaique Parade MG 2027 - 701 N Rampart - 1-09-2027 Street Closure: St. Philip (between Decatur and Chartres) 7:00PM - 10:00PM. \r\nSidewalk closure in front of Armstrong Park at St. Peter and Rampart Streets for portalet.  Portalet at the route start (lineup). \r\nRoute: Start at Armstrong Park and proceed down St. Ann Street. Turn left onto Bourbon Street. Turn right onto Governor Nichols Street. Turn right onto Royal Street. Turn left onto St. Ann Street.  Turn left onto Chartres Street.  End at St. Philip Street \r\nFormation: 4:00PM \r\nStart: 6:00PM\r\n End: 7:00PM.  ",
+  "latitude": "29.961421",
+  "longitude": "-90.068685"
+ },
+ {
+  "permitnumber": "26-29004-SPMA",
+  "address": "3301 Higgins Blvd",
+  "currentstatus": "Application Review",
+  "d_create": "2026-10-01T00:00:00.000",
+  "descr": "Nine Times SA & PC Second Line Parade 2026- 3301 Higgins Blvd (Thrive 9th Ward) 11-22-2026\r\nRoute: Route Sheet\r\n Formation: 11:00 AM \r\nStart: 12:00 PM\r\n End: 4:00 PM",
+  "latitude": "29.9951",
+  "longitude": "-90.03298"
+ },
+ {
+  "permitnumber": "TEST-0001",
+  "address": "1 Example St",
+  "currentstatus": "Permit not required",
+  "d_create": "2026-09-01T00:00:00.000",
+  "descr": "Example Wedding Second Line Parade - 1 Example St - 10-10-2026\r\nRoute: 1 Example St right on Royal St. Left on St. Ann St.\r\nFormation: 5:00 PM\r\nStart: 5:15 PM\r\nEnd: 5:45 PM\r\n80 guests",
+  "latitude": "29.9584",
+  "longitude": "-90.0644"
+ },
+ {
+  "permitnumber": "TEST-0002",
+  "address": "701 N Rampart St",
+  "currentstatus": "Permit Denied",
+  "d_create": "2026-09-01T00:00:00.000",
+  "descr": "Example Steppers SA & PC Second Line Parade 2026 - 701 N Rampart - 10-11-2026\r\nRoute: 701 N Rampart right on St. Ann St.\r\nFormation: 12:00 PM\r\nStart: 1:00 PM\r\nEnd: 5:00 PM",
+  "latitude": "29.9614",
+  "longitude": "-90.0687"
+ },
+ {
+  "permitnumber": "TEST-0003",
+  "address": "500 Example Ave",
+  "currentstatus": "Finaled",
+  "d_create": "2026-09-01T00:00:00.000",
+  "descr": "Non-profit, free to the public, food vendors, DJ, 1 stage, from 1pm - 6pm.",
+  "latitude": "29.95",
+  "longitude": "-90.07"
+ }
+]

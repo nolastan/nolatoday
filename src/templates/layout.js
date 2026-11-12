@@ -61,6 +61,7 @@ export function siteHeader(ctx, { current } = {}) {
   <nav class="site-nav" aria-label="Main">
     ${link('/', 'Map', 'map')}
     ${link('/venues', 'Venues', 'venues')}
+    ${link('/parades', 'Parades', 'parades')}
   </nav>
 </header>`;
 }
@@ -72,6 +73,7 @@ export function siteFooter(ctx) {
     <div>
       <a class="brand" href="${url('/')}">NOLA<span>.</span>Today</a>
       <p class="muted">Mapping live music in New Orleans. Schedules are gathered automatically from venue websites and ticketing pages — always confirm with the venue before heading out.</p>
+      <p class="muted">Parade routes and times come from <a href="${url('/parades')}#sources">City of New Orleans records</a>, offered for general information only.</p>
     </div>
     <p class="colophon">NOLA.Today is an
       <a href="https://github.com/nolastan/nolatoday">open source</a> project by <a href="https://stanfordrosenthal.com">Stanford Rosenthal</a>.

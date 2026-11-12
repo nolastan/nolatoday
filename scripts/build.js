@@ -14,6 +14,8 @@ import { ZONE } from './lib/time.js';
 import { isScheduleUrl, venuePageUrls } from './lib/normalize.js';
 import { venuePage } from '../src/templates/venue.js';
 import { homePage, venuesPage, redirectPage, notFoundPage, privacyPage, contactPage } from '../src/templates/pages.js';
+import { paradePage, paradesPage } from '../src/templates/parade.js';
+import { PARADES_FILE, SOURCES, loadParades, paradeOrgs, mapParade } from './lib/parades.js';
 
 const OUT = path.join(ROOT, '_site');
 const config = readJSON(path.join(ROOT, 'site.config.json'));
@@ -98,7 +100,13 @@ function main() {
     }
   }
   mapEvents.sort((a, b) => a.s.localeCompare(b.s));
-  write('events.json', JSON.stringify({ generatedAt: now.toISO(), venues: mapVenues, events: mapEvents }));
+
+  // Parades: yesterday's (a late one may still be rolling) through the next year, so a parade page can link to its day on the map.
+  const parades = loadParades();
+  const paradeFrom = now.minus({ days: 1 }).toISODate();
+  const paradeTo = now.plus({ days: 400 }).toISODate();
+  const mapParades = parades.filter((f) => f.properties.date >= paradeFrom && f.properties.date <= paradeTo && (f.geometry || f.properties.start_point)).map(mapParade);
+  write('events.json', JSON.stringify({ generatedAt: now.toISO(), venues: mapVenues, events: mapEvents, parades: mapParades }));
 
   // Public venue list (handy for anyone building on this data).
   write(
@@ -134,6 +142,20 @@ function main() {
     write(`venues/${v.slug}.html`, venuePage(ctx, v, { events: eventsBySlug.get(v.slug), status: status.venues?.[v.slug] }));
   }
 
+  // Parades: a directory, a page per krewe or club, and the combined data for anyone who wants it.
+  const orgs = paradeOrgs(parades, startOfToday);
+  const paradeSources = [
+    { ...SOURCES.permits, note: 'Second lines, walking krewes and other public parades' },
+    { ...SOURCES.open_data, note: 'Carnival parade routes and times' },
+    { ...SOURCES.routewise, note: 'Carnival times and services along the route' },
+    { ...SOURCES.centerlines, note: 'The street map that written routes are drawn along' },
+  ];
+  const paradeDirectory = paradesPage(ctx, orgs, { today: startOfToday, sources: paradeSources });
+  write('parades.html', paradeDirectory);
+  write('parades/index.html', paradeDirectory);
+  for (const org of orgs) write(`parades/${org.slug}.html`, paradePage(ctx, org, { today: startOfToday }));
+  if (fs.existsSync(PARADES_FILE)) fs.copyFileSync(PARADES_FILE, path.join(OUT, 'parades.geojson'));
+
   // Old URLs: merged duplicates, aliases and removed venues.
   const venueSlugs = new Set(venues.map((v) => v.slug));
   const allRedirects = { ...redirects };
@@ -168,6 +190,12 @@ function main() {
       lastmod: (status.venues?.[v.slug]?.lastNonEmpty ?? '').slice(0, 10) || today,
       priority: v.status === 'active' ? '0.8' : '0.3',
     })),
+    { loc: `${config.siteUrl}/parades`, lastmod: today, priority: '0.9' },
+    ...orgs.map((o) => ({
+      loc: `${config.siteUrl}/parades/${o.slug}`,
+      lastmod: (o.featured.properties.first_seen ?? today).slice(0, 10),
+      priority: o.upcoming.length ? '0.8' : '0.4',
+    })),
   ];
   write(
     'sitemap.xml',
@@ -178,6 +206,7 @@ function main() {
   write('robots.txt', `User-agent: *\nAllow: /\n\nSitemap: ${config.siteUrl}/sitemap.xml\n`);
 
   const pages = venues.length + Object.keys(allRedirects).length + storyCount;
+  console.log(`Built ${orgs.length} parade pages, ${mapParades.length} map parades`);
   console.log(`Built ${pages} venue pages/redirects, ${mapEvents.length} map events → ${path.relative(ROOT, OUT)}/`);
 }
 
