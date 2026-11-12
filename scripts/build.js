@@ -13,7 +13,7 @@ import { ROOT, readJSON, loadVenues, loadEvents, loadStatus, DATA_DIR } from './
 import { ZONE } from './lib/time.js';
 import { isScheduleUrl, venuePageUrls } from './lib/normalize.js';
 import { venuePage } from '../src/templates/venue.js';
-import { homePage, venuesPage, redirectPage, notFoundPage } from '../src/templates/pages.js';
+import { homePage, venuesPage, redirectPage, notFoundPage, privacyPage, contactPage } from '../src/templates/pages.js';
 import { paradePage, paradesPage } from '../src/templates/parade.js';
 import { PARADES_FILE, SOURCES, loadParades, paradeOrgs, mapParade } from './lib/parades.js';
 
@@ -122,6 +122,9 @@ function main() {
         website: v.website,
         url: `${config.siteUrl}/venues/${v.slug}`,
         upcoming: eventsBySlug.get(v.slug).length,
+        // What the venue page shows under the schedule and photo; the iOS app reads these here.
+        sources: [...new Set((v.sources ?? []).map((s) => s.url).filter(Boolean))],
+        imageCredit: v.imageCredit,
       })),
       null,
       1,
@@ -173,11 +176,15 @@ function main() {
   for (const old of ['music', 'food']) write(`${old}.html`, redirectPage(ctx, '/venues'));
 
   write('404.html', notFoundPage(ctx));
+  write('privacy.html', privacyPage(ctx));
+  write('contact.html', contactPage(ctx));
 
   const today = now.toISODate();
   const urls = [
     { loc: `${config.siteUrl}/`, lastmod: today, priority: '1.0' },
     { loc: `${config.siteUrl}/venues`, lastmod: today, priority: '0.9' },
+    { loc: `${config.siteUrl}/contact`, lastmod: today, priority: '0.1' },
+    { loc: `${config.siteUrl}/privacy`, lastmod: today, priority: '0.1' },
     ...venues.map((v) => ({
       loc: `${config.siteUrl}/venues/${v.slug}`,
       lastmod: (status.venues?.[v.slug]?.lastNonEmpty ?? '').slice(0, 10) || today,

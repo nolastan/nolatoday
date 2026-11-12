@@ -2,11 +2,6 @@
   "venue": "bontemps",
   "events": [
     {
-      "id": "0567f30edbb7",
-      "title": "Wednesday Late Night Funbox Karaoke",
-      "start": "2026-11-11T22:00:00-06:00"
-    },
-    {
       "id": "a51c5a415abd",
       "title": "The Soul Rebels",
       "start": "2026-11-12T23:00:00-06:00"
@@ -26,6 +21,11 @@
       "id": "7099e5a63adf",
       "title": "Tru Phonic",
       "start": "2026-11-14T23:00:00-06:00"
+    },
+    {
+      "id": "f9915b006876",
+      "title": "Wednesday Late Night Funbox Karaoke",
+      "start": "2026-11-18T22:00:00-06:00"
     },
     {
       "id": "e64f49065026",
@@ -96,8 +96,7 @@
     {
       "id": "62b3a657a717",
       "title": "Jamie Bernstein and Zen Cowboys",
-      "start": "2026-12-12T16:00:00-06:00",
-      "end": "2026-12-12T23:00:00-06:00"
+      "start": "2026-12-12T16:00:00-06:00"
     },
     {
       "id": "0168b77cd248",

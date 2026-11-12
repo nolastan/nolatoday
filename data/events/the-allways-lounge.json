@@ -2,27 +2,6 @@
   "venue": "the-allways-lounge",
   "events": [
     {
-      "id": "0f6a5b50054c",
-      "title": "Rhinestone Cowpoke (line dancing class)",
-      "start": "2026-11-11T19:00:00-06:00",
-      "end": "2026-11-11T21:00:00-06:00",
-      "url": "https://tockify.com/allwayslounge/detail/1383/1794445200000"
-    },
-    {
-      "id": "a7d627dcfcff",
-      "title": "Whodunit (mystery dinner theater)",
-      "start": "2026-11-11T19:30:00-06:00",
-      "end": "2026-11-11T21:30:00-06:00",
-      "url": "https://tockify.com/allwayslounge/detail/3993/1794447000000"
-    },
-    {
-      "id": "f46d537c5ac2",
-      "title": "Small Change (Tom Waits Covers)",
-      "start": "2026-11-11T22:00:00-06:00",
-      "end": "2026-11-11T23:30:00-06:00",
-      "url": "https://tockify.com/allwayslounge/detail/4508/1794456000000"
-    },
-    {
       "id": "5d7d699d1dc5",
       "title": "Van Ella Bordella (burlesque)",
       "start": "2026-11-12T19:00:00-06:00",
@@ -1595,13 +1574,6 @@
       "start": "2027-01-23T22:30:00-06:00",
       "end": "2027-01-24T00:30:00-06:00",
       "url": "https://tockify.com/allwayslounge/detail/4473/1800765000000"
-    },
-    {
-      "id": "0fe26218777a",
-      "title": "'Tit Rex Ping Pong Ball",
-      "start": "2027-01-24T18:00:00-06:00",
-      "end": "2027-01-24T22:00:00-06:00",
-      "url": "https://tockify.com/allwayslounge/detail/4561/1800835200000"
     },
     {
       "id": "086c47d385f6",
