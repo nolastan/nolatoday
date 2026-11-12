@@ -20,3 +20,12 @@ test('privacyPage: covers the app and links from the footer', async () => {
   assert.match(html, /never sent to NOLA.Today/);
   assert.match(html, /href="\/privacy">Privacy<\/a>/);
 });
+
+test('contactPage: shows the email only when one is configured', async () => {
+  const { contactPage } = await import('../src/templates/pages.js');
+  const config = { siteName: 'NOLA.Today', siteUrl: 'https://nola.today', description: '', repo: 'nolastan/nolatoday', mapbox: {} };
+  const ctx = (extra) => ({ config: { ...config, ...extra }, url: (p) => p, asset: (p) => p });
+  assert.doesNotMatch(contactPage(ctx({ contactEmail: null })), /mailto:/);
+  assert.match(contactPage(ctx({ contactEmail: 'hi@example.com' })), /href="mailto:hi@example.com"/);
+  assert.match(contactPage(ctx({})), /https:\/\/github.com\/nolastan\/nolatoday\/issues/);
+});

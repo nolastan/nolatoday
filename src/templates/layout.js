@@ -87,7 +87,7 @@ export function siteFooter(ctx) {
     </div>
     <p class="colophon">NOLA.Today is an
       <a href="https://github.com/nolastan/nolatoday">open source</a> project by <a href="https://stanfordrosenthal.com">Stanford Rosenthal</a>.
-      <a href="${url('/privacy')}">Privacy</a>
+      <a href="${url('/contact')}">Contact</a> · <a href="${url('/privacy')}">Privacy</a>
     </p>
   </div>
 </footer>`;

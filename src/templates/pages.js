@@ -205,7 +205,7 @@ export function privacyPage(ctx) {
   <p>NOLA.Today isn’t directed at children and doesn’t knowingly collect information from anyone.</p>
 
   <h2>Changes and questions</h2>
-  <p>If this policy changes, the new version will be posted here with a new date. Questions can go to <a href="https://github.com/nolastan/nolatoday/issues">NOLA.Today on GitHub</a>.</p>
+  <p>If this policy changes, the new version will be posted here with a new date. Questions? See the <a href="${url('/contact')}">contact page</a>.</p>
 </main>
 ${siteFooter(ctx)}`;
   return layout(ctx, {
@@ -214,5 +214,34 @@ ${siteFooter(ctx)}`;
     canonical: `${ctx.config.siteUrl}/privacy`,
     body,
     bodyClass: 'page-privacy',
+  });
+}
+
+/** /contact: how to reach NOLA.Today (also the App Store support URL). */
+export function contactPage(ctx) {
+  const { url, config } = ctx;
+  const issues = `https://github.com/${config.repo}/issues`;
+  const email = config.contactEmail
+    ? `<li><strong>Email</strong> <a href="mailto:${esc(config.contactEmail)}">${esc(config.contactEmail)}</a> for questions about the app, the site or a venue listing.</li>`
+    : '';
+  const body = `${siteHeader(ctx)}
+<main class="wrap prose-page">
+  <h1>Contact</h1>
+  <p class="lede">Found a missing show, a wrong time or a closed venue? Having trouble with the app? Get in touch.</p>
+  <ul>
+    ${email}
+    <li><strong>Report a problem or suggest a venue</strong> on <a href="${issues}">GitHub</a>.</li>
+  </ul>
+  <h2>The iPhone and iPad app</h2>
+  <p>If the app isn’t showing tonight’s shows, pull down on the list to refresh. Schedules are gathered automatically from venue websites, so always confirm with the venue before heading out.</p>
+  <p>Read the <a href="${url('/privacy')}">privacy policy</a>.</p>
+</main>
+${siteFooter(ctx)}`;
+  return layout(ctx, {
+    title: 'Contact – NOLA.Today',
+    description: 'How to reach NOLA.Today about the website, the iPhone and iPad app, or a venue listing.',
+    canonical: `${config.siteUrl}/contact`,
+    body,
+    bodyClass: 'page-contact',
   });
 }
