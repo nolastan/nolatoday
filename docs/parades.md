@@ -56,8 +56,8 @@ Verified on 2026-11-12:
 - Every street named has to exist in the centerline data (typos within two letters and common short forms like "MLK" are accepted) and has to meet the street before it.
 - A stated "left" or "right" has to agree with the geometry.
 - Addresses on the street the route is on are walked to. Addresses of stops elsewhere have to end up within 300 m of the finished line, which catches a route read the wrong way.
-- Three kinds of inference are allowed, and each is recorded in `route_notes` and mentioned on the page: bridging a gap of a block or two that the text skips, following a street on where it changes name (Simon Bolivar becomes La Salle), and reading "to X" as a point passed rather than a turn when the next street is further along the same way.
-- Anything else fails the whole route. The parade is still published, with its start address as a point on the map and the city's route text on its page.
+- Three kinds of inference are allowed, and each is recorded in `route_notes`: bridging a gap of a block or two that the text skips, following a street on where it changes name (Simon Bolivar becomes La Salle), and reading "to X" as a point passed rather than a turn when the next street is further along the same way.
+- Anything else fails the whole route. The parade is still published, with its start address as a point on the map. The city's route text stays in the data file (`route_text`) but is not shown on the page.
 
 Known limits: a route sheet "attached" to the application is not public, so those parades have no route. A description cut off mid-route in the city's record is drawn as far as it goes. Bump `TRACE_VERSION` in `scripts/lib/parades.js` whenever the tracer's output could change, so saved lines are redrawn.
 

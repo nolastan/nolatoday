@@ -1,17 +1,10 @@
 import { DateTime } from 'luxon';
 import { esc, jsonScript, layout, siteHeader, siteFooter } from './layout.js';
 import { ZONE } from '../../scripts/lib/time.js';
-import { SOURCES, displayName, encodePolyline, lengthMeters, linesOf, simplify } from '../../scripts/lib/parades.js';
+import { SOURCES, encodePolyline, linesOf, simplify } from '../../scripts/lib/parades.js';
 
 const KIND = { mardi_gras: 'Carnival parade', second_line: 'Second line', other: 'Parade' };
-const AMENITIES = [
-  ['portolets', 'Portable toilets'],
-  ['first_aid', 'First aid stations'],
-  ['lost_child', 'Lost child stations'],
-  ['vendors', 'Vendors'],
-  ['parking_restrictions', 'Parking restrictions'],
-  ['traffic_restrictions', 'Traffic restrictions'],
-];
+const MAX_PAST = 10;
 
 const day = (iso) => DateTime.fromISO(iso, { zone: ZONE });
 const clock = (iso) => {
@@ -60,63 +53,36 @@ export function routeSvg(feature, { width = 320, height = 180, pad = 18 } = {}) 
   return `<svg class="route-thumb" viewBox="0 0 ${width} ${height}" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><path d="${d}" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="${sx.toFixed(1)}" cy="${sy.toFixed(1)}" r="6" fill="currentColor"/></svg>`;
 }
 
-function miles(feature) {
-  const m = lengthMeters(feature.geometry);
-  return m ? `${(m / 1609.344).toFixed(1)} miles` : null;
+/** Parades as a schedule, the way a venue's shows are listed: a day heading, then a time and a title. */
+function paradeList(ctx, features, today) {
+  return features
+    .map((f) => {
+      const p = f.properties;
+      const dt = day(p.date);
+      const onMap = p.date >= today && (f.geometry || p.start_point);
+      const title = onMap ? `<a href="${ctx.url(`/?date=${p.date}&parade=${encodeURIComponent(p.id)}`)}">${esc(p.name)}</a>` : esc(p.name);
+      return `<div class="day" id="${esc(p.id)}">
+        <h3 class="day-heading"><span class="day-name">${dt.toFormat('cccc')}</span> <span class="day-date">${dt.toFormat(dt.year === day(today).year ? 'LLLL d' : 'LLLL d, yyyy')}</span></h3>
+        <ul class="event-list">
+          <li class="event">
+            <time class="event-time" datetime="${esc(p.start_time ?? p.date)}">${p.start_time ? clock(p.start_time) : ''}</time>
+            <span class="event-title">${title}</span>
+          </li>
+        </ul>
+      </div>`;
+    })
+    .join('\n');
 }
 
-/** Where a parade's facts came from, as a link to the city record. */
-function sourceLine(p) {
-  const fromPermit = p.field_sources?.schedule === 'permits';
-  const label = fromPermit ? `special event permit application ${p.permit_number}` : SOURCES[p.field_sources?.schedule]?.title ?? 'official data';
-  return `Source: City of New Orleans, <a href="${esc(p.source_url)}" rel="noopener">${esc(label)}</a>, read ${esc(day(p.retrieved_at).toFormat('LLLL d, yyyy'))}.`;
-}
-
-function paradeBlock(ctx, f, today, { heading = 'h3' } = {}) {
-  const p = f.properties;
-  const fromPermit = p.field_sources?.schedule === 'permits';
-  const facts = [];
-  if (p.start_time) facts.push(['Starts', clock(p.start_time)]);
-  if (p.formation_time) facts.push(['Lines up', clock(p.formation_time)]);
-  if (p.end_time) facts.push(['Ends', clock(p.end_time)]);
-  if (p.start_address) facts.push(['Starts at', p.start_address]);
-  if (p.formation && !p.start_address) facts.push(['Forms at', p.formation]);
-  if (p.disband) facts.push(['Disbands at', p.disband]);
-  if (p.area) facts.push(['Area', p.area]);
-  if (p.num_floats) facts.push(['Floats', String(p.num_floats)]);
-  const length = miles(f);
-  if (length) facts.push(['Route', p.route_traced ? `about ${length}` : length]);
-  const amenities = AMENITIES.filter(([key]) => p[key] === true).map(([, label]) => label);
-
-  const notes = [];
-  if (fromPermit) {
-    notes.push(
-      `This comes from an application filed with the city${p.permit_filed ? ` on ${esc(day(p.permit_filed).toFormat('LLLL d, yyyy'))}` : ''}, which the city lists as “${esc(p.permit_status ?? 'status unknown')}”. Dates, times and routes can change; check with the organizers before you go.`,
-    );
+/** Links to the city records an organization's parades came from. */
+function sourceLinks(features) {
+  const seen = new Map();
+  for (const f of features) {
+    const p = f.properties;
+    const label = p.field_sources?.schedule === 'permits' ? `permit application ${p.permit_number}` : (SOURCES[p.field_sources?.schedule]?.title ?? 'official data');
+    if (!seen.has(p.source_url)) seen.set(p.source_url, label);
   }
-  if (p.route_traced) {
-    notes.push(
-      `The line on the map was drawn by following the route description above along the city’s street map.${p.route_notes?.length ? ' The description leaves some things out, so parts of the line are our best reading of it.' : ''}`,
-    );
-  } else if (p.route_text && !f.geometry) {
-    notes.push('The route description above could not be followed street by street with confidence, so no line is drawn on the map.');
-  } else if (!f.geometry) {
-    notes.push('The city has not published a route for this parade.');
-  }
-
-  return `<article class="parade" id="${esc(p.id)}" data-date="${esc(p.date)}">
-    <${heading} class="day-heading"><span class="day-name">${esc(longDate(p.date, today))}</span>${p.name !== displayName(p) ? ` <span class="day-date">${esc(p.name)}</span>` : ''}</${heading}>
-    ${facts.length ? `<dl class="parade-facts">${facts.map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join('')}</dl>` : ''}
-    ${amenities.length ? `<p class="parade-amenities"><strong>Along the route:</strong> ${esc(amenities.join(', '))}.</p>` : ''}
-    ${p.route_text ? `<h4 class="parade-route-heading">Route, as filed with the city</h4><blockquote class="parade-route">${esc(p.route_text)}</blockquote>` : ''}
-    ${notes.map((n) => `<p class="muted parade-note">${n}</p>`).join('\n    ')}
-    ${
-      p.date >= today && (f.geometry || p.start_point)
-        ? `<p class="button-row"><a class="button" href="${ctx.url(`/?date=${p.date}&parade=${encodeURIComponent(p.id)}`)}">See it on the map</a></p>`
-        : ''
-    }
-    <p class="muted parade-source">${sourceLine(p)}</p>
-  </article>`;
+  return [...seen].map(([href, label]) => `<a href="${esc(href)}" rel="noopener">${esc(label)}</a>`).join(', ');
 }
 
 function eventSchema(ctx, org, f) {
@@ -172,24 +138,20 @@ export function paradePage(ctx, org, { today }) {
     <div class="venue-hero-text">
       <span class="badge">${esc(kind)}</span>
       <h1>${esc(org.name)}</h1>
-      <p class="venue-address">${next ? `Next: ${esc(when)}` : `No upcoming parade listed. Last listed ${esc(longDate(fp.date, today))}.`}</p>
     </div>
   </section>`;
 
   const upcoming = org.upcoming.length
     ? `<section class="wrap schedule">
-      <h2>${org.upcoming.length > 1 ? 'Upcoming parades' : 'Next parade'}</h2>
-      ${org.upcoming.map((f) => paradeBlock(ctx, f, today)).join('\n')}
-    </section>`
-    : `<section class="wrap schedule">
       <h2>Upcoming parades</h2>
-      <div class="notice"><p>The city has not listed a coming date for ${esc(org.name)} yet. This page updates when it does.</p></div>
-    </section>`;
-  const past = org.past.length
-    ? `<section class="wrap schedule parade-past">
-      <h2>${org.upcoming.length ? 'Earlier parades' : 'Most recent parade'}</h2>
-      ${org.past.slice(0, org.upcoming.length ? 3 : 1).map((f) => paradeBlock(ctx, f, today)).join('\n')}
-      ${org.past.length > (org.upcoming.length ? 3 : 1) ? `<ul class="closed-list">${org.past.slice(org.upcoming.length ? 3 : 1).map((f) => `<li>${esc(day(f.properties.date).toFormat('LLLL d, yyyy'))}</li>`).join('')}</ul>` : ''}
+      ${paradeList(ctx, org.upcoming, today)}
+    </section>`
+    : '';
+  const shownPast = org.past.slice(0, MAX_PAST);
+  const past = shownPast.length
+    ? `<section class="wrap schedule">
+      <h2>Recent parades</h2>
+      ${paradeList(ctx, shownPast, today)}
     </section>`
     : '';
 
@@ -215,7 +177,7 @@ export function paradePage(ctx, org, { today }) {
   ${upcoming}
   ${past}
   <section class="wrap venue-foot muted">
-    <p>Parade dates, times and routes on this page come from City of New Orleans records and are offered for general information. Weather, the city or the organizers can change them on the day. <a href="${url('/parades')}">All parades</a> · <a href="${esc(reportUrl)}" rel="noopener">Report a problem with this page</a>.</p>
+    <p>Source: City of New Orleans, ${sourceLinks([...org.upcoming, ...shownPast])}. <a href="${esc(reportUrl)}" rel="noopener">Report a problem with this page</a>.</p>
   </section>
 </main>
 ${siteFooter(ctx)}`;

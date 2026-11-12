@@ -248,14 +248,19 @@ test('site: parades group by organization, and pages show the city record honest
 
   const page = paradePage(ctx, orgs.find((o) => o.slug === 'mosaique'), { today: '2026-11-12' });
   assert.match(page, /<h1>Krewe Mosaique<\/h1>/);
-  assert.match(page, /Route, as filed with the city/);
-  assert.match(page, /Turn left onto Bourbon Street/);
-  assert.match(page, /which the city lists as “Application Review”/);
-  assert.match(page, /href="https:\/\/data\.nola\.gov\/resource\/aib5-en5t\.json\?permitnumber=26-25432-SPMA"/);
-  assert.match(page, /href="\/\?date=2027-01-09&parade=mosaique-2027"/);
+  // Laid out like a venue's schedule: a day, a time, a title that opens that day on the map.
+  assert.match(page, /<h2>Upcoming parades<\/h2>/);
+  assert.match(page, /<time class="event-time" datetime="2027-01-09T18:00:00-06:00">6 pm<\/time>/);
+  assert.match(page, /<a href="\/\?date=2027-01-09&parade=mosaique-2027">Krewe Mosaique Parade MG 2027<\/a>/);
+  // The only fine print is the source.
+  assert.match(page, /Source: City of New Orleans, <a href="https:\/\/data\.nola\.gov\/resource\/aib5-en5t\.json\?permitnumber=26-25432-SPMA"/);
+  assert.doesNotMatch(page, /as filed with the city|Turn left onto Bourbon|Application Review|Recent parades/);
 
-  const noRoute = paradePage(ctx, orgs.find((o) => o.slug === 'nine-times'), { today: '2026-11-12' });
-  assert.match(noRoute, /The city has not published a route for this parade/);
+  // Nothing coming: no empty "Upcoming" section, just what it rolled last.
+  const past = paradePage(ctx, orgs.find((o) => o.slug === 'muses'), { today: '2026-11-12' });
+  assert.doesNotMatch(past, /Upcoming parades/);
+  assert.match(past, /<h2>Recent parades<\/h2>/);
+  assert.match(past, /<span class="day-date">February 12<\/span>/);
 
   const directory = paradesPage(ctx, orgs, { today: '2026-11-12', sources: [SOURCES.permits] });
   assert.match(directory, /href="\/parades\/mosaique"/);
