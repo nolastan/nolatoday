@@ -2,12 +2,6 @@
   "venue": "preservation-hall",
   "events": [
     {
-      "id": "c1e38554ad2e",
-      "title": "Preservation All-Stars ft Aurélien Barnes",
-      "start": "2026-11-11T17:00:00-06:00",
-      "url": "https://www.preservationhall.com/events/preservation-all-stars-ft-aurelien-barnes/"
-    },
-    {
       "id": "065f807ae9f7",
       "title": "Preservation All-Stars",
       "start": "2026-11-12T17:00:00-06:00",

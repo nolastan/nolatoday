@@ -2,13 +2,6 @@
   "venue": "new-orleans-jazz-museum",
   "events": [
     {
-      "id": "2cfd68e817be",
-      "title": "The New Orleans Arts & Ideas Festival (NOAI)",
-      "start": "2026-11-11T16:00:00-06:00",
-      "end": "2026-11-11T22:00:00-06:00",
-      "url": "https://nolajazzmuseum.org/events/2026/11/11/noai"
-    },
-    {
       "id": "aae0548316f6",
       "title": "The New Orleans Arts & Ideas Festival (NOAI)",
       "start": "2026-11-12T09:00:00-06:00",
@@ -315,6 +308,13 @@
       "start": "2027-02-05T14:00:00-06:00",
       "end": "2027-02-05T15:00:00-06:00",
       "url": "https://nolajazzmuseum.org/events/2026/12/18/gallatin-street-fridays-presented-by-the-nathan-and-priscilla-gordon-foundation-hzmxk-l42eg-2f9xr-8sery-h45rb"
+    },
+    {
+      "id": "a8557a13ac89",
+      "title": "Balcony Show sponsored by the Positive Vibrations Foundation",
+      "start": "2027-02-09T17:00:00-06:00",
+      "end": "2027-02-09T18:00:00-06:00",
+      "url": "https://nolajazzmuseum.org/events/2026/12/15/carl-leblance-holiday-show-7ahjf-zk6sc-bx8lt-nk895-d4mpt-a59k9-5d6y8-xgtx3"
     }
   ]
 }

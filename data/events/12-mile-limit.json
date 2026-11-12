@@ -2,12 +2,6 @@
   "venue": "12-mile-limit",
   "events": [
     {
-      "id": "2109a1627c96",
-      "title": "Trivia Night!",
-      "start": "2026-11-11T20:00:00-06:00",
-      "url": "https://twelvemilelimit.com/events/trivia-night?date=2026-11-11"
-    },
-    {
       "id": "48dd8ce0a7d4",
       "title": "Purrsday Karaoke!",
       "start": "2026-11-12T21:00:00-06:00",
@@ -120,6 +114,12 @@
       "title": "Bear With Me Comedy Open Mic",
       "start": "2026-12-14T19:30:00-06:00",
       "url": "https://twelvemilelimit.com/events/bear-with-me-comedy-open-mic?date=2026-12-14"
+    },
+    {
+      "id": "b538957a5a7b",
+      "title": "Trivia Night!",
+      "start": "2026-12-16T20:00:00-06:00",
+      "url": "https://twelvemilelimit.com/events/trivia-night?date=2026-12-16"
     }
   ]
 }

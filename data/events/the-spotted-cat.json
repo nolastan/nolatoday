@@ -2,16 +2,6 @@
   "venue": "the-spotted-cat",
   "events": [
     {
-      "id": "82dec81cde4c",
-      "title": "Chris Christy Band",
-      "start": "2026-11-11T14:00:00-06:00"
-    },
-    {
-      "id": "d870073ac074",
-      "title": "Shotgun Jazz Band",
-      "start": "2026-11-11T18:00:00-06:00"
-    },
-    {
       "id": "34cfd642307f",
       "title": "Marty Peters & The Party Meters",
       "start": "2026-11-11T21:30:00-06:00"
