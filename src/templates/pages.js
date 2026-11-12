@@ -1,5 +1,5 @@
 import { DateTime } from 'luxon';
-import { esc, jsonScript, layout, siteHeader, siteFooter, themeToggle } from './layout.js';
+import { esc, jsonScript, layout, siteHeader, siteFooter } from './layout.js';
 import { ZONE } from '../../scripts/lib/time.js';
 
 export function homePage(ctx) {
@@ -14,7 +14,6 @@ export function homePage(ctx) {
       <button type="button" role="tab" data-day="0" aria-selected="true">Today</button>
       <button type="button" role="tab" data-day="1" aria-selected="false">Tomorrow</button>
     </div>
-    ${themeToggle()}
   </div>
   <p class="map-status" data-map-status role="status" aria-live="polite"></p>
   <div class="map-bottom">
