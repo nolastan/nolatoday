@@ -1,25 +1,16 @@
 (function () {
   'use strict';
 
-  // ---- Theme ------------------------------------------------------------
+  // ---- Theme: always follows the system light/dark setting ---------------
   var media = window.matchMedia('(prefers-color-scheme: light)');
   function currentTheme() {
-    return document.documentElement.dataset.theme || (media.matches ? 'light' : 'dark');
+    return media.matches ? 'light' : 'dark';
   }
-  function announce() {
-    document.dispatchEvent(new CustomEvent('themechange', { detail: currentTheme() }));
-  }
-  document.querySelectorAll('[data-theme-toggle]').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var next = currentTheme() === 'dark' ? 'light' : 'dark';
-      document.documentElement.dataset.theme = next;
-      try { localStorage.setItem('theme', next); } catch (e) { /* private mode */ }
-      announce();
-    });
-  });
   media.addEventListener('change', function () {
-    if (!document.documentElement.dataset.theme) announce();
+    document.dispatchEvent(new CustomEvent('themechange', { detail: currentTheme() }));
   });
+  // Clear the choice saved by the old manual toggle; it is no longer read.
+  try { localStorage.removeItem('theme'); } catch (e) { /* private mode */ }
   window.NOLA = { currentTheme: currentTheme };
 
   // ---- Venue schedule: hide finished shows, flag what's on now -----------

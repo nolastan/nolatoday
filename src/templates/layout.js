@@ -12,16 +12,6 @@ export function jsonScript(data) {
   return JSON.stringify(data).replace(/</g, '\\u003c').replace(/-->/g, '--\\u003e');
 }
 
-// Runs before first paint so the page never flashes the wrong theme.
-const THEME_BOOT = `(function(){try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t;}catch(e){}})();`;
-
-const SUN = '<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></g></svg>';
-const MOON = '<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M20.5 14.6A8.5 8.5 0 0 1 9.4 3.5a8.5 8.5 0 1 0 11.1 11.1Z"/></svg>';
-
-export function themeToggle() {
-  return `<button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch color theme" title="Switch light/dark mode"><span class="icon-sun">${SUN}</span><span class="icon-moon">${MOON}</span></button>`;
-}
-
 export function layout(ctx, { title, description, canonical, image, body, bodyClass = '', head = '', scripts = '', noindex = false }) {
   const { config, asset } = ctx;
   const ogImage = image ? new URL(image, config.siteUrl).toString() : `${config.siteUrl}/images/og-default.jpg`;
@@ -50,7 +40,6 @@ ${canonical ? `<meta property="og:url" content="${esc(canonical)}">` : ''}
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700&family=Orelega+One&display=swap">
 <link rel="stylesheet" href="${asset('/assets/styles.css')}">
-<script>${THEME_BOOT}</script>
 ${head}
 </head>
 <body class="${bodyClass}">
@@ -72,7 +61,6 @@ export function siteHeader(ctx, { current } = {}) {
   <nav class="site-nav" aria-label="Main">
     ${link('/', 'Map', 'map')}
     ${link('/venues', 'Venues', 'venues')}
-    ${themeToggle()}
   </nav>
 </header>`;
 }
