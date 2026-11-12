@@ -2,12 +2,6 @@
   "venue": "santos-bar",
   "events": [
     {
-      "id": "5678491cadc0",
-      "title": "CHAMBRE NOIR",
-      "start": "2026-11-11T21:00:00-06:00",
-      "url": "https://www.santosbar.com/tm-event/chambre-noir-2026-11-11/"
-    },
-    {
       "id": "dfba22874f56",
       "title": "DETHWISH with BOBBY BRUISER, MORE OCTOBER & BOG BAT",
       "start": "2026-11-12T20:00:00-06:00",
@@ -20,9 +14,9 @@
       "url": "https://www.santosbar.com/tm-event/friday-the-13th-with-the-quadroholics-otto-derraj-more/"
     },
     {
-      "id": "920162ea055b",
+      "id": "ae5db1837b35",
       "title": "SUB DIVISION",
-      "start": "2026-11-14T21:00:00-06:00",
+      "start": "2026-11-14T22:00:00-06:00",
       "url": "https://www.santosbar.com/tm-event/sub-division/"
     },
     {
