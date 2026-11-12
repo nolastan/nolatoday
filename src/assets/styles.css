@@ -393,14 +393,16 @@ h3 { font-size: 1.3rem; }
   top: 12px;
   left: 12px;
   right: 12px;
-  display: flex;
+  /* Equal side columns keep the day switcher centered on the screen. */
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  justify-content: space-between;
   gap: 10px;
   pointer-events: none;
 }
 .map-top > * { pointer-events: auto; }
 .map-brand {
+  justify-self: start;
   padding: 6px 14px;
   border-radius: 12px;
   background: color-mix(in srgb, var(--bg) 82%, transparent);
@@ -430,8 +432,9 @@ h3 { font-size: 1.3rem; }
 .segmented button:hover { background: var(--bg-elev-2); }
 .segmented button[aria-selected='true'] { background: var(--marker); color: #1b1b1b; }
 .segmented button:disabled { opacity: 0.4; cursor: not-allowed; }
-@media (max-width: 560px) {
-  .map-top { flex-wrap: wrap; }
+/* Below this width the switcher can't sit centered beside the logo, so it drops to its own row. */
+@media (max-width: 620px) {
+  .map-top { display: flex; flex-wrap: wrap; }
   .map-brand { font-size: 1.25rem; }
   .segmented { order: 3; width: 100%; justify-content: center; }
   .segmented button { flex: 1; }
