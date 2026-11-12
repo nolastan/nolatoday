@@ -13,7 +13,7 @@ import { ROOT, readJSON, loadVenues, loadEvents, loadStatus, DATA_DIR } from './
 import { ZONE } from './lib/time.js';
 import { isScheduleUrl, venuePageUrls } from './lib/normalize.js';
 import { venuePage } from '../src/templates/venue.js';
-import { homePage, venuesPage, redirectPage, notFoundPage } from '../src/templates/pages.js';
+import { homePage, venuesPage, redirectPage, notFoundPage, privacyPage } from '../src/templates/pages.js';
 
 const OUT = path.join(ROOT, '_site');
 const config = readJSON(path.join(ROOT, 'site.config.json'));
@@ -151,11 +151,13 @@ function main() {
   for (const old of ['music', 'food']) write(`${old}.html`, redirectPage(ctx, '/venues'));
 
   write('404.html', notFoundPage(ctx));
+  write('privacy.html', privacyPage(ctx));
 
   const today = now.toISODate();
   const urls = [
     { loc: `${config.siteUrl}/`, lastmod: today, priority: '1.0' },
     { loc: `${config.siteUrl}/venues`, lastmod: today, priority: '0.9' },
+    { loc: `${config.siteUrl}/privacy`, lastmod: today, priority: '0.1' },
     ...venues.map((v) => ({
       loc: `${config.siteUrl}/venues/${v.slug}`,
       lastmod: (status.venues?.[v.slug]?.lastNonEmpty ?? '').slice(0, 10) || today,

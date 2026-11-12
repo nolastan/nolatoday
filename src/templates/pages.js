@@ -173,3 +173,46 @@ export function notFoundPage(ctx) {
 ${siteFooter(ctx)}`;
   return layout(ctx, { title: 'Page not found – NOLA.Today', description: 'Page not found.', body, noindex: true, bodyClass: 'page-404' });
 }
+
+/** /privacy: the privacy policy for the website and the iOS app (linked from App Store Connect). */
+export function privacyPage(ctx) {
+  const { url } = ctx;
+  const body = `${siteHeader(ctx)}
+<main class="wrap prose-page">
+  <h1>Privacy policy</h1>
+  <p class="lede">NOLA.Today has no accounts and doesn’t ask for your name, email or anything else about you. This page covers the website at nola.today and the NOLA.Today iPhone and iPad app.</p>
+  <p class="muted">Last updated November 12, 2026.</p>
+
+  <h2>The iPhone and iPad app</h2>
+  <ul>
+    <li><strong>No personal data is collected.</strong> The app has no analytics, advertising, crash-reporting or tracking code, and it doesn’t use an advertising identifier.</li>
+    <li><strong>Show listings.</strong> The app downloads the public schedule files from nola.today (the same ones the website uses) and venue photos. Those requests carry nothing about you beyond what any web request does, such as your IP address, which the web host sees to deliver the file. The app keeps a copy of the schedule on your device so it opens quickly.</li>
+    <li><strong>Location.</strong> If you tap the location button, the app asks for permission to show where you are on the map. Your location stays on your device and is never sent to NOLA.Today. You can turn it off any time in Settings.</li>
+    <li><strong>Maps.</strong> Maps and directions come from Apple Maps, covered by <a href="https://www.apple.com/legal/privacy/">Apple’s privacy policy</a>.</li>
+    <li><strong>Links out.</strong> Venue websites, ticket pages and anything you share open in other apps or sites, which have their own privacy policies.</li>
+  </ul>
+
+  <h2>The website</h2>
+  <ul>
+    <li><strong>Analytics.</strong> The site uses <a href="https://usefathom.com/legal/privacy">Fathom Analytics</a> to count page views. Fathom doesn’t use cookies or collect personal data, and it can’t identify individual visitors.</li>
+    <li><strong>Maps and fonts.</strong> The map is drawn by <a href="https://www.mapbox.com/legal/privacy">Mapbox</a> and text uses <a href="https://policies.google.com/privacy">Google Fonts</a>; your browser loads these directly from them.</li>
+    <li><strong>Hosting.</strong> The site is hosted on <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">GitHub Pages</a>, which may log your IP address for security.</li>
+    <li><strong>Preferences.</strong> Display settings are saved only in your own browser.</li>
+    <li><strong>Referral links.</strong> Some pages include referral links to other companies. If you follow one, that company’s privacy policy applies.</li>
+  </ul>
+
+  <h2>Children</h2>
+  <p>NOLA.Today isn’t directed at children and doesn’t knowingly collect information from anyone.</p>
+
+  <h2>Changes and questions</h2>
+  <p>If this policy changes, the new version will be posted here with a new date. Questions can go to <a href="https://github.com/nolastan/nolatoday/issues">NOLA.Today on GitHub</a>.</p>
+</main>
+${siteFooter(ctx)}`;
+  return layout(ctx, {
+    title: 'Privacy Policy – NOLA.Today',
+    description: 'NOLA.Today’s privacy policy for the website and the iPhone and iPad app.',
+    canonical: `${ctx.config.siteUrl}/privacy`,
+    body,
+    bodyClass: 'page-privacy',
+  });
+}

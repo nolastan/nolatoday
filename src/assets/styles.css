@@ -616,3 +616,8 @@ h3 { font-size: 1.3rem; }
   border-top: 1px solid color-mix(in srgb, currentColor 18%, transparent);
 }
 .popup-more:hover { text-decoration: underline; }
+
+/* Privacy policy and other plain text pages */
+.prose-page { padding: 48px 16px 64px; max-width: 760px; }
+.prose-page h2 { font-size: 1.5rem; margin-top: 2em; }
+.prose-page li { margin-bottom: 0.6em; }
