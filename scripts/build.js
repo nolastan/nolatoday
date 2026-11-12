@@ -114,6 +114,9 @@ function main() {
         website: v.website,
         url: `${config.siteUrl}/venues/${v.slug}`,
         upcoming: eventsBySlug.get(v.slug).length,
+        // What the venue page shows under the schedule and photo; the iOS app reads these here.
+        sources: [...new Set((v.sources ?? []).map((s) => s.url).filter(Boolean))],
+        imageCredit: v.imageCredit,
       })),
       null,
       1,
