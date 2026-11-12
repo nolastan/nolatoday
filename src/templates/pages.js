@@ -19,6 +19,7 @@ export function homePage(ctx) {
   <p class="map-status" data-map-status role="status" aria-live="polite"></p>
   <div class="map-bottom">
     <a class="pill-button" href="${url('/venues')}">Venue directory</a>
+    <a class="pill-button" href="${url('/parades')}">Parades</a>
   </div>
   <noscript><p class="map-status">The map needs JavaScript. Browse the <a href="${url('/venues')}">venue directory</a> instead.</p></noscript>
 </main>`;

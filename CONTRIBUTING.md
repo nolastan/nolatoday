@@ -153,6 +153,10 @@ Return an array of `{ title, start, end?, allDay?, url? }`. `start`/`end` may be
 3. Add a schedule source as above, or leave `sources: []` and an issue will be opened for it.
 4. Optional photo: `public/images/venues/<slug>.jpg` + `<slug>-600.jpg`.
 
+## Parades
+
+Parade data has its own pipeline and stricter sourcing rules than venues: official City of New Orleans records only. See [docs/parades.md](docs/parades.md) before changing `scripts/parades.js`, `scripts/lib/permits.js`, `scripts/lib/route-trace.js` or anything in `data/parades/`.
+
 ## Site code
 
 `scripts/build.js` renders `src/templates/*.js` into `_site/`. Styles are in `src/assets/styles.css` (dark by default, light via `prefers-color-scheme` or the toggle), the map in `src/assets/map.js`. Keep dependencies minimal — the site has no framework or bundler on purpose.

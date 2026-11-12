@@ -616,3 +616,45 @@ h3 { font-size: 1.3rem; }
   border-top: 1px solid color-mix(in srgb, currentColor 18%, transparent);
 }
 .popup-more:hover { text-decoration: underline; }
+
+/* Parades ---------------------------------------------------------------- */
+.site-nav a { white-space: nowrap; }
+.map-bottom { gap: 10px; }
+.map-banner--route { height: clamp(220px, 34vw, 420px); }
+.parade-hero { grid-template-columns: 1fr !important; }
+.parade { margin-top: 28px; scroll-margin-top: 80px; }
+.parade-facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 12px 24px;
+  margin: 16px 0;
+}
+.parade-facts div { min-width: 0; }
+.parade-facts dt { font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); }
+.parade-facts dd { margin: 0; font-size: 1.15rem; font-weight: 600; overflow-wrap: anywhere; }
+.parade-route-heading { margin: 20px 0 6px; font-family: var(--font-body); font-size: 1rem; font-weight: 700; }
+.parade-route {
+  margin: 0 0 12px;
+  padding: 14px 18px;
+  border-left: 4px solid var(--marker);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  background: var(--bg-elev);
+  max-width: 760px;
+  overflow-wrap: anywhere;
+}
+.parade-note, .parade-source { max-width: 760px; margin: 8px 0; font-size: 0.95rem; }
+.parade-past { opacity: 0.92; }
+.parade-card .card-media { color: var(--marker); background: var(--bg-elev-2); }
+.route-thumb { position: absolute; inset: 0; width: 100%; height: 100%; }
+.parade-attribution { margin: 56px 0 0; max-width: 760px; font-size: 0.95rem; }
+.parade-attribution h2 { font-size: 1.3rem; }
+/* A parade's starting point on the map: a ring, to tell it from a venue's dot. */
+.marker--parade::after { background: var(--bg); box-shadow: 0 0 0 4px var(--marker); inset: 30%; }
+.marker--parade:hover::after, .marker--parade:focus-visible::after, .marker--parade.is-open::after { inset: 20%; }
+.popup-banner--parade { min-height: 64px; background: linear-gradient(135deg, var(--teal-deep), #b4530a); }
+@media (max-width: 480px) {
+  .site-header { gap: 8px; padding-inline: 12px; }
+  .site-header .brand { font-size: 1.25rem; }
+  .site-nav { gap: 0; }
+  .site-nav a { padding: 8px 7px; font-size: 0.95rem; }
+}

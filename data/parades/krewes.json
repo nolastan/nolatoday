@@ -1,0 +1,302 @@
+[
+ {
+  "slug": "krewe-du-vieux",
+  "name": "Krewe du Vieux",
+  "match": [
+   "Krewe Du Vieux"
+  ],
+  "category": "mardi_gras"
+ },
+ {
+  "slug": "chewbacchus",
+  "name": "Intergalactic Krewe of Chewbacchus",
+  "match": [
+   "Chewbacchus"
+  ],
+  "category": "mardi_gras"
+ },
+ {
+  "slug": "boheme",
+  "name": "Krewe Bohème",
+  "match": [
+   "Bohème",
+   "Boheme"
+  ],
+  "category": "mardi_gras"
+ },
+ {
+  "slug": "oshun",
+  "name": "Krewe of Oshun",
+  "match": [
+   "Oshun"
+  ],
+  "category": "mardi_gras"
+ },
+ {
+  "slug": "cleopatra",
+  "name": "Krewe of Cleopatra",
+  "match": [
+   "Cleopatra"
+  ],
+  "category": "mardi_gras"
+ },
+ {
+  "slug": "pontchartrain",
+  "name": "Krewe of Pontchartrain",
+  "match": [
+   "Pontchartrain"
+  ],
+  "category": "mardi_gras"
+ },
+ {
+  "slug": "legion-of-mars",
+  "name": "Legion of Mars",
+  "match": [
+   "Mars",
+   "Legion of Mars"
+  ],
+  "category": "mardi_gras"
+ },
+ {
+  "slug": "choctaw",
+  "name": "Krewe of Choctaw",
+  "match": [
+   "Choctaw"
+  ],
+  "category": "mardi_gras"
+ },
+ {
+  "slug": "freret",
+  "name": "Krewe of Freret",
+  "match": [
+   "Freret"
+  ],
+  "category": "mardi_gras"
+ },
+ {
+  "slug": "sparta",
+  "name": "Knights of Sparta",
+  "match": [
+   "Sparta"
+  ],
+  "category": "mardi_gras"
+ },
+ {
+  "slug": "pygmalion",
+  "name": "Krewe of Pygmalion",
+  "match": [
+   "Pygmalion"
+  ],
+  "category": "mardi_gras"
+ },
+ {
+  "slug": "femme-fatale",
+  "name": "Mystic Krewe of Femme Fatale",
+  "match": [
+   "Femme Fatale"
+  ],
+  "category": "mardi_gras"
+ },
+ {
+  "slug": "carrollton",
+  "name": "Krewe of Carrollton",
+  "match": [
+   "Carrollton"
+  ],
+  "category": "mardi_gras"
+ },
+ {
+  "slug": "king-arthur",
+  "name": "Krewe of King Arthur",
+  "match": [
+   "King Arthur"
+  ],
+  "category": "mardi_gras"
+ },
+ {
+  "slug": "barkus",
+  "name": "Mystic Krewe of Barkus",
+  "match": [
+   "Barkus"
+  ],
+  "category": "mardi_gras"
+ },
+ {
+  "slug": "druids",
+  "name": "Krewe of Druids",
+  "match": [
+   "Druids"
+  ],
+  "category": "mardi_gras"
+ },
+ {
+  "slug": "alla",
+  "name": "Krewe of Alla",
+  "match": [
+   "Alla"
+  ],
+  "category": "mardi_gras"
+ },
+ {
+  "slug": "chaos",
+  "name": "Knights of Chaos",
+  "match": [
+   "Chaos"
+  ],
+  "category": "mardi_gras"
+ },
+ {
+  "slug": "babylon",
+  "name": "Knights of Babylon",
+  "match": [
+   "Babylon"
+  ],
+  "category": "mardi_gras"
+ },
+ {
+  "slug": "muses",
+  "name": "Krewe of Muses",
+  "match": [
+   "Muses"
+  ],
+  "category": "mardi_gras"
+ },
+ {
+  "slug": "hermes",
+  "name": "Knights of Hermes",
+  "match": [
+   "Hermes"
+  ],
+  "category": "mardi_gras"
+ },
+ {
+  "slug": "krewe-detat",
+  "name": "Krewe d'Etat",
+  "match": [
+   "D'etat",
+   "d'Etat"
+  ],
+  "category": "mardi_gras"
+ },
+ {
+  "slug": "morpheus",
+  "name": "Krewe of Morpheus",
+  "match": [
+   "Morpheus"
+  ],
+  "category": "mardi_gras"
+ },
+ {
+  "slug": "iris",
+  "name": "Krewe of Iris",
+  "match": [
+   "Iris"
+  ],
+  "category": "mardi_gras"
+ },
+ {
+  "slug": "nomtoc",
+  "name": "Krewe of NOMTOC",
+  "match": [
+   "NOMTOC"
+  ],
+  "category": "mardi_gras"
+ },
+ {
+  "slug": "tucks",
+  "name": "Krewe of Tucks",
+  "match": [
+   "Tucks"
+  ],
+  "category": "mardi_gras"
+ },
+ {
+  "slug": "endymion",
+  "name": "Krewe of Endymion",
+  "match": [
+   "Endymion"
+  ],
+  "category": "mardi_gras"
+ },
+ {
+  "slug": "okeanos",
+  "name": "Krewe of Okeanos",
+  "match": [
+   "Okeanos"
+  ],
+  "category": "mardi_gras"
+ },
+ {
+  "slug": "mid-city",
+  "name": "Krewe of Mid-City",
+  "match": [
+   "Mid-City"
+  ],
+  "category": "mardi_gras"
+ },
+ {
+  "slug": "thoth",
+  "name": "Krewe of Thoth",
+  "match": [
+   "Thoth"
+  ],
+  "category": "mardi_gras"
+ },
+ {
+  "slug": "bacchus",
+  "name": "Krewe of Bacchus",
+  "match": [
+   "Bacchus"
+  ],
+  "category": "mardi_gras"
+ },
+ {
+  "slug": "proteus",
+  "name": "Krewe of Proteus",
+  "match": [
+   "Proteus"
+  ],
+  "category": "mardi_gras"
+ },
+ {
+  "slug": "orpheus",
+  "name": "Krewe of Orpheus",
+  "match": [
+   "Orpheus"
+  ],
+  "category": "mardi_gras"
+ },
+ {
+  "slug": "zulu",
+  "name": "Zulu Social Aid & Pleasure Club",
+  "match": [
+   "Zulu"
+  ],
+  "category": "mardi_gras"
+ },
+ {
+  "slug": "rex",
+  "name": "Rex",
+  "match": [
+   "Rex"
+  ],
+  "category": "mardi_gras"
+ },
+ {
+  "slug": "crescent-city",
+  "name": "Krewe of Crescent City",
+  "match": [
+   "Crescent City"
+  ],
+  "category": "mardi_gras"
+ },
+ {
+  "slug": "boo",
+  "name": "Krewe of Boo",
+  "match": [
+   "Krewe of Boo Halloween",
+   "Krewe of Boo"
+  ],
+  "category": "other"
+ }
+]

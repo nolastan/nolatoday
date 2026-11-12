@@ -63,6 +63,114 @@
   var data = null;
   var markers = [];
 
+  // ---- Parades: routes drawn on the streets, clickable like a venue ----------
+  var KIND = { mardi_gras: 'Carnival parade', second_line: 'Second line', other: 'Parade' };
+  var PARADE_HOURS = 4;
+  var dayFmt = new Intl.DateTimeFormat('en-US', { timeZone: 'UTC', weekday: 'short', month: 'short', day: 'numeric' });
+  var params = new URLSearchParams(location.search);
+  // /?date=2026-11-22&parade=nine-times-2026-11-22 opens the map on that day with that parade's card open.
+  var linkedDate = /^\d{4}-\d{2}-\d{2}$/.test(params.get('date') || '') ? params.get('date') : null;
+  var linkedParade = params.get('parade');
+  var shownParades = [];
+  var paradePopup = null;
+
+  function paradeTimes(p) {
+    var start = p.s ? Date.parse(p.s) : null;
+    // No time from the city: it is on for that calendar day.
+    if (start === null) return { start: Date.parse(p.d + 'T00:00:00-06:00'), end: Date.parse(p.d + 'T23:59:59-05:00'), timed: false };
+    return { start: start, end: p.e ? Date.parse(p.e) : start + PARADE_HOURS * HOUR, timed: true };
+  }
+
+  function selectParades(day) {
+    var now = Date.now();
+    var today = dateKeyFmt.format(new Date(now));
+    return (data.parades || []).filter(function (p) {
+      var t = paradeTimes(p);
+      if (day === 'live') return t.timed && t.start - 30 * 60 * 1000 <= now && now <= t.end;
+      if (String(day).length === 10) return p.d === day;
+      return p.d === addDays(today, Number(day)) && t.end >= now;
+    });
+  }
+
+  function paradePopupHtml(p) {
+    var href = cfg.base + '/parades/' + p.slug;
+    var t = paradeTimes(p);
+    var when = dayFmt.format(new Date(p.d + 'T12:00:00Z')) + (t.timed ? ' · ' + timeFmt.format(new Date(t.start)) : '');
+    var now = Date.now();
+    var live = t.timed && t.start <= now && now <= t.end ? ' <span class="popup-live">• Rolling now</span>' : '';
+    return (
+      '<a class="popup-banner popup-banner--parade" href="' + href + '"><h3>' + esc(p.n) + '</h3></a>' +
+      '<ul class="popup-gigs">' +
+      '<li><span class="popup-time">' + esc(when) + live + '</span><span class="popup-title">' + esc(KIND[p.c] || KIND.other) + '</span></li>' +
+      (p.a ? '<li><span class="popup-time">Starts at</span><span class="popup-title">' + esc(p.a) + '</span></li>' : '') +
+      (p.g ? '' : '<li><span class="popup-time">Route</span><span class="popup-title">Not published as a line. See the parade page.</span></li>') +
+      '</ul>' +
+      '<a class="popup-more" href="' + href + '">Route and details →</a>'
+    );
+  }
+
+  function paradeCollection() {
+    return {
+      type: 'FeatureCollection',
+      features: shownParades
+        .filter(function (p) { return p.g; })
+        .map(function (p) { return { type: 'Feature', properties: { id: p.id }, geometry: p.g }; }),
+    };
+  }
+
+  // Layers live in the style, so they are put back whenever the style (light/dark) is swapped.
+  function addParadeLayers() {
+    if (map.getSource('parades')) return;
+    var color = theme === 'light' ? '#e8590c' : '#ffa500';
+    map.addSource('parades', { type: 'geojson', data: paradeCollection() });
+    var round = { 'line-join': 'round', 'line-cap': 'round' };
+    map.addLayer({ id: 'parade-casing', type: 'line', source: 'parades', layout: round, paint: { 'line-color': theme === 'light' ? '#ffffff' : '#1b1d1e', 'line-width': 8, 'line-opacity': 0.7 } });
+    map.addLayer({ id: 'parade-line', type: 'line', source: 'parades', layout: round, paint: { 'line-color': color, 'line-width': 4.5 } });
+    // A wide invisible line, so the route is easy to tap.
+    map.addLayer({ id: 'parade-hit', type: 'line', source: 'parades', layout: round, paint: { 'line-color': color, 'line-width': 22, 'line-opacity': 0 } });
+  }
+  map.on('style.load', addParadeLayers);
+
+  function openParade(p, lngLat) {
+    if (paradePopup) paradePopup.remove();
+    paradePopup = new mapboxgl.Popup({ offset: 12, focusAfterOpen: false, maxWidth: '320px' }).setLngLat(lngLat).setHTML(paradePopupHtml(p)).addTo(map);
+  }
+  map.on('click', 'parade-hit', function (e) {
+    var id = e.features && e.features[0] && e.features[0].properties.id;
+    var p = shownParades.filter(function (x) { return x.id === id; })[0];
+    if (p) openParade(p, e.lngLat);
+  });
+  map.on('mouseenter', 'parade-hit', function () { map.getCanvas().style.cursor = 'pointer'; });
+  map.on('mouseleave', 'parade-hit', function () { map.getCanvas().style.cursor = ''; });
+
+  /** Draw the day's parades: the route when the city gave one, and a marker where it starts. */
+  function renderParades(day, bounds) {
+    shownParades = selectParades(day);
+    if (paradePopup) paradePopup.remove();
+    if (map.getSource('parades')) map.getSource('parades').setData(paradeCollection());
+    shownParades.forEach(function (p) {
+      (p.g ? (p.g.type === 'LineString' ? [p.g.coordinates] : p.g.coordinates) : []).forEach(function (line) {
+        line.forEach(function (c) { bounds.extend(c); });
+      });
+      if (!p.p) return;
+      var el = document.createElement('button');
+      el.type = 'button';
+      el.className = 'marker marker--parade';
+      el.setAttribute('aria-label', p.n + ': ' + (KIND[p.c] || KIND.other).toLowerCase() + (p.g ? ', start of route' : ''));
+      var popup = new mapboxgl.Popup({ offset: 12, focusAfterOpen: false, maxWidth: '320px' }).setHTML(paradePopupHtml(p));
+      popup.on('open', function () { el.classList.add('is-open'); });
+      popup.on('close', function () { el.classList.remove('is-open'); });
+      var marker = new mapboxgl.Marker({ element: el }).setLngLat(p.p).setPopup(popup).addTo(map);
+      markers.push(marker);
+      bounds.extend(p.p);
+      if (linkedParade === p.id) {
+        linkedParade = null;
+        marker.togglePopup();
+      }
+    });
+    return shownParades.length;
+  }
+
   function eventTimes(ev) {
     if (ev.a) {
       var startDay = Date.parse(ev.s + 'T00:00:00-06:00');
@@ -87,13 +195,14 @@
       var t = eventTimes(ev);
       if (day === 'live') return isLive(ev, now);
       var key = ev.a ? ev.s : nightKey(t.start);
+      if (String(day).length === 10) return key === day;
       var target = addDays(today, Number(day));
       return key === target && t.end >= now;
     });
   }
 
   function hasShows(day) {
-    return select(day).some(function (ev) { return data.venues[ev.v]; });
+    return select(day).some(function (ev) { return data.venues[ev.v]; }) || selectParades(day).length > 0;
   }
 
   function button(day) {
@@ -151,11 +260,14 @@
       bounds.extend([venue.lng, venue.lat]);
     });
 
+    var paradeCount = renderParades(day, bounds);
     var labels = { live: 'right now', 0: 'tonight', 1: 'tomorrow' };
-    if (!markers.length) {
+    var dated = String(day).length === 10;
+    if (dated) labels[day] = 'for ' + dayFmt.format(new Date(day + 'T12:00:00Z'));
+    if (!markers.length && !paradeCount) {
       setStatus('No shows listed ' + labels[day] + '. Try another day or browse the <a href="' + cfg.base + '/venues">venue directory</a>.');
     } else {
-      setStatus('');
+      setStatus(dated ? 'Showing ' + dayFmt.format(new Date(day + 'T12:00:00Z')) + '.' : '');
       var pad = Math.max(40, Math.min(window.innerWidth, window.innerHeight) / 10);
       map.fitBounds(bounds, { padding: { top: pad + 50, bottom: pad + 40, left: pad, right: pad }, maxZoom: 15, duration: 600 });
     }
@@ -194,7 +306,8 @@
         todayBtn.disabled = true;
         todayBtn.title = 'No more shows listed tonight';
       }
-      var start = function () { choose(anyToday ? 0 : 1); };
+      // A link to a particular day (from a parade page) wins over tonight.
+      var start = function () { choose(linkedDate || (anyToday ? 0 : 1)); };
       if (map.loaded()) start();
       else map.once('load', start);
     })

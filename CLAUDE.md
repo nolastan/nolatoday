@@ -11,6 +11,7 @@ Read `CONTRIBUTING.md` before changing scrapers or venue data — it covers the 
 - `npm test` — unit tests (fixture-based, offline)
 - `node scripts/validate.js` — check venue data
 - `node scripts/build.js` — build `_site/`
+- `node scripts/parades.js --dry` — pull official parade data, print, write nothing
 
 ## Rules
 
@@ -21,3 +22,4 @@ Read `CONTRIBUTING.md` before changing scrapers or venue data — it covers the 
 - Tests must not hit the network.
 - Respect `robots.txt`; don't scrape sites that disallow it.
 - For a scraper issue, reference it in the PR (`Fixes #N`). The issue closes itself after the next successful scrape anyway.
+- Parades (`data/parades/parades.geojson`) come only from City of New Orleans records; read `docs/parades.md` before touching them. Never add dates, times or routes from third-party sites, and never publish private events from the permit feed. Don't hand-edit the GeoJSON; `data/parades/krewes.json` (names only) is the one hand-kept file.
