@@ -580,8 +580,18 @@ h3 { font-size: 1.3rem; }
 /* Parades ---------------------------------------------------------------- */
 .site-nav a { white-space: nowrap; }
 .map-bottom { gap: 10px; }
-.map-banner--route { height: clamp(220px, 34vw, 420px); }
+/* A route map keeps the picture's own shape so the route is never cropped away, and the title
+   sits below it, not over it. Very wide screens trim the top and bottom, which the picture allows for. */
+.map-banner--route { width: 100%; height: auto; aspect-ratio: 1280 / 460; max-height: 460px; }
+.map-banner--route::after { height: 25%; }
+/* The picture element can't be sized without undoing the theme switch, so its image fills the banner itself. */
+.map-banner--route img { position: absolute; inset: 0; }
+@media (max-width: 700px) {
+  .map-banner--route { aspect-ratio: 16 / 9; }
+}
 .parade-hero { grid-template-columns: 1fr !important; }
+.parade-hero--below { margin-top: -8px; }
+.parade-hero .button-row { margin-top: 16px; }
 .parade-card .card-media { color: var(--marker); background: var(--bg-elev-2); }
 .route-thumb { position: absolute; inset: 0; width: 100%; height: 100%; }
 .parade-attribution { margin: 56px 0 0; max-width: 760px; font-size: 0.95rem; }

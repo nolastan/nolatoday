@@ -1,7 +1,7 @@
 import { DateTime } from 'luxon';
 import { esc, jsonScript, layout, siteHeader, siteFooter } from './layout.js';
 import { ZONE } from '../../scripts/lib/time.js';
-import { SOURCES, encodePolyline, linesOf, simplify } from '../../scripts/lib/parades.js';
+import { SOURCES, encodePolyline, linesOf, simplify, startStreet } from '../../scripts/lib/parades.js';
 
 const KIND = { mardi_gras: 'Carnival parade', second_line: 'Second line', other: 'Parade' };
 const MAX_PAST = 10;
@@ -18,12 +18,37 @@ function longDate(iso, today) {
   return dt.toFormat(dt.year === day(today).year ? 'cccc, LLLL d' : 'cccc, LLLL d, yyyy');
 }
 
+const ROUTE_COLOR = { light: 'e8590c', dark: 'ffa500' };
+
+/**
+ * The picture sizes a parade map is drawn at. `padding` (top, right, bottom, left) keeps the route
+ * inside the part of the picture that stays visible once the page crops and fades it.
+ */
+const MAP_SIZES = {
+  // Wide screens crop the top and bottom, and the bottom quarter fades into the page.
+  banner: { width: 1280, height: 460, padding: [90, 70, 150, 70], zoom: 13.5 },
+  // Phones show the whole picture at 16:9.
+  bannerSmall: { width: 640, height: 360, padding: [36, 36, 96, 36], zoom: 13 },
+  card: { width: 400, height: 225, padding: [28, 28, 28, 28], zoom: 12.5 },
+  share: { width: 1200, height: 630, padding: [60, 60, 60, 60], zoom: 13.5, retina: false },
+};
+
+/** A ring of points around a place, for marking roughly where a parade starts. */
+function ringAround([lng, lat], meters) {
+  const dLat = meters / 111320;
+  const dLng = dLat / Math.cos((lat * Math.PI) / 180);
+  return Array.from({ length: 33 }, (_, i) => {
+    const t = (i / 32) * 2 * Math.PI;
+    return [lng + dLng * Math.cos(t), lat + dLat * Math.sin(t)];
+  });
+}
+
 /** A Mapbox static image of a route, framed to fit it. Null without a token or a line. */
-export function routeMapUrl(ctx, feature, { theme, width, height, retina = true }) {
+export function routeMapUrl(ctx, feature, { theme, width, height, retina = true, padding = [50, 50, 50, 50] }) {
   const { mapbox } = ctx.config;
   if (!mapbox.token || !feature?.geometry) return null;
   const style = theme === 'light' ? mapbox.styleLight : mapbox.styleDark;
-  const color = theme === 'light' ? 'e8590c' : 'ffa500';
+  const color = ROUTE_COLOR[theme] ?? ROUTE_COLOR.dark;
   // The address has to stay well under the API's 8,192 characters, so long routes are drawn more coarsely.
   let overlays = '';
   for (const tolerance of [0.00003, 0.00008, 0.0002, 0.0005, 0.001]) {
@@ -33,7 +58,30 @@ export function routeMapUrl(ctx, feature, { theme, width, height, retina = true 
     if (overlays.length < 6000) break;
   }
   if (overlays.length >= 6000) return null;
-  return `https://api.mapbox.com/styles/v1/${style}/static/${overlays}/auto/${width}x${height}${retina ? '@2x' : ''}?padding=50&access_token=${mapbox.token}&attribution=false&logo=false`;
+  return `https://api.mapbox.com/styles/v1/${style}/static/${overlays}/auto/${width}x${height}${retina ? '@2x' : ''}?padding=${padding.join(',')}&access_token=${mapbox.token}&attribution=false&logo=false`;
+}
+
+/**
+ * A zoomed-out Mapbox static image of the area a parade starts in, for parades with no route line.
+ * The start is marked with a loose ring, not a pin, because the city gives it as an address only.
+ */
+export function areaMapUrl(ctx, feature, { theme, width, height, retina = true, zoom = 13, padding = [0, 0, 0, 0] }) {
+  const { mapbox } = ctx.config;
+  const point = feature?.properties?.start_point;
+  if (!mapbox.token || !point) return null;
+  const style = theme === 'light' ? mapbox.styleLight : mapbox.styleDark;
+  const color = ROUTE_COLOR[theme] ?? ROUTE_COLOR.dark;
+  const ring = `path-3+${color}-0.9+${color}-0.2(${encodeURIComponent(encodePolyline(ringAround(point, 2 ** (13.5 - zoom) * 160)))})`;
+  // Lift the ring above the part of the picture that fades into the page.
+  const metersPerPixel = (156543.03 * Math.cos((point[1] * Math.PI) / 180)) / 2 ** (zoom + 1);
+  const lat = point[1] - (((padding[2] - padding[0]) / 2) * metersPerPixel) / 111320;
+  return `https://api.mapbox.com/styles/v1/${style}/static/${ring}/${point[0].toFixed(6)},${lat.toFixed(6)},${zoom},0/${width}x${height}${retina ? '@2x' : ''}?access_token=${mapbox.token}&attribution=false&logo=false`;
+}
+
+/** The map picture for a parade at one of the sizes above: its route, else the area it starts in. */
+export function paradeMapUrl(ctx, feature, theme, size) {
+  const opts = { theme, ...MAP_SIZES[size] };
+  return routeMapUrl(ctx, feature, opts) ?? areaMapUrl(ctx, feature, opts);
 }
 
 /** A small drawing of the route's shape for a directory card. No map tiles, so it costs nothing to show. */
@@ -97,7 +145,7 @@ function eventSchema(ctx, org, f) {
     url: `${ctx.config.siteUrl}/parades/${org.slug}#${p.id}`,
     location: {
       '@type': 'Place',
-      name: p.start_address ?? p.formation ?? p.area ?? 'New Orleans',
+      name: startStreet(p.start_address) ?? p.formation ?? p.area ?? 'New Orleans',
       address: { '@type': 'PostalAddress', addressLocality: 'New Orleans', addressRegion: 'LA', addressCountry: 'US' },
     },
     organizer: { '@type': 'Organization', name: org.name },
@@ -122,22 +170,28 @@ export function paradePage(ctx, org, { today }) {
     ? `${org.name} ${kind === 'Second line' ? 'Second Line' : 'Parade'} ${day(next.properties.date).toFormat('yyyy')} – Route & Start Time – NOLA.Today`
     : `${org.name} – New Orleans ${kind === 'Second line' ? 'Second Line' : 'Parade'} Route – NOLA.Today`;
   const description = next
-    ? `${org.name} ${kind.toLowerCase()} in New Orleans: ${when}${next.properties.start_address ? `, starting at ${next.properties.start_address}` : ''}. Route map and details from City of New Orleans records.`
+    ? `${org.name} ${kind.toLowerCase()} in New Orleans: ${when}${startStreet(next.properties.start_address) ? `, starting on ${startStreet(next.properties.start_address)}` : ''}. Route map and details from City of New Orleans records.`
     : `${org.name} ${kind.toLowerCase()} in New Orleans. Last listed ${longDate(fp.date, today)}. Route map and details from City of New Orleans records.`;
 
+  // One picture per theme, each with a 16:9 version for phones, so the route is never cropped away.
   const banner = (theme, loading) => {
-    const src = routeMapUrl(ctx, featured, { theme, width: 1280, height: 420 });
-    return src ? `<img class="only-${theme}" src="${esc(src)}" alt="" width="1280" height="420" loading="${loading}" decoding="async">` : '';
+    const wide = paradeMapUrl(ctx, featured, theme, 'banner');
+    const small = paradeMapUrl(ctx, featured, theme, 'bannerSmall');
+    return `<picture class="only-${theme}"><source media="(max-width: 700px)" srcset="${esc(small)}" width="640" height="360"><img src="${esc(wide)}" alt="" width="1280" height="460" loading="${loading}" decoding="async"></picture>`;
   };
-  const hasBanner = Boolean(routeMapUrl(ctx, featured, { theme: 'dark', width: 1280, height: 420 }));
+  const hasBanner = Boolean(paradeMapUrl(ctx, featured, 'dark', 'banner'));
+  const bannerLabel = featured.geometry ? `Map of the ${org.name} route` : `Map of the area where ${org.name} starts`;
   const bannerHtml = hasBanner
-    ? `<div class="map-banner map-banner--route" role="img" aria-label="Map of the ${esc(org.name)} route">${banner('dark', 'eager')}${banner('light', 'lazy')}</div>`
+    ? `<div class="map-banner map-banner--route" role="img" aria-label="${esc(bannerLabel)}">${banner('dark', 'eager')}${banner('light', 'lazy')}</div>`
     : '<div class="map-banner map-banner--empty" aria-hidden="true"></div>';
 
-  const hero = `<section class="venue-hero parade-hero wrap">
+  const street = startStreet(fp.start_address);
+  const hero = `<section class="venue-hero parade-hero${hasBanner ? ' parade-hero--below' : ''} wrap">
     <div class="venue-hero-text">
       <span class="badge">${esc(kind)}</span>
       <h1>${esc(org.name)}</h1>
+      ${street ? `<p class="venue-address">Starts on ${esc(street)}</p>` : ''}
+      ${org.website ? `<div class="button-row"><a class="button primary" href="${esc(org.website)}" rel="noopener">Visit website</a></div>` : ''}
     </div>
   </section>`;
 
@@ -186,7 +240,7 @@ ${siteFooter(ctx)}`;
     title,
     description,
     canonical,
-    image: routeMapUrl(ctx, featured, { theme: 'dark', width: 1200, height: 630, retina: false }),
+    image: paradeMapUrl(ctx, featured, 'dark', 'share'),
     bodyClass: 'page-venue page-parade',
     head: `<script type="application/ld+json">${jsonScript(jsonLd)}</script>`,
     body,
@@ -207,13 +261,18 @@ export function paradesPage(ctx, orgs, { today, sources = [] }) {
     const whenText = upcoming
       ? `${p.date === today ? 'Today' : dt.toFormat(dt.year === day(today).year ? 'ccc, LLL d' : 'ccc, LLL d, yyyy')}${p.start_time ? ` · ${clock(p.start_time)}` : ''}`
       : `Last listed ${dt.toFormat('LLL d, yyyy')}`;
-    const media = routeSvg(f) ?? `<span class="card-placeholder" aria-hidden="true">♪</span>`;
-    return `<li class="venue-card parade-card" data-name="${esc(`${org.name} ${p.name} ${p.start_address ?? p.area ?? ''}`.toLowerCase())}">
+    const where = startStreet(p.start_address) ?? p.area;
+    const mapImg = (theme) => `<img class="only-${theme}" src="${esc(paradeMapUrl(ctx, f, theme, 'card'))}" alt="" width="400" height="225" loading="lazy" decoding="async">`;
+    // A map of the route, or of the area it starts in. Without a map token, the bare route shape.
+    const media = paradeMapUrl(ctx, f, 'dark', 'card')
+      ? `${mapImg('dark')}${mapImg('light')}`
+      : (routeSvg(f) ?? `<span class="card-placeholder" aria-hidden="true">♪</span>`);
+    return `<li class="venue-card parade-card" data-name="${esc(`${org.name} ${p.name} ${where ?? ''}`.toLowerCase())}">
       <a href="${url(`/parades/${org.slug}`)}">
         <div class="card-media">${media}</div>
         <div class="card-body">
           <h2>${esc(org.name)}</h2>
-          <p class="card-address muted">${esc(KIND[org.category] ?? KIND.other)}${p.start_address || p.area ? ` · ${esc(p.start_address ?? p.area)}` : ''}</p>
+          <p class="card-address muted">${esc(KIND[org.category] ?? KIND.other)}${where ? ` · ${esc(where)}` : ''}</p>
           <p class="card-next${upcoming ? '' : ' muted'}">${esc(whenText)}</p>
           ${f.geometry ? '' : '<p class="card-count muted">No route published</p>'}
         </div>

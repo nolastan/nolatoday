@@ -12,12 +12,14 @@ import {
   mergeWithPrevious,
   nameKey,
   paradeOrgs,
+  startStreet,
+  loadWebsites,
   parseClock,
   wallClockFromEpoch,
 } from '../scripts/lib/parades.js';
 import { fromPermit, organizerSlug, parseHeadline, parseRoute, permitVerdict, routeText, traceRouteText } from '../scripts/lib/permits.js';
 import { buildNetwork, resolveStreet, trace } from '../scripts/lib/route-trace.js';
-import { paradePage, paradesPage, routeSvg } from '../src/templates/parade.js';
+import { paradePage, paradesPage, routeSvg, paradeMapUrl } from '../src/templates/parade.js';
 
 // Fixtures are rows the City of New Orleans published (trimmed), plus three made-up
 // permit rows (TEST-…) for the cases that must be refused. Nothing here comes from
@@ -271,4 +273,58 @@ test('site: parades group by organization, and pages show the city record honest
   assert.equal(onMap.g.type, 'LineString');
   assert.match(routeSvg(features.find((f) => f.id === 'mosaique-2027')), /^<svg class="route-thumb"/);
   assert.equal(routeSvg(features.find((f) => f.id === 'nine-times-2026-11-22')), null);
+});
+
+test('site: a start address is shown as its street, without the number or place name', () => {
+  assert.equal(startStreet('3301 Higgins Blvd (Thrive 9th Ward)'), 'Higgins Blvd');
+  assert.equal(startStreet('1738 Washington Ave - Verret Lounge'), 'Washington Ave');
+  assert.equal(startStreet('900 N Villere 9 (Treme Center)'), 'N Villere');
+  assert.equal(startStreet('2626 magnolia st'), 'Magnolia St');
+  assert.equal(startStreet('1424 Hero Blvd.'), 'Hero Blvd');
+  assert.equal(startStreet('St Charles Ave & Josephine Ave'), 'St Charles Ave and Josephine Ave');
+  assert.equal(startStreet('St Phillip St and N Villere St (Treme Center)'), 'St Phillip St and N Villere St');
+  assert.equal(startStreet(null), null);
+  assert.equal(startStreet('1234'), null);
+});
+
+test('site: map pictures, the street line and the website button', () => {
+  const { features } = build();
+  const websites = { mosaique: 'https://example.org/' };
+  const orgs = paradeOrgs(features, '2026-11-12', { websites });
+  const ctx = {
+    config: { siteName: 'NOLA.Today', siteUrl: 'https://nola.today', repo: 'x/y', mapbox: { token: 'pk.test', styleDark: 'u/dark', styleLight: 'u/light' } },
+    url: (p) => p,
+    asset: (p) => p,
+  };
+  const routed = features.find((f) => f.id === 'mosaique-2027');
+  const unrouted = features.find((f) => f.id === 'nine-times-2026-11-22');
+
+  // A route is framed with room left at the bottom, where the page fades the picture out.
+  const banner = paradeMapUrl(ctx, routed, 'dark', 'banner');
+  assert.match(banner, /\/static\/path-5\+ffa500-0\.9\(.+\)\/auto\/1280x460@2x\?padding=90,70,150,70&/);
+  // No route: a zoomed-out map around the start, marked with a ring, not a pin.
+  const area = paradeMapUrl(ctx, unrouted, 'light', 'card');
+  assert.match(area, /\/static\/path-3\+e8590c-0\.9\+e8590c-0\.2\(.+\)\/-?\d+\.\d+,\d+\.\d+,12\.5,0\/400x225@2x\?/);
+  assert.doesNotMatch(area, /pin-/);
+
+  const page = paradePage(ctx, orgs.find((o) => o.slug === 'mosaique'), { today: '2026-11-12' });
+  assert.match(page, /<picture class="only-dark"><source media="\(max-width: 700px\)"/);
+  assert.match(page, /<a class="button primary" href="https:\/\/example\.org\/" rel="noopener">Visit website<\/a>/);
+  const nine = paradePage(ctx, orgs.find((o) => o.slug === 'nine-times'), { today: '2026-11-12' });
+  assert.match(nine, /<p class="venue-address">Starts on [^<0-9]+<\/p>/);
+  assert.doesNotMatch(nine, /Visit website/);
+  assert.match(nine, /Map of the area where/);
+
+  const directory = paradesPage(ctx, orgs, { today: '2026-11-12', sources: [] });
+  assert.match(directory, /<div class="card-media"><img class="only-dark" src="https:\/\/api\.mapbox\.com/);
+  assert.doesNotMatch(directory, /route-thumb/);
+  const address = unrouted.properties.start_address;
+  assert.ok(/^\d/.test(address));
+  assert.ok(!directory.includes(address) && !nine.includes(address));
+});
+
+test('websites.json: every entry is an https address for an organization in the data', () => {
+  const sites = loadWebsites();
+  const slugs = new Set(JSON.parse(fs.readFileSync(new URL('../data/parades/parades.geojson', import.meta.url), 'utf8')).features.map((f) => f.properties.krewe_slug));
+  for (const slug of Object.keys(sites)) assert.ok(slugs.has(slug), `${slug} is not a parade organization`);
 });
