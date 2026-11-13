@@ -26,7 +26,7 @@ import crypto from 'node:crypto';
 import { DateTime } from 'luxon';
 import { ROOT, readJSON, writeJSON } from './lib/data.js';
 import { ZONE } from './lib/time.js';
-import { SOURCES, PARADES_FILE, TRACE_VERSION, loadKrewes, fromOpenData, fromRoutewise, buildFeatures, checkFeature, mergeWithPrevious, displayName } from './lib/parades.js';
+import { SOURCES, PARADES_FILE, TRACE_VERSION, loadKrewes, loadAnnounced, fromOpenData, fromRoutewise, buildFeatures, checkFeature, mergeWithPrevious, displayName } from './lib/parades.js';
 import { fromPermit, traceRouteText } from './lib/permits.js';
 import { buildNetwork } from './lib/route-trace.js';
 
@@ -219,6 +219,9 @@ async function main() {
       leftOut[why] = (leftOut[why] ?? 0) + 1;
     }
   }
+  // Dates organizers announced on their own sites, for parades the city has no record of yet.
+  const announced = loadAnnounced();
+  records.push(...announced);
   const previous = readJSON(PARADES_FILE, { features: [] });
   await traceRoutes(records, previous.features ?? []);
 
@@ -237,6 +240,7 @@ async function main() {
   const fresh = new Set(publishable.map((f) => f.properties.id));
   const kept_previous = (previous.features ?? []).filter((f) => {
     const p = f.properties;
+    if (p.field_sources?.schedule === 'organizer') return fresh.has(p.id); // gone from announced.json, or the city has it now
     return !(p.field_sources?.schedule === 'permits' && pulled.has(p.permit_number) && !fresh.has(p.id));
   });
   const merged = mergeWithPrevious(publishable, kept_previous, today);
@@ -246,6 +250,8 @@ async function main() {
   console.log(`routewise: ${routewise.features.length} rows (edited ${routewise.last_modified ?? 'unknown'})`);
   console.log(`permits:   ${permits.rows.length} special event applications (updated ${permits.last_modified ?? 'unknown'})`);
   for (const [why, n] of Object.entries(leftOut)) console.log(`  left out ${String(n).padStart(4)}: ${why}`);
+  const fromOrganizers = publishable.filter((f) => f.properties.field_sources.schedule === 'organizer');
+  console.log(`organizers: ${announced.length} announced, ${fromOrganizers.length} not yet in city records${fromOrganizers.length ? ` (${fromOrganizers.map((f) => f.id).join(', ')})` : ''}`);
   console.log(`→ ${publishable.length} parades from this pull${kept ? `, ${kept} kept from earlier pulls` : ''}`);
   const seasons = {};
   for (const f of merged) seasons[f.properties.date.slice(0, 4)] = (seasons[f.properties.date.slice(0, 4)] ?? 0) + 1;
