@@ -18,7 +18,7 @@ import {
   parseClock,
   wallClockFromEpoch,
 } from '../scripts/lib/parades.js';
-import { fromPermit, organizerSlug, parseHeadline, parseRoute, permitVerdict, routeText, traceRouteText } from '../scripts/lib/permits.js';
+import { fromPermit, organizerSlug, parseHeadline, parseProse, parseRoute, permitVerdict, routeText, traceRouteText } from '../scripts/lib/permits.js';
 import { buildNetwork, resolveStreet, trace } from '../scripts/lib/route-trace.js';
 import { paradePage, paradesPage, routeSvg, paradeMapUrl } from '../src/templates/parade.js';
 
@@ -134,6 +134,39 @@ test('permit applications: headline, organizer, times and route text', () => {
   const slip = fromPermit({ ...permit('Nine Times'), descr: permit('Nine Times').descr.replace('Start: 12:00 PM', 'Start: 12:00 AM') }).record;
   assert.equal(slip.start_time, null);
   assert.equal(slip.formation_time, '2026-11-22T11:00:00-06:00');
+});
+
+test('permit applications the organizer wrote in their own words', () => {
+  // The Krewe de Jeanne d'Arc's 2026 application: no "title - address - date" headline, a turn per line.
+  const row = permit('This is a walking procession');
+  assert.equal(permitVerdict(row), null);
+  assert.deepEqual(parseProse(row.descr), { title: "Krewe de Jeanne d'Arc 2026 procession", address: null, date: '2026-01-06', prose: true });
+  assert.equal(organizerSlug("Krewe de Jeanne d'Arc 2026 procession"), 'krewe-de-jeanne-darc');
+  const { record } = fromPermit(row);
+  assert.equal(record.start_address, '200 Bienville St');
+  // Only the disband time says PM; the line-up and step-off clocks are read in the same evening.
+  assert.equal(record.formation_time, '2026-01-06T17:30:00-06:00');
+  assert.equal(record.start_time, '2026-01-06T19:30:00-06:00');
+  assert.equal(record.end_time, '2026-01-06T21:00:00-06:00');
+  // Turns and stops only: what happens at each stop, the asides and the logistics after the end are left out.
+  assert.equal(
+    record.route_text,
+    "Right onto BIENVILLE. Right onto CHARTRES. STOP at HNOC/K PAUL BALCONY 416 CHARTRES. Right onto TOULOUSE. Left onto DECATUR. STOP at OSCAR DUNNE AMPHITHEATER. Continue onto N PETERS. Left onto URSULINE. Right on CHARTRES. STOP at 1116 CHARTRES/ST MARY'S. Right onto BARRACKS for 1 block. Right on FRENCH MARKET PLACE to disband at 9pm.",
+  );
+  // Written the same way but by no named organization: refused as private.
+  assert.equal(permitVerdict(permit('We are walking')), 'private event');
+});
+
+test('a route that turns onto a street sets off along it the way it turned', () => {
+  // "Left onto Decatur. Continue onto N Peters": N Peters meets Decatur both behind and ahead of
+  // that corner. Having turned left, the route goes on downriver, to where Ursulines leaves N Peters.
+  const { record } = fromPermit(permit('This is a walking procession'));
+  const traced = traceRouteText(net, record.route_text, record.start_address);
+  assert.deepEqual(traced.problems, []);
+  assert.ok(traced.meters > 1700 && traced.meters < 2100, `length ${traced.meters}`);
+  // It ends at Barracks and French Market Place, at the downriver end of the Quarter.
+  const [endLng, endLat] = traced.line.at(-1);
+  assert.ok(Math.abs(endLng - -90.0589) < 0.001 && Math.abs(endLat - 29.9604) < 0.001, `ends at ${endLng},${endLat}`);
 });
 
 test('route text stops before staffing notes and contact details', () => {

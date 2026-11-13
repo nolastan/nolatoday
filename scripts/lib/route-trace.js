@@ -303,6 +303,7 @@ export function trace(net, { start, steps: given, end }) {
 
   let waypoint = null;
   let waypointName = null;
+  let turned = null;
   let respliced = false;
   let atAddress = start?.number != null;
   const keys = [current];
@@ -393,10 +394,16 @@ export function trace(net, { start, steps: given, end }) {
             return step.turn === 'right' ? angle > 20 && angle < 160 : angle < -20 && angle > -160;
           });
         }
-        return { k, path, d: along.best.get(k), agrees };
+        // "Left onto Decatur. Continue onto N Peters": having turned left at the corner, set off along Decatur to the left.
+        let setsOff = null;
+        if (turned && turned.k === current && path.length >= 2) {
+          const angle = turnAngle(turned.from[0], turned.from[1], net.coord.get(path[1]));
+          setsOff = turned.turn === 'right' ? angle > 20 && angle < 160 : angle < -20 && angle > -160;
+        }
+        return { k, path, d: along.best.get(k), agrees, setsOff };
       });
       // Standing at the corner already (the first step from a corner start): prefer actually going somewhere.
-      scored.sort((a, b) => (a.agrees === false) - (b.agrees === false) || a.d - b.d);
+      scored.sort((a, b) => (a.agrees === false) - (b.agrees === false) || (a.setsOff === false) - (b.setsOff === false) || a.d - b.d);
       arrive = scored[0];
       if (arrive.agrees === false) return fail(`${label}: the text says ${step.turn}, but the streets meet the other way`);
       append(arrive.path);
@@ -420,6 +427,9 @@ export function trace(net, { start, steps: given, end }) {
       notes.push(`${label}: reached over ${Math.round(bridge.gap * METERS)} m of ${[...hop.via].filter((n) => n !== MEDIAN).join(', ') || 'median'}, which the text does not name`);
       arrive = { k: bridge.to };
     }
+    // The way the route came into a corner where the text says it turned, so the next step leaves that corner the same way.
+    const into = arrive.path?.length >= 2 ? [net.coord.get(arrive.path[arrive.path.length - 2]), net.coord.get(arrive.k)] : null;
+    turned = step.turn && !step.via && into ? { k: arrive.k, from: into, turn: step.turn } : null;
     current = arrive.k;
     // A street reached with no turn stated may be only a point on the way; remember the street we were on.
     waypoint = !step.via && !step.turn ? streets : null;
