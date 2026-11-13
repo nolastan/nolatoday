@@ -26,22 +26,12 @@ const ROUTE_COLOR = { light: 'e8590c', dark: 'ffa500' };
  */
 const MAP_SIZES = {
   // Wide screens crop the top and bottom, and the bottom quarter fades into the page.
-  banner: { width: 1280, height: 460, padding: [90, 70, 150, 70], zoom: 13.5 },
+  banner: { width: 1280, height: 460, padding: [90, 70, 150, 70], zoom: 14.5 },
   // Phones show the whole picture at 16:9.
-  bannerSmall: { width: 640, height: 360, padding: [36, 36, 96, 36], zoom: 13 },
-  card: { width: 400, height: 225, padding: [28, 28, 28, 28], zoom: 12.5 },
-  share: { width: 1200, height: 630, padding: [60, 60, 60, 60], zoom: 13.5, retina: false },
+  bannerSmall: { width: 640, height: 360, padding: [36, 36, 96, 36], zoom: 14 },
+  card: { width: 400, height: 225, padding: [28, 28, 28, 28], zoom: 13.5 },
+  share: { width: 1200, height: 630, padding: [60, 60, 60, 60], zoom: 14.5, retina: false },
 };
-
-/** A ring of points around a place, for marking roughly where a parade starts. */
-function ringAround([lng, lat], meters) {
-  const dLat = meters / 111320;
-  const dLng = dLat / Math.cos((lat * Math.PI) / 180);
-  return Array.from({ length: 33 }, (_, i) => {
-    const t = (i / 32) * 2 * Math.PI;
-    return [lng + dLng * Math.cos(t), lat + dLat * Math.sin(t)];
-  });
-}
 
 /** A Mapbox static image of a route, framed to fit it. Null without a token or a line. */
 export function routeMapUrl(ctx, feature, { theme, width, height, retina = true, padding = [50, 50, 50, 50] }) {
@@ -62,20 +52,18 @@ export function routeMapUrl(ctx, feature, { theme, width, height, retina = true,
 }
 
 /**
- * A zoomed-out Mapbox static image of the area a parade starts in, for parades with no route line.
- * The start is marked with a loose ring, not a pin, because the city gives it as an address only.
+ * A Mapbox static image of the neighborhood a parade starts in, for parades with no route line.
+ * Nothing is drawn on it: the city gives the start as an address only, so the map shows the general area.
  */
-export function areaMapUrl(ctx, feature, { theme, width, height, retina = true, zoom = 13, padding = [0, 0, 0, 0] }) {
+export function areaMapUrl(ctx, feature, { theme, width, height, retina = true, zoom = 14, padding = [0, 0, 0, 0] }) {
   const { mapbox } = ctx.config;
   const point = feature?.properties?.start_point;
   if (!mapbox.token || !point) return null;
   const style = theme === 'light' ? mapbox.styleLight : mapbox.styleDark;
-  const color = ROUTE_COLOR[theme] ?? ROUTE_COLOR.dark;
-  const ring = `path-3+${color}-0.9+${color}-0.2(${encodeURIComponent(encodePolyline(ringAround(point, 2 ** (13.5 - zoom) * 160)))})`;
-  // Lift the ring above the part of the picture that fades into the page.
+  // Centre the start in the part of the picture that doesn't fade into the page.
   const metersPerPixel = (156543.03 * Math.cos((point[1] * Math.PI) / 180)) / 2 ** (zoom + 1);
   const lat = point[1] - (((padding[2] - padding[0]) / 2) * metersPerPixel) / 111320;
-  return `https://api.mapbox.com/styles/v1/${style}/static/${ring}/${point[0].toFixed(6)},${lat.toFixed(6)},${zoom},0/${width}x${height}${retina ? '@2x' : ''}?access_token=${mapbox.token}&attribution=false&logo=false`;
+  return `https://api.mapbox.com/styles/v1/${style}/static/${point[0].toFixed(6)},${lat.toFixed(6)},${zoom},0/${width}x${height}${retina ? '@2x' : ''}?access_token=${mapbox.token}&attribution=false&logo=false`;
 }
 
 /** The map picture for a parade at one of the sizes above: its route, else the area it starts in. */

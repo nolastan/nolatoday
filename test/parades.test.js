@@ -302,10 +302,10 @@ test('site: map pictures, the street line and the website button', () => {
   // A route is framed with room left at the bottom, where the page fades the picture out.
   const banner = paradeMapUrl(ctx, routed, 'dark', 'banner');
   assert.match(banner, /\/static\/path-5\+ffa500-0\.9\(.+\)\/auto\/1280x460@2x\?padding=90,70,150,70&/);
-  // No route: a zoomed-out map around the start, marked with a ring, not a pin.
+  // No route: a map of the area around the start, with no marker drawn on it.
   const area = paradeMapUrl(ctx, unrouted, 'light', 'card');
-  assert.match(area, /\/static\/path-3\+e8590c-0\.9\+e8590c-0\.2\(.+\)\/-?\d+\.\d+,\d+\.\d+,12\.5,0\/400x225@2x\?/);
-  assert.doesNotMatch(area, /pin-/);
+  assert.match(area, /\/styles\/v1\/u\/light\/static\/-?\d+\.\d+,\d+\.\d+,13\.5,0\/400x225@2x\?/);
+  assert.doesNotMatch(area, /pin-|path-/);
 
   const page = paradePage(ctx, orgs.find((o) => o.slug === 'mosaique'), { today: '2026-11-12' });
   assert.match(page, /<picture class="only-dark"><source media="\(max-width: 700px\)"/);
