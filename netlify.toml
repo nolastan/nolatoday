@@ -1,0 +1,9 @@
+# Netlify deploy previews for pull requests. Production stays on GitHub Pages
+# (.github/workflows/deploy.yml). Set MAPBOX_TOKEN in Netlify's environment
+# variables to get maps in previews.
+[build]
+  command = "npm run build"
+  publish = "_site"
+
+[build.environment]
+  NODE_VERSION = "22"
