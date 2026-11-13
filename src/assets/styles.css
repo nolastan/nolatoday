@@ -47,11 +47,12 @@
   }
 }
 
-/* Theme-specific images */
-.only-light { display: none; }
+/* Theme-specific images. !important so a component's own display rule
+   (e.g. `.card-media img { display: block }`) can't show both at once. */
+.only-light { display: none !important; }
 @media (prefers-color-scheme: light) {
-  .only-light { display: block; }
-  .only-dark { display: none; }
+  .only-light { display: block !important; }
+  .only-dark { display: none !important; }
 }
 
 *, *::before, *::after { box-sizing: border-box; }
