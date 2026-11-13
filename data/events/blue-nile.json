@@ -2,13 +2,6 @@
   "venue": "blue-nile",
   "events": [
     {
-      "id": "14388d75e545",
-      "title": "Reggae Night with DJ T-Roy (Balcony Room)",
-      "start": "2026-11-12T23:00:00-06:00",
-      "end": "2026-11-13T01:01:00-06:00",
-      "url": "https://www.bluenilelive.com/calendar-tickets-/le3an22xaw2zgfn-jkg96-ty48f-2ahzy-n2hb3-fk7mx-25yah-jtmtf-3tmw9-ssfy3-9l29r-9erd9-l32s7-ageey"
-    },
-    {
       "id": "aec1cfa603a8",
       "title": "The Next Level Band",
       "start": "2026-11-13T20:00:00-06:00",
@@ -198,6 +191,13 @@
       "url": "https://www.bluenilelive.com/calendar-tickets-/irvin-mayfield-blue-nile-frenchmen-2wjzn-ay8j5-chr3g-wmfxe"
     },
     {
+      "id": "586e3f415385",
+      "title": "DJ FTK",
+      "start": "2026-12-04T22:00:00-06:00",
+      "end": "2026-12-05T00:01:00-06:00",
+      "url": "https://www.bluenilelive.com/calendar-tickets-/dj-ftk-s2csm-9bx6m-b37nl-2ct9r-9r7rt-4zw3n-6w8e6-5ylkl-32arw-4nx58-wrrle"
+    },
+    {
       "id": "5956a23e6a2e",
       "title": "Kermit Ruffins & The BBQ Swingers",
       "start": "2026-12-04T22:00:00-06:00",
@@ -219,11 +219,25 @@
       "url": "https://www.bluenilelive.com/calendar-tickets-/ls9kmf6mheytb25-h4sfa-flm6x-xdj5a-f5ps5-zaans-fpd4n-e5enf-g4e2l-k8nnm-twxpl-d7msz-48t4g-4welj"
     },
     {
+      "id": "3f75a9276ec9",
+      "title": "Mikey Offline (Balcony Room)",
+      "start": "2026-12-11T22:00:00-06:00",
+      "end": "2026-12-12T00:01:00-06:00",
+      "url": "https://www.bluenilelive.com/calendar-tickets-/dj-mikey-offline-44j4a-4zktn-4bjl5"
+    },
+    {
       "id": "f2f2110ad595",
       "title": "Grammy Award-Winning Irvin Mayfield's Music Church with Special Guests",
       "start": "2026-12-17T21:00:00-06:00",
       "end": "2026-12-17T22:30:00-06:00",
       "url": "https://www.bluenilelive.com/calendar-tickets-/irvin-mayfield-blue-nile-frenchmen-2wjzn-ay8j5-chr3g-wmfxe-9e5me-zj5np"
+    },
+    {
+      "id": "7cd71d868ec8",
+      "title": "DJ FTK",
+      "start": "2026-12-18T22:00:00-06:00",
+      "end": "2026-12-19T00:01:00-06:00",
+      "url": "https://www.bluenilelive.com/calendar-tickets-/dj-ftk-s2csm-9bx6m-b37nl-2ct9r-9r7rt-4zw3n-6w8e6-5ylkl-32arw-4nx58-wrrle-gp8np"
     },
     {
       "id": "139bbf43047a",
@@ -238,6 +252,13 @@
       "start": "2026-12-31T22:00:00-06:00",
       "end": "2027-01-01T00:15:00-06:00",
       "url": "https://www.bluenilelive.com/calendar-tickets-/kermit-nye-blue-nile-frenchmen"
+    },
+    {
+      "id": "9938c6af8059",
+      "title": "DJ WestBankRed (Balcony Room)",
+      "start": "2027-01-01T22:00:00-06:00",
+      "end": "2027-01-02T00:01:00-06:00",
+      "url": "https://www.bluenilelive.com/calendar-tickets-/dj-wbr-2026-9xydz-swl8k-tyr68-tyxp9-r5k8y-ldjam"
     }
   ]
 }

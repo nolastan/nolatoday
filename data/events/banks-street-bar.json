@@ -2,13 +2,6 @@
   "venue": "banks-street-bar",
   "events": [
     {
-      "id": "14dcdf3f4c02",
-      "title": "Mary Mortem + Dremm +Palefade + Bullshit Machine",
-      "start": "2026-11-12T20:00:00-06:00",
-      "end": "2026-11-13T00:00:00-06:00",
-      "url": "https://www.banksstreetbarnola.net/event-details/mary-mortem-dremm-palefade-bullshit-machine"
-    },
-    {
       "id": "1c6369c28ae0",
       "title": "Honest Man Happy Hour with Domenic Fusca",
       "start": "2026-11-13T13:00:00-06:00",
@@ -42,6 +35,13 @@
       "start": "2026-11-23T20:00:00-06:00",
       "end": "2026-11-24T00:00:00-06:00",
       "url": "https://www.banksstreetbarnola.net/event-details/funknation"
+    },
+    {
+      "id": "94d14efdecc4",
+      "title": "Psydonia + Closur + All In The Family",
+      "start": "2026-11-27T20:00:00-06:00",
+      "end": "2026-11-28T00:00:00-06:00",
+      "url": "https://www.banksstreetbarnola.net/event-details/psydonia-closur-all-in-the-family"
     }
   ]
 }

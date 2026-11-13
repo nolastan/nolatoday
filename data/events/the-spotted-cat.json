@@ -2,11 +2,6 @@
   "venue": "the-spotted-cat",
   "events": [
     {
-      "id": "c40a5400c113",
-      "title": "Jumbo Shrimp",
-      "start": "2026-11-12T22:00:00-06:00"
-    },
-    {
       "id": "7dd65704df60",
       "title": "Paradise Jazz Band",
       "start": "2026-11-13T14:00:00-06:00"

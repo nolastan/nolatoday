@@ -2,13 +2,6 @@
   "venue": "siberia",
   "events": [
     {
-      "id": "60c01d1530ff",
-      "title": "AJJ with Greet Death",
-      "start": "2026-11-12T21:00:00-06:00",
-      "end": "2026-11-13T01:00:00-06:00",
-      "url": "https://dice.fm/event/6a6be87a895bf50001c5683f"
-    },
-    {
       "id": "25843ea403c7",
       "title": "New Orleans Bad Luck Fest",
       "start": "2026-11-13T19:00:00-06:00",

@@ -2,12 +2,6 @@
   "venue": "12-mile-limit",
   "events": [
     {
-      "id": "48dd8ce0a7d4",
-      "title": "Purrsday Karaoke!",
-      "start": "2026-11-12T21:00:00-06:00",
-      "url": "https://twelvemilelimit.com/events/purrsday-karaoke?date=2026-11-12"
-    },
-    {
       "id": "780a3b0c44d3",
       "title": "Heatwave!",
       "start": "2026-11-14T21:00:00-06:00",
@@ -120,6 +114,12 @@
       "title": "Trivia Night!",
       "start": "2026-12-16T20:00:00-06:00",
       "url": "https://twelvemilelimit.com/events/trivia-night?date=2026-12-16"
+    },
+    {
+      "id": "2ac849eb0fe0",
+      "title": "Purrsday Karaoke!",
+      "start": "2026-12-17T21:00:00-06:00",
+      "url": "https://twelvemilelimit.com/events/purrsday-karaoke?date=2026-12-17"
     }
   ]
 }
