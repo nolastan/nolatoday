@@ -89,6 +89,31 @@ export function routeSvg(feature, { width = 320, height = 180, pad = 18 } = {}) 
   return `<svg class="route-thumb" viewBox="0 0 ${width} ${height}" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><path d="${d}" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="${sx.toFixed(1)}" cy="${sy.toFixed(1)}" r="6" fill="currentColor"/></svg>`;
 }
 
+const photoUrl = (ctx, file) => ctx.asset(`/images/parades/${file}`);
+const smallPhoto = (file) => file.replace(/\.jpg$/, '-600.jpg');
+
+/** Whose photo it is and under what license, as venue photos are credited. */
+function photoCredit(credit) {
+  return `<figcaption class="photo-credit">Photo by <a href="${esc(credit.source)}" rel="noopener">${esc(credit.author)}</a>, <a href="${esc(credit.licenseUrl)}" rel="license noopener">${esc(credit.license)}</a>${credit.via ? `, via ${esc(credit.via)}` : ''}</figcaption>`;
+}
+
+/**
+ * An organization's photos beside its name. More than one becomes a strip that is swiped or scrolled
+ * sideways, one photo at a time; site.js adds the dots and arrows, and without it the strip still scrolls.
+ */
+function photoStrip(ctx, org) {
+  const photos = org.photos ?? [];
+  if (!photos.length) return '';
+  const slides = photos
+    .map((photo, i) => {
+      const [small, large] = [photoUrl(ctx, smallPhoto(photo.file)), photoUrl(ctx, photo.file)];
+      return `<figure class="photo-slide"><img src="${small}" srcset="${small} 600w, ${large} 1200w" sizes="(min-width: 900px) 520px, 100vw" alt="${esc(photo.alt)}" width="${photo.width}" height="${photo.height}" loading="${i ? 'lazy' : 'eager'}" decoding="async">${photoCredit(photo.credit)}</figure>`;
+    })
+    .join('');
+  if (photos.length === 1) return `<div class="venue-photo parade-photos">${slides}</div>`;
+  return `<div class="venue-photo parade-photos" data-photo-strip role="group" aria-roledescription="carousel" aria-label="${esc(`Photos of ${org.name}`)}"><div class="photo-track" data-photo-track tabindex="0">${slides}</div></div>`;
+}
+
 /** Parades as a schedule, the way a venue's shows are listed: a day heading, then a time and a title. */
 function paradeList(ctx, features, today) {
   return features
@@ -174,13 +199,15 @@ export function paradePage(ctx, org, { today }) {
     : '<div class="map-banner map-banner--empty" aria-hidden="true"></div>';
 
   const street = startStreet(fp.start_address);
-  const hero = `<section class="venue-hero parade-hero${hasBanner ? ' parade-hero--below' : ''} wrap">
+  const photos = photoStrip(ctx, org);
+  const hero = `<section class="venue-hero parade-hero${hasBanner ? ' parade-hero--below' : ''}${photos ? ' parade-hero--photos' : ''} wrap">
     <div class="venue-hero-text">
       <span class="badge">${esc(kind)}</span>
       <h1>${esc(org.name)}</h1>
       ${street ? `<p class="venue-address">Starts on ${esc(street)}</p>` : ''}
       ${org.website ? `<div class="button-row"><a class="button primary" href="${esc(org.website)}" rel="noopener">Visit website</a></div>` : ''}
     </div>
+    ${photos}
   </section>`;
 
   const upcoming = org.upcoming.length
@@ -228,7 +255,7 @@ ${siteFooter(ctx)}`;
     title,
     description,
     canonical,
-    image: paradeMapUrl(ctx, featured, 'dark', 'share'),
+    image: org.photos?.[0] ? `${config.siteUrl}/images/parades/${org.photos[0].file}` : paradeMapUrl(ctx, featured, 'dark', 'share'),
     bodyClass: 'page-venue page-parade',
     head: `<script type="application/ld+json">${jsonScript(jsonLd)}</script>`,
     body,
@@ -251,10 +278,12 @@ export function paradesPage(ctx, orgs, { today, sources = [] }) {
       : `Last listed ${dt.toFormat('LLL d, yyyy')}`;
     const where = startStreet(p.start_address) ?? p.area;
     const mapImg = (theme) => `<img class="only-${theme}" src="${esc(paradeMapUrl(ctx, f, theme, 'card'))}" alt="" width="400" height="225" loading="lazy" decoding="async">`;
-    // A map of the route, or of the area it starts in. Without a map token, the bare route shape.
-    const media = paradeMapUrl(ctx, f, 'dark', 'card')
-      ? `${mapImg('dark')}${mapImg('light')}`
-      : (routeSvg(f) ?? `<span class="card-placeholder" aria-hidden="true">♪</span>`);
+    // The organization's first photo. Without one, a map of the route or of the area it starts in, and without a map token, the bare route shape.
+    const photo = org.photos?.[0];
+    let media;
+    if (photo) media = `<img src="${photoUrl(ctx, smallPhoto(photo.file))}" alt="" loading="lazy" decoding="async">`;
+    else if (paradeMapUrl(ctx, f, 'dark', 'card')) media = `${mapImg('dark')}${mapImg('light')}`;
+    else media = routeSvg(f) ?? `<span class="card-placeholder" aria-hidden="true">♪</span>`;
     return `<li class="venue-card parade-card" data-name="${esc(`${org.name} ${p.name} ${where ?? ''}`.toLowerCase())}">
       <a href="${url(`/parades/${org.slug}`)}">
         <div class="card-media">${media}</div>

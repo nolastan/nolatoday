@@ -57,6 +57,50 @@
     }
   });
 
+  // ---- Photo strip: dots and arrows for a set of photos that already scrolls sideways ----
+  document.querySelectorAll('[data-photo-strip]').forEach(function (strip) {
+    var track = strip.querySelector('[data-photo-track]');
+    var count = track.children.length;
+    if (count < 2) return;
+    var calm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var dots = document.createElement('div');
+    dots.className = 'photo-dots';
+    dots.setAttribute('aria-hidden', 'true');
+    for (var i = 0; i < count; i++) dots.appendChild(document.createElement('span'));
+    function current() {
+      return Math.max(0, Math.min(count - 1, Math.round(track.scrollLeft / track.clientWidth)));
+    }
+    function go(index) {
+      track.scrollTo({ left: index * track.clientWidth, behavior: calm ? 'auto' : 'smooth' });
+    }
+    function step(label, cls, by) {
+      var button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'photo-step ' + cls;
+      button.setAttribute('aria-label', label);
+      button.textContent = by < 0 ? '\u2039' : '\u203a';
+      button.addEventListener('click', function () { go(current() + by); });
+      strip.appendChild(button);
+      return button;
+    }
+    var back = step('Previous photo', 'photo-step--back', -1);
+    var on = step('Next photo', 'photo-step--on', 1);
+    strip.appendChild(dots);
+    function mark() {
+      var at = current();
+      for (var i = 0; i < count; i++) dots.children[i].classList.toggle('is-current', i === at);
+      back.disabled = at === 0;
+      on.disabled = at === count - 1;
+    }
+    var waiting = false;
+    track.addEventListener('scroll', function () {
+      if (waiting) return;
+      waiting = true;
+      requestAnimationFrame(function () { waiting = false; mark(); });
+    }, { passive: true });
+    mark();
+  });
+
   // ---- Directory filter ------------------------------------------------------
   var filter = document.querySelector('[data-venue-filter]');
   if (filter) {

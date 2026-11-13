@@ -69,12 +69,14 @@ Each feature is a `LineString`, `MultiLineString` or `null` geometry in WGS84 wi
 
 A Carnival krewe is keyed by season (`muses-2026`), so a rescheduled parade replaces itself. Everything else is keyed by day (`nine-times-2026-11-22`). Parades the city stops serving stay in the file as last seen; a permit parade whose application is later denied, withdrawn or re-dated is removed.
 
-Two files are kept by hand, and neither holds dates, times or routes:
+Three files are kept by hand, and none holds dates, times or routes:
 
 - `data/parades/krewes.json` gives an organization a display name and slug and lists the city's labels that belong to it ("Muses" is the Krewe of Muses). Names only.
 - `data/parades/websites.json` maps an organization's slug to its own website, for the "Visit website" button on its page. It is a link out, not a source: nothing is read from those sites. Add an address only after confirming the site is the organization's own; leave an organization out when that can't be confirmed.
 
-On the site, a parade's start is shown as its street only ("Higgins Blvd", not the house number or place name in the city's `start_address`), and a parade with no route line gets a zoomed-out map of the area around its `start_point` in place of a route map.
+- `data/parades/photos.json` gives an organization up to three photos, best first, with the files in `public/images/parades/` (`<name>.jpg` at 1200px at most, plus `<name>-600.jpg`). Photos are pictures of past parades, not a source: no date, time or route is read from them. Each entry is `{ "file", "width", "height", "alt", "credit": { "author", "license", "licenseUrl", "source" (the photo's own page), "via"? } }`, and the build refuses a photo without its credit. Only freely licensed photos (CC BY, CC BY-SA, CC0, public domain) go in, and only when the photo's own page says which organization's parade it shows. Resize them, nothing more: cropping or editing a share-alike (`BY-SA`) photo makes the edited file share-alike too. The page crops with CSS only. The ones there now were chosen from Wikimedia Commons on 2026-11-13; organizations with nothing usable there have no entry.
+
+On the site, an organization's photos sit beside its name, each with its credit, and scroll sideways when there is more than one. The directory card shows the first photo, or the route map when there is none. A parade's start is shown as its street only ("Higgins Blvd", not the house number or place name in the city's `start_address`), and a parade with no route line gets a zoomed-out map of the area around its `start_point` in place of a route map.
 
 ## Gaps and what would close them
 
