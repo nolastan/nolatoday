@@ -14,6 +14,7 @@ import {
   paradeOrgs,
   startStreet,
   loadWebsites,
+  loadPhotos,
   parseClock,
   wallClockFromEpoch,
 } from '../scripts/lib/parades.js';
@@ -327,4 +328,57 @@ test('websites.json: every entry is an https address for an organization in the 
   const sites = loadWebsites();
   const slugs = new Set(JSON.parse(fs.readFileSync(new URL('../data/parades/parades.geojson', import.meta.url), 'utf8')).features.map((f) => f.properties.krewe_slug));
   for (const slug of Object.keys(sites)) assert.ok(slugs.has(slug), `${slug} is not a parade organization`);
+});
+
+test('site: photos show beside the name with their credit, and the directory card leads with the first one', () => {
+  const { features } = build();
+  const credit = { author: 'A. Photographer', license: 'CC BY-SA 4.0', licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0', source: 'https://commons.wikimedia.org/wiki/File:Example.jpg', via: 'Wikimedia Commons' };
+  const photo = (n) => ({ file: `mosaique-${n}.jpg`, width: 1200, height: 800, alt: `Photo ${n}`, credit });
+  const ctx = {
+    config: { siteName: 'NOLA.Today', siteUrl: 'https://nola.today', repo: 'x/y', mapbox: { token: 'pk.test', styleDark: 'u/dark', styleLight: 'u/light' } },
+    url: (p) => p,
+    asset: (p) => p,
+  };
+  const pageFor = (photos, slug = 'mosaique') => {
+    const orgs = paradeOrgs(features, '2026-11-12', { photos });
+    return { orgs, page: paradePage(ctx, orgs.find((o) => o.slug === slug), { today: '2026-11-12' }) };
+  };
+
+  // Several photos: a strip, each photo with its own credit, and the route map still on the page.
+  const three = pageFor({ mosaique: [photo(1), photo(2), photo(3)] });
+  assert.match(three.page, /data-photo-strip/);
+  assert.equal(three.page.match(/<figure class="photo-slide">/g).length, 3);
+  assert.equal(three.page.match(/Photo by <a href="https:\/\/commons\.wikimedia\.org\/wiki\/File:Example\.jpg" rel="noopener">A\. Photographer<\/a>, <a href="https:\/\/creativecommons\.org\/licenses\/by-sa\/4\.0" rel="license noopener">CC BY-SA 4\.0<\/a>, via Wikimedia Commons/g).length, 3);
+  assert.match(three.page, /Map of the Krewe Mosaique route/);
+  assert.match(three.page, /<meta property="og:image" content="https:\/\/nola\.today\/images\/parades\/mosaique-1\.jpg"/);
+
+  // One photo needs no strip.
+  const one = pageFor({ mosaique: [photo(1)] });
+  assert.doesNotMatch(one.page, /data-photo-strip/);
+  assert.match(one.page, /src="\/images\/parades\/mosaique-1-600\.jpg"/);
+
+  // No photos: the page is as it was.
+  assert.doesNotMatch(pageFor({}).page, /parade-photos|photo-slide/);
+
+  // The directory shows the first photo where there is one, and the map where there is not.
+  const directory = paradesPage(ctx, one.orgs, { today: '2026-11-12', sources: [] });
+  const cardOf = (slug) => directory.split('<li class="venue-card').find((c) => c.includes(`href="/parades/${slug}"`));
+  assert.match(cardOf('mosaique'), /<div class="card-media"><img src="\/images\/parades\/mosaique-1-600\.jpg"/);
+  assert.doesNotMatch(cardOf('mosaique'), /api\.mapbox\.com/);
+  assert.match(cardOf('nine-times'), /<div class="card-media"><img class="only-dark" src="https:\/\/api\.mapbox\.com/);
+});
+
+test('photos.json: every photo is on disk with a credit, for an organization in the data', () => {
+  const photos = loadPhotos();
+  const slugs = new Set(JSON.parse(fs.readFileSync(new URL('../data/parades/parades.geojson', import.meta.url), 'utf8')).features.map((f) => f.properties.krewe_slug));
+  const used = new Set();
+  for (const [slug, list] of Object.entries(photos)) {
+    assert.ok(slugs.has(slug), `${slug} is not a parade organization`);
+    for (const photo of list) {
+      used.add(photo.file).add(photo.file.replace(/\.jpg$/, '-600.jpg'));
+    }
+  }
+  // Nothing in the folder that no page shows.
+  const dir = new URL('../public/images/parades/', import.meta.url);
+  for (const file of fs.existsSync(dir) ? fs.readdirSync(dir) : []) assert.ok(used.has(file), `public/images/parades/${file} is not in photos.json`);
 });

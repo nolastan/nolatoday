@@ -7,15 +7,19 @@
  * feature may come from anywhere but an official source response. See
  * docs/parades.md for the rules.
  */
+import fs from 'node:fs';
 import path from 'node:path';
 import { DateTime } from 'luxon';
-import { DATA_DIR, readJSON } from './data.js';
+import { DATA_DIR, ROOT, readJSON } from './data.js';
 import { ZONE } from './time.js';
 
 export const PARADES_DIR = path.join(DATA_DIR, 'parades');
 export const PARADES_FILE = path.join(PARADES_DIR, 'parades.geojson');
 export const KREWES_FILE = path.join(PARADES_DIR, 'krewes.json');
 export const WEBSITES_FILE = path.join(PARADES_DIR, 'websites.json');
+export const PHOTOS_FILE = path.join(PARADES_DIR, 'photos.json');
+export const PHOTOS_DIR = path.join(ROOT, 'public/images/parades');
+export const MAX_PHOTOS = 3;
 
 /** The official sources the pipeline reads. `id` is what a feature's `source_layer` refers to. */
 export const SOURCES = {
@@ -532,6 +536,37 @@ export function loadWebsites() {
   return sites;
 }
 
+/**
+ * Photos of each organization's parades, by slug, best first. Hand-kept, and never a source of parade
+ * data. Every photo is someone else's work under a free license, so each one has to say whose it is.
+ */
+export function loadPhotos() {
+  const photos = readJSON(PHOTOS_FILE, {});
+  for (const [slug, list] of Object.entries(photos)) {
+    const bad = (why) => {
+      throw new Error(`photos.json: ${slug}: ${why}`);
+    };
+    if (!Array.isArray(list) || !list.length || list.length > MAX_PHOTOS) bad(`needs one to ${MAX_PHOTOS} photos`);
+    for (const photo of list) {
+      if (!/^[a-z0-9-]+\.jpg$/.test(photo.file ?? '')) bad(`"${photo.file}" is not a .jpg file name`);
+      for (const f of [photo.file, photo.file.replace(/\.jpg$/, '-600.jpg')]) {
+        if (!fs.existsSync(path.join(PHOTOS_DIR, f))) bad(`public/images/parades/${f} not found`);
+      }
+      if (!(photo.width > 0 && photo.height > 0)) bad(`${photo.file} needs width and height`);
+      if (!photo.alt) bad(`${photo.file} needs alt text`);
+      const c = photo.credit ?? {};
+      if (!c.author || !c.license) bad(`${photo.file} needs credit.author and credit.license`);
+      for (const key of ['licenseUrl', 'source']) {
+        if (!/^https:\/\//.test(c[key] ?? '')) bad(`${photo.file} credit.${key} must be an https address`);
+      }
+      for (const key of Object.keys(c)) {
+        if (!['author', 'license', 'licenseUrl', 'source', 'via'].includes(key)) bad(`${photo.file} has an unknown credit field "${key}"`);
+      }
+    }
+  }
+  return photos;
+}
+
 /** What to call a parade on the site: the krewe's name when registered, else the city's label. */
 export function displayName(properties) {
   return properties.krewe ?? properties.name;
@@ -564,7 +599,7 @@ export function startStreet(address) {
  * Parades grouped by the organization that puts them on, for the site's pages:
  * one page per krewe or club, holding every parade of theirs the city has listed.
  */
-export function paradeOrgs(features, today, { websites = {} } = {}) {
+export function paradeOrgs(features, today, { websites = {}, photos = {} } = {}) {
   const orgs = new Map();
   for (const f of features) {
     const p = f.properties;
@@ -581,6 +616,7 @@ export function paradeOrgs(features, today, { websites = {} } = {}) {
     org.name = displayName(org.featured.properties);
     org.category = org.featured.properties.category;
     org.website = websites[org.slug] ?? null;
+    org.photos = photos[org.slug] ?? [];
     out.push(org);
   }
   // Soonest upcoming first, then the rest by most recent.

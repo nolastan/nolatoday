@@ -15,7 +15,7 @@ import { isScheduleUrl, venuePageUrls } from './lib/normalize.js';
 import { venuePage } from '../src/templates/venue.js';
 import { homePage, venuesPage, redirectPage, notFoundPage, privacyPage, contactPage } from '../src/templates/pages.js';
 import { paradePage, paradesPage } from '../src/templates/parade.js';
-import { PARADES_FILE, SOURCES, loadParades, loadWebsites, paradeOrgs, mapParade } from './lib/parades.js';
+import { PARADES_FILE, SOURCES, loadParades, loadWebsites, loadPhotos, paradeOrgs, mapParade } from './lib/parades.js';
 
 const OUT = path.join(ROOT, '_site');
 const config = readJSON(path.join(ROOT, 'site.config.json'));
@@ -143,7 +143,7 @@ function main() {
   }
 
   // Parades: a directory, a page per krewe or club, and the combined data for anyone who wants it.
-  const orgs = paradeOrgs(parades, startOfToday, { websites: loadWebsites() });
+  const orgs = paradeOrgs(parades, startOfToday, { websites: loadWebsites(), photos: loadPhotos() });
   const paradeSources = [
     { ...SOURCES.permits, note: 'Second lines, walking krewes and other public parades' },
     { ...SOURCES.open_data, note: 'Carnival parade routes and times' },

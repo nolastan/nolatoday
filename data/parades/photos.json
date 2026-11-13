@@ -1,0 +1,1456 @@
+{
+ "krewe-du-vieux": [
+  {
+   "file": "krewe-du-vieux-1.jpg",
+   "width": 1200,
+   "height": 900,
+   "alt": "Krewe du Vieux parade in New Orleans, 2010",
+   "credit": {
+    "author": "Infrogmation of New Orleans",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:KdV10KingFloatPull.JPG",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "krewe-du-vieux-2.jpg",
+   "width": 1200,
+   "height": 900,
+   "alt": "Krewe du Vieux parade in New Orleans, 2013",
+   "credit": {
+    "author": "Infrogmation of New Orleans",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:KdV13_Lineup_RoyalSt_Mama_Roux.JPG",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "krewe-du-vieux-3.jpg",
+   "width": 1200,
+   "height": 900,
+   "alt": "Krewe du Vieux parade in New Orleans, 2013",
+   "credit": {
+    "author": "Infrogmation of New Orleans",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:KdV13_Lineup_RoyalSt_Mishigas.JPG",
+    "via": "Wikimedia Commons"
+   }
+  }
+ ],
+ "chewbacchus": [
+  {
+   "file": "chewbacchus-1.jpg",
+   "width": 1200,
+   "height": 904,
+   "alt": "Intergalactic Krewe of Chewbacchus parade in New Orleans, 2023",
+   "credit": {
+    "author": "Cory Doctorow",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Brianiacs_5,_Chewbacchus,_New_Orleans,_Louisiana,_USA.jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "chewbacchus-2.jpg",
+   "width": 1200,
+   "height": 904,
+   "alt": "Intergalactic Krewe of Chewbacchus parade in New Orleans, 2023",
+   "credit": {
+    "author": "Cory Doctorow",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ark_of_the_Covenant,_Nola_Ram,_Chewbacchus,_New_Orleans,_Louisiana,_USA.jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "chewbacchus-3.jpg",
+   "width": 1200,
+   "height": 900,
+   "alt": "Intergalactic Krewe of Chewbacchus parade in New Orleans, 2015",
+   "credit": {
+    "author": "Infrogmation of New Orleans",
+    "license": "CC BY-SA 2.5",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+    "source": "https://commons.wikimedia.org/wiki/File:Chewbacchus15_Browncoats_23.jpg",
+    "via": "Wikimedia Commons"
+   }
+  }
+ ],
+ "cleopatra": [
+  {
+   "file": "cleopatra-1.jpg",
+   "width": 1200,
+   "height": 800,
+   "alt": "Krewe of Cleopatra parade in New Orleans, 2026",
+   "credit": {
+    "author": "James Jr1",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Krewe_of_Cleopatra_parade,_New_Orleans_Mardi_Gras_2026_-_12.jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "cleopatra-2.jpg",
+   "width": 1200,
+   "height": 800,
+   "alt": "Krewe of Cleopatra parade in New Orleans, 2026",
+   "credit": {
+    "author": "James Jr1",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Krewe_of_Cleopatra_parade,_New_Orleans_Mardi_Gras_2026_-_09.jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "cleopatra-3.jpg",
+   "width": 1200,
+   "height": 800,
+   "alt": "Krewe of Cleopatra parade in New Orleans, 2026",
+   "credit": {
+    "author": "James Jr1",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Krewe_of_Cleopatra_parade,_New_Orleans_Mardi_Gras_2026_-_21.jpg",
+    "via": "Wikimedia Commons"
+   }
+  }
+ ],
+ "pontchartrain": [
+  {
+   "file": "pontchartrain-1.jpg",
+   "width": 1200,
+   "height": 800,
+   "alt": "Krewe of Pontchartrain parade in New Orleans, 2010",
+   "credit": {
+    "author": "Derek Bridges",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ponchartrain_Parade_7.jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "pontchartrain-2.jpg",
+   "width": 1200,
+   "height": 800,
+   "alt": "Krewe of Pontchartrain parade in New Orleans, 2011",
+   "credit": {
+    "author": "Derek Bridges",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ponchartrain_Parde_St_Charles_2011_Hands.jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "pontchartrain-3.jpg",
+   "width": 1200,
+   "height": 800,
+   "alt": "Krewe of Pontchartrain parade in New Orleans, 2011",
+   "credit": {
+    "author": "Derek Bridges",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ponchartrain_5.jpg",
+    "via": "Wikimedia Commons"
+   }
+  }
+ ],
+ "carrollton": [
+  {
+   "file": "carrollton-1.jpg",
+   "width": 1200,
+   "height": 900,
+   "alt": "Krewe of Carrollton parade in New Orleans, 2006",
+   "credit": {
+    "author": "Infrogmation of New Orleans",
+    "license": "CC BY 2.5",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+    "source": "https://commons.wikimedia.org/wiki/File:CarrolltonBlueRoof19Feb06G.jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "carrollton-2.jpg",
+   "width": 1200,
+   "height": 900,
+   "alt": "Krewe of Carrollton parade in New Orleans, 2006",
+   "credit": {
+    "author": "Infrogmation of New Orleans",
+    "license": "CC BY 2.5",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+    "source": "https://commons.wikimedia.org/wiki/File:CarrolltonBlueRoof19Feb06M.jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "carrollton-3.jpg",
+   "width": 1200,
+   "height": 900,
+   "alt": "Krewe of Carrollton parade in New Orleans, 2006",
+   "credit": {
+    "author": "Infrogmation of New Orleans",
+    "license": "CC BY 2.5",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+    "source": "https://commons.wikimedia.org/wiki/File:CarrolltonBlueRoof19Feb06Z.jpg",
+    "via": "Wikimedia Commons"
+   }
+  }
+ ],
+ "barkus": [
+  {
+   "file": "barkus-1.jpg",
+   "width": 1200,
+   "height": 797,
+   "alt": "Mystic Krewe of Barkus parade in New Orleans, 2011",
+   "credit": {
+    "author": "Tulane Public Relations",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Barkus,_the_annual_dog_parade_during_Mardi_Gras_(5489781480).jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "barkus-2.jpg",
+   "width": 1200,
+   "height": 900,
+   "alt": "Mystic Krewe of Barkus parade in New Orleans, 2009",
+   "credit": {
+    "author": "Mark Gstohl",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Barkus_2009_-_New_Orleans_Dog_Parade_03.jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "barkus-3.jpg",
+   "width": 1200,
+   "height": 900,
+   "alt": "Mystic Krewe of Barkus parade in New Orleans, 2011",
+   "credit": {
+    "author": "NatalieMaynor",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Barkus_Parade_2011_paraders_on_leashes.jpg",
+    "via": "Wikimedia Commons"
+   }
+  }
+ ],
+ "druids": [
+  {
+   "file": "druids-1.jpg",
+   "width": 1200,
+   "height": 675,
+   "alt": "Krewe of Druids parade in New Orleans, 2017",
+   "credit": {
+    "author": "Miguel Discart",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2017-02-22_20-35-10_ILCE-6500_DSC03496_(44849256965).jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "druids-2.jpg",
+   "width": 1200,
+   "height": 675,
+   "alt": "Krewe of Druids parade in New Orleans, 2017",
+   "credit": {
+    "author": "Miguel Discart",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2017-02-22_21-05-46_ILCE-6500_DSC03777_(44849857935).jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "druids-3.jpg",
+   "width": 1200,
+   "height": 675,
+   "alt": "Krewe of Druids parade in New Orleans, 2017",
+   "credit": {
+    "author": "Miguel Discart",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2017-02-22_20-56-40_ILCE-6500_DSC03666_(30823072897).jpg",
+    "via": "Wikimedia Commons"
+   }
+  }
+ ],
+ "chaos": [
+  {
+   "file": "chaos-1.jpg",
+   "width": 1200,
+   "height": 675,
+   "alt": "Knights of Chaos parade in New Orleans, 2024",
+   "credit": {
+    "author": "Miguel Discart",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Knights_of_Chaos_parade,_New_Orleans_Mardi_Gras_2024-02-08_-_118.jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "chaos-2.jpg",
+   "width": 1200,
+   "height": 675,
+   "alt": "Knights of Chaos parade in New Orleans, 2024",
+   "credit": {
+    "author": "Miguel Discart",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Knights_of_Chaos_parade,_New_Orleans_Mardi_Gras_2024-02-08_-_179.jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "chaos-3.jpg",
+   "width": 1200,
+   "height": 900,
+   "alt": "Knights of Chaos parade in New Orleans, 2007",
+   "credit": {
+    "author": "Infrogmation of New Orleans",
+    "license": "CC BY 2.5",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+    "source": "https://commons.wikimedia.org/wiki/File:KChaos07CityOfNewOrelansTub.jpg",
+    "via": "Wikimedia Commons"
+   }
+  }
+ ],
+ "babylon": [
+  {
+   "file": "babylon-1.jpg",
+   "width": 1200,
+   "height": 900,
+   "alt": "Knights of Babylon parade in New Orleans, 2009",
+   "credit": {
+    "author": "Infrogmation of New Orleans",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:King_Babylon%27s_Paiges.jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "babylon-2.jpg",
+   "width": 1200,
+   "height": 675,
+   "alt": "Knights of Babylon parade in New Orleans, 2024",
+   "credit": {
+    "author": "Miguel Discart",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Knights_of_Babylon_parade,_New_Orleans_2024-02-08_-_102.jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "babylon-3.jpg",
+   "width": 1200,
+   "height": 675,
+   "alt": "Knights of Babylon parade in New Orleans, 2024",
+   "credit": {
+    "author": "Miguel Discart",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Knights_of_Babylon_parade,_New_Orleans_2024-02-08_-_128.jpg",
+    "via": "Wikimedia Commons"
+   }
+  }
+ ],
+ "muses": [
+  {
+   "file": "muses-1.jpg",
+   "width": 1200,
+   "height": 675,
+   "alt": "Krewe of Muses parade in New Orleans, 2017",
+   "credit": {
+    "author": "Miguel Discart",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2017-02-23_22-11-32_ILCE-6500_DSC07274_(45722442772).jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "muses-2.jpg",
+   "width": 1200,
+   "height": 675,
+   "alt": "Krewe of Muses parade in New Orleans, 2017",
+   "credit": {
+    "author": "Miguel Discart",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2017-02-23_22-06-01_ILCE-6500_DSC07218_(45722359652).jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "muses-3.jpg",
+   "width": 1200,
+   "height": 675,
+   "alt": "Krewe of Muses parade in New Orleans, 2017",
+   "credit": {
+    "author": "Miguel Discart",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2017-02-23_21-52-42_ILCE-6500_DSC07122_(31901047788).jpg",
+    "via": "Wikimedia Commons"
+   }
+  }
+ ],
+ "hermes": [
+  {
+   "file": "hermes-1.jpg",
+   "width": 1200,
+   "height": 675,
+   "alt": "Knights of Hermes parade in New Orleans, 2017",
+   "credit": {
+    "author": "Miguel Discart",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2017-02-24_20-37-20_ILCE-6500_DSC09933_(43997270560).jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "hermes-2.jpg",
+   "width": 1200,
+   "height": 675,
+   "alt": "Knights of Hermes parade in New Orleans, 2017",
+   "credit": {
+    "author": "Miguel Discart",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2017-02-24_20-57-28_ILCE-6500_DSC00133_(43997857460).jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "hermes-3.jpg",
+   "width": 1200,
+   "height": 675,
+   "alt": "Knights of Hermes parade in New Orleans, 2017",
+   "credit": {
+    "author": "Miguel Discart",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2017-02-24_20-36-37_ILCE-6500_DSC09921_(43997215140).jpg",
+    "via": "Wikimedia Commons"
+   }
+  }
+ ],
+ "pygmalion": [
+  {
+   "file": "pygmalion-1.jpg",
+   "width": 1200,
+   "height": 900,
+   "alt": "Krewe of Pygmalion parade in New Orleans, 2022",
+   "credit": {
+    "author": "Bart Everson",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Hecate_Helps_Demeter_Search_for_Persephone_-_Krewe_of_Pygmalion_parade,_New_Orleans.jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "pygmalion-2.jpg",
+   "width": 1200,
+   "height": 800,
+   "alt": "Krewe of Pygmalion parade in New Orleans, 2011",
+   "credit": {
+    "author": "Derek Bridges",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Pygmalion_2_parade,_New_Orleans.jpg",
+    "via": "Wikimedia Commons"
+   }
+  }
+ ],
+ "krewe-detat": [
+  {
+   "file": "krewe-detat-1.jpg",
+   "width": 1200,
+   "height": 675,
+   "alt": "Krewe d'Etat parade in New Orleans, 2024",
+   "credit": {
+    "author": "Miguel Discart",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Krewe_d%27Etat_parade,_New_Orleans_Mardi_Gras_2024-02-09_-_174.jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "krewe-detat-2.jpg",
+   "width": 1200,
+   "height": 675,
+   "alt": "Krewe d'Etat parade in New Orleans, 2024",
+   "credit": {
+    "author": "Miguel Discart",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Krewe_d%27Etat_parade,_New_Orleans_Mardi_Gras_2024-02-09_-_120.jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "krewe-detat-3.jpg",
+   "width": 1200,
+   "height": 900,
+   "alt": "Krewe d'Etat parade in New Orleans, 2007",
+   "credit": {
+    "author": "Infrogmation of New Orleans",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:KdEtat07Skeleton2ndLine1.jpg",
+    "via": "Wikimedia Commons"
+   }
+  }
+ ],
+ "morpheus": [
+  {
+   "file": "morpheus-1.jpg",
+   "width": 1200,
+   "height": 675,
+   "alt": "Krewe of Morpheus parade in New Orleans, 2024",
+   "credit": {
+    "author": "Miguel Discart",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Krewe_of_Morpheus,_New_Orleans_Carnival_2024-02-09_-_11.jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "morpheus-2.jpg",
+   "width": 1200,
+   "height": 675,
+   "alt": "Krewe of Morpheus parade in New Orleans, 2024",
+   "credit": {
+    "author": "Miguel Discart",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Krewe_of_Morpheus,_New_Orleans_Carnival_2024-02-09_-_119.jpg",
+    "via": "Wikimedia Commons"
+   }
+  }
+ ],
+ "iris": [
+  {
+   "file": "iris-1.jpg",
+   "width": 1200,
+   "height": 675,
+   "alt": "Krewe of Iris parade in New Orleans, 2017",
+   "credit": {
+    "author": "Miguel Discart",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2017-02-25_13-53-41_ILCE-6500_DSC01927_(30837171877).jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "iris-2.jpg",
+   "width": 1200,
+   "height": 675,
+   "alt": "Krewe of Iris parade in New Orleans, 2017",
+   "credit": {
+    "author": "Miguel Discart",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2017-02-25_13-55-26_ILCE-6500_1975_DxO_(44864135965).jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "iris-3.jpg",
+   "width": 1200,
+   "height": 675,
+   "alt": "Krewe of Iris parade in New Orleans, 2017",
+   "credit": {
+    "author": "Miguel Discart",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2017-02-25_13-33-01_ILCE-6500_DSC01717_(45726342792).jpg",
+    "via": "Wikimedia Commons"
+   }
+  }
+ ],
+ "tucks": [
+  {
+   "file": "tucks-1.jpg",
+   "width": 1200,
+   "height": 675,
+   "alt": "Krewe of Tucks parade in New Orleans, 2017",
+   "credit": {
+    "author": "Miguel Discart",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2017-02-25_16-13-13_ILCE-6500_DSC03192_(45779953431).jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "tucks-2.jpg",
+   "width": 1200,
+   "height": 675,
+   "alt": "Krewe of Tucks parade in New Orleans, 2017",
+   "credit": {
+    "author": "Miguel Discart",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2017-02-25_16-10-50_ILCE-6500_DSC03167_(44866885865).jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "tucks-3.jpg",
+   "width": 1200,
+   "height": 675,
+   "alt": "Krewe of Tucks parade in New Orleans, 2017",
+   "credit": {
+    "author": "Miguel Discart",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2017-02-25_16-05-25_ILCE-6500_DSC03102_(43962370280).jpg",
+    "via": "Wikimedia Commons"
+   }
+  }
+ ],
+ "endymion": [
+  {
+   "file": "endymion-1.jpg",
+   "width": 1200,
+   "height": 900,
+   "alt": "Krewe of Endymion parade in New Orleans, 2020",
+   "credit": {
+    "author": "Bart Everson",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:All_Hail_the_Monkey_God_-_Krewe_of_Endymion_parade,_New_Orleans_2020.jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "endymion-2.jpg",
+   "width": 1200,
+   "height": 801,
+   "alt": "Krewe of Endymion parade in New Orleans, 2010",
+   "credit": {
+    "author": "coffee shop soulja",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Endymion_2010_Parade_New_Orleans_Mid-City_03.jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "endymion-3.jpg",
+   "width": 1200,
+   "height": 815,
+   "alt": "Krewe of Endymion parade in New Orleans, 1992",
+   "credit": {
+    "author": "Infrogmation of New Orleans",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Endymion1992_Begging.jpg",
+    "via": "Wikimedia Commons"
+   }
+  }
+ ],
+ "okeanos": [
+  {
+   "file": "okeanos-1.jpg",
+   "width": 1200,
+   "height": 900,
+   "alt": "Krewe of Okeanos parade in New Orleans, 2014",
+   "credit": {
+    "author": "Bart Everson",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mardi_Gras_Recursive_2014.jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "okeanos-2.jpg",
+   "width": 1200,
+   "height": 900,
+   "alt": "Krewe of Okeanos parade in New Orleans, 2020",
+   "credit": {
+    "author": "Bart Everson",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Trojan_Horse_-_Okeanos_Parade,_New_Orleans_Mardi_Gras_2020.jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "okeanos-3.jpg",
+   "width": 1200,
+   "height": 792,
+   "alt": "Krewe of Okeanos parade in New Orleans, around 1986",
+   "credit": {
+    "author": "Sydney Byrd, US National Park Service",
+    "license": "Public domain",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:King_Okeanos_float,_New_Orleans_Mardi_Gras.jpg",
+    "via": "Wikimedia Commons"
+   }
+  }
+ ],
+ "mid-city": [
+  {
+   "file": "mid-city-1.jpg",
+   "width": 1200,
+   "height": 673,
+   "alt": "Krewe of Mid-City parade in New Orleans, 2013",
+   "credit": {
+    "author": "Miguel Discart",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Day_Parades_on_Canal_Street_-_New_Orleans_Mardi_Gras_2013_by_Miguel_Discart_07.jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "mid-city-2.jpg",
+   "width": 1200,
+   "height": 900,
+   "alt": "Krewe of Mid-City parade in New Orleans, 2006",
+   "credit": {
+    "author": "Infrogmation of New Orleans",
+    "license": "CC BY 2.5",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+    "source": "https://commons.wikimedia.org/wiki/File:MidCity06NapoleonBand2.jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "mid-city-3.jpg",
+   "width": 1200,
+   "height": 900,
+   "alt": "Krewe of Mid-City parade in New Orleans, 2006",
+   "credit": {
+    "author": "Infrogmation of New Orleans",
+    "license": "CC BY 2.5",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+    "source": "https://commons.wikimedia.org/wiki/File:MidCity06NapoleonG4.jpg",
+    "via": "Wikimedia Commons"
+   }
+  }
+ ],
+ "thoth": [
+  {
+   "file": "thoth-1.jpg",
+   "width": 1200,
+   "height": 673,
+   "alt": "Krewe of Thoth parade in New Orleans, 2013",
+   "credit": {
+    "author": "Miguel Discart",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Day_Parades_on_Canal_Street_-_New_Orleans_Mardi_Gras_2013_by_Miguel_Discart_04.jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "thoth-2.jpg",
+   "width": 1200,
+   "height": 787,
+   "alt": "Krewe of Thoth parade in New Orleans, 1998",
+   "credit": {
+    "author": "Infrogmation of New Orleans",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:His_Magestie%27s_Bandwagon_-_Thoth_Parade,_New_Orleans_1998.jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "thoth-3.jpg",
+   "width": 1200,
+   "height": 900,
+   "alt": "Krewe of Thoth parade in New Orleans, 2008",
+   "credit": {
+    "author": "Infrogmation of New Orleans",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Krewe_of_Thoth_parade_on_Magazine_Street,_Uptown_New_Orleans_2008_04.jpg",
+    "via": "Wikimedia Commons"
+   }
+  }
+ ],
+ "bacchus": [
+  {
+   "file": "bacchus-1.jpg",
+   "width": 1200,
+   "height": 800,
+   "alt": "Krewe of Bacchus parade in New Orleans, 2025",
+   "credit": {
+    "author": "Mobilus In Mobili",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Krewe_Bacchus_New_Orleans_Mardi_Gras_2025.jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "bacchus-2.jpg",
+   "width": 1200,
+   "height": 960,
+   "alt": "Krewe of Bacchus parade in New Orleans, 2009",
+   "credit": {
+    "author": "Carnaval.com Studios",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Bacchus_Parade_2009_New_Orleans_07.jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "bacchus-3.jpg",
+   "width": 1200,
+   "height": 900,
+   "alt": "Krewe of Bacchus parade in New Orleans, 2009",
+   "credit": {
+    "author": "Carnaval.com Studios",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Bacchus_Parade_2009_New_Orleans_15.jpg",
+    "via": "Wikimedia Commons"
+   }
+  }
+ ],
+ "proteus": [
+  {
+   "file": "proteus-1.jpg",
+   "width": 1200,
+   "height": 675,
+   "alt": "Krewe of Proteus parade in New Orleans, 2017",
+   "credit": {
+    "author": "Miguel Discart",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2017-02-27_19-35-07_ILCE-6500_DSC05749_(45737701912).jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "proteus-2.jpg",
+   "width": 1200,
+   "height": 675,
+   "alt": "Krewe of Proteus parade in New Orleans, 2017",
+   "credit": {
+    "author": "Miguel Discart",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2017-02-27_19-46-06_ILCE-6500_5830_DxO_(44875003965).jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "proteus-3.jpg",
+   "width": 1200,
+   "height": 675,
+   "alt": "Krewe of Proteus parade in New Orleans, 2017",
+   "credit": {
+    "author": "Miguel Discart",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2017-02-27_19-48-17_ILCE-6500_5855_DxO_(43970781300).jpg",
+    "via": "Wikimedia Commons"
+   }
+  }
+ ],
+ "orpheus": [
+  {
+   "file": "orpheus-1.jpg",
+   "width": 1200,
+   "height": 675,
+   "alt": "Krewe of Orpheus parade in New Orleans, 2017",
+   "credit": {
+    "author": "Miguel Discart",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2017-02-27_21-24-40_ILCE-6500_DSC06591_(45739554902).jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "orpheus-2.jpg",
+   "width": 1200,
+   "height": 675,
+   "alt": "Krewe of Orpheus parade in New Orleans, 2017",
+   "credit": {
+    "author": "Miguel Discart",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2017-02-27_21-23-59_ILCE-6500_DSC06576_(43972392980).jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "orpheus-3.jpg",
+   "width": 1200,
+   "height": 675,
+   "alt": "Krewe of Orpheus parade in New Orleans, 2017",
+   "credit": {
+    "author": "Miguel Discart",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2017-02-27_21-09-07_ILCE-6500_DSC06407_(45064444394).jpg",
+    "via": "Wikimedia Commons"
+   }
+  }
+ ],
+ "zulu": [
+  {
+   "file": "zulu-1.jpg",
+   "width": 1200,
+   "height": 675,
+   "alt": "Zulu Social Aid & Pleasure Club parade in New Orleans, 2017",
+   "credit": {
+    "author": "Miguel Discart",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2017-02-28_11-05-38_ILCE-6500_DSC07635_(30852034487).jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "zulu-2.jpg",
+   "width": 1200,
+   "height": 675,
+   "alt": "Zulu Social Aid & Pleasure Club parade in New Orleans, 2017",
+   "credit": {
+    "author": "Miguel Discart",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2017-02-28_11-02-36_ILCE-6500_DSC07615_(31920577268).jpg",
+    "via": "Wikimedia Commons"
+   }
+  }
+ ],
+ "rex": [
+  {
+   "file": "rex-1.jpg",
+   "width": 1200,
+   "height": 800,
+   "alt": "Rex parade in New Orleans, 2011",
+   "credit": {
+    "author": "Carol M. Highsmith",
+    "license": "Public domain",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Mardi_Gras_Parade,_New_Orleans,_Louisiana_(LOC).jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "rex-2.jpg",
+   "width": 1200,
+   "height": 776,
+   "alt": "Rex parade in New Orleans, 2006",
+   "credit": {
+    "author": "Carol M. Highsmith",
+    "license": "Public domain",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:RexBandwagon2006Highsmith.jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "rex-3.jpg",
+   "width": 1200,
+   "height": 609,
+   "alt": "Rex parade in New Orleans, 2006",
+   "credit": {
+    "author": "Carol M. Highsmith",
+    "license": "Public domain",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:RexParade2006NewcombPotteryFloatHighsmith.jpg",
+    "via": "Wikimedia Commons"
+   }
+  }
+ ],
+ "black-men-of-labor": [
+  {
+   "file": "black-men-of-labor-1.jpg",
+   "width": 1200,
+   "height": 900,
+   "alt": "Black Men of Labor SA&PC second line in New Orleans, 2009",
+   "credit": {
+    "author": "Marie Carianna",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:BMOL2009StClaudeLineupMCarianna.jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "black-men-of-labor-2.jpg",
+   "width": 1200,
+   "height": 800,
+   "alt": "Black Men of Labor SA&PC second line in New Orleans, 2009",
+   "credit": {
+    "author": "Derek Bridges",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:BMOL2009DSBNOLAGreggStaffordCraigKlein.jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "black-men-of-labor-3.jpg",
+   "width": 1200,
+   "height": 900,
+   "alt": "Black Men of Labor SA&PC second line in New Orleans, 2010",
+   "credit": {
+    "author": "satanoid",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Black_Men_of_Labor_Parade_New_Orleans_2010_St_Claude-McShane_14.jpg",
+    "via": "Wikimedia Commons"
+   }
+  }
+ ],
+ "perfect-gentlemen": [
+  {
+   "file": "perfect-gentlemen-1.jpg",
+   "width": 1200,
+   "height": 800,
+   "alt": "Perfect Gentlemen Social Aid & Pleasure Club second line in New Orleans, 2010",
+   "credit": {
+    "author": "Derek Bridges",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Perfect_Gentlemen_TBC_Brass_Band_10.jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "perfect-gentlemen-2.jpg",
+   "width": 1200,
+   "height": 800,
+   "alt": "Perfect Gentlemen Social Aid & Pleasure Club second line in New Orleans, 2009",
+   "credit": {
+    "author": "Derek Bridges",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Perfect_Gentlemen_SA%26PC_with_We_Are_One_Brass_Band.jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "perfect-gentlemen-3.jpg",
+   "width": 1200,
+   "height": 800,
+   "alt": "Perfect Gentlemen Social Aid & Pleasure Club second line in New Orleans, 2010",
+   "credit": {
+    "author": "Derek Bridges",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Perfect_Gentlemen_TBC_Brass_Band_15.jpg",
+    "via": "Wikimedia Commons"
+   }
+  }
+ ],
+ "undefeated-divas-and-gents": [
+  {
+   "file": "undefeated-divas-and-gents-1.jpg",
+   "width": 1200,
+   "height": 800,
+   "alt": "Undefeated Divas and Gents SA & PC second line in New Orleans, 2010",
+   "credit": {
+    "author": "Derek Bridges",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Undefeated_Divas_%26_Gents_Stooges_13_Bandwagon.jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "undefeated-divas-and-gents-2.jpg",
+   "width": 1200,
+   "height": 800,
+   "alt": "Undefeated Divas and Gents SA & PC second line in New Orleans, 2010",
+   "credit": {
+    "author": "Derek Bridges",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Undefeated_Divas_%26_Gents_Stooges_2.jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "undefeated-divas-and-gents-3.jpg",
+   "width": 1200,
+   "height": 800,
+   "alt": "Undefeated Divas and Gents SA & PC second line in New Orleans, 2010",
+   "credit": {
+    "author": "Derek Bridges",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Undefeated_Divas_%26_Gents_Stooges_7.jpg",
+    "via": "Wikimedia Commons"
+   }
+  }
+ ],
+ "young-men-olympian": [
+  {
+   "file": "young-men-olympian-1.jpg",
+   "width": 1200,
+   "height": 795,
+   "alt": "Young Men Olympian SA & PC second line in New Orleans, 2015",
+   "credit": {
+    "author": "VeryBusyPeople",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:New_Orleans-_YMO_Jr._141st_annual_second_line_parade.jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "young-men-olympian-2.jpg",
+   "width": 1200,
+   "height": 800,
+   "alt": "Young Men Olympian SA & PC second line in New Orleans, 2011",
+   "credit": {
+    "author": "Derek Bridges",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Young_Men_Olympian_Jr_127th_Annual_Parade_1.jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "young-men-olympian-3.jpg",
+   "width": 1200,
+   "height": 800,
+   "alt": "Young Men Olympian SA & PC second line in New Orleans, 2011",
+   "credit": {
+    "author": "Derek Bridges",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Hot_8_at_Young_Men_Olympian_Jr_127th_Annual_Parade_1.jpg",
+    "via": "Wikimedia Commons"
+   }
+  }
+ ],
+ "original-men-pigeon-town-steppers": [
+  {
+   "file": "original-men-pigeon-town-steppers-1.jpg",
+   "width": 1200,
+   "height": 900,
+   "alt": "Original Men Pigeon Town Steppers S.A. & P.C second line in New Orleans, 2007",
+   "credit": {
+    "author": "Infrogmation of New Orleans",
+    "license": "CC BY 2.5",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+    "source": "https://commons.wikimedia.org/wiki/File:PigeonTownSteppers2007Officers.jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "original-men-pigeon-town-steppers-2.jpg",
+   "width": 1200,
+   "height": 1051,
+   "alt": "Original Men Pigeon Town Steppers S.A. & P.C second line in New Orleans, 2007",
+   "credit": {
+    "author": "Infrogmation of New Orleans",
+    "license": "CC BY 2.5",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+    "source": "https://commons.wikimedia.org/wiki/File:PigeonTownSteppers07CostumeCouple.jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "original-men-pigeon-town-steppers-3.jpg",
+   "width": 1200,
+   "height": 900,
+   "alt": "Original Men Pigeon Town Steppers S.A. & P.C second line in New Orleans, 2007",
+   "credit": {
+    "author": "Infrogmation of New Orleans",
+    "license": "CC BY 2.5",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+    "source": "https://commons.wikimedia.org/wiki/File:PigeontownSteppers07FountainbleauA.jpg",
+    "via": "Wikimedia Commons"
+   }
+  }
+ ],
+ "zulu-anniversary": [
+  {
+   "file": "zulu-anniversary-1.jpg",
+   "width": 1200,
+   "height": 900,
+   "alt": "Zulu SA &PC Anniversary second line in New Orleans, 2010",
+   "credit": {
+    "author": "Infrogmation of New Orleans",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:ZuluAnniversaryParade2010StBernardAvRallysFans.JPG",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "zulu-anniversary-2.jpg",
+   "width": 1200,
+   "height": 900,
+   "alt": "Zulu SA &PC Anniversary second line in New Orleans, 2010",
+   "credit": {
+    "author": "Infrogmation of New Orleans",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:ZuluAnniversaryParade2010StBernardAv504Fashion.JPG",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "zulu-anniversary-3.jpg",
+   "width": 1200,
+   "height": 900,
+   "alt": "Zulu SA &PC Anniversary second line in New Orleans, 2010",
+   "credit": {
+    "author": "Infrogmation of New Orleans",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:ZuluAnniversaryParade2010StBernardAvRascalsRallys.JPG",
+    "via": "Wikimedia Commons"
+   }
+  }
+ ],
+ "uptown-swingers": [
+  {
+   "file": "uptown-swingers-1.jpg",
+   "width": 1200,
+   "height": 799,
+   "alt": "Uptown Swingers SA & PC second line in New Orleans, 2008",
+   "credit": {
+    "author": "Derek Bridges",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Uptown_Swingers_S.A._%26_P.C._%2B_TBC_Brass_Band.jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "uptown-swingers-2.jpg",
+   "width": 1200,
+   "height": 799,
+   "alt": "Uptown Swingers SA & PC second line in New Orleans, 2008",
+   "credit": {
+    "author": "Derek Bridges",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:TBC_Brass_Band_horn_line_Uptown_Swingers_Social_Aid_%26_Pleasure_Club_parade,_New_Orleans_2008.jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "uptown-swingers-3.jpg",
+   "width": 1200,
+   "height": 799,
+   "alt": "Uptown Swingers SA & PC second line in New Orleans, 2008",
+   "credit": {
+    "author": "Derek Bridges",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Uptown_Swingers_S.A._%26_P.C.jpg",
+    "via": "Wikimedia Commons"
+   }
+  }
+ ],
+ "oshun": [
+  {
+   "file": "oshun-1.jpg",
+   "width": 1200,
+   "height": 800,
+   "alt": "Krewe of Oshun parade in New Orleans, 2011",
+   "credit": {
+    "author": "Derek Bridges",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Oshun_2011_Shiny_Trinket.jpg",
+    "via": "Wikimedia Commons"
+   }
+  }
+ ],
+ "king-arthur": [
+  {
+   "file": "king-arthur-1.jpg",
+   "width": 1200,
+   "height": 797,
+   "alt": "Krewe of King Arthur parade in New Orleans, 2009",
+   "credit": {
+    "author": "Larry Johnson",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mardi_Gras_2009_Krewe_of_King_Arthur.jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "king-arthur-2.jpg",
+   "width": 1200,
+   "height": 797,
+   "alt": "Krewe of King Arthur parade in New Orleans, 2009",
+   "credit": {
+    "author": "Larry Johnson",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mardi_Gras_2009_Krewe_of_King_Arthur_Paulin_Clarinetist.jpg",
+    "via": "Wikimedia Commons"
+   }
+  }
+ ],
+ "alla": [
+  {
+   "file": "alla-1.jpg",
+   "width": 1200,
+   "height": 900,
+   "alt": "Krewe of Alla parade in New Orleans, 2009",
+   "credit": {
+    "author": "nola.agent",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mardi_Gras_Alla_2009_2.jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "alla-2.jpg",
+   "width": 1200,
+   "height": 900,
+   "alt": "Krewe of Alla parade in New Orleans, 2009",
+   "credit": {
+    "author": "nola.agent",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mardi_Gras_in_Algiers_NOLA_Alla_2009_004.jpg",
+    "via": "Wikimedia Commons"
+   }
+  }
+ ],
+ "single-ladies": [
+  {
+   "file": "single-ladies-1.jpg",
+   "width": 1200,
+   "height": 800,
+   "alt": "Single Ladies SA & PC second line in New Orleans, 2012",
+   "credit": {
+    "author": "Derek Bridges",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Single_Ladies_Second_Line_Hot_8_Brass_Band_4.jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "single-ladies-2.jpg",
+   "width": 1200,
+   "height": 800,
+   "alt": "Single Ladies SA & PC second line in New Orleans, 2012",
+   "credit": {
+    "author": "Derek Bridges",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Single_Ladies_Second_Line_Hot_8_Brass_Band_5.jpg",
+    "via": "Wikimedia Commons"
+   }
+  }
+ ],
+ "valley-of-silent-men": [
+  {
+   "file": "valley-of-silent-men-1.jpg",
+   "width": 1200,
+   "height": 800,
+   "alt": "Valley of Silent Men SA & PC second line in New Orleans, 2009",
+   "credit": {
+    "author": "Derek Bridges",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:ValleyOfSilentMenCentralCityFlag2009.jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "valley-of-silent-men-2.jpg",
+   "width": 1200,
+   "height": 800,
+   "alt": "Valley of Silent Men SA & PC second line in New Orleans, 2011",
+   "credit": {
+    "author": "Derek Bridges",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Valley_of_Silent_Men_S_%26_PC_2011_Second-line_5.jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "valley-of-silent-men-3.jpg",
+   "width": 1200,
+   "height": 800,
+   "alt": "Valley of Silent Men SA & PC second line in New Orleans, 2010",
+   "credit": {
+    "author": "Derek Bridges",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:TBC_Brass_Band_w_Valley_of_Silent_Men_Second_Line_1.jpg",
+    "via": "Wikimedia Commons"
+   }
+  }
+ ],
+ "perfect-gentlemen-fathers-day": [
+  {
+   "file": "perfect-gentlemen-1.jpg",
+   "width": 1200,
+   "height": 800,
+   "alt": "Perfect Gentlemen Father's Day parade in New Orleans, 2010",
+   "credit": {
+    "author": "Derek Bridges",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Perfect_Gentlemen_TBC_Brass_Band_10.jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "perfect-gentlemen-2.jpg",
+   "width": 1200,
+   "height": 800,
+   "alt": "Perfect Gentlemen Father's Day parade in New Orleans, 2009",
+   "credit": {
+    "author": "Derek Bridges",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Perfect_Gentlemen_SA%26PC_with_We_Are_One_Brass_Band.jpg",
+    "via": "Wikimedia Commons"
+   }
+  },
+  {
+   "file": "perfect-gentlemen-3.jpg",
+   "width": 1200,
+   "height": 800,
+   "alt": "Perfect Gentlemen Father's Day parade in New Orleans, 2010",
+   "credit": {
+    "author": "Derek Bridges",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Perfect_Gentlemen_TBC_Brass_Band_15.jpg",
+    "via": "Wikimedia Commons"
+   }
+  }
+ ]
+}
