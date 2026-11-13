@@ -2,16 +2,10 @@
   "venue": "marigny-opera-house",
   "events": [
     {
-      "id": "0db74f759cf1",
+      "id": "f65e51586005",
       "title": "Marigny Opera Ballet 2026-2027 Encore Subscription",
-      "start": "2026-11-12T12:00:00-06:00",
+      "start": "2026-11-13T12:00:00-06:00",
       "url": "https://marignyoperahouse.org/upcoming-events/marigny-opera-ballet-2026-2027-encore-subscription/"
-    },
-    {
-      "id": "6df64bbd7c92",
-      "title": "Americana: Tucker Fuller | Philip Glass",
-      "start": "2026-11-12T19:30:00-06:00",
-      "url": "https://marignyoperahouse.org/upcoming-events/americana-tucker-fuller-philip-glass/"
     },
     {
       "id": "1b1aab1f6a39",
@@ -72,6 +66,12 @@
       "title": "Die Sieben Todsünden",
       "start": "2026-12-13T16:00:00-06:00",
       "url": "https://marignyoperahouse.org/upcoming-events/die-sieben-todsunden-the-seven-deadly-sins/"
+    },
+    {
+      "id": "497bc7bc95bc",
+      "title": "Fashion Design Masterclass: Magdalene Paris",
+      "start": "2026-12-15T18:00:00-06:00",
+      "url": "https://marignyoperahouse.org/upcoming-events/fashion-design-masterclass-magdalene-paris/"
     }
   ]
 }

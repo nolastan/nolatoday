@@ -2,27 +2,6 @@
   "venue": "the-allways-lounge",
   "events": [
     {
-      "id": "5d7d699d1dc5",
-      "title": "Van Ella Bordella (burlesque)",
-      "start": "2026-11-12T19:00:00-06:00",
-      "end": "2026-11-12T21:30:00-06:00",
-      "url": "https://tockify.com/allwayslounge/detail/1768/1794531600000"
-    },
-    {
-      "id": "39d084c25462",
-      "title": "Appletini Revue (Drag)",
-      "start": "2026-11-12T22:00:00-06:00",
-      "end": "2026-11-12T23:30:00-06:00",
-      "url": "https://tockify.com/allwayslounge/detail/4432/1794542400000"
-    },
-    {
-      "id": "db82aa8a1ed1",
-      "title": "FAT IV: Take Up Space!",
-      "start": "2026-11-12T22:30:00-06:00",
-      "end": "2026-11-12T23:30:00-06:00",
-      "url": "https://tockify.com/allwayslounge/detail/4600/1794544200000"
-    },
-    {
       "id": "d912c6470814",
       "title": "Dinner W/ Diva (burlesque fringe fest show)",
       "start": "2026-11-13T17:00:00-06:00",
@@ -1548,6 +1527,13 @@
       "url": "https://tockify.com/allwayslounge/detail/4414/1800592200000"
     },
     {
+      "id": "3eb803588c10",
+      "title": "Thru the AllWays Looking Glass (variety /drag/burlesque)",
+      "start": "2027-01-22T19:00:00-06:00",
+      "end": "2027-01-22T22:00:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/4351/1800666000000/12"
+    },
+    {
       "id": "534943e94327",
       "title": "The New Orleans High Society (live jazz & burlesque)",
       "start": "2027-01-22T20:00:00-06:00",
@@ -1868,6 +1854,27 @@
       "start": "2027-02-09",
       "allDay": true,
       "url": "https://tockify.com/allwayslounge/detail/4427/1802152800000"
+    },
+    {
+      "id": "88b38be08b83",
+      "title": "Lefty Lucy's Burlesque Bingo",
+      "start": "2027-02-10T18:00:00-06:00",
+      "end": "2027-02-10T20:00:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/3097/1802304000000/27"
+    },
+    {
+      "id": "7f3c184c2cee",
+      "title": "Rhinestone Cowpoke (line dancing class) Burlesque Bingo",
+      "start": "2027-02-10T19:00:00-06:00",
+      "end": "2027-02-10T21:00:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/1383/1802307600000"
+    },
+    {
+      "id": "ee1badf2fa26",
+      "title": "Whodunit (mystery dinner theater)",
+      "start": "2027-02-10T19:30:00-06:00",
+      "end": "2027-02-10T21:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/3993/1802309400000"
     }
   ]
 }

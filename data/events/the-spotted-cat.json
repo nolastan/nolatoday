@@ -2,16 +2,6 @@
   "venue": "the-spotted-cat",
   "events": [
     {
-      "id": "66f91c5b4a22",
-      "title": "Chris Christy Band",
-      "start": "2026-11-12T14:00:00-06:00"
-    },
-    {
-      "id": "a9ce5acaf7ea",
-      "title": "Miss Sophie Lee",
-      "start": "2026-11-12T18:00:00-06:00"
-    },
-    {
       "id": "c40a5400c113",
       "title": "Jumbo Shrimp",
       "start": "2026-11-12T22:00:00-06:00"

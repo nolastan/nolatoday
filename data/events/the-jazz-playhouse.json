@@ -2,12 +2,6 @@
   "venue": "the-jazz-playhouse",
   "events": [
     {
-      "id": "8b48139b9c99",
-      "title": "Brass-A-Holics at The Jazz Playhouse",
-      "start": "2026-11-12T19:30:00-06:00",
-      "url": "https://www.eventbrite.com/e/brass-a-holics-at-the-jazz-playhouse-tickets-1980262460326"
-    },
-    {
       "id": "86d43d72c249",
       "title": "Trixie Minx's Burlesque Ballroom at The Jazz Playhouse, feat. Romy Kaye",
       "start": "2026-11-13T20:00:00-06:00",
@@ -36,6 +30,12 @@
       "title": "Funkin' It Up with Big Sam at the Jazz Playhouse",
       "start": "2026-11-18T19:30:00-06:00",
       "url": "https://www.eventbrite.com/e/funkin-it-up-with-big-sam-at-the-jazz-playhouse-tickets-1721312755789"
+    },
+    {
+      "id": "188ef59794af",
+      "title": "Brass-A-Holics at The Jazz Playhouse",
+      "start": "2026-11-19T19:30:00-06:00",
+      "url": "https://www.eventbrite.com/e/brass-a-holics-at-the-jazz-playhouse-tickets-1980262460326"
     },
     {
       "id": "4737cc96d568",

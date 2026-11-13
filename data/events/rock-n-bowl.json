@@ -2,12 +2,6 @@
   "venue": "rock-n-bowl",
   "events": [
     {
-      "id": "8d13033b140b",
-      "title": "Geno Delafose & French Rockin' Boogie",
-      "start": "2026-11-12T20:00:00-06:00",
-      "url": "https://www.rocknbowl.com/event-details/geno-delafose-french-rockin-boogie-11-12-26-1"
-    },
-    {
       "id": "afd29f8db432",
       "title": "Rock Show NOLA: MTV Revisited",
       "start": "2026-11-13T20:30:00-06:00",
@@ -24,6 +18,12 @@
       "title": "Javier Olondo & AsheSon",
       "start": "2026-11-17T20:00:00-06:00",
       "url": "https://www.rocknbowl.com/event-details/javier-olondo-asheson-11-17-26"
+    },
+    {
+      "id": "fb3240b69836",
+      "title": "Tales from the Gig",
+      "start": "2026-11-18T19:00:00-06:00",
+      "url": "https://www.rocknbowl.com/event-details/tales-from-the-gig-11-18-26"
     },
     {
       "id": "5983d8bab524",
