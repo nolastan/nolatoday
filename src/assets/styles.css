@@ -133,18 +133,17 @@ h3 { font-size: 1.3rem; }
   text-decoration: none;
   white-space: nowrap;
 }
-.brand span { color: var(--marker); }
-.brand:hover { color: var(--accent); }
+.brand:hover { color: var(--text); }
 
 /* Header & footer ------------------------------------------------------- */
+/* Full width on every page, so the wordmark and nav sit in the same spot on the map and the indices. */
 .site-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  max-width: 1120px;
-  margin: 0 auto;
   padding: 14px 16px;
+  background: var(--bg);
 }
 .site-nav { display: flex; align-items: center; gap: 4px; }
 .site-nav a {
@@ -383,8 +382,10 @@ h3 { font-size: 1.3rem; }
 .not-found { padding: 64px 16px; }
 
 /* Map page -------------------------------------------------------------- */
-.page-map { overflow: hidden; }
-.map-page { position: fixed; inset: 0; }
+/* The site header sits on top and the map fills the rest of the screen. */
+.page-map { overflow: hidden; position: fixed; inset: 0; display: flex; flex-direction: column; }
+.page-map .site-header { flex: none; position: relative; z-index: 3; }
+.map-page { position: relative; flex: 1; min-height: 0; }
 /* Higher specificity than mapbox-gl.css's .mapboxgl-map { position: relative } */
 .map-page #map { position: absolute; inset: 0; width: 100%; height: 100%; background: var(--bg); }
 
@@ -394,22 +395,11 @@ h3 { font-size: 1.3rem; }
   top: 12px;
   left: 12px;
   right: 12px;
-  /* Equal side columns keep the day switcher centered on the screen. */
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: center;
-  gap: 10px;
+  display: flex;
+  justify-content: center;
   pointer-events: none;
 }
 .map-top > * { pointer-events: auto; }
-.map-brand {
-  justify-self: start;
-  padding: 6px 14px;
-  border-radius: 12px;
-  background: color-mix(in srgb, var(--bg) 82%, transparent);
-  backdrop-filter: blur(6px);
-  box-shadow: var(--shadow);
-}
 .segmented {
   display: inline-flex;
   padding: 4px;
@@ -433,11 +423,8 @@ h3 { font-size: 1.3rem; }
 .segmented button:hover { background: var(--bg-elev-2); }
 .segmented button[aria-selected='true'] { background: var(--marker); color: #1b1b1b; }
 .segmented button:disabled { opacity: 0.4; cursor: not-allowed; }
-/* Below this width the switcher can't sit centered beside the logo, so it drops to its own row. */
 @media (max-width: 620px) {
-  .map-top { display: flex; flex-wrap: wrap; }
-  .map-brand { font-size: 1.25rem; }
-  .segmented { order: 3; width: 100%; justify-content: center; }
+  .segmented { width: 100%; justify-content: center; }
   .segmented button { flex: 1; }
 }
 
@@ -457,28 +444,6 @@ h3 { font-size: 1.3rem; }
 }
 .map-status:empty { display: none; }
 
-.map-bottom {
-  position: absolute;
-  z-index: 2;
-  left: 0;
-  right: 0;
-  bottom: 28px;
-  display: flex;
-  justify-content: center;
-  pointer-events: none;
-}
-.pill-button {
-  pointer-events: auto;
-  padding: 10px 18px;
-  border-radius: 999px;
-  background: color-mix(in srgb, var(--bg) 85%, transparent);
-  backdrop-filter: blur(6px);
-  box-shadow: var(--shadow);
-  color: var(--text);
-  font-weight: 600;
-  text-decoration: none;
-}
-.pill-button:hover { color: var(--accent); }
 
 /* Markers: an orange dot that grows on hover; live venues ripple. */
 .marker {
@@ -580,7 +545,6 @@ h3 { font-size: 1.3rem; }
 
 /* Parades ---------------------------------------------------------------- */
 .site-nav a { white-space: nowrap; }
-.map-bottom { gap: 10px; }
 /* A route map keeps the picture's own shape so the route is never cropped away, and the title
    sits below it, not over it. Very wide screens trim the top and bottom, which the picture allows for. */
 .map-banner--route { width: 100%; height: auto; aspect-ratio: 1280 / 460; max-height: 460px; }
@@ -606,6 +570,12 @@ h3 { font-size: 1.3rem; }
   .site-header .brand { font-size: 1.25rem; }
   .site-nav { gap: 0; }
   .site-nav a { padding: 8px 7px; font-size: 0.95rem; }
+}
+
+/* The venue and parade indices use the full width of the screen. */
+.page-venues .wrap { max-width: none; }
+@media (min-width: 700px) {
+  .site-header, .page-venues .wrap { padding-inline: 32px; }
 }
 
 /* Privacy policy and other plain text pages */

@@ -57,7 +57,7 @@ export function siteHeader(ctx, { current } = {}) {
   const link = (href, label, key) =>
     `<a href="${url(href)}"${current === key ? ' aria-current="page"' : ''}>${label}</a>`;
   return `<header class="site-header">
-  <a class="brand" href="${url('/')}">NOLA<span>.</span>Today</a>
+  <a class="brand" href="${url('/')}">NOLA.Today</a>
   <nav class="site-nav" aria-label="Main">
     ${link('/', 'Map', 'map')}
     ${link('/venues', 'Venues', 'venues')}
@@ -71,7 +71,7 @@ export function siteFooter(ctx) {
   return `<footer class="site-footer">
   <div class="wrap footer-inner">
     <div>
-      <a class="brand" href="${url('/')}">NOLA<span>.</span>Today</a>
+      <a class="brand" href="${url('/')}">NOLA.Today</a>
       <p class="muted">Mapping live music in New Orleans. Schedules are gathered automatically from venue websites and ticketing pages — always confirm with the venue before heading out.</p>
       <p class="muted">Parade routes and times come from <a href="${url('/parades')}#sources">City of New Orleans records</a>, offered for general information only.</p>
     </div>
