@@ -4,11 +4,11 @@ import { ZONE } from '../../scripts/lib/time.js';
 
 export function homePage(ctx) {
   const { config, url, asset } = ctx;
-  const body = `<main class="map-page">
+  const body = `${siteHeader(ctx, { current: 'map' })}
+<main class="map-page">
   <h1 class="visually-hidden">Live music in New Orleans tonight</h1>
   <div id="map" class="map" role="region" aria-label="Map of New Orleans music venues with shows"></div>
   <div class="map-top">
-    <a class="brand map-brand" href="${url('/')}">NOLA<span>.</span>Today</a>
     <div class="segmented" role="tablist" aria-label="When">
       <button type="button" role="tab" data-day="live" aria-selected="false">Live</button>
       <button type="button" role="tab" data-day="0" aria-selected="true">Today</button>
@@ -16,10 +16,6 @@ export function homePage(ctx) {
     </div>
   </div>
   <p class="map-status" data-map-status role="status" aria-live="polite"></p>
-  <div class="map-bottom">
-    <a class="pill-button" href="${url('/venues')}">Venue directory</a>
-    <a class="pill-button" href="${url('/parades')}">Parades</a>
-  </div>
   <noscript><p class="map-status">The map needs JavaScript. Browse the <a href="${url('/venues')}">venue directory</a> instead.</p></noscript>
 </main>`;
   const mapConfig = {
