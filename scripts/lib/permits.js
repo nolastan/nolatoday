@@ -25,20 +25,101 @@ const NOT_A_PARADE = /\b(\d+k|run|race|pub\s?crawl|bar\s?crawl|crawl|bike ride|p
 /** Is this row a public parade written up in the city's parade format? Returns a reason when it is not. */
 export function permitVerdict(row) {
   const descr = row.descr ?? '';
-  const head = parseHeadline(descr);
+  const head = parseHeadline(descr) ?? parseProse(descr);
   if (!head) return 'not in the city’s "title - address - date" format';
   if (head.title.length > 90) return 'not in the city’s "title - address - date" format';
   const filed = DateTime.fromISO(String(row.d_create ?? '').slice(0, 10), { zone: ZONE });
   const days = filed.isValid ? DateTime.fromISO(head.date, { zone: ZONE }).diff(filed, 'days').days : 0;
   if (days < -60 || days > 550) return 'date does not fit when the application was filed';
-  if (!/^\s*(Route\b\s*:?|Formation\s*:)/im.test(descr)) return 'no Route or Formation line';
+  if (head.prose ? !proseRouteText(descr) : !/^\s*(Route\b\s*:?|Formation\s*:)/im.test(descr)) return 'no Route or Formation line';
   if (DEAD_STATUS.test(row.currentstatus ?? '')) return `status "${row.currentstatus}"`;
   if (!PARADE.test(head.title) && !CLUB.test(head.title)) return 'title is not a parade';
   if (NOT_A_PARADE.test(head.title) && !/parade/i.test(head.title.replace(/pub\s?crawl|block party/gi, ''))) return 'title is a race, crawl or party';
   if (/pub\s?crawl|bar\s?crawl/i.test(head.title)) return 'title is a race, crawl or party';
   if (PRIVATE.test(head.title)) return 'private event';
   if (!ORGANIZATION.test(head.title) && PRIVATE.test(descr)) return 'private event';
+  // An application the organizer wrote in their own words is taken only from a named organization.
+  if (head.prose && !ORGANIZATION.test(head.title)) return 'private event';
   return null;
+}
+
+const MONTHS = 'jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|june?|july?|aug(?:ust)?|sep(?:t(?:ember)?)?|oct(?:ober)?|nov(?:ember)?|dec(?:ember)?';
+const WRITTEN_DATE = new RegExp(`\\b(${MONTHS})\\.?\\s+(\\d{1,2})(?:st|nd|rd|th)?,?\\s+(\\d{4})\\b`, 'i');
+
+/**
+ * Now and then the organizer writes the application in their own words rather
+ * than city staff writing it up: "… Krewe de Jeanne d'Arc 2026 procession,
+ * January 6, 2026, …" and then the route one turn to a line. The title is the
+ * clause just before the first date written out in the opening line; the start
+ * address is the application's own.
+ */
+export function parseProse(descr) {
+  const opening = String(descr ?? '').split(/\r?\n/)[0];
+  const m = WRITTEN_DATE.exec(opening);
+  if (!m) return null;
+  const date = DateTime.fromFormat(`${m[1].slice(0, 3)} ${m[2]} ${m[3]}`, 'LLL d yyyy', { zone: ZONE, locale: 'en-US' });
+  if (!date.isValid) return null;
+  const title = opening.slice(0, m.index).split(/[.!?]\s+/).pop().replace(/[\s,;:-]+$/, '').replace(/\s+/g, ' ').trim();
+  if (title.length < 3) return null;
+  return { title, address: null, date: date.toISODate(), prose: true };
+}
+
+// "7:30 Right onto BIENVILLE (with traffic)", "STOP at 1116 CHARTRES", "Continue onto N PETERS".
+const LEADING_CLOCK = /^\s*(\d{1,2}(?:[:.]\d{2})?\s*(?:[ap]\.?m\.?)?)\s+(?=[A-Za-z])/i;
+const TURN_LINE = /^\s*(?:\d{1,2}(?:[:.]\d{2})?\s*(?:[ap]\.?m\.?)?\s+)?(?:right|left|continue|stop|u-?\s?turn|disband)\b/i;
+const CONTACT = /\(?\b\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}\b|\S+@\S+\.\S+/;
+
+/**
+ * The route of an organizer-written application: its turn-by-turn lines, from
+ * the first to the one that disbands. Lines between them that are not a turn or
+ * a stop (what happens at a stop, who attends) are left out, as are times and
+ * asides in parentheses. Nothing after a phone number or email is read.
+ */
+export function proseRouteText(descr) {
+  const lines = String(descr ?? '').split(/\r?\n/);
+  const at = lines.findIndex((l) => TURN_LINE.test(l));
+  if (at === -1) return null;
+  const kept = [];
+  for (const line of lines.slice(at)) {
+    if (CONTACT.test(line) || kept.length >= 20) break;
+    if (!TURN_LINE.test(line)) continue;
+    kept.push(line.replace(LEADING_CLOCK, '').replace(/\([^)]*\)/g, ' ').replace(/\s+/g, ' ').trim().replace(/[.,;]+$/, ''));
+    if (/\bdisband/i.test(line)) break;
+  }
+  const text = kept.join('. ');
+  return kept.length >= 2 ? `${text}.` : null;
+}
+
+/**
+ * Times in an organizer-written application. Only the end usually says AM or
+ * PM ("disband at 9pm"); a bare clock elsewhere ("5:30 -7:15 Line up", "7:30
+ * Right onto …") is read in whichever half of the day puts it within four hours
+ * before that end, and dropped when neither does.
+ */
+function proseTimes(descr, date) {
+  const day = DateTime.fromISO(date, { zone: ZONE });
+  const at = (clock) => day.set(clock);
+  const endClock = /\bdisband\w*\s+(?:at|by|around|about|approx\.?(?:imately)?)?\s*(\d{1,2}(?:[:.]\d{2})?\s*[ap]\.?m\b\.?)/i.exec(descr);
+  const end = endClock && parseClock(endClock[1].replace(/(\d)\.(\d)/, '$1:$2'));
+  if (!end) return { formation: null, start: null, end: null };
+  const endAt = at(end);
+  const bare = (text) => {
+    const m = /^(\d{1,2})(?:[:.](\d{2}))?$/.exec(String(text ?? '').trim());
+    if (!m) return null;
+    for (const hour of [Number(m[1]) % 12, (Number(m[1]) % 12) + 12]) {
+      const t = at({ hour, minute: Number(m[2] ?? 0) });
+      const before = endAt.diff(t, 'hours').hours;
+      if (before > 0 && before <= 4) return t;
+    }
+    return null;
+  };
+  const lines = String(descr).split(/\r?\n/);
+  const lineUp = lines.map((l) => /^\s*(\d{1,2}(?:[:.]\d{2})?)\b.*\bline\s?-?\s?up\b/i.exec(l)).find(Boolean);
+  const formation = lineUp ? bare(lineUp[1]) : null;
+  const first = lines.find((l) => TURN_LINE.test(l));
+  const start = first && LEADING_CLOCK.test(first) ? bare(LEADING_CLOCK.exec(first)[1]) : null;
+  const iso = (t) => (t ? t.toISO({ suppressMilliseconds: true }) : null);
+  return { formation: iso(formation), start: iso(start && (!formation || start > formation) ? start : null), end: iso(endAt) };
 }
 
 /** "Nine Times SA & PC Second Line Parade 2026- 3301 Higgins Blvd (Thrive 9th Ward) 11-22-2026" → title, address, date. */
@@ -64,7 +145,7 @@ export function parseHeadline(descr) {
 }
 
 const CLUB_WORDS = /\b(social\s+aid\s*(and|&)?\s*pleasure\s+club|social\s*(and|&)\s*pleasure\s+club|s\.?\s?a\.?\s?&\s?p\.?\s?c\.?|sapc)(?=\W|$)/gi;
-const FILLER = /\(\d+\)\s*hour|\(\d\)|\b\d+(st|nd|rd|th)\s+annual\b|\bannual\b|\b20\d\d\b|\bMG\b|\bmardi gras\b|second\s?-?\s?line+e?|\bparade\b|\bwalking\b|\bmarching\b/gi;
+const FILLER = /\(\d+\)\s*hour|\(\d\)|\b\d+(st|nd|rd|th)\s+annual\b|\bannual\b|\b20\d\d\b|\bMG\b|\bmardi gras\b|second\s?-?\s?line+e?|\bparade\b|\bprocession\b|\bwalking\b|\bmarching\b/gi;
 
 /** The organization behind a permit title: "Nine Times SA & PC Second Line Parade 2026" → "Nine Times SA & PC". */
 export function organizerName(title) {
@@ -121,10 +202,11 @@ export function fromPermit(row) {
   const reason = permitVerdict(row);
   if (reason) return { skipped: reason };
   const descr = row.descr;
-  const head = parseHeadline(descr);
-  const formation = labeledTime(descr, 'Formation', head.date);
-  const end = labeledTime(descr, 'End', head.date);
-  let start = labeledTime(descr, 'Start', head.date);
+  const head = parseHeadline(descr) ?? parseProse(descr);
+  const prose = head.prose ? proseTimes(descr, head.date) : null;
+  const formation = prose ? prose.formation : labeledTime(descr, 'Formation', head.date);
+  const end = prose ? prose.end : labeledTime(descr, 'End', head.date);
+  let start = prose ? prose.start : labeledTime(descr, 'Start', head.date);
   // A start before the line-up, long after it, or after the end is a slip of the keyboard ("11:00 PM"); better no time than a wrong one.
   if (start && ((formation && (start < formation || DateTime.fromISO(start).diff(DateTime.fromISO(formation), 'hours').hours > 4)) || (end && start >= end))) start = null;
   const lat = Number(row.latitude);
@@ -141,9 +223,9 @@ export function fromPermit(row) {
       start_time: start,
       end_time: end && end > (start ?? formation ?? end) ? end : null,
       formation_time: formation,
-      start_address: head.address,
+      start_address: head.address ?? (row.address ? String(row.address).replace(/\s+/g, ' ').trim() : null),
       start_point: Number.isFinite(lat) && Number.isFinite(lng) && lat > 29.8 && lat < 30.2 && lng > -90.35 && lng < -89.85 ? [Number(lng.toFixed(6)), Number(lat.toFixed(6))] : null,
-      route_text: routeText(descr),
+      route_text: head.prose ? proseRouteText(descr) : routeText(descr),
       permit_number: row.permitnumber ?? null,
       permit_status: row.currentstatus ?? null,
       filed: /^\d{4}-\d{2}-\d{2}/.exec(row.d_create ?? '')?.[0] ?? null,

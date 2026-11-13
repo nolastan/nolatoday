@@ -59,6 +59,10 @@ Verified on 2026-11-12:
 - Three kinds of inference are allowed, and each is recorded in `route_notes`: bridging a gap of a block or two that the text skips, following a street on where it changes name (Simon Bolivar becomes La Salle), and reading "to X" as a point passed rather than a turn when the next street is further along the same way.
 - Anything else fails the whole route. The parade is still published, with its start address as a point on the map. The city's route text stays in the data file (`route_text`) but is not shown on the page.
 
+Now and then an organizer writes the application in their own words instead of city staff writing it up (the Krewe de Jeanne d'Arc does). `parseProse` reads those only when the opening line names an organization (krewe, club, school and so on), a parade word and a date written out ("January 6, 2026"); the title is the clause just before that date and the start is the application's own address. The route is the lines that are a turn or a stop, from the first to the one that disbands; lines saying what happens at a stop, asides in parentheses and the logistics after the end are left out. Usually only the end time says AM or PM ("disband at 9pm"), so a bare clock for the line-up or the first turn is read in whichever half of the day puts it within four hours before the end, and dropped if neither does.
+
+When the text says the route turned onto a street, the next step sets off along that street the way it turned. Without that, "Left onto Decatur. Continue onto N Peters" went right instead, to the nearer place the two streets meet.
+
 Known limits: a route sheet "attached" to the application is not public, so those parades have no route. A description cut off mid-route in the city's record is drawn as far as it goes. Bump `TRACE_VERSION` in `scripts/lib/parades.js` whenever the tracer's output could change, so saved lines are redrawn.
 
 ## Fields
@@ -80,7 +84,7 @@ On the site, an organization's photos sit beside its name, each with its credit,
 
 ## Gaps and what would close them
 
-- Ten Orleans Parish walking krewes and most Twelfth Night groups are in no city layer. Some file permits that fit the format; the rest would need the organizers' own announcements.
+- Ten Orleans Parish walking krewes and most Twelfth Night groups are in no city layer. Some file permits (Mosaique, Joan of Arc); the rest would need the organizers' own announcements. Permits can come late: the Krewe de Jeanne d'Arc filed its 2026 application on January 2 for a January 6 parade, so its next date appears only days ahead.
 - About a third of written routes cannot be drawn with confidence, and six permit parades have no written route.
 - Suburban parades need Jefferson, St. Bernard and St. Tammany sources. None has been checked.
 - Whether next season's Carnival routes appear early enough to be useful will only be known in January.

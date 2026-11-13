@@ -298,5 +298,14 @@
    "Krewe of Boo"
   ],
   "category": "other"
+ },
+ {
+  "slug": "joan-of-arc",
+  "name": "Krewe de Jeanne d'Arc",
+  "match": [
+   "Joan of Arc",
+   "Jeanne d'Arc"
+  ],
+  "category": "mardi_gras"
  }
 ]

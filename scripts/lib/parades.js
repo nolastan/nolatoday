@@ -64,7 +64,7 @@ export const SOURCES = {
 };
 
 /** Bump when scripts/lib/route-trace.js changes what it draws, so saved traces are redone. */
-export const TRACE_VERSION = 1;
+export const TRACE_VERSION = 2;
 
 export const CATEGORIES = ['mardi_gras', 'second_line', 'other'];
 export const JURISDICTIONS = ['orleans_parish', 'jefferson_parish', 'other'];

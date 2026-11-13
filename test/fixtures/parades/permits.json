@@ -27,6 +27,15 @@
   "longitude": "-90.03298"
  },
  {
+  "permitnumber": "26-00042-SPMA",
+  "address": "200 Bienville St",
+  "currentstatus": "Permit not required",
+  "d_create": "2026-01-02T00:00:00.000",
+  "descr": "This is a walking procession in the French Quarter celebration the birthday of Saint Joan of Arc. Krewe de Jeanne d'Arc 2026 procession, January 6, 2026,\r\nRAIN DATE January 7, 2026\r\n5:30 -7:15 Line up at FRONT ST between CONTI and BIENVILLE \r\nWe lineup on the sidewalk then move into the street at 7:15.\r\n\r\n7:30 Right onto BIENVILLE (with traffic) \r\nRight onto CHARTRES (with traffic)  \r\nSTOP at HNOC/K PAUL BALCONY 416 CHARTRES\r\nThis location is the toast with French Consulate, Mayoral representatives, HNOC, and other dignitaries approximately 5 min.\r\nRight onto TOULOUSE (with traffic) \r\nLeft onto DECATUR (with traffic)  \r\nSTOP at OSCAR DUNNE AMPHITHEATER \r\nThis location is the coronation ceremony of King, Queen and Maid approximately 5 min.\r\nContinue onto N PETERS (with traffic)  \r\nLeft onto URSULINE (there's a short block that's against traffic at the French Market then with traffic)  \r\nRight on CHARTRES (with traffic) (verified with SWB that we turn and avoid the screen barricade) \r\nSTOP at 1116 CHARTRES/ST MARY'S  \r\nThis location is the Sword Blessing by the Catholic Clergy approximately 5 min.\r\nRight onto BARRACKS for 1 block (against traffic) \r\nRight on FRENCH MARKET PLACE to disband at 9pm. \r\nTrucks will be staged in the French Market vendor parking lot for prop removal.  We are a Non-profit, There is no admission for this public event, no venders, no amplification, no motorized vehicles. 1 tricycle, 2 pedicabs, 1 horse (with pooper scooper). We do not use packaging for o",
+  "latitude": "29.952566724357208",
+  "longitude": "-90.06439585087244"
+ },
+ {
   "permitnumber": "TEST-0001",
   "address": "1 Example St",
   "currentstatus": "Permit not required",
@@ -52,5 +61,14 @@
   "descr": "Non-profit, free to the public, food vendors, DJ, 1 stage, from 1pm - 6pm.",
   "latitude": "29.95",
   "longitude": "-90.07"
+ },
+ {
+  "permitnumber": "TEST-00004-SPMA",
+  "address": "1 Example St",
+  "currentstatus": "Permit Issued",
+  "d_create": "2026-04-01T00:00:00.000",
+  "descr": "We are walking from the hotel to dinner. Our family procession, May 2, 2026\r\n6:30 Right onto Royal\r\nLeft onto St Peter to disband at 7pm.",
+  "latitude": "29.957",
+  "longitude": "-90.065"
  }
 ]
