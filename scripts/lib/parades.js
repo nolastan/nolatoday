@@ -619,12 +619,13 @@ export function paradeOrgs(features, today, { websites = {}, photos = {} } = {})
     org.photos = photos[org.slug] ?? [];
     out.push(org);
   }
-  // Soonest upcoming first, then the rest by most recent.
+  // Soonest upcoming first. The rest: those with photos, then with a route, then neither; each by most recent.
+  const tier = (o) => (o.photos.length ? 0 : o.featured.geometry ? 1 : 2);
   return out.sort((a, b) => {
     const [na, nb] = [a.upcoming[0]?.properties.date, b.upcoming[0]?.properties.date];
     if (na && nb) return na.localeCompare(nb) || a.name.localeCompare(b.name);
     if (na || nb) return na ? -1 : 1;
-    return b.past[0].properties.date.localeCompare(a.past[0].properties.date) || a.name.localeCompare(b.name);
+    return tier(a) - tier(b) || b.past[0].properties.date.localeCompare(a.past[0].properties.date) || a.name.localeCompare(b.name);
   });
 }
 

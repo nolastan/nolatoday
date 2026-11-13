@@ -382,3 +382,18 @@ test('photos.json: every photo is on disk with a credit, for an organization in 
   const dir = new URL('../public/images/parades/', import.meta.url);
   for (const file of fs.existsSync(dir) ? fs.readdirSync(dir) : []) assert.ok(used.has(file), `public/images/parades/${file} is not in photos.json`);
 });
+
+test('site: with nothing coming, organizations with photos come first, then those with a route, then the rest', () => {
+  const line = { type: 'LineString', coordinates: [[-90.07, 29.95], [-90.06, 29.96]] };
+  const f = (slug, date, geometry = null) => ({ id: `${slug}-${date}`, geometry, properties: { krewe_slug: slug, name: slug, date, category: 'second_line' } });
+  const features = [
+    f('plain-recent', '2026-11-01'),
+    f('route-old', '2026-01-01', line),
+    f('route-recent', '2026-10-01', line),
+    f('photo-old', '2025-12-01'),
+    f('coming', '2026-12-01'),
+  ];
+  const photos = { 'photo-old': [{ file: 'x.jpg', credit: 'Someone' }] };
+  const orgs = paradeOrgs(features, '2026-11-12', { photos });
+  assert.deepEqual(orgs.map((o) => o.slug), ['coming', 'photo-old', 'route-recent', 'route-old', 'plain-recent']);
+});
