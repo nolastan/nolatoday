@@ -1,6 +1,6 @@
 # Parades
 
-Parade routes and schedules on NOLA.Today come from records the City of New Orleans publishes, and from nowhere else. `scripts/parades.js` pulls them into one file, `data/parades/parades.geojson`, which the site build turns into routes on the home map, a page per krewe or club (`/parades/<slug>`), the directory (`/parades`) and a public copy at `/parades.geojson`.
+Parade routes and schedules on NOLA.Today come from records the City of New Orleans publishes. The one exception is a date and time a krewe or club announces on its own website before the city has a record of the parade (see [Organizer announcements](#organizer-announcements)); routes never come from anywhere but the city. `scripts/parades.js` pulls them into one file, `data/parades/parades.geojson`, which the site build turns into routes on the home map, a page per krewe or club (`/parades/<slug>`), the directory (`/parades`) and a public copy at `/parades.geojson`.
 
 ```sh
 node scripts/parades.js --dry        # fetch and print, write nothing
@@ -13,7 +13,7 @@ node validation/parades/compare.js   # coverage and accuracy against the answer 
 
 ## The rules
 
-1. **Official sources only.** Every feature carries `source_url`, `sources` and `field_sources`, and `checkFeature` refuses anything whose sources are not City of New Orleans addresses. If a source is down or its fields change, the run stops without writing. It never fills a gap from somewhere else.
+1. **Official sources only, plus organizers' own announcements.** Every feature carries `source_url`, `sources` and `field_sources`, and `checkFeature` refuses anything whose sources are not City of New Orleans addresses, except an organizer announcement (`field_sources.schedule = 'organizer'`), which may carry no route or start point. If a source is down or its fields change, the run stops without writing. It never fills a gap from somewhere else.
 2. **Third-party sites are answer keys, not sources.** `validation/parades/` may read one to measure coverage. Nothing from it goes into `data/`, test fixtures or defaults. WWOZ is not read at all: its `robots.txt` turns automated readers away.
 3. **No route from third-party words.** A line is drawn from text only when the text is the city's own record (a permit application). If that cannot be done with confidence, the parade is published with `geometry: null` and the reason in `route_problem`.
 4. **Public parades only.** The permit feed is mostly weddings and private parties. Those are filtered out before anything is written or printed, and the raw rows live only in the uncommitted response cache. Only the route line of an application is ever published, never its staffing notes or contact details.
@@ -73,14 +73,30 @@ Each feature is a `LineString`, `MultiLineString` or `null` geometry in WGS84 wi
 
 A Carnival krewe is keyed by season (`muses-2026`), so a rescheduled parade replaces itself. Everything else is keyed by day (`nine-times-2026-11-22`). Parades the city stops serving stay in the file as last seen; a permit parade whose application is later denied, withdrawn or re-dated is removed.
 
-Three files are kept by hand, and none holds dates, times or routes:
+Four files are kept by hand. Only `announced.json` holds dates and times, and none holds routes:
 
 - `data/parades/krewes.json` gives an organization a display name and slug and lists the city's labels that belong to it ("Muses" is the Krewe of Muses). Names only.
 - `data/parades/websites.json` maps an organization's slug to its own website, for the "Visit website" button on its page. It is a link out, not a source: nothing is read from those sites. Add an address only after confirming the site is the organization's own; leave an organization out when that can't be confirmed.
 
+- `data/parades/announced.json` holds dates the organizers announced themselves; see below.
+
 - `data/parades/photos.json` gives an organization up to three photos, best first, with the files in `public/images/parades/` (`<name>.jpg` at 1200px at most, plus `<name>-600.jpg`). Photos are pictures of past parades, not a source: no date, time or route is read from them. Each entry is `{ "file", "width", "height", "alt", "credit": { "author", "license", "licenseUrl", "source" (the photo's own page), "via"? } }`, and the build refuses a photo without its credit. Only freely licensed photos (CC BY, CC BY-SA, CC0, public domain) go in, and only when the photo's own page says which organization's parade it shows. Resize them, nothing more: cropping or editing a share-alike (`BY-SA`) photo makes the edited file share-alike too. The page crops with CSS only. The ones there now were chosen from Wikimedia Commons on 2026-11-13; organizations with nothing usable there have no entry.
 
 On the site, an organization's photos sit beside its name, each with its credit, and scroll sideways when there is more than one. The directory card shows the first photo, or the route map when there is none. A parade's start is shown as its street only ("Higgins Blvd", not the house number or place name in the city's `start_address`), and a parade with no route line gets a zoomed-out map of the area around its `start_point` in place of a route map.
+
+## Organizer announcements
+
+Decided by Stan on 2026-11-13: when a krewe or club publishes the date and time of a parade on its own website and the city has no record of it yet, it can go in `data/parades/announced.json`:
+
+```json
+{ "krewe_slug": "joan-of-arc", "name": "19th Annual Joan of Arc Procession", "date": "2027-01-06", "start_time": "19:30", "end_time": "21:30", "source_url": "https://joanofarcparade.org/who-we-are/parade-route/", "checked": "2026-11-13" }
+```
+
+- The organization has to be in `krewes.json`, and `source_url` has to be on the site `websites.json` lists for it (the pull refuses anything else). Aggregators, news and WWOZ never count.
+- Date and times only (`HH:MM`, New Orleans time; `end_time` optional). A route, start point or map is never taken from an organizer's site, even when it publishes one. The page keeps showing the last route the city mapped for that organization.
+- `checked` is the date someone last read the page. Update the entry when the organizer changes the date, and remove it if they cancel.
+- As soon as the city has a record of that parade (same organization, same season for Carnival or same day otherwise), the city's record replaces the announcement. An entry removed from the file disappears from the data on the next pull.
+- On the page the source line credits "the organizer's website" for that date.
 
 ## Gaps and what would close them
 

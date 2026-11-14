@@ -17,6 +17,7 @@ export const PARADES_DIR = path.join(DATA_DIR, 'parades');
 export const PARADES_FILE = path.join(PARADES_DIR, 'parades.geojson');
 export const KREWES_FILE = path.join(PARADES_DIR, 'krewes.json');
 export const WEBSITES_FILE = path.join(PARADES_DIR, 'websites.json');
+export const ANNOUNCED_FILE = path.join(PARADES_DIR, 'announced.json');
 export const PHOTOS_FILE = path.join(PARADES_DIR, 'photos.json');
 export const PHOTOS_DIR = path.join(ROOT, 'public/images/parades');
 export const MAX_PHOTOS = 3;
@@ -53,6 +54,14 @@ export const SOURCES = {
     recordUrl: (permit) => `https://data.nola.gov/resource/aib5-en5t.json?permitnumber=${encodeURIComponent(permit)}`,
   },
   // Not a source of parades: the street lines that written routes are traced along.
+  // Not a feed: data/parades/announced.json, kept by hand from each organization's own website.
+  organizer: {
+    id: 'organizer',
+    title: 'Organizers’ own websites',
+    publisher: 'the krewe or club itself',
+    url: 'https://github.com/nolastan/nolatoday/blob/main/data/parades/announced.json',
+    layer: 'the organization’s own website (data/parades/announced.json)',
+  },
   centerlines: {
     id: 'centerlines',
     title: 'CNO Road Centerlines (100 block)',
@@ -379,12 +388,13 @@ export function buildFeatures(records, { krewes = [], sources }) {
   const index = krewesIndex(krewes);
   const groups = new Map();
   const conflicts = [];
+  const bySlug = new Map(krewes.map((k) => [k.slug, k]));
   for (const r of records) {
-    const krewe = index.find(r.organizer ?? r.name);
+    const krewe = r.source === 'organizer' ? (bySlug.get(r.slug) ?? null) : index.find(r.organizer ?? r.name);
     const slug = krewe?.slug ?? r.slug ?? slugify(r.name);
     if (!slug) continue;
     const season = r.date.slice(0, 4);
-    const category = r.source === 'permits' ? (krewe?.category ?? r.category) : categoryFor(r.name, krewe, 'mardi_gras');
+    const category = r.source === 'permits' ? (krewe?.category ?? r.category) : r.source === 'organizer' ? (krewe?.category ?? 'other') : categoryFor(r.name, krewe, 'mardi_gras');
     // A krewe rolls once a season, so a rescheduled parade replaces itself. Anything else is keyed by day.
     const id = category === 'mardi_gras' ? `${slug}-${season}` : `${slug}-${r.date}`;
     if (!groups.has(id)) groups.set(id, { id, slug, krewe, category, records: [] });
@@ -400,6 +410,12 @@ export function buildFeatures(records, { krewes = [], sources }) {
     const pm = g.records
       .filter((r) => r.source === 'permits')
       .sort((a, b) => Boolean(b.geometry) - Boolean(a.geometry) || Boolean(b.route_text) - Boolean(a.route_text) || (b.filed ?? '').localeCompare(a.filed ?? ''))[0];
+    // A date the organizer announced stands in only until the city has a record of the parade.
+    if (!od && !rw && !pm) {
+      const org = bySource('organizer');
+      if (org) features.push(organizerFeature(g, org));
+      continue;
+    }
     const preferRoutewiseTime = rw && (!od || newer(sources.routewise?.last_modified, sources.open_data?.last_modified));
     const timeRec = (preferRoutewiseTime ? [rw, od, pm] : [od, rw, pm]).find((r) => r?.start_time) ?? od ?? rw ?? pm;
     const geomRec = [od, rw, pm].find((r) => r?.geometry) ?? null;
@@ -465,6 +481,47 @@ export function buildFeatures(records, { krewes = [], sources }) {
   return { features, conflicts };
 }
 
+/** A parade the city has no record of yet, from the date and time its organizer published. Never a route. */
+function organizerFeature(g, r) {
+  return {
+    type: 'Feature',
+    id: g.id,
+    geometry: null,
+    properties: {
+      id: g.id,
+      name: r.name,
+      krewe: g.krewe?.name ?? null,
+      krewe_slug: g.slug,
+      category: g.category,
+      jurisdiction: 'orleans_parish',
+      date: r.date,
+      start_time: r.start_time,
+      end_time: r.end_time,
+      source_url: r.source_url,
+      source_layer: SOURCES.organizer.layer,
+      sources: [r.source_url],
+      field_sources: { geometry: null, schedule: 'organizer' },
+      retrieved_at: r.checked,
+      last_modified: null,
+      area: null,
+      formation: null,
+      disband: null,
+      num_floats: null,
+      start_address: null,
+      start_point: null,
+      formation_time: null,
+      route_text: null,
+      route_traced: false,
+      route_notes: [],
+      route_problem: null,
+      trace_version: null,
+      permit_number: null,
+      permit_status: null,
+      permit_filed: null,
+    },
+  };
+}
+
 const REQUIRED = ['id', 'name', 'krewe_slug', 'category', 'jurisdiction', 'date', 'source_url', 'source_layer', 'retrieved_at'];
 // nola.gov, or the city's own ArcGIS Online organization (the one Routewise is served from).
 const OFFICIAL_HOSTS = /^https:\/\/(([a-z0-9-]+\.)*nola\.gov\/|services\.arcgis\.com\/VhMjCzR3cIjEkh7L\/)/;
@@ -481,8 +538,14 @@ export function checkFeature(f) {
     if (p[key] != null && !DateTime.fromISO(p[key], { setZone: true }).isValid) problems.push(`bad ${key} "${p[key]}"`);
   }
   if (p.start_time && p.date && !p.start_time.startsWith(p.date)) problems.push('start_time is not on date');
-  for (const url of [p.source_url, ...(p.sources ?? [])]) {
-    if (url && !OFFICIAL_HOSTS.test(url)) problems.push(`source "${url}" is not a City of New Orleans address`);
+  if (p.field_sources?.schedule === 'organizer') {
+    // The organizer's own announcement: a date and time from its website, and nothing else.
+    for (const url of [p.source_url, ...(p.sources ?? [])]) if (url && !/^https:\/\//.test(url)) problems.push(`source "${url}" is not an https address`);
+    if (f.geometry != null || p.route_text || p.start_point) problems.push('an organizer announcement carries no route or start point');
+  } else {
+    for (const url of [p.source_url, ...(p.sources ?? [])]) {
+      if (url && !OFFICIAL_HOSTS.test(url)) problems.push(`source "${url}" is not a City of New Orleans address`);
+    }
   }
   if (f.geometry != null && !['LineString', 'MultiLineString'].includes(f.geometry.type)) problems.push(`geometry is a ${f.geometry.type}`);
   if (p.route_traced && !p.route_text) problems.push('traced route has no official route text behind it');
@@ -525,6 +588,43 @@ export function loadParades() {
 
 export function loadKrewes() {
   return readJSON(KREWES_FILE, []);
+}
+
+/**
+ * Parades the city has no record of yet, as their organizers announce them on their own websites
+ * (data/parades/announced.json). Dates and times only, never a route. Each entry's `source_url` has
+ * to be on the organization's own site as listed in websites.json, and `checked` says when someone
+ * last read it there. The city's record replaces an entry as soon as one appears.
+ */
+export function loadAnnounced({ entries = readJSON(ANNOUNCED_FILE, []), websites = loadWebsites(), krewes = loadKrewes() } = {}) {
+  const known = new Set(krewes.map((k) => k.slug));
+  const clock = (date, hhmm, key, slug) => {
+    if (hhmm == null) return null;
+    if (!/^\d{2}:\d{2}$/.test(hhmm)) throw new Error(`announced.json: ${slug} ${key} must be HH:MM, got "${hhmm}"`);
+    return DateTime.fromISO(`${date}T${hhmm}`, { zone: ZONE }).toISO({ suppressMilliseconds: true });
+  };
+  return entries.map((e) => {
+    const slug = e.krewe_slug;
+    if (!known.has(slug)) throw new Error(`announced.json: "${slug}" is not in krewes.json`);
+    const site = websites[slug];
+    if (!site) throw new Error(`announced.json: ${slug} has no confirmed website in websites.json`);
+    if (!e.source_url?.startsWith('https://') || new URL(e.source_url).hostname !== new URL(site).hostname) {
+      throw new Error(`announced.json: ${slug} source_url must be on its own site (${new URL(site).hostname}), got "${e.source_url}"`);
+    }
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(e.date ?? '') || !DateTime.fromISO(e.date).isValid) throw new Error(`announced.json: ${slug} has a bad date "${e.date}"`);
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(e.checked ?? '')) throw new Error(`announced.json: ${slug} needs "checked" (the date someone read the site)`);
+    if (!e.name) throw new Error(`announced.json: ${slug} needs a name`);
+    return {
+      source: 'organizer',
+      name: e.name,
+      slug,
+      date: e.date,
+      start_time: clock(e.date, e.start_time, 'start_time', slug),
+      end_time: clock(e.date, e.end_time, 'end_time', slug),
+      source_url: e.source_url,
+      checked: e.checked,
+    };
+  });
 }
 
 /** Each organization's own website, by slug. Hand-kept: a link out, never a source of parade data. */
@@ -612,7 +712,9 @@ export function paradeOrgs(features, today, { websites = {}, photos = {} } = {})
     org.upcoming = org.parades.filter((f) => f.properties.date >= today);
     org.past = org.parades.filter((f) => f.properties.date < today).reverse();
     // Named and categorized by the parade people are most likely here for: the next one, else the latest.
-    org.featured = org.upcoming[0] ?? org.past[0];
+    // A date the organizer announced has no map of its own; show the latest one the city mapped instead.
+    const placed = (f) => f && (f.geometry || f.properties.start_point);
+    org.featured = placed(org.upcoming[0]) || !org.upcoming.length ? (org.upcoming[0] ?? org.past[0]) : (org.past.find(placed) ?? org.upcoming[0]);
     org.name = displayName(org.featured.properties);
     org.category = org.featured.properties.category;
     org.website = websites[org.slug] ?? null;

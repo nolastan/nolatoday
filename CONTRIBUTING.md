@@ -155,7 +155,7 @@ Return an array of `{ title, start, end?, allDay?, url? }`. `start`/`end` may be
 
 ## Parades
 
-Parade data has its own pipeline and stricter sourcing rules than venues: official City of New Orleans records only. See [docs/parades.md](docs/parades.md) before changing `scripts/parades.js`, `scripts/lib/permits.js`, `scripts/lib/route-trace.js` or anything in `data/parades/`.
+Parade data has its own pipeline and stricter sourcing rules than venues: routes and nearly all dates from official City of New Orleans records only, plus dates organizers announce on their own sites (`data/parades/announced.json`). See [docs/parades.md](docs/parades.md) before changing `scripts/parades.js`, `scripts/lib/permits.js`, `scripts/lib/route-trace.js` or anything in `data/parades/`.
 
 ## Site code
 

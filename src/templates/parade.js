@@ -135,15 +135,21 @@ function paradeList(ctx, features, today) {
     .join('\n');
 }
 
-/** Links to the city records an organization's parades came from. */
-function sourceLinks(features) {
-  const seen = new Map();
+/** Where an organization's parades came from: city records, and any date its organizer announced first. */
+function sourceLine(features) {
+  const city = new Map();
+  const own = new Map();
   for (const f of features) {
     const p = f.properties;
+    if (p.field_sources?.schedule === 'organizer') {
+      if (!own.has(p.source_url)) own.set(p.source_url, 'the organizer’s website');
+      continue;
+    }
     const label = p.field_sources?.schedule === 'permits' ? `permit application ${p.permit_number}` : (SOURCES[p.field_sources?.schedule]?.title ?? 'official data');
-    if (!seen.has(p.source_url)) seen.set(p.source_url, label);
+    if (!city.has(p.source_url)) city.set(p.source_url, label);
   }
-  return [...seen].map(([href, label]) => `<a href="${esc(href)}" rel="noopener">${esc(label)}</a>`).join(', ');
+  const links = (m) => [...m].map(([href, label]) => `<a href="${esc(href)}" rel="noopener">${esc(label)}</a>`).join(', ');
+  return [city.size ? `City of New Orleans, ${links(city)}` : '', own.size ? `${links(own)} (dates the city has not listed yet)` : ''].filter(Boolean).join('; ');
 }
 
 function eventSchema(ctx, org, f) {
@@ -183,7 +189,7 @@ export function paradePage(ctx, org, { today }) {
     ? `${org.name} ${kind === 'Second line' ? 'Second Line' : 'Parade'} ${day(next.properties.date).toFormat('yyyy')} – Route & Start Time – NOLA.Today`
     : `${org.name} – New Orleans ${kind === 'Second line' ? 'Second Line' : 'Parade'} Route – NOLA.Today`;
   const description = next
-    ? `${org.name} ${kind.toLowerCase()} in New Orleans: ${when}${startStreet(next.properties.start_address) ? `, starting on ${startStreet(next.properties.start_address)}` : ''}. Route map and details from City of New Orleans records.`
+    ? `${org.name} ${kind.toLowerCase()} in New Orleans: ${when}${startStreet(next.properties.start_address) ? `, starting on ${startStreet(next.properties.start_address)}` : ''}. ${next.properties.field_sources?.schedule === 'organizer' ? 'Date from the organizer’s own website.' : 'Route map and details from City of New Orleans records.'}`
     : `${org.name} ${kind.toLowerCase()} in New Orleans. Last listed ${longDate(fp.date, today)}. Route map and details from City of New Orleans records.`;
 
   // One picture per theme, each with a 16:9 version for phones, so the route is never cropped away.
@@ -246,7 +252,7 @@ export function paradePage(ctx, org, { today }) {
   ${upcoming}
   ${past}
   <section class="wrap venue-foot muted">
-    <p>Source: City of New Orleans, ${sourceLinks([...org.upcoming, ...shownPast])}. <a href="${esc(reportUrl)}" rel="noopener">Report a problem with this page</a>.</p>
+    <p>Source: ${sourceLine([...org.upcoming, ...shownPast])}. <a href="${esc(reportUrl)}" rel="noopener">Report a problem with this page</a>.</p>
   </section>
 </main>
 ${siteFooter(ctx)}`;
@@ -313,7 +319,7 @@ export function paradesPage(ctx, orgs, { today, sources = [] }) {
   <p class="muted" data-venue-empty hidden>No parades match that search.</p>
   <section class="parade-attribution muted" id="sources">
     <h2>Where this comes from</h2>
-    <p>Everything here comes from records the City of New Orleans publishes:</p>
+    <p>Routes, and nearly every date and time, come from records the City of New Orleans publishes. When a krewe or club announces a parade on its own website before the city has a record of it, the date and time are shown from that site until the city’s record appears. Routes never come from anywhere but the city.</p>
     <ul>
       ${sources.map((s) => `<li><a href="${esc(s.url)}" rel="noopener">${esc(s.title)}</a>, ${esc(s.publisher)}${s.note ? `. ${esc(s.note)}` : ''}</li>`).join('\n      ')}
     </ul>

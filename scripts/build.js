@@ -149,6 +149,7 @@ function main() {
     { ...SOURCES.open_data, note: 'Carnival parade routes and times' },
     { ...SOURCES.routewise, note: 'Carnival times and services along the route' },
     { ...SOURCES.centerlines, note: 'The street map that written routes are drawn along' },
+    { ...SOURCES.organizer, note: 'Dates and times a krewe or club announced before the city listed them, never routes' },
   ];
   const paradeDirectory = paradesPage(ctx, orgs, { today: startOfToday, sources: paradeSources });
   write('parades.html', paradeDirectory);

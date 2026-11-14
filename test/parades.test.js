@@ -15,6 +15,7 @@ import {
   startStreet,
   loadWebsites,
   loadPhotos,
+  loadAnnounced,
   parseClock,
   wallClockFromEpoch,
 } from '../scripts/lib/parades.js';
@@ -429,4 +430,61 @@ test('site: with nothing coming, organizations with photos come first, then thos
   const photos = { 'photo-old': [{ file: 'x.jpg', credit: 'Someone' }] };
   const orgs = paradeOrgs(features, '2026-11-12', { photos });
   assert.deepEqual(orgs.map((o) => o.slug), ['coming', 'photo-old', 'route-recent', 'route-old', 'plain-recent']);
+});
+
+test('organizer announcements: a date and time from the organization’s own site, until the city has the parade', () => {
+  const websites = { 'joan-of-arc': 'https://joanofarcparade.org/' };
+  const krewesHere = [{ slug: 'joan-of-arc', name: "Krewe de Jeanne d'Arc", match: ['Joan of Arc', "Jeanne d'Arc"], category: 'mardi_gras' }];
+  const entry = { krewe_slug: 'joan-of-arc', name: 'Joan of Arc Procession', date: '2027-01-06', start_time: '19:30', end_time: '21:30', source_url: 'https://joanofarcparade.org/who-we-are/parade-route/', checked: '2026-11-13' };
+  const [announced] = loadAnnounced({ entries: [entry], websites, krewes: krewesHere });
+  assert.equal(announced.start_time, '2027-01-06T19:30:00-06:00');
+
+  // Only from the organization's own confirmed site, and only for an organization the data knows.
+  assert.throws(() => loadAnnounced({ entries: [{ ...entry, source_url: 'https://www.mardigrasneworleans.com/joan' }], websites, krewes: krewesHere }), /own site/);
+  assert.throws(() => loadAnnounced({ entries: [entry], websites: {}, krewes: krewesHere }), /no confirmed website/);
+  assert.throws(() => loadAnnounced({ entries: [{ ...entry, krewe_slug: 'nobody' }], websites, krewes: krewesHere }), /not in krewes\.json/);
+  assert.throws(() => loadAnnounced({ entries: [{ ...entry, start_time: '7:30 pm' }], websites, krewes: krewesHere }), /HH:MM/);
+
+  // On its own it becomes a parade with no route, sourced to the organizer's page.
+  const alone = buildFeatures([announced], { krewes: krewesHere, sources }).features;
+  assert.equal(alone.length, 1);
+  const f = alone[0];
+  assert.equal(f.id, 'joan-of-arc-2027');
+  assert.equal(f.geometry, null);
+  assert.equal(f.properties.krewe, "Krewe de Jeanne d'Arc");
+  assert.equal(f.properties.source_url, entry.source_url);
+  assert.deepEqual(f.properties.field_sources, { geometry: null, schedule: 'organizer' });
+  assert.deepEqual(checkFeature(f), []);
+  // It may never carry a route.
+  assert.match(checkFeature({ ...f, geometry: { type: 'LineString', coordinates: [[-90.06, 29.95], [-90.05, 29.96]] } }).join(), /no route/);
+
+  // Once the city has an application for that season, the city's record replaces it.
+  const { record } = fromPermit({ ...permit('This is a walking procession'), descr: permit('This is a walking procession').descr.replaceAll('2026', '2027'), d_create: '2027-01-02T00:00:00.000' });
+  const both = buildFeatures([announced, record], { krewes: krewesHere, sources }).features;
+  assert.equal(both.length, 1);
+  assert.equal(both[0].properties.field_sources.schedule, 'permits');
+  assert.equal(both[0].properties.source_url.includes('data.nola.gov'), true);
+});
+
+test('announced.json: every entry is on its organization’s own confirmed site', () => {
+  for (const r of loadAnnounced()) assert.ok(r.source_url.startsWith('https://'), r.slug);
+});
+
+test('site: a date from the organizer is credited to its site, and the page keeps the city’s last map', () => {
+  const krewesHere = [{ slug: 'joan-of-arc', name: "Krewe de Jeanne d'Arc", match: ['Joan of Arc', "Jeanne d'Arc"], category: 'mardi_gras' }];
+  const [announced] = loadAnnounced({
+    entries: [{ krewe_slug: 'joan-of-arc', name: 'Joan of Arc Procession', date: '2027-01-06', start_time: '19:30', source_url: 'https://joanofarcparade.org/who-we-are/parade-route/', checked: '2026-11-13' }],
+    websites: { 'joan-of-arc': 'https://joanofarcparade.org/' },
+    krewes: krewesHere,
+  });
+  const { record } = fromPermit(permit('This is a walking procession'));
+  record.geometry = { type: 'LineString', coordinates: [[-90.0642, 29.9526], [-90.0589, 29.9604]] };
+  const { features } = buildFeatures([announced, record], { krewes: krewesHere, sources });
+  const [org] = paradeOrgs(features, '2026-11-13');
+  assert.equal(org.upcoming[0].properties.field_sources.schedule, 'organizer');
+  assert.equal(org.featured.properties.id, 'joan-of-arc-2026');
+  const ctx = { config: { siteName: 'NOLA.Today', siteUrl: 'https://nola.today', repo: 'x/y', mapbox: { token: null } }, url: (p) => p, asset: (p) => p };
+  const page = paradePage(ctx, org, { today: '2026-11-13' });
+  assert.match(page, /Source: City of New Orleans, <a [^>]*>permit application 26-00042-SPMA<\/a>; <a href="https:\/\/joanofarcparade\.org\/who-we-are\/parade-route\/"[^>]*>the organizer’s website<\/a>/);
+  assert.match(page, /Date from the organizer’s own website/);
 });
