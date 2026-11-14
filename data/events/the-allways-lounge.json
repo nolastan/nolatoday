@@ -744,6 +744,13 @@
       "url": "https://tockify.com/allwayslounge/detail/2269/1797305400000"
     },
     {
+      "id": "5bad0b068824",
+      "title": "Blast from the Past (burlesque)",
+      "start": "2026-12-15T19:00:00-06:00",
+      "end": "2026-12-15T20:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/4633/1797382800000"
+    },
+    {
       "id": "19ce0d146ec8",
       "title": "Blue Christmas",
       "start": "2026-12-15T20:00:00-06:00",
@@ -931,6 +938,13 @@
       "start": "2026-12-23T19:00:00-06:00",
       "end": "2026-12-23T21:00:00-06:00",
       "url": "https://tockify.com/allwayslounge/detail/4299/1798074000000"
+    },
+    {
+      "id": "a2e56ea79d0f",
+      "title": "Danger Dolls (comedy & variety)",
+      "start": "2026-12-23T22:00:00-06:00",
+      "end": "2026-12-23T23:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/4634/1798084800000"
     },
     {
       "id": "d94953945e91",
@@ -1343,6 +1357,13 @@
       "start": "2027-01-14T19:30:00-06:00",
       "end": "2027-01-14T21:00:00-06:00",
       "url": "https://tockify.com/allwayslounge/detail/4570/1799976600000"
+    },
+    {
+      "id": "273379e4a8f1",
+      "title": "The Crossroads Cabaret",
+      "start": "2027-01-14T22:00:00-06:00",
+      "end": "2027-01-14T23:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/4632/1799985600000"
     },
     {
       "id": "efb110a0dc22",
@@ -1868,6 +1889,13 @@
       "start": "2027-02-11T19:30:00-06:00",
       "end": "2027-02-11T21:00:00-06:00",
       "url": "https://tockify.com/allwayslounge/detail/4570/1802395800000"
+    },
+    {
+      "id": "303d2d8f0068",
+      "title": "The Crossroads Cabaret",
+      "start": "2027-02-11T22:00:00-06:00",
+      "end": "2027-02-11T23:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/4632/1802404800000"
     }
   ]
 }

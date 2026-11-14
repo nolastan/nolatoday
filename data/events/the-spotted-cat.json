@@ -2,16 +2,6 @@
   "venue": "the-spotted-cat",
   "events": [
     {
-      "id": "b3f6c4c37fcf",
-      "title": "Ethan Santos",
-      "start": "2026-11-13T22:00:00-06:00"
-    },
-    {
-      "id": "e880ba1ae1e6",
-      "title": "New Orleans Cottonmouth Kings",
-      "start": "2026-11-13T22:00:00-06:00"
-    },
-    {
       "id": "28287045276d",
       "title": "Popcorn",
       "start": "2026-11-14T14:30:00-06:00"

@@ -2,13 +2,6 @@
   "venue": "maple-leaf-bar",
   "events": [
     {
-      "id": "67977a78b91c",
-      "title": "The Music of Phish in Honor of Mitch Frank",
-      "start": "2026-11-13T21:00:00-06:00",
-      "end": "2026-11-14T01:00:00-06:00",
-      "url": "https://www.mapleleafbar.com/events/the-music-of-phish-in-honor-of-mitch-frank"
-    },
-    {
       "id": "9809151289ac",
       "title": "She Might Be A Beast",
       "start": "2026-11-14T20:00:00-06:00",
@@ -42,6 +35,13 @@
       "start": "2026-11-17T20:30:00-06:00",
       "end": "2026-11-17T23:30:00-06:00",
       "url": "https://www.mapleleafbar.com/events/very-good-tuesday-ft-alex-wasily-ari-teitel-tony-hall-ivan-neville-alfred-jordan-aurelien-barnes-ian-neville"
+    },
+    {
+      "id": "75bf9f99f400",
+      "title": "Ashlar Organ Time",
+      "start": "2026-11-18T19:00:00-06:00",
+      "end": "2026-11-18T22:00:00-06:00",
+      "url": "https://www.mapleleafbar.com/events/ashlar-organ-time-2"
     }
   ]
 }
