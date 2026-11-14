@@ -423,9 +423,21 @@ h3 { font-size: 1.3rem; }
 .segmented button:hover { background: var(--bg-elev-2); }
 .segmented button[aria-selected='true'] { background: var(--marker); color: #1b1b1b; }
 .segmented button:disabled { opacity: 0.4; cursor: not-allowed; }
+/* On phones the map runs up behind the header, which turns translucent and blurs what's under it.
+   The time toggle then sits just below the header. */
 @media (max-width: 620px) {
-  .segmented { width: 100%; justify-content: center; }
-  .segmented button { flex: 1; }
+  .page-map .site-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: color-mix(in srgb, var(--bg) 62%, transparent);
+    -webkit-backdrop-filter: blur(14px) saturate(1.6);
+    backdrop-filter: blur(14px) saturate(1.6);
+    box-shadow: 0 1px 0 color-mix(in srgb, var(--text) 10%, transparent);
+  }
+  .page-map .site-nav a[aria-current='page'] { background: color-mix(in srgb, var(--bg-elev) 70%, transparent); }
+  .page-map .map-top { top: calc(var(--map-header-h, 60px) + 10px); }
 }
 
 .map-status {

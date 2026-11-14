@@ -13,6 +13,18 @@
     statusEl.innerHTML = html || '';
   }
 
+  // On phones the header floats over the map (see styles.css). Track how much of the map it
+  // covers so the time toggle can sit below it and fitted bounds stay clear of it.
+  var header = document.querySelector('.page-map .site-header');
+  function headerOverlap() {
+    return header && getComputedStyle(header).position === 'absolute' ? header.offsetHeight : 0;
+  }
+  function syncHeaderHeight() {
+    if (header) document.documentElement.style.setProperty('--map-header-h', header.offsetHeight + 'px');
+  }
+  syncHeaderHeight();
+  window.addEventListener('resize', syncHeaderHeight);
+
   if (!window.mapboxgl || !cfg.token) {
     setStatus('The map couldn’t load. Browse the <a href="' + cfg.base + '/venues">venue directory</a> instead.');
     return;
@@ -269,7 +281,7 @@
     } else {
       setStatus(dated ? 'Showing ' + dayFmt.format(new Date(day + 'T12:00:00Z')) + '.' : '');
       var pad = Math.max(40, Math.min(window.innerWidth, window.innerHeight) / 10);
-      map.fitBounds(bounds, { padding: { top: pad + 50, bottom: pad + 40, left: pad, right: pad }, maxZoom: 15, duration: 600 });
+      map.fitBounds(bounds, { padding: { top: pad + 50 + headerOverlap(), bottom: pad + 40, left: pad, right: pad }, maxZoom: 15, duration: 600 });
     }
   }
 
