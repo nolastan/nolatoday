@@ -2,12 +2,6 @@
   "venue": "preservation-hall",
   "events": [
     {
-      "id": "ad412f645068",
-      "title": "Preservation All-Stars ft. Mark Braud",
-      "start": "2026-11-13T17:00:00-06:00",
-      "url": "https://www.preservationhall.com/events/june-1st-preservation-all-stars-feat-mark-braud/"
-    },
-    {
       "id": "38e8d64214e2",
       "title": "Preservation All-Stars ft. Mark Braud",
       "start": "2026-11-14T14:30:00-06:00",

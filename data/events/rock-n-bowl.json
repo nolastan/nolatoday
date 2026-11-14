@@ -2,12 +2,6 @@
   "venue": "rock-n-bowl",
   "events": [
     {
-      "id": "afd29f8db432",
-      "title": "Rock Show NOLA: MTV Revisited",
-      "start": "2026-11-13T20:30:00-06:00",
-      "url": "https://www.rocknbowl.com/event-details/rock-show-nola-mtv-revisited-11-13-26"
-    },
-    {
       "id": "f77a5040f945",
       "title": "One Last Breath: Tribute to Creed",
       "start": "2026-11-14T21:30:00-06:00",
@@ -111,6 +105,12 @@
       "title": "The Chee Weez presents Rock Royalty",
       "start": "2026-12-19T20:30:00-06:00",
       "url": "https://www.rocknbowl.com/event-details/the-chee-weez-presents-rock-royalty-12-19-26"
+    },
+    {
+      "id": "d8027aeacc94",
+      "title": "Danica Hart & the Red Dirt Southern Revival",
+      "start": "2026-12-23T19:30:00-06:00",
+      "url": "https://www.rocknbowl.com/event-details/danica-hart-the-red-dirt-southern-revival-12-23-26"
     }
   ]
 }

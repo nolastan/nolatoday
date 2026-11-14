@@ -2,13 +2,6 @@
   "venue": "maple-leaf-bar",
   "events": [
     {
-      "id": "70b14cd2c214",
-      "title": "Scorpio Stinger with Pocket Chocolate",
-      "start": "2026-11-13T19:00:00-06:00",
-      "end": "2026-11-13T21:00:00-06:00",
-      "url": "https://www.mapleleafbar.com/events/scorpio-stinger-with-pocket-chocolate"
-    },
-    {
       "id": "67977a78b91c",
       "title": "The Music of Phish in Honor of Mitch Frank",
       "start": "2026-11-13T21:00:00-06:00",
@@ -42,6 +35,13 @@
       "start": "2026-11-16T22:00:00-06:00",
       "end": "2026-11-17T00:00:00-06:00",
       "url": "https://www.mapleleafbar.com/events/george-porter-jr-trio-ft-chris-adkins-10pm-5"
+    },
+    {
+      "id": "fcebbef5869a",
+      "title": "Very Good Tuesday Ft. Alex Wasily, Ari Teitel, Tony Hall, Ivan Neville, Alfred Jordan, Aurelien Barnes, Ian Neville",
+      "start": "2026-11-17T20:30:00-06:00",
+      "end": "2026-11-17T23:30:00-06:00",
+      "url": "https://www.mapleleafbar.com/events/very-good-tuesday-ft-alex-wasily-ari-teitel-tony-hall-ivan-neville-alfred-jordan-aurelien-barnes-ian-neville"
     }
   ]
 }

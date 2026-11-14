@@ -2,27 +2,6 @@
   "venue": "the-allways-lounge",
   "events": [
     {
-      "id": "d912c6470814",
-      "title": "Dinner W/ Diva (burlesque fringe fest show)",
-      "start": "2026-11-13T17:00:00-06:00",
-      "end": "2026-11-13T18:30:00-06:00",
-      "url": "https://tockify.com/allwayslounge/detail/4605/1794610800000"
-    },
-    {
-      "id": "eaf036c17795",
-      "title": "Queer Mountain (original queer storytelling)",
-      "start": "2026-11-13T19:00:00-06:00",
-      "end": "2026-11-13T20:30:00-06:00",
-      "url": "https://tockify.com/allwayslounge/detail/1504/1794618000000"
-    },
-    {
-      "id": "d77ea8400e5f",
-      "title": "Bayou Blues Burlesque",
-      "start": "2026-11-13T20:00:00-06:00",
-      "end": "2026-11-13T21:30:00-06:00",
-      "url": "https://tockify.com/allwayslounge/detail/3920/1794621600000"
-    },
-    {
       "id": "6d58b5048b26",
       "title": "Psychedelic Speakeasy (burlesque)",
       "start": "2026-11-13T22:30:00-06:00",
@@ -1875,6 +1854,20 @@
       "start": "2027-02-10T19:30:00-06:00",
       "end": "2027-02-10T21:30:00-06:00",
       "url": "https://tockify.com/allwayslounge/detail/3993/1802309400000"
+    },
+    {
+      "id": "876aa3e4baed",
+      "title": "Van Ella Bordella (burlesque)",
+      "start": "2027-02-11T19:00:00-06:00",
+      "end": "2027-02-11T21:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/1768/1802394000000"
+    },
+    {
+      "id": "a4ef77942c96",
+      "title": "Garden Variety (a botanical Burlesque)",
+      "start": "2027-02-11T19:30:00-06:00",
+      "end": "2027-02-11T21:00:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/4570/1802395800000"
     }
   ]
 }

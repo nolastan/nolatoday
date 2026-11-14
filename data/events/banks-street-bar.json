@@ -2,13 +2,6 @@
   "venue": "banks-street-bar",
   "events": [
     {
-      "id": "1c6369c28ae0",
-      "title": "Honest Man Happy Hour with Domenic Fusca",
-      "start": "2026-11-13T13:00:00-06:00",
-      "end": "2026-11-13T15:00:00-06:00",
-      "url": "https://www.banksstreetbarnola.net/event-details/honest-man-happy-hour-with-domenic-fusca-2026-11-13-13-00"
-    },
-    {
       "id": "cd5f2b3a58b6",
       "title": "Valerie Sassyfrass + Grits & Greens",
       "start": "2026-11-14T20:00:00-06:00",
@@ -28,6 +21,13 @@
       "start": "2026-11-19T20:00:00-06:00",
       "end": "2026-11-20T00:00:00-06:00",
       "url": "https://www.banksstreetbarnola.net/event-details/bimbo-oke-2026-11-19-20-00"
+    },
+    {
+      "id": "6e376d4bacf1",
+      "title": "Honest Man Happy Hour with Domenic Fusca",
+      "start": "2026-11-20T13:00:00-06:00",
+      "end": "2026-11-20T15:00:00-06:00",
+      "url": "https://www.banksstreetbarnola.net/event-details/honest-man-happy-hour-with-domenic-fusca-2026-11-20-13-00"
     },
     {
       "id": "1e3b9e93eef0",

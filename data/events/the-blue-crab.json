@@ -2,12 +2,6 @@
   "venue": "the-blue-crab",
   "events": [
     {
-      "id": "12d65c944d99",
-      "title": "ASAP Band",
-      "start": "2026-11-13T17:00:00-06:00",
-      "end": "2026-11-13T21:00:00-06:00"
-    },
-    {
       "id": "8a5c74a1f0e0",
       "title": "3rd Street",
       "start": "2026-11-15T15:30:00-06:00",

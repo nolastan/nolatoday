@@ -2,12 +2,6 @@
   "venue": "hi-ho",
   "events": [
     {
-      "id": "431f53ed04dd",
-      "title": "New Orleans Jazz Vipers",
-      "start": "2026-11-13T20:00:00-06:00",
-      "end": "2026-11-13T22:00:00-06:00"
-    },
-    {
       "id": "ba9206fdc954",
       "title": "Pocket Chocolate Birthday Bash",
       "start": "2026-11-14T20:30:00-06:00",
@@ -186,6 +180,12 @@
       "title": "Locals Monday",
       "start": "2027-02-08T19:30:00-06:00",
       "end": "2027-02-08T22:00:00-06:00"
+    },
+    {
+      "id": "c2cebcff26da",
+      "title": "80's Night with DJ Shane Love",
+      "start": "2027-02-11T21:00:00-06:00",
+      "end": "2027-02-12T02:00:00-06:00"
     }
   ]
 }

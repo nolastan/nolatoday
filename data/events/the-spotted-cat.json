@@ -2,11 +2,6 @@
   "venue": "the-spotted-cat",
   "events": [
     {
-      "id": "7dd65704df60",
-      "title": "Paradise Jazz Band",
-      "start": "2026-11-13T14:00:00-06:00"
-    },
-    {
       "id": "b3f6c4c37fcf",
       "title": "Ethan Santos",
       "start": "2026-11-13T22:00:00-06:00"

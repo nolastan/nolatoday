@@ -2,19 +2,6 @@
   "venue": "domino",
   "events": [
     {
-      "id": "528cd69f2d93",
-      "title": "DJ Kini Kini, Xavier Molina",
-      "start": "2026-11-12T21:00:00-06:00",
-      "url": "https://www.instagram.com/p/DfYQfLjI_jt/"
-    },
-    {
-      "id": "7395ed3cd32f",
-      "title": "Half Raccoon, Lisbon Girls, Leftys Right Hand",
-      "start": "2026-11-13",
-      "allDay": true,
-      "url": "https://www.instagram.com/p/DfYt-ytNgQk/"
-    },
-    {
       "id": "112b4e563af6",
       "title": "Elliot from Earth, Katiee",
       "start": "2026-11-14T22:00:00-06:00",
