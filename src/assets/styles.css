@@ -686,3 +686,12 @@ h3 { font-size: 1.3rem; }
 .artist-row a:hover { border-color: var(--marker); }
 .artist-row-name { display: block; font-size: 1.2rem; font-weight: 600; }
 .artist-row-next { display: block; font-size: 0.95rem; }
+/* Links to music services wear the service's own color; the artist's website stays plain. */
+.button.provider:not(.provider-website) { border-color: transparent; }
+.button.provider:not(.provider-website):hover { filter: brightness(1.08); }
+.provider-spotify, .provider-spotify:hover { background: #1ed760; color: #000; }
+.provider-appleMusic, .provider-appleMusic:hover { background: #fa243c; color: #fff; }
+.provider-bandcamp, .provider-bandcamp:hover { background: #1da0c3; color: #04222b; }
+.provider-youtube, .provider-youtube:hover { background: #ff0000; color: #fff; }
+.provider-soundcloud, .provider-soundcloud:hover { background: #ff5500; color: #1a0a00; }
+.provider-instagram, .provider-instagram:hover { background: linear-gradient(45deg, #f58529, #dd2a7b 50%, #8134af 80%, #515bd4); color: #fff; }

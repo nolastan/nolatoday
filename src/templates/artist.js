@@ -72,7 +72,7 @@ export function artistPage(ctx, artist, { shows }) {
     ${
       links.length
         ? `<div class="button-row">${links
-            .map((l, i) => `<a class="button${i === 0 ? ' primary' : ''}" href="${esc(l.url)}" rel="noopener">${esc(l.label)}</a>`)
+            .map((l) => `<a class="button provider provider-${esc(l.key)}" href="${esc(l.url)}" rel="noopener">${esc(l.label)}</a>`)
             .join('')}</div>`
         : ''
     }
