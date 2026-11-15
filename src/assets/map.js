@@ -144,6 +144,7 @@
   var paradeMarkerEls = {};
   var NONE = '\u0000';
   var liveIds = [];
+  var markerHoverId = null;
 
   function liveFilter() {
     return ['in', ['get', 'id'], ['literal', liveIds.length ? liveIds : [NONE]]];
@@ -240,18 +241,26 @@
     var ids = (e.features || []).map(function (f) { return f.properties.id; });
     return ids.indexOf(selectedId) >= 0 ? selectedId : ids[0];
   }
+  // Markers sit over the canvas and their mouse events still reach the map. A start marker
+  // speaks only for its own parade, so the routes passing under it ignore those events.
+  function fromMarker(e) {
+    var t = e.originalEvent && e.originalEvent.target;
+    return !!(t && t.closest && t.closest('.mapboxgl-marker'));
+  }
   map.on('click', 'parade-hit', function (e) {
+    if (fromMarker(e)) return;
     var id = hitParadeId(e);
     var p = shownParades.filter(function (x) { return x.id === id; })[0];
     if (p) openParade(p, e.lngLat);
   });
   map.on('mousemove', 'parade-hit', function (e) {
+    if (fromMarker(e)) return;
     map.getCanvas().style.cursor = 'pointer';
     setParadeHover(hitParadeId(e));
   });
   map.on('mouseleave', 'parade-hit', function () {
     map.getCanvas().style.cursor = '';
-    setParadeHover(null);
+    setParadeHover(markerHoverId);
   });
 
   /** Draw the day's parades: the route when the city gave one, and a marker where it starts. */
@@ -260,6 +269,7 @@
     if (paradePopup) paradePopup.remove();
     paradeMarkerEls = {};
     hoverId = null;
+    markerHoverId = null;
     setParadeSelected(null);
     var now = PARADE_NOW;
     liveIds = shownParades.filter(function (p) { return p.g && isParadeLive(p, now); }).map(function (p) { return p.id; });
@@ -275,8 +285,8 @@
       el.className = 'marker marker--parade' + (isParadeLive(p, now) ? ' live' : '');
       el.setAttribute('aria-label', p.n + ': ' + (KIND[p.c] || KIND.other).toLowerCase() + (p.g ? ', start of route' : ''));
       paradeMarkerEls[p.id] = el;
-      el.addEventListener('mouseenter', function () { setParadeHover(p.id); });
-      el.addEventListener('mouseleave', function () { setParadeHover(null); });
+      el.addEventListener('mouseenter', function () { markerHoverId = p.id; setParadeHover(p.id); });
+      el.addEventListener('mouseleave', function () { markerHoverId = null; setParadeHover(null); });
       var popup = bindSelection(new mapboxgl.Popup({ offset: 12, focusAfterOpen: false, maxWidth: '320px' }), p).setHTML(paradePopupHtml(p));
       var marker = new mapboxgl.Marker({ element: el }).setLngLat(p.p).setPopup(popup).addTo(map);
       markers.push(marker);
