@@ -115,18 +115,22 @@ export function artistPage(ctx, artist, { shows }) {
   }
 
   const player = artist.spotify
-    ? `<section class="wrap artist-listen">
+    ? `<aside class="artist-listen">
     <h2>Listen</h2>
     <iframe class="spotify-player" title="${esc(artist.name)} on Spotify" src="https://open.spotify.com/embed/artist/${esc(artist.spotify)}" width="100%" height="352" frameborder="0" loading="lazy" allow="encrypted-media; clipboard-write; fullscreen; picture-in-picture"></iframe>
-  </section>`
+  </aside>`
     : '';
 
   const reportUrl = `https://github.com/${config.repo}/issues/new?labels=data&title=${encodeURIComponent(`Artist data: ${artist.name}`)}&body=${encodeURIComponent(`Page: ${canonical}\n\nWhat's wrong?\n`)}`;
   const body = `${siteHeader(ctx, { current: 'artists' })}
 <main class="artist-page">
-  ${hero}
-  ${schedule}
-  ${player}
+  <div class="wrap artist-columns${player ? ' has-player' : ''}">
+    <div class="artist-main">
+      ${hero}
+      ${schedule}
+    </div>
+    ${player}
+  </div>
   <section class="wrap venue-foot muted">
     <p><a href="${esc(reportUrl)}" rel="noopener">Report a problem with this page</a>.</p>
   </section>

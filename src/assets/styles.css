@@ -669,8 +669,15 @@ h3 { font-size: 1.3rem; }
 .popup-title a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
 .artist-hero { padding-top: 40px; }
 .artist-hero h1 { margin-bottom: 8px; }
+.artist-columns .wrap { max-width: none; padding-inline: 0; }
 .artist-listen { margin-top: 48px; }
 .spotify-player { display: block; max-width: 720px; border: 0; border-radius: 12px; }
+/* Wide screens: shows on the left, the player beside them so it's on screen without scrolling. */
+@media (min-width: 900px) {
+  .artist-columns.has-player { display: grid; grid-template-columns: minmax(0, 1fr) 400px; gap: 48px; align-items: start; }
+  .artist-columns.has-player .artist-listen { position: sticky; top: 24px; margin-top: 40px; }
+  .artist-columns.has-player .artist-listen h2 { font-size: 1.2rem; margin: 0 0 12px; }
+}
 .artist-list { list-style: none; margin: 24px 0 0; padding: 0; display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
 .artist-row a {
   display: block;
