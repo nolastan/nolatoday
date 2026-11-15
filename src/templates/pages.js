@@ -177,7 +177,7 @@ export function privacyPage(ctx) {
 <main class="wrap prose-page">
   <h1>Privacy policy</h1>
   <p class="lede">NOLA.Today has no accounts and doesn’t ask for your name, email or anything else about you. This page covers the website at nola.today and the NOLA.Today iPhone and iPad app.</p>
-  <p class="muted">Last updated November 12, 2026.</p>
+  <p class="muted">Last updated November 15, 2026.</p>
 
   <h2>The iPhone and iPad app</h2>
   <ul>
@@ -192,6 +192,7 @@ export function privacyPage(ctx) {
   <ul>
     <li><strong>Analytics.</strong> The site uses <a href="https://usefathom.com/legal/privacy">Fathom Analytics</a> to count page views. Fathom doesn’t use cookies or collect personal data, and it can’t identify individual visitors.</li>
     <li><strong>Maps and fonts.</strong> The map is drawn by <a href="https://www.mapbox.com/legal/privacy">Mapbox</a> and text uses <a href="https://policies.google.com/privacy">Google Fonts</a>; your browser loads these directly from them.</li>
+    <li><strong>Artist photos and music players.</strong> Artist pages show photos and can show a player from <a href="https://www.spotify.com/legal/privacy-policy/">Spotify</a>; your browser loads these directly from Spotify, which may set its own cookies.</li>
     <li><strong>Hosting.</strong> The site is hosted on <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">GitHub Pages</a>, which may log your IP address for security.</li>
     <li><strong>Preferences.</strong> Display settings are saved only in your own browser.</li>
     <li><strong>Referral links.</strong> Some pages include referral links to other companies. If you follow one, that company’s privacy policy applies.</li>

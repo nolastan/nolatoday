@@ -153,6 +153,30 @@ Return an array of `{ title, start, end?, allDay?, url? }`. `start`/`end` may be
 3. Add a schedule source as above, or leave `sources: []` and an issue will be opened for it.
 4. Optional photo: `public/images/venues/<slug>.jpg` + `<slug>-600.jpg`.
 
+## Artists
+
+`data/artists/<slug>.json` is one band or musician (musicians only: no comedians, burlesque or DJ nights). The build finds each artist's name in scraped event titles and links it to `/artists/<slug>`, which lists their upcoming shows at every venue. Events on disk are never changed; the match is redone on every build.
+
+```json
+{
+  "slug": "kermit-ruffins",
+  "name": "Kermit Ruffins",
+  "aliases": ["Kermit Ruffins & the BBQ Swingers"],
+  "spotify": "22-character Spotify artist id",
+  "musicbrainz": "MusicBrainz artist id",
+  "links": { "appleMusic": "https://…", "bandcamp": "https://…", "youtube": "https://…", "soundcloud": "https://…", "instagram": "https://…", "website": "https://…" }
+}
+```
+
+- Only `slug` and `name` are required. `aliases` are other billings that mean this artist. Case, accents, `&` vs `and`, apostrophes and a leading "The" are ignored when matching, so don't list those variants.
+- A name matches only as whole words, longest name first, and not after phrases like "tribute to" or "music of". Two artists can't share a name or alias (`node scripts/validate.js` checks).
+- Like venues, an artist's `slug` is a live URL: don't change or delete it.
+- Not every act needs a page. A wrong match is worse than a missing one, so add an artist only when you're sure who it is, and a link only when it's the artist's own.
+
+`node scripts/artists.js candidates` lists names on the schedules with no artist file. `node scripts/artists.js discover --write` looks them up on MusicBrainz and creates a file only when exactly one Louisiana act has that exact name, taking its Spotify id and links from MusicBrainz. Everything else is skipped.
+
+Photos and genres come from Spotify into `data/artist-meta.json`, which is generated: `node scripts/artists.js refresh` rewrites it for every artist with a `spotify` id. Without `SPOTIFY_CLIENT_ID` and `SPOTIFY_CLIENT_SECRET` it still gets photos (from Spotify's public oEmbed endpoint); with them it also gets larger photos and genres. Photos are linked from Spotify's CDN, never copied into the repo. The weekly "Update artists" workflow runs `discover --write` and `refresh` and commits the result.
+
 ## Parades
 
 Parade data has its own pipeline and stricter sourcing rules than venues: routes and nearly all dates from official City of New Orleans records only, plus dates organizers announce on their own sites (`data/parades/announced.json`). See [docs/parades.md](docs/parades.md) before changing `scripts/parades.js`, `scripts/lib/permits.js`, `scripts/lib/route-trace.js` or anything in `data/parades/`.

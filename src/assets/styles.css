@@ -671,3 +671,56 @@ h3 { font-size: 1.3rem; }
 .prose-page { padding: 48px 16px 64px; max-width: 760px; }
 .prose-page h2 { font-size: 1.5rem; margin-top: 2em; }
 .prose-page li { margin-bottom: 0.6em; }
+
+/* ---- Artists ---------------------------------------------------------------- */
+.event-title .artist-link { text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--link) 55%, transparent); text-underline-offset: 3px; }
+.event-details { margin-left: 8px; font-size: 0.9rem; font-weight: 500; color: var(--muted) !important; white-space: nowrap; }
+.event-details::after { content: ' ↗'; }
+.event-billing { display: block; font-size: 0.95rem; font-weight: 400; }
+.popup-title a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+.artist-hero { padding-top: 40px; }
+.artist-hero h1 { margin-bottom: 8px; }
+.artist-columns .wrap { max-width: none; margin-inline: 0; padding-inline: 0; }
+.artist-listen { margin-top: 32px; }
+.spotify-player { display: block; max-width: 720px; border: 0; border-radius: 12px; }
+/* Wide screens: shows on the left, the player beside them so it's on screen without scrolling. */
+@media (min-width: 900px) {
+  .artist-columns.has-player { display: grid; grid-template-columns: minmax(0, 1fr) 400px; gap: 48px; align-items: start; }
+  .artist-columns.has-player .artist-listen { position: sticky; top: 24px; margin-top: 48px; }
+}
+.artist-list { list-style: none; margin: 24px 0 0; padding: 0; display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+.artist-row a {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  height: 100%;
+  padding: 12px 16px;
+  border-radius: var(--radius);
+  background: var(--bg-elev);
+  border: 1px solid var(--line);
+  color: var(--text);
+  text-decoration: none;
+  transition: border-color 0.15s ease;
+}
+.artist-row a:hover { border-color: var(--marker); }
+.artist-row-photo { flex: none; width: 56px; height: 56px; border-radius: 50%; object-fit: cover; background: linear-gradient(135deg, var(--teal-deep), var(--teal)); }
+.artist-row-placeholder { display: grid; place-items: center; color: var(--aqua); font-size: 1.4rem; }
+.artist-row-text { min-width: 0; }
+.artist-hero.has-photo { display: flex; align-items: center; gap: 28px; }
+.artist-photo { flex: none; width: 200px; height: 200px; border-radius: 50%; object-fit: cover; background: var(--bg-elev); box-shadow: 0 8px 28px rgb(0 0 0 / 0.18); }
+.artist-genres { margin: 0; text-transform: capitalize; }
+@media (max-width: 640px) {
+  .artist-hero.has-photo { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .artist-photo { width: 132px; height: 132px; }
+}
+.artist-row-name { display: block; font-size: 1.2rem; font-weight: 600; }
+.artist-row-next { display: block; font-size: 0.95rem; }
+/* Links to music services wear the service's own color; the artist's website stays plain. */
+.button.provider:not(.provider-website) { border-color: transparent; background-origin: border-box; }
+.button.provider:not(.provider-website):hover { filter: brightness(1.08); }
+.provider-spotify, .provider-spotify:hover { background: #1ed760; color: #000; }
+.provider-appleMusic, .provider-appleMusic:hover { background: #fa243c; color: #fff; }
+.provider-bandcamp, .provider-bandcamp:hover { background: #1da0c3; color: #04222b; }
+.provider-youtube, .provider-youtube:hover { background: #ff0000; color: #fff; }
+.provider-soundcloud, .provider-soundcloud:hover { background: #ff5500; color: #1a0a00; }
+.provider-instagram, .provider-instagram:hover { background: linear-gradient(45deg, #f58529, #dd2a7b 50%, #8134af 80%, #515bd4); color: #fff; }

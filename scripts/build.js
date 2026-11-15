@@ -15,6 +15,9 @@ import { isScheduleUrl, venuePageUrls } from './lib/normalize.js';
 import { venuePage } from '../src/templates/venue.js';
 import { homePage, venuesPage, redirectPage, notFoundPage, privacyPage, contactPage } from '../src/templates/pages.js';
 import { paradePage, paradesPage } from '../src/templates/parade.js';
+import { artistPage, artistsPage, artistLinks } from '../src/templates/artist.js';
+import { loadArtists, buildMatcher } from './lib/artists.js';
+import { loadArtistMeta } from './lib/spotify.js';
 import { PARADES_FILE, SOURCES, loadParades, loadWebsites, loadPhotos, paradeOrgs, mapParade } from './lib/parades.js';
 
 const OUT = path.join(ROOT, '_site');
@@ -69,12 +72,23 @@ function main() {
   const now = DateTime.now().setZone(ZONE);
   const startOfToday = now.startOf('day').toISODate();
 
+  // Artists are matched to event titles here, on every build; the scraped events never name them.
+  const artists = loadArtists();
+  const matcher = buildMatcher(artists);
+  const showsByArtist = new Map(artists.map((a) => [a.slug, []]));
+
   const eventsBySlug = new Map();
   for (const v of venues) {
     const events = v.status === 'active' ? loadEvents(v.slug).events.filter((e) => (e.end ?? e.start) >= startOfToday) : [];
     // Only link events to their own page; drop links to the venue's general schedule (older scrapes kept them).
     const pageUrls = venuePageUrls(v);
-    for (const e of events) if (e.url && isScheduleUrl(e.url, pageUrls)) delete e.url;
+    for (const e of events) {
+      if (e.url && isScheduleUrl(e.url, pageUrls)) delete e.url;
+      const found = matcher.match(e.title);
+      if (!found.length) continue;
+      e.artists = found;
+      for (const slug of new Set(found.map((m) => m.slug))) showsByArtist.get(slug).push({ event: e, venue: v });
+    }
     eventsBySlug.set(v.slug, events);
   }
 
@@ -96,6 +110,8 @@ function main() {
       const item = { v: v.slug, t: e.title, s: e.start };
       if (e.end) item.e = e.end;
       if (e.allDay) item.a = 1;
+      // Artists in the title: [slug, start, end] character ranges, for linking names to artist pages.
+      if (e.artists) item.ar = e.artists.map((m) => [m.slug, m.start, m.end]);
       mapEvents.push(item);
     }
   }
@@ -149,6 +165,30 @@ function main() {
     write(`venues/${v.slug}.html`, venuePage(ctx, v, { events: eventsBySlug.get(v.slug), status: status.venues?.[v.slug] }));
   }
 
+  // Artists: a directory, a page each, and the list for anyone building on this data.
+  for (const shows of showsByArtist.values()) shows.sort((a, b) => a.event.start.localeCompare(b.event.start));
+  const artistMeta = loadArtistMeta();
+  const artistDirectory = artistsPage(ctx, artists, { showsBySlug: showsByArtist, meta: artistMeta });
+  write('artists.html', artistDirectory);
+  write('artists/index.html', artistDirectory);
+  for (const a of artists) write(`artists/${a.slug}.html`, artistPage(ctx, a, { shows: showsByArtist.get(a.slug), meta: artistMeta[a.slug] }));
+  write(
+    'artists.json',
+    JSON.stringify(
+      artists.map((a) => ({
+        slug: a.slug,
+        name: a.name,
+        url: `${config.siteUrl}/artists/${a.slug}`,
+        upcoming: showsByArtist.get(a.slug).length,
+        image: artistMeta[a.slug]?.image,
+        genres: artistMeta[a.slug]?.genres,
+        links: Object.fromEntries(artistLinks(a).map((l) => [l.key, l.url])),
+      })),
+      null,
+      1,
+    ),
+  );
+
   // Parades: a directory, a page per krewe or club, and the combined data for anyone who wants it.
   const orgs = paradeOrgs(parades, startOfToday, { websites: loadWebsites(), photos: loadPhotos() });
   const paradeSources = [
@@ -198,6 +238,8 @@ function main() {
       lastmod: (status.venues?.[v.slug]?.lastNonEmpty ?? '').slice(0, 10) || today,
       priority: v.status === 'active' ? '0.8' : '0.3',
     })),
+    ...(artists.length ? [{ loc: `${config.siteUrl}/artists`, lastmod: today, priority: '0.9' }] : []),
+    ...artists.map((a) => ({ loc: `${config.siteUrl}/artists/${a.slug}`, lastmod: today, priority: showsByArtist.get(a.slug).length ? '0.7' : '0.3' })),
     { loc: `${config.siteUrl}/parades`, lastmod: today, priority: '0.9' },
     ...orgs.map((o) => ({
       loc: `${config.siteUrl}/parades/${o.slug}`,
@@ -214,6 +256,7 @@ function main() {
   write('robots.txt', `User-agent: *\nAllow: /\n\nSitemap: ${config.siteUrl}/sitemap.xml\n`);
 
   const pages = venues.length + Object.keys(allRedirects).length + storyCount;
+  console.log(`Built ${artists.length} artist pages, ${[...showsByArtist.values()].filter((s) => s.length).length} with shows`);
   console.log(`Built ${orgs.length} parade pages, ${mapParades.length} map parades`);
   console.log(`Built ${pages} venue pages/redirects, ${mapEvents.length} map events → ${path.relative(ROOT, OUT)}/`);
 }
