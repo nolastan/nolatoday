@@ -211,7 +211,13 @@
     var round = { 'line-join': 'round', 'line-cap': 'round' };
     var none = ['==', ['get', 'id'], NONE];
     // Live routes ripple outward like a live venue's marker; animateLiveRoutes drives width and opacity.
-    map.addLayer({ id: 'parade-live-glow', type: 'line', source: 'parades', layout: round, filter: liveFilter(), paint: { 'line-color': c.line, 'line-width': 6, 'line-opacity': 0, 'line-blur': 4 } });
+    map.addLayer({ id: 'parade-live-glow', type: 'line', source: 'parades', layout: round, filter: liveFilter(), paint: {
+      'line-color': c.line, 'line-width': 6, 'line-opacity': 0, 'line-blur': 4,
+      // Mapbox eases every paint change over 300ms by default. Updated each frame, that easing lags
+      // behind, so at the loop's reset the line shrank slowly while its opacity jumped back up: a
+      // flash of a wide, solid glow, the same flicker the venue ripple once had in Safari.
+      'line-width-transition': { duration: 0, delay: 0 }, 'line-opacity-transition': { duration: 0, delay: 0 },
+    } });
     map.addLayer({ id: 'parade-casing', type: 'line', source: 'parades', layout: round, paint: { 'line-color': c.casing, 'line-width': 8, 'line-opacity': 0.7 } });
     map.addLayer({ id: 'parade-line', type: 'line', source: 'parades', layout: round, paint: { 'line-color': c.line, 'line-width': 4.5 } });
     map.addLayer({ id: 'parade-hover-casing', type: 'line', source: 'parades', layout: round, filter: none, paint: { 'line-color': c.casing, 'line-width': 11, 'line-opacity': 0.9 } });
