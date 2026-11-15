@@ -1,12 +1,1 @@
-{
-  "slug": "cafe-negril",
-  "name": "Cafe Negril",
-  "status": "active",
-  "address": "606 Frenchmen Street",
-  "lat": 29.963765,
-  "lng": -90.057948,
-  "website": "https://cafenegrilnola.com",
-  "image": "cafe-negril.jpg",
-  "aliases": [],
-  "sources": []
-}
+{"address":"606 Frenchmen Street","aliases":[],"image":"cafe-negril.jpg","lat":29.963765,"lng":-90.057948,"name":"Cafe Negril","slug":"cafe-negril","sources":[{"type":"manual"}],"status":"active","website":"https://cafenegrilnola.com"}
