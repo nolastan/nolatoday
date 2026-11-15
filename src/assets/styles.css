@@ -542,9 +542,20 @@ h3 { font-size: 1.3rem; }
 .popup-gigs { list-style: none; margin: 0; padding: 4px 14px 6px; max-height: 240px; overflow-y: auto; }
 .popup-gigs li { padding: 8px 0; border-bottom: 1px solid color-mix(in srgb, currentColor 18%, transparent); }
 .popup-gigs li:last-child { border-bottom: 0; }
-.popup-time { display: block; font-weight: 700; font-size: 0.9rem; opacity: 0.85; }
+.popup-time { display: block; font-weight: 700; font-size: 0.9rem; color: color-mix(in srgb, currentColor 85%, transparent); }
 .popup-title { font-size: 1.1rem; font-weight: 600; line-height: 1.25; overflow-wrap: anywhere; }
-.popup-live { color: var(--marker); font-weight: 700; }
+.popup-live {
+  display: inline-block;
+  margin-left: 4px;
+  padding: 1px 8px;
+  border-radius: 999px;
+  background: #1b1d1e;
+  color: #ffb54d;
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1.5;
+  vertical-align: 1px;
+}
 .popup-more {
   display: block;
   padding: 10px 14px 12px;
@@ -641,7 +652,7 @@ h3 { font-size: 1.3rem; }
 .parade-attribution h2 { font-size: 1.3rem; }
 /* A parade's starting point on the map: a ring, to tell it from a venue's dot. */
 .marker--parade::after { background: var(--bg); box-shadow: 0 0 0 4px var(--marker); inset: 30%; }
-.marker--parade:hover::after, .marker--parade:focus-visible::after, .marker--parade.is-open::after { inset: 20%; }
+.marker--parade:hover::after, .marker--parade.is-hover::after, .marker--parade:focus-visible::after, .marker--parade.is-open::after { inset: 20%; }
 .popup-banner--parade { min-height: 64px; background: linear-gradient(135deg, var(--teal-deep), #b4530a); }
 @media (max-width: 480px) {
   .site-header { gap: 8px; padding-inline: 12px; }

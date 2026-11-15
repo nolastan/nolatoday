@@ -113,7 +113,7 @@
     var now = PARADE_NOW;
     var live = t.timed && t.start <= now && now <= t.end ? ' <span class="popup-live">• Rolling now</span>' : '';
     return (
-      '<a class="popup-banner popup-banner--parade" href="' + href + '"><h3>' + esc(p.n) + '</h3></a>' +
+      '<a class="popup-banner popup-banner--parade" href="' + href + '"' + (p.i ? ' style="background-image:url(\'' + esc(p.i) + '\')"' : '') + '><h3>' + esc(p.n) + '</h3></a>' +
       '<ul class="popup-gigs">' +
       '<li><span class="popup-time">' + esc(when) + live + '</span><span class="popup-title">' + esc(KIND[p.c] || KIND.other) + '</span></li>' +
       (p.a ? '<li><span class="popup-time">Starts on</span><span class="popup-title">' + esc(p.a) + '</span></li>' : '') +
@@ -132,35 +132,98 @@
     };
   }
 
+  // Hover and selection are drawn as copies of one route on top of the rest, since routes often
+  // share streets (St. Charles) and the highlighted one has to stay visible over its neighbors.
+  var hoverId = null;
+  var selectedId = null;
+  var paradeMarkerEls = {};
+  var NONE = '\u0000';
+
+  function paradeColors() {
+    return { line: theme === 'light' ? '#e8590c' : '#ffa500', casing: theme === 'light' ? '#ffffff' : '#1b1d1e' };
+  }
+
+  function syncParadeHighlight() {
+    if (!map.getLayer('parade-hover-line')) return;
+    var hover = hoverId && hoverId !== selectedId ? hoverId : NONE;
+    ['parade-hover-casing', 'parade-hover-line'].forEach(function (l) { map.setFilter(l, ['==', ['get', 'id'], hover]); });
+    ['parade-selected-casing', 'parade-selected-line'].forEach(function (l) { map.setFilter(l, ['==', ['get', 'id'], selectedId || NONE]); });
+    // With one route picked, the others step back.
+    map.setPaintProperty('parade-line', 'line-opacity', selectedId ? 0.45 : 1);
+    map.setPaintProperty('parade-casing', 'line-opacity', selectedId ? 0.3 : 0.7);
+  }
+
+  function setParadeHover(id) {
+    if (hoverId === id) return;
+    if (hoverId && paradeMarkerEls[hoverId]) paradeMarkerEls[hoverId].classList.remove('is-hover');
+    hoverId = id;
+    if (id && paradeMarkerEls[id]) paradeMarkerEls[id].classList.add('is-hover');
+    syncParadeHighlight();
+  }
+
+  function setParadeSelected(id) {
+    if (selectedId && paradeMarkerEls[selectedId]) paradeMarkerEls[selectedId].classList.remove('is-open');
+    selectedId = id;
+    if (id && paradeMarkerEls[id]) paradeMarkerEls[id].classList.add('is-open');
+    syncParadeHighlight();
+  }
+
   // Layers live in the style, so they are put back whenever the style (light/dark) is swapped.
   function addParadeLayers() {
     if (map.getSource('parades')) return;
-    var color = theme === 'light' ? '#e8590c' : '#ffa500';
+    var c = paradeColors();
     map.addSource('parades', { type: 'geojson', data: paradeCollection() });
     var round = { 'line-join': 'round', 'line-cap': 'round' };
-    map.addLayer({ id: 'parade-casing', type: 'line', source: 'parades', layout: round, paint: { 'line-color': theme === 'light' ? '#ffffff' : '#1b1d1e', 'line-width': 8, 'line-opacity': 0.7 } });
-    map.addLayer({ id: 'parade-line', type: 'line', source: 'parades', layout: round, paint: { 'line-color': color, 'line-width': 4.5 } });
+    var none = ['==', ['get', 'id'], NONE];
+    map.addLayer({ id: 'parade-casing', type: 'line', source: 'parades', layout: round, paint: { 'line-color': c.casing, 'line-width': 8, 'line-opacity': 0.7 } });
+    map.addLayer({ id: 'parade-line', type: 'line', source: 'parades', layout: round, paint: { 'line-color': c.line, 'line-width': 4.5 } });
+    map.addLayer({ id: 'parade-hover-casing', type: 'line', source: 'parades', layout: round, filter: none, paint: { 'line-color': c.casing, 'line-width': 11, 'line-opacity': 0.9 } });
+    map.addLayer({ id: 'parade-hover-line', type: 'line', source: 'parades', layout: round, filter: none, paint: { 'line-color': c.line, 'line-width': 6.5 } });
+    map.addLayer({ id: 'parade-selected-casing', type: 'line', source: 'parades', layout: round, filter: none, paint: { 'line-color': c.casing, 'line-width': 13 } });
+    map.addLayer({ id: 'parade-selected-line', type: 'line', source: 'parades', layout: round, filter: none, paint: { 'line-color': c.line, 'line-width': 8 } });
     // A wide invisible line, so the route is easy to tap.
-    map.addLayer({ id: 'parade-hit', type: 'line', source: 'parades', layout: round, paint: { 'line-color': color, 'line-width': 22, 'line-opacity': 0 } });
+    map.addLayer({ id: 'parade-hit', type: 'line', source: 'parades', layout: round, paint: { 'line-color': c.line, 'line-width': 22, 'line-opacity': 0 } });
+    syncParadeHighlight();
   }
   map.on('style.load', addParadeLayers);
 
+  /** A parade's card selects its route while it is open, whether it was opened from the route or the marker. */
+  function bindSelection(popup, p) {
+    popup.on('open', function () { setParadeSelected(p.id); });
+    popup.on('close', function () { if (selectedId === p.id) setParadeSelected(null); });
+    return popup;
+  }
+
   function openParade(p, lngLat) {
     if (paradePopup) paradePopup.remove();
-    paradePopup = new mapboxgl.Popup({ offset: 12, focusAfterOpen: false, maxWidth: '320px' }).setLngLat(lngLat).setHTML(paradePopupHtml(p)).addTo(map);
+    paradePopup = bindSelection(new mapboxgl.Popup({ offset: 12, focusAfterOpen: false, maxWidth: '320px' }), p).setLngLat(lngLat).setHTML(paradePopupHtml(p)).addTo(map);
+  }
+  // When routes overlap, prefer the one already picked, so a click along it doesn't jump to a neighbor.
+  function hitParadeId(e) {
+    var ids = (e.features || []).map(function (f) { return f.properties.id; });
+    return ids.indexOf(selectedId) >= 0 ? selectedId : ids[0];
   }
   map.on('click', 'parade-hit', function (e) {
-    var id = e.features && e.features[0] && e.features[0].properties.id;
+    var id = hitParadeId(e);
     var p = shownParades.filter(function (x) { return x.id === id; })[0];
     if (p) openParade(p, e.lngLat);
   });
-  map.on('mouseenter', 'parade-hit', function () { map.getCanvas().style.cursor = 'pointer'; });
-  map.on('mouseleave', 'parade-hit', function () { map.getCanvas().style.cursor = ''; });
+  map.on('mousemove', 'parade-hit', function (e) {
+    map.getCanvas().style.cursor = 'pointer';
+    setParadeHover(hitParadeId(e));
+  });
+  map.on('mouseleave', 'parade-hit', function () {
+    map.getCanvas().style.cursor = '';
+    setParadeHover(null);
+  });
 
   /** Draw the day's parades: the route when the city gave one, and a marker where it starts. */
   function renderParades(day, bounds) {
     shownParades = selectParades(day);
     if (paradePopup) paradePopup.remove();
+    paradeMarkerEls = {};
+    hoverId = null;
+    setParadeSelected(null);
     if (map.getSource('parades')) map.getSource('parades').setData(paradeCollection());
     shownParades.forEach(function (p) {
       (p.g ? (p.g.type === 'LineString' ? [p.g.coordinates] : p.g.coordinates) : []).forEach(function (line) {
@@ -171,9 +234,10 @@
       el.type = 'button';
       el.className = 'marker marker--parade';
       el.setAttribute('aria-label', p.n + ': ' + (KIND[p.c] || KIND.other).toLowerCase() + (p.g ? ', start of route' : ''));
-      var popup = new mapboxgl.Popup({ offset: 12, focusAfterOpen: false, maxWidth: '320px' }).setHTML(paradePopupHtml(p));
-      popup.on('open', function () { el.classList.add('is-open'); });
-      popup.on('close', function () { el.classList.remove('is-open'); });
+      paradeMarkerEls[p.id] = el;
+      el.addEventListener('mouseenter', function () { setParadeHover(p.id); });
+      el.addEventListener('mouseleave', function () { setParadeHover(null); });
+      var popup = bindSelection(new mapboxgl.Popup({ offset: 12, focusAfterOpen: false, maxWidth: '320px' }), p).setHTML(paradePopupHtml(p));
       var marker = new mapboxgl.Marker({ element: el }).setLngLat(p.p).setPopup(popup).addTo(map);
       markers.push(marker);
       bounds.extend(p.p);
