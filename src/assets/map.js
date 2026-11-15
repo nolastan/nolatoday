@@ -85,8 +85,6 @@
   var linkedParade = params.get('parade');
   var shownParades = [];
   var paradePopup = null;
-  // TEMPORARY (preview only, do not merge): pretend it is 12:30pm on Sun Feb 15, 2026 for parades.
-  var PARADE_NOW = Date.parse('2026-02-15T12:30:00-06:00');
 
   function paradeTimes(p) {
     var start = p.s ? Date.parse(p.s) : null;
@@ -101,7 +99,7 @@
   }
 
   function selectParades(day) {
-    var now = PARADE_NOW;
+    var now = Date.now();
     var today = dateKeyFmt.format(new Date(now));
     return (data.parades || []).filter(function (p) {
       var t = paradeTimes(p);
@@ -115,7 +113,7 @@
     var href = cfg.base + '/parades/' + p.slug;
     var t = paradeTimes(p);
     var when = dayFmt.format(new Date(p.d + 'T12:00:00Z')) + (t.timed ? ' · ' + timeFmt.format(new Date(t.start)) : '');
-    var now = PARADE_NOW;
+    var now = Date.now();
     var live = t.timed && t.start <= now && now <= t.end ? ' <span class="popup-live">• Rolling now</span>' : '';
     return (
       // With a photo the banner is a venue's full height; without one it is the short gradient strip.
@@ -281,7 +279,7 @@
     hoverId = null;
     markerHoverId = null;
     setParadeSelected(null);
-    var now = PARADE_NOW;
+    var now = Date.now();
     liveIds = shownParades.filter(function (p) { return p.g && isParadeLive(p, now); }).map(function (p) { return p.id; });
     startLiveRipple();
     if (map.getSource('parades')) map.getSource('parades').setData(paradeCollection());

@@ -104,10 +104,8 @@ function main() {
   // Parades: yesterday's (a late one may still be rolling) through the next year, so a parade page can link to its day on the map.
   const parades = loadParades();
   const paradePhotos = loadPhotos();
-  // TEMPORARY (preview only, do not merge): parade window around simulated Feb 15, 2026.
-  const paradeNow = DateTime.fromISO('2026-02-15T12:30:00', { zone: ZONE });
-  const paradeFrom = paradeNow.minus({ days: 1 }).toISODate();
-  const paradeTo = paradeNow.plus({ days: 400 }).toISODate();
+  const paradeFrom = now.minus({ days: 1 }).toISODate();
+  const paradeTo = now.plus({ days: 400 }).toISODate();
   const mapParades = parades.filter((f) => f.properties.date >= paradeFrom && f.properties.date <= paradeTo && (f.geometry || f.properties.start_point)).map((f) => {
     // The organization's first photo tops its card on the map, as a venue's photo does.
     const item = mapParade(f);
