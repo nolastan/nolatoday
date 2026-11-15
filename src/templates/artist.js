@@ -128,7 +128,7 @@ export function artistPage(ctx, artist, { shows }) {
   ${schedule}
   ${player}
   <section class="wrap venue-foot muted">
-    <p>Shows are matched to artists by name from venue schedules${artist.musicbrainz ? `; links come from <a href="https://musicbrainz.org/artist/${esc(artist.musicbrainz)}" rel="noopener">MusicBrainz</a>` : ''}. <a href="${esc(reportUrl)}" rel="noopener">Report a problem with this page</a>.</p>
+    <p><a href="${esc(reportUrl)}" rel="noopener">Report a problem with this page</a>.</p>
   </section>
 </main>
 ${siteFooter(ctx)}`;
