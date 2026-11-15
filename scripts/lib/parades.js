@@ -721,14 +721,58 @@ export function paradeOrgs(features, today, { websites = {}, photos = {} } = {})
     org.photos = photos[org.slug] ?? [];
     out.push(org);
   }
-  // Soonest upcoming first. The rest: those with photos, then with a route, then neither; each by most recent.
-  const tier = (o) => (o.photos.length ? 0 : o.featured.geometry ? 1 : 2);
-  return out.sort((a, b) => {
-    const [na, nb] = [a.upcoming[0]?.properties.date, b.upcoming[0]?.properties.date];
-    if (na && nb) return na.localeCompare(nb) || a.name.localeCompare(b.name);
-    if (na || nb) return na ? -1 : 1;
-    return tier(a) - tier(b) || b.past[0].properties.date.localeCompare(a.past[0].properties.date) || a.name.localeCompare(b.name);
-  });
+  // Calendar order from today: by the next listed parade, or for an organization with none listed yet,
+  // by when it will most likely roll again, judged from its latest parade (see expectedNext).
+  // On the same day a listed parade comes before a guessed one.
+  for (const org of out) org.next = org.upcoming[0]?.properties.date ?? expectedNext(org.past[0].properties, today);
+  return out.sort((a, b) => a.next.localeCompare(b.next) || b.upcoming.length - a.upcoming.length || a.name.localeCompare(b.name));
+}
+
+const DAY_MS = 86400000;
+// Carnival parades in the weeks before Mardi Gras are set relative to it; earlier ones by the calendar.
+const CARNIVAL_PARADE_DAYS = 30;
+const isoDay = (ms) => new Date(ms).toISOString().slice(0, 10);
+const dayMs = (iso) => Date.parse(`${iso}T00:00:00Z`);
+
+/** Mardi Gras day of a year: 47 days before Easter (Gregorian computus). */
+export function mardiGras(year) {
+  const a = year % 19;
+  const b = Math.floor(year / 100);
+  const c = year % 100;
+  const h = (19 * a + b - Math.floor(b / 4) - Math.floor((b - Math.floor((8 * b + 13) / 25)) / 3) + 15) % 30;
+  const l = (32 + 2 * (b % 4) + 2 * Math.floor(c / 4) - h - (c % 4)) % 7;
+  const m = Math.floor((a + 11 * h + 22 * l) / 451);
+  const month = Math.floor((h + l - 7 * m + 114) / 31);
+  const day = ((h + l - 7 * m + 114) % 31) + 1;
+  return isoDay(Date.UTC(year, month - 1, day) - 47 * DAY_MS);
+}
+
+/**
+ * The likeliest next date for a parade that isn't listed yet, from its latest one. Carnival
+ * parades keep their place relative to Mardi Gras, which moves with Easter; others (second lines,
+ * mostly Sundays) come back on the same weekday about a year later.
+ */
+export function expectedNext(last, today) {
+  if (last.category === 'mardi_gras') {
+    const year = Number(last.date.slice(0, 4));
+    // The Carnival season a parade belongs to is the Mardi Gras on or after it.
+    const season = last.date <= mardiGras(year) ? year : year + 1;
+    const offset = dayMs(last.date) - dayMs(mardiGras(season));
+    if (offset >= -CARNIVAL_PARADE_DAYS * DAY_MS) {
+      for (let y = season + 1; ; y++) {
+        const next = isoDay(dayMs(mardiGras(y)) + offset);
+        if (next >= today) return next;
+      }
+    }
+    // Earlier in the season, a parade keeps its calendar date: Joan of Arc rolls on Twelfth Night, Jan 6.
+    for (let y = year + 1; ; y++) {
+      const next = `${y}${last.date.slice(4)}`;
+      if (next >= today && !Number.isNaN(dayMs(next))) return next;
+    }
+  }
+  let next = dayMs(last.date);
+  while (isoDay(next) < today) next += 364 * DAY_MS;
+  return isoDay(next);
 }
 
 /** The compact record the home map draws: one per parade, with a lighter line. */

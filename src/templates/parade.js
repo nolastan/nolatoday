@@ -268,11 +268,10 @@ ${siteFooter(ctx)}`;
   });
 }
 
-/** The parades directory: every krewe and club the city has listed, soonest first. */
+/** The parades directory: every krewe and club the city has listed, in the order they're next likely to roll (see paradeOrgs). */
 export function paradesPage(ctx, orgs, { today, sources = [] }) {
   const { config, url } = ctx;
   const coming = orgs.filter((o) => o.upcoming.length);
-  const earlier = orgs.filter((o) => !o.upcoming.length);
 
   const card = (org) => {
     const f = org.featured;
@@ -313,8 +312,7 @@ export function paradesPage(ctx, orgs, { today, sources = [] }) {
   </div>
   ${coming.length ? '' : '<div class="notice"><p>No coming parades are listed by the city right now. Second lines usually appear a few weeks ahead, and Carnival routes each January.</p></div>'}
   <ul class="venue-grid" data-venue-grid>
-    ${coming.map(card).join('')}
-    ${earlier.map(card).join('')}
+    ${orgs.map(card).join('')}
   </ul>
   <p class="muted" data-venue-empty hidden>No parades match that search.</p>
   <section class="parade-attribution muted" id="sources">
