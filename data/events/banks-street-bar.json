@@ -2,6 +2,13 @@
   "venue": "banks-street-bar",
   "events": [
     {
+      "id": "cd5f2b3a58b6",
+      "title": "Valerie Sassyfrass + Grits & Greens",
+      "start": "2026-11-14T20:00:00-06:00",
+      "end": "2026-11-15T00:00:00-06:00",
+      "url": "https://www.banksstreetbarnola.net/event-details/valerie-sassyfrass-grits-greens"
+    },
+    {
       "id": "596fe1357794",
       "title": "Nate Todd & The Stranglers",
       "start": "2026-11-18T20:00:00-06:00",
@@ -35,13 +42,6 @@
       "start": "2026-11-27T20:00:00-06:00",
       "end": "2026-11-28T00:00:00-06:00",
       "url": "https://www.banksstreetbarnola.net/event-details/psydonia-closur-all-in-the-family"
-    },
-    {
-      "id": "7ecf9b27340f",
-      "title": "Vet Jams",
-      "start": "2026-12-08T19:00:00-06:00",
-      "end": "2026-12-08T23:00:00-06:00",
-      "url": "https://www.banksstreetbarnola.net/event-details/vet-jams-2026-12-08-19-00"
     }
   ]
 }
