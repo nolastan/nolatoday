@@ -34,7 +34,7 @@ export function artistLinks(artist) {
 const clock = (e, dt) => (e.allDay ? 'All day' : dt.toFormat(dt.minute ? 'h:mm a' : 'h a').toLowerCase());
 
 /** /artists/<slug>: who they are, where to hear them, and every upcoming show. `shows` is [{ event, venue }], soonest first. */
-export function artistPage(ctx, artist, { shows }) {
+export function artistPage(ctx, artist, { shows, meta }) {
   const { config, url } = ctx;
   const canonical = `${config.siteUrl}/artists/${artist.slug}`;
   const listed = shows.slice(0, MAX_LISTED);
@@ -53,6 +53,8 @@ export function artistPage(ctx, artist, { shows }) {
     url: canonical,
   };
   if (links.length) jsonLd.sameAs = links.map((l) => l.url);
+  if (meta?.image) jsonLd.image = meta.image;
+  if (meta?.genres?.length) jsonLd.genre = meta.genres;
   if (listed.length) {
     jsonLd.event = listed.slice(0, 50).map(({ event, venue }) => ({ ...eventSchema(ctx, venue, event), performer: { '@id': canonical } }));
   }
@@ -65,9 +67,12 @@ export function artistPage(ctx, artist, { shows }) {
     ],
   };
 
-  const hero = `<section class="artist-hero wrap">
+  const hero = `<section class="artist-hero wrap${meta?.image ? ' has-photo' : ''}">
+    ${meta?.image ? `<img class="artist-photo" src="${esc(meta.image)}" alt="${esc(artist.name)}" width="200" height="200" decoding="async" referrerpolicy="no-referrer">` : ''}
+    <div class="artist-hero-text">
     <span class="badge">Artist</span>
     <h1>${esc(artist.name)}</h1>
+    ${meta?.genres?.length ? `<p class="artist-genres muted">${esc(meta.genres.join(' · '))}</p>` : ''}
     ${artist.note ? `<p class="venue-note">${esc(artist.note)}</p>` : ''}
     ${
       links.length
@@ -76,6 +81,7 @@ export function artistPage(ctx, artist, { shows }) {
             .join('')}</div>`
         : ''
     }
+    </div>
   </section>`;
 
   let schedule;
@@ -138,6 +144,7 @@ ${siteFooter(ctx)}`;
     title: `${artist.name} – New Orleans Shows – NOLA.Today`,
     description,
     canonical,
+    image: meta?.image,
     bodyClass: 'page-artist',
     head: `<script type="application/ld+json">${jsonScript(jsonLd)}</script>\n<script type="application/ld+json">${jsonScript(breadcrumbs)}</script>`,
     body,
@@ -145,7 +152,7 @@ ${siteFooter(ctx)}`;
 }
 
 /** /artists: artists with shows coming up (soonest first), then everyone else A to Z. */
-export function artistsPage(ctx, artists, { showsBySlug }) {
+export function artistsPage(ctx, artists, { showsBySlug, meta = {} }) {
   const { config, url } = ctx;
   const now = DateTime.now().setZone(ZONE);
   const today = now.toISODate();
@@ -160,8 +167,15 @@ export function artistsPage(ctx, artists, { showsBySlug }) {
     const count = showsBySlug.get(a.slug).length;
     return `<li class="artist-row" data-name="${esc(a.name.toLowerCase())} ${esc(venue.name.toLowerCase())}">
       <a href="${url(`/artists/${a.slug}`)}">
-        <span class="artist-row-name">${esc(a.name)}</span>
-        <span class="artist-row-next muted">${esc(when)} at ${esc(venue.name)}${count > 1 ? ` · ${count} upcoming` : ''}</span>
+        ${
+          meta[a.slug]?.image
+            ? `<img class="artist-row-photo" src="${esc(meta[a.slug].imageSmall ?? meta[a.slug].image)}" alt="" width="56" height="56" loading="lazy" decoding="async" referrerpolicy="no-referrer">`
+            : `<span class="artist-row-photo artist-row-placeholder" aria-hidden="true">♪</span>`
+        }
+        <span class="artist-row-text">
+          <span class="artist-row-name">${esc(a.name)}</span>
+          <span class="artist-row-next muted">${esc(when)} at ${esc(venue.name)}${count > 1 ? ` · ${count} upcoming` : ''}</span>
+        </span>
       </a>
     </li>`;
   };

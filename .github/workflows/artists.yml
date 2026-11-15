@@ -1,0 +1,77 @@
+name: Update artists
+
+on:
+  schedule:
+    # Weekly, early Monday. Artist photos and the artists on the schedules change slowly.
+    - cron: '17 9 * * 1'
+  workflow_dispatch:
+
+# Shares the scraper's queue so the two never push at the same moment.
+concurrency:
+  group: scrape
+  cancel-in-progress: false
+
+jobs:
+  artists:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      # Creates a file only for a name MusicBrainz is sure about; everything else is skipped.
+      - name: Find new artists
+        id: discover
+        continue-on-error: true
+        run: node scripts/artists.js discover --write
+
+      # Works without the Spotify keys (photos only); with them it also gets larger photos and genres.
+      - name: Refresh photos
+        id: refresh
+        continue-on-error: true
+        env:
+          SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
+          SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
+        run: node scripts/artists.js refresh
+
+      - name: Check the data
+        run: node scripts/validate.js
+
+      - name: Commit data
+        run: |
+          git config user.name "nolatoday-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/artists/ data/artist-meta.json
+          if git diff --cached --quiet; then
+            echo "No artist changes."
+            exit 0
+          fi
+          git commit -m "Update artists ($(date -u +'%Y-%m-%d %H:%M UTC'))"
+          for attempt in 1 2 3 4; do
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0
+            sleep $((attempt * 5))
+          done
+          exit 1
+
+      - name: Report a failed step
+        if: steps.discover.outcome == 'failure' || steps.refresh.outcome == 'failure'
+        run: |
+          echo "::error::Finding artists or refreshing photos failed. See the steps above."
+          exit 1
+
+  # Pushes made with GITHUB_TOKEN don't trigger other workflows, so deploy from here.
+  deploy:
+    needs: artists
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    uses: ./.github/workflows/deploy.yml

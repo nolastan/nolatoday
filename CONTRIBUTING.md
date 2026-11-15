@@ -175,6 +175,8 @@ Return an array of `{ title, start, end?, allDay?, url? }`. `start`/`end` may be
 
 `node scripts/artists.js candidates` lists names on the schedules with no artist file. `node scripts/artists.js discover --write` looks them up on MusicBrainz and creates a file only when exactly one Louisiana act has that exact name, taking its Spotify id and links from MusicBrainz. Everything else is skipped.
 
+Photos and genres come from Spotify into `data/artist-meta.json`, which is generated: `node scripts/artists.js refresh` rewrites it for every artist with a `spotify` id. Without `SPOTIFY_CLIENT_ID` and `SPOTIFY_CLIENT_SECRET` it still gets photos (from Spotify's public oEmbed endpoint); with them it also gets larger photos and genres. Photos are linked from Spotify's CDN, never copied into the repo. The weekly "Update artists" workflow runs `discover --write` and `refresh` and commits the result.
+
 ## Parades
 
 Parade data has its own pipeline and stricter sourcing rules than venues: routes and nearly all dates from official City of New Orleans records only, plus dates organizers announce on their own sites (`data/parades/announced.json`). See [docs/parades.md](docs/parades.md) before changing `scripts/parades.js`, `scripts/lib/permits.js`, `scripts/lib/route-trace.js` or anything in `data/parades/`.

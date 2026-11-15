@@ -11,14 +11,14 @@ Read `CONTRIBUTING.md` before changing scrapers or venue data — it covers the 
 - `npm test` — unit tests (fixture-based, offline)
 - `node scripts/validate.js` — check venue data
 - `node scripts/build.js` — build `_site/`
-- `node scripts/artists.js candidates` — names on the schedules with no artist file; `discover --write` creates the ones MusicBrainz is sure about
+- `node scripts/artists.js candidates` — names on the schedules with no artist file; `discover --write` creates the ones MusicBrainz is sure about; `refresh` updates Spotify photos in `data/artist-meta.json`
 - `node scripts/parades.js --dry` — pull official parade data, print, write nothing
 
 ## Rules
 
 - Never change a venue's `slug` or delete a venue file: slugs are live URLs with search traffic. Rename with `name`; close with `"status": "closed"` + `note`; redirect non-venues via `data/redirects.json`.
 - Artists (`data/artists/`, format in CONTRIBUTING.md) are musicians only, matched to event titles at build time. Same slug rule as venues. Prefer a missing artist page to a wrong match: add an artist or a link only when sure.
-- Don't hand-edit `data/events/` or `data/status.json`; they're generated.
+- Don't hand-edit `data/events/`, `data/status.json` or `data/artist-meta.json`; they're generated.
 - `data/manual/` holds schedules for Instagram-only venues, written by Meta Muse straight to `main` (format in CONTRIBUTING.md). Fix format problems there, but don't add a `manual` source to a venue that has a working feed.
 - Prefer configuring a generic adapter in `scrapers/` over writing `scrapers/custom/*.js`. Any new adapter or custom scraper needs a fixture test in `test/`.
 - Tests must not hit the network.

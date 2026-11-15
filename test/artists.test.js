@@ -2,6 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { buildMatcher, candidateName, candidates, checkArtists, leadName, nameKey, slugify } from '../scripts/lib/artists.js';
 import { pickArtist, linksFrom } from '../scripts/lib/musicbrainz.js';
+import { metaFromApi, metaFromOEmbed } from '../scripts/lib/spotify.js';
 import { titleHtml, artistPage, artistsPage, artistLinks } from '../src/templates/artist.js';
 import { eventTitle } from '../src/templates/venue.js';
 
@@ -150,6 +151,22 @@ test('linksFrom: the artist’s own pages, skipping ended links', () => {
   assert.deepEqual(linksFrom({}), { links: {} });
 });
 
+test('spotify: photos and genres from the Web API, photo only from oEmbed', () => {
+  const img = (id, width) => ({ url: `https://i.scdn.co/image/${id}`, width, height: width });
+  assert.deepEqual(metaFromApi({ images: [img('ab6761610000f178aaa', 160), img('ab6761610000e5ebaaa', 640), img('ab67616100005174aaa', 320)], genres: ['new orleans jazz', 'brass band'] }), {
+    image: 'https://i.scdn.co/image/ab6761610000e5ebaaa',
+    imageSmall: 'https://i.scdn.co/image/ab6761610000f178aaa',
+    genres: ['new orleans jazz', 'brass band'],
+  });
+  assert.deepEqual(metaFromApi({ images: [img('ab6761610000e5ebaaa', 640)], genres: [] }), { image: 'https://i.scdn.co/image/ab6761610000e5ebaaa' });
+  assert.equal(metaFromApi({ images: [], genres: ['jazz'] }), null);
+  assert.equal(metaFromApi({ images: [{ url: 'https://evil.test/x.jpg', width: 640 }] }), null);
+  assert.deepEqual(metaFromOEmbed({ thumbnail_url: 'https://image-cdn-fa.spotifycdn.com/image/ab67616100005174cca3' }), { image: 'https://image-cdn-fa.spotifycdn.com/image/ab67616100005174cca3' });
+  // An album cover standing in for a missing artist photo is not used.
+  assert.equal(metaFromOEmbed({ thumbnail_url: 'https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02aadf' }), null);
+  assert.equal(metaFromOEmbed({}), null);
+});
+
 const ctx = { config: { siteName: 'NOLA.Today', siteUrl: 'https://nola.today', description: '', repo: 'nolastan/nolatoday', mapbox: {} }, url: (p) => p, asset: (p) => p };
 
 test('titleHtml and eventTitle: artist names link to their pages, the rest is escaped text', () => {
@@ -175,6 +192,10 @@ test('artistPage and artistsPage: shows, links and the player', () => {
   assert.match(html, /open\.spotify\.com\/embed\/artist\/5Yk2yKWh1jbCJS7gfDyPbK/);
   assert.match(html, /href="https:\/\/tubaskinny\.bandcamp\.com\/"/);
   assert.match(html, /"@type":"MusicGroup"/);
+  const withPhoto = artistPage(ctx, artist, { shows, meta: { image: 'https://i.scdn.co/image/ab6761610000e5ebaaa', genres: ['new orleans jazz'] } });
+  assert.match(withPhoto, /<img class="artist-photo" src="https:\/\/i\.scdn\.co\/image\/ab6761610000e5ebaaa" alt="Tuba Skinny"/);
+  assert.match(withPhoto, /new orleans jazz/);
+  assert.doesNotMatch(html, /artist-photo/);
   const empty = artistPage(ctx, { slug: 'x', name: 'X Band' }, { shows: [] });
   assert.match(empty, /No upcoming shows are listed/);
   assert.doesNotMatch(empty, /spotify/i);

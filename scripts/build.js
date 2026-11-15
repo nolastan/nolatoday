@@ -17,6 +17,7 @@ import { homePage, venuesPage, redirectPage, notFoundPage, privacyPage, contactP
 import { paradePage, paradesPage } from '../src/templates/parade.js';
 import { artistPage, artistsPage, artistLinks } from '../src/templates/artist.js';
 import { loadArtists, buildMatcher } from './lib/artists.js';
+import { loadArtistMeta } from './lib/spotify.js';
 import { PARADES_FILE, SOURCES, loadParades, loadWebsites, loadPhotos, paradeOrgs, mapParade } from './lib/parades.js';
 
 const OUT = path.join(ROOT, '_site');
@@ -159,10 +160,11 @@ function main() {
 
   // Artists: a directory, a page each, and the list for anyone building on this data.
   for (const shows of showsByArtist.values()) shows.sort((a, b) => a.event.start.localeCompare(b.event.start));
-  const artistDirectory = artistsPage(ctx, artists, { showsBySlug: showsByArtist });
+  const artistMeta = loadArtistMeta();
+  const artistDirectory = artistsPage(ctx, artists, { showsBySlug: showsByArtist, meta: artistMeta });
   write('artists.html', artistDirectory);
   write('artists/index.html', artistDirectory);
-  for (const a of artists) write(`artists/${a.slug}.html`, artistPage(ctx, a, { shows: showsByArtist.get(a.slug) }));
+  for (const a of artists) write(`artists/${a.slug}.html`, artistPage(ctx, a, { shows: showsByArtist.get(a.slug), meta: artistMeta[a.slug] }));
   write(
     'artists.json',
     JSON.stringify(
@@ -171,6 +173,8 @@ function main() {
         name: a.name,
         url: `${config.siteUrl}/artists/${a.slug}`,
         upcoming: showsByArtist.get(a.slug).length,
+        image: artistMeta[a.slug]?.image,
+        genres: artistMeta[a.slug]?.genres,
         links: Object.fromEntries(artistLinks(a).map((l) => [l.key, l.url])),
       })),
       null,
