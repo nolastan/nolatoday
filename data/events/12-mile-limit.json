@@ -2,12 +2,6 @@
   "venue": "12-mile-limit",
   "events": [
     {
-      "id": "780a3b0c44d3",
-      "title": "Heatwave!",
-      "start": "2026-11-14T21:00:00-06:00",
-      "url": "https://twelvemilelimit.com/events/heatwave?date=2026-11-14"
-    },
-    {
       "id": "54bc29d99cd4",
       "title": "Bear With Me Comedy Open Mic",
       "start": "2026-11-16T19:30:00-06:00",
@@ -120,6 +114,12 @@
       "title": "Purrsday Karaoke!",
       "start": "2026-12-17T21:00:00-06:00",
       "url": "https://twelvemilelimit.com/events/purrsday-karaoke?date=2026-12-17"
+    },
+    {
+      "id": "9355915e57b9",
+      "title": "Catch The Wiff",
+      "start": "2026-12-19T21:00:00-06:00",
+      "url": "https://twelvemilelimit.com/events/catch-the-wiff?date=2026-12-19"
     }
   ]
 }

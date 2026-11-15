@@ -2,12 +2,6 @@
   "venue": "hi-ho",
   "events": [
     {
-      "id": "ba9206fdc954",
-      "title": "Pocket Chocolate Birthday Bash",
-      "start": "2026-11-14T20:30:00-06:00",
-      "end": "2026-11-14T23:30:00-06:00"
-    },
-    {
       "id": "5dc932ae93cf",
       "title": "Locals Night: Bon Temps Trivia",
       "start": "2026-11-16T19:00:00-06:00",
