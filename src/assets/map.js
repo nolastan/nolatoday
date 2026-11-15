@@ -95,12 +95,17 @@
     return { start: start, end: p.e ? Date.parse(p.e) : start + PARADE_HOURS * HOUR, timed: true };
   }
 
+  function isParadeLive(p, now) {
+    var t = paradeTimes(p);
+    return t.timed && t.start - 30 * 60 * 1000 <= now && now <= t.end;
+  }
+
   function selectParades(day) {
     var now = PARADE_NOW;
     var today = dateKeyFmt.format(new Date(now));
     return (data.parades || []).filter(function (p) {
       var t = paradeTimes(p);
-      if (day === 'live') return t.timed && t.start - 30 * 60 * 1000 <= now && now <= t.end;
+      if (day === 'live') return isParadeLive(p, now);
       if (String(day).length === 10) return p.d === day;
       return p.d === addDays(today, Number(day)) && t.end >= now;
     });
@@ -138,6 +143,35 @@
   var selectedId = null;
   var paradeMarkerEls = {};
   var NONE = '\u0000';
+  var liveIds = [];
+
+  function liveFilter() {
+    return ['in', ['get', 'id'], ['literal', liveIds.length ? liveIds : [NONE]]];
+  }
+
+  // Same rhythm as the venue ripple: grow and fade over the first half of a 4s loop, then rest.
+  var RIPPLE_MS = 4000;
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var rippleFrame = null;
+  function animateLiveRoutes() {
+    rippleFrame = null;
+    if (!liveIds.length || !map.getLayer('parade-live-glow')) return;
+    if (reduceMotion) {
+      map.setPaintProperty('parade-live-glow', 'line-width', 14);
+      map.setPaintProperty('parade-live-glow', 'line-opacity', 0.35);
+      return;
+    }
+    var phase = (performance.now() % RIPPLE_MS) / RIPPLE_MS;
+    var k = Math.min(phase / 0.5, 1);
+    var ease = 1 - Math.pow(1 - k, 2);
+    map.setPaintProperty('parade-live-glow', 'line-width', 6 + 28 * ease);
+    map.setPaintProperty('parade-live-glow', 'line-opacity', k < 1 ? 0.75 * (1 - ease) : 0);
+    rippleFrame = requestAnimationFrame(animateLiveRoutes);
+  }
+  function startLiveRipple() {
+    if (map.getLayer('parade-live-glow')) map.setFilter('parade-live-glow', liveFilter());
+    if (liveIds.length && rippleFrame === null) rippleFrame = requestAnimationFrame(animateLiveRoutes);
+  }
 
   function paradeColors() {
     return { line: theme === 'light' ? '#e8590c' : '#ffa500', casing: theme === 'light' ? '#ffffff' : '#1b1d1e' };
@@ -175,6 +209,8 @@
     map.addSource('parades', { type: 'geojson', data: paradeCollection() });
     var round = { 'line-join': 'round', 'line-cap': 'round' };
     var none = ['==', ['get', 'id'], NONE];
+    // Live routes ripple outward like a live venue's marker; animateLiveRoutes drives width and opacity.
+    map.addLayer({ id: 'parade-live-glow', type: 'line', source: 'parades', layout: round, filter: liveFilter(), paint: { 'line-color': c.line, 'line-width': 6, 'line-opacity': 0, 'line-blur': 4 } });
     map.addLayer({ id: 'parade-casing', type: 'line', source: 'parades', layout: round, paint: { 'line-color': c.casing, 'line-width': 8, 'line-opacity': 0.7 } });
     map.addLayer({ id: 'parade-line', type: 'line', source: 'parades', layout: round, paint: { 'line-color': c.line, 'line-width': 4.5 } });
     map.addLayer({ id: 'parade-hover-casing', type: 'line', source: 'parades', layout: round, filter: none, paint: { 'line-color': c.casing, 'line-width': 11, 'line-opacity': 0.9 } });
@@ -184,6 +220,7 @@
     // A wide invisible line, so the route is easy to tap.
     map.addLayer({ id: 'parade-hit', type: 'line', source: 'parades', layout: round, paint: { 'line-color': c.line, 'line-width': 22, 'line-opacity': 0 } });
     syncParadeHighlight();
+    startLiveRipple();
   }
   map.on('style.load', addParadeLayers);
 
@@ -224,6 +261,9 @@
     paradeMarkerEls = {};
     hoverId = null;
     setParadeSelected(null);
+    var now = PARADE_NOW;
+    liveIds = shownParades.filter(function (p) { return p.g && isParadeLive(p, now); }).map(function (p) { return p.id; });
+    startLiveRipple();
     if (map.getSource('parades')) map.getSource('parades').setData(paradeCollection());
     shownParades.forEach(function (p) {
       (p.g ? (p.g.type === 'LineString' ? [p.g.coordinates] : p.g.coordinates) : []).forEach(function (line) {
@@ -232,7 +272,7 @@
       if (!p.p) return;
       var el = document.createElement('button');
       el.type = 'button';
-      el.className = 'marker marker--parade';
+      el.className = 'marker marker--parade' + (isParadeLive(p, now) ? ' live' : '');
       el.setAttribute('aria-label', p.n + ': ' + (KIND[p.c] || KIND.other).toLowerCase() + (p.g ? ', start of route' : ''));
       paradeMarkerEls[p.id] = el;
       el.addEventListener('mouseenter', function () { setParadeHover(p.id); });
