@@ -99,32 +99,32 @@
     "bar-redux": {
       "ok": true,
       "firstSeen": "2026-11-09T17:58:39.821-06:00",
-      "count": 3,
-      "lastRun": "2026-11-15T12:58:50.083-06:00",
-      "lastSuccess": "2026-11-15T12:58:50.083-06:00",
-      "lastNonEmpty": "2026-11-15T12:58:50.083-06:00",
+      "count": 2,
+      "lastRun": "2026-11-15T13:41:23.420-06:00",
+      "lastSuccess": "2026-11-15T13:41:23.420-06:00",
+      "lastNonEmpty": "2026-11-15T13:41:23.420-06:00",
       "consecutiveFailures": 0,
       "sources": [
         {
           "type": "manual",
           "ok": true,
-          "count": 3
+          "count": 2
         }
       ]
     },
     "bjs": {
       "ok": true,
       "firstSeen": "2026-11-09T18:16:00.481-06:00",
-      "count": 1,
-      "lastRun": "2026-11-15T12:58:50.083-06:00",
-      "lastSuccess": "2026-11-15T12:58:50.083-06:00",
-      "lastNonEmpty": "2026-11-15T12:58:50.083-06:00",
+      "count": 2,
+      "lastRun": "2026-11-15T13:41:23.420-06:00",
+      "lastSuccess": "2026-11-15T13:41:23.420-06:00",
+      "lastNonEmpty": "2026-11-15T13:41:23.420-06:00",
       "consecutiveFailures": 0,
       "sources": [
         {
           "type": "manual",
           "ok": true,
-          "count": 1
+          "count": 2
         }
       ]
     },
@@ -192,19 +192,35 @@
         }
       ]
     },
-    "carrollton-station": {
+    "cafe-negril": {
       "ok": true,
-      "firstSeen": "2026-11-09T18:33:18.846-06:00",
-      "count": 1,
-      "lastRun": "2026-11-15T12:58:50.083-06:00",
-      "lastSuccess": "2026-11-15T12:58:50.083-06:00",
-      "lastNonEmpty": "2026-11-15T12:58:50.083-06:00",
+      "firstSeen": "2026-11-15T13:41:23.420-06:00",
+      "count": 3,
+      "lastRun": "2026-11-15T13:41:23.420-06:00",
+      "lastSuccess": "2026-11-15T13:41:23.420-06:00",
+      "lastNonEmpty": "2026-11-15T13:41:23.420-06:00",
       "consecutiveFailures": 0,
       "sources": [
         {
           "type": "manual",
           "ok": true,
-          "count": 1
+          "count": 3
+        }
+      ]
+    },
+    "carrollton-station": {
+      "ok": true,
+      "firstSeen": "2026-11-09T18:33:18.846-06:00",
+      "count": 2,
+      "lastRun": "2026-11-15T13:41:23.420-06:00",
+      "lastSuccess": "2026-11-15T13:41:23.420-06:00",
+      "lastNonEmpty": "2026-11-15T13:41:23.420-06:00",
+      "consecutiveFailures": 0,
+      "sources": [
+        {
+          "type": "manual",
+          "ok": true,
+          "count": 2
         }
       ]
     },
@@ -244,9 +260,9 @@
       "ok": true,
       "firstSeen": "2026-11-09T18:33:18.846-06:00",
       "count": 1,
-      "lastRun": "2026-11-15T12:58:50.083-06:00",
-      "lastSuccess": "2026-11-15T12:58:50.083-06:00",
-      "lastNonEmpty": "2026-11-15T12:58:50.083-06:00",
+      "lastRun": "2026-11-15T13:41:23.420-06:00",
+      "lastSuccess": "2026-11-15T13:41:23.420-06:00",
+      "lastNonEmpty": "2026-11-15T13:41:23.420-06:00",
       "consecutiveFailures": 0,
       "sources": [
         {
@@ -275,16 +291,16 @@
     "domino": {
       "ok": true,
       "firstSeen": "2026-11-09T18:16:00.481-06:00",
-      "count": 5,
-      "lastRun": "2026-11-15T12:58:50.083-06:00",
-      "lastSuccess": "2026-11-15T12:58:50.083-06:00",
-      "lastNonEmpty": "2026-11-15T12:58:50.083-06:00",
+      "count": 7,
+      "lastRun": "2026-11-15T13:41:23.420-06:00",
+      "lastSuccess": "2026-11-15T13:41:23.420-06:00",
+      "lastNonEmpty": "2026-11-15T13:41:23.420-06:00",
       "consecutiveFailures": 0,
       "sources": [
         {
           "type": "manual",
           "ok": true,
-          "count": 5
+          "count": 7
         }
       ]
     },
@@ -568,16 +584,16 @@
     "okay-bar": {
       "ok": true,
       "firstSeen": "2026-11-09T18:33:18.846-06:00",
-      "count": 5,
-      "lastRun": "2026-11-15T12:58:50.083-06:00",
-      "lastSuccess": "2026-11-15T12:58:50.083-06:00",
-      "lastNonEmpty": "2026-11-15T12:58:50.083-06:00",
+      "count": 6,
+      "lastRun": "2026-11-15T13:41:23.420-06:00",
+      "lastSuccess": "2026-11-15T13:41:23.420-06:00",
+      "lastNonEmpty": "2026-11-15T13:41:23.420-06:00",
       "consecutiveFailures": 0,
       "sources": [
         {
           "type": "manual",
           "ok": true,
-          "count": 5
+          "count": 6
         }
       ]
     },
@@ -601,9 +617,9 @@
       "ok": true,
       "firstSeen": "2026-11-09T18:16:00.481-06:00",
       "count": 2,
-      "lastRun": "2026-11-15T12:58:50.083-06:00",
-      "lastSuccess": "2026-11-15T12:58:50.083-06:00",
-      "lastNonEmpty": "2026-11-15T12:58:50.083-06:00",
+      "lastRun": "2026-11-15T13:41:23.420-06:00",
+      "lastSuccess": "2026-11-15T13:41:23.420-06:00",
+      "lastNonEmpty": "2026-11-15T13:41:23.420-06:00",
       "consecutiveFailures": 0,
       "sources": [
         {
@@ -777,9 +793,9 @@
       "ok": true,
       "firstSeen": "2026-11-09T17:58:39.821-06:00",
       "count": 3,
-      "lastRun": "2026-11-15T12:58:50.083-06:00",
-      "lastSuccess": "2026-11-15T12:58:50.083-06:00",
-      "lastNonEmpty": "2026-11-15T12:58:50.083-06:00",
+      "lastRun": "2026-11-15T13:41:23.420-06:00",
+      "lastSuccess": "2026-11-15T13:41:23.420-06:00",
+      "lastNonEmpty": "2026-11-15T13:41:23.420-06:00",
       "consecutiveFailures": 0,
       "sources": [
         {
@@ -969,8 +985,8 @@
       "ok": true,
       "firstSeen": "2026-11-09T18:33:18.846-06:00",
       "count": 0,
-      "lastRun": "2026-11-15T12:58:50.083-06:00",
-      "lastSuccess": "2026-11-15T12:58:50.083-06:00",
+      "lastRun": "2026-11-15T13:41:23.420-06:00",
+      "lastSuccess": "2026-11-15T13:41:23.420-06:00",
       "lastNonEmpty": "2026-11-11T13:44:35.694-06:00",
       "consecutiveFailures": 0,
       "sources": [
@@ -982,5 +998,5 @@
       ]
     }
   },
-  "generatedAt": "2026-11-15T12:58:50.083-06:00"
+  "generatedAt": "2026-11-15T13:41:23.420-06:00"
 }
