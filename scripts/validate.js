@@ -5,6 +5,7 @@ import path from 'node:path';
 import { ROOT, DATA_DIR, loadVenues, readJSON } from './lib/data.js';
 import { adapters } from '../scrapers/index.js';
 import { MANUAL_DIR, KINDS, checkManual } from '../scrapers/manual.js';
+import { loadArtists, checkArtists } from './lib/artists.js';
 
 const errors = [];
 const err = (slug, msg) => errors.push(`${slug}: ${msg}`);
@@ -116,9 +117,12 @@ for (const [from, to] of Object.entries(redirects)) {
   if (!to.startsWith('/')) err('redirects.json', `"${from}" target must be a site path`);
 }
 
+const artists = loadArtists();
+for (const p of checkArtists(artists)) err(`data/artists/${p.slug}.json`, p.message);
+
 if (errors.length) {
   console.error(errors.map((e) => `✗ ${e}`).join('\n'));
-  console.error(`\n${errors.length} problem(s) in venue data.`);
+  console.error(`\n${errors.length} problem(s) in venue and artist data.`);
   process.exit(1);
 }
-console.log(`✓ ${venues.length} venues and ${Object.keys(redirects).length} redirects look good.`);
+console.log(`✓ ${venues.length} venues, ${artists.length} artists and ${Object.keys(redirects).length} redirects look good.`);

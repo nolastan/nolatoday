@@ -104,7 +104,7 @@
   // ---- Directory filter ------------------------------------------------------
   var filter = document.querySelector('[data-venue-filter]');
   if (filter) {
-    var cards = Array.prototype.slice.call(document.querySelectorAll('.venue-card'));
+    var cards = Array.prototype.slice.call(document.querySelectorAll('.venue-card, .artist-row'));
     var empty = document.querySelector('[data-venue-empty]');
     filter.addEventListener('input', function () {
       var q = filter.value.trim().toLowerCase();

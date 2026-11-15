@@ -221,6 +221,17 @@
     return buttons.filter(function (b) { return b.dataset.day === day; })[0];
   }
 
+  // An event title with the artists in it (ev.ar: [slug, start, end]) linked to their pages.
+  function titleHtml(ev) {
+    var html = '';
+    var at = 0;
+    (ev.ar || []).forEach(function (m) {
+      html += esc(ev.t.slice(at, m[1])) + '<a href="' + cfg.base + '/artists/' + m[0] + '">' + esc(ev.t.slice(m[1], m[2])) + '</a>';
+      at = m[2];
+    });
+    return html + esc(ev.t.slice(at));
+  }
+
   function popupHtml(slug, venue, events, now) {
     var href = cfg.base + '/venues/' + slug;
     var banner = venue.image
@@ -230,7 +241,7 @@
       .map(function (ev) {
         var time = ev.a ? 'All day' : timeFmt.format(new Date(Date.parse(ev.s)));
         var live = isLive(ev, now) ? ' <span class="popup-live">• Live now</span>' : '';
-        return '<li><span class="popup-time">' + esc(time) + live + '</span><span class="popup-title">' + esc(ev.t) + '</span></li>';
+        return '<li><span class="popup-time">' + esc(time) + live + '</span><span class="popup-title">' + titleHtml(ev) + '</span></li>';
       })
       .join('');
     return (

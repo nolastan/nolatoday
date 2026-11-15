@@ -1,6 +1,7 @@
 import { DateTime } from 'luxon';
 import { esc, jsonScript, layout, siteHeader, siteFooter } from './layout.js';
 import { ZONE } from '../../scripts/lib/time.js';
+import { titleHtml } from './artist.js';
 
 const MAX_LISTED = 120;
 
@@ -61,6 +62,17 @@ function storyDate(iso) {
 function formatTime(e) {
   if (e.allDay) return 'All day';
   return e.dt.toFormat(e.dt.minute ? 'h:mm a' : 'h a').toLowerCase();
+}
+
+/**
+ * An event's title. Artists with a page link to it, and the event's own page moves to a "Details" link
+ * beside the title; without a known artist the whole title links to the event's page as before.
+ */
+export function eventTitle(ctx, e) {
+  if (e.artists?.length) {
+    return `${titleHtml(ctx, e.title, e.artists)}${e.url ? ` <a class="event-details" href="${esc(e.url)}" rel="noopener nofollow">Details</a>` : ''}`;
+  }
+  return e.url ? `<a href="${esc(e.url)}" rel="noopener nofollow">${esc(e.title)}</a>` : esc(e.title);
 }
 
 export function eventSchema(ctx, venue, e) {
@@ -207,7 +219,7 @@ export function venuePage(ctx, venue, { events, status }) {
             .map(
               (e) => `<li class="event" data-start="${esc(e.start)}"${e.end ? ` data-end="${esc(e.end)}"` : ''}${e.allDay ? ' data-all-day' : ''}>
             <time class="event-time" datetime="${esc(e.start)}">${formatTime(e)}</time>
-            <span class="event-title">${e.url ? `<a href="${esc(e.url)}" rel="noopener nofollow">${esc(e.title)}</a>` : esc(e.title)}</span>
+            <span class="event-title">${eventTitle(ctx, e)}</span>
           </li>`,
             )
             .join('')}

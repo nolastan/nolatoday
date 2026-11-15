@@ -61,6 +61,7 @@ export function siteHeader(ctx, { current } = {}) {
   <nav class="site-nav" aria-label="Main">
     ${link('/', 'Map', 'map')}
     ${link('/venues', 'Venues', 'venues')}
+    ${link('/artists', 'Artists', 'artists')}
     ${link('/parades', 'Parades', 'parades')}
   </nav>
 </header>`;
