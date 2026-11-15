@@ -669,30 +669,14 @@ h3 { font-size: 1.3rem; }
 .popup-title a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
 .artist-hero { padding-top: 40px; }
 .artist-hero h1 { margin-bottom: 8px; }
-.artist-columns .wrap { max-width: none; padding-inline: 0; }
-.artist-listen { margin-top: 48px; }
+.artist-columns .wrap { max-width: none; margin-inline: 0; padding-inline: 0; }
+.artist-listen { margin-top: 32px; }
 .spotify-player { display: block; max-width: 720px; border: 0; border-radius: 12px; }
 /* Wide screens: shows on the left, the player beside them so it's on screen without scrolling. */
 @media (min-width: 900px) {
   .artist-columns.has-player { display: grid; grid-template-columns: minmax(0, 1fr) 400px; gap: 48px; align-items: start; }
-  .artist-columns.has-player .artist-listen { position: sticky; top: 24px; margin-top: 40px; }
-  .artist-columns.has-player .artist-listen h2 { font-size: 1.2rem; margin: 0 0 12px; }
+  .artist-columns.has-player .artist-listen { position: sticky; top: 24px; margin-top: 48px; }
 }
-.artist-list { list-style: none; margin: 24px 0 0; padding: 0; display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
-.artist-row a {
-  display: block;
-  height: 100%;
-  padding: 12px 16px;
-  border-radius: var(--radius);
-  background: var(--bg-elev);
-  border: 1px solid var(--line);
-  color: var(--text);
-  text-decoration: none;
-  transition: border-color 0.15s ease;
-}
-.artist-row a:hover { border-color: var(--marker); }
-.artist-row-name { display: block; font-size: 1.2rem; font-weight: 600; }
-.artist-row-next { display: block; font-size: 0.95rem; }
 /* Links to music services wear the service's own color; the artist's website stays plain. */
 .button.provider:not(.provider-website) { border-color: transparent; background-origin: border-box; }
 .button.provider:not(.provider-website):hover { filter: brightness(1.08); }

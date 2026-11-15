@@ -176,7 +176,7 @@ test('artistPage and artistsPage: shows, links and the player', () => {
   assert.match(html, /href="https:\/\/tubaskinny\.bandcamp\.com\/"/);
   assert.match(html, /"@type":"MusicGroup"/);
   const empty = artistPage(ctx, { slug: 'x', name: 'X Band' }, { shows: [] });
-  assert.match(empty, /No upcoming New Orleans shows/);
+  assert.match(empty, /No upcoming shows are listed/);
   assert.doesNotMatch(empty, /spotify/i);
   const dir = artistsPage(ctx, [artist, { slug: 'x', name: 'X Band' }], { showsBySlug: new Map([['tuba-skinny', shows], ['x', []]]) });
   assert.match(dir, /href="\/artists\/tuba-skinny"/);

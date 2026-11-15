@@ -81,8 +81,8 @@ export function artistPage(ctx, artist, { shows }) {
   let schedule;
   if (!listed.length) {
     schedule = `<section class="wrap schedule">
-      <h2>Upcoming shows</h2>
-      <div class="notice"><p>No upcoming New Orleans shows are listed for ${esc(artist.name)} right now. See who’s playing tonight on the <a href="${url('/')}">map</a>.</p></div>
+      <h2>Upcoming shows in New Orleans</h2>
+      <div class="notice"><p>No upcoming shows are listed for ${esc(artist.name)} right now. See who’s playing tonight on the <a href="${url('/')}">map</a>.</p></div>
     </section>`;
   } else {
     const days = new Map();
@@ -93,7 +93,7 @@ export function artistPage(ctx, artist, { shows }) {
       days.get(key).shows.push({ ...s, dt });
     }
     schedule = `<section class="wrap schedule">
-      <h2>Upcoming shows</h2>
+      <h2>Upcoming shows in New Orleans</h2>
       ${[...days.values()]
         .map(
           (day) => `<div class="day" data-day="${day.date.toISODate()}">
@@ -116,7 +116,6 @@ export function artistPage(ctx, artist, { shows }) {
 
   const player = artist.spotify
     ? `<aside class="artist-listen">
-    <h2>Listen</h2>
     <iframe class="spotify-player" title="${esc(artist.name)} on Spotify" src="https://open.spotify.com/embed/artist/${esc(artist.spotify)}" width="100%" height="352" frameborder="0" loading="lazy" allow="encrypted-media; clipboard-write; fullscreen; picture-in-picture"></iframe>
   </aside>`
     : '';
@@ -124,11 +123,9 @@ export function artistPage(ctx, artist, { shows }) {
   const reportUrl = `https://github.com/${config.repo}/issues/new?labels=data&title=${encodeURIComponent(`Artist data: ${artist.name}`)}&body=${encodeURIComponent(`Page: ${canonical}\n\nWhat's wrong?\n`)}`;
   const body = `${siteHeader(ctx, { current: 'artists' })}
 <main class="artist-page">
+  ${hero}
   <div class="wrap artist-columns${player ? ' has-player' : ''}">
-    <div class="artist-main">
-      ${hero}
-      ${schedule}
-    </div>
+    ${schedule}
     ${player}
   </div>
   <section class="wrap venue-foot muted">
