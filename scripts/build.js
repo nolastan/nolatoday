@@ -103,9 +103,16 @@ function main() {
 
   // Parades: yesterday's (a late one may still be rolling) through the next year, so a parade page can link to its day on the map.
   const parades = loadParades();
+  const paradePhotos = loadPhotos();
   const paradeFrom = now.minus({ days: 1 }).toISODate();
   const paradeTo = now.plus({ days: 400 }).toISODate();
-  const mapParades = parades.filter((f) => f.properties.date >= paradeFrom && f.properties.date <= paradeTo && (f.geometry || f.properties.start_point)).map(mapParade);
+  const mapParades = parades.filter((f) => f.properties.date >= paradeFrom && f.properties.date <= paradeTo && (f.geometry || f.properties.start_point)).map((f) => {
+    // The organization's first photo tops its card on the map, as a venue's photo does.
+    const item = mapParade(f);
+    const photo = paradePhotos[item.slug]?.[0];
+    if (photo) item.i = ctx.asset(`/images/parades/${photo.file.replace(/\.jpg$/, '-600.jpg')}`);
+    return item;
+  });
   write('events.json', JSON.stringify({ generatedAt: now.toISO(), venues: mapVenues, events: mapEvents, parades: mapParades }));
 
   // Public venue list (handy for anyone building on this data).

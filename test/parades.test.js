@@ -12,6 +12,8 @@ import {
   mergeWithPrevious,
   nameKey,
   paradeOrgs,
+  mardiGras,
+  expectedNext,
   startStreet,
   loadWebsites,
   loadPhotos,
@@ -279,8 +281,9 @@ test('site: parades group by organization, and pages show the city record honest
   const { features } = build();
   for (const f of features) f.properties.first_seen = '2026-11-12';
   const orgs = paradeOrgs(features, '2026-11-12');
-  // Coming parades first, soonest first.
-  assert.deepEqual(orgs.slice(0, 2).map((o) => o.slug), ['nine-times', 'mosaique']);
+  // Calendar order by each organization's next parade, listed or likely: Jeanne d'Arc's Twelfth Night
+  // (Jan 6, from its last one) comes before Mosaique's listed Jan 9.
+  assert.deepEqual(orgs.slice(0, 3).map((o) => o.slug), ['nine-times', 'krewe-de-jeanne-darc', 'mosaique']);
   const ctx = { config: { siteName: 'NOLA.Today', siteUrl: 'https://nola.today', repo: 'x/y', mapbox: { token: null } }, url: (p) => p, asset: (p) => p };
 
   const page = paradePage(ctx, orgs.find((o) => o.slug === 'mosaique'), { today: '2026-11-12' });
@@ -417,19 +420,28 @@ test('photos.json: every photo is on disk with a credit, for an organization in 
   for (const file of fs.existsSync(dir) ? fs.readdirSync(dir) : []) assert.ok(used.has(file), `public/images/parades/${file} is not in photos.json`);
 });
 
-test('site: with nothing coming, organizations with photos come first, then those with a route, then the rest', () => {
-  const line = { type: 'LineString', coordinates: [[-90.07, 29.95], [-90.06, 29.96]] };
-  const f = (slug, date, geometry = null) => ({ id: `${slug}-${date}`, geometry, properties: { krewe_slug: slug, name: slug, date, category: 'second_line' } });
+test('site: the directory is in order of each organization’s next parade, listed or likely', () => {
+  const f = (slug, date, category = 'second_line') => ({ id: `${slug}-${date}`, geometry: null, properties: { krewe_slug: slug, name: slug, date, category } });
   const features = [
-    f('plain-recent', '2026-11-01'),
-    f('route-old', '2026-01-01', line),
-    f('route-recent', '2026-10-01', line),
-    f('photo-old', '2025-12-01'),
-    f('coming', '2026-12-01'),
+    f('listed-dec', '2026-12-20'),
+    f('sunday-last-nov', '2025-11-30'), // comes back on a Sunday a year on: 2026-11-29
+    f('sunday-last-oct', '2026-10-11'), // next fall: 2027-10-10
+    f('bacchus', '2026-02-15', 'mardi_gras'), // Sunday before Mardi Gras: 2027-02-07
+    f('joan', '2026-01-06', 'mardi_gras'), // Twelfth Night keeps its date: 2027-01-06
+    f('listed-jan', '2027-01-06'),
   ];
-  const photos = { 'photo-old': [{ file: 'x.jpg', credit: 'Someone' }] };
-  const orgs = paradeOrgs(features, '2026-11-12', { photos });
-  assert.deepEqual(orgs.map((o) => o.slug), ['coming', 'photo-old', 'route-recent', 'route-old', 'plain-recent']);
+  const orgs = paradeOrgs(features, '2026-11-12');
+  assert.deepEqual(orgs.map((o) => o.slug), ['sunday-last-nov', 'listed-dec', 'listed-jan', 'joan', 'bacchus', 'sunday-last-oct']);
+  assert.deepEqual(orgs.map((o) => o.next), ['2026-11-29', '2026-12-20', '2027-01-06', '2027-01-06', '2027-02-07', '2027-10-10']);
+});
+
+test('expectedNext: Carnival parades follow Mardi Gras, which moves with Easter', () => {
+  assert.equal(mardiGras(2026), '2026-02-17');
+  assert.equal(mardiGras(2027), '2027-02-09');
+  assert.equal(mardiGras(2028), '2028-02-29');
+  assert.equal(expectedNext({ date: '2026-02-17', category: 'mardi_gras' }, '2026-11-15'), '2027-02-09');
+  assert.equal(expectedNext({ date: '2026-01-31', category: 'mardi_gras' }, '2026-11-15'), '2027-01-23');
+  assert.equal(expectedNext({ date: '2025-11-16', category: 'second_line' }, '2026-11-15'), '2026-11-15');
 });
 
 test('organizer announcements: a date and time from the organization’s own site, until the city has the parade', () => {
