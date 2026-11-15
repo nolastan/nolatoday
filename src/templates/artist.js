@@ -196,7 +196,7 @@ ${siteFooter(ctx)}`;
     title: `New Orleans Bands & Musicians – ${now.toFormat('LLLL yyyy')} Shows – NOLA.Today`,
     description: `${playing.length} New Orleans bands and musicians with upcoming shows, with dates, venues and links to listen.`,
     canonical: `${config.siteUrl}/artists`,
-    bodyClass: 'page-artists',
+    bodyClass: 'page-venues page-artists',
     head: `<script type="application/ld+json">${jsonScript({
       '@context': 'https://schema.org',
       '@type': 'ItemList',
