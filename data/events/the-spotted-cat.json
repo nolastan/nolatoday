@@ -2,16 +2,6 @@
   "venue": "the-spotted-cat",
   "events": [
     {
-      "id": "28287045276d",
-      "title": "Popcorn",
-      "start": "2026-11-14T14:30:00-06:00"
-    },
-    {
-      "id": "405546054eaf",
-      "title": "Shake'em Up Jazz Band",
-      "start": "2026-11-14T18:00:00-06:00"
-    },
-    {
       "id": "7522c633a3cc",
       "title": "Vegas Cola Band",
       "start": "2026-11-14T22:00:00-06:00"

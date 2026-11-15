@@ -2,13 +2,6 @@
   "venue": "three-muses",
   "events": [
     {
-      "id": "ab1317b570bc",
-      "title": "Silver Lining Serenaders",
-      "start": "2026-11-14T19:30:00-06:00",
-      "end": "2026-11-14T23:30:00-06:00",
-      "url": "https://www.3musesnola.com/music/silver-lining-serenaders-1"
-    },
-    {
       "id": "bf3263ed9d7f",
       "title": "New Orleans Rug Cutters",
       "start": "2026-11-15T19:30:00-06:00",
