@@ -118,7 +118,11 @@
     var now = PARADE_NOW;
     var live = t.timed && t.start <= now && now <= t.end ? ' <span class="popup-live">• Rolling now</span>' : '';
     return (
-      '<a class="popup-banner popup-banner--parade" href="' + href + '"' + (p.i ? ' style="background-image:url(\'' + esc(p.i) + '\')"' : '') + '><h3>' + esc(p.n) + '</h3></a>' +
+      // With a photo the banner is a venue's full height; without one it is the short gradient strip.
+      (p.i
+        ? '<a class="popup-banner" href="' + href + '" style="background-image:url(\'' + esc(p.i) + '\')">'
+        : '<a class="popup-banner popup-banner--parade" href="' + href + '">') +
+      '<h3>' + esc(p.n) + '</h3></a>' +
       '<ul class="popup-gigs">' +
       '<li><span class="popup-time">' + esc(when) + live + '</span><span class="popup-title">' + esc(KIND[p.c] || KIND.other) + '</span></li>' +
       (p.a ? '<li><span class="popup-time">Starts on</span><span class="popup-title">' + esc(p.a) + '</span></li>' : '') +
