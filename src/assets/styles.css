@@ -694,7 +694,7 @@ h3 { font-size: 1.3rem; }
 .artist-row-name { display: block; font-size: 1.2rem; font-weight: 600; }
 .artist-row-next { display: block; font-size: 0.95rem; }
 /* Links to music services wear the service's own color; the artist's website stays plain. */
-.button.provider:not(.provider-website) { border-color: transparent; }
+.button.provider:not(.provider-website) { border-color: transparent; background-origin: border-box; }
 .button.provider:not(.provider-website):hover { filter: brightness(1.08); }
 .provider-spotify, .provider-spotify:hover { background: #1ed760; color: #000; }
 .provider-appleMusic, .provider-appleMusic:hover { background: #fa243c; color: #fff; }
