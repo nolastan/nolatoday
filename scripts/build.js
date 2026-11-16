@@ -19,6 +19,7 @@ import { artistPage, artistsPage, artistLinks } from '../src/templates/artist.js
 import { loadArtists, buildMatcher } from './lib/artists.js';
 import { loadFood } from './lib/food.js';
 import { foodPage, foodVendorPage } from '../src/templates/food.js';
+import { FOOD_ICONS } from '../src/templates/food-icons.js';
 import { loadArtistMeta } from './lib/spotify.js';
 import { PARADES_FILE, SOURCES, loadParades, loadWebsites, loadPhotos, paradeOrgs, mapParade } from './lib/parades.js';
 
@@ -142,7 +143,7 @@ function main() {
       if ((e.end ?? e.start) < startOfToday || e.start > horizon) continue;
       const p = e.place;
       foodPlaces[p.key] ??= { name: p.name, lat: p.lat, lng: p.lng, ...(p.venue ? { venue: p.venue } : {}), ...(p.approximate ? { far: 1 } : {}) };
-      const item = { p: p.key, n: vendor.name, f: vendor.slug, s: e.start };
+      const item = { p: p.key, n: vendor.name, f: vendor.slug, i: FOOD_ICONS[vendor.icon] ? vendor.icon : 'default', s: e.start };
       if (e.end) item.e = e.end;
       if (e.allDay) item.a = 1;
       // Not confirmed by the vendor in the last 30 days: the card says so.
@@ -151,7 +152,7 @@ function main() {
     }
   }
   foodEvents.sort((a, b) => a.s.localeCompare(b.s));
-  write('events.json', JSON.stringify({ generatedAt: now.toISO(), venues: mapVenues, events: mapEvents, parades: mapParades, foodPlaces, food: foodEvents }));
+  write('events.json', JSON.stringify({ generatedAt: now.toISO(), venues: mapVenues, events: mapEvents, parades: mapParades, foodPlaces, food: foodEvents, foodIcons: Object.fromEntries([...new Set(foodEvents.map((e) => e.i))].map((k) => [k, FOOD_ICONS[k]])) }));
 
   // Public venue list (handy for anyone building on this data).
   write(
