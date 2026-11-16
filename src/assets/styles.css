@@ -734,7 +734,8 @@ h3 { font-size: 1.3rem; }
 .marker--food::before, .marker--food::after { background: var(--food); }
 .popup-subhead { margin: 0; padding: 6px 14px 0; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; opacity: 0.75; }
 .popup-food { padding-top: 0; }
-.popup-food--only { padding-top: 8px; }
+.popup-food--only { padding-top: 8px; padding-bottom: 10px; }
+.popup-food-icon { display: inline-flex; vertical-align: -3px; margin-right: 6px; }
 .popup-at { font-weight: 500; }
 .food-stale, .popup-stale { display: block; font-size: 0.9rem; font-style: italic; color: var(--muted); }
 .card-body .food-stale { margin-top: 2px !important; }

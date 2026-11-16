@@ -403,8 +403,10 @@
         var time = ev.a ? 'All day' : timeFmt.format(new Date(Date.parse(ev.s)));
         var live = isLive(ev, now) ? ' <span class="popup-live">• Open now</span>' : '';
         var stale = ev.u ? '<span class="popup-stale">Not confirmed recently</span>' : '';
+        var paths = (data.foodIcons || {})[ev.i];
+        var icon = paths ? '<span class="popup-food-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true">' + paths + '</svg></span>' : '';
         var at = place ? '<span class="popup-at"> at ' + esc(place.name) + '</span>' : '';
-        return '<li><span class="popup-time">' + esc(time) + live + '</span><span class="popup-title"><a href="' + cfg.base + '/food/' + esc(ev.f) + '">' + esc(ev.n) + '</a>' + at + '</span>' + stale + '</li>';
+        return '<li><span class="popup-time">' + esc(time) + live + '</span><span class="popup-title">' + icon + '<a href="' + cfg.base + '/food/' + esc(ev.f) + '">' + esc(ev.n) + '</a>' + at + '</span>' + stale + '</li>';
       })
       .join('');
   }
@@ -418,8 +420,7 @@
   // A place with only food that day: no banner, since the bar has no page here; just the pop-ups.
   function foodPopupHtml(place, events, now) {
     return (
-      '<ul class="popup-gigs popup-food popup-food--only">' + foodItemsHtml(events, now, place) + '</ul>' +
-      '<a class="popup-more" href="' + cfg.base + '/food">All food pop-ups →</a>'
+      '<ul class="popup-gigs popup-food popup-food--only">' + foodItemsHtml(events, now, place) + '</ul>'
     );
   }
 
