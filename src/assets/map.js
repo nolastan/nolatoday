@@ -415,7 +415,10 @@
 
   // A place with only food that day: a purple card that leads to the food directory.
   function foodPopupHtml(place, events, now) {
-    var href = place.venue ? cfg.base + '/venues/' + place.venue : cfg.base + '/food';
+    // The bar has no page of its own unless it is a venue, so the header leads to the pop-up's page
+    // (or, with several pop-ups there, to the food directory).
+    var vendors = events.map(function (ev) { return ev.f; }).filter(function (f, i, all) { return all.indexOf(f) === i; });
+    var href = place.venue ? cfg.base + '/venues/' + place.venue : vendors.length === 1 ? cfg.base + '/food/' + vendors[0] : cfg.base + '/food';
     return (
       '<a class="popup-banner popup-banner--food" href="' + href + '"><h3>' + esc(place.name) + '</h3></a>' +
       '<ul class="popup-gigs popup-food">' + foodItemsHtml(events, now) + '</ul>' +
