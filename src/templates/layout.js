@@ -63,6 +63,7 @@ export function siteHeader(ctx, { current } = {}) {
     ${link('/venues', 'Venues', 'venues')}
     ${link('/artists', 'Artists', 'artists')}
     ${link('/parades', 'Parades', 'parades')}
+    ${link('/food', 'Food', 'food')}
   </nav>
 </header>`;
 }

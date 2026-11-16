@@ -14,6 +14,8 @@
   --accent-ink: #1b2b35;
   --marker: #ffa500;
   --marker-ring: rgba(255, 165, 0, 0.45);
+  --food: #b77cf2;
+  --food-ring: rgba(183, 124, 242, 0.45);
   --teal: #68909e;
   --teal-deep: #2a5669;
   --aqua: #aacfd0;
@@ -39,6 +41,8 @@
     --accent-ink: #1b2b35;
     --marker: #e8590c;
     --marker-ring: rgba(232, 89, 12, 0.35);
+    --food: #7c3aed;
+    --food-ring: rgba(124, 58, 237, 0.35);
     --link: #2a5669;
     --popup-bg: #ffffff;
     --popup-text: #1e2a2e;
@@ -757,3 +761,41 @@ h3 { font-size: 1.3rem; }
 .provider-youtube, .provider-youtube:hover { background: #ff0000; color: #fff; }
 .provider-soundcloud, .provider-soundcloud:hover { background: #ff5500; color: #1a0a00; }
 .provider-instagram, .provider-instagram:hover { background: linear-gradient(45deg, #f58529, #dd2a7b 50%, #8134af 80%, #515bd4); color: #fff; }
+
+/* ---- Food pop-ups (prototype) ------------------------------------------------ */
+/* On the map a food-only stop is a purple dot; a venue with music and food keeps the music color. */
+.marker--food::before, .marker--food::after { background: var(--food); }
+.popup-subhead { margin: 0; padding: 6px 14px 0; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; opacity: 0.75; }
+.popup-food { padding-top: 0; }
+.popup-food--only { padding-top: 8px; padding-bottom: 10px; }
+.popup-food-icon { display: inline-flex; vertical-align: -3px; margin-right: 6px; }
+.popup-at { font-weight: 500; }
+.food-stale, .popup-stale { display: block; font-size: 0.9rem; font-style: italic; color: var(--muted); }
+.card-body .food-stale { margin-top: 2px !important; }
+.popup-stale { font-size: 0.85rem; color: inherit; opacity: 0.8; }
+.food-schedule > h2, .food-vendors > h2 { margin-bottom: 6px; }
+.food-event .event-time { color: var(--food); white-space: nowrap; }
+@media (prefers-color-scheme: light) { .food-event .event-time { color: var(--food); } }
+.food-vendor-page .food-event { grid-template-columns: 7.5em 1fr; }
+.food-where, .food-note { display: block; font-size: 0.98rem; }
+.food-note { font-size: 0.9rem; }
+.food-where a { color: inherit; }
+.food-address { color: inherit !important; }
+.food-schedule { margin-top: 56px; padding-bottom: 32px; }
+.food-media { background: linear-gradient(135deg, #3b1676, color-mix(in srgb, var(--food) 75%, #3b1676)); color: #f3e8ff; }
+.food-media svg { opacity: 0.92; }
+.food-card { scroll-margin-top: 24px; }
+.food-card a:hover { border-color: var(--food); }
+.food-card:target a { border-color: var(--food); box-shadow: 0 0 0 2px var(--food-ring); }
+@media (max-width: 560px) {
+  .food-vendor-page .food-event { grid-template-columns: 1fr; gap: 2px; }
+}
+/* Five nav links on a small phone: tighten so Food fits beside the brand. */
+@media (max-width: 400px) {
+  .site-header { gap: 4px; padding-inline: 10px; }
+  .site-header .brand { font-size: 1.1rem; }
+  .site-nav a { padding: 8px 4px; font-size: 0.9rem; }
+}
+.food-photo { display: grid; place-items: center; background: linear-gradient(135deg, #3b1676, color-mix(in srgb, var(--food) 75%, #3b1676)); color: #f3e8ff; }
+@media (max-width: 640px) { .food-photo svg { width: 64px; height: 64px; } }
+.food-inline-icon { display: inline-flex; vertical-align: -3px; margin-right: 6px; color: var(--food); }
