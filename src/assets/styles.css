@@ -750,7 +750,6 @@ h3 { font-size: 1.3rem; }
 }
 .food-expected { margin-left: 0; color: var(--food); opacity: 1; }
 .event-title .food-expected { margin-left: 6px; }
-.food-schedule { margin-top: 24px; }
 .food-schedule > h2, .food-vendors > h2 { margin-bottom: 6px; }
 .food-event .event-time { color: var(--food); white-space: nowrap; }
 @media (prefers-color-scheme: light) { .food-event .event-time { color: var(--food); } }
@@ -760,24 +759,12 @@ h3 { font-size: 1.3rem; }
 .food-note { font-size: 0.9rem; }
 .food-where a { color: inherit; }
 .food-address { color: inherit !important; }
-.food-vendors { margin-top: 56px; padding-bottom: 32px; }
-.food-grid { list-style: none; margin: 16px 0 0; padding: 0; display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
-.food-card {
-  display: flex;
-  gap: 14px;
-  align-items: flex-start;
-  padding: 16px;
-  border-radius: var(--radius);
-  background: var(--bg-elev);
-  border: 1px solid var(--line);
-  scroll-margin-top: 24px;
-}
-.food-card:target { border-color: var(--food); box-shadow: 0 0 0 2px var(--food-ring); }
-.food-media { flex: none; width: 64px; height: 64px; aspect-ratio: auto; border-radius: 50%; background: color-mix(in srgb, var(--food) 18%, var(--bg-elev-2)); color: var(--food); }
-.food-media svg { width: 30px; height: 30px; }
-.food-card .card-body { padding: 0; min-width: 0; }
-.food-desc { margin-top: 8px !important; font-size: 0.95rem; }
-.food-links { margin-top: 8px !important; font-size: 0.95rem; }
+.food-schedule { margin-top: 56px; padding-bottom: 32px; }
+.food-media { background: linear-gradient(135deg, #3b1676, color-mix(in srgb, var(--food) 75%, #3b1676)); color: #f3e8ff; }
+.food-media svg { opacity: 0.92; }
+.food-card { scroll-margin-top: 24px; }
+.food-card a:hover { border-color: var(--food); }
+.food-card:target a { border-color: var(--food); box-shadow: 0 0 0 2px var(--food-ring); }
 @media (max-width: 560px) {
   .food-event { grid-template-columns: 1fr; gap: 2px; }
 }

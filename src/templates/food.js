@@ -1,6 +1,7 @@
 import { DateTime } from 'luxon';
 import { esc, jsonScript, layout, siteHeader, siteFooter } from './layout.js';
 import { ZONE } from '../../scripts/lib/time.js';
+import { foodIcon } from './food-icons.js';
 
 const EXPECTED_HINT = 'Not announced yet. Based on the vendor’s usual weekly schedule.';
 
@@ -20,8 +21,6 @@ function mapsLink(place) {
   const q = encodeURIComponent(`${place.name}, ${place.address}${/,/.test(place.address) ? '' : ', New Orleans'}, LA`);
   return `https://www.google.com/maps/search/?api=1&query=${q}`;
 }
-
-const FORK = `<svg viewBox="0 0 24 24" width="40" height="40" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v8a2 2 0 0 0 2 2v8M11 3v8a2 2 0 0 1-2 2M9 3v6"/><path d="M17 21V3c-2 1-3.5 4-3.5 8 0 1.5.8 2.5 3.5 2.5"/></svg>`;
 
 function expectedTag() {
   return `<span class="food-expected" title="${esc(EXPECTED_HINT)}">Expected</span>`;
@@ -71,26 +70,37 @@ export function foodPage(ctx, vendors, { today }) {
         .join('')
     : '<div class="notice"><p>No pop-ups are listed right now.</p></div>';
 
+  // Like the venue directory: vendors with a stop coming up first (soonest first), then the rest.
+  const nextOf = (v) => v.events.find((e) => (e.end ?? e.start) >= today);
+  const sorted = [...vendors].sort((a, b) => {
+    const na = nextOf(a)?.start;
+    const nb = nextOf(b)?.start;
+    if (na && nb) return na.localeCompare(nb) || a.name.localeCompare(b.name);
+    if (na) return -1;
+    if (nb) return 1;
+    return a.name.localeCompare(b.name);
+  });
+
+  // No vendor pages yet, so a tile leads to the vendor's own site, else the Instagram post the stops came from.
   const card = (v) => {
-    const next = v.events.find((e) => (e.end ?? e.start) >= today);
+    const next = nextOf(v);
+    const count = v.events.filter((e) => (e.end ?? e.start) >= today).length;
     let nextText = 'No stops posted yet';
     if (next) {
       const dt = DateTime.fromISO(next.start, { zone: ZONE });
-      nextText = `${dt.toISODate() === today ? 'Today' : dt.toFormat('ccc, LLL d')} · ${next.place.name}`;
+      nextText = `${dt.toISODate() === today ? 'Today' : dt.toFormat('ccc, LLL d')}, ${timeRange(next)}: ${next.place.name}`;
     }
-    const links = [
-      v.website && `<a href="${esc(v.website)}" rel="noopener">Website</a>`,
-      v.from && /instagram\.com/.test(v.from) && `<a href="${esc(v.from)}" rel="noopener">Latest post on Instagram</a>`,
-    ].filter(Boolean);
-    return `<li class="food-card" id="${esc(v.slug)}" data-name="${esc(`${v.name} ${v.description ?? ''} ${v.events.map((e) => e.place.name).join(' ')}`.toLowerCase())}">
-      <div class="card-media food-media">${FORK}</div>
-      <div class="card-body">
-        <h2>${esc(v.name)}</h2>
-        <p class="card-address muted">${esc(v.type ?? 'Pop-up')}</p>
-        <p class="card-next${next ? '' : ' muted'}">${esc(nextText)}${next && !next.confirmed ? ` ${expectedTag()}` : ''}</p>
-        ${v.description ? `<p class="food-desc muted">${esc(v.description)}</p>` : ''}
-        ${links.length ? `<p class="food-links">${links.join(' · ')}</p>` : ''}
-      </div>
+    const href = v.website ?? v.from;
+    return `<li class="venue-card food-card" id="${esc(v.slug)}" data-name="${esc(`${v.name} ${v.type ?? ''} ${v.events.map((e) => e.place.name).join(' ')}`.toLowerCase())}">
+      <a href="${esc(href)}" rel="noopener">
+        <div class="card-media food-media">${foodIcon(v.icon, 64)}</div>
+        <div class="card-body">
+          <h2>${esc(v.name)}</h2>
+          <p class="card-address muted">${esc(v.type ?? 'Pop-up')}</p>
+          <p class="card-next${next ? '' : ' muted'}">${esc(nextText)}${next && !next.confirmed ? ` ${expectedTag()}` : ''}</p>
+          ${count > 1 ? `<p class="card-count muted">${count} upcoming</p>` : ''}
+        </div>
+      </a>
     </li>`;
   };
 
@@ -99,18 +109,17 @@ export function foodPage(ctx, vendors, { today }) {
   <div class="page-intro">
     <span class="badge">Directory</span>
     <h1>New Orleans food pop-ups</h1>
-    <p class="lede">Where ${vendors.length} pop-ups and food trucks are setting up this week, from bar kitchens to crawfish boils. Most move around, so each stop names the bar or lot they’re at.</p>
+    <p class="lede">${vendors.length} pop-ups and food trucks, from bar kitchens to crawfish boils. Most move around, so each stop names the bar or lot they’re at.</p>
+    <label class="search"><span class="visually-hidden">Filter vendors</span><input type="search" placeholder="Filter by name or bar" data-venue-filter autocomplete="off"></label>
   </div>
+  <ul class="venue-grid" data-venue-grid>
+    ${sorted.map(card).join('')}
+  </ul>
+  <p class="muted" data-venue-empty hidden>No vendors match that search.</p>
   <section class="schedule food-schedule">
-    <h2>Coming up</h2>
+    <h2>Day by day</h2>
     <p class="muted schedule-meta">${expectedTag()} stops follow a vendor’s usual weekly schedule but haven’t been announced yet. Check their Instagram before heading out.</p>
     ${schedule}
-  </section>
-  <section class="food-vendors">
-    <h2>Vendors</h2>
-    <ul class="food-grid">
-      ${vendors.map(card).join('')}
-    </ul>
   </section>
 </main>
 ${siteFooter(ctx)}`;
