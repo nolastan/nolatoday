@@ -82,6 +82,70 @@
   var data = null;
   var markers = [];
 
+  // ---- Card designs (PROTOTYPE, see map-cards.js) ----------------------------
+  // Each card is described once as a model; the design picked in the switcher draws it. "Current"
+  // keeps the HTML built below (popupHtml and friends), so the new designs sit beside the old.
+  var cards = window.NOLA_CARDS;
+  var shownDay = null;
+  var openKey = null;
+  var markersByKey = {};
+
+  function cardHtml(model, current) {
+    return (cards && cards.html(model)) || current();
+  }
+  function whenLabel(day) {
+    if (day === 'live') return 'Now';
+    if (String(day).length === 10) return dayFmt.format(new Date(day + 'T12:00:00Z'));
+    return Number(day) === 0 ? 'Today' : 'Tomorrow';
+  }
+  function count(n, one, many) { return n + ' ' + (n === 1 ? one : many); }
+
+  function mapTopBottom() {
+    var top = document.querySelector('.map-top');
+    return top ? top.getBoundingClientRect().bottom : 0;
+  }
+  // A new design's card always ends up fully on screen: the map slides just far enough to fit it.
+  // The sheet covers part of the map instead, so there the marker is moved clear of it.
+  function keepInView(popup) {
+    var design = cards ? cards.design() : 'current';
+    if (design === 'current') return;
+    requestAnimationFrame(function () {
+      var el = popup.getElement();
+      if (!el) return;
+      var m = map.getContainer().getBoundingClientRect();
+      var r = el.getBoundingClientRect();
+      var dx = 0;
+      var dy = 0;
+      if (design === 'sheet') {
+        var pt = map.project(popup.getLngLat());
+        if (r.width > m.width - 40) {
+          var clearTop = mapTopBottom() - m.top + 20;
+          var clearBottom = r.top - m.top - 30;
+          if (pt.y > clearBottom || pt.y < clearTop) dy = pt.y - (clearTop + clearBottom) / 2;
+        } else if (pt.x < r.right - m.left + 30 && pt.y > r.top - m.top - 30) {
+          dx = pt.x - (r.right - m.left + 80);
+        }
+      } else {
+        var top = Math.max(m.top, mapTopBottom()) + 8;
+        if (r.bottom > m.bottom - 8) dy = r.bottom - (m.bottom - 8);
+        if (r.top - dy < top) dy = r.top - top;
+        if (r.right > m.right - 8) dx = r.right - (m.right - 8);
+        if (r.left - dx < m.left + 8) dx = r.left - (m.left + 8);
+      }
+      if (dx || dy) map.panBy([dx, dy], { duration: 350 });
+    });
+  }
+  function makePopup(html) {
+    var popup = new mapboxgl.Popup({ offset: 12, focusAfterOpen: false, maxWidth: '320px' }).setHTML(html);
+    popup.on('open', function () {
+      keepInView(popup);
+      // Postcard's "more" unfolds the rest of the night, which can push the card off screen again.
+      var more = popup.getElement() && popup.getElement().querySelector('details');
+      if (more) more.addEventListener('toggle', function () { keepInView(popup); });
+    });
+    return popup;
+  }
+
   // ---- Parades: routes drawn on the streets, clickable like a venue ----------
   var KIND = { mardi_gras: 'Carnival parade', second_line: 'Second line', other: 'Parade' };
   var PARADE_HOURS = 4;
@@ -135,6 +199,37 @@
       '</ul>' +
       '<a class="popup-more" href="' + href + '">Route and details →</a>'
     );
+  }
+
+  function paradeModel(p) {
+    var t = paradeTimes(p);
+    var now = Date.now();
+    var live = t.timed && t.start <= now && now <= t.end ? 'Rolling now' : '';
+    var kind = KIND[p.c] || KIND.other;
+    return {
+      kind: 'parade',
+      name: p.n,
+      href: cfg.base + '/parades/' + p.slug,
+      image: p.i || null,
+      lngLat: p.p || null,
+      when: dayFmt.format(new Date(p.d + 'T12:00:00Z')),
+      summary: kind,
+      live: live,
+      rows: [{
+        type: 'parade',
+        time: t.timed ? timeFmt.format(new Date(t.start)) : 'All day',
+        live: live,
+        html: p.a ? 'Starts on ' + esc(p.a) : esc(kind),
+      }],
+      note: p.g ? '' : 'Route not published as a line. See the parade page.',
+      more: { href: cfg.base + '/parades/' + p.slug, text: 'Route and details' },
+    };
+  }
+  // A card opened from a click along the route has no marker; it points at the route's start, or failing that the click.
+  function paradeCardHtml(p, lngLat) {
+    var model = paradeModel(p);
+    if (!model.lngLat) model.lngLat = [lngLat.lng, lngLat.lat];
+    return cardHtml(model, function () { return paradePopupHtml(p); });
   }
 
   function paradeCollection() {
@@ -249,7 +344,7 @@
 
   function openParade(p, lngLat) {
     if (paradePopup) paradePopup.remove();
-    paradePopup = bindSelection(new mapboxgl.Popup({ offset: 12, focusAfterOpen: false, maxWidth: '320px' }), p).setLngLat(lngLat).setHTML(paradePopupHtml(p)).addTo(map);
+    paradePopup = bindSelection(makePopup(paradeCardHtml(p, lngLat)), p).setLngLat(lngLat).addTo(map);
   }
   // When routes overlap, prefer the one already picked, so a click along it doesn't jump to a neighbor.
   function hitParadeId(e) {
@@ -302,9 +397,12 @@
       paradeMarkerEls[p.id] = el;
       el.addEventListener('mouseenter', function () { markerHoverId = p.id; setParadeHover(p.id); });
       el.addEventListener('mouseleave', function () { markerHoverId = null; setParadeHover(null); });
-      var popup = bindSelection(new mapboxgl.Popup({ offset: 12, focusAfterOpen: false, maxWidth: '320px' }), p).setHTML(paradePopupHtml(p));
+      var popup = bindSelection(makePopup(paradeCardHtml(p)), p);
+      popup.on('open', function () { openKey = p.id; });
+      popup.on('close', function () { if (openKey === p.id) openKey = null; });
       var marker = new mapboxgl.Marker({ element: el }).setLngLat(p.p).setPopup(popup).addTo(map);
       markers.push(marker);
+      markersByKey[p.id] = marker;
       bounds.extend(p.p);
       if (linkedParade === p.id) {
         linkedParade = null;
@@ -424,9 +522,71 @@
     );
   }
 
+  function foodIconHtml(ev) {
+    var paths = (data.foodIcons || {})[ev.i];
+    return paths ? '<span class="card-food-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true">' + paths + '</svg></span>' : '';
+  }
+  function showRow(ev, now) {
+    return { type: 'show', time: ev.a ? 'All day' : timeFmt.format(new Date(Date.parse(ev.s))), live: isLive(ev, now) ? 'Live now' : '', html: titleHtml(ev) };
+  }
+  function foodRow(ev, now) {
+    return {
+      type: 'food',
+      time: ev.a ? 'All day' : timeFmt.format(new Date(Date.parse(ev.s))),
+      live: isLive(ev, now) ? 'Open now' : '',
+      html: '<a href="' + cfg.base + '/food/' + esc(ev.f) + '">' + esc(ev.n) + '</a>',
+      icon: foodIconHtml(ev),
+      note: ev.u ? 'Not confirmed recently' : '',
+    };
+  }
+  function firstLive(rows) {
+    var live = rows.filter(function (r) { return r.live; })[0];
+    return live ? live.live : '';
+  }
+  // Shows first, then the food there the same day, as on the current card.
+  function venueModel(slug, venue, events, now, foodEvents, day) {
+    var rows = events.map(function (ev) { return showRow(ev, now); })
+      .concat(foodEvents.map(function (ev) { return foodRow(ev, now); }));
+    return {
+      kind: 'venue',
+      name: venue.name,
+      href: cfg.base + '/venues/' + slug,
+      image: venue.image,
+      lngLat: [venue.lng, venue.lat],
+      when: whenLabel(day),
+      summary: count(events.length, 'show', 'shows') + (foodEvents.length ? ' + food' : ''),
+      live: firstLive(rows),
+      rows: rows,
+      note: '',
+      more: { href: cfg.base + '/venues/' + slug, text: 'Full schedule' },
+    };
+  }
+  function foodModel(place, events, now, day) {
+    var rows = events.map(function (ev) { return foodRow(ev, now); });
+    // A pop-up at a music venue with no show that day still gets the venue's page and photo.
+    var venue = place.venue ? data.venues[place.venue] : null;
+    return {
+      kind: 'food',
+      name: place.name,
+      href: place.venue ? cfg.base + '/venues/' + place.venue : null,
+      image: venue ? venue.image : null,
+      lngLat: [place.lng, place.lat],
+      when: whenLabel(day),
+      summary: count(events.length, 'food pop-up', 'food pop-ups'),
+      live: firstLive(rows),
+      rows: rows,
+      note: '',
+      more: events.length === 1
+        ? { href: cfg.base + '/food/' + esc(events[0].f), text: 'About ' + events[0].n }
+        : { href: cfg.base + '/food', text: 'All food pop-ups' },
+    };
+  }
+
   function render(day) {
     markers.forEach(function (m) { m.remove(); });
     markers = [];
+    markersByKey = {};
+    shownDay = day;
     var now = Date.now();
     var events = select(day);
     var byVenue = {};
@@ -455,14 +615,14 @@
       el.className = className + (liveVenues[key] ? ' live' : '');
       el.setAttribute('aria-label', label);
       el.style.setProperty('--delay', (Math.random() * 4).toFixed(2) + 's');
-      var popup = new mapboxgl.Popup({ offset: 12, focusAfterOpen: false, maxWidth: '320px' }).setHTML(html);
-      popup.on('open', function () { el.classList.add('is-open'); });
-      popup.on('close', function () { el.classList.remove('is-open'); });
-      markers.push(new mapboxgl.Marker({ element: el }).setLngLat(lngLat).setPopup(popup).addTo(map));
+      var popup = makePopup(html);
+      popup.on('open', function () { el.classList.add('is-open'); openKey = key; });
+      popup.on('close', function () { el.classList.remove('is-open'); if (openKey === key) openKey = null; });
+      markersByKey[key] = new mapboxgl.Marker({ element: el }).setLngLat(lngLat).setPopup(popup).addTo(map);
+      markers.push(markersByKey[key]);
       // A truck parked out of town still gets its marker, but the map stays framed on the city.
       if (!far) bounds.extend(lngLat);
     }
-    function count(n, one, many) { return n + ' ' + (n === 1 ? one : many); }
 
     Object.keys(byVenue).forEach(function (slug) {
       var venue = data.venues[slug];
@@ -471,14 +631,14 @@
       delete foodByPlace[slug];
       addMarker(slug, [venue.lng, venue.lat], 'marker',
         venue.name + ': ' + count(byVenue[slug].length, 'show', 'shows') + (food.length ? ', ' + count(food.length, 'food pop-up', 'food pop-ups') : ''),
-        popupHtml(slug, venue, byVenue[slug], now, food));
+        cardHtml(venueModel(slug, venue, byVenue[slug], now, food, day), function () { return popupHtml(slug, venue, byVenue[slug], now, food); }));
     });
     Object.keys(foodByPlace).forEach(function (key) {
       var place = (data.foodPlaces || {})[key];
       if (!place) return;
       addMarker(key, [place.lng, place.lat], 'marker marker--food',
         place.name + ': ' + count(foodByPlace[key].length, 'food pop-up', 'food pop-ups'),
-        foodPopupHtml(place, foodByPlace[key], now), place.far);
+        cardHtml(foodModel(place, foodByPlace[key], now, day), function () { return foodPopupHtml(place, foodByPlace[key], now); }), place.far);
     });
 
     var paradeCount = renderParades(day, bounds);
@@ -499,6 +659,18 @@
       b.setAttribute('aria-selected', String(b.dataset.day === String(day)));
     });
     render(day);
+  }
+
+  // Switching design redraws the day's cards and reopens the one that was open, to compare like with like.
+  if (cards) {
+    cards.mountSwitcher(document.querySelector('.map-top'), function () {
+      if (shownDay === null) return;
+      var key = openKey;
+      var view = { center: map.getCenter(), zoom: map.getZoom() };
+      render(shownDay);
+      map.jumpTo(view);
+      if (key && markersByKey[key]) markersByKey[key].togglePopup();
+    });
   }
 
   buttons.forEach(function (b) {
