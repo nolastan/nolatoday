@@ -396,13 +396,15 @@
     );
   }
 
-  function foodItemsHtml(events, now) {
+  // place: given for a food-only stop, where each line reads "<pop-up> at <place>" and only the pop-up is a link.
+  function foodItemsHtml(events, now, place) {
     return events
       .map(function (ev) {
         var time = ev.a ? 'All day' : timeFmt.format(new Date(Date.parse(ev.s)));
         var live = isLive(ev, now) ? ' <span class="popup-live">• Open now</span>' : '';
         var stale = ev.u ? '<span class="popup-stale">Not confirmed recently</span>' : '';
-        return '<li><span class="popup-time">' + esc(time) + live + '</span><span class="popup-title"><a href="' + cfg.base + '/food/' + esc(ev.f) + '">' + esc(ev.n) + '</a></span>' + stale + '</li>';
+        var at = place ? '<span class="popup-at"> at ' + esc(place.name) + '</span>' : '';
+        return '<li><span class="popup-time">' + esc(time) + live + '</span><span class="popup-title"><a href="' + cfg.base + '/food/' + esc(ev.f) + '">' + esc(ev.n) + '</a>' + at + '</span>' + stale + '</li>';
       })
       .join('');
   }
@@ -413,15 +415,10 @@
     return '<p class="popup-subhead">Food</p><ul class="popup-gigs popup-food">' + foodItemsHtml(events, now) + '</ul>';
   }
 
-  // A place with only food that day: a purple card that leads to the food directory.
+  // A place with only food that day: no banner, since the bar has no page here; just the pop-ups.
   function foodPopupHtml(place, events, now) {
-    // The bar has no page of its own unless it is a venue, so the header leads to the pop-up's page
-    // (or, with several pop-ups there, to the food directory).
-    var vendors = events.map(function (ev) { return ev.f; }).filter(function (f, i, all) { return all.indexOf(f) === i; });
-    var href = place.venue ? cfg.base + '/venues/' + place.venue : vendors.length === 1 ? cfg.base + '/food/' + vendors[0] : cfg.base + '/food';
     return (
-      '<a class="popup-banner popup-banner--food" href="' + href + '"><h3>' + esc(place.name) + '</h3></a>' +
-      '<ul class="popup-gigs popup-food">' + foodItemsHtml(events, now) + '</ul>' +
+      '<ul class="popup-gigs popup-food popup-food--only">' + foodItemsHtml(events, now, place) + '</ul>' +
       '<a class="popup-more" href="' + cfg.base + '/food">All food pop-ups →</a>'
     );
   }
