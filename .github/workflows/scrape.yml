@@ -10,10 +10,11 @@ on:
         description: 'Only scrape these venues (comma-separated slugs). Leave blank for all.'
         required: false
   # Schedules written into the repo (e.g. by Meta Muse from Instagram) go live
-  # right away instead of waiting for the next scheduled run.
+  # right away instead of waiting for the next scheduled run. A push that only
+  # changes data/food/ skips the scrape and goes straight to validate and deploy.
   push:
     branches: [main]
-    paths: ['data/manual/**']
+    paths: ['data/manual/**', 'data/food/**']
 
 concurrency:
   group: scrape
@@ -69,6 +70,11 @@ jobs:
           JAMBASE_API_KEY: ${{ secrets.JAMBASE_API_KEY }}
           VENUE: ${{ steps.pick.outputs.venue }}
         run: node scripts/scrape.js ${VENUE:+--venue "$VENUE"}
+
+      # Food pop-ups from host calendars (data/food/sources.json); a failing host keeps its last file.
+      - name: Scrape food pop-ups
+        if: github.event_name != 'push'
+        run: node scripts/food.js
 
       - name: Commit data
         run: |
