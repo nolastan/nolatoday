@@ -382,9 +382,44 @@ h3 { font-size: 1.3rem; }
 .not-found { padding: 64px 16px; }
 
 /* Map page -------------------------------------------------------------- */
-/* The site header sits on top and the map fills the rest of the screen. */
+/* The map fills the screen and the site header floats over it. On desktop there is no bar:
+   the wordmark sits on the map with no background, and the nav links and time toggle share
+   one row along the top. */
 .page-map { overflow: hidden; position: fixed; inset: 0; display: flex; flex-direction: column; }
-.page-map .site-header { flex: none; position: relative; z-index: 3; }
+.page-map .site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  padding-block: 12px;
+  background: transparent;
+  pointer-events: none;
+}
+.page-map .site-header > * { pointer-events: auto; }
+@media (min-width: 621px) {
+  /* No background, so a soft halo in the page color keeps the wordmark readable over streets and labels. */
+  .page-map .brand {
+    text-shadow: 0 0 2px var(--bg), 0 0 8px var(--bg), 0 0 16px color-mix(in srgb, var(--bg) 70%, transparent);
+  }
+  /* The nav floats in the same kind of panel as the time toggle, so the two read as one row. */
+  .page-map .site-nav {
+    padding: 4px;
+    gap: 2px;
+    border-radius: 12px;
+    background: color-mix(in srgb, var(--bg) 82%, transparent);
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    box-shadow: var(--shadow);
+  }
+  .page-map .site-nav a { min-height: 36px; display: inline-flex; align-items: center; padding: 0 14px; border-radius: 9px; }
+  .page-map .site-nav a:hover, .page-map .site-nav a[aria-current='page'] { background: var(--bg-elev-2); }
+}
+/* Until the screen is wide enough for the toggle to sit centered between the wordmark and the nav,
+   it drops just below them. */
+@media (min-width: 621px) and (max-width: 999px) {
+  .page-map .map-top { top: calc(var(--map-header-h, 68px) + 8px); }
+}
 .map-page { position: relative; flex: 1; min-height: 0; }
 /* Higher specificity than mapbox-gl.css's .mapboxgl-map { position: relative } */
 .map-page #map { position: absolute; inset: 0; width: 100%; height: 100%; background: var(--bg); }
@@ -427,10 +462,8 @@ h3 { font-size: 1.3rem; }
    The time toggle then sits just below the header. */
 @media (max-width: 620px) {
   .page-map .site-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
+    padding-block: 14px;
+    pointer-events: auto;
     background: color-mix(in srgb, var(--bg) 62%, transparent);
     -webkit-backdrop-filter: blur(14px) saturate(1.6);
     backdrop-filter: blur(14px) saturate(1.6);
