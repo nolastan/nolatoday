@@ -41,264 +41,81 @@ html { --card-live: var(--marker); }
 @media (prefers-color-scheme: light) {
   html { --card-live: #b4530a; }
 }
-/* Every new card can be closed with a button, not only by tapping the map. */
-html:not([data-cards='current']) .mapboxgl-popup-close-button {
-  display: block;
-  z-index: 2;
-  top: 8px;
-  right: 8px;
-  width: 30px;
-  height: 30px;
-  padding: 0 0 2px;
-  border-radius: 50%;
-  background: color-mix(in srgb, currentColor 12%, transparent);
-  color: inherit;
-  font-size: 20px;
-  line-height: 1;
-}
-html:not([data-cards='current']) .mapboxgl-popup-close-button:hover { background: color-mix(in srgb, currentColor 22%, transparent); }
+html:not([data-cards='current']) .mapboxgl-popup-content { font-size: 1rem; line-height: 1.3; }
+.card-rows { list-style: none; margin: 0; padding: 0; }
+.card-what { min-width: 0; font-weight: 600; overflow-wrap: anywhere; }
+.card-what a, .ph-name a, .cp-head a, .tx h3 a { color: inherit; text-decoration: none; }
+.card-what a:hover, .ph-name a:hover, .cp-head a:hover, .tx h3 a:hover { text-decoration: underline; text-underline-offset: 2px; }
+.card-when { font-size: 0.88rem; font-weight: 500; font-variant-numeric: tabular-nums; white-space: nowrap; color: color-mix(in srgb, currentColor 62%, transparent); }
+/* Live is said once, on its row, where the time would be. */
+.card-live { display: inline-flex; align-items: center; gap: 5px; font-weight: 700; color: var(--card-live); }
+.card-live::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+.card-row--food .card-live { color: var(--food); }
 .card-food-icon { display: inline-flex; vertical-align: -3px; margin-right: 6px; color: var(--food); }
-.mq-title a, .pc-title a, .sh-title a {
-  color: inherit;
-  text-decoration: underline;
-  text-decoration-color: color-mix(in srgb, currentColor 45%, transparent);
-  text-underline-offset: 2px;
-}
-.mq-title a:hover, .pc-title a:hover, .sh-title a:hover { text-decoration-color: currentColor; }
-@keyframes card-pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.35; }
-}
+.card-row-note, .card-note { display: block; font-size: 0.85rem; font-weight: 400; color: color-mix(in srgb, currentColor 62%, transparent); }
+.card-note { margin: 8px 0 0; }
 
-/* ---- 1. Marquee ----------------------------------------------------------------------------- */
-html[data-cards='marquee'] {
-  --popup-bg: #17191a;
-  --popup-text: #f7f0e1;
-  --mq-accent: #f5b700;
-  --mq-rule: rgba(247, 240, 225, 0.18);
-}
-@media (prefers-color-scheme: light) {
-  html[data-cards='marquee'] {
-    --popup-bg: #fffaf0;
-    --popup-text: #1e2a2e;
-    --mq-accent: #b4530a;
-    --mq-rule: rgba(30, 42, 46, 0.2);
-  }
-}
-html[data-cards='marquee'] .mapboxgl-popup { width: min(310px, 86vw); }
-html[data-cards='marquee'] .mapboxgl-popup-content {
-  border-radius: 6px !important;
-  box-shadow: 0 0 0 1px var(--mq-rule), var(--shadow) !important;
-}
-html[data-cards='marquee'] .mapboxgl-popup-close-button { top: 20px; background: none; opacity: 0.7; }
-html[data-cards='marquee'] .mapboxgl-popup-close-button:hover { background: none; opacity: 1; }
-/* A row of bulbs along the top edge. */
-.mq-bulbs {
-  height: 16px;
-  background: radial-gradient(circle, var(--mq-accent) 0 2.5px, transparent 3.2px) center / 14px 16px repeat-x;
-  filter: drop-shadow(0 0 3px color-mix(in srgb, var(--mq-accent) 70%, transparent));
-}
-.mq-head { margin: 0 16px; padding: 6px 28px 10px 0; border-bottom: 3px double var(--mq-rule); }
-.mq-kicker { margin: 0; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--mq-accent); }
-.mq-head h3 { margin: 2px 0 0; font-family: var(--font-body); font-size: 1.12rem; font-weight: 700; line-height: 1.2; color: inherit; overflow-wrap: anywhere; }
-.mq-head a { color: inherit; text-decoration: none; }
-.mq-head a:hover { text-decoration: underline; }
-.mq-bill { list-style: none; margin: 0; padding: 2px 16px; max-height: min(300px, 40vh); overflow-y: auto; }
-.mq-act { display: grid; grid-template-columns: 4rem 1fr; column-gap: 12px; align-items: baseline; padding: 10px 0; border-bottom: 1px dashed var(--mq-rule); }
-.mq-act:last-child { border-bottom: 0; }
-.mq-time { text-align: right; line-height: 1; color: var(--mq-accent); }
-.mq-time b { display: block; font-family: var(--font-display); font-size: 1.2rem; font-weight: 400; }
-.mq-time i { font-size: 0.66rem; font-style: normal; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.85; }
-.mq-title { display: block; font-size: 1.02rem; font-weight: 600; line-height: 1.25; overflow-wrap: anywhere; }
-/* The next act on is the top line of the marquee. */
-.mq-act--lead .mq-time b { font-size: 1.5rem; }
-.mq-act--lead .mq-title { font-family: var(--font-display); font-size: 1.4rem; font-weight: 400; line-height: 1.12; }
-.mq-now { display: inline-flex; align-items: center; gap: 6px; margin-bottom: 3px; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--mq-accent); }
-.mq-now::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: currentColor; animation: card-pulse 1.6s ease-in-out infinite; }
-.mq-act--food .mq-time, .mq-act--food .mq-now, .mq--food .mq-kicker { color: var(--food); }
-.mq-note { display: block; margin-top: 2px; font-size: 0.85rem; font-style: italic; opacity: 0.75; }
-.mq-foot-note { margin: 0 16px; padding-bottom: 10px; font-size: 0.88rem; opacity: 0.75; }
-.mq-more {
-  display: block;
-  margin: 0 16px;
-  padding: 10px 0 12px;
-  border-top: 3px double var(--mq-rule);
-  text-align: right;
-  font-size: 0.76rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: var(--mq-accent);
-}
-.mq-more:hover { text-decoration: underline; }
-
-/* ---- 2. Postcard ---------------------------------------------------------------------------- */
-html[data-cards='postcard'] {
-  --popup-bg: color-mix(in srgb, var(--bg) 74%, transparent);
-  --popup-text: var(--text);
-}
-html[data-cards='postcard'] .mapboxgl-popup { width: min(300px, 84vw); }
-html[data-cards='postcard'] .mapboxgl-popup-content {
-  border-radius: 22px !important;
-  -webkit-backdrop-filter: blur(18px) saturate(1.5);
-  backdrop-filter: blur(18px) saturate(1.5);
-  box-shadow: 0 0 0 1px color-mix(in srgb, var(--text) 12%, transparent), var(--shadow) !important;
-}
-html[data-cards='postcard'] .mapboxgl-popup-tip { display: none; }
-html[data-cards='postcard'] .mapboxgl-popup-close-button { top: 14px; right: 14px; background: rgba(0, 0, 0, 0.5); color: #fff; }
-html[data-cards='postcard'] .mapboxgl-popup-close-button:hover { background: rgba(0, 0, 0, 0.7); }
-.pc-photo {
+/* ---- 1. Photo ------------------------------------------------------------------------------- */
+html[data-cards='photo'] { --popup-bg: var(--bg-elev); --popup-text: var(--text); }
+html[data-cards='photo'] .mapboxgl-popup { width: min(280px, 84vw); }
+html[data-cards='photo'] .mapboxgl-popup-content { border-radius: 16px !important; }
+.ph-photo {
   position: relative;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 12px;
-  min-height: 170px;
-  margin: 6px 6px 0;
-  padding: 10px 12px 12px;
-  overflow: hidden;
-  border-radius: 17px;
-  background: var(--teal-deep) center / cover no-repeat;
-  color: #fff;
+  align-items: flex-end;
+  height: 124px;
+  padding: 12px 14px;
+  background: var(--bg-elev-2) center / cover no-repeat;
   text-decoration: none;
 }
-.pc-photo::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0) 62%, rgba(0, 0, 0, 0.25)); }
-.pc-photo--none { min-height: 116px; background-image: linear-gradient(135deg, var(--teal-deep), #16323d); }
-.pc-photo--none::before { background: none; }
-.pc--food .pc-photo--none { background-image: linear-gradient(135deg, #3b1676, #7c3aed); }
-.pc--parade .pc-photo--none { background-image: linear-gradient(135deg, var(--teal-deep), #b4530a); }
-.pc .card-glyph { position: absolute; right: 8px; bottom: -14px; font-size: 104px; line-height: 1; opacity: 0.2; }
-.pc .card-glyph .card-food-icon { margin: 0 0 14px; color: inherit; }
-.pc .card-glyph svg { width: 84px; height: 84px; }
-.pc-chips { position: relative; display: flex; flex-wrap: wrap; gap: 6px; padding-right: 38px; }
-.pc-chip { padding: 3px 9px; border-radius: 999px; background: rgba(0, 0, 0, 0.5); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); font-size: 0.78rem; font-weight: 700; line-height: 1.4; color: #fff; }
-.pc-chip--live { background: var(--marker); color: #1b1b1b; }
-.pc--food .pc-chip--live { background: #fff; color: #5b21b6; }
-.pc-photo h3 { position: relative; margin: 0; font-size: 1.55rem; line-height: 1.08; color: #fff; overflow-wrap: anywhere; text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5); }
-a.pc-photo:hover h3 { text-decoration: underline; }
-.pc-rows { list-style: none; margin: 0; padding: 4px 14px 0; }
-.pc-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; padding: 8px 0; border-bottom: 1px solid color-mix(in srgb, currentColor 12%, transparent); }
-.pc-rows:last-of-type .pc-row:last-child { border-bottom: 0; }
-.pc-title { font-size: 1.02rem; font-weight: 600; line-height: 1.25; overflow-wrap: anywhere; }
-.pc-note { display: block; font-size: 0.85rem; font-weight: 400; font-style: italic; opacity: 0.75; }
-.pc-time { flex: none; padding: 2px 9px; border-radius: 999px; background: color-mix(in srgb, currentColor 12%, transparent); font-size: 0.82rem; font-weight: 700; line-height: 1.5; font-variant-numeric: tabular-nums; white-space: nowrap; }
-.pc-row.is-live .pc-time { background: var(--marker); color: #1b1b1b; }
-.pc-row--food .pc-time { background: color-mix(in srgb, var(--food) 18%, transparent); color: var(--food); }
-.pc-row--food.is-live .pc-time { background: var(--food); color: var(--bg); }
-.pc-rest summary { padding: 8px 14px 2px; font-size: 0.9rem; font-weight: 700; color: var(--muted); cursor: pointer; list-style: none; }
-.pc-rest summary::-webkit-details-marker { display: none; }
-.pc-rest summary::after { content: ' ▾'; }
-.pc-rest[open] summary { display: none; }
-.pc-rest .pc-rows { padding-top: 0; }
-.pc-rest .pc-row:first-child { border-top: 1px solid color-mix(in srgb, currentColor 12%, transparent); }
-.pc-foot-note { margin: 0; padding: 4px 14px 0; font-size: 0.88rem; color: var(--muted); }
-.pc-cta { display: block; margin: 10px; padding: 9px 10px; font-size: 1rem; border-radius: 14px; background: var(--accent); color: var(--accent-ink); font-weight: 700; text-align: center; text-decoration: none; }
-.pc-cta:hover { background: var(--accent-hover); }
+.ph-photo::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0) 70%); }
+.ph-photo h3 { position: relative; margin: 0; font-size: 1.3rem; line-height: 1.1; color: #fff; overflow-wrap: anywhere; }
+a.ph-photo:hover h3 { text-decoration: underline; text-underline-offset: 3px; }
+.ph-name { margin: 0; padding: 14px 14px 0; font-size: 1.3rem; line-height: 1.1; color: inherit; overflow-wrap: anywhere; }
+.ph .card-rows { padding: 12px 14px 14px; max-height: min(232px, 36vh); overflow-y: auto; }
+.ph .card-row { display: flex; align-items: baseline; justify-content: space-between; gap: 14px; }
+.ph .card-row + .card-row { margin-top: 9px; }
+.ph .card-note { margin: -6px 14px 14px; }
 
-/* ---- 3. Sheet ------------------------------------------------------------------------------- */
-html[data-cards='sheet'] {
-  --popup-bg: var(--bg-elev);
-  --popup-text: var(--text);
-}
-/* The popup is unhooked from its marker and docked: along the bottom of a phone, in the corner of
-   a desktop. Mapbox keeps writing a transform on it, which is overruled here. */
-html[data-cards='sheet'] .mapboxgl-popup {
+/* ---- 2. Compact ----------------------------------------------------------------------------- */
+html[data-cards='compact'] { --popup-bg: var(--bg-elev); --popup-text: var(--text); }
+html[data-cards='compact'] .mapboxgl-popup { width: min(290px, 86vw); }
+html[data-cards='compact'] .mapboxgl-popup-content { border-radius: 14px !important; }
+/* The close button lines up with the name: same row, same inset as the card's padding. */
+html[data-cards='compact'] .mapboxgl-popup-close-button {
   display: block;
-  top: auto !important;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 4;
-  width: auto;
-  transform: none !important;
-}
-html[data-cards='sheet'] .mapboxgl-popup-tip { display: none; }
-html[data-cards='sheet'] .mapboxgl-popup-content {
-  max-height: 58vh;
-  overflow-y: auto;
-  border-radius: 20px 20px 0 0 !important;
-  box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.3) !important;
-  animation: sheet-up 0.28s cubic-bezier(0.2, 0.8, 0.2, 1);
-}
-html[data-cards='sheet'] .mapboxgl-popup-close-button { top: 12px; right: 12px; }
-@keyframes sheet-up {
-  from { transform: translateY(100%); }
-}
-@keyframes sheet-side {
-  from { opacity: 0; transform: translateX(-16px); }
-}
-@media (min-width: 700px) {
-  html[data-cards='sheet'] .mapboxgl-popup { left: 16px; right: auto; bottom: 44px; width: 380px; }
-  html[data-cards='sheet'] .mapboxgl-popup-content {
-    max-height: calc(100vh - 240px);
-    border-radius: 18px !important;
-    box-shadow: var(--shadow) !important;
-    animation: sheet-side 0.22s ease-out;
-  }
-}
-.sh { padding: 16px 16px calc(16px + env(safe-area-inset-bottom)); }
-.sh-head { display: flex; align-items: center; gap: 12px; padding-right: 36px; }
-.sh-thumb {
-  flex: none;
-  display: grid;
-  place-items: center;
-  width: 56px;
-  height: 56px;
-  border-radius: 12px;
-  background: var(--teal-deep) center / cover no-repeat;
-  color: #fff;
-  font-size: 1.6rem;
-  text-decoration: none;
-}
-.sh--food .sh-thumb { background-image: linear-gradient(135deg, #3b1676, #7c3aed); }
-.sh--parade .sh-thumb { background-image: linear-gradient(135deg, var(--teal-deep), #b4530a); }
-.sh .card-glyph .card-food-icon { margin: 0; color: inherit; }
-.sh .card-glyph svg { width: 28px; height: 28px; }
-.sh-id { min-width: 0; }
-.sh-id h3 { margin: 0; font-size: 1.3rem; line-height: 1.12; color: inherit; overflow-wrap: anywhere; }
-.sh-id h3 a { color: inherit; text-decoration: none; }
-.sh-id h3 a:hover { text-decoration: underline; }
-.sh-sub { margin: 4px 0 0; font-size: 0.9rem; font-weight: 500; color: var(--muted); }
-.sh-live { display: inline-flex; align-items: center; gap: 5px; margin-right: 8px; font-weight: 700; color: var(--card-live); }
-.sh-live::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: currentColor; animation: card-pulse 1.6s ease-in-out infinite; }
-.sh--food .sh-live { color: var(--food); }
-/* The timeline: times on the left, a rail of dots, what's on to the right. */
-.sh-line { list-style: none; margin: 16px 0 0; padding: 0; max-height: none; }
-.sh-stop { position: relative; display: grid; grid-template-columns: 4.4rem 1fr; column-gap: 30px; padding-bottom: 14px; }
-.sh-stop:last-child { padding-bottom: 0; }
-.sh-stop::before {
-  content: '';
-  position: absolute;
-  z-index: 1;
-  left: calc(4.4rem + 10px);
-  top: 5px;
-  box-sizing: border-box;
-  width: 10px;
-  height: 10px;
-  border: 2px solid var(--marker);
+  top: 12px;
+  right: 8px;
+  width: 36px;
+  height: 36px;
+  padding: 0 0 2px;
   border-radius: 50%;
-  background: var(--popup-bg);
+  background: none;
+  color: color-mix(in srgb, currentColor 62%, transparent);
+  font-size: 22px;
+  line-height: 1;
 }
-.sh-stop::after { content: ''; position: absolute; left: calc(4.4rem + 14px); top: 6px; bottom: -6px; width: 2px; background: color-mix(in srgb, var(--text) 16%, transparent); }
-.sh-stop:last-child::after { display: none; }
-.sh-stop.is-live::before { background: var(--marker); box-shadow: 0 0 0 4px var(--marker-ring); }
-.sh-stop--food::before { border-color: var(--food); }
-.sh-stop--food.is-live::before { background: var(--food); box-shadow: 0 0 0 4px var(--food-ring); }
-.sh-time { padding-top: 1px; text-align: right; font-size: 0.92rem; font-weight: 600; font-variant-numeric: tabular-nums; white-space: nowrap; color: var(--muted); }
-.sh-stop.is-live .sh-time { color: var(--text); }
-.sh-title { display: block; font-size: 1.05rem; font-weight: 600; line-height: 1.25; overflow-wrap: anywhere; }
-.sh-meta { display: block; margin-top: 1px; font-size: 0.85rem; color: var(--muted); }
-.sh-meta--live { font-weight: 700; color: var(--card-live); }
-.sh-stop--food .sh-meta--live { color: var(--food); }
-.sh-foot-note { margin: 12px 0 0; font-size: 0.9rem; color: var(--muted); }
-.sh-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 16px; }
-.sh-btn { display: flex; align-items: center; justify-content: center; min-height: 42px; font-size: 1rem; border-radius: 12px; background: var(--bg-elev-2); color: var(--text); font-weight: 700; text-decoration: none; }
-.sh-btn:hover { background: color-mix(in srgb, var(--text) 16%, var(--bg-elev)); }
-.sh-btn--primary { background: var(--accent); color: var(--accent-ink); }
-.sh-btn--primary:hover { background: var(--accent-hover); }
+html[data-cards='compact'] .mapboxgl-popup-close-button:hover { background: color-mix(in srgb, currentColor 12%, transparent); color: inherit; }
+.cp { padding: 12px 14px 14px; }
+.cp-head { display: flex; align-items: center; gap: 10px; min-height: 36px; padding-right: 32px; }
+.cp-thumb { flex: none; width: 36px; height: 36px; border-radius: 8px; background: var(--bg-elev-2) center / cover no-repeat; }
+.cp-head h3 { margin: 0; font-family: var(--font-body); font-size: 1.12rem; font-weight: 700; line-height: 1.15; color: inherit; overflow-wrap: anywhere; }
+.cp .card-rows { margin-top: 10px; padding-top: 10px; border-top: 1px solid color-mix(in srgb, currentColor 14%, transparent); max-height: min(232px, 36vh); overflow-y: auto; }
+.cp .card-row { display: grid; grid-template-columns: 4.3rem 1fr; column-gap: 10px; align-items: baseline; }
+.cp .card-row + .card-row { margin-top: 8px; }
 
-@media (prefers-reduced-motion: reduce) {
-  .mq-now::before, .sh-live::before { animation: none; }
-  html[data-cards='sheet'] .mapboxgl-popup-content { animation: none; }
+/* ---- 3. Text -------------------------------------------------------------------------------- */
+html[data-cards='text'] { --popup-bg: color-mix(in srgb, var(--bg) 78%, transparent); --popup-text: var(--text); }
+html[data-cards='text'] .mapboxgl-popup { width: min(250px, 80vw); }
+html[data-cards='text'] .mapboxgl-popup-content {
+  border-radius: 12px !important;
+  -webkit-backdrop-filter: blur(16px) saturate(1.5);
+  backdrop-filter: blur(16px) saturate(1.5);
 }
+html[data-cards='text'] .mapboxgl-popup-tip { display: none; }
+.tx { padding: 12px 14px 13px; }
+.tx h3 { margin: 0; font-size: 1.15rem; line-height: 1.15; color: inherit; overflow-wrap: anywhere; }
+.tx .card-rows { margin-top: 8px; max-height: min(240px, 38vh); overflow-y: auto; }
+.tx .card-row + .card-row { margin-top: 8px; }
+.tx .card-when { display: block; font-size: 0.8rem; }
+.tx .card-what { display: block; }

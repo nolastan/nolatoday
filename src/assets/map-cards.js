@@ -1,26 +1,25 @@
 /*
- * PROTOTYPE: three directions for the map's marker cards, with a switcher to compare them.
- * Once one is picked, keep that renderer (and its block in map-cards.css), drop the other two and the
- * switcher, and fold what is left into map.js and styles.css.
+ * PROTOTYPE: three pared-back directions for the map's marker cards, with a switcher to compare
+ * them. Once one is picked, keep that renderer (and its block in map-cards.css), drop the other two
+ * and the switcher, and fold what is left into map.js and styles.css.
  *
  * map.js describes a card as a plain model and this file turns it into HTML:
- *   { kind: 'venue' | 'food' | 'parade', name, href, image, lngLat,
- *     when:    'Today' | 'Tomorrow' | 'Now' | 'Sun, Nov 22',
- *     summary: '4 shows' | '1 food pop-up' | 'Second line',
- *     live:    'Live now' | 'Open now' | 'Rolling now' | '',
- *     rows:    [{ type: 'show' | 'food' | 'parade', time: '7:00 PM', live, html, icon, note }],
- *     note:    a line under the rows, or '',
- *     more:    { href, text } }
+ *   { kind: 'venue' | 'food' | 'parade', name, href, image,
+ *     rows: [{ type: 'show' | 'food' | 'parade', time: '7:00 PM', live: 'Live now' | '', html, icon, note }],
+ *     note: a line under the rows, or '' }
  * `html` and `icon` are already escaped markup; everything else is plain text.
+ *
+ * Shared rules: the name is the one link to the venue's page (no separate button), "live" is said
+ * once, on the row that is live, and nothing is shown that the rows already say.
  */
 (function () {
   'use strict';
 
   var DESIGNS = [
     ['current', 'Current'],
-    ['marquee', 'Marquee'],
-    ['postcard', 'Postcard'],
-    ['sheet', 'Sheet'],
+    ['photo', 'Photo'],
+    ['compact', 'Compact'],
+    ['text', 'Text'],
   ];
   var KEY = 'nola-cards';
   var root = document.documentElement;
@@ -31,8 +30,8 @@
   function stored() {
     try { return localStorage.getItem(KEY); } catch (e) { return null; }
   }
-  // ?cards=postcard links straight to one design; otherwise the last one picked, then the first new one.
-  var design = valid(new URLSearchParams(location.search).get('cards')) || valid(stored()) || 'marquee';
+  // ?cards=compact links straight to one design; otherwise the last one picked, then the first new one.
+  var design = valid(new URLSearchParams(location.search).get('cards')) || valid(stored()) || 'photo';
   root.dataset.cards = design;
 
   function setDesign(d) {
@@ -50,113 +49,62 @@
     });
   }
   function bg(image) {
-    return image ? ' style="background-image:url(\'' + esc(image) + '\')"' : '';
+    return ' style="background-image:url(\'' + esc(image) + '\')"';
   }
   // The card's name, linked when the place has a page here (a bar that only hosts a pop-up has none).
   function nameHtml(m) {
     return m.href ? '<a href="' + m.href + '">' + esc(m.name) + '</a>' : esc(m.name);
   }
-  function firstIcon(m) {
-    for (var i = 0; i < m.rows.length; i++) if (m.rows[i].icon) return m.rows[i].icon;
-    return '';
+  // A live row says so where its time would be; the others give their time.
+  function whenHtml(r) {
+    return r.live ? '<span class="card-live">' + esc(r.live) + '</span>' : esc(r.time);
   }
-  function glyph(m) {
-    if (m.image) return '';
-    if (m.kind === 'food') return '<span class="card-glyph" aria-hidden="true">' + firstIcon(m) + '</span>';
-    if (m.kind === 'venue') return '<span class="card-glyph" aria-hidden="true">♪</span>';
-    return '';
+  function rowsHtml(m, row) {
+    return '<ul class="card-rows">' + m.rows.map(function (r) {
+      return '<li class="card-row card-row--' + r.type + '">' + row(r) + '</li>';
+    }).join('') + '</ul>' + (m.note ? '<p class="card-note">' + esc(m.note) + '</p>' : '');
   }
-  function directions(m) {
-    return 'https://www.google.com/maps/dir/?api=1&destination=' + m.lngLat[1] + ',' + m.lngLat[0];
+  function what(r) {
+    return '<span class="card-what">' + (r.icon || '') + r.html + (r.note ? '<span class="card-row-note">' + esc(r.note) + '</span>' : '') + '</span>';
   }
-
-  // ---- 1. Marquee: type only, the bill is the hero -------------------------------------------
-  // No photo. The next act on is set big, like the top line of a theater marquee, with the time
-  // in a column of display numerals beside it.
-  function marquee(m) {
-    var kicker = m.kind === 'parade' ? m.summary + ' · ' + m.when
-      : m.kind === 'food' ? 'Food ' + m.when.toLowerCase() + ' at'
-      : m.when + ' at';
-    var rows = m.rows.map(function (r, i) {
-      var cut = r.time.lastIndexOf(' ');
-      var big = cut < 0 ? r.time : r.time.slice(0, cut);
-      var small = cut < 0 ? '' : r.time.slice(cut + 1);
-      return '<li class="mq-act mq-act--' + r.type + (i === 0 ? ' mq-act--lead' : '') + (r.live ? ' is-live' : '') + '">' +
-        '<span class="mq-time"><b>' + esc(big) + '</b>' + (small ? '<i>' + esc(small) + '</i>' : '') + '</span>' +
-        '<span class="mq-what">' +
-        (r.live ? '<span class="mq-now">' + esc(r.live) + '</span>' : '') +
-        '<span class="mq-title">' + (r.icon || '') + r.html + '</span>' +
-        (r.note ? '<span class="mq-note">' + esc(r.note) + '</span>' : '') +
-        '</span></li>';
-    }).join('');
-    return '<article class="mq mq--' + m.kind + '">' +
-      '<div class="mq-bulbs" aria-hidden="true"></div>' +
-      '<header class="mq-head"><p class="mq-kicker">' + esc(kicker) + '</p><h3>' + nameHtml(m) + '</h3></header>' +
-      '<ol class="mq-bill">' + rows + '</ol>' +
-      (m.note ? '<p class="mq-foot-note">' + esc(m.note) + '</p>' : '') +
-      '<a class="mq-more" href="' + m.more.href + '">' + esc(m.more.text) + ' <span aria-hidden="true">→</span></a>' +
-      '</article>';
+  function when(r) {
+    return '<span class="card-when">' + whenHtml(r) + '</span>';
   }
 
-  // ---- 2. Postcard: the photo is the card ------------------------------------------------------
-  // A tall photo with the name on it, a frosted body, and only the next three things on; the rest
-  // fold away behind "more" so the card stays small enough to always fit beside its marker.
-  var POSTCARD_ROWS = 3;
-  function postcard(m) {
-    function row(r) {
-      return '<li class="pc-row pc-row--' + r.type + (r.live ? ' is-live' : '') + '">' +
-        '<span class="pc-title">' + (r.icon || '') + r.html + (r.note ? '<span class="pc-note">' + esc(r.note) + '</span>' : '') + '</span>' +
-        '<span class="pc-time">' + esc(r.live || r.time) + '</span>' +
-        '</li>';
-    }
-    var rest = m.rows.slice(POSTCARD_ROWS);
+  // ---- 1. Photo: the photo edge to edge, the name on it, the night underneath -----------------
+  // What's on reads first, with its time set quietly to the right. Without a photo there is no
+  // banner at all, only the name.
+  function photo(m) {
     var tag = m.href ? 'a' : 'div';
-    return '<article class="pc pc--' + m.kind + '">' +
-      '<' + tag + ' class="pc-photo' + (m.image ? '' : ' pc-photo--none') + '"' + (m.href ? ' href="' + m.href + '"' : '') + bg(m.image) + '>' +
-      glyph(m) +
-      '<span class="pc-chips">' +
-      (m.live ? '<span class="pc-chip pc-chip--live">' + esc(m.live) + '</span>' : '') +
-      '<span class="pc-chip">' + esc(m.summary) + '</span>' +
-      (m.kind === 'parade' ? '<span class="pc-chip">' + esc(m.when) + '</span>' : '') +
-      '</span>' +
-      '<h3>' + esc(m.name) + '</h3>' +
-      '</' + tag + '>' +
-      '<ul class="pc-rows">' + m.rows.slice(0, POSTCARD_ROWS).map(row).join('') + '</ul>' +
-      (rest.length ? '<details class="pc-rest"><summary>' + rest.length + ' more</summary><ul class="pc-rows">' + rest.map(row).join('') + '</ul></details>' : '') +
-      (m.note ? '<p class="pc-foot-note">' + esc(m.note) + '</p>' : '') +
-      '<a class="pc-cta" href="' + m.more.href + '">' + esc(m.more.text) + '</a>' +
-      '</article>';
+    var head = m.image
+      ? '<' + tag + ' class="ph-photo"' + (m.href ? ' href="' + m.href + '"' : '') + bg(m.image) + '><h3>' + esc(m.name) + '</h3></' + tag + '>'
+      : '<h3 class="ph-name">' + nameHtml(m) + '</h3>';
+    return '<article class="ph">' + head + rowsHtml(m, function (r) { return what(r) + when(r); }) + '</article>';
   }
 
-  // ---- 3. Sheet: a docked panel with the night as a timeline ----------------------------------
-  // Not a bubble on the marker: a sheet along the bottom of a phone and a panel in the corner of a
-  // desktop, so the map around the marker stays visible. Room for a timeline and for directions.
-  function sheet(m) {
-    var rows = m.rows.map(function (r) {
-      return '<li class="sh-stop sh-stop--' + r.type + (r.live ? ' is-live' : '') + '">' +
-        '<span class="sh-time">' + esc(r.time) + '</span>' +
-        '<span class="sh-what"><span class="sh-title">' + (r.icon || '') + r.html + '</span>' +
-        (r.live ? '<span class="sh-meta sh-meta--live">' + esc(r.live) + '</span>' : '') +
-        (r.note ? '<span class="sh-meta">' + esc(r.note) + '</span>' : '') +
-        '</span></li>';
-    }).join('');
-    var tag = m.href ? 'a' : 'span';
-    return '<article class="sh sh--' + m.kind + '">' +
-      '<header class="sh-head">' +
-      '<' + tag + ' class="sh-thumb"' + (m.href ? ' href="' + m.href + '" tabindex="-1" aria-hidden="true"' : '') + bg(m.image) + '>' + glyph(m) + '</' + tag + '>' +
-      '<div class="sh-id"><h3>' + nameHtml(m) + '</h3>' +
-      '<p class="sh-sub">' + (m.live ? '<span class="sh-live">' + esc(m.live) + '</span>' : '') + esc(m.summary) + ' · ' + esc(m.when) + '</p></div>' +
+  // ---- 2. Compact: a small thumbnail beside the name, times in a column ------------------------
+  // The smallest card that still shows the place. The only one with a close button, which sits in
+  // the title row so it plainly belongs to the card.
+  function compact(m) {
+    return '<article class="cp">' +
+      '<header class="cp-head">' +
+      (m.image ? '<span class="cp-thumb"' + bg(m.image) + '></span>' : '') +
+      '<h3>' + nameHtml(m) + '</h3>' +
       '</header>' +
-      '<ol class="sh-line">' + rows + '</ol>' +
-      (m.note ? '<p class="sh-foot-note">' + esc(m.note) + '</p>' : '') +
-      '<div class="sh-actions">' +
-      '<a class="sh-btn sh-btn--primary" href="' + m.more.href + '">' + esc(m.more.text) + '</a>' +
-      '<a class="sh-btn" href="' + directions(m) + '" target="_blank" rel="noopener">Directions</a>' +
-      '</div>' +
+      rowsHtml(m, function (r) { return when(r) + what(r); }) +
       '</article>';
   }
 
-  var RENDER = { marquee: marquee, postcard: postcard, sheet: sheet };
+  // ---- 3. Text: no picture, just the name and the night ------------------------------------------
+  // A frosted label on the map: each time sits small above what's on.
+  function text(m) {
+    return '<article class="tx">' +
+      '<h3>' + nameHtml(m) + '</h3>' +
+      rowsHtml(m, function (r) { return when(r) + what(r); }) +
+      '</article>';
+  }
+
+  var RENDER = { photo: photo, compact: compact, text: text };
 
   // The switcher sits under the time toggle. onChange redraws the map's cards in the new design.
   function mountSwitcher(parent, onChange) {
