@@ -2,13 +2,6 @@
   "venue": "blue-nile",
   "events": [
     {
-      "id": "7a7a1aeafa03",
-      "title": "Street Legends Brass Band",
-      "start": "2026-11-15T22:30:00-06:00",
-      "end": "2026-11-16T00:30:00-06:00",
-      "url": "https://www.bluenilelive.com/calendar-tickets-/crz3mtnyjlmsdmx-5k75k-9sskg-xd836-nfzjp-5s3kl-wm37a-wlx4f-wjdn2-35tbj-wlykm-kr92g-524mt-w3kb5"
-    },
-    {
       "id": "368b6598893a",
       "title": "Kota Dosa",
       "start": "2026-11-18T21:00:00-06:00",
@@ -112,6 +105,13 @@
       "start": "2026-11-27T22:00:00-06:00",
       "end": "2026-11-28T00:01:00-06:00",
       "url": "https://www.bluenilelive.com/calendar-tickets-/dj-wbr-2026-9xydz-swl8k-tyr68-tyxp9-r5k8y"
+    },
+    {
+      "id": "62a42292845a",
+      "title": "Juice",
+      "start": "2026-11-28T19:00:00-06:00",
+      "end": "2026-11-28T21:00:00-06:00",
+      "url": "https://www.bluenilelive.com/calendar-tickets-/juice-2026-cb8gr-rlf9m-xxr7b"
     },
     {
       "id": "b1909cc1f3ec",

@@ -2,11 +2,6 @@
   "venue": "dba",
   "events": [
     {
-      "id": "c401929ac38f",
-      "title": "The Jump Hounds",
-      "start": "2026-11-15T21:30:00-06:00"
-    },
-    {
       "id": "87ad710520cd",
       "title": "Album Recording — Amber Rachelle + The Sweet Potatoes",
       "start": "2026-11-16T18:00:00-06:00"
@@ -69,7 +64,8 @@
     {
       "id": "655ab1f562c0",
       "title": "Dwayne Dopsie + the Zydeco Hellraisers",
-      "start": "2026-11-21T22:00:00-06:00"
+      "start": "2026-11-21T22:00:00-06:00",
+      "url": "https://www.eventbrite.com/e/dwayne-dopsie-the-zydeco-hellraisers-tickets-2004901548502"
     },
     {
       "id": "f7f3a0236a49",
