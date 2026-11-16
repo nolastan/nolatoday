@@ -177,6 +177,42 @@ Return an array of `{ title, start, end?, allDay?, url? }`. `start`/`end` may be
 
 Photos and genres come from Spotify into `data/artist-meta.json`, which is generated: `node scripts/artists.js refresh` rewrites it for every artist with a `spotify` id. Without `SPOTIFY_CLIENT_ID` and `SPOTIFY_CLIENT_SECRET` it still gets photos (from Spotify's public oEmbed endpoint); with them it also gets larger photos and genres. Photos are linked from Spotify's CDN, never copied into the repo. The weekly "Update artists" workflow runs `discover --write` and `refresh` and commits the result.
 
+## Food pop-ups
+
+Food trucks and pop-ups move around, so they aren't venues. They get a page each at `/food/<slug>`, a purple marker on the map (a venue with a show and food the same day keeps the music color), and a line on the host venue's page when they're at a venue. Everything lives in `data/food/`:
+
+- `vendors/<slug>.json`: one per vendor, its profile and the stops it posted. Meta Muse writes these from Instagram and pushes to `main`, like `data/manual/`; a push under `data/food/` validates and redeploys without a scrape. The slug is a live URL: never change or delete one.
+- `places.json`: where stops happen that aren't venues, keyed by a lowercase-with-dashes id: `{ "name", "address", "lat", "lng", "approximate"? }`. A venue is never repeated here; use its slug as the stop's place.
+- `sources.json`: host calendars scraped for pop-ups by `node scripts/food.js` (every scheduled scrape run). Each entry is `{ "place", "source", "include"?, "exclude"?, "rename"? }`: `source` is any adapter config from the table above, `include` is a regex for the food events (default `pop-?up|food truck`), and each vendor is named from the event title (the part before a colon, without a trailing "Pop-up" or "Food Truck"), then `rename` maps title regexes to names. A vendor with no file of its own gets a plain page from its name; add a vendor file with just `slug`, `name`, `icon` and `type` to give it an icon.
+- `scraped/<place>.json`: written by `scripts/food.js`. Don't hand-edit.
+
+```json
+{
+  "slug": "porchettaboudit",
+  "name": "Porchettaboudit",
+  "icon": "pig",
+  "type": "Pop-up",
+  "description": "Porchetta pop-up: Tuesdays at The Kingpin, Saturdays at The Friendly Bar.",
+  "website": "https://example.com",
+  "from": "https://www.instagram.com/p/DfQd3Edq56M/",
+  "updated": "2026-11-15",
+  "events": [
+    { "date": "2026-11-17", "time": "18:00", "end": "22:00", "place": "the-kingpin", "confirmedOn": "2026-11-02", "url": "https://www.instagram.com/p/DfQd3Edq56M/" }
+  ]
+}
+```
+
+| Field | Rules |
+| --- | --- |
+| `slug`, `name` | required; `slug` matches the file name |
+| `icon` | one of the keys in `src/templates/food-icons.js` (Hugeicons free set, MIT); the placeholder until vendors have photos |
+| `type` | `Pop-up` or `Food truck` |
+| `description`, `website`, `from`, `updated` | optional; `from` is the latest post the stops came from (the page's Instagram button) |
+| `events[].date`, `time`, `end` | `YYYY-MM-DD`; 24-hour New Orleans times, `time` `null` if none given; an `end` earlier than `time` is after midnight |
+| `events[].place` | a venue slug or a key in `places.json` |
+| `events[].confirmedOn` | the date of the post that announced the stop, or the weekly schedule it follows. Older than 30 days, the site says "Not confirmed since …" |
+| `events[].price`, `note`, `url`, `basis` | optional; `note` is shown, `basis` (how the stop was worked out) is not |
+
 ## Parades
 
 Parade data has its own pipeline and stricter sourcing rules than venues: routes and nearly all dates from official City of New Orleans records only, plus dates organizers announce on their own sites (`data/parades/announced.json`). See [docs/parades.md](docs/parades.md) before changing `scripts/parades.js`, `scripts/lib/permits.js`, `scripts/lib/route-trace.js` or anything in `data/parades/`.

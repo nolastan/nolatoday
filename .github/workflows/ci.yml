@@ -42,3 +42,11 @@ jobs:
           # Bulk data changes are informational; targeted fixes must actually work.
           if [ "$count" -gt 10 ]; then strict=""; else strict="--strict"; fi
           node scripts/scrape.js --venue "$changed" --dry $strict
+
+      # For PRs that change a food host calendar, scrape it live (prints only).
+      - name: Scrape changed food sources
+        if: github.event_name == 'pull_request'
+        run: |
+          git fetch --no-tags --depth=1 origin "${{ github.base_ref }}"
+          if git diff --quiet "origin/${{ github.base_ref }}" -- data/food/sources.json; then echo "No food source changes."; exit 0; fi
+          node scripts/food.js --dry

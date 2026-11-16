@@ -5,6 +5,7 @@ import path from 'node:path';
 import { ROOT, DATA_DIR, loadVenues, readJSON } from './lib/data.js';
 import { adapters } from '../scrapers/index.js';
 import { MANUAL_DIR, KINDS, checkManual } from '../scrapers/manual.js';
+import { VENDORS_DIR, loadPlaces, loadFoodSources, checkVendor, checkPlaces } from './lib/food.js';
 import { loadArtists, checkArtists } from './lib/artists.js';
 
 const errors = [];
@@ -117,6 +118,40 @@ for (const [from, to] of Object.entries(redirects)) {
   if (!to.startsWith('/')) err('redirects.json', `"${from}" target must be a site path`);
 }
 
+// Food pop-ups: vendor files (written by Meta Muse), places and scraped host calendars.
+const places = loadPlaces();
+for (const p of checkPlaces(places, slugs)) err('data/food/places.json', p);
+const placeKeys = new Set([...slugs, ...Object.keys(places)]);
+let vendorCount = 0;
+for (const f of fs.existsSync(VENDORS_DIR) ? fs.readdirSync(VENDORS_DIR) : []) {
+  const where = `data/food/vendors/${f}`;
+  if (!f.endsWith('.json')) {
+    err(where, 'only <slug>.json files belong here');
+    continue;
+  }
+  let data;
+  try {
+    data = JSON.parse(fs.readFileSync(path.join(VENDORS_DIR, f), 'utf8'));
+  } catch (e) {
+    err(where, `invalid JSON: ${e.message}`);
+    continue;
+  }
+  vendorCount++;
+  for (const problem of checkVendor(data, f.replace(/\.json$/, ''), { placeKeys })) err(where, problem);
+}
+for (const [i, s] of loadFoodSources().entries()) {
+  const where = `data/food/sources.json [${i}]`;
+  if (!placeKeys.has(s.place)) err(where, `place "${s.place}" is not a venue slug or a key in data/food/places.json`);
+  if (!s.source || !adapters[s.source.type]) err(where, `"source.type" must be one of ${Object.keys(adapters).join(', ')}`);
+  for (const re of [s.include, s.exclude, ...Object.keys(s.rename ?? {})].filter(Boolean)) {
+    try {
+      new RegExp(re);
+    } catch {
+      err(where, `bad regex ${re}`);
+    }
+  }
+}
+
 const artists = loadArtists();
 for (const p of checkArtists(artists)) err(`data/artists/${p.slug}.json`, p.message);
 
@@ -125,4 +160,4 @@ if (errors.length) {
   console.error(`\n${errors.length} problem(s) in venue and artist data.`);
   process.exit(1);
 }
-console.log(`✓ ${venues.length} venues, ${artists.length} artists and ${Object.keys(redirects).length} redirects look good.`);
+console.log(`✓ ${venues.length} venues, ${artists.length} artists, ${vendorCount} food vendors and ${Object.keys(redirects).length} redirects look good.`);
