@@ -75,32 +75,53 @@
   var data = null;
   var markers = [];
 
-  // ---- Card designs (PROTOTYPE, see map-cards.js) ----------------------------
-  // Each card is described once as a model; the design picked in the switcher draws it. "Current"
-  // keeps the HTML built below (popupHtml and friends), so the new designs sit beside the old.
-  var cards = window.NOLA_CARDS;
-  var shownDay = null;
-  var openKey = null;
-  var markersByKey = {};
-
-  function cardHtml(model, current) {
-    return (cards && cards.html(model)) || current();
+  // ---- Cards: what opens from a marker ---------------------------------------
+  // Venues, food stops and parades all open the same card, described as a plain model:
+  //   { kind: 'venue' | 'food' | 'parade', name, href, image,
+  //     rows: [{ type: 'show' | 'food' | 'parade', time, live, html, icon, note }], note }
+  // `html` and `icon` are already escaped markup; everything else is plain text. The banner is
+  // the same height on every card: the photo, or a plain field in the kind's color. The name on
+  // it is the one link to the page, and a live row says so where its time would be.
+  // Placeholder marks, from Hugeicons free icons (MIT, https://hugeicons.com), like the food icons:
+  // MusicNote03Icon for a venue and MaskTheater02Icon for a parade.
+  function markSvg(paths) {
+    return '<svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">' + paths + '</svg>';
+  }
+  var NOTE_ICON = markSvg('<circle cx="6.5" cy="18.5" r="3.5"/><circle cx="18" cy="16" r="3"/><path d="M10 18.5L10 7C10 6.07655 10 5.61483 10.2635 5.32794C10.5269 5.04106 11.0175 4.9992 11.9986 4.91549C16.022 4.57222 18.909 3.26005 20.3553 2.40978C20.6508 2.236 20.7986 2.14912 20.8993 2.20672C21 2.26432 21 2.4315 21 2.76587V16"/><path d="M10 10C15.8667 10 19.7778 7.66667 21 7"/>');
+  var MASK_ICON = markSvg('<path d="M5.44505 14.2749C5.60832 13.9695 5.88358 13.7462 6.22227 13.6851C6.56095 13.624 6.89427 13.7375 7.14978 13.9674M11.2356 17.2768C10.909 17.8876 10.3585 18.3342 9.68113 18.4564C9.00377 18.5786 8.33713 18.3516 7.82611 17.8919M10.5592 13.3523C10.7225 13.0469 10.9978 12.8235 11.3365 12.7624C11.6751 12.7013 12.0085 12.8149 12.264 13.0447M13.0697 7.14205C11.9191 8.2281 10.171 9.09181 8.13072 9.45991C6.09043 9.828 4.15906 9.6281 2.7148 9.01019C2.62237 8.97065 2.52281 8.95715 2.42629 8.97456C2.14172 9.0259 1.95507 9.32308 2.0094 9.63832L2.94728 15.0805C3.64672 19.1391 7.04654 21.0881 8.62355 21.7854C9.14604 22.0165 9.72177 22.046 10.2823 21.9449C10.8429 21.8437 11.374 21.6145 11.7877 21.2146C13.0366 20.0074 15.5798 16.9863 14.8804 12.9276L13.9425 7.48545C13.8882 7.1702 13.6135 6.95627 13.3289 7.00761C13.2324 7.02502 13.1433 7.07255 13.0697 7.14205Z"/><path d="M14.3157 17C14.6792 16.9998 15.039 16.9347 15.3764 16.7854C16.9535 16.0881 20.3533 14.1391 21.0527 10.0805L21.9906 4.63832C22.0449 4.32308 21.8583 4.0259 21.5737 3.97456C21.4772 3.95715 21.3776 3.97065 21.2852 4.01019C19.8409 4.6281 17.9096 4.828 15.8693 4.45991C13.829 4.09181 12.0809 3.2281 10.9303 2.14205C10.8567 2.07255 10.7676 2.02502 10.6711 2.00761C10.3865 1.95627 10.1118 2.1702 10.0575 2.48545L9.1196 7.92763C9.0374 8.40465 8.99998 8.86734 9 9.31444"/>');
+  function cardHtml(m) {
+    var tag = m.href ? 'a' : 'div';
+    // No photo: one mark, top right. A note for a venue, masks for a parade, the vendor's icon for a food stop.
+    var mark = '';
+    if (!m.image && m.kind === 'venue') mark = NOTE_ICON;
+    if (!m.image && m.kind === 'parade') mark = MASK_ICON;
+    if (!m.image && m.kind === 'food') m.rows.forEach(function (r) { mark = mark || r.icon; });
+    var rows = m.rows.map(function (r) {
+      return '<li class="popup-row popup-row--' + r.type + '">' +
+        '<span class="popup-what">' + (r.icon || '') + r.html + (r.note ? '<span class="popup-note">' + esc(r.note) + '</span>' : '') + '</span>' +
+        '<span class="popup-when">' + (r.live ? '<span class="popup-live">' + esc(r.live) + '</span>' : esc(r.time)) + '</span>' +
+        '</li>';
+    }).join('');
+    return '<' + tag + ' class="popup-banner popup-banner--' + m.kind + (m.image ? '' : ' popup-banner--none') + '"' +
+      (m.href ? ' href="' + m.href + '"' : '') +
+      (m.image ? ' style="background-image:url(\'' + esc(m.image) + '\')"' : '') + '>' +
+      (mark ? '<span class="popup-mark" aria-hidden="true">' + mark + '</span>' : '') +
+      '<h3>' + esc(m.name) + '</h3></' + tag + '>' +
+      '<ul class="popup-rows">' + rows + '</ul>' +
+      (m.note ? '<p class="popup-note popup-note--card">' + esc(m.note) + '</p>' : '');
   }
   function count(n, one, many) { return n + ' ' + (n === 1 ? one : many); }
 
-  function mapTopBottom() {
-    var top = document.querySelector('.map-top');
-    return top ? top.getBoundingClientRect().bottom : 0;
-  }
-  // A new design's card always ends up fully on screen: the map slides just far enough to fit it.
+  // A card always ends up fully on screen: the map slides just far enough to fit it below the
+  // header and time toggle.
   function keepInView(popup) {
-    if (!cards || cards.design() === 'current') return;
     requestAnimationFrame(function () {
       var el = popup.getElement();
       if (!el) return;
       var m = map.getContainer().getBoundingClientRect();
       var r = el.getBoundingClientRect();
-      var top = Math.max(m.top, mapTopBottom()) + 8;
+      var bar = document.querySelector('.map-top');
+      var top = Math.max(m.top, bar ? bar.getBoundingClientRect().bottom : 0) + 8;
       var dx = 0;
       var dy = 0;
       if (r.bottom > m.bottom - 8) dy = r.bottom - (m.bottom - 8);
@@ -110,8 +131,8 @@
       if (dx || dy) map.panBy([dx, dy], { duration: 350 });
     });
   }
-  function makePopup(html) {
-    var popup = new mapboxgl.Popup({ offset: 12, focusAfterOpen: false, maxWidth: '320px' }).setHTML(html);
+  function makePopup(model) {
+    var popup = new mapboxgl.Popup({ offset: 12, focusAfterOpen: false, maxWidth: '280px' }).setHTML(cardHtml(model));
     popup.on('open', function () { keepInView(popup); });
     return popup;
   }
@@ -150,27 +171,6 @@
     });
   }
 
-  function paradePopupHtml(p) {
-    var href = cfg.base + '/parades/' + p.slug;
-    var t = paradeTimes(p);
-    var when = dayFmt.format(new Date(p.d + 'T12:00:00Z')) + (t.timed ? ' · ' + timeFmt.format(new Date(t.start)) : '');
-    var now = Date.now();
-    var live = t.timed && t.start <= now && now <= t.end ? ' <span class="popup-live">• Rolling now</span>' : '';
-    return (
-      // With a photo the banner is a venue's full height; without one it is the short gradient strip.
-      (p.i
-        ? '<a class="popup-banner" href="' + href + '" style="background-image:url(\'' + esc(p.i) + '\')">'
-        : '<a class="popup-banner popup-banner--parade" href="' + href + '">') +
-      '<h3>' + esc(p.n) + '</h3></a>' +
-      '<ul class="popup-gigs">' +
-      '<li><span class="popup-time">' + esc(when) + live + '</span><span class="popup-title">' + esc(KIND[p.c] || KIND.other) + '</span></li>' +
-      (p.a ? '<li><span class="popup-time">Starts on</span><span class="popup-title">' + esc(p.a) + '</span></li>' : '') +
-      (p.g ? '' : '<li><span class="popup-time">Route</span><span class="popup-title">Not published as a line. See the parade page.</span></li>') +
-      '</ul>' +
-      '<a class="popup-more" href="' + href + '">Route and details →</a>'
-    );
-  }
-
   function paradeModel(p) {
     var t = paradeTimes(p);
     var now = Date.now();
@@ -189,10 +189,6 @@
       note: p.g ? '' : 'Route not published as a line. See the parade page.',
     };
   }
-  function paradeCardHtml(p) {
-    return cardHtml(paradeModel(p), function () { return paradePopupHtml(p); });
-  }
-
   function paradeCollection() {
     return {
       type: 'FeatureCollection',
@@ -305,7 +301,7 @@
 
   function openParade(p, lngLat) {
     if (paradePopup) paradePopup.remove();
-    paradePopup = bindSelection(makePopup(paradeCardHtml(p)), p).setLngLat(lngLat).addTo(map);
+    paradePopup = bindSelection(makePopup(paradeModel(p)), p).setLngLat(lngLat).addTo(map);
   }
   // When routes overlap, prefer the one already picked, so a click along it doesn't jump to a neighbor.
   function hitParadeId(e) {
@@ -358,12 +354,9 @@
       paradeMarkerEls[p.id] = el;
       el.addEventListener('mouseenter', function () { markerHoverId = p.id; setParadeHover(p.id); });
       el.addEventListener('mouseleave', function () { markerHoverId = null; setParadeHover(null); });
-      var popup = bindSelection(makePopup(paradeCardHtml(p)), p);
-      popup.on('open', function () { openKey = p.id; });
-      popup.on('close', function () { if (openKey === p.id) openKey = null; });
+      var popup = bindSelection(makePopup(paradeModel(p)), p);
       var marker = new mapboxgl.Marker({ element: el }).setLngLat(p.p).setPopup(popup).addTo(map);
       markers.push(marker);
-      markersByKey[p.id] = marker;
       bounds.extend(p.p);
       if (linkedParade === p.id) {
         linkedParade = null;
@@ -435,57 +428,9 @@
     return html + esc(ev.t.slice(at));
   }
 
-  function popupHtml(slug, venue, events, now, foodEvents) {
-    var href = cfg.base + '/venues/' + slug;
-    var banner = venue.image
-      ? '<a class="popup-banner" href="' + href + '" style="background-image:url(\'' + esc(venue.image) + '\')">'
-      : '<a class="popup-banner" href="' + href + '">';
-    var items = events
-      .map(function (ev) {
-        var time = ev.a ? 'All day' : timeFmt.format(new Date(Date.parse(ev.s)));
-        var live = isLive(ev, now) ? ' <span class="popup-live">• Live now</span>' : '';
-        return '<li><span class="popup-time">' + esc(time) + live + '</span><span class="popup-title">' + titleHtml(ev) + '</span></li>';
-      })
-      .join('');
-    return (
-      banner + '<h3>' + esc(venue.name) + '</h3></a>' +
-      '<ul class="popup-gigs">' + items + '</ul>' +
-      foodListHtml(foodEvents || [], now) +
-      '<a class="popup-more" href="' + href + '">Full schedule →</a>'
-    );
-  }
-
-  // place: given for a food-only stop, where each line reads "<pop-up> at <place>" and only the pop-up is a link.
-  function foodItemsHtml(events, now, place) {
-    return events
-      .map(function (ev) {
-        var time = ev.a ? 'All day' : timeFmt.format(new Date(Date.parse(ev.s)));
-        var live = isLive(ev, now) ? ' <span class="popup-live">• Open now</span>' : '';
-        var stale = ev.u ? '<span class="popup-stale">Not confirmed recently</span>' : '';
-        var paths = (data.foodIcons || {})[ev.i];
-        var icon = paths ? '<span class="popup-food-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true">' + paths + '</svg></span>' : '';
-        var at = place ? '<span class="popup-at"> at ' + esc(place.name) + '</span>' : '';
-        return '<li><span class="popup-time">' + esc(time) + live + '</span><span class="popup-title">' + icon + '<a href="' + cfg.base + '/food/' + esc(ev.f) + '">' + esc(ev.n) + '</a>' + at + '</span>' + stale + '</li>';
-      })
-      .join('');
-  }
-
-  // Under a venue's shows: the food pop-ups there the same day.
-  function foodListHtml(events, now) {
-    if (!events.length) return '';
-    return '<p class="popup-subhead">Food</p><ul class="popup-gigs popup-food">' + foodItemsHtml(events, now) + '</ul>';
-  }
-
-  // A place with only food that day: no banner, since the bar has no page here; just the pop-ups.
-  function foodPopupHtml(place, events, now) {
-    return (
-      '<ul class="popup-gigs popup-food popup-food--only">' + foodItemsHtml(events, now, place) + '</ul>'
-    );
-  }
-
   function foodIconHtml(ev) {
     var paths = (data.foodIcons || {})[ev.i];
-    return paths ? '<span class="card-food-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true">' + paths + '</svg></span>' : '';
+    return paths ? '<span class="popup-food-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true">' + paths + '</svg></span>' : '';
   }
   function showRow(ev, now) {
     return { type: 'show', time: ev.a ? 'All day' : timeFmt.format(new Date(Date.parse(ev.s))), live: isLive(ev, now) ? 'Live now' : '', html: titleHtml(ev) };
@@ -525,47 +470,9 @@
     };
   }
 
-  // DEMO (prototype previews only, remove before merging): so every kind of card can be seen on
-  // any day, each day that has shows also gets one parade with a route and two food pop-ups, one at
-  // a venue with shows and one on its own. They reuse real entries from the feed, moved to that day;
-  // nothing is written to the data. Never runs on the live site.
-  function addDemoData() {
-    if (/(^|\.)nola\.today$/.test(location.hostname)) return;
-    var now = Date.now();
-    var route = (data.parades || []).filter(function (p) { return p.g && p.p; })[0];
-    var vendors = (data.food || []).filter(function (ev, i, all) {
-      return all.findIndex(function (x) { return x.f === ev.f; }) === i;
-    });
-    var standalone = Object.keys(data.foodPlaces || {}).filter(function (k) { return !data.foodPlaces[k].venue && !data.foodPlaces[k].far; })[0];
-    [0, 1].forEach(function (d) {
-      var shows = select(d);
-      if (!shows.length) return;
-      var night = addDays(nightKey(now), d);
-      if (route && !selectParades(d).length) {
-        var date = addDays(dateKeyFmt.format(new Date(now)), d);
-        data.parades.push(Object.assign({}, route, { id: 'demo-parade-' + d, d: date, s: date + 'T18:00:00-06:00', e: date + 'T22:00:00-06:00' }));
-      }
-      if (!vendors.length || selectFood(d).length) return;
-      // The busiest venue that night gets the first vendor; the second sets up on its own.
-      var counts = {};
-      shows.forEach(function (ev) { if (data.venues[ev.v]) counts[ev.v] = (counts[ev.v] || 0) + 1; });
-      var busiest = Object.keys(counts).sort(function (a, b) { return counts[b] - counts[a]; })[0];
-      function stop(vendor, place, hour) {
-        return { p: place, n: vendor.n, f: vendor.f, i: vendor.i, s: night + 'T' + hour + ':00:00-06:00', e: night + 'T23:00:00-06:00' };
-      }
-      if (busiest) {
-        data.foodPlaces[busiest] = data.foodPlaces[busiest] || { name: data.venues[busiest].name, lat: data.venues[busiest].lat, lng: data.venues[busiest].lng, venue: busiest };
-        data.food.push(stop(vendors[0], busiest, '18'));
-      }
-      if (standalone) data.food.push(stop(vendors[vendors.length > 1 ? 1 : 0], standalone, '17'));
-    });
-  }
-
   function render(day) {
     markers.forEach(function (m) { m.remove(); });
     markers = [];
-    markersByKey = {};
-    shownDay = day;
     var now = Date.now();
     var events = select(day);
     var byVenue = {};
@@ -588,17 +495,16 @@
     });
 
     var bounds = new mapboxgl.LngLatBounds();
-    function addMarker(key, lngLat, className, label, html, far) {
+    function addMarker(key, lngLat, className, label, model, far) {
       var el = document.createElement('button');
       el.type = 'button';
       el.className = className + (liveVenues[key] ? ' live' : '');
       el.setAttribute('aria-label', label);
       el.style.setProperty('--delay', (Math.random() * 4).toFixed(2) + 's');
-      var popup = makePopup(html);
-      popup.on('open', function () { el.classList.add('is-open'); openKey = key; });
-      popup.on('close', function () { el.classList.remove('is-open'); if (openKey === key) openKey = null; });
-      markersByKey[key] = new mapboxgl.Marker({ element: el }).setLngLat(lngLat).setPopup(popup).addTo(map);
-      markers.push(markersByKey[key]);
+      var popup = makePopup(model);
+      popup.on('open', function () { el.classList.add('is-open'); });
+      popup.on('close', function () { el.classList.remove('is-open'); });
+      markers.push(new mapboxgl.Marker({ element: el }).setLngLat(lngLat).setPopup(popup).addTo(map));
       // A truck parked out of town still gets its marker, but the map stays framed on the city.
       if (!far) bounds.extend(lngLat);
     }
@@ -610,14 +516,14 @@
       delete foodByPlace[slug];
       addMarker(slug, [venue.lng, venue.lat], 'marker',
         venue.name + ': ' + count(byVenue[slug].length, 'show', 'shows') + (food.length ? ', ' + count(food.length, 'food pop-up', 'food pop-ups') : ''),
-        cardHtml(venueModel(slug, venue, byVenue[slug], now, food), function () { return popupHtml(slug, venue, byVenue[slug], now, food); }));
+        venueModel(slug, venue, byVenue[slug], now, food));
     });
     Object.keys(foodByPlace).forEach(function (key) {
       var place = (data.foodPlaces || {})[key];
       if (!place) return;
       addMarker(key, [place.lng, place.lat], 'marker marker--food',
         place.name + ': ' + count(foodByPlace[key].length, 'food pop-up', 'food pop-ups'),
-        cardHtml(foodModel(place, foodByPlace[key], now), function () { return foodPopupHtml(place, foodByPlace[key], now); }), place.far);
+        foodModel(place, foodByPlace[key], now), place.far);
     });
 
     var paradeCount = renderParades(day, bounds);
@@ -642,18 +548,6 @@
     render(day);
   }
 
-  // Switching design redraws the day's cards and reopens the one that was open, to compare like with like.
-  if (cards) {
-    cards.mountSwitcher(document.querySelector('.map-top'), function () {
-      if (shownDay === null) return;
-      var key = openKey;
-      var view = { center: map.getCenter(), zoom: map.getZoom() };
-      render(shownDay);
-      map.jumpTo(view);
-      if (key && markersByKey[key]) markersByKey[key].togglePopup();
-    });
-  }
-
   buttons.forEach(function (b) {
     b.addEventListener('click', function () {
       if (!b.disabled) choose(b.dataset.day);
@@ -667,7 +561,6 @@
     })
     .then(function (json) {
       data = json;
-      addDemoData();
       var anyLive = hasShows('live');
       var liveBtn = button('live');
       if (liveBtn) {

@@ -1,5 +1,5 @@
 /* NOLA.Today — palette carried over from the original site:
-   charcoal map land, teal water (#79a8a9), slate-teal popups (#68909E),
+   charcoal map land, teal water (#79a8a9), dark popup cards,
    pale aqua (#AACFD0), off-white (#F4F7F7), and one orange accent (--marker)
    for markers, badges, buttons and times. */
 
@@ -20,8 +20,9 @@
   --aqua: #aacfd0;
   --water: #79a8a9;
   --link: #ffa500;
-  --popup-bg: #68909e;
+  --popup-bg: #353a3b;
   --popup-text: #f4f7f7;
+  --popup-live: #ffa500;
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
   --radius: 14px;
   --font-body: 'Barlow Semi Condensed', system-ui, -apple-system, 'Segoe UI', sans-serif;
@@ -44,6 +45,7 @@
     --link: #2a5669;
     --popup-bg: #ffffff;
     --popup-text: #1e2a2e;
+    --popup-live: #b4530a;
     --shadow: 0 10px 30px rgba(30, 42, 46, 0.15);
     color-scheme: light;
   }
@@ -535,16 +537,18 @@ h3 { font-size: 1.3rem; }
   .marker.live::before, .live-dot { animation: none; }
 }
 
-/* Mapbox popups, restyled */
+/* Mapbox popups, restyled: the card that opens from a marker */
 /* Fixed width so every card is the same size; long text wraps. */
-.mapboxgl-popup { width: min(320px, 86vw); max-width: none !important; }
+.mapboxgl-popup { width: min(280px, 84vw); max-width: none !important; }
 .mapboxgl-popup-content {
   padding: 0 !important;
   overflow: hidden;
-  border-radius: var(--radius) !important;
+  border-radius: 16px !important;
   background: var(--popup-bg) !important;
   color: var(--popup-text);
   font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.3;
   box-shadow: var(--shadow) !important;
 }
 .mapboxgl-popup-close-button { display: none; }
@@ -557,50 +561,43 @@ h3 { font-size: 1.3rem; }
 .mapboxgl-popup-anchor-left .mapboxgl-popup-tip { border-right-color: var(--popup-bg) !important; }
 .mapboxgl-popup-anchor-right .mapboxgl-popup-tip { border-left-color: var(--popup-bg) !important; }
 
+/* The banner is the same height with or without a photo, so every card is the same shape. The
+   name on it is the link to the venue's or parade's page. */
 .popup-banner {
   position: relative;
   display: flex;
   align-items: flex-end;
-  min-height: 92px;
+  height: 120px;
   padding: 12px 14px;
+  overflow: hidden;
   background: var(--teal-deep) center / cover no-repeat;
   color: #fff;
   text-decoration: none;
 }
-.popup-banner::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.05));
-}
-.popup-banner h3 { position: relative; margin: 0; font-size: 1.35rem; color: #fff; overflow-wrap: anywhere; }
-.popup-banner:hover h3 { text-decoration: underline; }
-.popup-gigs { list-style: none; margin: 0; padding: 4px 14px 6px; max-height: 240px; overflow-y: auto; }
-.popup-gigs li { padding: 8px 0; border-bottom: 1px solid color-mix(in srgb, currentColor 18%, transparent); }
-.popup-gigs li:last-child { border-bottom: 0; }
-.popup-time { display: block; font-weight: 700; font-size: 0.9rem; color: color-mix(in srgb, currentColor 85%, transparent); }
-.popup-title { font-size: 1.1rem; font-weight: 600; line-height: 1.25; overflow-wrap: anywhere; }
-.popup-live {
-  display: inline-block;
-  margin-left: 4px;
-  padding: 1px 8px;
-  border-radius: 999px;
-  background: #1b1d1e;
-  color: #ffa500;
-  font-size: 0.8rem;
-  font-weight: 700;
-  line-height: 1.5;
-  vertical-align: 1px;
-}
-.popup-more {
-  display: block;
-  padding: 10px 14px 12px;
-  font-weight: 700;
-  color: inherit;
-  text-decoration: none;
-  border-top: 1px solid color-mix(in srgb, currentColor 18%, transparent);
-}
-.popup-more:hover { text-decoration: underline; }
+.popup-banner::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0) 70%); }
+/* No photo: a plain field in the kind's color. */
+.popup-banner--none::after { background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0) 70%); }
+.popup-banner--food.popup-banner--none { background-color: #4c2a85; }
+.popup-banner--parade.popup-banner--none { background-color: #9a4a12; }
+.popup-mark { position: absolute; top: 12px; right: 14px; opacity: 0.4; }
+.popup-mark .popup-food-icon { margin: 0; color: inherit; }
+.popup-mark svg { display: block; width: 28px; height: 28px; }
+.popup-banner h3 { position: relative; z-index: 1; margin: 0; font-size: 1.3rem; line-height: 1.1; color: #fff; overflow-wrap: anywhere; }
+a.popup-banner:hover h3 { text-decoration: underline; text-underline-offset: 3px; }
+.popup-rows { list-style: none; margin: 0; padding: 12px 14px 14px; max-height: min(232px, 36vh); overflow-y: auto; }
+.popup-row { display: flex; align-items: baseline; justify-content: space-between; gap: 14px; }
+.popup-row + .popup-row { margin-top: 9px; }
+.popup-what { min-width: 0; font-weight: 600; overflow-wrap: anywhere; }
+.popup-what a { color: inherit; text-decoration: none; }
+.popup-what a:hover { text-decoration: underline; text-underline-offset: 2px; }
+.popup-when { font-size: 0.88rem; font-weight: 500; font-variant-numeric: tabular-nums; white-space: nowrap; color: color-mix(in srgb, currentColor 62%, transparent); }
+/* Live is said once, on its row, where the time would be. */
+.popup-live { display: inline-flex; align-items: center; gap: 5px; font-weight: 700; color: var(--popup-live); }
+.popup-live::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+.popup-row--food .popup-live { color: var(--food); }
+.popup-food-icon { display: inline-flex; vertical-align: -3px; margin-right: 6px; color: var(--food); }
+.popup-note { display: block; font-size: 0.85rem; font-weight: 400; color: color-mix(in srgb, currentColor 62%, transparent); }
+.popup-note--card { margin: -6px 14px 14px; }
 
 /* Parades ---------------------------------------------------------------- */
 .site-nav a { white-space: nowrap; }
@@ -689,7 +686,6 @@ h3 { font-size: 1.3rem; }
 /* A parade's starting point on the map: a ring, to tell it from a venue's dot. */
 .marker--parade::after { background: var(--bg); box-shadow: 0 0 0 4px var(--marker); inset: 30%; }
 .marker--parade:hover::after, .marker--parade.is-hover::after, .marker--parade:focus-visible::after, .marker--parade.is-open::after { inset: 20%; }
-.popup-banner--parade { min-height: 64px; background: linear-gradient(135deg, var(--teal-deep), #b4530a); }
 @media (max-width: 480px) {
   .site-header { gap: 8px; padding-inline: 12px; }
   .site-header .brand { font-size: 1.25rem; }
@@ -713,7 +709,6 @@ h3 { font-size: 1.3rem; }
 .event-details { margin-left: 8px; font-size: 0.9rem; font-weight: 500; color: var(--muted) !important; white-space: nowrap; }
 .event-details::after { content: ' ↗'; }
 .event-billing { display: block; font-size: 0.95rem; font-weight: 400; }
-.popup-title a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
 .artist-hero { padding-top: 40px; }
 .artist-hero h1 { margin-bottom: 8px; }
 .artist-columns .wrap { max-width: none; margin-inline: 0; padding-inline: 0; }
@@ -764,14 +759,8 @@ h3 { font-size: 1.3rem; }
 /* ---- Food pop-ups (prototype) ------------------------------------------------ */
 /* On the map a food-only stop is a purple dot; a venue with music and food keeps the music color. */
 .marker--food::before, .marker--food::after { background: var(--food); }
-.popup-subhead { margin: 0; padding: 6px 14px 0; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; opacity: 0.75; }
-.popup-food { padding-top: 0; }
-.popup-food--only { padding-top: 8px; padding-bottom: 10px; }
-.popup-food-icon { display: inline-flex; vertical-align: -3px; margin-right: 6px; }
-.popup-at { font-weight: 500; }
-.food-stale, .popup-stale { display: block; font-size: 0.9rem; font-style: italic; color: var(--muted); }
+.food-stale { display: block; font-size: 0.9rem; font-style: italic; color: var(--muted); }
 .card-body .food-stale { margin-top: 2px !important; }
-.popup-stale { font-size: 0.85rem; color: inherit; opacity: 0.8; }
 .food-schedule > h2, .food-vendors > h2 { margin-bottom: 6px; }
 .food-event .event-time { color: var(--food); white-space: nowrap; }
 @media (prefers-color-scheme: light) { .food-event .event-time { color: var(--food); } }

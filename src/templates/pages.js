@@ -33,7 +33,6 @@ export function homePage(ctx) {
     canonical: `${config.siteUrl}/`,
     bodyClass: 'page-map',
     head: `<link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v3.9.4/mapbox-gl.css">
-<link rel="stylesheet" href="${asset('/assets/map-cards.css')}">
 <script type="application/ld+json">${jsonScript({
       '@context': 'https://schema.org',
       '@type': 'WebSite',
@@ -43,7 +42,6 @@ export function homePage(ctx) {
     })}</script>`,
     scripts: `<script>window.NOLA_MAP=${jsonScript(mapConfig)};</script>
 <script src="https://api.mapbox.com/mapbox-gl-js/v3.9.4/mapbox-gl.js" defer></script>
-<script src="${asset('/assets/map-cards.js')}" defer></script>
 <script src="${asset('/assets/map.js')}" defer></script>`,
     body,
   });
