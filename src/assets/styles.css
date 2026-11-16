@@ -754,7 +754,7 @@ h3 { font-size: 1.3rem; }
 .food-card a:hover { border-color: var(--food); }
 .food-card:target a { border-color: var(--food); box-shadow: 0 0 0 2px var(--food-ring); }
 @media (max-width: 560px) {
-  .food-event { grid-template-columns: 1fr; gap: 2px; }
+  .food-vendor-page .food-event { grid-template-columns: 1fr; gap: 2px; }
 }
 /* Five nav links on a small phone: tighten so Food fits beside the brand. */
 @media (max-width: 400px) {
