@@ -588,6 +588,8 @@
     var labels = { live: 'right now', 0: 'tonight', 1: 'tomorrow' };
     var dated = String(day).length === 10;
     if (dated) labels[day] = 'for ' + dayFmt.format(new Date(day + 'T12:00:00Z'));
+    // "Showing <date>" is a note, not an empty state: it sits at the foot of the map, clear of the cards.
+    statusEl.classList.toggle('map-status--note', dated && !!(markers.length || paradeCount));
     if (!markers.length && !paradeCount) {
       setStatus('No shows listed ' + labels[day] + '. Try another day or browse the <a href="' + cfg.base + '/venues">venue directory</a>.');
     } else {

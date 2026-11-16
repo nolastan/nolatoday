@@ -459,6 +459,7 @@ h3 { font-size: 1.3rem; }
   text-align: center;
 }
 .map-status:empty { display: none; }
+.map-status--note { top: auto; bottom: 18px; transform: translateX(-50%); padding: 8px 14px; font-size: 0.95rem; }
 
 
 /* Markers: an orange dot that grows on hover; live venues ripple. */
