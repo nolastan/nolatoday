@@ -1,0 +1,15 @@
+{
+  "slug": "porchettaboudit",
+  "name": "Porchettaboudit",
+  "type": "Pop-up",
+  "description": "Porchetta pop-up: Tuesdays at The Kingpin, Saturdays at The Friendly Bar.",
+  "from": "https://www.instagram.com/p/DfQd3Edq56M/",
+  "updated": "2026-11-15",
+  "events": [
+    { "date": "2026-11-17", "time": "18:00", "place": "the-kingpin", "confirmed": true, "url": "https://www.instagram.com/p/DfQd3Edq56M/" },
+    { "date": "2026-11-21", "time": "18:00", "place": "friendly-bar", "confirmed": true, "url": "https://www.instagram.com/p/DfQd3Edq56M/" },
+    { "date": "2026-11-24", "time": "18:00", "place": "the-kingpin", "confirmed": true, "url": "https://www.instagram.com/p/DfQd3Edq56M/" },
+    { "date": "2026-11-28", "time": "18:00", "place": "friendly-bar", "confirmed": true, "url": "https://www.instagram.com/p/DfQd3Edq56M/" },
+    { "date": "2026-11-29", "time": "12:00", "place": "petes-out-in-the-cold", "confirmed": true, "note": "Saints game. The post says Pete's Irish Channel without a street address.", "url": "https://www.instagram.com/p/DfQd3Edq56M/" }
+  ]
+}

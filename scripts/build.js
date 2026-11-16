@@ -17,6 +17,8 @@ import { homePage, venuesPage, redirectPage, notFoundPage, privacyPage, contactP
 import { paradePage, paradesPage } from '../src/templates/parade.js';
 import { artistPage, artistsPage, artistLinks } from '../src/templates/artist.js';
 import { loadArtists, buildMatcher } from './lib/artists.js';
+import { loadFood } from './lib/food.js';
+import { foodPage } from '../src/templates/food.js';
 import { loadArtistMeta } from './lib/spotify.js';
 import { PARADES_FILE, SOURCES, loadParades, loadWebsites, loadPhotos, paradeOrgs, mapParade } from './lib/parades.js';
 
@@ -129,7 +131,26 @@ function main() {
     if (photo) item.i = ctx.asset(`/images/parades/${photo.file.replace(/\.jpg$/, '-600.jpg')}`);
     return item;
   });
-  write('events.json', JSON.stringify({ generatedAt: now.toISO(), venues: mapVenues, events: mapEvents, parades: mapParades }));
+  // Food pop-ups (prototype): kept apart from `events` so apps reading the music schedule don't
+  // mistake them for shows. A stop at a venue uses the venue's slug as its place, so the map can put
+  // food and music on one marker.
+  const food = loadFood(venues);
+  const foodPlaces = {};
+  const foodEvents = [];
+  for (const vendor of food) {
+    for (const e of vendor.events) {
+      if ((e.end ?? e.start) < startOfToday || e.start > horizon) continue;
+      const p = e.place;
+      foodPlaces[p.key] ??= { name: p.name, lat: p.lat, lng: p.lng, ...(p.venue ? { venue: p.venue } : {}), ...(p.approximate ? { far: 1 } : {}) };
+      const item = { p: p.key, n: vendor.name, f: vendor.slug, s: e.start };
+      if (e.end) item.e = e.end;
+      if (e.allDay) item.a = 1;
+      if (!e.confirmed) item.u = 1;
+      foodEvents.push(item);
+    }
+  }
+  foodEvents.sort((a, b) => a.s.localeCompare(b.s));
+  write('events.json', JSON.stringify({ generatedAt: now.toISO(), venues: mapVenues, events: mapEvents, parades: mapParades, foodPlaces, food: foodEvents }));
 
   // Public venue list (handy for anyone building on this data).
   write(
@@ -220,8 +241,13 @@ function main() {
       storyCount++;
     }
   }
-  // The old site's directory pages.
-  for (const old of ['music', 'food']) write(`${old}.html`, redirectPage(ctx, '/venues'));
+  // Food pop-ups (prototype). /food was the old site's food directory; it is a page again.
+  const foodDirectory = foodPage(ctx, food, { today: startOfToday });
+  write('food.html', foodDirectory);
+  write('food/index.html', foodDirectory);
+
+  // The old site's music directory.
+  write('music.html', redirectPage(ctx, '/venues'));
 
   write('404.html', notFoundPage(ctx));
   write('privacy.html', privacyPage(ctx));
@@ -241,6 +267,7 @@ function main() {
     ...(artists.length ? [{ loc: `${config.siteUrl}/artists`, lastmod: today, priority: '0.9' }] : []),
     ...artists.map((a) => ({ loc: `${config.siteUrl}/artists/${a.slug}`, lastmod: today, priority: showsByArtist.get(a.slug).length ? '0.7' : '0.3' })),
     { loc: `${config.siteUrl}/parades`, lastmod: today, priority: '0.9' },
+    { loc: `${config.siteUrl}/food`, lastmod: today, priority: '0.8' },
     ...orgs.map((o) => ({
       loc: `${config.siteUrl}/parades/${o.slug}`,
       lastmod: (o.featured.properties.first_seen ?? today).slice(0, 10),
@@ -257,6 +284,7 @@ function main() {
 
   const pages = venues.length + Object.keys(allRedirects).length + storyCount;
   console.log(`Built ${artists.length} artist pages, ${[...showsByArtist.values()].filter((s) => s.length).length} with shows`);
+  console.log(`Built the food page: ${food.length} vendors, ${foodEvents.length} map stops`);
   console.log(`Built ${orgs.length} parade pages, ${mapParades.length} map parades`);
   console.log(`Built ${pages} venue pages/redirects, ${mapEvents.length} map events → ${path.relative(ROOT, OUT)}/`);
 }

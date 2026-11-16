@@ -337,8 +337,21 @@
     });
   }
 
+  // Food pop-ups: the same day rules as shows, from their own list.
+  function selectFood(day) {
+    var now = Date.now();
+    var today = nightKey(now);
+    return (data.food || []).filter(function (ev) {
+      var t = eventTimes(ev);
+      if (day === 'live') return isLive(ev, now);
+      var key = ev.a ? ev.s : nightKey(t.start);
+      if (String(day).length === 10) return key === day;
+      return key === addDays(today, Number(day)) && t.end >= now;
+    });
+  }
+
   function hasShows(day) {
-    return select(day).some(function (ev) { return data.venues[ev.v]; }) || selectParades(day).length > 0;
+    return select(day).some(function (ev) { return data.venues[ev.v]; }) || selectFood(day).length > 0 || selectParades(day).length > 0;
   }
 
   function button(day) {
@@ -356,7 +369,7 @@
     return html + esc(ev.t.slice(at));
   }
 
-  function popupHtml(slug, venue, events, now) {
+  function popupHtml(slug, venue, events, now, foodEvents) {
     var href = cfg.base + '/venues/' + slug;
     var banner = venue.image
       ? '<a class="popup-banner" href="' + href + '" style="background-image:url(\'' + esc(venue.image) + '\')">'
@@ -371,7 +384,35 @@
     return (
       banner + '<h3>' + esc(venue.name) + '</h3></a>' +
       '<ul class="popup-gigs">' + items + '</ul>' +
+      foodListHtml(foodEvents || [], now) +
       '<a class="popup-more" href="' + href + '">Full schedule →</a>'
+    );
+  }
+
+  function foodItemsHtml(events, now) {
+    return events
+      .map(function (ev) {
+        var time = ev.a ? 'All day' : timeFmt.format(new Date(Date.parse(ev.s)));
+        var live = isLive(ev, now) ? ' <span class="popup-live">• Open now</span>' : '';
+        var expected = ev.u ? ' <span class="popup-expected" title="Not announced yet; based on their usual schedule">Expected</span>' : '';
+        return '<li><span class="popup-time">' + esc(time) + live + '</span><span class="popup-title"><a href="' + cfg.base + '/food#' + esc(ev.f) + '">' + esc(ev.n) + '</a>' + expected + '</span></li>';
+      })
+      .join('');
+  }
+
+  // Under a venue's shows: the food pop-ups there the same day.
+  function foodListHtml(events, now) {
+    if (!events.length) return '';
+    return '<p class="popup-subhead">Food</p><ul class="popup-gigs popup-food">' + foodItemsHtml(events, now) + '</ul>';
+  }
+
+  // A place with only food that day: a purple card that leads to the food directory.
+  function foodPopupHtml(place, events, now) {
+    var href = place.venue ? cfg.base + '/venues/' + place.venue : cfg.base + '/food';
+    return (
+      '<a class="popup-banner popup-banner--food" href="' + href + '"><h3>' + esc(place.name) + '</h3></a>' +
+      '<ul class="popup-gigs popup-food">' + foodItemsHtml(events, now) + '</ul>' +
+      '<a class="popup-more" href="' + cfg.base + '/food">All food pop-ups →</a>'
     );
   }
 
@@ -389,22 +430,47 @@
       if (isLive(ev, now)) liveVenues[ev.v] = true;
     });
 
+    // Food pop-ups by place. A place that is also a venue shares the venue's key, so a bar with
+    // both a band and a pop-up gets one marker in the music color.
+    var foodByPlace = {};
+    selectFood(day).forEach(function (ev) {
+      (foodByPlace[ev.p] = foodByPlace[ev.p] || []).push(ev);
+    });
+    (data.food || []).forEach(function (ev) {
+      if (isLive(ev, now)) liveVenues[ev.p] = true;
+    });
+
     var bounds = new mapboxgl.LngLatBounds();
+    function addMarker(key, lngLat, className, label, html, far) {
+      var el = document.createElement('button');
+      el.type = 'button';
+      el.className = className + (liveVenues[key] ? ' live' : '');
+      el.setAttribute('aria-label', label);
+      el.style.setProperty('--delay', (Math.random() * 4).toFixed(2) + 's');
+      var popup = new mapboxgl.Popup({ offset: 12, focusAfterOpen: false, maxWidth: '320px' }).setHTML(html);
+      popup.on('open', function () { el.classList.add('is-open'); });
+      popup.on('close', function () { el.classList.remove('is-open'); });
+      markers.push(new mapboxgl.Marker({ element: el }).setLngLat(lngLat).setPopup(popup).addTo(map));
+      // A truck parked out of town still gets its marker, but the map stays framed on the city.
+      if (!far) bounds.extend(lngLat);
+    }
+    function count(n, one, many) { return n + ' ' + (n === 1 ? one : many); }
+
     Object.keys(byVenue).forEach(function (slug) {
       var venue = data.venues[slug];
       if (!venue) return;
-      var el = document.createElement('button');
-      el.type = 'button';
-      el.className = 'marker' + (liveVenues[slug] ? ' live' : '');
-      el.setAttribute('aria-label', venue.name + ': ' + byVenue[slug].length + (byVenue[slug].length === 1 ? ' show' : ' shows'));
-      el.style.setProperty('--delay', (Math.random() * 4).toFixed(2) + 's');
-      var popup = new mapboxgl.Popup({ offset: 12, focusAfterOpen: false, maxWidth: '320px' }).setHTML(
-        popupHtml(slug, venue, byVenue[slug], now),
-      );
-      popup.on('open', function () { el.classList.add('is-open'); });
-      popup.on('close', function () { el.classList.remove('is-open'); });
-      markers.push(new mapboxgl.Marker({ element: el }).setLngLat([venue.lng, venue.lat]).setPopup(popup).addTo(map));
-      bounds.extend([venue.lng, venue.lat]);
+      var food = foodByPlace[slug] || [];
+      delete foodByPlace[slug];
+      addMarker(slug, [venue.lng, venue.lat], 'marker',
+        venue.name + ': ' + count(byVenue[slug].length, 'show', 'shows') + (food.length ? ', ' + count(food.length, 'food pop-up', 'food pop-ups') : ''),
+        popupHtml(slug, venue, byVenue[slug], now, food));
+    });
+    Object.keys(foodByPlace).forEach(function (key) {
+      var place = (data.foodPlaces || {})[key];
+      if (!place) return;
+      addMarker(key, [place.lng, place.lat], 'marker marker--food',
+        place.name + ': ' + count(foodByPlace[key].length, 'food pop-up', 'food pop-ups'),
+        foodPopupHtml(place, foodByPlace[key], now), place.far);
     });
 
     var paradeCount = renderParades(day, bounds);
@@ -416,7 +482,7 @@
     } else {
       setStatus(dated ? 'Showing ' + dayFmt.format(new Date(day + 'T12:00:00Z')) + '.' : '');
       var pad = Math.max(40, Math.min(window.innerWidth, window.innerHeight) / 10);
-      map.fitBounds(bounds, { padding: { top: pad + 50 + headerOverlap(), bottom: pad + 40, left: pad, right: pad }, maxZoom: 15, duration: 600 });
+      if (!bounds.isEmpty()) map.fitBounds(bounds, { padding: { top: pad + 50 + headerOverlap(), bottom: pad + 40, left: pad, right: pad }, maxZoom: 15, duration: 600 });
     }
   }
 

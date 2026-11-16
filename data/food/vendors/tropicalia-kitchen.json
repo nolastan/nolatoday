@@ -1,0 +1,14 @@
+{
+  "slug": "tropicalia-kitchen",
+  "name": "Tropicália Kitchen",
+  "type": "Pop-up",
+  "description": "Brazilian street food, Saturday through Monday at Anna's.",
+  "website": "https://tropicaliakitchen.com",
+  "from": "https://www.instagram.com/p/DfdIFijvDjl/",
+  "updated": "2026-11-15",
+  "events": [
+    { "date": "2026-11-21", "time": "17:00", "end": "23:00", "place": "annas", "confirmed": false, "note": "From the stated Sat–Mon schedule; last confirmed Nov 7.", "url": "https://www.instagram.com/p/DfdIFijvDjl/" },
+    { "date": "2026-11-22", "time": "17:00", "end": "23:00", "place": "annas", "confirmed": false, "note": "From the stated Sat–Mon schedule; last confirmed Nov 7.", "url": "https://www.instagram.com/p/DfdIFijvDjl/" },
+    { "date": "2026-11-23", "time": "17:00", "end": "23:00", "place": "annas", "confirmed": false, "note": "From the stated Sat–Mon schedule; last confirmed Nov 7.", "url": "https://www.instagram.com/p/DfdIFijvDjl/" }
+  ]
+}

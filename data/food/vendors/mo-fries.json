@@ -1,0 +1,11 @@
+{
+  "slug": "mo-fries",
+  "name": "Mo Fries",
+  "type": "Food truck",
+  "description": "Food truck based at its Terrytown restaurant at 1168 Terry Pkwy, Gretna; it posts a weekly schedule every Monday.",
+  "from": "https://www.instagram.com/p/DfmmAUZJVEs/",
+  "updated": "2026-11-15",
+  "events": [
+    { "date": "2026-11-18", "time": "11:00", "end": "17:00", "place": "boutte-hwy-90", "confirmed": false, "note": "Wednesdays Nov 4 and Nov 11 were both Boutte 11–5; not yet announced for Nov 18.", "url": "https://www.instagram.com/p/DfmmAUZJVEs/" }
+  ]
+}
