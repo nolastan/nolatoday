@@ -134,7 +134,7 @@ function main() {
   // Food pop-ups (prototype): kept apart from `events` so apps reading the music schedule don't
   // mistake them for shows. A stop at a venue uses the venue's slug as its place, so the map can put
   // food and music on one marker.
-  const food = loadFood(venues);
+  const food = loadFood(venues, { today: startOfToday });
   const foodPlaces = {};
   const foodEvents = [];
   for (const vendor of food) {
@@ -145,7 +145,8 @@ function main() {
       const item = { p: p.key, n: vendor.name, f: vendor.slug, s: e.start };
       if (e.end) item.e = e.end;
       if (e.allDay) item.a = 1;
-      if (!e.confirmed) item.u = 1;
+      // Not confirmed by the vendor in the last 30 days: the card says so.
+      if (e.stale) item.u = e.confirmedOn ?? 1;
       foodEvents.push(item);
     }
   }

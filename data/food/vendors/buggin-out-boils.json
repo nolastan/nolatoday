@@ -8,7 +8,25 @@
   "from": "https://bugginoutboils.com",
   "updated": "2026-11-15",
   "events": [
-    { "date": "2026-11-21", "time": "14:00", "end": "18:30", "place": "bayou-beer-garden", "confirmed": true, "price": "$10–$12/lb", "note": "Traditional crawfish $10/lb, Viet-Cajun $12/lb.", "url": "https://bugginoutboils.com" },
-    { "date": "2026-11-22", "time": "12:00", "end": "16:00", "place": "bayou-beer-garden", "confirmed": true, "price": "$10–$12/lb", "note": "Traditional crawfish $10/lb, Viet-Cajun $12/lb.", "url": "https://bugginoutboils.com" }
+    {
+      "date": "2026-11-21",
+      "time": "14:00",
+      "end": "18:30",
+      "place": "bayou-beer-garden",
+      "price": "$10–$12/lb",
+      "note": "Traditional crawfish $10/lb, Viet-Cajun $12/lb.",
+      "url": "https://bugginoutboils.com",
+      "confirmedOn": "2026-11-15"
+    },
+    {
+      "date": "2026-11-22",
+      "time": "12:00",
+      "end": "16:00",
+      "place": "bayou-beer-garden",
+      "price": "$10–$12/lb",
+      "note": "Traditional crawfish $10/lb, Viet-Cajun $12/lb.",
+      "url": "https://bugginoutboils.com",
+      "confirmedOn": "2026-11-15"
+    }
   ]
 }

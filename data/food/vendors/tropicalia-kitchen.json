@@ -8,8 +8,32 @@
   "from": "https://www.instagram.com/p/DfdIFijvDjl/",
   "updated": "2026-11-15",
   "events": [
-    { "date": "2026-11-21", "time": "17:00", "end": "23:00", "place": "annas", "confirmed": false, "note": "From the stated Sat–Mon schedule; last confirmed Nov 7.", "url": "https://www.instagram.com/p/DfdIFijvDjl/" },
-    { "date": "2026-11-22", "time": "17:00", "end": "23:00", "place": "annas", "confirmed": false, "note": "From the stated Sat–Mon schedule; last confirmed Nov 7.", "url": "https://www.instagram.com/p/DfdIFijvDjl/" },
-    { "date": "2026-11-23", "time": "17:00", "end": "23:00", "place": "annas", "confirmed": false, "note": "From the stated Sat–Mon schedule; last confirmed Nov 7.", "url": "https://www.instagram.com/p/DfdIFijvDjl/" }
+    {
+      "date": "2026-11-21",
+      "time": "17:00",
+      "end": "23:00",
+      "place": "annas",
+      "url": "https://www.instagram.com/p/DfdIFijvDjl/",
+      "confirmedOn": "2026-11-07",
+      "basis": "From the stated Sat–Mon schedule; last confirmed Nov 7."
+    },
+    {
+      "date": "2026-11-22",
+      "time": "17:00",
+      "end": "23:00",
+      "place": "annas",
+      "url": "https://www.instagram.com/p/DfdIFijvDjl/",
+      "confirmedOn": "2026-11-07",
+      "basis": "From the stated Sat–Mon schedule; last confirmed Nov 7."
+    },
+    {
+      "date": "2026-11-23",
+      "time": "17:00",
+      "end": "23:00",
+      "place": "annas",
+      "url": "https://www.instagram.com/p/DfdIFijvDjl/",
+      "confirmedOn": "2026-11-07",
+      "basis": "From the stated Sat–Mon schedule; last confirmed Nov 7."
+    }
   ]
 }

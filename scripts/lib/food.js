@@ -7,12 +7,15 @@ import { ZONE } from './time.js';
 /**
  * Food pop-ups and trucks (prototype). One file per vendor in data/food/vendors/, each listing its
  * stops. A stop's `place` is a venue slug when the host is already a venue, otherwise a key in
- * data/food/places.json. `confirmed: false` marks a stop guessed from the vendor's usual pattern
- * rather than announced.
+ * data/food/places.json. `confirmedOn` is the date the vendor last posted this stop (or the weekly
+ * pattern it follows); a stop not confirmed in the last 30 days is shown with a disclaimer.
+ * `basis` is a note on where the stop came from, kept for us and not shown.
  */
+export const RECENT_DAYS = 30;
+
 export const FOOD_DIR = path.join(DATA_DIR, 'food');
 
-export function loadFood(venues) {
+export function loadFood(venues, { today = DateTime.now().setZone(ZONE).toISODate() } = {}) {
   const dir = path.join(FOOD_DIR, 'vendors');
   if (!fs.existsSync(dir)) return [];
   const places = readJSON(path.join(FOOD_DIR, 'places.json'), {});
@@ -35,7 +38,7 @@ export function loadFood(venues) {
           const at = (date, time) => DateTime.fromISO(`${date}T${time}`, { zone: ZONE }).toISO({ suppressMilliseconds: true });
           const start = e.time ? at(e.date, e.time) : e.date;
           const end = e.time && e.end ? at(e.end <= e.time ? nextDay(e.date) : e.date, e.end) : undefined;
-          return { ...e, start, end, allDay: !e.time, confirmed: e.confirmed !== false, place: resolve(e.place, f), vendor: vendor.slug };
+          return { ...e, start, end, allDay: !e.time, stale: !e.confirmedOn || DateTime.fromISO(today).diff(DateTime.fromISO(e.confirmedOn), 'days').days > RECENT_DAYS, place: resolve(e.place, f), vendor: vendor.slug };
         })
         .sort((a, b) => a.start.localeCompare(b.start));
       return vendor;

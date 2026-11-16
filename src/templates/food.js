@@ -3,7 +3,6 @@ import { esc, jsonScript, layout, siteHeader, siteFooter } from './layout.js';
 import { ZONE } from '../../scripts/lib/time.js';
 import { foodIcon } from './food-icons.js';
 
-const EXPECTED_HINT = 'Not announced yet. Based on the vendor’s usual weekly schedule.';
 
 const clock = (dt) => dt.toFormat(dt.minute ? 'h:mm a' : 'h a').toLowerCase();
 
@@ -22,13 +21,15 @@ function mapsLink(place) {
   return `https://www.google.com/maps/search/?api=1&query=${q}`;
 }
 
-function expectedTag() {
-  return `<span class="food-expected" title="${esc(EXPECTED_HINT)}">Expected</span>`;
+/** For a stop the vendor hasn't confirmed in the last 30 days. */
+function staleNote(e) {
+  const since = e.confirmedOn ? ` since ${DateTime.fromISO(e.confirmedOn).toFormat('LLL d')}` : ' recently';
+  return `<span class="food-stale">Not confirmed${since}. Check with them before heading out.</span>`;
 }
 
-function placeHtml(ctx, place, tag = '') {
+function placeHtml(ctx, place) {
   const name = place.venue ? `<a href="${ctx.url(`/venues/${place.venue}`)}">${esc(place.name)}</a>` : esc(place.name);
-  return `${name}${tag}<span class="food-where muted"><a class="food-address" href="${esc(mapsLink(place))}" rel="noopener">${esc(place.address)}</a></span>`;
+  return `${name}<span class="food-where muted"><a class="food-address" href="${esc(mapsLink(place))}" rel="noopener">${esc(place.address)}</a></span>`;
 }
 
 /** /food: a prototype directory of food pop-ups and trucks, one tile each with its next stop. */
@@ -59,7 +60,8 @@ export function foodPage(ctx, vendors, { today }) {
         <div class="card-body">
           <h2>${esc(v.name)}</h2>
           <p class="card-address muted">${esc(v.type ?? 'Pop-up')}</p>
-          <p class="card-next${next ? '' : ' muted'}">${esc(nextText)}${next && !next.confirmed ? ` ${expectedTag()}` : ''}</p>
+          <p class="card-next${next ? '' : ' muted'}">${esc(nextText)}</p>
+          ${next?.stale ? `<p class="food-stale">Not confirmed recently</p>` : ''}
           ${count > 1 ? `<p class="card-count muted">${count} upcoming</p>` : ''}
         </div>
       </a>
@@ -130,7 +132,6 @@ export function foodVendorPage(ctx, vendor, { today }) {
   const schedule = upcoming.length
     ? `<section class="wrap schedule">
       <h2>Upcoming stops</h2>
-      ${upcoming.some((e) => !e.confirmed) ? `<p class="muted schedule-meta">${expectedTag()} stops follow ${esc(vendor.name)}’s usual weekly schedule but haven’t been announced yet. Check their Instagram before heading out.</p>` : ''}
       ${[...days.values()]
         .map(
           (day) => `<div class="day">
@@ -138,10 +139,11 @@ export function foodVendorPage(ctx, vendor, { today }) {
         <ul class="event-list">
           ${day.events
             .map(
-              (e) => `<li class="event food-event${e.confirmed ? '' : ' is-expected'}">
+              (e) => `<li class="event food-event">
             <time class="event-time" datetime="${esc(e.start)}">${timeRange(e)}</time>
             <span>
-              <span class="event-title">${placeHtml(ctx, e.place, e.confirmed ? '' : ` ${expectedTag()}`)}</span>
+              <span class="event-title">${placeHtml(ctx, e.place)}</span>
+              ${e.stale ? staleNote(e) : ''}
               ${e.note ? `<span class="food-note muted">${esc(e.note)}</span>` : ''}
             </span>
           </li>`,

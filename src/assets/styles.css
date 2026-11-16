@@ -735,26 +735,13 @@ h3 { font-size: 1.3rem; }
 .popup-banner--food { min-height: 64px; background: linear-gradient(135deg, #4c1d95, var(--food)); }
 .popup-subhead { margin: 0; padding: 6px 14px 0; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; opacity: 0.75; }
 .popup-food { padding-top: 0; }
-.popup-expected, .food-expected {
-  display: inline-block;
-  margin-left: 6px;
-  padding: 1px 7px;
-  border-radius: 999px;
-  border: 1px dashed currentColor;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  vertical-align: 2px;
-  opacity: 0.8;
-  cursor: help;
-}
-.food-expected { margin-left: 0; color: var(--food); opacity: 1; }
-.event-title .food-expected { margin-left: 6px; }
+.food-stale, .popup-stale { display: block; font-size: 0.9rem; font-style: italic; color: var(--muted); }
+.card-body .food-stale { margin-top: 2px !important; }
+.popup-stale { font-size: 0.85rem; color: inherit; opacity: 0.8; }
 .food-schedule > h2, .food-vendors > h2 { margin-bottom: 6px; }
 .food-event .event-time { color: var(--food); white-space: nowrap; }
 @media (prefers-color-scheme: light) { .food-event .event-time { color: var(--food); } }
 .food-event { grid-template-columns: 7.5em 1fr; }
-.food-event.is-expected .event-title a { opacity: 0.85; }
 .food-where, .food-note { display: block; font-size: 0.98rem; }
 .food-note { font-size: 0.9rem; }
 .food-where a { color: inherit; }
