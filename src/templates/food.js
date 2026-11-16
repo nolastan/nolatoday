@@ -109,7 +109,7 @@ export function foodVendorPage(ctx, vendor, { today }) {
 
   const links = [
     vendor.website && { key: 'website', label: 'Website', url: vendor.website },
-    vendor.from && /instagram\.com/.test(vendor.from) && { key: 'instagram', label: 'Latest post on Instagram', url: vendor.from },
+    vendor.from && /instagram\.com/.test(vendor.from) && { key: 'instagram', label: 'Instagram', url: vendor.from },
   ].filter(Boolean);
 
   const hero = `<section class="artist-hero wrap has-photo">
