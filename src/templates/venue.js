@@ -2,6 +2,7 @@ import { DateTime } from 'luxon';
 import { esc, jsonScript, layout, siteHeader, siteFooter } from './layout.js';
 import { ZONE } from '../../scripts/lib/time.js';
 import { titleHtml } from './artist.js';
+import { foodIcon } from './food-icons.js';
 
 const MAX_LISTED = 120;
 
@@ -55,6 +56,35 @@ function groupByDay(events) {
   return [...days.values()];
 }
 
+/** Shows and food pop-ups by day. A pop-up has its time in purple and its icon before its name. */
+function scheduleDays(ctx, events) {
+  return groupByDay(events)
+    .map(
+      (day) => `<div class="day" data-day="${day.date.toISODate()}">
+        <h3 class="day-heading"><span class="day-name">${day.date.toFormat('cccc')}</span> <span class="day-date">${day.date.toFormat('LLLL d')}</span></h3>
+        <ul class="event-list">
+          ${day.events.map((e) => (e.food ? foodItem(ctx, e) : showItem(ctx, e))).join('')}
+        </ul>
+      </div>`,
+    )
+    .join('');
+}
+
+function showItem(ctx, e) {
+  return `<li class="event" data-start="${esc(e.start)}"${e.end ? ` data-end="${esc(e.end)}"` : ''}${e.allDay ? ' data-all-day' : ''}>
+            <time class="event-time" datetime="${esc(e.start)}">${formatTime(e)}</time>
+            <span class="event-title">${eventTitle(ctx, e)}</span>
+          </li>`;
+}
+
+function foodItem(ctx, e) {
+  const stale = e.stale ? `<span class="food-stale">Not confirmed${e.confirmedOn ? ` since ${DateTime.fromISO(e.confirmedOn).toFormat('LLL d')}` : ' recently'}. Check with them before heading out.</span>` : '';
+  return `<li class="event food-event">
+            <time class="event-time" datetime="${esc(e.start)}">${formatTime(e)}</time>
+            <span><span class="event-title"><span class="food-inline-icon">${foodIcon(e.icon, 20)}</span><a href="${ctx.url(`/food/${e.vendor}`)}">${esc(e.vendorName)}</a></span>${stale}</span>
+          </li>`;
+}
+
 function storyDate(iso) {
   return `<time datetime="${esc(iso)}">${esc(DateTime.fromISO(iso).toFormat('LLLL d, yyyy'))}</time>`;
 }
@@ -100,7 +130,7 @@ export function eventSchema(ctx, venue, e) {
   return schema;
 }
 
-export function venuePage(ctx, venue, { events, status }) {
+export function venuePage(ctx, venue, { events, status, food = [] }) {
   const { config, url, asset } = ctx;
   const canonical = `${config.siteUrl}/venues/${venue.slug}`;
   const month = DateTime.now().setZone(ZONE).toFormat('LLLL yyyy');
@@ -198,6 +228,12 @@ export function venuePage(ctx, venue, { events, status }) {
         <p>${esc(venue.note ?? `${venue.name} is no longer operating.`)} Looking for music tonight? Check the <a href="${url('/')}">map</a> or browse <a href="${url('/venues')}">all venues</a>.</p>
       </div>
     </section>`;
+  } else if (!listed.length && food.length) {
+    // No shows listed, but a food pop-up is coming: its schedule takes the empty state's place.
+    schedule = `<section class="wrap schedule">
+      <h2>Food schedule</h2>
+      ${scheduleDays(ctx, food)}
+    </section>`;
   } else if (!listed.length) {
     schedule = `<section class="wrap schedule">
       <h2>Upcoming shows</h2>
@@ -206,27 +242,10 @@ export function venuePage(ctx, venue, { events, status }) {
       </div>
     </section>`;
   } else {
-    const days = groupByDay(listed);
     schedule = `<section class="wrap schedule">
       <h2>Upcoming shows</h2>
       ${status?.lastSuccess ? `<p class="muted schedule-meta">Updated <time datetime="${esc(status.lastSuccess)}" data-relative>${esc(DateTime.fromISO(status.lastSuccess).setZone(ZONE).toFormat('LLL d, h:mm a'))}</time>.</p>` : ''}
-      ${days
-        .map(
-          (day) => `<div class="day" data-day="${day.date.toISODate()}">
-        <h3 class="day-heading"><span class="day-name">${day.date.toFormat('cccc')}</span> <span class="day-date">${day.date.toFormat('LLLL d')}</span></h3>
-        <ul class="event-list">
-          ${day.events
-            .map(
-              (e) => `<li class="event" data-start="${esc(e.start)}"${e.end ? ` data-end="${esc(e.end)}"` : ''}${e.allDay ? ' data-all-day' : ''}>
-            <time class="event-time" datetime="${esc(e.start)}">${formatTime(e)}</time>
-            <span class="event-title">${eventTitle(ctx, e)}</span>
-          </li>`,
-            )
-            .join('')}
-        </ul>
-      </div>`,
-        )
-        .join('')}
+      ${scheduleDays(ctx, [...listed, ...food.filter((e) => e.start <= listed[listed.length - 1].start)].sort((a, b) => a.start.localeCompare(b.start)))}
     </section>`;
   }
 

@@ -183,8 +183,17 @@ function main() {
   write('venues.html', directory);
   write('venues/index.html', directory);
 
+  // Food pop-ups at a venue go on its page too.
+  const foodByVenue = new Map();
+  for (const vendor of food) {
+    for (const e of vendor.events) {
+      if (!e.place.venue || (e.end ?? e.start) < startOfToday) continue;
+      if (!foodByVenue.has(e.place.venue)) foodByVenue.set(e.place.venue, []);
+      foodByVenue.get(e.place.venue).push({ ...e, food: true, vendorName: vendor.name, icon: vendor.icon });
+    }
+  }
   for (const v of venues) {
-    write(`venues/${v.slug}.html`, venuePage(ctx, v, { events: eventsBySlug.get(v.slug), status: status.venues?.[v.slug] }));
+    write(`venues/${v.slug}.html`, venuePage(ctx, v, { events: eventsBySlug.get(v.slug), status: status.venues?.[v.slug], food: foodByVenue.get(v.slug) ?? [] }));
   }
 
   // Artists: a directory, a page each, and the list for anyone building on this data.

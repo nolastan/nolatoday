@@ -742,7 +742,7 @@ h3 { font-size: 1.3rem; }
 .food-schedule > h2, .food-vendors > h2 { margin-bottom: 6px; }
 .food-event .event-time { color: var(--food); white-space: nowrap; }
 @media (prefers-color-scheme: light) { .food-event .event-time { color: var(--food); } }
-.food-event { grid-template-columns: 7.5em 1fr; }
+.food-vendor-page .food-event { grid-template-columns: 7.5em 1fr; }
 .food-where, .food-note { display: block; font-size: 0.98rem; }
 .food-note { font-size: 0.9rem; }
 .food-where a { color: inherit; }
@@ -764,3 +764,4 @@ h3 { font-size: 1.3rem; }
 }
 .food-photo { display: grid; place-items: center; background: linear-gradient(135deg, #3b1676, color-mix(in srgb, var(--food) 75%, #3b1676)); color: #f3e8ff; }
 @media (max-width: 640px) { .food-photo svg { width: 64px; height: 64px; } }
+.food-inline-icon { display: inline-flex; vertical-align: -3px; margin-right: 6px; color: var(--food); }
