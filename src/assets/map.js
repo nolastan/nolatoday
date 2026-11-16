@@ -1,6 +1,13 @@
 (function () {
   'use strict';
 
+  // TEMPORARY (prototype preview only, remove before merging): the map's clock runs as if it were
+  // Saturday, Nov 21 at 7 pm in New Orleans, so Live, Today and Tomorrow show that weekend's food.
+  var SIMULATED_NOW = Date.parse('2026-11-21T19:00:00-06:00');
+  var realNow = Date.now.bind(Date);
+  var clockStarted = realNow();
+  Date.now = function () { return SIMULATED_NOW + (realNow() - clockStarted); };
+
   var cfg = window.NOLA_MAP;
   var statusEl = document.querySelector('[data-map-status]');
   var buttons = Array.prototype.slice.call(document.querySelectorAll('.segmented [data-day]'));
