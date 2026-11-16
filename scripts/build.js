@@ -17,6 +17,7 @@ import { homePage, venuesPage, redirectPage, notFoundPage, privacyPage, contactP
 import { paradePage, paradesPage } from '../src/templates/parade.js';
 import { artistPage, artistsPage, artistLinks } from '../src/templates/artist.js';
 import { loadArtists, buildMatcher } from './lib/artists.js';
+import { specificGenres } from './lib/genres.js';
 import { loadFood } from './lib/food.js';
 import { foodPage, foodVendorPage } from '../src/templates/food.js';
 import { FOOD_ICONS } from '../src/templates/food-icons.js';
@@ -213,7 +214,7 @@ function main() {
         url: `${config.siteUrl}/artists/${a.slug}`,
         upcoming: showsByArtist.get(a.slug).length,
         image: artistMeta[a.slug]?.image,
-        genres: artistMeta[a.slug]?.genres,
+        genres: specificGenres(artistMeta[a.slug]).length ? specificGenres(artistMeta[a.slug]) : undefined,
         links: Object.fromEntries(artistLinks(a).map((l) => [l.key, l.url])),
       })),
       null,

@@ -5,6 +5,7 @@ import { pickArtist, linksFrom } from '../scripts/lib/musicbrainz.js';
 import { metaFromApi, metaFromOEmbed } from '../scripts/lib/spotify.js';
 import { titleHtml, artistPage, artistsPage, artistLinks } from '../src/templates/artist.js';
 import { eventTitle } from '../src/templates/venue.js';
+import { broadGenres, genresFromMusicBrainz, specificGenres } from '../scripts/lib/genres.js';
 
 const ARTISTS = [
   { slug: 'kermit-ruffins', name: 'Kermit Ruffins', aliases: ['Kermit Ruffins & the BBQ Swingers'] },
@@ -192,9 +193,9 @@ test('artistPage and artistsPage: shows, links and the player', () => {
   assert.match(html, /open\.spotify\.com\/embed\/artist\/5Yk2yKWh1jbCJS7gfDyPbK/);
   assert.match(html, /href="https:\/\/tubaskinny\.bandcamp\.com\/"/);
   assert.match(html, /"@type":"MusicGroup"/);
-  const withPhoto = artistPage(ctx, artist, { shows, meta: { image: 'https://i.scdn.co/image/ab6761610000e5ebaaa', genres: ['new orleans jazz'] } });
+  const withPhoto = artistPage(ctx, artist, { shows, meta: { image: 'https://i.scdn.co/image/ab6761610000e5ebaaa', spotifyGenres: ['new orleans jazz'], musicbrainzGenres: ['dixieland', 'New Orleans Jazz'] } });
   assert.match(withPhoto, /<img class="artist-photo" src="https:\/\/i\.scdn\.co\/image\/ab6761610000e5ebaaa" alt="Tuba Skinny"/);
-  assert.match(withPhoto, /new orleans jazz/);
+  assert.match(withPhoto, /<p class="artist-genres muted">new orleans jazz · dixieland<\/p>/);
   assert.doesNotMatch(html, /artist-photo/);
   const empty = artistPage(ctx, { slug: 'x', name: 'X Band' }, { shows: [] });
   assert.match(empty, /No upcoming shows are listed/);
@@ -202,4 +203,26 @@ test('artistPage and artistsPage: shows, links and the player', () => {
   const dir = artistsPage(ctx, [artist, { slug: 'x', name: 'X Band' }], { showsBySlug: new Map([['tuba-skinny', shows], ['x', []]]) });
   assert.match(dir, /href="\/artists\/tuba-skinny"/);
   assert.match(dir, /No shows listed right now/);
+  assert.doesNotMatch(dir, /genre-filter/);
+  const withGenres = artistsPage(ctx, [artist], { showsBySlug: new Map([['tuba-skinny', shows]]), meta: { 'tuba-skinny': { musicbrainzGenres: ['dixieland'] } } });
+  assert.match(withGenres, /data-genres="jazz traditional-jazz"/);
+  assert.match(withGenres, /data-genre="traditional-jazz">Traditional jazz</);
+  assert.doesNotMatch(withGenres, /data-genre="rock"/);
+  assert.match(withGenres, /<span class="artist-row-genres muted">Traditional jazz<\/span>/);
+});
+
+test('genres: broad genres from specific ones and from a band’s name', () => {
+  const band = (name) => ({ name });
+  assert.deepEqual(broadGenres(band('Stanton Moore'), ['jazz fusion', 'jazz rock', 'jazz-funk']), ['jazz', 'modern-jazz', 'funk-soul']);
+  assert.deepEqual(broadGenres(band('Someone'), ['jazz piano', 'contemporary jazz']), ['jazz', 'modern-jazz']);
+  assert.deepEqual(broadGenres(band('Tuba Skinny'), ['dixieland']), ['jazz', 'traditional-jazz']);
+  assert.deepEqual(broadGenres(band('Rebirth Brass Band')), ['jazz', 'brass-band']);
+  assert.deepEqual(broadGenres(band('Nathan & the Zydeco Cha Chas')), ['cajun-zydeco']);
+  assert.deepEqual(broadGenres(band('Hash Cabbage'), ['psychedelic rock', 'alternative folk']), ['rock', 'folk-country']);
+  assert.deepEqual(broadGenres(band('Jazzmine')), []);
+  assert.deepEqual(broadGenres(band('Rap Battle')), []);
+  assert.deepEqual(genresFromMusicBrainz({ genres: [{ name: 'funk', count: 1 }, { name: 'jazz', count: 2 }, { name: 'zero', count: 0 }] }), ['jazz', 'funk']);
+  assert.deepEqual(genresFromMusicBrainz({}), []);
+  assert.deepEqual(specificGenres({ spotifyGenres: ['brass band'], musicbrainzGenres: ['Brass Band', 'jazz'] }), ['brass band', 'jazz']);
+  assert.deepEqual(specificGenres(undefined), []);
 });

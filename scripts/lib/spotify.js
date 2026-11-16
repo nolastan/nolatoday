@@ -11,7 +11,7 @@ import { fetchJSON } from './http.js';
 
 export const ARTIST_META_FILE = path.join(DATA_DIR, 'artist-meta.json');
 
-/** { [slug]: { image, imageSmall?, genres? } } */
+/** { [slug]: { image?, imageSmall?, spotifyGenres?, musicbrainzGenres? } } */
 export const loadArtistMeta = () => readJSON(ARTIST_META_FILE, {});
 
 const isImage = (url) => typeof url === 'string' && /^https:\/\/[a-z0-9.-]+\.(scdn\.co|spotifycdn\.com)\//.test(url);

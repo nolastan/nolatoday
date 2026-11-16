@@ -175,7 +175,9 @@ Return an array of `{ title, start, end?, allDay?, url? }`. `start`/`end` may be
 
 `node scripts/artists.js candidates` lists names on the schedules with no artist file. `node scripts/artists.js discover --write` looks them up on MusicBrainz and creates a file only when exactly one Louisiana act has that exact name, taking its Spotify id and links from MusicBrainz. Everything else is skipped.
 
-Photos and genres come from Spotify into `data/artist-meta.json`, which is generated: `node scripts/artists.js refresh` rewrites it for every artist with a `spotify` id. Without `SPOTIFY_CLIENT_ID` and `SPOTIFY_CLIENT_SECRET` it still gets photos (from Spotify's public oEmbed endpoint); with them it also gets larger photos and genres. Photos are linked from Spotify's CDN, never copied into the repo. The weekly "Update artists" workflow runs `discover --write` and `refresh` and commits the result.
+Photos and genres go into `data/artist-meta.json`, which is generated: `node scripts/artists.js refresh` rewrites it. Photos come from Spotify for every artist with a `spotify` id: without `SPOTIFY_CLIENT_ID` and `SPOTIFY_CLIENT_SECRET` from Spotify's public oEmbed endpoint, with them larger ones from the Web API. Genres come from MusicBrainz for every artist with a `musicbrainz` id, and from Spotify too when the keys are set (the client id may be saved as an Actions secret or variable).
+
+The artists directory filters by a dozen broad genres (Traditional jazz, Modern jazz, Brass band…), worked out at build time in `scripts/lib/genres.js` from those specific genres and from words in a band's name that leave no doubt ("Brass Band", "Jazz", "Zydeco"). To file a new specific genre under a broad one, add it to that genre's `match` there, with a test. Photos are linked from Spotify's CDN, never copied into the repo. The weekly "Update artists" workflow runs `discover --write` and `refresh` and commits the result.
 
 ## Food pop-ups
 

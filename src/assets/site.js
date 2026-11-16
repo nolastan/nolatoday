@@ -106,15 +106,27 @@
   if (filter) {
     var cards = Array.prototype.slice.call(document.querySelectorAll('.venue-card, .artist-row'));
     var empty = document.querySelector('[data-venue-empty]');
-    filter.addEventListener('input', function () {
+    var genreButtons = Array.prototype.slice.call(document.querySelectorAll('.genre-filter [data-genre]'));
+    var genre = '';
+    var apply = function () {
       var q = filter.value.trim().toLowerCase();
       var shown = 0;
       cards.forEach(function (card) {
-        var match = !q || card.dataset.name.indexOf(q) !== -1;
+        var match = (!q || card.dataset.name.indexOf(q) !== -1) && (!genre || (' ' + card.dataset.genres + ' ').indexOf(' ' + genre + ' ') !== -1);
         card.hidden = !match;
         if (match) shown++;
       });
       if (empty) empty.hidden = shown !== 0;
+    };
+    filter.addEventListener('input', apply);
+    genreButtons.forEach(function (button) {
+      button.addEventListener('click', function () {
+        genre = button.dataset.genre;
+        genreButtons.forEach(function (b) {
+          b.setAttribute('aria-pressed', String(b === button));
+        });
+        apply();
+      });
     });
   }
 })();
