@@ -31,7 +31,9 @@ jobs:
       - uses: actions/checkout@v4
         with:
           # A push run needs the pushed range to see which manual files changed.
-          fetch-depth: ${{ github.event_name == 'push' && 0 || 1 }}
+          # '0' is quoted because a bare 0 is falsy in expressions, which made
+          # every push run fall back to depth 1 and rescrape all manual venues.
+          fetch-depth: ${{ github.event_name == 'push' && '0' || '1' }}
 
       - uses: actions/setup-node@v4
         with:
@@ -86,8 +88,16 @@ jobs:
             exit 0
           fi
           git commit -m "Update venue schedules ($(date -u +'%Y-%m-%d %H:%M UTC'))"
+          # Another run may have pushed generated data meanwhile (two pushes close
+          # together, or a scheduled run). Our scrape is the newer one, so on a
+          # conflicting hunk keep ours (-X theirs: in a rebase, "theirs" is the
+          # commit being replayed), and abort a failed rebase so retries start clean.
           for attempt in 1 2 3 4; do
-            git pull --rebase --autostash origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0
+            if git pull --rebase -X theirs --autostash origin "${GITHUB_REF_NAME}"; then
+              git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0
+            else
+              git rebase --abort 2>/dev/null || true
+            fi
             sleep $((attempt * 5))
           done
           exit 1
