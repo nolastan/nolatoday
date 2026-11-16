@@ -1,4 +1,83 @@
 {
   "venue": "the-broadside",
-  "events": []
+  "events": [
+    {
+      "id": "36b6ad196363",
+      "title": "Sober Fest 2026",
+      "start": "2026-11-21T11:00:00-06:00",
+      "url": "https://www.simpletix.com/e/sober-fest-2026-tickets-298382"
+    },
+    {
+      "id": "f17ce18a3c0f",
+      "title": "Chorino & Samba",
+      "start": "2026-11-22T14:00:00-06:00",
+      "url": "https://www.simpletix.com/e/chorino-samba-tickets-301296"
+    },
+    {
+      "id": "9ebfaa22a913",
+      "title": "Thanksgiving with The Iguanas!",
+      "start": "2026-11-25T17:00:00-06:00",
+      "url": "https://www.simpletix.com/e/thanksgiving-with-the-iguanas-tickets-301504"
+    },
+    {
+      "id": "ba03d01f37ad",
+      "title": "Big In The 90's",
+      "start": "2026-11-27T20:00:00-06:00",
+      "url": "https://www.simpletix.com/e/big-in-the-90-s-tickets-298923"
+    },
+    {
+      "id": "9817c4a534e5",
+      "title": "The Soul Rebels",
+      "start": "2026-11-28T19:00:00-06:00",
+      "url": "https://www.simpletix.com/e/the-soul-rebels-tickets-298233"
+    },
+    {
+      "id": "642ee2c03745",
+      "title": "NOLA Noel: An Evening Celebrating The New Orleans Musician’s Clinic",
+      "start": "2026-12-10T19:00:00-06:00",
+      "url": "https://www.simpletix.com/e/nola-noel-an-evening-celebrating-the-new-o-tickets-301456"
+    },
+    {
+      "id": "56ffd75b5688",
+      "title": "Willow's Symphonic Band Disney Fundraiser",
+      "start": "2026-12-11T18:00:00-06:00",
+      "url": "https://www.simpletix.com/e/willow-s-symphonic-band-disney-fundraiser-tickets-296152"
+    },
+    {
+      "id": "8de1335ba7a0",
+      "title": "BIG MONI LUV: Holiday Art & Gift Bizarre",
+      "start": "2026-12-12T12:00:00-06:00",
+      "url": "https://www.simpletix.com/e/big-moni-luv-holiday-art-gift-bizarre-tickets-301464"
+    },
+    {
+      "id": "54fcead4beec",
+      "title": "Mr. Chris & The Blue House Band",
+      "start": "2026-12-12T16:00:00-06:00",
+      "url": "https://www.simpletix.com/e/mr-chris-the-blue-house-band-tickets-300254"
+    },
+    {
+      "id": "c52a0f9ffd92",
+      "title": "BAD SANTAS HOLIDAY COSTUME PARTY - With The Hunks Of Coal, Bakey's Brew, & Louisiana Surf Department",
+      "start": "2026-12-12T19:00:00-06:00",
+      "url": "https://www.simpletix.com/e/bad-santas-holiday-costume-party-with-the-tickets-300535"
+    },
+    {
+      "id": "08664f4f7da7",
+      "title": "Alfred Banks LIVE!",
+      "start": "2026-12-19T18:00:00-06:00",
+      "url": "https://www.simpletix.com/e/alfred-banks-live-tickets-300036"
+    },
+    {
+      "id": "fe2f880418b8",
+      "title": "Free Screening: HUNDREDS OF BEAVERS",
+      "start": "2026-12-23T19:00:00-06:00",
+      "url": "https://www.simpletix.com/e/free-screening-hundreds-of-beavers-tickets-301439"
+    },
+    {
+      "id": "a8381ce5589b",
+      "title": "Elvis Presley Birthday Weekend CelebrayShawn",
+      "start": "2027-01-09T20:00:00-06:00",
+      "url": "https://www.simpletix.com/e/elvis-presley-birthday-weekend-celebraysha-tickets-299713"
+    }
+  ]
 }

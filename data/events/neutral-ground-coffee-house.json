@@ -2,13 +2,6 @@
   "venue": "neutral-ground-coffee-house",
   "events": [
     {
-      "id": "cc9c2dfb1ba0",
-      "title": "Open Mic Night!!",
-      "start": "2026-11-15T19:30:00-06:00",
-      "end": "2026-11-15T23:30:00-06:00",
-      "url": "https://neutralgroundcoffeehouse.org/music/open-mic-night-2021-04-04-2026-11-15/"
-    },
-    {
       "id": "d49ba8891618",
       "title": "Spoken Word: Open Poet’s Mic Night",
       "start": "2026-11-19T19:30:00-06:00",

@@ -2,27 +2,6 @@
   "venue": "30-90",
   "events": [
     {
-      "id": "b0c6ebf6d9f4",
-      "title": "Funhouse",
-      "start": "2026-11-15T15:00:00-06:00",
-      "end": "2026-11-15T18:00:00-06:00",
-      "url": "https://www.3090-nola.com/bands/funhouse102625-5j9ge-4syy9-dxmck-wmcaf-nspm5-ayjtm-g8jj4-tsc7r-pa8gc-92swp"
-    },
-    {
-      "id": "60a465112b7a",
-      "title": "Night Kitchen",
-      "start": "2026-11-15T18:00:00-06:00",
-      "end": "2026-11-15T21:00:00-06:00",
-      "url": "https://www.3090-nola.com/bands/night-kitchen-nlyrx-wjtlr"
-    },
-    {
-      "id": "c836df821203",
-      "title": "SingleMaltPlease",
-      "start": "2026-11-15T21:00:00-06:00",
-      "end": "2026-11-15T23:59:00-06:00",
-      "url": "https://www.3090-nola.com/bands/singlemaltplease113025-g8f57-3hh9f-alswf-sz6lj-weyr9-ypa9s-xkycn-dfyhn-ty4sh-4lm4b"
-    },
-    {
       "id": "02bf1c5a6cd1",
       "title": "Margie Perez",
       "start": "2026-11-16T18:00:00-06:00",
@@ -322,6 +301,13 @@
       "start": "2026-12-03T21:00:00-06:00",
       "end": "2026-12-03T23:59:00-06:00",
       "url": "https://www.3090-nola.com/bands/gumbo-funk10025-nwlmn-7f997-lxxtp-prwrc-ahwr4-frhrx-er45s-kaj69-f9m48-bzp6x-npn8k-drcr5"
+    },
+    {
+      "id": "97369335f33d",
+      "title": "Rainy Eyes",
+      "start": "2026-12-04T14:00:00-06:00",
+      "end": "2026-12-04T17:00:00-06:00",
+      "url": "https://www.3090-nola.com/bands/rainy-eyes"
     },
     {
       "id": "169cc536b269",
@@ -686,6 +672,13 @@
       "start": "2026-12-26T14:00:00-06:00",
       "end": "2026-12-26T17:00:00-06:00",
       "url": "https://www.3090-nola.com/bands/nat-the-last-calls"
+    },
+    {
+      "id": "df661100bcc7",
+      "title": "Bayou & The Degradables",
+      "start": "2026-12-26T17:00:00-06:00",
+      "end": "2026-12-26T20:00:00-06:00",
+      "url": "https://www.3090-nola.com/bands/bayou-the-degradables"
     },
     {
       "id": "44e72772fec0",

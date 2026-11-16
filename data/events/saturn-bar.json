@@ -2,20 +2,6 @@
   "venue": "saturn-bar",
   "events": [
     {
-      "id": "4c5236c12b3f",
-      "title": "Minka and Hey Thanks",
-      "start": "2026-11-15T21:00:00-06:00",
-      "end": "2026-11-16T01:00:00-06:00",
-      "url": "https://dice.fm/event/6a76593a7c6c26000134bddb"
-    },
-    {
-      "id": "3ebc7871c9b1",
-      "title": "Piano Night w BC Coogan",
-      "start": "2026-11-16T20:30:00-06:00",
-      "end": "2026-11-17T00:30:00-06:00",
-      "url": "https://dice.fm/event/6aba91670ac8550001c2ae2b"
-    },
-    {
       "id": "03f9073b7384",
       "title": "Drunk Picasso Clothing Swap",
       "start": "2026-11-17T17:00:00-06:00",
@@ -142,6 +128,13 @@
       "url": "https://dice.fm/event/6ac154f82aefc50001065cd9"
     },
     {
+      "id": "dca0a8e57f46",
+      "title": "Steady Company and Swingin' Doors",
+      "start": "2026-12-09T21:00:00-06:00",
+      "end": "2026-12-10T01:00:00-06:00",
+      "url": "https://dice.fm/event/6afa3b1663a1510001ce766a"
+    },
+    {
       "id": "7164f998de97",
       "title": "Mod Dance Party",
       "start": "2026-12-12T22:00:00-06:00",
@@ -156,6 +149,13 @@
       "url": "https://dice.fm/event/6aec1118d01f230001074d42"
     },
     {
+      "id": "62c40003f18d",
+      "title": "Piano Night w BC Coogan",
+      "start": "2026-12-14T20:30:00-06:00",
+      "end": "2026-12-15T00:30:00-06:00",
+      "url": "https://dice.fm/event/6afa254d336ef80001cdd404"
+    },
+    {
       "id": "eea55fc50cef",
       "title": "Drunk Picasso Clothing Swap",
       "start": "2026-12-15T17:00:00-06:00",
@@ -168,6 +168,20 @@
       "start": "2026-12-18T21:00:00-06:00",
       "end": "2026-12-19T01:00:00-06:00",
       "url": "https://dice.fm/event/6ac15557f2b2bf00011d05af"
+    },
+    {
+      "id": "ecbd52c57a90",
+      "title": "Anna Laura Quinn presents Siren~Night",
+      "start": "2026-12-20T20:00:00-06:00",
+      "end": "2026-12-21T00:00:00-06:00",
+      "url": "https://dice.fm/event/6afa248d4b8173000101b9b3"
+    },
+    {
+      "id": "5e50683c1fdd",
+      "title": "Piano Night w BC Coogan",
+      "start": "2026-12-21T20:30:00-06:00",
+      "end": "2026-12-22T00:30:00-06:00",
+      "url": "https://dice.fm/event/6afa25934360570001bfcdfd"
     }
   ]
 }

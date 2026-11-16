@@ -2,41 +2,6 @@
   "venue": "the-allways-lounge",
   "events": [
     {
-      "id": "01ddb72afe0b",
-      "title": "Bri & The Sparkling Diamonds “New Orleans Burlesque”",
-      "start": "2026-11-14T22:30:00-06:00",
-      "end": "2026-11-15T01:00:00-06:00",
-      "url": "https://tockify.com/allwayslounge/detail/3788/1794717000000/32"
-    },
-    {
-      "id": "f7f9dfb9db18",
-      "title": "Studio 504 (burlesque)",
-      "start": "2026-11-14T23:00:00-06:00",
-      "end": "2026-11-15T01:30:00-06:00",
-      "url": "https://tockify.com/allwayslounge/detail/3765/1794718800000/25"
-    },
-    {
-      "id": "cb5dfa5c2728",
-      "title": "Noobs (burlesque newbies)",
-      "start": "2026-11-15T18:30:00-06:00",
-      "end": "2026-11-15T19:30:00-06:00",
-      "url": "https://tockify.com/allwayslounge/detail/3989/1794789000000"
-    },
-    {
-      "id": "0e54ff96a96d",
-      "title": "New Orleans Fringe Festival",
-      "start": "2026-11-15T19:00:00-06:00",
-      "end": "2026-11-15T22:00:00-06:00",
-      "url": "https://tockify.com/allwayslounge/detail/4412/1794783600000/1"
-    },
-    {
-      "id": "be284a83af9e",
-      "title": "Swing Night (live music & dance lessons)",
-      "start": "2026-11-15T20:00:00-06:00",
-      "end": "2026-11-15T23:30:00-06:00",
-      "url": "https://tockify.com/allwayslounge/detail/1860/1794794400000"
-    },
-    {
       "id": "c54bd4362c6f",
       "title": "Betsy Propane Smoke Show (live music & burlesque)",
       "start": "2026-11-16T19:00:00-06:00",
@@ -492,8 +457,8 @@
       "url": "https://tockify.com/allwayslounge/detail/4172/1796598000000/11"
     },
     {
-      "id": "e962ad7e89dd",
-      "title": "Louis Prima Tribute (Live band and Burlesque)",
+      "id": "becdd3b12164",
+      "title": "ZOOMA ZOOMA Louis Prima Tribute (Live band and Burlesque)",
       "start": "2026-12-06T19:00:00-06:00",
       "end": "2026-12-06T21:00:00-06:00",
       "url": "https://tockify.com/allwayslounge/detail/4463/1796605200000"
@@ -1324,18 +1289,18 @@
       "url": "https://tockify.com/allwayslounge/detail/4570/1799976600000"
     },
     {
-      "id": "273379e4a8f1",
-      "title": "The Crossroads Cabaret",
-      "start": "2027-01-14T22:00:00-06:00",
-      "end": "2027-01-14T23:30:00-06:00",
-      "url": "https://tockify.com/allwayslounge/detail/4632/1799985600000"
-    },
-    {
       "id": "efb110a0dc22",
       "title": "CLASS: A Classic New Orleans Burlesque Show",
       "start": "2027-01-14T22:30:00-06:00",
       "end": "2027-01-15T01:00:00-06:00",
       "url": "https://tockify.com/allwayslounge/detail/4307/1799987400000/24"
+    },
+    {
+      "id": "07e5811cb2a7",
+      "title": "The Crossroads Cabaret",
+      "start": "2027-01-14T22:30:00-06:00",
+      "end": "2027-01-15T00:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/4635/1799987400000"
     },
     {
       "id": "4a07858b5440",
@@ -1856,11 +1821,11 @@
       "url": "https://tockify.com/allwayslounge/detail/4570/1802395800000"
     },
     {
-      "id": "303d2d8f0068",
+      "id": "9bd628374810",
       "title": "The Crossroads Cabaret",
-      "start": "2027-02-11T22:00:00-06:00",
-      "end": "2027-02-11T23:30:00-06:00",
-      "url": "https://tockify.com/allwayslounge/detail/4632/1802404800000"
+      "start": "2027-02-11T22:30:00-06:00",
+      "end": "2027-02-12T00:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/4635/1802406600000"
     },
     {
       "id": "8661662a54de",
@@ -1889,6 +1854,34 @@
       "start": "2027-02-12T23:00:00-06:00",
       "end": "2027-02-13T01:00:00-06:00",
       "url": "https://tockify.com/allwayslounge/detail/4023/1802494800000/23"
+    },
+    {
+      "id": "c7f6becbf534",
+      "title": "Ladies Night (burlesque)",
+      "start": "2027-02-13T17:00:00-06:00",
+      "end": "2027-02-13T18:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/4470/1802559600000"
+    },
+    {
+      "id": "6dacaa715d54",
+      "title": "Van Ella Bordella (burlesque)",
+      "start": "2027-02-13T19:00:00-06:00",
+      "end": "2027-02-13T21:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/1997/1802566800000/113"
+    },
+    {
+      "id": "3ad0dee363f2",
+      "title": "Ficheraz: Live Latin Band & Burlesque",
+      "start": "2027-02-13T20:00:00-06:00",
+      "end": "2027-02-13T21:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/3680/1802570400000"
+    },
+    {
+      "id": "dfc82fb3b8e8",
+      "title": "CLASS: A Classic New Orleans Burlesque Show",
+      "start": "2027-02-13T22:30:00-06:00",
+      "end": "2027-02-14T00:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/4307/1802493000000/26"
     }
   ]
 }

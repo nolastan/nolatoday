@@ -2,12 +2,6 @@
   "venue": "the-jazz-playhouse",
   "events": [
     {
-      "id": "690111a27730",
-      "title": "Richard 'Piano' Scott at The Jazz Playhouse",
-      "start": "2026-11-15T19:30:00-06:00",
-      "url": "https://www.eventbrite.com/e/richard-piano-scott-at-the-jazz-playhouse-tickets-1983991925256"
-    },
-    {
       "id": "7f2510c8a9ed",
       "title": "The Sam Lobley Trio at The Jazz Playhouse",
       "start": "2026-11-17T19:30:00-06:00",
@@ -36,6 +30,12 @@
       "title": "The Nayo Jones Experience at The Jazz Playhouse",
       "start": "2026-11-21T20:00:00-06:00",
       "url": "https://www.eventbrite.com/e/the-nayo-jones-experience-at-the-jazz-playhouse-tickets-1979622492164"
+    },
+    {
+      "id": "4e6dd61371e4",
+      "title": "Richard 'Piano' Scott at The Jazz Playhouse",
+      "start": "2026-11-22T19:30:00-06:00",
+      "url": "https://www.eventbrite.com/e/richard-piano-scott-at-the-jazz-playhouse-tickets-1983991925256"
     },
     {
       "id": "4737cc96d568",
