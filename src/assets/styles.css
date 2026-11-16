@@ -538,9 +538,14 @@ h3 { font-size: 1.3rem; }
 }
 
 /* Mapbox popups, restyled: the card that opens from a marker */
-/* Fixed width so every card is the same size; long text wraps. */
-.mapboxgl-popup { width: min(280px, 84vw); max-width: none !important; }
+/* Fixed width so every card is the same size; long text wraps. The width is set on the card itself,
+   not the popup around it: a popup that opens beside its marker lays the card and its pointer out
+   in a row, where the card would otherwise shrink to fit its text. */
+.mapboxgl-popup { max-width: none !important; }
 .mapboxgl-popup-content {
+  flex: none;
+  box-sizing: border-box;
+  width: min(280px, 84vw);
   padding: 0 !important;
   overflow: hidden;
   border-radius: 16px !important;
