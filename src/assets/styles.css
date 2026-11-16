@@ -1,6 +1,7 @@
 /* NOLA.Today — palette carried over from the original site:
    charcoal map land, teal water (#79a8a9), slate-teal popups (#68909E),
-   pale aqua (#AACFD0), off-white (#F4F7F7), yellow badges, orange markers. */
+   pale aqua (#AACFD0), off-white (#F4F7F7), and one orange accent (--marker)
+   for markers, badges, buttons and times. */
 
 :root {
   --bg: #2b2e2f;
@@ -9,16 +10,14 @@
   --line: #4b5354;
   --text: #f4f7f7;
   --muted: #a7b8ba;
-  --accent: #f5b700;
-  --accent-hover: #ffc929;
-  --accent-ink: #1b2b35;
   --marker: #ffa500;
+  --marker-ink: #1b2b35;
   --marker-ring: rgba(255, 165, 0, 0.45);
   --teal: #68909e;
   --teal-deep: #2a5669;
   --aqua: #aacfd0;
   --water: #79a8a9;
-  --link: #f7c948;
+  --link: #ffa500;
   --popup-bg: #68909e;
   --popup-text: #f4f7f7;
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
@@ -36,7 +35,6 @@
     --line: #d2dcdc;
     --text: #1e2a2e;
     --muted: #536d74;
-    --accent-ink: #1b2b35;
     --marker: #e8590c;
     --marker-ring: rgba(232, 89, 12, 0.35);
     --link: #2a5669;
@@ -98,8 +96,8 @@ h3 { font-size: 1.3rem; }
   padding: 1px 10px;
   margin-bottom: 12px;
   border-radius: 999px;
-  background: var(--accent);
-  color: var(--accent-ink);
+  background: var(--marker);
+  color: var(--marker-ink);
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -122,8 +120,8 @@ h3 { font-size: 1.3rem; }
   cursor: pointer;
 }
 .button:hover { background: var(--bg-elev-2); }
-.button.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
-.button.primary:hover { background: var(--accent-hover); }
+.button.primary { background: var(--marker); border-color: var(--marker); color: var(--marker-ink); }
+.button.primary:hover { background: color-mix(in srgb, var(--marker) 85%, #fff); }
 .button-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
 
 .brand {
@@ -265,7 +263,7 @@ h3 { font-size: 1.3rem; }
   padding: 12px 0;
   border-bottom: 1px solid color-mix(in srgb, var(--line) 55%, transparent);
 }
-.event-time { color: var(--accent); font-weight: 700; font-variant-numeric: tabular-nums; }
+.event-time { color: var(--marker); font-weight: 700; font-variant-numeric: tabular-nums; }
 @media (prefers-color-scheme: light) { .event-time { color: var(--teal-deep); } }
 .event-title { font-size: 1.1rem; font-weight: 600; }
 .event-title a { color: var(--text); text-decoration: none; }
@@ -335,7 +333,7 @@ h3 { font-size: 1.3rem; }
   color: var(--text);
   font: inherit;
 }
-.search input:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+.search input:focus { outline: 2px solid var(--marker); outline-offset: 1px; }
 .venue-grid {
   list-style: none;
   margin: 24px 0 0;
@@ -583,7 +581,7 @@ h3 { font-size: 1.3rem; }
   padding: 1px 8px;
   border-radius: 999px;
   background: #1b1d1e;
-  color: #ffb54d;
+  color: #ffa500;
   font-size: 0.8rem;
   font-weight: 700;
   line-height: 1.5;
