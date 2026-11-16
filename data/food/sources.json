@@ -1,12 +1,1 @@
-[
-  {
-    "place": "miel-brewery",
-    "source": { "type": "tribe", "url": "https://www.mielbrewery.com" },
-    "include": "pop-?up|food truck",
-    "rename": {
-      "^Taste of Kultures": "Taste of Kultures",
-      "^Hi-Tide": "Hi-Tide",
-      "^Waska": "Waska"
-    }
-  }
-]
+[]
