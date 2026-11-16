@@ -402,7 +402,7 @@
         var time = ev.a ? 'All day' : timeFmt.format(new Date(Date.parse(ev.s)));
         var live = isLive(ev, now) ? ' <span class="popup-live">• Open now</span>' : '';
         var expected = ev.u ? ' <span class="popup-expected" title="Not announced yet; based on their usual schedule">Expected</span>' : '';
-        return '<li><span class="popup-time">' + esc(time) + live + '</span><span class="popup-title"><a href="' + cfg.base + '/food#' + esc(ev.f) + '">' + esc(ev.n) + '</a>' + expected + '</span></li>';
+        return '<li><span class="popup-time">' + esc(time) + live + '</span><span class="popup-title"><a href="' + cfg.base + '/food/' + esc(ev.f) + '">' + esc(ev.n) + '</a>' + expected + '</span></li>';
       })
       .join('');
   }

@@ -18,7 +18,7 @@ import { paradePage, paradesPage } from '../src/templates/parade.js';
 import { artistPage, artistsPage, artistLinks } from '../src/templates/artist.js';
 import { loadArtists, buildMatcher } from './lib/artists.js';
 import { loadFood } from './lib/food.js';
-import { foodPage } from '../src/templates/food.js';
+import { foodPage, foodVendorPage } from '../src/templates/food.js';
 import { loadArtistMeta } from './lib/spotify.js';
 import { PARADES_FILE, SOURCES, loadParades, loadWebsites, loadPhotos, paradeOrgs, mapParade } from './lib/parades.js';
 
@@ -245,6 +245,7 @@ function main() {
   const foodDirectory = foodPage(ctx, food, { today: startOfToday });
   write('food.html', foodDirectory);
   write('food/index.html', foodDirectory);
+  for (const vendor of food) write(`food/${vendor.slug}.html`, foodVendorPage(ctx, vendor, { today: startOfToday }));
 
   // The old site's music directory.
   write('music.html', redirectPage(ctx, '/venues'));
@@ -268,6 +269,7 @@ function main() {
     ...artists.map((a) => ({ loc: `${config.siteUrl}/artists/${a.slug}`, lastmod: today, priority: showsByArtist.get(a.slug).length ? '0.7' : '0.3' })),
     { loc: `${config.siteUrl}/parades`, lastmod: today, priority: '0.9' },
     { loc: `${config.siteUrl}/food`, lastmod: today, priority: '0.8' },
+    ...food.map((v) => ({ loc: `${config.siteUrl}/food/${v.slug}`, lastmod: v.updated ?? today, priority: '0.6' })),
     ...orgs.map((o) => ({
       loc: `${config.siteUrl}/parades/${o.slug}`,
       lastmod: (o.featured.properties.first_seen ?? today).slice(0, 10),

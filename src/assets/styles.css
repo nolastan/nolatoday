@@ -774,3 +774,5 @@ h3 { font-size: 1.3rem; }
   .site-header .brand { font-size: 1.1rem; }
   .site-nav a { padding: 8px 4px; font-size: 0.9rem; }
 }
+.food-photo { display: grid; place-items: center; background: linear-gradient(135deg, #3b1676, color-mix(in srgb, var(--food) 75%, #3b1676)); color: #f3e8ff; }
+@media (max-width: 640px) { .food-photo svg { width: 64px; height: 64px; } }

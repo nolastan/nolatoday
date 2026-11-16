@@ -26,50 +26,14 @@ function expectedTag() {
   return `<span class="food-expected" title="${esc(EXPECTED_HINT)}">Expected</span>`;
 }
 
-function placeHtml(ctx, place) {
+function placeHtml(ctx, place, tag = '') {
   const name = place.venue ? `<a href="${ctx.url(`/venues/${place.venue}`)}">${esc(place.name)}</a>` : esc(place.name);
-  return `${name} <span class="muted">· <a class="food-address" href="${esc(mapsLink(place))}" rel="noopener">${esc(place.address)}</a></span>`;
+  return `${name}${tag}<span class="food-where muted"><a class="food-address" href="${esc(mapsLink(place))}" rel="noopener">${esc(place.address)}</a></span>`;
 }
 
-/** /food: a prototype directory of food pop-ups and trucks, with where each one is this week. */
+/** /food: a prototype directory of food pop-ups and trucks, one tile each with its next stop. */
 export function foodPage(ctx, vendors, { today }) {
   const { config, url } = ctx;
-  const upcoming = vendors
-    .flatMap((v) => v.events.filter((e) => (e.end ?? e.start) >= today).map((e) => ({ ...e, vendorName: v.name })))
-    .sort((a, b) => a.start.localeCompare(b.start) || a.vendorName.localeCompare(b.vendorName));
-
-  const days = new Map();
-  for (const e of upcoming) {
-    const dt = DateTime.fromISO(e.start, { zone: ZONE });
-    const key = dt.toISODate();
-    if (!days.has(key)) days.set(key, { date: dt, events: [] });
-    days.get(key).events.push(e);
-  }
-
-  const schedule = upcoming.length
-    ? [...days.values()]
-        .map(
-          (day) => `<div class="day">
-        <h3 class="day-heading"><span class="day-name">${day.date.toISODate() === today ? 'Today' : day.date.toFormat('cccc')}</span> <span class="day-date">${day.date.toFormat('LLLL d')}</span></h3>
-        <ul class="event-list">
-          ${day.events
-            .map(
-              (e) => `<li class="event food-event${e.confirmed ? '' : ' is-expected'}">
-            <time class="event-time" datetime="${esc(e.start)}">${timeRange(e)}</time>
-            <span>
-              <span class="event-title"><a href="#${esc(e.vendor)}">${esc(e.vendorName)}</a>${e.confirmed ? '' : ` ${expectedTag()}`}</span>
-              <span class="food-where">${placeHtml(ctx, e.place)}</span>
-              ${e.note ? `<span class="food-note muted">${esc(e.note)}</span>` : ''}
-            </span>
-          </li>`,
-            )
-            .join('')}
-        </ul>
-      </div>`,
-        )
-        .join('')
-    : '<div class="notice"><p>No pop-ups are listed right now.</p></div>';
-
   // Like the venue directory: vendors with a stop coming up first (soonest first), then the rest.
   const nextOf = (v) => v.events.find((e) => (e.end ?? e.start) >= today);
   const sorted = [...vendors].sort((a, b) => {
@@ -81,7 +45,6 @@ export function foodPage(ctx, vendors, { today }) {
     return a.name.localeCompare(b.name);
   });
 
-  // No vendor pages yet, so a tile leads to the vendor's own site, else the Instagram post the stops came from.
   const card = (v) => {
     const next = nextOf(v);
     const count = v.events.filter((e) => (e.end ?? e.start) >= today).length;
@@ -90,9 +53,8 @@ export function foodPage(ctx, vendors, { today }) {
       const dt = DateTime.fromISO(next.start, { zone: ZONE });
       nextText = `${dt.toISODate() === today ? 'Today' : dt.toFormat('ccc, LLL d')}, ${timeRange(next)}: ${next.place.name}`;
     }
-    const href = v.website ?? v.from;
     return `<li class="venue-card food-card" id="${esc(v.slug)}" data-name="${esc(`${v.name} ${v.type ?? ''} ${v.events.map((e) => e.place.name).join(' ')}`.toLowerCase())}">
-      <a href="${esc(href)}" rel="noopener">
+      <a href="${url(`/food/${v.slug}`)}">
         <div class="card-media food-media">${foodIcon(v.icon, 64)}</div>
         <div class="card-body">
           <h2>${esc(v.name)}</h2>
@@ -116,11 +78,6 @@ export function foodPage(ctx, vendors, { today }) {
     ${sorted.map(card).join('')}
   </ul>
   <p class="muted" data-venue-empty hidden>No vendors match that search.</p>
-  <section class="schedule food-schedule">
-    <h2>Day by day</h2>
-    <p class="muted schedule-meta">${expectedTag()} stops follow a vendor’s usual weekly schedule but haven’t been announced yet. Check their Instagram before heading out.</p>
-    ${schedule}
-  </section>
 </main>
 ${siteFooter(ctx)}`;
 
@@ -132,7 +89,93 @@ ${siteFooter(ctx)}`;
     head: `<script type="application/ld+json">${jsonScript({
       '@context': 'https://schema.org',
       '@type': 'ItemList',
-      itemListElement: vendors.map((v, i) => ({ '@type': 'ListItem', position: i + 1, url: `${config.siteUrl}/food#${v.slug}`, name: v.name })),
+      itemListElement: vendors.map((v, i) => ({ '@type': 'ListItem', position: i + 1, url: `${config.siteUrl}/food/${v.slug}`, name: v.name })),
+    })}</script>`,
+    body,
+  });
+}
+
+/** /food/<slug>: one vendor, where it is and when, like an artist page. */
+export function foodVendorPage(ctx, vendor, { today }) {
+  const { config, url } = ctx;
+  const canonical = `${config.siteUrl}/food/${vendor.slug}`;
+  const upcoming = vendor.events.filter((e) => (e.end ?? e.start) >= today);
+  const places = [...new Set(upcoming.map((e) => e.place.name))];
+  const description = upcoming.length
+    ? `Where to find ${vendor.name} in New Orleans: ${upcoming.length} upcoming ${upcoming.length === 1 ? 'stop' : 'stops'} at ${places.slice(0, 3).join(', ')}${places.length > 3 ? ' and more' : ''}.`
+    : `${vendor.name}, a New Orleans ${(vendor.type ?? 'pop-up').toLowerCase()}: upcoming stops when they’re announced.`;
+
+  const links = [
+    vendor.website && { key: 'website', label: 'Website', url: vendor.website },
+    vendor.from && /instagram\.com/.test(vendor.from) && { key: 'instagram', label: 'Latest post on Instagram', url: vendor.from },
+  ].filter(Boolean);
+
+  const hero = `<section class="artist-hero wrap has-photo">
+    <span class="artist-photo food-photo">${foodIcon(vendor.icon, 96)}</span>
+    <div class="artist-hero-text">
+    <span class="badge">${esc(vendor.type ?? 'Pop-up')}</span>
+    <h1>${esc(vendor.name)}</h1>
+    ${vendor.description ? `<p class="venue-note">${esc(vendor.description)}</p>` : ''}
+    ${links.length ? `<div class="button-row">${links.map((l) => `<a class="button provider provider-${l.key}" href="${esc(l.url)}" rel="noopener">${esc(l.label)}</a>`).join('')}</div>` : ''}
+    </div>
+  </section>`;
+
+  const days = new Map();
+  for (const e of upcoming) {
+    const dt = DateTime.fromISO(e.start, { zone: ZONE });
+    const key = dt.toISODate();
+    if (!days.has(key)) days.set(key, { date: dt, events: [] });
+    days.get(key).events.push(e);
+  }
+  const schedule = upcoming.length
+    ? `<section class="wrap schedule">
+      <h2>Upcoming stops</h2>
+      ${upcoming.some((e) => !e.confirmed) ? `<p class="muted schedule-meta">${expectedTag()} stops follow ${esc(vendor.name)}’s usual weekly schedule but haven’t been announced yet. Check their Instagram before heading out.</p>` : ''}
+      ${[...days.values()]
+        .map(
+          (day) => `<div class="day">
+        <h3 class="day-heading"><span class="day-name">${day.date.toISODate() === today ? 'Today' : day.date.toFormat('cccc')}</span> <span class="day-date">${day.date.toFormat('LLLL d')}</span></h3>
+        <ul class="event-list">
+          ${day.events
+            .map(
+              (e) => `<li class="event food-event${e.confirmed ? '' : ' is-expected'}">
+            <time class="event-time" datetime="${esc(e.start)}">${timeRange(e)}</time>
+            <span>
+              <span class="event-title">${placeHtml(ctx, e.place, e.confirmed ? '' : ` ${expectedTag()}`)}</span>
+              ${e.note ? `<span class="food-note muted">${esc(e.note)}</span>` : ''}
+            </span>
+          </li>`,
+            )
+            .join('')}
+        </ul>
+      </div>`,
+        )
+        .join('')}
+    </section>`
+    : `<section class="wrap schedule">
+      <h2>Upcoming stops</h2>
+      <div class="notice"><p>No stops are posted for ${esc(vendor.name)} right now.${vendor.from ? ` Check <a href="${esc(vendor.from)}" rel="noopener">their latest post</a> for this week’s schedule.` : ''}</p></div>
+    </section>`;
+
+  const body = `${siteHeader(ctx, { current: 'food' })}
+<main class="artist-page food-vendor-page">
+  ${hero}
+  ${schedule}
+</main>
+${siteFooter(ctx)}`;
+
+  return layout(ctx, {
+    title: `${vendor.name} – Food ${vendor.type === 'Food truck' ? 'Truck' : 'Pop-up'} Schedule – NOLA.Today`,
+    description,
+    canonical,
+    bodyClass: 'page-artist page-food-vendor',
+    head: `<script type="application/ld+json">${jsonScript({
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Food', item: `${config.siteUrl}/food` },
+        { '@type': 'ListItem', position: 2, name: vendor.name, item: canonical },
+      ],
     })}</script>`,
     body,
   });
