@@ -1,7 +1,7 @@
 /*
- * PROTOTYPE: three pared-back directions for the map's marker cards, with a switcher to compare
- * them. Once one is picked, keep that renderer (and its block in map-cards.css), drop the other two
- * and the switcher, and fold what is left into map.js and styles.css.
+ * PROTOTYPE: three variants of the photo card for the map's markers, with a switcher to compare
+ * them. Once one is picked, keep that renderer (and its block in map-cards.css), drop the other two,
+ * the switcher and the demo data, and fold what is left into map.js and styles.css.
  *
  * map.js describes a card as a plain model and this file turns it into HTML:
  *   { kind: 'venue' | 'food' | 'parade', name, href, image,
@@ -9,17 +9,19 @@
  *     note: a line under the rows, or '' }
  * `html` and `icon` are already escaped markup; everything else is plain text.
  *
- * Shared rules: the name is the one link to the venue's page (no separate button), "live" is said
- * once, on the row that is live, and nothing is shown that the rows already say.
+ * Shared rules: every card has a banner of the same height, a photo when there is one and a plain
+ * placeholder in the kind's color when there isn't. The name is the one link to the page (no
+ * separate button), "live" is said once, on the row that is live, and nothing is shown that the
+ * rows already say.
  */
 (function () {
   'use strict';
 
   var DESIGNS = [
     ['current', 'Current'],
-    ['photo', 'Photo'],
-    ['compact', 'Compact'],
-    ['text', 'Text'],
+    ['overlay', 'Overlay'],
+    ['caption', 'Caption'],
+    ['inset', 'Inset'],
   ];
   var KEY = 'nola-cards';
   var root = document.documentElement;
@@ -30,8 +32,8 @@
   function stored() {
     try { return localStorage.getItem(KEY); } catch (e) { return null; }
   }
-  // ?cards=compact links straight to one design; otherwise the last one picked, then the first new one.
-  var design = valid(new URLSearchParams(location.search).get('cards')) || valid(stored()) || 'photo';
+  // ?cards=caption links straight to one design; otherwise the last one picked, then the first new one.
+  var design = valid(new URLSearchParams(location.search).get('cards')) || valid(stored()) || 'overlay';
   root.dataset.cards = design;
 
   function setDesign(d) {
@@ -53,7 +55,7 @@
   }
   // The card's name, linked when the place has a page here (a bar that only hosts a pop-up has none).
   function nameHtml(m) {
-    return m.href ? '<a href="' + m.href + '">' + esc(m.name) + '</a>' : esc(m.name);
+    return m.href ? '<a class="card-name" href="' + m.href + '">' + esc(m.name) + '</a>' : esc(m.name);
   }
   // A live row says so where its time would be; the others give their time.
   function whenHtml(r) {
@@ -71,40 +73,55 @@
     return '<span class="card-when">' + whenHtml(r) + '</span>';
   }
 
-  // ---- 1. Photo: the photo edge to edge, the name on it, the night underneath -----------------
-  // What's on reads first, with its time set quietly to the right. Without a photo there is no
-  // banner at all, only the name.
-  function photo(m) {
+  // Placeholder marks, drawn in the banner when there is no photo: a note for a venue, the
+  // vendor's icon for a food stop, the parade marker's ring for a parade.
+  var NOTE = '<svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></svg>';
+  var RING = '<svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><circle cx="12" cy="12" r="7"/></svg>';
+  function mark(m) {
+    var icon = '';
+    if (m.kind === 'food') m.rows.forEach(function (r) { icon = icon || r.icon; });
+    return '<span class="card-mark" aria-hidden="true">' + (icon || (m.kind === 'parade' ? RING : NOTE)) + '</span>';
+  }
+  // The banner: the photo, or the placeholder at the same size. inner goes on top of either.
+  function banner(m, cls, inner) {
     var tag = m.href ? 'a' : 'div';
-    var head = m.image
-      ? '<' + tag + ' class="ph-photo"' + (m.href ? ' href="' + m.href + '"' : '') + bg(m.image) + '><h3>' + esc(m.name) + '</h3></' + tag + '>'
-      : '<h3 class="ph-name">' + nameHtml(m) + '</h3>';
-    return '<article class="ph">' + head + rowsHtml(m, function (r) { return what(r) + when(r); }) + '</article>';
+    return '<' + tag + ' class="card-banner card-banner--' + m.kind + (m.image ? '' : ' card-banner--none') + ' ' + cls + '"' +
+      (m.href ? ' href="' + m.href + '"' : '') + (m.image ? bg(m.image) : '') +
+      (inner ? '' : ' aria-label="' + esc(m.name) + '"') + '>' +
+      (m.image ? '' : mark(m)) + inner + '</' + tag + '>';
   }
 
-  // ---- 2. Compact: a small thumbnail beside the name, times in a column ------------------------
-  // The smallest card that still shows the place. The only one with a close button, which sits in
-  // the title row so it plainly belongs to the card.
-  function compact(m) {
-    return '<article class="cp">' +
-      '<header class="cp-head">' +
-      (m.image ? '<span class="cp-thumb"' + bg(m.image) + '></span>' : '') +
-      '<h3>' + nameHtml(m) + '</h3>' +
-      '</header>' +
-      rowsHtml(m, function (r) { return when(r) + what(r); }) +
+  // ---- 1. Overlay: the name on the banner ---------------------------------------------------------
+  // Round two's Photo card, with a placeholder banner where there is no photo.
+  function overlay(m) {
+    return '<article class="ov">' +
+      banner(m, 'ov-banner', '<h3>' + esc(m.name) + '</h3>') +
+      rowsHtml(m, function (r) { return what(r) + when(r); }) +
       '</article>';
   }
 
-  // ---- 3. Text: no picture, just the name and the night ------------------------------------------
-  // A frosted label on the map: each time sits small above what's on.
-  function text(m) {
-    return '<article class="tx">' +
-      '<h3>' + nameHtml(m) + '</h3>' +
+  // ---- 2. Caption: the banner left clean, the name under it ---------------------------------------
+  // Nothing is printed on the photo. The name leads the text, and times line up in a column.
+  function caption(m) {
+    return '<article class="ca">' +
+      banner(m, 'ca-banner', '') +
+      '<div class="ca-body"><h3>' + nameHtml(m) + '</h3>' +
       rowsHtml(m, function (r) { return when(r) + what(r); }) +
-      '</article>';
+      '</div></article>';
   }
 
-  var RENDER = { photo: photo, compact: compact, text: text };
+  // ---- 3. Inset: a framed photo on a frosted card ---------------------------------------------------
+  // The banner sits inside the card with its own rounded corners, and the map shows through the
+  // card behind it. Name under the photo, times to the right.
+  function inset(m) {
+    return '<article class="in">' +
+      banner(m, 'in-banner', '') +
+      '<div class="in-body"><h3>' + nameHtml(m) + '</h3>' +
+      rowsHtml(m, function (r) { return what(r) + when(r); }) +
+      '</div></article>';
+  }
+
+  var RENDER = { overlay: overlay, caption: caption, inset: inset };
 
   // The switcher sits under the time toggle. onChange redraws the map's cards in the new design.
   function mountSwitcher(parent, onChange) {

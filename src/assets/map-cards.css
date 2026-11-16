@@ -44,8 +44,8 @@ html { --card-live: var(--marker); }
 html:not([data-cards='current']) .mapboxgl-popup-content { font-size: 1rem; line-height: 1.3; }
 .card-rows { list-style: none; margin: 0; padding: 0; }
 .card-what { min-width: 0; font-weight: 600; overflow-wrap: anywhere; }
-.card-what a, .ph-name a, .cp-head a, .tx h3 a { color: inherit; text-decoration: none; }
-.card-what a:hover, .ph-name a:hover, .cp-head a:hover, .tx h3 a:hover { text-decoration: underline; text-underline-offset: 2px; }
+.card-what a { color: inherit; text-decoration: none; }
+.card-what a:hover { text-decoration: underline; text-underline-offset: 2px; }
 .card-when { font-size: 0.88rem; font-weight: 500; font-variant-numeric: tabular-nums; white-space: nowrap; color: color-mix(in srgb, currentColor 62%, transparent); }
 /* Live is said once, on its row, where the time would be. */
 .card-live { display: inline-flex; align-items: center; gap: 5px; font-weight: 700; color: var(--card-live); }
@@ -55,67 +55,65 @@ html:not([data-cards='current']) .mapboxgl-popup-content { font-size: 1rem; line
 .card-row-note, .card-note { display: block; font-size: 0.85rem; font-weight: 400; color: color-mix(in srgb, currentColor 62%, transparent); }
 .card-note { margin: 8px 0 0; }
 
-/* ---- 1. Photo ------------------------------------------------------------------------------- */
-html[data-cards='photo'] { --popup-bg: var(--bg-elev); --popup-text: var(--text); }
-html[data-cards='photo'] .mapboxgl-popup { width: min(280px, 84vw); }
-html[data-cards='photo'] .mapboxgl-popup-content { border-radius: 16px !important; }
-.ph-photo {
+/* The banner is the same height with or without a photo, so every card is the same shape. */
+.card-banner {
   position: relative;
   display: flex;
   align-items: flex-end;
-  height: 124px;
-  padding: 12px 14px;
-  background: var(--bg-elev-2) center / cover no-repeat;
+  height: 120px;
+  overflow: hidden;
+  background: var(--teal-deep) center / cover no-repeat;
+  color: #fff;
   text-decoration: none;
 }
-.ph-photo::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0) 70%); }
-.ph-photo h3 { position: relative; margin: 0; font-size: 1.3rem; line-height: 1.1; color: #fff; overflow-wrap: anywhere; }
-a.ph-photo:hover h3 { text-decoration: underline; text-underline-offset: 3px; }
-.ph-name { margin: 0; padding: 14px 14px 0; font-size: 1.3rem; line-height: 1.1; color: inherit; overflow-wrap: anywhere; }
-.ph .card-rows { padding: 12px 14px 14px; max-height: min(232px, 36vh); overflow-y: auto; }
-.ph .card-row { display: flex; align-items: baseline; justify-content: space-between; gap: 14px; }
-.ph .card-row + .card-row { margin-top: 9px; }
-.ph .card-note { margin: -6px 14px 14px; }
+/* No photo: a plain field in the kind's color with one quiet mark. */
+.card-banner--food.card-banner--none { background-color: #4c2a85; }
+.card-banner--parade.card-banner--none { background-color: #9a4a12; }
+.card-mark { position: absolute; inset: 0; display: grid; place-items: center; opacity: 0.4; }
+.card-mark .card-food-icon { margin: 0; color: inherit; }
+.card-mark svg { width: 40px; height: 40px; }
+.card-name { color: inherit; text-decoration: none; }
+.card-name:hover { text-decoration: underline; text-underline-offset: 2px; }
 
-/* ---- 2. Compact ----------------------------------------------------------------------------- */
-html[data-cards='compact'] { --popup-bg: var(--bg-elev); --popup-text: var(--text); }
-html[data-cards='compact'] .mapboxgl-popup { width: min(290px, 86vw); }
-html[data-cards='compact'] .mapboxgl-popup-content { border-radius: 14px !important; }
-/* The close button lines up with the name: same row, same inset as the card's padding. */
-html[data-cards='compact'] .mapboxgl-popup-close-button {
-  display: block;
-  top: 12px;
-  right: 8px;
-  width: 36px;
-  height: 36px;
-  padding: 0 0 2px;
-  border-radius: 50%;
-  background: none;
-  color: color-mix(in srgb, currentColor 62%, transparent);
-  font-size: 22px;
-  line-height: 1;
-}
-html[data-cards='compact'] .mapboxgl-popup-close-button:hover { background: color-mix(in srgb, currentColor 12%, transparent); color: inherit; }
-.cp { padding: 12px 14px 14px; }
-.cp-head { display: flex; align-items: center; gap: 10px; min-height: 36px; padding-right: 32px; }
-.cp-thumb { flex: none; width: 36px; height: 36px; border-radius: 8px; background: var(--bg-elev-2) center / cover no-repeat; }
-.cp-head h3 { margin: 0; font-family: var(--font-body); font-size: 1.12rem; font-weight: 700; line-height: 1.15; color: inherit; overflow-wrap: anywhere; }
-.cp .card-rows { margin-top: 10px; padding-top: 10px; border-top: 1px solid color-mix(in srgb, currentColor 14%, transparent); max-height: min(232px, 36vh); overflow-y: auto; }
-.cp .card-row { display: grid; grid-template-columns: 4.3rem 1fr; column-gap: 10px; align-items: baseline; }
-.cp .card-row + .card-row { margin-top: 8px; }
+/* ---- 1. Overlay ----------------------------------------------------------------------------- */
+html[data-cards='overlay'] { --popup-bg: var(--bg-elev); --popup-text: var(--text); }
+html[data-cards='overlay'] .mapboxgl-popup { width: min(280px, 84vw); }
+html[data-cards='overlay'] .mapboxgl-popup-content { border-radius: 16px !important; }
+.ov-banner { padding: 12px 14px; }
+.ov-banner::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0) 70%); }
+.ov-banner.card-banner--none::after { background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0) 70%); }
+/* The mark moves to the top right, clear of the name. */
+.ov-banner .card-mark { inset: 12px 14px auto auto; }
+.ov-banner .card-mark svg { width: 28px; height: 28px; }
+.ov-banner h3 { position: relative; z-index: 1; margin: 0; font-size: 1.3rem; line-height: 1.1; color: #fff; overflow-wrap: anywhere; }
+a.ov-banner:hover h3 { text-decoration: underline; text-underline-offset: 3px; }
+.ov .card-rows { padding: 12px 14px 14px; max-height: min(232px, 36vh); overflow-y: auto; }
+.ov .card-row { display: flex; align-items: baseline; justify-content: space-between; gap: 14px; }
+.ov .card-row + .card-row { margin-top: 9px; }
+.ov .card-note { margin: -6px 14px 14px; }
 
-/* ---- 3. Text -------------------------------------------------------------------------------- */
-html[data-cards='text'] { --popup-bg: color-mix(in srgb, var(--bg) 78%, transparent); --popup-text: var(--text); }
-html[data-cards='text'] .mapboxgl-popup { width: min(250px, 80vw); }
-html[data-cards='text'] .mapboxgl-popup-content {
-  border-radius: 12px !important;
-  -webkit-backdrop-filter: blur(16px) saturate(1.5);
-  backdrop-filter: blur(16px) saturate(1.5);
+/* ---- 2. Caption ----------------------------------------------------------------------------- */
+html[data-cards='caption'] { --popup-bg: var(--bg-elev); --popup-text: var(--text); }
+html[data-cards='caption'] .mapboxgl-popup { width: min(280px, 84vw); }
+html[data-cards='caption'] .mapboxgl-popup-content { border-radius: 16px !important; }
+.ca-body { padding: 12px 14px 14px; }
+.ca-body h3 { margin: 0; font-size: 1.25rem; line-height: 1.12; color: inherit; overflow-wrap: anywhere; }
+.ca .card-rows { margin-top: 10px; max-height: min(232px, 36vh); overflow-y: auto; }
+.ca .card-row { display: grid; grid-template-columns: 4.3rem 1fr; column-gap: 10px; align-items: baseline; }
+.ca .card-row + .card-row { margin-top: 8px; }
+
+/* ---- 3. Inset ------------------------------------------------------------------------------- */
+html[data-cards='inset'] { --popup-bg: color-mix(in srgb, var(--bg) 76%, transparent); --popup-text: var(--text); }
+html[data-cards='inset'] .mapboxgl-popup { width: min(280px, 84vw); }
+html[data-cards='inset'] .mapboxgl-popup-content {
+  border-radius: 18px !important;
+  -webkit-backdrop-filter: blur(18px) saturate(1.5);
+  backdrop-filter: blur(18px) saturate(1.5);
 }
-html[data-cards='text'] .mapboxgl-popup-tip { display: none; }
-.tx { padding: 12px 14px 13px; }
-.tx h3 { margin: 0; font-size: 1.15rem; line-height: 1.15; color: inherit; overflow-wrap: anywhere; }
-.tx .card-rows { margin-top: 8px; max-height: min(240px, 38vh); overflow-y: auto; }
-.tx .card-row + .card-row { margin-top: 8px; }
-.tx .card-when { display: block; font-size: 0.8rem; }
-.tx .card-what { display: block; }
+html[data-cards='inset'] .mapboxgl-popup-tip { display: none; }
+.in-banner { margin: 6px 6px 0; border-radius: 13px; }
+.in-body { padding: 11px 14px 14px; }
+.in-body h3 { margin: 0; font-family: var(--font-body); font-size: 1.15rem; font-weight: 700; line-height: 1.15; color: inherit; overflow-wrap: anywhere; }
+.in .card-rows { margin-top: 8px; max-height: min(232px, 36vh); overflow-y: auto; }
+.in .card-row { display: flex; align-items: baseline; justify-content: space-between; gap: 14px; }
+.in .card-row + .card-row { margin-top: 8px; }

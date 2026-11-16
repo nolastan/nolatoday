@@ -525,6 +525,42 @@
     };
   }
 
+  // DEMO (prototype previews only, remove before merging): so every kind of card can be seen on
+  // any day, each day that has shows also gets one parade with a route and two food pop-ups, one at
+  // a venue with shows and one on its own. They reuse real entries from the feed, moved to that day;
+  // nothing is written to the data. Never runs on the live site.
+  function addDemoData() {
+    if (/(^|\.)nola\.today$/.test(location.hostname)) return;
+    var now = Date.now();
+    var route = (data.parades || []).filter(function (p) { return p.g && p.p; })[0];
+    var vendors = (data.food || []).filter(function (ev, i, all) {
+      return all.findIndex(function (x) { return x.f === ev.f; }) === i;
+    });
+    var standalone = Object.keys(data.foodPlaces || {}).filter(function (k) { return !data.foodPlaces[k].venue && !data.foodPlaces[k].far; })[0];
+    [0, 1].forEach(function (d) {
+      var shows = select(d);
+      if (!shows.length) return;
+      var night = addDays(nightKey(now), d);
+      if (route && !selectParades(d).length) {
+        var date = addDays(dateKeyFmt.format(new Date(now)), d);
+        data.parades.push(Object.assign({}, route, { id: 'demo-parade-' + d, d: date, s: date + 'T18:00:00-06:00', e: date + 'T22:00:00-06:00' }));
+      }
+      if (!vendors.length || selectFood(d).length) return;
+      // The busiest venue that night gets the first vendor; the second sets up on its own.
+      var counts = {};
+      shows.forEach(function (ev) { if (data.venues[ev.v]) counts[ev.v] = (counts[ev.v] || 0) + 1; });
+      var busiest = Object.keys(counts).sort(function (a, b) { return counts[b] - counts[a]; })[0];
+      function stop(vendor, place, hour) {
+        return { p: place, n: vendor.n, f: vendor.f, i: vendor.i, s: night + 'T' + hour + ':00:00-06:00', e: night + 'T23:00:00-06:00' };
+      }
+      if (busiest) {
+        data.foodPlaces[busiest] = data.foodPlaces[busiest] || { name: data.venues[busiest].name, lat: data.venues[busiest].lat, lng: data.venues[busiest].lng, venue: busiest };
+        data.food.push(stop(vendors[0], busiest, '18'));
+      }
+      if (standalone) data.food.push(stop(vendors[vendors.length > 1 ? 1 : 0], standalone, '17'));
+    });
+  }
+
   function render(day) {
     markers.forEach(function (m) { m.remove(); });
     markers = [];
@@ -631,6 +667,7 @@
     })
     .then(function (json) {
       data = json;
+      addDemoData();
       var anyLive = hasShows('live');
       var liveBtn = button('live');
       if (liveBtn) {
