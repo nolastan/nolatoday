@@ -5,35 +5,53 @@
   "type": "Food truck",
   "description": "Crab cake truck: Wednesdays and Thursdays at home base on S Saratoga St, Fridays at Abita NOLA.",
   "website": "https://peeweescrabcakes.com/",
-  "from": "https://www.instagram.com/p/DfVBNo2msoL/",
-  "updated": "2026-11-15",
+  "from": "https://www.instagram.com/p/DfznNJWoJJq/",
+  "updated": "2026-11-16",
   "events": [
     {
-      "date": "2026-11-18",
-      "time": "11:30",
-      "end": "17:30",
+      "date": "2026-11-17",
+      "time": "12:00",
+      "end": "18:00",
       "place": "peewees-saratoga",
-      "url": "https://www.instagram.com/p/DfVBNo2msoL/",
-      "confirmedOn": "2026-11-04",
-      "basis": "From the recurring Wed/Thu schedule; not announced for this week."
+      "url": "https://www.instagram.com/p/DfznNJWoJJq/",
+      "confirmedOn": "2026-11-16",
+      "basis": "Weekly schedule posted Nov 16"
+    },
+    {
+      "date": "2026-11-18",
+      "time": "12:00",
+      "end": "18:00",
+      "place": "peewees-saratoga",
+      "url": "https://www.instagram.com/p/DfznNJWoJJq/",
+      "confirmedOn": "2026-11-16",
+      "basis": "Weekly schedule posted Nov 16"
     },
     {
       "date": "2026-11-19",
-      "time": "11:30",
-      "end": "17:30",
+      "time": "12:00",
+      "end": "18:00",
       "place": "peewees-saratoga",
-      "url": "https://www.instagram.com/p/DfVBNo2msoL/",
-      "confirmedOn": "2026-11-04",
-      "basis": "From the recurring Wed/Thu schedule; not announced for this week."
+      "url": "https://www.instagram.com/p/DfznNJWoJJq/",
+      "confirmedOn": "2026-11-16",
+      "basis": "Weekly schedule posted Nov 16"
     },
     {
       "date": "2026-11-20",
-      "time": "15:00",
-      "end": "21:00",
-      "place": "abita-nola",
-      "url": "https://www.instagram.com/p/DfZoXAioEN_/",
-      "confirmedOn": "2026-11-06",
-      "basis": "From the recurring Friday schedule; not announced for this week."
+      "time": "12:00",
+      "end": "18:00",
+      "place": "peewees-saratoga",
+      "url": "https://www.instagram.com/p/DfznNJWoJJq/",
+      "confirmedOn": "2026-11-16",
+      "basis": "Weekly schedule posted Nov 16"
+    },
+    {
+      "date": "2026-11-21",
+      "time": "12:00",
+      "end": "18:00",
+      "place": "peewees-saratoga",
+      "url": "https://www.instagram.com/p/DfznNJWoJJq/",
+      "confirmedOn": "2026-11-16",
+      "basis": "Weekly schedule posted Nov 16"
     }
   ]
 }
