@@ -2,13 +2,6 @@
   "venue": "saturn-bar",
   "events": [
     {
-      "id": "03f9073b7384",
-      "title": "Drunk Picasso Clothing Swap",
-      "start": "2026-11-17T17:00:00-06:00",
-      "end": "2026-11-17T21:00:00-06:00",
-      "url": "https://dice.fm/event/6aba91854479fc00019b07c4"
-    },
-    {
       "id": "5e0855442de4",
       "title": "Toothbug, URQ, Fiddler's Green",
       "start": "2026-11-18T21:00:00-06:00",
@@ -56,6 +49,13 @@
       "start": "2026-11-24T21:00:00-06:00",
       "end": "2026-11-25T01:00:00-06:00",
       "url": "https://dice.fm/event/6aba932f4479fc0001693a08"
+    },
+    {
+      "id": "558dc91c382a",
+      "title": "Thanksgiving Eve Bash with Basher + Chore Boys",
+      "start": "2026-11-25T20:00:00-06:00",
+      "end": "2026-11-26T00:00:00-06:00",
+      "url": "https://dice.fm/event/6afb9da81d614000012a522d"
     },
     {
       "id": "621ffa658ff3",

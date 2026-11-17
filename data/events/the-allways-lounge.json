@@ -2,22 +2,8 @@
   "venue": "the-allways-lounge",
   "events": [
     {
-      "id": "c54bd4362c6f",
-      "title": "Betsy Propane Smoke Show (live music & burlesque)",
-      "start": "2026-11-16T19:00:00-06:00",
-      "end": "2026-11-16T20:30:00-06:00",
-      "url": "https://tockify.com/allwayslounge/detail/2864/1794877200000"
-    },
-    {
-      "id": "49392b7fd6f0",
-      "title": "Almost Naked Karaoke",
-      "start": "2026-11-16T21:30:00-06:00",
-      "end": "2026-11-16T23:30:00-06:00",
-      "url": "https://tockify.com/allwayslounge/detail/2269/1794886200000"
-    },
-    {
-      "id": "70ff71522511",
-      "title": "Drag Show ...eddoie/otto",
+      "id": "c7936e4765a3",
+      "title": "Scorpio Party",
       "start": "2026-11-17T19:00:00-06:00",
       "end": "2026-11-17T21:00:00-06:00",
       "url": "https://tockify.com/allwayslounge/detail/4591/1794963600000"
@@ -1882,6 +1868,27 @@
       "start": "2027-02-13T22:30:00-06:00",
       "end": "2027-02-14T00:30:00-06:00",
       "url": "https://tockify.com/allwayslounge/detail/4307/1802493000000/26"
+    },
+    {
+      "id": "b4afc8b7b670",
+      "title": "DeVille+Musselwhite Salon (live music & burlesque)",
+      "start": "2027-02-14T17:00:00-06:00",
+      "end": "2027-02-14T18:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/4559/1802646000000"
+    },
+    {
+      "id": "8042309fb1eb",
+      "title": "Van Ella Bordella (burlesque)",
+      "start": "2027-02-14T19:00:00-06:00",
+      "end": "2027-02-14T21:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/1997/1802653200000/114"
+    },
+    {
+      "id": "4c567a8e38e5",
+      "title": "Swing Night (live music & dance lessons)",
+      "start": "2027-02-14T20:00:00-06:00",
+      "end": "2027-02-14T23:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/1860/1802656800000"
     }
   ]
 }

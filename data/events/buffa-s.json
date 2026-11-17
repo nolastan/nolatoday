@@ -2,12 +2,6 @@
   "venue": "buffa-s",
   "events": [
     {
-      "id": "ec37baa9678e",
-      "title": "David Doucet",
-      "start": "2026-11-16T19:00:00-06:00",
-      "url": "https://www.buffasbar.com/events/david-doucet-261611"
-    },
-    {
       "id": "5275aa2979ae",
       "title": "Spoonfed Jr.",
       "start": "2026-11-18T19:00:00-06:00",

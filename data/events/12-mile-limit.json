@@ -2,12 +2,6 @@
   "venue": "12-mile-limit",
   "events": [
     {
-      "id": "54bc29d99cd4",
-      "title": "Bear With Me Comedy Open Mic",
-      "start": "2026-11-16T19:30:00-06:00",
-      "url": "https://twelvemilelimit.com/events/bear-with-me-comedy-open-mic?date=2026-11-16"
-    },
-    {
       "id": "12c0ca37874f",
       "title": "Trivia Night!",
       "start": "2026-11-18T20:00:00-06:00",
@@ -120,6 +114,12 @@
       "title": "Catch The Wiff",
       "start": "2026-12-19T21:00:00-06:00",
       "url": "https://twelvemilelimit.com/events/catch-the-wiff?date=2026-12-19"
+    },
+    {
+      "id": "92a179ef9339",
+      "title": "Bear With Me Comedy Open Mic",
+      "start": "2026-12-21T19:30:00-06:00",
+      "url": "https://twelvemilelimit.com/events/bear-with-me-comedy-open-mic?date=2026-12-21"
     }
   ]
 }
