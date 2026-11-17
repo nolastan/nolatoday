@@ -548,9 +548,24 @@
     render(day);
   }
 
+  // /?when=live and /?when=tomorrow keep the choice in the address, for a bookmark or a shared link.
+  // Today is the plain address. Picking a day drops a linked date and parade.
+  var WHEN = { live: 'live', tomorrow: '1' };
+  function rememberDay(day) {
+    var url = new URL(location.href);
+    var when = Object.keys(WHEN).filter(function (k) { return WHEN[k] === String(day); })[0];
+    if (when) url.searchParams.set('when', when);
+    else url.searchParams.delete('when');
+    url.searchParams.delete('date');
+    url.searchParams.delete('parade');
+    if (url.href !== location.href) history.replaceState(history.state, '', url);
+  }
+
   buttons.forEach(function (b) {
     b.addEventListener('click', function () {
-      if (!b.disabled) choose(b.dataset.day);
+      if (b.disabled) return;
+      choose(b.dataset.day);
+      rememberDay(b.dataset.day);
     });
   });
 
@@ -574,8 +589,10 @@
         todayBtn.disabled = true;
         todayBtn.title = 'No more shows listed tonight';
       }
-      // A link to a particular day (from a parade page) wins over tonight.
-      var start = function () { choose(linkedDate || (anyToday ? 0 : 1)); };
+      // A link to a particular day (from a parade page) wins over tonight, then a bookmarked ?when=.
+      var linkedWhen = WHEN[params.get('when')];
+      if (linkedWhen && button(linkedWhen) && button(linkedWhen).disabled) linkedWhen = null;
+      var start = function () { choose(linkedDate || linkedWhen || (anyToday ? 0 : 1)); };
       if (map.loaded()) start();
       else map.once('load', start);
     })

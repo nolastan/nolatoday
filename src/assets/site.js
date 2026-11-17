@@ -102,12 +102,30 @@
   });
 
   // ---- Directory filter ------------------------------------------------------
+  // The search and genre live in the address (?q=…&genre=…), so a filtered list can be bookmarked or shared.
   var filter = document.querySelector('[data-venue-filter]');
   if (filter) {
     var cards = Array.prototype.slice.call(document.querySelectorAll('.venue-card, .artist-row'));
     var empty = document.querySelector('[data-venue-empty]');
     var genreButtons = Array.prototype.slice.call(document.querySelectorAll('.genre-filter [data-genre]'));
+    var params = new URLSearchParams(location.search);
     var genre = '';
+    var setGenre = function (value) {
+      var button = genreButtons.filter(function (b) { return b.dataset.genre === value; })[0];
+      genre = button ? value : '';
+      genreButtons.forEach(function (b) {
+        b.setAttribute('aria-pressed', String(b.dataset.genre === genre));
+      });
+    };
+    var remember = function () {
+      var url = new URL(location.href);
+      var q = filter.value.trim();
+      if (q) url.searchParams.set('q', q);
+      else url.searchParams.delete('q');
+      if (genre) url.searchParams.set('genre', genre);
+      else url.searchParams.delete('genre');
+      if (url.href !== location.href) history.replaceState(history.state, '', url);
+    };
     var apply = function () {
       var q = filter.value.trim().toLowerCase();
       var shown = 0;
@@ -118,15 +136,19 @@
       });
       if (empty) empty.hidden = shown !== 0;
     };
-    filter.addEventListener('input', apply);
+    filter.addEventListener('input', function () {
+      apply();
+      remember();
+    });
     genreButtons.forEach(function (button) {
       button.addEventListener('click', function () {
-        genre = button.dataset.genre;
-        genreButtons.forEach(function (b) {
-          b.setAttribute('aria-pressed', String(b === button));
-        });
+        setGenre(button.dataset.genre);
         apply();
+        remember();
       });
     });
+    if (params.get('q')) filter.value = params.get('q');
+    setGenre(params.get('genre') || '');
+    if (filter.value || genre) apply();
   }
 })();
