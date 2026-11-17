@@ -115,16 +115,16 @@
     "bjs": {
       "ok": true,
       "firstSeen": "2026-11-09T18:16:00.481-06:00",
-      "count": 1,
-      "lastRun": "2026-11-17T15:07:30.815-06:00",
-      "lastSuccess": "2026-11-17T15:07:30.815-06:00",
-      "lastNonEmpty": "2026-11-17T15:07:30.815-06:00",
+      "count": 2,
+      "lastRun": "2026-11-17T15:57:17.895-06:00",
+      "lastSuccess": "2026-11-17T15:57:17.895-06:00",
+      "lastNonEmpty": "2026-11-17T15:57:17.895-06:00",
       "consecutiveFailures": 0,
       "sources": [
         {
           "type": "manual",
           "ok": true,
-          "count": 1
+          "count": 2
         }
       ]
     },
@@ -291,16 +291,16 @@
     "domino": {
       "ok": true,
       "firstSeen": "2026-11-09T18:16:00.481-06:00",
-      "count": 6,
-      "lastRun": "2026-11-17T15:07:30.815-06:00",
-      "lastSuccess": "2026-11-17T15:07:30.815-06:00",
-      "lastNonEmpty": "2026-11-17T15:07:30.815-06:00",
+      "count": 7,
+      "lastRun": "2026-11-17T15:57:17.895-06:00",
+      "lastSuccess": "2026-11-17T15:57:17.895-06:00",
+      "lastNonEmpty": "2026-11-17T15:57:17.895-06:00",
       "consecutiveFailures": 0,
       "sources": [
         {
           "type": "manual",
           "ok": true,
-          "count": 6
+          "count": 7
         }
       ]
     },
@@ -584,16 +584,16 @@
     "okay-bar": {
       "ok": true,
       "firstSeen": "2026-11-09T18:33:18.846-06:00",
-      "count": 5,
-      "lastRun": "2026-11-17T15:07:30.815-06:00",
-      "lastSuccess": "2026-11-17T15:07:30.815-06:00",
-      "lastNonEmpty": "2026-11-17T15:07:30.815-06:00",
+      "count": 7,
+      "lastRun": "2026-11-17T15:57:17.895-06:00",
+      "lastSuccess": "2026-11-17T15:57:17.895-06:00",
+      "lastNonEmpty": "2026-11-17T15:57:17.895-06:00",
       "consecutiveFailures": 0,
       "sources": [
         {
           "type": "manual",
           "ok": true,
-          "count": 5
+          "count": 7
         }
       ]
     },
@@ -617,9 +617,9 @@
       "ok": true,
       "firstSeen": "2026-11-09T18:16:00.481-06:00",
       "count": 3,
-      "lastRun": "2026-11-17T15:07:30.815-06:00",
-      "lastSuccess": "2026-11-17T15:07:30.815-06:00",
-      "lastNonEmpty": "2026-11-17T15:07:30.815-06:00",
+      "lastRun": "2026-11-17T15:57:17.895-06:00",
+      "lastSuccess": "2026-11-17T15:57:17.895-06:00",
+      "lastNonEmpty": "2026-11-17T15:57:17.895-06:00",
       "consecutiveFailures": 0,
       "sources": [
         {
@@ -792,16 +792,16 @@
     "st-roch-tavern": {
       "ok": true,
       "firstSeen": "2026-11-09T17:58:39.821-06:00",
-      "count": 3,
-      "lastRun": "2026-11-17T15:07:30.815-06:00",
-      "lastSuccess": "2026-11-17T15:07:30.815-06:00",
-      "lastNonEmpty": "2026-11-17T15:07:30.815-06:00",
+      "count": 2,
+      "lastRun": "2026-11-17T15:57:17.895-06:00",
+      "lastSuccess": "2026-11-17T15:57:17.895-06:00",
+      "lastNonEmpty": "2026-11-17T15:57:17.895-06:00",
       "consecutiveFailures": 0,
       "sources": [
         {
           "type": "manual",
           "ok": true,
-          "count": 3
+          "count": 2
         }
       ]
     },
@@ -998,5 +998,5 @@
       ]
     }
   },
-  "generatedAt": "2026-11-17T15:07:30.815-06:00"
+  "generatedAt": "2026-11-17T15:57:17.895-06:00"
 }
