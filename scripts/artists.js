@@ -6,7 +6,7 @@
  *   node scripts/artists.js discover            # look those names up on MusicBrainz, print the sure ones
  *   node scripts/artists.js discover --write    # ...and create their files
  *   node scripts/artists.js discover --limit 50 # only the 50 most-booked names
- *   node scripts/artists.js refresh             # photos (and genres, with Spotify keys) → data/artist-meta.json
+ *   node scripts/artists.js refresh             # photos and genres (Spotify, MusicBrainz) → data/artist-meta.json
  *
  * `discover` only creates an artist when MusicBrainz has exactly one Louisiana act by that exact name
  * (see scripts/lib/musicbrainz.js). Everyone else is skipped: a missing page is better than a wrong one.
@@ -20,6 +20,7 @@ import { fetchJSON } from './lib/http.js';
 import { ARTISTS_DIR, loadArtists, candidates, leadName, slugify, nameKey } from './lib/artists.js';
 import { pickArtist, linksFrom } from './lib/musicbrainz.js';
 import { ARTIST_META_FILE, loadArtistMeta, spotifyToken, fetchArtistMeta } from './lib/spotify.js';
+import { genresFromMusicBrainz } from './lib/genres.js';
 
 const [command, ...args] = process.argv.slice(2);
 const flag = (name) => args.includes(`--${name}`);
@@ -86,29 +87,55 @@ async function discover() {
   console.log(`${created} of ${list.length} names matched${flag('write') ? ' and were written to data/artists/' : ' (run with --write to create them)'}.`);
 }
 
-/** Photos and genres for every artist with a Spotify id. A failed lookup keeps what was there before. */
+/**
+ * Photos and genres → data/artist-meta.json. Photos (and, with keys, genres) from Spotify for artists with a
+ * Spotify id; genres from MusicBrainz for artists with a MusicBrainz id. A failed lookup keeps what was there before.
+ */
 async function refresh() {
-  const artists = loadArtists().filter((a) => a.spotify);
+  const artists = loadArtists();
   const before = loadArtistMeta();
   const token = await spotifyToken();
-  if (!token) console.log('SPOTIFY_CLIENT_ID / SPOTIFY_CLIENT_SECRET not set: photos only (no genres), from Spotify oEmbed.');
+  if (!token) console.log('SPOTIFY_CLIENT_ID / SPOTIFY_CLIENT_SECRET not set: photos only from Spotify (no genres), via oEmbed.');
   const meta = {};
   let failed = 0;
+  let photos = 0;
   for (const a of artists) {
-    try {
-      const found = await fetchArtistMeta(a.spotify, token);
-      // Without keys there are no genres to fetch, so keep the ones a keyed run found.
-      if (found && !token && before[a.slug]?.genres) found.genres = before[a.slug].genres;
-      if (found) meta[a.slug] = found;
-    } catch (err) {
-      failed++;
-      console.error(`! ${a.name}: ${err.message}`);
-      if (before[a.slug]) meta[a.slug] = before[a.slug];
+    const entry = {};
+    let spotifyGenres = [];
+    if (a.spotify) {
+      try {
+        const found = await fetchArtistMeta(a.spotify, token);
+        if (found) {
+          const { genres, ...photo } = found;
+          Object.assign(entry, photo);
+          spotifyGenres = genres ?? [];
+          photos++;
+        }
+      } catch (err) {
+        failed++;
+        console.error(`! ${a.name} (Spotify): ${err.message}`);
+        for (const k of ['image', 'imageSmall']) if (before[a.slug]?.[k]) entry[k] = before[a.slug][k];
+      }
+      // Without keys Spotify gives no genres, so keep the ones a keyed run found.
+      if (!token) spotifyGenres = before[a.slug]?.spotifyGenres ?? [];
+      await new Promise((r) => setTimeout(r, 200));
     }
-    await new Promise((r) => setTimeout(r, 200));
+    let mbGenres = before[a.slug]?.musicbrainzGenres ?? [];
+    if (a.musicbrainz) {
+      try {
+        mbGenres = genresFromMusicBrainz(await musicbrainz(`artist/${a.musicbrainz}?inc=genres&fmt=json`));
+      } catch (err) {
+        failed++;
+        console.error(`! ${a.name} (MusicBrainz): ${err.message}`);
+      }
+    }
+    if (spotifyGenres.length) entry.spotifyGenres = spotifyGenres;
+    if (mbGenres.length) entry.musicbrainzGenres = mbGenres;
+    if (Object.keys(entry).length) meta[a.slug] = entry;
   }
   writeJSON(ARTIST_META_FILE, Object.fromEntries(Object.entries(meta).sort(([x], [y]) => x.localeCompare(y))));
-  console.log(`${Object.keys(meta).length} of ${artists.length} artists with a Spotify id have a photo${failed ? `; ${failed} lookups failed` : ''}.`);
+  const withGenres = Object.values(meta).filter((m) => m.spotifyGenres || m.musicbrainzGenres).length;
+  console.log(`${photos} of ${artists.filter((a) => a.spotify).length} artists with a Spotify id have a photo; ${withGenres} of ${artists.length} artists have genres${failed ? `; ${failed} lookups failed` : ''}.`);
   if (failed && failed === artists.length) process.exit(1);
 }
 

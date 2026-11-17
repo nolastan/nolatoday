@@ -33,12 +33,13 @@ jobs:
         continue-on-error: true
         run: node scripts/artists.js discover --write
 
-      # Works without the Spotify keys (photos only); with them it also gets larger photos and genres.
-      - name: Refresh photos
+      # Genres from MusicBrainz always; photos from Spotify always, and with the keys also larger photos and Spotify's genres.
+      # The client id isn't secret, so it may be saved as either a secret or a variable.
+      - name: Refresh photos and genres
         id: refresh
         continue-on-error: true
         env:
-          SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
+          SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID || vars.SPOTIFY_CLIENT_ID }}
           SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
         run: node scripts/artists.js refresh
 

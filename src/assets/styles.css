@@ -744,13 +744,34 @@ a.popup-banner:hover h3 { text-decoration: underline; text-underline-offset: 3px
 .artist-row-text { min-width: 0; }
 .artist-hero.has-photo { display: flex; align-items: center; gap: 28px; }
 .artist-photo { flex: none; width: 200px; height: 200px; border-radius: 50%; object-fit: cover; background: var(--bg-elev); box-shadow: 0 8px 28px rgb(0 0 0 / 0.18); }
-.artist-genres { margin: 0; text-transform: capitalize; }
+.artist-genres { margin: 0 0 4px; font-size: 1.05rem; }
 @media (max-width: 640px) {
   .artist-hero.has-photo { flex-direction: column; align-items: flex-start; gap: 16px; }
   .artist-photo { width: 132px; height: 132px; }
 }
 .artist-row-name { display: block; font-size: 1.2rem; font-weight: 600; }
 .artist-row-next { display: block; font-size: 0.95rem; }
+.artist-row-genres { display: block; font-size: 0.95rem; }
+.genre-filter { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.genre-filter button {
+  min-height: 36px;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--bg-elev);
+  color: var(--text);
+  font: inherit;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+.genre-filter button:hover { background: var(--bg-elev-2); }
+.genre-filter button[aria-pressed='true'] { background: var(--marker); border-color: var(--marker); color: #1b1b1b; font-weight: 600; }
+/* One swipeable row on phones, so the list isn't pushed below the fold. */
+@media (max-width: 620px) {
+  .genre-filter { flex-wrap: nowrap; overflow-x: auto; margin-inline: -16px; padding-inline: 16px; scrollbar-width: none; }
+  .genre-filter::-webkit-scrollbar { display: none; }
+  .genre-filter button { flex: none; }
+}
 /* Links to music services wear the service's own color; the artist's website stays plain. */
 .button.provider:not(.provider-website) { border-color: transparent; background-origin: border-box; }
 .button.provider:not(.provider-website):hover { filter: brightness(1.08); }

@@ -3,6 +3,7 @@ import { esc, jsonScript, layout, siteHeader, siteFooter } from './layout.js';
 import { ZONE } from '../../scripts/lib/time.js';
 import { LINKS } from '../../scripts/lib/artists.js';
 import { eventSchema } from './venue.js';
+import { GENRES, broadGenres, specificGenres, shownGenres, genreLabel } from '../../scripts/lib/genres.js';
 
 const MAX_LISTED = 60;
 
@@ -40,6 +41,8 @@ export function artistPage(ctx, artist, { shows, meta }) {
   const listed = shows.slice(0, MAX_LISTED);
   const links = artistLinks(artist);
   const venueNames = [...new Set(listed.map((s) => s.venue.name))];
+  const genres = specificGenres(meta);
+  const broad = shownGenres(broadGenres(artist, genres));
   const next = listed[0];
   const description = next
     ? `${artist.name} live in New Orleans: ${listed.length} upcoming ${listed.length === 1 ? 'show' : 'shows'} at ${venueNames.slice(0, 3).join(', ')}${venueNames.length > 3 ? ' and more' : ''}.`
@@ -54,7 +57,7 @@ export function artistPage(ctx, artist, { shows, meta }) {
   };
   if (links.length) jsonLd.sameAs = links.map((l) => l.url);
   if (meta?.image) jsonLd.image = meta.image;
-  if (meta?.genres?.length) jsonLd.genre = meta.genres;
+  if (genres.length) jsonLd.genre = genres;
   if (listed.length) {
     jsonLd.event = listed.slice(0, 50).map(({ event, venue }) => ({ ...eventSchema(ctx, venue, event), performer: { '@id': canonical } }));
   }
@@ -72,7 +75,11 @@ export function artistPage(ctx, artist, { shows, meta }) {
     <div class="artist-hero-text">
     <span class="badge">Artist</span>
     <h1>${esc(artist.name)}</h1>
-    ${meta?.genres?.length ? `<p class="artist-genres muted">${esc(meta.genres.join(' · '))}</p>` : ''}
+    ${
+      broad.length
+        ? `<p class="artist-genres">${broad.map((g) => `<a href="${url(`/artists?genre=${g}`)}">${esc(genreLabel(g))}</a>`).join(' · ')}</p>`
+        : ''
+    }
     ${artist.note ? `<p class="venue-note">${esc(artist.note)}</p>` : ''}
     ${
       links.length
@@ -159,13 +166,19 @@ export function artistsPage(ctx, artists, { showsBySlug, meta = {} }) {
   const nextOf = (a) => showsBySlug.get(a.slug)?.[0];
   const playing = artists.filter(nextOf).sort((a, b) => nextOf(a).event.start.localeCompare(nextOf(b).event.start) || a.name.localeCompare(b.name));
   const quiet = artists.filter((a) => !nextOf(a));
+  const broad = new Map(playing.map((a) => [a.slug, broadGenres(a, specificGenres(meta[a.slug]))]));
+  // Only genres someone with a show coming up plays.
+  const filters = GENRES.filter((g) => playing.some((a) => broad.get(a.slug).includes(g.slug)));
 
   const row = (a) => {
     const { event, venue } = nextOf(a);
     const dt = DateTime.fromISO(event.start, { zone: ZONE });
     const when = dt.toISODate() === today ? 'Today' : dt.toFormat('ccc, LLL d');
     const count = showsBySlug.get(a.slug).length;
-    return `<li class="artist-row" data-name="${esc(a.name.toLowerCase())} ${esc(venue.name.toLowerCase())}">
+    const genres = broad.get(a.slug);
+    const shown = shownGenres(genres);
+    const search = [a.name, venue.name, ...specificGenres(meta[a.slug]), ...genres.map(genreLabel)].join(' ').toLowerCase();
+    return `<li class="artist-row" data-name="${esc(search)}" data-genres="${esc(genres.join(' '))}">
       <a href="${url(`/artists/${a.slug}`)}">
         ${
           meta[a.slug]?.image
@@ -174,6 +187,7 @@ export function artistsPage(ctx, artists, { showsBySlug, meta = {} }) {
         }
         <span class="artist-row-text">
           <span class="artist-row-name">${esc(a.name)}</span>
+          ${shown.length ? `<span class="artist-row-genres muted">${esc(shown.map(genreLabel).join(' · '))}</span>` : ''}
           <span class="artist-row-next muted">${esc(when)} at ${esc(venue.name)}${count > 1 ? ` · ${count} upcoming` : ''}</span>
         </span>
       </a>
@@ -186,12 +200,20 @@ export function artistsPage(ctx, artists, { showsBySlug, meta = {} }) {
     <span class="badge">Directory</span>
     <h1>New Orleans artists</h1>
     <p class="lede">${playing.length} bands and musicians with shows coming up at New Orleans venues. Tap a name for every date and where to listen.</p>
-    <label class="search"><span class="visually-hidden">Filter artists</span><input type="search" placeholder="Filter by artist or venue" data-venue-filter autocomplete="off"></label>
+    <label class="search"><span class="visually-hidden">Filter artists</span><input type="search" placeholder="Filter by artist, venue or genre" data-venue-filter autocomplete="off"></label>
+    ${
+      filters.length
+        ? `<div class="genre-filter" role="group" aria-label="Genre">
+      <button type="button" aria-pressed="true" data-genre="">All</button>
+      ${filters.map((g) => `<button type="button" aria-pressed="false" data-genre="${g.slug}">${esc(g.label)}</button>`).join('')}
+    </div>`
+        : ''
+    }
   </div>
   <ul class="artist-list" data-venue-grid>
     ${playing.map(row).join('')}
   </ul>
-  <p class="muted" data-venue-empty hidden>No artists match that search.</p>
+  <p class="muted" data-venue-empty hidden>No artists match.</p>
   ${
     quiet.length
       ? `<section class="closed-venues">
