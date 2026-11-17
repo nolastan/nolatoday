@@ -62,3 +62,9 @@ export function specificGenres(meta, max = 5) {
     })
     .slice(0, max);
 }
+
+/** Broad genre slugs worth showing: "Jazz" goes when "Traditional jazz" or "Modern jazz" already says it. */
+export const shownGenres = (slugs) => (slugs.some((g) => g.endsWith('-jazz')) ? slugs.filter((g) => g !== 'jazz') : slugs);
+
+/** A broad genre's name, by slug. */
+export const genreLabel = (slug) => GENRES.find((g) => g.slug === slug)?.label ?? slug;

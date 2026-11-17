@@ -3,7 +3,7 @@ import { esc, jsonScript, layout, siteHeader, siteFooter } from './layout.js';
 import { ZONE } from '../../scripts/lib/time.js';
 import { LINKS } from '../../scripts/lib/artists.js';
 import { eventSchema } from './venue.js';
-import { GENRES, broadGenres, specificGenres } from '../../scripts/lib/genres.js';
+import { GENRES, broadGenres, specificGenres, shownGenres, genreLabel } from '../../scripts/lib/genres.js';
 
 const MAX_LISTED = 60;
 
@@ -42,6 +42,7 @@ export function artistPage(ctx, artist, { shows, meta }) {
   const links = artistLinks(artist);
   const venueNames = [...new Set(listed.map((s) => s.venue.name))];
   const genres = specificGenres(meta);
+  const broad = shownGenres(broadGenres(artist, genres));
   const next = listed[0];
   const description = next
     ? `${artist.name} live in New Orleans: ${listed.length} upcoming ${listed.length === 1 ? 'show' : 'shows'} at ${venueNames.slice(0, 3).join(', ')}${venueNames.length > 3 ? ' and more' : ''}.`
@@ -74,7 +75,11 @@ export function artistPage(ctx, artist, { shows, meta }) {
     <div class="artist-hero-text">
     <span class="badge">Artist</span>
     <h1>${esc(artist.name)}</h1>
-    ${genres.length ? `<p class="artist-genres muted">${esc(genres.join(' · '))}</p>` : ''}
+    ${
+      broad.length
+        ? `<p class="artist-genres">${broad.map((g) => `<a href="${url(`/artists?genre=${g}`)}">${esc(genreLabel(g))}</a>`).join(' · ')}</p>`
+        : ''
+    }
     ${artist.note ? `<p class="venue-note">${esc(artist.note)}</p>` : ''}
     ${
       links.length
@@ -164,7 +169,6 @@ export function artistsPage(ctx, artists, { showsBySlug, meta = {} }) {
   const broad = new Map(playing.map((a) => [a.slug, broadGenres(a, specificGenres(meta[a.slug]))]));
   // Only genres someone with a show coming up plays.
   const filters = GENRES.filter((g) => playing.some((a) => broad.get(a.slug).includes(g.slug)));
-  const label = Object.fromEntries(GENRES.map((g) => [g.slug, g.label]));
 
   const row = (a) => {
     const { event, venue } = nextOf(a);
@@ -172,9 +176,8 @@ export function artistsPage(ctx, artists, { showsBySlug, meta = {} }) {
     const when = dt.toISODate() === today ? 'Today' : dt.toFormat('ccc, LLL d');
     const count = showsBySlug.get(a.slug).length;
     const genres = broad.get(a.slug);
-    // "Traditional jazz" already says jazz.
-    const shown = genres.some((g) => g.endsWith('-jazz')) ? genres.filter((g) => g !== 'jazz') : genres;
-    const search = [a.name, venue.name, ...specificGenres(meta[a.slug]), ...genres.map((g) => label[g])].join(' ').toLowerCase();
+    const shown = shownGenres(genres);
+    const search = [a.name, venue.name, ...specificGenres(meta[a.slug]), ...genres.map(genreLabel)].join(' ').toLowerCase();
     return `<li class="artist-row" data-name="${esc(search)}" data-genres="${esc(genres.join(' '))}">
       <a href="${url(`/artists/${a.slug}`)}">
         ${
@@ -184,7 +187,7 @@ export function artistsPage(ctx, artists, { showsBySlug, meta = {} }) {
         }
         <span class="artist-row-text">
           <span class="artist-row-name">${esc(a.name)}</span>
-          ${shown.length ? `<span class="artist-row-genres muted">${esc(shown.map((g) => label[g]).join(' · '))}</span>` : ''}
+          ${shown.length ? `<span class="artist-row-genres muted">${esc(shown.map(genreLabel).join(' · '))}</span>` : ''}
           <span class="artist-row-next muted">${esc(when)} at ${esc(venue.name)}${count > 1 ? ` · ${count} upcoming` : ''}</span>
         </span>
       </a>

@@ -195,7 +195,8 @@ test('artistPage and artistsPage: shows, links and the player', () => {
   assert.match(html, /"@type":"MusicGroup"/);
   const withPhoto = artistPage(ctx, artist, { shows, meta: { image: 'https://i.scdn.co/image/ab6761610000e5ebaaa', spotifyGenres: ['new orleans jazz'], musicbrainzGenres: ['dixieland', 'New Orleans Jazz'] } });
   assert.match(withPhoto, /<img class="artist-photo" src="https:\/\/i\.scdn\.co\/image\/ab6761610000e5ebaaa" alt="Tuba Skinny"/);
-  assert.match(withPhoto, /<p class="artist-genres muted">new orleans jazz · dixieland<\/p>/);
+  assert.match(withPhoto, /<p class="artist-genres"><a href="\/artists\?genre=traditional-jazz">Traditional jazz<\/a><\/p>/);
+  assert.match(withPhoto, /"genre":\["new orleans jazz","dixieland"\]/);
   assert.doesNotMatch(html, /artist-photo/);
   const empty = artistPage(ctx, { slug: 'x', name: 'X Band' }, { shows: [] });
   assert.match(empty, /No upcoming shows are listed/);

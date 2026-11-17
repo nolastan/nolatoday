@@ -744,7 +744,7 @@ a.popup-banner:hover h3 { text-decoration: underline; text-underline-offset: 3px
 .artist-row-text { min-width: 0; }
 .artist-hero.has-photo { display: flex; align-items: center; gap: 28px; }
 .artist-photo { flex: none; width: 200px; height: 200px; border-radius: 50%; object-fit: cover; background: var(--bg-elev); box-shadow: 0 8px 28px rgb(0 0 0 / 0.18); }
-.artist-genres { margin: 0; text-transform: capitalize; }
+.artist-genres { margin: 0 0 4px; font-size: 1.05rem; }
 @media (max-width: 640px) {
   .artist-hero.has-photo { flex-direction: column; align-items: flex-start; gap: 16px; }
   .artist-photo { width: 132px; height: 132px; }
