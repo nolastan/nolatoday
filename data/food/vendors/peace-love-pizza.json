@@ -4,7 +4,24 @@
   "icon": "pizza",
   "type": "Pop-up",
   "description": "Pizza pop-up, most often at The Friendly Bar and Pepp's Pub. Posts a new schedule graphic each week.",
-  "from": "https://www.instagram.com/p/Dfn8-rzRTSQ/",
-  "updated": "2026-11-15",
-  "events": []
+  "from": "https://www.instagram.com/p/Df29ue9gxT2/",
+  "updated": "2026-11-18",
+  "events": [
+    {
+      "date": "2026-11-19",
+      "time": "17:00",
+      "place": "skeeta-hawk-brewing",
+      "note": "Trivia Night",
+      "url": "https://www.instagram.com/p/Df29ue9gxT2/",
+      "confirmedOn": "2026-11-17"
+    },
+    {
+      "date": "2026-11-20",
+      "time": "17:00",
+      "place": "skeeta-hawk-brewing",
+      "note": "Singer/Songwriter Night",
+      "url": "https://www.instagram.com/p/Df29ue9gxT2/",
+      "confirmedOn": "2026-11-17"
+    }
+  ]
 }

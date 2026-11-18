@@ -47,5 +47,17 @@
     "address": "701 Sixth St",
     "lat": 29.9221,
     "lng": -90.08124
+  },
+  "skeeta-hawk-brewing": {
+    "name": "Skeeta Hawk Brewing",
+    "address": "455 N Dorgenois St",
+    "lat": 29.96771,
+    "lng": -90.08341
+  },
+  "tulane-mcalister-auditorium": {
+    "name": "McAlister Auditorium",
+    "address": "6823 St Charles Ave",
+    "lat": 29.93499,
+    "lng": -90.12303
   }
 }
