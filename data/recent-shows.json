@@ -1,0 +1,976 @@
+{
+  "venues": {
+    "12-mile-limit": [
+      {
+        "id": "54bc29d99cd4",
+        "title": "Bear With Me Comedy Open Mic",
+        "start": "2026-11-16T19:30:00-06:00"
+      },
+      {
+        "id": "780a3b0c44d3",
+        "title": "Heatwave!",
+        "start": "2026-11-14T21:00:00-06:00"
+      },
+      {
+        "id": "48dd8ce0a7d4",
+        "title": "Purrsday Karaoke!",
+        "start": "2026-11-12T21:00:00-06:00"
+      }
+    ],
+    "21-amendment": [
+      {
+        "id": "c91249da6521",
+        "title": "Coyote Anderson & James Beaumont",
+        "start": "2026-11-16T20:00:00-06:00"
+      },
+      {
+        "id": "6c02c67fa08b",
+        "title": "Big Mike and the R&B Kings",
+        "start": "2026-11-15T20:00:00-06:00"
+      },
+      {
+        "id": "d92eddb360d8",
+        "title": "Aubrey Linda and The Rumpshakers",
+        "start": "2026-11-15T15:00:00-06:00"
+      }
+    ],
+    "30-90": [
+      {
+        "id": "d4a6c4e64c6c",
+        "title": "Piano Man G",
+        "start": "2026-11-16T21:00:00-06:00"
+      },
+      {
+        "id": "02bf1c5a6cd1",
+        "title": "Margie Perez",
+        "start": "2026-11-16T18:00:00-06:00"
+      },
+      {
+        "id": "c836df821203",
+        "title": "SingleMaltPlease",
+        "start": "2026-11-15T21:00:00-06:00"
+      }
+    ],
+    "bacchanal": [
+      {
+        "id": "734fed1bf403",
+        "title": "Byron Asher",
+        "start": "2026-11-16T18:00:00-06:00"
+      },
+      {
+        "id": "6ee57c1a4b6d",
+        "title": "Raphael Bas",
+        "start": "2026-11-16T12:00:00-06:00"
+      },
+      {
+        "id": "70a5e5e2a479",
+        "title": "Noah Young",
+        "start": "2026-11-15T19:00:00-06:00"
+      }
+    ],
+    "bamboulas": [
+      {
+        "id": "416665638054",
+        "title": "ted hefko & the thousandaires",
+        "start": "2026-11-16T21:00:00-06:00"
+      },
+      {
+        "id": "a5ba22d86038",
+        "title": "jon roniger band",
+        "start": "2026-11-16T16:30:00-06:00"
+      },
+      {
+        "id": "0344f23be3f8",
+        "title": "THE NEW ORLEANS RUG CUTTERS",
+        "start": "2026-11-16T12:00:00-06:00"
+      }
+    ],
+    "banks-street-bar": [
+      {
+        "id": "cd5f2b3a58b6",
+        "title": "Valerie Sassyfrass + Grits & Greens",
+        "start": "2026-11-14T20:00:00-06:00"
+      },
+      {
+        "id": "1c6369c28ae0",
+        "title": "Honest Man Happy Hour with Domenic Fusca",
+        "start": "2026-11-13T13:00:00-06:00"
+      },
+      {
+        "id": "14dcdf3f4c02",
+        "title": "Mary Mortem + Dremm +Palefade + Bullshit Machine",
+        "start": "2026-11-12T20:00:00-06:00"
+      }
+    ],
+    "bar-redux": [
+      {
+        "id": "639a8fd73755",
+        "title": "Burning Down the House: 80s/90s Dance Party with DJ Solo X",
+        "start": "2026-11-14T21:00:00-06:00"
+      },
+      {
+        "id": "7598b0d33d57",
+        "title": "Children of Judas, Redder Moon, Stripper Funeral, DJ Mange",
+        "start": "2026-11-13T21:00:00-06:00"
+      }
+    ],
+    "bjs": [
+      {
+        "id": "e8016263cece",
+        "title": "Louis Michot, Leyla McCalla",
+        "start": "2026-11-15T19:00:00-06:00"
+      },
+      {
+        "id": "50c9a53428da",
+        "title": "Mike Dillon & the New Fuck Yeahs, Midnight Sticks",
+        "start": "2026-11-13T21:00:00-06:00"
+      },
+      {
+        "id": "778f1c8ba61f",
+        "title": "Red Beans & Blues with Chaz & Freilich",
+        "start": "2026-11-09",
+        "allDay": true
+      }
+    ],
+    "blue-nile": [
+      {
+        "id": "7a7a1aeafa03",
+        "title": "Street Legends Brass Band",
+        "start": "2026-11-15T22:30:00-06:00"
+      },
+      {
+        "id": "761511b75751",
+        "title": "Juice presents Sypher Sundays",
+        "start": "2026-11-15T21:00:00-06:00"
+      },
+      {
+        "id": "f3de7ff8f609",
+        "title": "The Soul Rebels",
+        "start": "2026-11-14T23:00:00-06:00"
+      }
+    ],
+    "bontemps": [
+      {
+        "id": "7099e5a63adf",
+        "title": "Tru Phonic",
+        "start": "2026-11-14T23:00:00-06:00"
+      },
+      {
+        "id": "61592e794e4c",
+        "title": "Krewe Debauchery",
+        "start": "2026-11-13T23:00:00-06:00"
+      },
+      {
+        "id": "a43023598723",
+        "title": "Good Enough For Good Times",
+        "start": "2026-11-13T21:00:00-06:00"
+      }
+    ],
+    "buffa-s": [
+      {
+        "id": "ec37baa9678e",
+        "title": "David Doucet",
+        "start": "2026-11-16T19:00:00-06:00"
+      },
+      {
+        "id": "6d6a748577ce",
+        "title": "Lynn Drury",
+        "start": "2026-11-15T19:00:00-06:00"
+      },
+      {
+        "id": "dc9ecacda454",
+        "title": "Traditional Jazz Brunch with Some Like It Hot!",
+        "start": "2026-11-15T11:00:00-06:00"
+      }
+    ],
+    "cafe-istanbul": [
+      {
+        "id": "9f2bb9b6cce6",
+        "title": "Sharon Martin & Friends",
+        "start": "2026-11-15T18:30:00-06:00"
+      },
+      {
+        "id": "ba9b97d649fe",
+        "title": "The Spotlight Show",
+        "start": "2026-11-14T20:00:00-06:00"
+      },
+      {
+        "id": "52b5fd021e0f",
+        "title": "WORK",
+        "start": "2026-11-13T22:00:00-06:00"
+      }
+    ],
+    "cafe-negril": [
+      {
+        "id": "c75abacd5a57",
+        "title": "Preach & Righteous Wrong Reggae Band",
+        "start": "2026-11-15",
+        "allDay": true
+      }
+    ],
+    "carrollton-station": [
+      {
+        "id": "8cec31332aad",
+        "title": "Izzy Chase, Miko, Laura Walls, Mary May, Lynda Lee, Ciara Elise, Calitonic, Judah Rue, Feeferella, Across Phoenix, Vinny's Mirror",
+        "start": "2026-11-15T17:00:00-06:00"
+      },
+      {
+        "id": "1cc79c426115",
+        "title": "Paul Faith, The Barstool Prophets, Baschington, Evermore Nest, Kelly Love Jones",
+        "start": "2026-11-14T20:00:00-06:00"
+      },
+      {
+        "id": "4fd4b617aadd",
+        "title": "Dizzy, Chess, Rachel Is Kozi",
+        "start": "2026-11-13T21:00:00-06:00"
+      }
+    ],
+    "chickie-wah-wah": [
+      {
+        "id": "80730aa91157",
+        "title": "Phosphorescent",
+        "start": "2026-11-15T20:00:00-06:00"
+      },
+      {
+        "id": "f5c557fee4e0",
+        "title": "Papa Mali",
+        "start": "2026-11-14T21:00:00-06:00"
+      },
+      {
+        "id": "826f0aac92dc",
+        "title": "Bill Kirchen",
+        "start": "2026-11-13T21:00:00-06:00"
+      }
+    ],
+    "civic-theater": [
+      {
+        "id": "e50685a81041",
+        "title": "The Renaissance Room with The Renaissance Orchestra",
+        "start": "2026-11-14T20:00:00-06:00"
+      },
+      {
+        "id": "44fed48170dd",
+        "title": "Bitch Cabal feat. Mannequin Pussy & Wednesday",
+        "start": "2026-11-10T19:00:00-06:00"
+      }
+    ],
+    "dba": [
+      {
+        "id": "84b5e7c5aa6b",
+        "title": "Corey Henry & the Treme Funktet : Red Beans & Ricely Yours",
+        "start": "2026-11-16T21:30:00-06:00"
+      },
+      {
+        "id": "87ad710520cd",
+        "title": "Album Recording — Amber Rachelle + The Sweet Potatoes",
+        "start": "2026-11-16T18:00:00-06:00"
+      },
+      {
+        "id": "c401929ac38f",
+        "title": "The Jump Hounds",
+        "start": "2026-11-15T21:30:00-06:00"
+      }
+    ],
+    "domino": [
+      {
+        "id": "3cc242753b43",
+        "title": "Aubrey Jane, Giovanni Ventello, Paperdisk",
+        "start": "2026-11-15T21:00:00-06:00"
+      },
+      {
+        "id": "112b4e563af6",
+        "title": "Elliot from Earth, Katiee",
+        "start": "2026-11-14T22:00:00-06:00"
+      },
+      {
+        "id": "7395ed3cd32f",
+        "title": "Half Raccoon, Lisbon Girls, Leftys Right Hand",
+        "start": "2026-11-13",
+        "allDay": true
+      }
+    ],
+    "dos-jefes": [
+      {
+        "id": "c525a0f9e467",
+        "title": "Dale Spalding",
+        "start": "2026-11-16T20:30:00-06:00"
+      },
+      {
+        "id": "1c079ead4e25",
+        "title": "Joplin Parnell",
+        "start": "2026-11-15T20:00:00-06:00"
+      },
+      {
+        "id": "d73889f3ceb9",
+        "title": "Sunpie & the La. Sunspots",
+        "start": "2026-11-14T21:00:00-06:00"
+      }
+    ],
+    "fillmore-new-orleans": [
+      {
+        "id": "32a9367abbf3",
+        "title": "The Music Of Hey Arnold! Live Feat. Jim Lang & The Ps 118 Allstars",
+        "start": "2026-11-12T19:00:00-06:00"
+      },
+      {
+        "id": "a291334f3fa8",
+        "title": "John Cameron Mitchell: Hedwig 25th Anniversary Movie Tour",
+        "start": "2026-11-11T18:00:00-06:00"
+      },
+      {
+        "id": "1d3f19f53101",
+        "title": "Pretty Lights - Soundship Space Bus Tour",
+        "start": "2026-11-08T19:00:00-06:00"
+      }
+    ],
+    "gasa-gasa": [
+      {
+        "id": "1d403ec54cde",
+        "title": "Radiator Hospital",
+        "start": "2026-11-10T21:00:00-06:00"
+      },
+      {
+        "id": "3ba6011eaa81",
+        "title": "Daikaiju",
+        "start": "2026-11-06T21:00:00-06:00"
+      },
+      {
+        "id": "53554169eb61",
+        "title": "Alash Ensemble",
+        "start": "2026-11-01T20:30:00-06:00"
+      }
+    ],
+    "hi-ho": [
+      {
+        "id": "5dc932ae93cf",
+        "title": "Locals Night: Bon Temps Trivia",
+        "start": "2026-11-16T19:00:00-06:00"
+      },
+      {
+        "id": "ba9206fdc954",
+        "title": "Pocket Chocolate Birthday Bash",
+        "start": "2026-11-14T20:30:00-06:00"
+      },
+      {
+        "id": "431f53ed04dd",
+        "title": "New Orleans Jazz Vipers",
+        "start": "2026-11-13T20:00:00-06:00"
+      }
+    ],
+    "house-of-blues": [
+      {
+        "id": "c472c643fcc7",
+        "title": "Amble",
+        "start": "2026-11-16T19:00:00-06:00"
+      },
+      {
+        "id": "7066577a662f",
+        "title": "Buena Vista Orchestra",
+        "start": "2026-11-15T19:00:00-06:00"
+      },
+      {
+        "id": "235d38e325d6",
+        "title": "Hawthorne Heights - 20th anniversary of If Only You Were Lonely",
+        "start": "2026-11-08T18:00:00-06:00"
+      }
+    ],
+    "howlin-wolf": [
+      {
+        "id": "3d08a4b7550a",
+        "title": "Hot 8 Brass Band",
+        "start": "2026-11-15T22:30:00-06:00"
+      },
+      {
+        "id": "115b0d6d6255",
+        "title": "Hot 8 Brass Band",
+        "start": "2026-11-08T22:30:00-06:00"
+      },
+      {
+        "id": "fb10390b1043",
+        "title": "Honey Island Swamp Band",
+        "start": "2026-11-05T21:00:00-06:00"
+      }
+    ],
+    "joy-theater": [
+      {
+        "id": "7b45ef7c5c21",
+        "title": "Shaddy Feelgood: GOODMORNING!! 2 hosted by Kerwin Claiborne",
+        "start": "2026-11-14",
+        "allDay": true
+      },
+      {
+        "id": "cc0e9df71d8c",
+        "title": "ZOLTAN KASZAS: WORLDWIDE(ish) TOUR",
+        "start": "2026-11-06",
+        "allDay": true
+      },
+      {
+        "id": "c6cc7ab55205",
+        "title": "Kevin Scott’s ZAMBI-Ween (10/30 LATE NIGHT)",
+        "start": "2026-10-30",
+        "allDay": true
+      }
+    ],
+    "mahalia-jackson-theater": [
+      {
+        "id": "9fd3d9876e6c",
+        "title": "The Carpenters Songbook - A Live Celebration",
+        "start": "2026-11-08T19:30:00-06:00"
+      },
+      {
+        "id": "0064400b2b96",
+        "title": "Anthony Jeselnik",
+        "start": "2026-11-05T19:30:00-06:00"
+      },
+      {
+        "id": "51a30acdea23",
+        "title": "Anthony Jeselnik: Wrath of Man",
+        "start": "2026-11-05T19:30:00-06:00"
+      }
+    ],
+    "maison": [
+      {
+        "id": "126cd426cb21",
+        "title": "Open Mic From Hell: The WILDEST comedy show in New Orleans",
+        "start": "2026-11-15T19:30:00-06:00"
+      },
+      {
+        "id": "c315f959e7c3",
+        "title": "Open Mic From Hell: The WILDEST comedy show in New Orleans",
+        "start": "2026-11-08T19:30:00-06:00"
+      },
+      {
+        "id": "80c8aeb60717",
+        "title": "Open Mic From Hell: The WILDEST comedy show in New Orleans",
+        "start": "2026-11-01T19:30:00-06:00"
+      }
+    ],
+    "maple-leaf-bar": [
+      {
+        "id": "5eed992057f9",
+        "title": "George Porter Jr. Trio Ft. Chris Adkins (10pm)",
+        "start": "2026-11-16T22:00:00-06:00"
+      },
+      {
+        "id": "adb4579a74fe",
+        "title": "George Porter Jr. Trio Ft. Chris Adkins (7pm)",
+        "start": "2026-11-16T19:00:00-06:00"
+      },
+      {
+        "id": "a1eaf50fd65a",
+        "title": "Pastor J & the funky Revival",
+        "start": "2026-11-15T20:00:00-06:00"
+      }
+    ],
+    "marigny-brasserie": [
+      {
+        "id": "df29fa6d0230",
+        "title": "National Sandwich Day",
+        "start": "2026-11-03T11:00:00-06:00"
+      },
+      {
+        "id": "7d26bc8b85e6",
+        "title": "Halloween",
+        "start": "2026-10-31T11:00:00-05:00"
+      },
+      {
+        "id": "678b268a83a0",
+        "title": "National Pasta Day",
+        "start": "2026-10-17T11:00:00-05:00"
+      }
+    ],
+    "marigny-opera-house": [
+      {
+        "id": "b4f953d8bfd2",
+        "title": "Marigny Opera Ballet 2026-2027 Encore Subscription",
+        "start": "2026-11-16T12:00:00-06:00"
+      },
+      {
+        "id": "1b1aab1f6a39",
+        "title": "Emily Mikesell, Mike Dillon, Cliff Hines & Robin Sherman",
+        "start": "2026-11-15T20:00:00-06:00"
+      },
+      {
+        "id": "c5d95cd5e5d7",
+        "title": "Marigny Opera Ballet 2026-2027 Encore Subscription",
+        "start": "2026-11-15T12:00:00-06:00"
+      }
+    ],
+    "neutral-ground-coffee-house": [
+      {
+        "id": "cc9c2dfb1ba0",
+        "title": "Open Mic Night!!",
+        "start": "2026-11-15T19:30:00-06:00"
+      },
+      {
+        "id": "ce00ac2520ba",
+        "title": "Spoken Word: Open Poet’s Mic Night",
+        "start": "2026-11-12T19:30:00-06:00"
+      },
+      {
+        "id": "e045f6399b4a",
+        "title": "Open Mic Night!!",
+        "start": "2026-11-08T19:30:00-06:00"
+      }
+    ],
+    "new-orleans-jazz-market": [
+      {
+        "id": "cfa7c4cfe577",
+        "title": "Sábado Gigante Hosted by Don Sevilla with VDJ Emotion & DJ Danny",
+        "start": "2026-11-14T23:00:00-06:00"
+      },
+      {
+        "id": "05b9e8fb8a00",
+        "title": "Avery*Sunshine",
+        "start": "2026-11-14T19:30:00-06:00"
+      },
+      {
+        "id": "c85f0d955bd6",
+        "title": "Tommy Castro and the Painkillers with GA-20",
+        "start": "2026-11-13T19:00:00-06:00"
+      }
+    ],
+    "new-orleans-jazz-museum": [
+      {
+        "id": "1dad1943dd13",
+        "title": "The New Orleans Arts & Ideas Festival (NOAI)",
+        "start": "2026-11-13T09:00:00-06:00"
+      },
+      {
+        "id": "aae0548316f6",
+        "title": "The New Orleans Arts & Ideas Festival (NOAI)",
+        "start": "2026-11-12T09:00:00-06:00"
+      },
+      {
+        "id": "2cfd68e817be",
+        "title": "The New Orleans Arts & Ideas Festival (NOAI)",
+        "start": "2026-11-11T16:00:00-06:00"
+      }
+    ],
+    "nola-brewing": [
+      {
+        "id": "b3de680593a7",
+        "title": "The Bluegrass Pickin' Party",
+        "start": "2026-11-16T19:00:00-06:00"
+      },
+      {
+        "id": "a77469cc3714",
+        "title": "Sunpie & The Louisiana SunSpots",
+        "start": "2026-11-13T19:00:00-06:00"
+      },
+      {
+        "id": "718127acec59",
+        "title": "FREE LIVE COMEDY: Laughs & Drafts Presented by Craft Comedy",
+        "start": "2026-11-11T19:00:00-06:00"
+      }
+    ],
+    "okay-bar": [
+      {
+        "id": "c7029e9f11e2",
+        "title": "Heather Littlefield & The Buckle Dusters, Rose Vaughn, Clare Doyle, Lily Unless & The If Onlys",
+        "start": "2026-11-15T17:00:00-06:00"
+      }
+    ],
+    "orpheum-theater": [
+      {
+        "id": "9565030e3445",
+        "title": "Don Lemon & DL Hughley: DL + DL 'Anything Goes'",
+        "start": "2026-11-07T19:00:00-06:00"
+      },
+      {
+        "id": "5b0610d1ac9e",
+        "title": "The Tipping Point: The Decade of Impact",
+        "start": "2026-11-06T21:00:00-06:00"
+      },
+      {
+        "id": "54a05a9a8c29",
+        "title": "New Orleans Ballet Theatre: Dracula",
+        "start": "2026-10-31T14:00:00-05:00"
+      }
+    ],
+    "poor-boys-bar": [
+      {
+        "id": "4f1bc14ab1b8",
+        "title": "Dreams Is Lucid, DJ Krewe, D1ME, Noble, Q Rosborough",
+        "start": "2026-11-14T23:00:00-06:00"
+      },
+      {
+        "id": "d15e892c538a",
+        "title": "Stinking Lizaveta, Deathbird Earth, Spickle",
+        "start": "2026-11-13T18:00:00-06:00"
+      },
+      {
+        "id": "3d21722f53c9",
+        "title": "DJ Mickey Perez, bênibê",
+        "start": "2026-11-13",
+        "allDay": true
+      }
+    ],
+    "preservation-hall": [
+      {
+        "id": "55aa1a5d3325",
+        "title": "Preservation Brass",
+        "start": "2026-11-16T17:00:00-06:00"
+      },
+      {
+        "id": "59ee3ce3f42a",
+        "title": "Preservation Legacy Band ft. Gregg Stafford",
+        "start": "2026-11-15T17:00:00-06:00"
+      },
+      {
+        "id": "8ce7eba46142",
+        "title": "Leroy Jones and the Preservation Jazz Masters",
+        "start": "2026-11-15T14:30:00-06:00"
+      }
+    ],
+    "republic-nola": [
+      {
+        "id": "fae8113ffd1d",
+        "title": "REWIND: TWO ROOM TAKEOVER",
+        "start": "2026-11-14T23:00:00-06:00"
+      },
+      {
+        "id": "9742227b92de",
+        "title": "Gasolina: Reggaeton Party",
+        "start": "2026-11-13T22:00:00-06:00"
+      },
+      {
+        "id": "b30f2e9d4c56",
+        "title": "Punchis Banda Rave",
+        "start": "2026-11-07T22:00:00-06:00"
+      }
+    ],
+    "rock-n-bowl": [
+      {
+        "id": "f77a5040f945",
+        "title": "One Last Breath: Tribute to Creed",
+        "start": "2026-11-14T21:30:00-06:00"
+      },
+      {
+        "id": "afd29f8db432",
+        "title": "Rock Show NOLA: MTV Revisited",
+        "start": "2026-11-13T20:30:00-06:00"
+      },
+      {
+        "id": "8d13033b140b",
+        "title": "Geno Delafose & French Rockin' Boogie",
+        "start": "2026-11-12T20:00:00-06:00"
+      }
+    ],
+    "saenger-theatre": [
+      {
+        "id": "0e1420110584",
+        "title": "The Lion King",
+        "start": "2026-11-08T18:30:00-06:00"
+      },
+      {
+        "id": "c49e0925bfd1",
+        "title": "The Lion King",
+        "start": "2026-11-07T19:30:00-06:00"
+      },
+      {
+        "id": "7623d3587499",
+        "title": "The Lion King",
+        "start": "2026-11-06T19:30:00-06:00"
+      }
+    ],
+    "santos-bar": [
+      {
+        "id": "538a1e455ddf",
+        "title": "BLACK MASS KARAOKE with KJ*EJ",
+        "start": "2026-11-16T20:00:00-06:00"
+      },
+      {
+        "id": "c38ac6f9c0ea",
+        "title": "NO CNTRL PRESENTS: AFTER HOURS",
+        "start": "2026-11-14T23:45:00-06:00"
+      },
+      {
+        "id": "ae5db1837b35",
+        "title": "SUB DIVISION",
+        "start": "2026-11-14T22:00:00-06:00"
+      }
+    ],
+    "saturn-bar": [
+      {
+        "id": "4c5236c12b3f",
+        "title": "Minka and Hey Thanks",
+        "start": "2026-11-15T21:00:00-06:00"
+      },
+      {
+        "id": "b0ba7c18995c",
+        "title": "Brookiecita's BAD LUCK BABY! with Madspinnz & Daqa",
+        "start": "2026-11-13T21:00:00-06:00"
+      },
+      {
+        "id": "fbe9fa1cb979",
+        "title": "Tina Beef, Glass Machine, Mere of Light, Nail Club",
+        "start": "2026-11-12T21:00:00-06:00"
+      }
+    ],
+    "siberia": [
+      {
+        "id": "cbd61b7e559d",
+        "title": "Tear Dungeon with Donny's Demeanor and Pistil",
+        "start": "2026-11-15T21:00:00-06:00"
+      },
+      {
+        "id": "25843ea403c7",
+        "title": "New Orleans Bad Luck Fest",
+        "start": "2026-11-13T19:00:00-06:00"
+      },
+      {
+        "id": "60c01d1530ff",
+        "title": "AJJ with Greet Death",
+        "start": "2026-11-12T21:00:00-06:00"
+      }
+    ],
+    "sidneys-saloon": [
+      {
+        "id": "297a30496480",
+        "title": "WEIRD LOVE CHARMS PRESENTS: SECONDS AFTERPARTY WITH STATIC STATIC & DRUGSTORE ELVIS",
+        "start": "2026-11-15T21:30:00-06:00"
+      },
+      {
+        "id": "b7b11fe48b4d",
+        "title": "THE LOWLIEST ONE / S.W.A.R.M. /BIG RED / THE DEAD SPIES",
+        "start": "2026-11-14T20:00:00-06:00"
+      },
+      {
+        "id": "87505cd66b0f",
+        "title": "KILLED BY FLORIDA | DONKEY PUNCHER | THE SAWED OFFS | JON Q PUBLIC",
+        "start": "2026-11-13T20:00:00-06:00"
+      }
+    ],
+    "snug-harbor": [
+      {
+        "id": "f3175a488c20",
+        "title": "Charmaine Neville Band",
+        "start": "2026-11-16T21:00:00-06:00"
+      },
+      {
+        "id": "0a77b59968d0",
+        "title": "Charmaine Neville Band",
+        "start": "2026-11-16T19:00:00-06:00"
+      },
+      {
+        "id": "e4a878dfa928",
+        "title": "Charmaine Neville Band",
+        "start": "2026-11-09T21:00:00-06:00"
+      }
+    ],
+    "southport-hall": [
+      {
+        "id": "b488985ea710",
+        "title": "Upon A Burning Body",
+        "start": "2026-11-13T19:00:00-06:00"
+      }
+    ],
+    "st-roch-tavern": [
+      {
+        "id": "3422b11bb966",
+        "title": "Lesser Man, Bane and the Gators",
+        "start": "2026-11-16T21:00:00-06:00"
+      },
+      {
+        "id": "63d9eb61077d",
+        "title": "Andrew Jobin, Kristina Murray",
+        "start": "2026-11-09T21:00:00-06:00"
+      }
+    ],
+    "the-allways-lounge": [
+      {
+        "id": "49392b7fd6f0",
+        "title": "Almost Naked Karaoke",
+        "start": "2026-11-16T21:30:00-06:00"
+      },
+      {
+        "id": "c54bd4362c6f",
+        "title": "Betsy Propane Smoke Show (live music & burlesque)",
+        "start": "2026-11-16T19:00:00-06:00"
+      },
+      {
+        "id": "be284a83af9e",
+        "title": "Swing Night (live music & dance lessons)",
+        "start": "2026-11-15T20:00:00-06:00"
+      }
+    ],
+    "the-blue-crab": [
+      {
+        "id": "8a5c74a1f0e0",
+        "title": "3rd Street",
+        "start": "2026-11-15T15:30:00-06:00"
+      },
+      {
+        "id": "12d65c944d99",
+        "title": "ASAP Band",
+        "start": "2026-11-13T17:00:00-06:00"
+      },
+      {
+        "id": "c22f910cb0ef",
+        "title": "Rare Groove",
+        "start": "2026-11-08T15:30:00-06:00"
+      }
+    ],
+    "the-broadside": [
+      {
+        "id": "65a4877b087e",
+        "title": "The Desert Nudes",
+        "start": "2026-11-13T20:00:00-06:00"
+      },
+      {
+        "id": "6baf64893066",
+        "title": "TERROR OPTICS",
+        "start": "2026-11-13T18:00:00-06:00"
+      },
+      {
+        "id": "2f4b0728b11b",
+        "title": "FILM SCREENING: RAMBO: FIRST BLOOD",
+        "start": "2026-11-11T19:00:00-06:00"
+      }
+    ],
+    "the-carousel-bar-lounge": [
+      {
+        "id": "0621d38f8645",
+        "title": "TOM HOOK",
+        "start": "2026-11-16T20:00:00-06:00"
+      },
+      {
+        "id": "e36a98a60f6d",
+        "title": "THE IGUANAS",
+        "start": "2026-11-15T19:00:00-06:00"
+      },
+      {
+        "id": "c88df9166d87",
+        "title": "LENA PRIMA & BAND",
+        "start": "2026-11-14T21:00:00-06:00"
+      }
+    ],
+    "the-columns": [
+      {
+        "id": "f78cd7c85f8f",
+        "title": "Stanton Moore Trio",
+        "start": "2026-11-09T17:30:00-06:00"
+      },
+      {
+        "id": "c486da11b11d",
+        "title": "11.03.26- WAMM ft. Brad Walker, Joe Ashlar, Martin Masakowski &#038; Stanton Moore",
+        "start": "2026-11-03T17:30:00-06:00"
+      },
+      {
+        "id": "6057f063f0c0",
+        "title": "Stanton Moore Trio",
+        "start": "2026-11-02T17:30:00-06:00"
+      }
+    ],
+    "the-jazz-playhouse": [
+      {
+        "id": "690111a27730",
+        "title": "Richard 'Piano' Scott at The Jazz Playhouse",
+        "start": "2026-11-15T19:30:00-06:00"
+      },
+      {
+        "id": "31f00d9668bd",
+        "title": "The Nayo Jones Experience at The Jazz Playhouse",
+        "start": "2026-11-14T20:00:00-06:00"
+      },
+      {
+        "id": "86d43d72c249",
+        "title": "Trixie Minx's Burlesque Ballroom at The Jazz Playhouse, feat. Romy Kaye",
+        "start": "2026-11-13T20:00:00-06:00"
+      }
+    ],
+    "the-metropolitan": [
+      {
+        "id": "049b28aa997a",
+        "title": "Official After Party for We Belong Here: New Orleans — BLOND:ISH",
+        "start": "2026-11-14T23:00:00-06:00"
+      },
+      {
+        "id": "c2b52392c6b1",
+        "title": "CHRIS LORENZO-Freaky Deaky After Party- Live at the Metropolitan (Saturday)",
+        "start": "2026-10-31T23:00:00-05:00"
+      },
+      {
+        "id": "0a148af75447",
+        "title": "OF THE TREES - Freaky Deaky After Party- Live at the Metropolitan (Friday)",
+        "start": "2026-10-30T23:00:00-05:00"
+      }
+    ],
+    "the-rabbit-hole": [
+      {
+        "id": "b83172d0c175",
+        "title": "Rebirth Brass Band Tuesdays @ The Rabbit Hole",
+        "start": "2026-11-10T21:00:00-06:00"
+      },
+      {
+        "id": "a5550639a2c7",
+        "title": "Rebirth Brass Band Tuesdays @ The Rabbit Hole",
+        "start": "2026-11-03T21:00:00-06:00"
+      },
+      {
+        "id": "9e5469828039",
+        "title": "DAFT DISKO",
+        "start": "2026-10-31T22:00:00-05:00"
+      }
+    ],
+    "the-spotted-cat": [
+      {
+        "id": "de1da665a996",
+        "title": "Saskia Says!",
+        "start": "2026-11-16T21:30:00-06:00"
+      },
+      {
+        "id": "dac2900ec5bd",
+        "title": "Dominick Grillo & The Frenchmen Street All-Stars",
+        "start": "2026-11-16T18:00:00-06:00"
+      },
+      {
+        "id": "58441e256da6",
+        "title": "Jenavieve Cooke & The Winding Boys",
+        "start": "2026-11-16T14:00:00-06:00"
+      }
+    ],
+    "three-muses": [
+      {
+        "id": "6a15ffe2744f",
+        "title": "Trombone Charlotte",
+        "start": "2026-11-16T19:30:00-06:00"
+      },
+      {
+        "id": "bf3263ed9d7f",
+        "title": "New Orleans Rug Cutters",
+        "start": "2026-11-15T19:30:00-06:00"
+      },
+      {
+        "id": "ab1317b570bc",
+        "title": "Silver Lining Serenaders",
+        "start": "2026-11-14T19:30:00-06:00"
+      }
+    ],
+    "tips": [
+      {
+        "id": "a3842e8b92e6",
+        "title": "Uncle Lucius",
+        "start": "2026-11-15T20:00:00-06:00"
+      },
+      {
+        "id": "c8b8551e85e2",
+        "title": "Red Rockers Present Anarchy in the USA",
+        "start": "2026-11-14T20:00:00-06:00"
+      },
+      {
+        "id": "68906ef1478e",
+        "title": "Dinosaur Jr.",
+        "start": "2026-11-07T20:00:00-06:00"
+      }
+    ],
+    "vaughan-s-lounge": [
+      {
+        "id": "92838f8472fd",
+        "title": "Nat & Kat Cajun String Band, Miss Sophie Lee",
+        "start": "2026-11-11T20:30:00-06:00"
+      }
+    ]
+  }
+}

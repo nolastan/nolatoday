@@ -13,7 +13,8 @@ import path from 'node:path';
 import { parseArgs } from 'node:util';
 import { runSource } from '../scrapers/index.js';
 import { normalizeEvents, venuePageUrls } from './lib/normalize.js';
-import { loadVenues, loadEvents, loadStatus, writeJSON, EVENTS_DIR, STATUS_FILE } from './lib/data.js';
+import { loadVenues, loadEvents, loadStatus, loadRecent, writeJSON, EVENTS_DIR, STATUS_FILE, RECENT_FILE } from './lib/data.js';
+import { recordPast } from './lib/recent.js';
 import { now, iso } from './lib/time.js';
 
 const SOURCE_TIMEOUT_MS = 120_000;
@@ -98,6 +99,7 @@ async function main() {
   }
 
   const status = loadStatus();
+  const recent = loadRecent();
   const runAt = iso(now());
   const window = window_();
   let ok = 0;
@@ -108,7 +110,11 @@ async function main() {
     const results = await scrapeVenue(venue, { window, venues });
     const succeeded = results.filter((r) => r.ok);
     const errors = results.filter((r) => !r.ok).map((r) => `${r.source.type}: ${r.error}`);
-    const previous = loadEvents(venue.slug).events.filter((e) => (e.end ?? e.start) >= window.from.toISODate());
+    const stored = loadEvents(venue.slug).events;
+    const previous = stored.filter((e) => (e.end ?? e.start) >= window.from.toISODate());
+    // Shows that have passed since the last run would be dropped now; keep the last few as recent shows.
+    const past = recordPast(recent.venues[venue.slug], stored, window.from.toISODate());
+    if (past.length) recent.venues[venue.slug] = past;
 
     // If every source failed, keep the last good data so the site doesn't go blank.
     const events = succeeded.length ? mergeEvents(succeeded.map((r) => r.events)) : previous;
@@ -143,6 +149,8 @@ async function main() {
     status.generatedAt = runAt;
     status.venues = Object.fromEntries(Object.entries(status.venues).sort(([a], [b]) => a.localeCompare(b)));
     writeJSON(STATUS_FILE, status);
+    recent.venues = Object.fromEntries(Object.entries(recent.venues).sort(([a], [b]) => a.localeCompare(b)));
+    writeJSON(RECENT_FILE, recent);
   }
   console.log(`\n${ok} ok, ${failed} failed, ${venues.length} venues scraped`);
   if (args.strict && (failed || empty)) {

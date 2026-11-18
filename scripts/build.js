@@ -9,7 +9,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import { DateTime } from 'luxon';
-import { ROOT, readJSON, loadVenues, loadEvents, loadStatus, DATA_DIR } from './lib/data.js';
+import { ROOT, readJSON, loadVenues, loadEvents, loadStatus, loadRecent, DATA_DIR } from './lib/data.js';
 import { ZONE } from './lib/time.js';
 import { isScheduleUrl, venuePageUrls } from './lib/normalize.js';
 import { venuePage } from '../src/templates/venue.js';
@@ -95,6 +95,15 @@ function main() {
     }
     eventsBySlug.set(v.slug, events);
   }
+
+  // Recent shows on venue pages: titles link to artist pages, but not to past events' own pages.
+  const recent = loadRecent().venues;
+  const recentBySlug = new Map(
+    venues.map((v) => [
+      v.slug,
+      v.status === 'active' ? (recent[v.slug] ?? []).map((e) => ({ ...e, artists: matcher.match(e.title) })) : [],
+    ]),
+  );
 
   // Map data: the next week of shows, compact.
   const horizon = now.plus({ days: 8 }).toISODate();
@@ -195,7 +204,7 @@ function main() {
     }
   }
   for (const v of venues) {
-    write(`venues/${v.slug}.html`, venuePage(ctx, v, { events: eventsBySlug.get(v.slug), status: status.venues?.[v.slug], food: foodByVenue.get(v.slug) ?? [] }));
+    write(`venues/${v.slug}.html`, venuePage(ctx, v, { events: eventsBySlug.get(v.slug), recent: recentBySlug.get(v.slug), status: status.venues?.[v.slug], food: foodByVenue.get(v.slug) ?? [] }));
   }
 
   // Artists: a directory, a page each, and the list for anyone building on this data.

@@ -274,6 +274,8 @@ h3 { font-size: 1.3rem; }
 .event-title { font-size: 1.1rem; font-weight: 600; }
 .event-title a { color: var(--text); text-decoration: none; }
 .event-title a:hover { color: var(--link); text-decoration: underline; }
+.recent-shows .event-list { margin-top: 16px; border-top: 1px solid var(--line); }
+.recent-shows .event-time { color: var(--muted); }
 .event.is-live .event-time::after { content: ' • live'; color: var(--marker); }
 
 .notice {
