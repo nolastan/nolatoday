@@ -17,6 +17,7 @@ data/venues/<slug>.json     hand-curated: name, address, coordinates, photo, sch
         ▼  scripts/scrape.js  (Actions, every 6 hours)
 data/events/<slug>.json     upcoming shows (generated)
 data/status.json            health of every scraper (generated)
+data/recent-shows.json      each venue's last three past shows (generated)
         │                       │
         │                       ▼  scripts/report-issues.js
         │                   opens/closes "scraper" issues
@@ -30,6 +31,7 @@ _site/                      static site → GitHub Pages
 | `data/venues/*.json` | One file per venue. `status` is `active` (scraped, on the map) or `closed` (page kept with a notice). |
 | `data/redirects.json` | Old venue URLs that redirect elsewhere (merged duplicates, non-music venues). |
 | `data/events/*.json` | Scraped events. Generated — the next scrape overwrites them. |
+| `data/recent-shows.json` | Each venue's last three past shows, kept by the scraper as they drop off `data/events/` (shows a venue cancelled in advance never count). Generated; `scripts/backfill-recent.js` rebuilds it from git history. |
 | `scrapers/` | One adapter per platform (`ics`, `tribe`, `squarespace`, `jsonld`, `eventbrite`, `spothopper`, `wix`, `gigulator`, `html`), plus `custom/` for one-offs. |
 | `scripts/` | `scrape.js`, `build.js`, `report-issues.js`, `validate.js`. |
 | `src/` | Page templates, CSS and browser JS. |

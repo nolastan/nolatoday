@@ -7,6 +7,7 @@ export const DATA_DIR = path.join(ROOT, 'data');
 export const VENUES_DIR = path.join(DATA_DIR, 'venues');
 export const EVENTS_DIR = path.join(DATA_DIR, 'events');
 export const STATUS_FILE = path.join(DATA_DIR, 'status.json');
+export const RECENT_FILE = path.join(DATA_DIR, 'recent-shows.json');
 
 export function readJSON(file, fallback) {
   try {
@@ -38,6 +39,11 @@ export function loadVenues() {
 
 export function loadEvents(slug) {
   return readJSON(path.join(EVENTS_DIR, `${slug}.json`), { venue: slug, events: [] });
+}
+
+/** Each venue's last few past shows, newest first: { venues: { slug: [event] } }. */
+export function loadRecent() {
+  return readJSON(RECENT_FILE, { venues: {} });
 }
 
 export function loadStatus() {

@@ -77,6 +77,15 @@ function showItem(ctx, e) {
           </li>`;
 }
 
+/** A past show: its date, then its title with artist links (a past event's own page is no use now). */
+function recentItem(ctx, e) {
+  const dt = DateTime.fromISO(e.start, { zone: ZONE });
+  return `<li class="event">
+          <time class="event-time" datetime="${esc(e.start)}">${dt.toFormat('LLL d')}</time>
+          <span class="event-title">${eventTitle(ctx, { ...e, url: undefined })}</span>
+        </li>`;
+}
+
 function foodItem(ctx, e) {
   const stale = e.stale ? `<span class="food-stale">Not confirmed${e.confirmedOn ? ` since ${DateTime.fromISO(e.confirmedOn).toFormat('LLL d')}` : ' recently'}. Check with them before heading out.</span>` : '';
   return `<li class="event food-event">
@@ -130,7 +139,7 @@ export function eventSchema(ctx, venue, e) {
   return schema;
 }
 
-export function venuePage(ctx, venue, { events, status, food = [] }) {
+export function venuePage(ctx, venue, { events, recent = [], status, food = [] }) {
   const { config, url, asset } = ctx;
   const canonical = `${config.siteUrl}/venues/${venue.slug}`;
   const month = DateTime.now().setZone(ZONE).toFormat('LLLL yyyy');
@@ -234,6 +243,9 @@ export function venuePage(ctx, venue, { events, status, food = [] }) {
       <h2>Food schedule</h2>
       ${scheduleDays(ctx, food)}
     </section>`;
+  } else if (!listed.length && recent.length) {
+    // Nothing coming up: Recent shows below takes the schedule's place.
+    schedule = '';
   } else if (!listed.length) {
     schedule = `<section class="wrap schedule">
       <h2>Upcoming shows</h2>
@@ -248,6 +260,13 @@ export function venuePage(ctx, venue, { events, status, food = [] }) {
       ${scheduleDays(ctx, [...listed, ...food.filter((e) => e.start <= listed[listed.length - 1].start)].sort((a, b) => a.start.localeCompare(b.start)))}
     </section>`;
   }
+
+  const recentSection = closed || !recent.length ? '' : `<section class="wrap schedule recent-shows">
+      <h2>Recent shows</h2>
+      <ul class="event-list">
+        ${recent.map((e) => recentItem(ctx, e)).join('')}
+      </ul>
+    </section>`;
 
   const storySections = stories
     .map(
@@ -269,6 +288,7 @@ export function venuePage(ctx, venue, { events, status, food = [] }) {
   ${banner}
   ${hero}
   ${schedule}
+  ${recentSection}
   ${storySections}
   ${referralSection(config)}
   <section class="wrap venue-foot muted">
