@@ -2,16 +2,6 @@
   "venue": "the-spotted-cat",
   "events": [
     {
-      "id": "1eb81f131e09",
-      "title": "Chris Christy Band",
-      "start": "2026-11-17T14:00:00-06:00"
-    },
-    {
-      "id": "ce8d6b31a33f",
-      "title": "Sweetie Pies of New Orleans",
-      "start": "2026-11-17T18:00:00-06:00"
-    },
-    {
       "id": "ebb407b873eb",
       "title": "Smoking Time Jazz Club",
       "start": "2026-11-17T21:30:00-06:00"

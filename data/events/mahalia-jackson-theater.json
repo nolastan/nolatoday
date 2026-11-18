@@ -2,10 +2,34 @@
   "venue": "mahalia-jackson-theater",
   "events": [
     {
+      "id": "ac17290e051f",
+      "title": "Il Trovatore",
+      "start": "2026-11-20T19:30:00-06:00",
+      "url": "https://www.ticketmaster.com/event/Z7r9jZ1AAA4b9"
+    },
+    {
       "id": "4ff20c3e0cdd",
       "title": "Outlander in Concert",
       "start": "2026-12-02T19:00:00-06:00",
       "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7xdxZ"
+    },
+    {
+      "id": "e6d2a74ba10f",
+      "title": "Delta Festival Ballet",
+      "start": "2026-12-19T18:00:00-06:00",
+      "url": "https://www.ticketmaster.com/event/Z7r9jZ1AAA4bO"
+    },
+    {
+      "id": "900a91bea297",
+      "title": "Delta Festival Ballet",
+      "start": "2026-12-20T14:00:00-06:00",
+      "url": "https://www.ticketmaster.com/event/Z7r9jZ1AAA4b-"
+    },
+    {
+      "id": "5e911a1f8f90",
+      "title": "Josh Johnson Comedy Band Camp",
+      "start": "2027-01-15T19:00:00-06:00",
+      "url": "https://www.ticketmaster.com/event/Z7r9jZ1AAA4bJ"
     },
     {
       "id": "6588150fccb5",
@@ -18,6 +42,12 @@
       "title": "Twilight in Concert",
       "start": "2027-01-24T19:30:00-06:00",
       "url": "https://www.ticketmaster.com/event/Z7r9jZ1AAvx0V"
+    },
+    {
+      "id": "37b1eb985ed2",
+      "title": "Dog Man: The Musical (Touring)",
+      "start": "2027-01-30T11:00:00-06:00",
+      "url": "https://www.ticketmaster.com/event/Z7r9jZ1AAA4_F"
     }
   ]
 }

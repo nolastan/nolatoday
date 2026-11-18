@@ -2,12 +2,6 @@
   "venue": "dos-jefes",
   "events": [
     {
-      "id": "0a34882d3319",
-      "title": "Raphael Bas",
-      "start": "2026-11-17T20:30:00-06:00",
-      "url": "https://dosjefes.com/events/raphael-bas/"
-    },
-    {
       "id": "c128d013da25",
       "title": "Kris Tokarski",
       "start": "2026-11-18T20:30:00-06:00",

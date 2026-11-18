@@ -2,12 +2,6 @@
   "venue": "rock-n-bowl",
   "events": [
     {
-      "id": "58c5fbeb4d03",
-      "title": "Javier Olondo & AsheSon",
-      "start": "2026-11-17T20:00:00-06:00",
-      "url": "https://www.rocknbowl.com/event-details/javier-olondo-asheson-11-17-26"
-    },
-    {
       "id": "fb3240b69836",
       "title": "Tales from the Gig",
       "start": "2026-11-18T19:00:00-06:00",
@@ -111,6 +105,12 @@
       "title": "Bag of Donuts",
       "start": "2026-12-26T20:30:00-06:00",
       "url": "https://www.rocknbowl.com/event-details/bag-of-donuts-12-26-26"
+    },
+    {
+      "id": "ad4130587d71",
+      "title": "Bucktown Allstars",
+      "start": "2026-12-30T20:30:00-06:00",
+      "url": "https://www.rocknbowl.com/event-details/bucktown-allstars-12-30-26"
     }
   ]
 }

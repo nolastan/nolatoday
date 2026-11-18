@@ -2,27 +2,6 @@
   "venue": "new-orleans-jazz-museum",
   "events": [
     {
-      "id": "e919fbd3e8c9",
-      "title": "The Ella Project Panel Discussion. Rampart: The Legacy of Culture & Place",
-      "start": "2026-11-17T14:00:00-06:00",
-      "end": "2026-11-17T15:30:00-06:00",
-      "url": "https://nolajazzmuseum.org/events/2026/11/17/the-ella-project-panel-discussion"
-    },
-    {
-      "id": "e218b018d24e",
-      "title": "Balcony Show sponsored by the Positive Vibrations Foundation: Akeel Salah Collective",
-      "start": "2026-11-17T17:00:00-06:00",
-      "end": "2026-11-17T18:00:00-06:00",
-      "url": "https://nolajazzmuseum.org/events/2026/10/10/balcony-concert-sponsored-by-positive-vibrations-y7rye"
-    },
-    {
-      "id": "5cdc149dac29",
-      "title": "The Ella Project",
-      "start": "2026-11-17T17:30:00-06:00",
-      "end": "2026-11-17T19:30:00-06:00",
-      "url": "https://nolajazzmuseum.org/events/2026/11/17/the-ella-project"
-    },
-    {
       "id": "8dda63e98b90",
       "title": "Jazz Foundation of America presents: Karen and Norbert Stachel with LehCats",
       "start": "2026-11-18T14:00:00-06:00",
@@ -224,6 +203,13 @@
       "start": "2027-01-12T17:00:00-06:00",
       "end": "2027-01-12T18:00:00-06:00",
       "url": "https://nolajazzmuseum.org/events/2026/12/15/carl-leblance-holiday-show-7ahjf-zk6sc-bx8lt-nk895"
+    },
+    {
+      "id": "174a8138eb80",
+      "title": "Friends of the Cabildo Film Series present Dr. Norman C. Francis: A Legacy of Leadership",
+      "start": "2027-01-13T18:00:00-06:00",
+      "end": "2027-01-13T20:00:00-06:00",
+      "url": "https://nolajazzmuseum.org/events/2027/1/13/friends-of-the-cabildo-film-series-presents-norman-francis"
     },
     {
       "id": "ae91f0f44359",

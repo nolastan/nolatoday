@@ -2,11 +2,6 @@
   "venue": "dba",
   "events": [
     {
-      "id": "9d3311a95bab",
-      "title": "T Marie + Bayou JuJu",
-      "start": "2026-11-17T18:00:00-06:00"
-    },
-    {
       "id": "933bcf98ef6e",
       "title": "Bras Band Brass Band",
       "start": "2026-11-17T21:00:00-06:00"
@@ -176,6 +171,11 @@
       "id": "85d0f526805b",
       "title": "Tuba Skinny",
       "start": "2026-12-26T18:00:00-06:00"
+    },
+    {
+      "id": "156f6a30045e",
+      "title": "Big Mike Perez & The R&B Kings",
+      "start": "2026-12-26T21:30:00-06:00"
     },
     {
       "id": "ed23657e85e0",

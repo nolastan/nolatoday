@@ -2,12 +2,6 @@
   "venue": "saenger-theatre",
   "events": [
     {
-      "id": "2af8de5c468f",
-      "title": "Rocky In Concert",
-      "start": "2026-11-17T19:30:00-06:00",
-      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7PNZp"
-    },
-    {
       "id": "42977654e8ff",
       "title": "Ali Siddiq",
       "start": "2026-11-28T20:00:00-06:00",
