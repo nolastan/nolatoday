@@ -22,6 +22,7 @@ import { loadFood } from './lib/food.js';
 import { foodPage, foodVendorPage } from '../src/templates/food.js';
 import { FOOD_ICONS } from '../src/templates/food-icons.js';
 import { loadArtistMeta } from './lib/spotify.js';
+import { loadStreetEvents, mapStreetEvent, metres } from './lib/street-events.js';
 import { PARADES_FILE, SOURCES, loadParades, loadWebsites, loadPhotos, paradeOrgs, mapParade } from './lib/parades.js';
 
 const OUT = path.join(ROOT, '_site');
@@ -162,7 +163,17 @@ function main() {
     }
   }
   foodEvents.sort((a, b) => a.s.localeCompare(b.s));
-  write('events.json', JSON.stringify({ generatedAt: now.toISO(), venues: mapVenues, events: mapEvents, parades: mapParades, foodPlaces, food: foodEvents, foodIcons: Object.fromEntries([...new Set(foodEvents.map((e) => e.i))].map((k) => [k, FOOD_ICONS[k]])) }));
+  // Street events (festivals, markets, block parties) from the city's permit applications. One within
+  // 60 m of a venue sits on that venue's card when the venue has shows that day (`v`).
+  const activeVenues = venues.filter((v) => v.status === 'active' && Number.isFinite(v.lat));
+  const streetEvents = loadStreetEvents()
+    .flatMap((e) => mapStreetEvent(e, { from: startOfToday, to: horizon }))
+    .map((item) => {
+      const near = activeVenues.find((v) => metres([v.lng, v.lat], item.p) < 60);
+      return near ? { ...item, v: near.slug } : item;
+    })
+    .sort((a, b) => a.s.localeCompare(b.s));
+  write('events.json', JSON.stringify({ generatedAt: now.toISO(), venues: mapVenues, events: mapEvents, parades: mapParades, street: streetEvents, foodPlaces, food: foodEvents, foodIcons: Object.fromEntries([...new Set(foodEvents.map((e) => e.i))].map((k) => [k, FOOD_ICONS[k]])) }));
 
   // Public venue list (handy for anyone building on this data).
   write(
@@ -308,7 +319,7 @@ function main() {
   const pages = venues.length + Object.keys(allRedirects).length + storyCount;
   console.log(`Built ${artists.length} artist pages, ${[...showsByArtist.values()].filter((s) => s.length).length} with shows`);
   console.log(`Built the food page: ${food.length} vendors, ${foodEvents.length} map stops`);
-  console.log(`Built ${orgs.length} parade pages, ${mapParades.length} map parades`);
+  console.log(`Built ${orgs.length} parade pages, ${mapParades.length} map parades, ${streetEvents.length} street event days`);
   console.log(`Built ${pages} venue pages/redirects, ${mapEvents.length} map events → ${path.relative(ROOT, OUT)}/`);
 }
 

@@ -15,6 +15,7 @@
   --marker-ring: rgba(255, 165, 0, 0.45);
   --food: #b77cf2;
   --food-ring: rgba(183, 124, 242, 0.45);
+  --street: #3cc4a4;
   --teal: #68909e;
   --teal-deep: #2a5669;
   --aqua: #aacfd0;
@@ -42,6 +43,7 @@
     --marker-ring: rgba(232, 89, 12, 0.35);
     --food: #7c3aed;
     --food-ring: rgba(124, 58, 237, 0.35);
+    --street: #0f8a70;
     --link: #2a5669;
     --popup-bg: #ffffff;
     --popup-text: #1e2a2e;
@@ -586,6 +588,7 @@ h3 { font-size: 1.3rem; }
 .popup-banner--none::after { background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0) 70%); }
 .popup-banner--food.popup-banner--none { background-color: #4c2a85; }
 .popup-banner--parade.popup-banner--none { background-color: #9a4a12; }
+.popup-banner--street.popup-banner--none { background-color: #0d5e4e; }
 .popup-mark { position: absolute; top: 12px; right: 14px; opacity: 0.4; }
 .popup-mark .popup-food-icon { margin: 0; color: inherit; }
 .popup-mark svg { display: block; width: 28px; height: 28px; }
@@ -602,6 +605,7 @@ a.popup-banner:hover h3 { text-decoration: underline; text-underline-offset: 3px
 .popup-live { display: inline-flex; align-items: center; gap: 5px; font-weight: 700; color: var(--popup-live); }
 .popup-live::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
 .popup-row--food .popup-live { color: var(--food); }
+.popup-row--street .popup-live { color: var(--street); }
 .popup-food-icon { display: inline-flex; vertical-align: -3px; margin-right: 6px; color: var(--food); }
 .popup-note { display: block; font-size: 0.85rem; font-weight: 400; color: color-mix(in srgb, currentColor 62%, transparent); }
 .popup-note--card { margin: -6px 14px 14px; }
@@ -785,6 +789,8 @@ a.popup-banner:hover h3 { text-decoration: underline; text-underline-offset: 3px
 .provider-instagram, .provider-instagram:hover { background: linear-gradient(45deg, #f58529, #dd2a7b 50%, #8134af 80%, #515bd4); color: #fff; }
 
 /* ---- Food pop-ups (prototype) ------------------------------------------------ */
+/* A street event (festival, market, block party) is a green dot. */
+.marker--street::before, .marker--street::after { background: var(--street); }
 /* On the map a food-only stop is a purple dot; a venue with music and food keeps the music color. */
 .marker--food::before, .marker--food::after { background: var(--food); }
 .food-stale { display: block; font-size: 0.9rem; font-style: italic; color: var(--muted); }

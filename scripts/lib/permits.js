@@ -13,7 +13,7 @@ import { parseClock, slugify } from './parades.js';
 import { resolveStreet, streetWords, trace } from './route-trace.js';
 
 // Applications in these states are not happening, or not as described.
-const DEAD_STATUS = /denied|void|withdr|different permit type|ineligible|expired|inactive|duplicate/i;
+export const DEAD_STATUS = /denied|void|withdr|different permit type|ineligible|expired|inactive|duplicate/i;
 
 const PARADE = /second\s?-?\s?line|parade|procession|\bmarch\b|steppers/i;
 const CLUB = /social\s+aid|pleasure\s+club|\bs\.?\s?a\.?\s?&\s?p\.?\s?c\b|\bsapc\b|steppers|buckjumpers/i;

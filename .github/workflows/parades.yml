@@ -38,12 +38,12 @@ jobs:
         run: |
           git config user.name "nolatoday-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/parades/
+          git add data/parades/ data/street-events.json
           if git diff --cached --quiet; then
-            echo "No parade changes."
+            echo "No parade or street event changes."
             exit 0
           fi
-          git commit -m "Update parades ($(date -u +'%Y-%m-%d %H:%M UTC'))"
+          git commit -m "Update parades and street events ($(date -u +'%Y-%m-%d %H:%M UTC'))"
           for attempt in 1 2 3 4; do
             git pull --rebase --autostash origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0
             sleep $((attempt * 5))

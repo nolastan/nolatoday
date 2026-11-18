@@ -76,25 +76,27 @@
   var markers = [];
 
   // ---- Cards: what opens from a marker ---------------------------------------
-  // Venues, food stops and parades all open the same card, described as a plain model:
-  //   { kind: 'venue' | 'food' | 'parade', name, href, image,
-  //     rows: [{ type: 'show' | 'food' | 'parade', time, live, html, icon, note }], note }
+  // Venues, food stops, parades and street events all open the same card, described as a plain model:
+  //   { kind: 'venue' | 'food' | 'parade' | 'street', name, href, image,
+  //     rows: [{ type: 'show' | 'food' | 'parade' | 'street', time, live, html, icon, note }], note }
   // `html` and `icon` are already escaped markup; everything else is plain text. The banner is
   // the same height on every card: the photo, or a plain field in the kind's color. The name on
   // it is the one link to the page, and a live row says so where its time would be.
   // Placeholder marks, from Hugeicons free icons (MIT, https://hugeicons.com), like the food icons:
-  // MusicNote03Icon for a venue and MaskTheater02Icon for a parade.
+  // MusicNote03Icon for a venue, MaskTheater02Icon for a parade and TentIcon for a street event.
   function markSvg(paths) {
     return '<svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">' + paths + '</svg>';
   }
   var NOTE_ICON = markSvg('<circle cx="6.5" cy="18.5" r="3.5"/><circle cx="18" cy="16" r="3"/><path d="M10 18.5L10 7C10 6.07655 10 5.61483 10.2635 5.32794C10.5269 5.04106 11.0175 4.9992 11.9986 4.91549C16.022 4.57222 18.909 3.26005 20.3553 2.40978C20.6508 2.236 20.7986 2.14912 20.8993 2.20672C21 2.26432 21 2.4315 21 2.76587V16"/><path d="M10 10C15.8667 10 19.7778 7.66667 21 7"/>');
   var MASK_ICON = markSvg('<path d="M5.44505 14.2749C5.60832 13.9695 5.88358 13.7462 6.22227 13.6851C6.56095 13.624 6.89427 13.7375 7.14978 13.9674M11.2356 17.2768C10.909 17.8876 10.3585 18.3342 9.68113 18.4564C9.00377 18.5786 8.33713 18.3516 7.82611 17.8919M10.5592 13.3523C10.7225 13.0469 10.9978 12.8235 11.3365 12.7624C11.6751 12.7013 12.0085 12.8149 12.264 13.0447M13.0697 7.14205C11.9191 8.2281 10.171 9.09181 8.13072 9.45991C6.09043 9.828 4.15906 9.6281 2.7148 9.01019C2.62237 8.97065 2.52281 8.95715 2.42629 8.97456C2.14172 9.0259 1.95507 9.32308 2.0094 9.63832L2.94728 15.0805C3.64672 19.1391 7.04654 21.0881 8.62355 21.7854C9.14604 22.0165 9.72177 22.046 10.2823 21.9449C10.8429 21.8437 11.374 21.6145 11.7877 21.2146C13.0366 20.0074 15.5798 16.9863 14.8804 12.9276L13.9425 7.48545C13.8882 7.1702 13.6135 6.95627 13.3289 7.00761C13.2324 7.02502 13.1433 7.07255 13.0697 7.14205Z"/><path d="M14.3157 17C14.6792 16.9998 15.039 16.9347 15.3764 16.7854C16.9535 16.0881 20.3533 14.1391 21.0527 10.0805L21.9906 4.63832C22.0449 4.32308 21.8583 4.0259 21.5737 3.97456C21.4772 3.95715 21.3776 3.97065 21.2852 4.01019C19.8409 4.6281 17.9096 4.828 15.8693 4.45991C13.829 4.09181 12.0809 3.2281 10.9303 2.14205C10.8567 2.07255 10.7676 2.02502 10.6711 2.00761C10.3865 1.95627 10.1118 2.1702 10.0575 2.48545L9.1196 7.92763C9.0374 8.40465 8.99998 8.86734 9 9.31444"/>');
+  var TENT_ICON = markSvg('<path d="M10.2112 16.4234L8.00003 21L16 21L13.7889 16.4234C13.0083 14.8078 12.6181 14 12 14C11.382 14 10.9917 14.8078 10.2112 16.4234Z"/><path d="M9.99997 3L19.2905 14.8243C20.1372 15.9019 20.5605 16.4407 20.7803 17.076C21 17.7113 21 18.3965 21 19.7669V21"/><path d="M14 3L4.70943 14.8244C3.86277 15.902 3.43945 16.4407 3.21973 17.076C3.00002 17.7112 3.00001 18.3964 2.99999 19.7668L2.99997 21"/><path d="M2 21H22"/>');
   function cardHtml(m) {
     var tag = m.href ? 'a' : 'div';
     // No photo: one mark, top right. A note for a venue, masks for a parade, the vendor's icon for a food stop.
     var mark = '';
     if (!m.image && m.kind === 'venue') mark = NOTE_ICON;
     if (!m.image && m.kind === 'parade') mark = MASK_ICON;
+    if (!m.image && m.kind === 'street') mark = TENT_ICON;
     if (!m.image && m.kind === 'food') m.rows.forEach(function (r) { mark = mark || r.icon; });
     var rows = m.rows.map(function (r) {
       return '<li class="popup-row popup-row--' + r.type + '">' +
@@ -409,8 +411,21 @@
     });
   }
 
+  // Street events (festivals, markets, block parties from city permits): the same day rules again.
+  function selectStreet(day) {
+    var now = Date.now();
+    var today = nightKey(now);
+    return (data.street || []).filter(function (ev) {
+      var t = eventTimes(ev);
+      if (day === 'live') return isLive(ev, now);
+      var key = ev.a ? ev.s : nightKey(t.start);
+      if (String(day).length === 10) return key === day;
+      return key === addDays(today, Number(day)) && t.end >= now;
+    });
+  }
+
   function hasShows(day) {
-    return select(day).some(function (ev) { return data.venues[ev.v]; }) || selectFood(day).length > 0 || selectParades(day).length > 0;
+    return select(day).some(function (ev) { return data.venues[ev.v]; }) || selectFood(day).length > 0 || selectParades(day).length > 0 || selectStreet(day).length > 0;
   }
 
   function button(day) {
@@ -445,14 +460,26 @@
       note: ev.u ? 'Not confirmed recently' : '',
     };
   }
-  // Shows first, then the food there the same day, as on the current card.
-  function venueModel(slug, venue, events, now, foodEvents) {
+  // A street event's own card says what kind of event it is and where; on a venue's card its name
+  // stands in for a show title. The city gives hours for only some of them.
+  function streetTime(ev) {
+    return ev.a ? '' : timeFmt.format(new Date(Date.parse(ev.s)));
+  }
+  function streetRow(ev, now) {
+    return { type: 'street', time: streetTime(ev), live: isLive(ev, now) ? 'Happening now' : '', html: esc(ev.c) + (ev.st ? ' on ' + esc(ev.st) : '') };
+  }
+  function streetModel(ev, now) {
+    return { kind: 'street', name: ev.n, href: null, image: null, rows: [streetRow(ev, now)], note: '' };
+  }
+  // Shows first, then any street event next door, then the food there the same day.
+  function venueModel(slug, venue, events, now, foodEvents, streetEvents) {
     return {
       kind: 'venue',
       name: venue.name,
       href: cfg.base + '/venues/' + slug,
       image: venue.image,
       rows: events.map(function (ev) { return showRow(ev, now); })
+        .concat((streetEvents || []).map(function (ev) { return { type: 'street', time: streetTime(ev), live: isLive(ev, now) ? 'Happening now' : '', html: esc(ev.n) }; }))
         .concat(foodEvents.map(function (ev) { return foodRow(ev, now); })),
       note: '',
     };
@@ -509,14 +536,29 @@
       if (!far) bounds.extend(lngLat);
     }
 
+    // A street event next to a venue with shows that day goes on the venue's card; the rest get their own marker.
+    var streetByVenue = {};
+    var streetAlone = [];
+    selectStreet(day).forEach(function (ev) {
+      if (ev.v && byVenue[ev.v] && data.venues[ev.v]) (streetByVenue[ev.v] = streetByVenue[ev.v] || []).push(ev);
+      else streetAlone.push(ev);
+    });
+    (data.street || []).forEach(function (ev) {
+      if (isLive(ev, now)) liveVenues[ev.v && byVenue[ev.v] ? ev.v : 'street:' + ev.id] = true;
+    });
+
     Object.keys(byVenue).forEach(function (slug) {
       var venue = data.venues[slug];
       if (!venue) return;
       var food = foodByPlace[slug] || [];
       delete foodByPlace[slug];
+      var street = streetByVenue[slug] || [];
       addMarker(slug, [venue.lng, venue.lat], 'marker',
         venue.name + ': ' + count(byVenue[slug].length, 'show', 'shows') + (food.length ? ', ' + count(food.length, 'food pop-up', 'food pop-ups') : ''),
-        venueModel(slug, venue, byVenue[slug], now, food));
+        venueModel(slug, venue, byVenue[slug], now, food, street));
+    });
+    streetAlone.forEach(function (ev) {
+      addMarker('street:' + ev.id, ev.p, 'marker marker--street', ev.n + ': ' + ev.c, streetModel(ev, now));
     });
     Object.keys(foodByPlace).forEach(function (key) {
       var place = (data.foodPlaces || {})[key];

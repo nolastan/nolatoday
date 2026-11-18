@@ -83,7 +83,7 @@ If `main` is branch-protected, allow GitHub Actions to push to it — the scrape
 | Workflow | When | Does |
 | --- | --- | --- |
 | `scrape.yml` | every 6 hours, or manually | scrape → commit `data/` → open/close repair issues → deploy |
-| `parades.yml` | twice a day, or manually | pull parade routes and schedules from City of New Orleans records ([docs/parades.md](docs/parades.md)) → commit `data/parades/` → deploy |
+| `parades.yml` | twice a day, or manually | pull parade routes and schedules from City of New Orleans records ([docs/parades.md](docs/parades.md)), plus public festivals, markets and block parties from the same permit feed ([docs/street-events.md](docs/street-events.md)) → commit `data/parades/` and `data/street-events.json` → deploy |
 | `deploy.yml` | push to `main`, manually, or after a scrape | build and publish to GitHub Pages |
 | `ci.yml` | pull requests | validate data, run tests, build, and live-scrape any venue whose file changed |
 

@@ -1,0 +1,119 @@
+[
+ {
+  "permitnumber": "26-30049-SPMA",
+  "currentstatus": "Application Review",
+  "d_create": "2026-10-12T00:00:00.000",
+  "address": "2300 N Peters St",
+  "descr": "French Fry Festival - 2300 N. Peters St.  - 11-20-2026 to 11-21-2026\r\nFry Forward Foundation non-profit event not charging admission. Outside vendors vending food, drinks, and merchandise. Non-profit vending low and high alcohol content (beer, wine, and liquor). DJ sound amplification outdoors.11+ Tents. Stage. Cooking onsie with NOFD FIre Watch. Portolets.",
+  "latitude": "29.96135864919609",
+  "longitude": "-90.05447248278823"
+ },
+ {
+  "permitnumber": "26-33380-SPMA",
+  "currentstatus": "Application Review",
+  "d_create": "2026-11-12T00:00:00.000",
+  "address": "8211 S Claiborne Ave",
+  "descr": "Arts Market New Orleans (8) - 8211 S Claiborne Ave. - 11-28-2026\r\nArts Council of New Orleans non-profit event not charging admission. Outside vendors vendimg merhcandise. (63) tents.  Portolets.",
+  "latitude": "29.957132073440345",
+  "longitude": "-90.12154750129515"
+ },
+ {
+  "permitnumber": "25-35933-SPMA",
+  "currentstatus": "Finaled",
+  "d_create": "2025-11-17T00:00:00.000",
+  "address": "200 Morgan St",
+  "descr": "Algiers Economic Development Foundation Concert and Bonfire - 200 Morgan Street - 12-7-2025\r\nAlgiers Economic Development Foundation non-profit event not charging admission. Outside vendors vending food, drinks, and merchandise. Non-profit vending low content alcohol  (beer). (6) Tents. Portolets. Bonfire with NOFD Fire Watch. \r\n\r\nNon-profit, no admission public event, food (cooking on-site) & merch vendor sales, low content beer sales, live entertainment, DJ, amplifiers, tents, stages,  portolets. 4pm - 9:00 pm 12/06/2025 at 200 Morgan St, levee bat",
+  "latitude": "29.953847779552568",
+  "longitude": "-90.0544225961949"
+ },
+ {
+  "permitnumber": "26-31737-SPMA",
+  "currentstatus": "Application Review",
+  "d_create": "2026-10-27T00:00:00.000",
+  "address": "897 Saint Joseph St",
+  "descr": "Willie Mae's Black Friday Classic Block Party - 897 Saint Joseph Street - 11-26-2026 to 11-27-2026\r\nStreet closure: Saint Jospeh St (between Baronne and Corondelet)\r\nFor-profit event not charging admission. For-profit vending food and alcohol outdoors. For-profit vending low and high alcohol content (beer, wine, and liquor). Live entertainment and DJ sound amplification outdoors. Stage. Tents. Potrtoloets. No outside vendors. 12 pm - 8 pm",
+  "latitude": "29.94503666184895",
+  "longitude": "-90.07438793473463"
+ },
+ {
+  "permitnumber": "26-31839-SPMA",
+  "currentstatus": "Application Submitted",
+  "d_create": "2026-10-28T00:00:00.000",
+  "address": "898 Baronne St, 800 Block of St. Joseph Street between Baronne St & Carondelet St.",
+  "descr": "Black Friday Block Party - 800 St. Joseph St - 11-26-2026 to 11-27-2026\r\nAlignED New Orleans Inc non-profit event fundraiser.\r\n\r\nA Block Party and fundraiser to celebrate the Holiday Season and try to divert some \"Black Friday\" spending to local Non-Profit orgs through donations.\r\n\r\n***NOT PROCESSED - INCOMPLETE- Likely a duplicate- awaiting applicant email in event permits***",
+  "latitude": "29.94505171986011",
+  "longitude": "-90.07448152816488"
+ },
+ {
+  "permitnumber": "TEST-1",
+  "currentstatus": "Application Review",
+  "d_create": "2026-10-01T00:00:00.000",
+  "address": "100 Example St",
+  "descr": "Example Wedding Block Party - 100 Example St - 11-21-2026\r\nFor-profit event not charging admission. Live entertainment.",
+  "latitude": "29.95",
+  "longitude": "-90.07"
+ },
+ {
+  "permitnumber": "TEST-2",
+  "currentstatus": "Application Review",
+  "d_create": "2026-10-01T00:00:00.000",
+  "address": "100 Example St",
+  "descr": "Example Bar Alcohol Concession for Example Fest - 100 Example St - 11-21-2026\r\nFor-profit vendor vending low and high alcohol content.",
+  "latitude": "29.95",
+  "longitude": "-90.07"
+ },
+ {
+  "permitnumber": "TEST-3",
+  "currentstatus": "Application Review",
+  "d_create": "2026-10-01T00:00:00.000",
+  "address": "100 Example St",
+  "descr": "Example Corp Block Party - 100 Example St - 11-21-2026\r\nStreet closure: Example St, 2:00 pm - 11:00 pm For-profit event not charging admission. Live entertainment and DJ sound amplification outdoors.",
+  "latitude": "29.95",
+  "longitude": "-90.07"
+ },
+ {
+  "permitnumber": "TEST-4",
+  "currentstatus": "Application Review",
+  "d_create": "2026-10-01T00:00:00.000",
+  "address": "100 Example St",
+  "descr": "Example Holiday Market - 100 Example St - 11-21-2026\r\nExample Society non-profit event not charging admission. This is not a publicly accessible event.",
+  "latitude": "29.95",
+  "longitude": "-90.07"
+ },
+ {
+  "permitnumber": "TEST-5",
+  "currentstatus": "VOIDED - Applicant Withdrew Permit",
+  "d_create": "2026-10-01T00:00:00.000",
+  "address": "100 Example St",
+  "descr": "Example Fall Festival - 100 Example St - 11-21-2026\r\nExample Society non-profit event not charging admission. Outside vendors vending food.",
+  "latitude": "29.95",
+  "longitude": "-90.07"
+ },
+ {
+  "permitnumber": "TEST-6",
+  "currentstatus": "Application Review",
+  "d_create": "2026-10-01T00:00:00.000",
+  "address": "100 Example St",
+  "descr": "Example Neighborhood Festival - 100 Example St - 11-21-2026 to 11-22-2026\r\nExample Society non-profit event not charging admission. Outside vendors vending food. Street closure 5:00 am - 2:00 am.",
+  "latitude": "29.95",
+  "longitude": "-90.07"
+ },
+ {
+  "permitnumber": "TEST-7",
+  "currentstatus": "Application Review",
+  "d_create": "2026-10-05T00:00:00.000",
+  "address": "100 Example St",
+  "descr": "Example Festival Stage - 120 Example St - 11-22-2026\r\nExample Society non-profit event not charging admission. Outside vendors vending food. 7 - 9 pm",
+  "latitude": "29.9502",
+  "longitude": "-90.0702"
+ },
+ {
+  "permitnumber": "TEST-8",
+  "currentstatus": "Application Review",
+  "d_create": "2026-10-01T00:00:00.000",
+  "address": "100 Example St",
+  "descr": "Example Wedding Second Line Parade - 100 Example St - 11-21-2026\r\nRoute: Example St to Sample St",
+  "latitude": "29.95",
+  "longitude": "-90.07"
+ }
+]
