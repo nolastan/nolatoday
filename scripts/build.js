@@ -22,6 +22,7 @@ import { loadFood } from './lib/food.js';
 import { foodPage, foodVendorPage } from '../src/templates/food.js';
 import { FOOD_ICONS } from '../src/templates/food-icons.js';
 import { loadArtistMeta } from './lib/spotify.js';
+import { venueFeed, foodFeed, paradesFeed, artistBroadGenres } from './lib/feeds.js';
 import { PARADES_FILE, SOURCES, loadParades, loadWebsites, loadPhotos, paradeOrgs, mapParade } from './lib/parades.js';
 
 const OUT = path.join(ROOT, '_site');
@@ -105,6 +106,9 @@ function main() {
     ]),
   );
 
+  const venueImage = (v) => (v.image ? ctx.asset(`/images/venues/${v.image.replace(/\.jpg$/, '-600.jpg')}`) : null);
+  const venueImageLarge = (v) => (v.image ? ctx.asset(`/images/venues/${v.image}`) : null);
+
   // Map data: the next week of shows, compact.
   const horizon = now.plus({ days: 8 }).toISODate();
   const mapVenues = {};
@@ -117,7 +121,7 @@ function main() {
       name: v.name,
       lat: v.lat,
       lng: v.lng,
-      image: v.image ? ctx.asset(`/images/venues/${v.image.replace(/\.jpg$/, '-600.jpg')}`) : null,
+      image: venueImage(v),
     };
     for (const e of events) {
       const item = { v: v.slug, t: e.title, s: e.start };
@@ -181,6 +185,9 @@ function main() {
         // What the venue page shows under the schedule and photo; the iOS app reads these here.
         sources: [...new Set((v.sources ?? []).map((s) => s.url).filter(Boolean))],
         imageCredit: v.imageCredit,
+        // Added for apps; the full venue (schedule, recent shows, food) is at /venues/<slug>.json.
+        image: venueImage(v) ?? undefined,
+        json: `${config.siteUrl}/venues/${v.slug}.json`,
       })),
       null,
       1,
@@ -204,7 +211,13 @@ function main() {
     }
   }
   for (const v of venues) {
-    write(`venues/${v.slug}.html`, venuePage(ctx, v, { events: eventsBySlug.get(v.slug), recent: recentBySlug.get(v.slug), status: status.venues?.[v.slug], food: foodByVenue.get(v.slug) ?? [] }));
+    const pageData = { events: eventsBySlug.get(v.slug), recent: recentBySlug.get(v.slug), status: status.venues?.[v.slug], food: foodByVenue.get(v.slug) ?? [] };
+    write(`venues/${v.slug}.html`, venuePage(ctx, v, pageData));
+    // The same data for apps.
+    write(
+      `venues/${v.slug}.json`,
+      JSON.stringify(venueFeed(v, { ...pageData, siteUrl: config.siteUrl, image: venueImage(v), imageLarge: venueImageLarge(v), generatedAt: now.toISO() })),
+    );
   }
 
   // Artists: a directory, a page each, and the list for anyone building on this data.
@@ -224,6 +237,8 @@ function main() {
         upcoming: showsByArtist.get(a.slug).length,
         image: artistMeta[a.slug]?.image,
         genres: specificGenres(artistMeta[a.slug]).length ? specificGenres(artistMeta[a.slug]) : undefined,
+        // The directory's genre filter: slugs from scripts/lib/genres.js GENRES.
+        broadGenres: artistBroadGenres(a, artistMeta[a.slug]).length ? artistBroadGenres(a, artistMeta[a.slug]) : undefined,
         links: Object.fromEntries(artistLinks(a).map((l) => [l.key, l.url])),
       })),
       null,
@@ -245,6 +260,7 @@ function main() {
   write('parades/index.html', paradeDirectory);
   for (const org of orgs) write(`parades/${org.slug}.html`, paradePage(ctx, org, { today: startOfToday }));
   if (fs.existsSync(PARADES_FILE)) fs.copyFileSync(PARADES_FILE, path.join(OUT, 'parades.geojson'));
+  write('parades.json', JSON.stringify(paradesFeed(orgs, { siteUrl: config.siteUrl, photoUrl: (file) => ctx.asset(`/images/parades/${file}`), generatedAt: now.toISO() })));
 
   // Old URLs: merged duplicates, aliases and removed venues.
   const venueSlugs = new Set(venues.map((v) => v.slug));
@@ -267,6 +283,7 @@ function main() {
   write('food.html', foodDirectory);
   write('food/index.html', foodDirectory);
   for (const vendor of food) write(`food/${vendor.slug}.html`, foodVendorPage(ctx, vendor, { today: startOfToday }));
+  write('food.json', JSON.stringify(foodFeed(food, { siteUrl: config.siteUrl, today: startOfToday, icons: FOOD_ICONS, generatedAt: now.toISO() })));
 
   // The old site's music directory.
   write('music.html', redirectPage(ctx, '/venues'));
