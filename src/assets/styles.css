@@ -168,6 +168,8 @@ h3 { font-size: 1.3rem; }
 .footer-inner { display: flex; flex-wrap: wrap; gap: 24px 48px; justify-content: space-between; }
 .footer-inner p { max-width: 36em; margin: 8px 0 0; font-size: 0.95rem; }
 .colophon { color: var(--muted); }
+.app-badge { display: inline-block; margin-top: 8px; }
+.app-badge img { display: block; height: 40px; width: auto; }
 
 /* Venue page ------------------------------------------------------------ */
 .map-banner {

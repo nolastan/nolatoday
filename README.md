@@ -55,7 +55,7 @@ The map needs a public [Mapbox](https://www.mapbox.com) token: `MAPBOX_TOKEN=pk.
 ## Making one for your city
 
 1. **Fork the repo** and clear out the New Orleans data: empty `data/venues/`, `data/events/`, `public/images/venues/` and `public/images/stories/`, reset `data/redirects.json` to `{}`, and delete `data/status.json` (the next scrape recreates it). Replace `public/images/og-default.jpg`, the default social-sharing image.
-2. **Edit `site.config.json`:** `siteName`, `siteUrl`, `description`, `repo` (your `owner/name`, used for "report a problem" links), the map `center` (`[lng, lat]`) and `zoom`, and your Mapbox styles. Remove `fathomSite` and `referrals`, or replace them with your own.
+2. **Edit `site.config.json`:** `siteName`, `siteUrl`, `description`, `repo` (your `owner/name`, used for "report a problem" links), the map `center` (`[lng, lat]`) and `zoom`, and your Mapbox styles. Remove `fathomSite` and `referrals`, or replace them with your own. `appStoreId` is the numeric App Store id of an iOS app; when set, pages get the App Store badge in the footer and Safari's Smart App Banner, and when empty neither appears.
 3. **Replace the remaining city-specific bits**, which aren't in the config yet:
    - the time zone (`America/Chicago`) in `scripts/lib/time.js` and `src/assets/map.js`,
    - the coordinate bounds in `scripts/validate.js`,

@@ -29,3 +29,14 @@ test('contactPage: shows the email only when one is configured', async () => {
   assert.match(contactPage(ctx({ contactEmail: 'hi@example.com' })), /href="mailto:hi@example.com"/);
   assert.match(contactPage(ctx({})), /https:\/\/github.com\/nolastan\/nolatoday\/issues/);
 });
+
+test('appStoreId: adds the Smart App Banner and footer badge only when set', async () => {
+  const { contactPage } = await import('../src/templates/pages.js');
+  const config = { siteName: 'NOLA.Today', siteUrl: 'https://nola.today', description: '', repo: 'nolastan/nolatoday', mapbox: {} };
+  const ctx = (extra) => ({ config: { ...config, ...extra }, url: (p) => p, asset: (p) => p });
+  const off = contactPage(ctx({ appStoreId: '' }));
+  assert.doesNotMatch(off, /apple-itunes-app|apps\.apple\.com/);
+  const on = contactPage(ctx({ appStoreId: '1234567890' }));
+  assert.match(on, /<meta name="apple-itunes-app" content="app-id=1234567890">/);
+  assert.match(on, /<a class="app-badge" href="https:\/\/apps.apple.com\/app\/id1234567890">/);
+});
