@@ -36,6 +36,12 @@
     "lat": 29.96381,
     "lng": -90.05502
   },
+  "jefferson-parish-sheriffs-office": {
+    "name": "Jefferson Parish Sheriff's Office",
+    "address": "1233 Westbank Expy, Harvey",
+    "lat": 29.90617,
+    "lng": -90.06422
+  },
   "peewees-saratoga": {
     "name": "Home base on S Saratoga",
     "address": "3313 S Saratoga St",
@@ -53,6 +59,12 @@
     "address": "455 N Dorgenois St",
     "lat": 29.96771,
     "lng": -90.08341
+  },
+  "st-charles-courthouse": {
+    "name": "St. Charles Courthouse",
+    "address": "15045 River Rd, Hahnville",
+    "lat": 29.96427,
+    "lng": -90.40576
   },
   "tulane-mcalister-auditorium": {
     "name": "McAlister Auditorium",
