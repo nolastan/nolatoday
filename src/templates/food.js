@@ -2,6 +2,7 @@ import { DateTime } from 'luxon';
 import { esc, jsonScript, layout, siteHeader, siteFooter } from './layout.js';
 import { ZONE } from '../../scripts/lib/time.js';
 import { foodIcon } from './food-icons.js';
+import { staticMapUrl } from './venue.js';
 
 
 const clock = (dt) => dt.toFormat(dt.minute ? 'h:mm a' : 'h a').toLowerCase();
@@ -103,6 +104,7 @@ export function foodVendorPage(ctx, vendor, { today }) {
   const canonical = `${config.siteUrl}/food/${vendor.slug}`;
   const upcoming = vendor.events.filter((e) => (e.end ?? e.start) >= today);
   const places = [...new Set(upcoming.map((e) => e.place.name))];
+  const sharePlace = [upcoming[0], vendor.events.at(-1)].map((e) => e?.place).find((p) => p?.lat != null && p?.lng != null);
   const description = upcoming.length
     ? `Where to find ${vendor.name} in New Orleans: ${upcoming.length} upcoming ${upcoming.length === 1 ? 'stop' : 'stops'} at ${places.slice(0, 3).join(', ')}${places.length > 3 ? ' and more' : ''}.`
     : `${vendor.name}, a New Orleans ${(vendor.type ?? 'pop-up').toLowerCase()}: upcoming stops when they’re announced.`;
@@ -170,6 +172,11 @@ ${siteFooter(ctx)}`;
     title: `${vendor.name} – Food ${vendor.type === 'Food truck' ? 'Truck' : 'Pop-up'} Schedule – NOLA.Today`,
     description,
     canonical,
+    // Link previews: a map of the next stop (or the last one we know of), with a food-colored pin.
+    image: sharePlace && config.mapbox.token
+      ? staticMapUrl(ctx, sharePlace, { theme: 'dark', width: 1200, height: 630, retina: false, zoom: 14, icon: 'restaurant', color: 'b77cf2' })
+      : null,
+    imageAlt: sharePlace ? `Map of ${sharePlace.name} in New Orleans` : null,
     bodyClass: 'page-artist page-food-vendor',
     head: `<script type="application/ld+json">${jsonScript({
       '@context': 'https://schema.org',
