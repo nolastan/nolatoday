@@ -173,6 +173,17 @@ function main() {
       return near ? { ...item, v: near.slug } : item;
     })
     .sort((a, b) => a.s.localeCompare(b.s));
+  // ---- DEMO (temporary, 2026-11-19): real past street events re-dated to the next few days so the
+  // map can be shown off. Delete this block and data/street-events-demo.json before merging.
+  const demoFile = path.join(DATA_DIR, 'street-events-demo.json');
+  if (fs.existsSync(demoFile)) {
+    for (const e of readJSON(demoFile).events) {
+      const date = now.plus({ days: e.days_from_build }).toISODate();
+      streetEvents.push(...mapStreetEvent({ ...e, id: `demo-${e.id}`, date, end_date: date }, { from: startOfToday, to: horizon }));
+    }
+    streetEvents.sort((a, b) => a.s.localeCompare(b.s));
+  }
+  // ---- end DEMO
   write('events.json', JSON.stringify({ generatedAt: now.toISO(), venues: mapVenues, events: mapEvents, parades: mapParades, street: streetEvents, foodPlaces, food: foodEvents, foodIcons: Object.fromEntries([...new Set(foodEvents.map((e) => e.i))].map((k) => [k, FOOD_ICONS[k]])) }));
 
   // Public venue list (handy for anyone building on this data).

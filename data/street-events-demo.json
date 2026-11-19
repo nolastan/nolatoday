@@ -1,0 +1,15 @@
+{
+ "description": "TEMPORARY demo data (2026-11-19): real past street events from the city permit feed, re-dated by scripts/build.js to the next few days so the map can be demoed. Delete this file and the DEMO block in scripts/build.js before merging.",
+ "events": [
+{"id": "gentilly-fest-2026-10-09", "name": "Gentilly Fest", "category": "festival", "category_label": "Festival", "start_time": "18:00", "end_time": "21:00", "street": "Press Dr", "point": [-90.044992, 30.028055], "permit_number": "26-20090-SPMA", "days_from_build": 0},
+{"id": "son-of-a-saint-block-party-2026-08-22", "name": "Son of a Saint Block Party", "category": "block_party", "category_label": "Block party", "start_time": "16:00", "end_time": "20:00", "street": "St Philip Street", "point": [-90.082292, 29.974196], "permit_number": "26-10629-SPMA", "days_from_build": 0},
+{"id": "bounce-fest-2026-10-04", "name": "Bounce Fest", "category": "festival", "category_label": "Festival", "start_time": "16:00", "end_time": "20:00", "street": "Orleans Ave", "point": [-90.076666, 29.967108], "permit_number": "26-21536-SPMA", "days_from_build": 0},
+{"id": "freret-market-2026-03-07", "name": "Freret Market", "category": "market", "category_label": "Market", "start_time": "11:00", "end_time": "16:00", "street": "Freret St", "point": [-90.103681, 29.935316], "permit_number": "26-00167-SPMA", "days_from_build": 1},
+{"id": "congo-square-rhythms-festival-2026-03-28", "name": "Congo Square Rhythms Festival", "category": "festival", "category_label": "Festival", "start_time": "11:00", "end_time": "20:00", "street": "N Rampart", "point": [-90.068685, 29.961421], "permit_number": "26-07096-SPMA", "days_from_build": 1},
+{"id": "laurel-street-music-porch-concert-2026-11-07", "name": "Laurel Street Music Porch Concert", "category": "concert", "category_label": "Concert", "start_time": "12:30", "end_time": "19:00", "street": "Laurel Street", "point": [-90.124355, 29.919853], "permit_number": "26-30747-SPMA", "days_from_build": 1},
+{"id": "super-sunday-festival-2026-03-13", "name": "Super Sunday Festival", "category": "festival", "category_label": "Festival", "start_time": "12:00", "end_time": "18:00", "street": "La Salle St", "point": [-90.089421, 29.938204], "permit_number": "26-04892-SPMA", "days_from_build": 2},
+{"id": "arts-market-new-orleans-2026-02-28", "name": "Arts Market New Orleans", "category": "market", "category_label": "Market", "start_time": null, "end_time": null, "street": "Dreyfous Dr", "point": [-90.095642, 29.985418], "permit_number": "26-03838-SPMA", "days_from_build": 2},
+{"id": "crawfest-2026-04-18", "name": "Crawfest", "category": "festival", "category_label": "Festival", "start_time": "11:00", "end_time": "17:00", "street": "McAlister Dr", "point": [-90.118667, 29.941048], "permit_number": "26-09949-SPMA", "days_from_build": 2},
+{"id": "new-orleans-juneteenth-festival-2026-06-19", "name": "New Orleans Juneteenth Festival", "category": "festival", "category_label": "Festival", "start_time": "12:00", "end_time": "17:30", "street": "N. Rampart", "point": [-90.068685, 29.961421], "permit_number": "26-07619-SPMA", "days_from_build": 3}
+ ]
+}
