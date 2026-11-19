@@ -2,12 +2,6 @@
   "venue": "snug-harbor",
   "events": [
     {
-      "id": "32c59adc8b5a",
-      "title": "Uptown Jazz Orchestra",
-      "start": "2026-11-18T19:00:00-06:00",
-      "url": "https://www.jambase.com/show/uptown-jazz-orchestra-snug-harbor-20261118-2"
-    },
-    {
       "id": "3ad26fa2a85c",
       "title": "Uptown Jazz Orchestra",
       "start": "2026-11-18T21:00:00-06:00",

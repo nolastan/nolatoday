@@ -2,13 +2,6 @@
   "venue": "maple-leaf-bar",
   "events": [
     {
-      "id": "75bf9f99f400",
-      "title": "Ashlar Organ Time",
-      "start": "2026-11-18T19:00:00-06:00",
-      "end": "2026-11-18T22:00:00-06:00",
-      "url": "https://www.mapleleafbar.com/events/ashlar-organ-time-2"
-    },
-    {
       "id": "5520ff1c2f9f",
       "title": "Booker & Beyond - Lilli Lewis",
       "start": "2026-11-19T18:00:00-06:00",
@@ -35,6 +28,13 @@
       "start": "2026-11-20T23:00:00-06:00",
       "end": "2026-11-21T02:00:00-06:00",
       "url": "https://www.mapleleafbar.com/events/alex-wasily-enemies"
+    },
+    {
+      "id": "5adb0d00e782",
+      "title": "Aliss -A- Fest Birthday Celebration",
+      "start": "2026-11-21T19:00:00-06:00",
+      "end": "2026-11-21T21:00:00-06:00",
+      "url": "https://www.mapleleafbar.com/events/aliss-a-fest-birthday-celebration"
     },
     {
       "id": "d7015623d0d1",

@@ -2,20 +2,6 @@
   "venue": "the-allways-lounge",
   "events": [
     {
-      "id": "8e963e6ae4b7",
-      "title": "Lefty Lucy's Burlesque Bingo",
-      "start": "2026-11-18T18:30:00-06:00",
-      "end": "2026-11-18T20:30:00-06:00",
-      "url": "https://tockify.com/allwayslounge/detail/3097/1795048200000"
-    },
-    {
-      "id": "07fef374fd38",
-      "title": "Esoterotica (original erotic readings)",
-      "start": "2026-11-18T21:00:00-06:00",
-      "end": "2026-11-18T22:30:00-06:00",
-      "url": "https://tockify.com/allwayslounge/detail/196/1795057200000"
-    },
-    {
       "id": "b84b395b0a89",
       "title": "Van Ella Bordella (burlesque)",
       "start": "2026-11-19T19:00:00-06:00",
@@ -1938,6 +1924,27 @@
       "start": "2027-02-15T21:30:00-06:00",
       "end": "2027-02-15T23:30:00-06:00",
       "url": "https://tockify.com/allwayslounge/detail/2269/1802748600000"
+    },
+    {
+      "id": "ecb1ad300e61",
+      "title": "Sincerely, Fantasy. THE Thing to do in New Orleans’ On A Tuesday! (songs, theatre, sideshow)",
+      "start": "2027-02-16T19:00:00-06:00",
+      "end": "2027-02-16T21:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/959/1802221200000"
+    },
+    {
+      "id": "54c594fd5749",
+      "title": "Brechtfest V111",
+      "start": "2027-02-16T20:00:00-06:00",
+      "end": "2027-02-16T22:00:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/4437/1802829600000"
+    },
+    {
+      "id": "ad94e7391169",
+      "title": "Sundown Striptease (burlesque)",
+      "start": "2027-02-16T21:30:00-06:00",
+      "end": "2027-02-16T23:00:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/2404/1802835000000"
     }
   ]
 }

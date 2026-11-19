@@ -2,13 +2,6 @@
   "venue": "joy-theater",
   "events": [
     {
-      "id": "7d340799c797",
-      "title": "Kurt Vile & the Violators",
-      "start": "2026-11-18",
-      "allDay": true,
-      "url": "https://thejoytheater.com/event/kurt-vile-the-violators/"
-    },
-    {
       "id": "9f4205cbad23",
       "title": "Boogie T",
       "start": "2026-11-28",

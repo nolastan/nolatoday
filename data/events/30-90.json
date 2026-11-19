@@ -2,20 +2,6 @@
   "venue": "30-90",
   "events": [
     {
-      "id": "e6c567f0a58f",
-      "title": "The Joey Houck Band",
-      "start": "2026-11-18T18:00:00-06:00",
-      "end": "2026-11-18T21:00:00-06:00",
-      "url": "https://www.3090-nola.com/bands/joey-houck102523-d263e"
-    },
-    {
-      "id": "2d67cebeabf1",
-      "title": "The Budz",
-      "start": "2026-11-18T21:00:00-06:00",
-      "end": "2026-11-18T23:59:00-06:00",
-      "url": "https://www.3090-nola.com/bands/the-budz100825-p59rw-kbmr8-an5f5-sf8cs-rbjw7-tfc86-28k5y-3p9mp-mem4d-fz4rd-tyz4e-jj6z3-crl7b"
-    },
-    {
       "id": "b58cf1fab128",
       "title": "The Dapper Dandies",
       "start": "2026-11-19T18:00:00-06:00",

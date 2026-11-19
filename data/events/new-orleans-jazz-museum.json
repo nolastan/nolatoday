@@ -2,13 +2,6 @@
   "venue": "new-orleans-jazz-museum",
   "events": [
     {
-      "id": "8dda63e98b90",
-      "title": "Jazz Foundation of America presents: Karen and Norbert Stachel with LehCats",
-      "start": "2026-11-18T14:00:00-06:00",
-      "end": "2026-11-18T15:00:00-06:00",
-      "url": "https://nolajazzmuseum.org/events/2026/11/18/jazz-foundation-of-america-jfa-presents"
-    },
-    {
       "id": "08ca4260811c",
       "title": "Byron Asher’s Skrontch Music",
       "start": "2026-11-19T18:00:00-06:00",

@@ -2,13 +2,6 @@
   "venue": "saturn-bar",
   "events": [
     {
-      "id": "5e0855442de4",
-      "title": "Toothbug, URQ, Fiddler's Green",
-      "start": "2026-11-18T21:00:00-06:00",
-      "end": "2026-11-19T01:00:00-06:00",
-      "url": "https://dice.fm/event/6aba91e6c3942f000106a23f"
-    },
-    {
       "id": "b7a6b6abc167",
       "title": "Gina Leslie and Tom Quell",
       "start": "2026-11-19T21:00:00-06:00",

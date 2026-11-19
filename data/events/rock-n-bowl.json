@@ -2,12 +2,6 @@
   "venue": "rock-n-bowl",
   "events": [
     {
-      "id": "fb3240b69836",
-      "title": "Tales from the Gig",
-      "start": "2026-11-18T19:00:00-06:00",
-      "url": "https://www.rocknbowl.com/event-details/tales-from-the-gig-11-18-26"
-    },
-    {
       "id": "5983d8bab524",
       "title": "Nathan & the Zydeco Cha Chas",
       "start": "2026-11-19T20:00:00-06:00",
@@ -111,6 +105,12 @@
       "title": "Bucktown Allstars",
       "start": "2026-12-30T20:30:00-06:00",
       "url": "https://www.rocknbowl.com/event-details/bucktown-allstars-12-30-26"
+    },
+    {
+      "id": "12eee5d3a579",
+      "title": "The Boogie Men",
+      "start": "2026-12-31T20:30:00-06:00",
+      "url": "https://www.rocknbowl.com/event-details/the-boogie-men-12-31-26"
     }
   ]
 }
