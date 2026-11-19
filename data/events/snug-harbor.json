@@ -2,12 +2,6 @@
   "venue": "snug-harbor",
   "events": [
     {
-      "id": "3ad26fa2a85c",
-      "title": "Uptown Jazz Orchestra",
-      "start": "2026-11-18T21:00:00-06:00",
-      "url": "https://www.jambase.com/show/uptown-jazz-orchestra-snug-harbor-20261118"
-    },
-    {
       "id": "11ce12df43a0",
       "title": "Charmaine Neville Band",
       "start": "2026-11-23T19:00:00-06:00",
@@ -54,6 +48,84 @@
       "title": "Charmaine Neville Band",
       "start": "2026-11-30T21:00:00-06:00",
       "url": "https://www.jambase.com/show/charmaine-neville-band-snug-harbor-20261130"
+    },
+    {
+      "id": "226f6ce1e869",
+      "title": "Mitch Woods",
+      "start": "2026-12-02T16:30:00-06:00",
+      "url": "https://www.jambase.com/show/mitch-woods-snug-harbor-20261202"
+    },
+    {
+      "id": "0b6f4f9c0f17",
+      "title": "Charmaine Neville Band",
+      "start": "2026-12-07T19:00:00-06:00",
+      "url": "https://www.jambase.com/show/charmaine-neville-band-snug-harbor-20261207-2"
+    },
+    {
+      "id": "525742d306c3",
+      "title": "Charmaine Neville Band",
+      "start": "2026-12-07T21:00:00-06:00",
+      "url": "https://www.jambase.com/show/charmaine-neville-band-snug-harbor-20261207"
+    },
+    {
+      "id": "01ff94db2b9f",
+      "title": "Charmaine Neville Band",
+      "start": "2026-12-14T19:00:00-06:00",
+      "url": "https://www.jambase.com/show/charmaine-neville-band-snug-harbor-20261214"
+    },
+    {
+      "id": "f94d58093182",
+      "title": "Charmaine Neville Band",
+      "start": "2026-12-14T21:00:00-06:00",
+      "url": "https://www.jambase.com/show/charmaine-neville-band-snug-harbor-20261214-2"
+    },
+    {
+      "id": "f9de24610608",
+      "title": "Sasha Masakowski",
+      "start": "2026-12-19T19:00:00-06:00",
+      "url": "https://www.jambase.com/show/sasha-masakowski-snug-harbor-20261219"
+    },
+    {
+      "id": "859a08b34b56",
+      "title": "Sasha Masakowski",
+      "start": "2026-12-19T21:00:00-06:00",
+      "url": "https://www.jambase.com/show/sasha-masakowski-snug-harbor-20261219-2"
+    },
+    {
+      "id": "9a1dab57e596",
+      "title": "Charmaine Neville Band",
+      "start": "2026-12-21T19:00:00-06:00",
+      "url": "https://www.jambase.com/show/charmaine-neville-band-snug-harbor-20261221"
+    },
+    {
+      "id": "91ec3a218c1b",
+      "title": "Charmaine Neville Band",
+      "start": "2026-12-21T21:00:00-06:00",
+      "url": "https://www.jambase.com/show/charmaine-neville-band-snug-harbor-20261221-2"
+    },
+    {
+      "id": "380c56cd841c",
+      "title": "Charmaine Neville Band",
+      "start": "2026-12-28T19:00:00-06:00",
+      "url": "https://www.jambase.com/show/charmaine-neville-band-snug-harbor-20261228"
+    },
+    {
+      "id": "b42d6e5d184e",
+      "title": "Charmaine Neville Band",
+      "start": "2026-12-28T21:00:00-06:00",
+      "url": "https://www.jambase.com/show/charmaine-neville-band-snug-harbor-20261228-2"
+    },
+    {
+      "id": "c880e7f541d2",
+      "title": "Davell Crawford",
+      "start": "2026-12-31T20:00:00-06:00",
+      "url": "https://www.jambase.com/show/davell-crawford-snug-harbor-20261231"
+    },
+    {
+      "id": "c029a90e54bf",
+      "title": "Davell Crawford",
+      "start": "2026-12-31T22:30:00-06:00",
+      "url": "https://www.jambase.com/show/davell-crawford-snug-harbor-20261231-2"
     }
   ]
 }
