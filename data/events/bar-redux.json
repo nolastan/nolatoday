@@ -2,10 +2,22 @@
   "venue": "bar-redux",
   "events": [
     {
-      "id": "5f4c9b8b951c",
+      "id": "e631c7f20fe0",
       "title": "Dandelioness, Chasm Comfort, Night Ride Radio (DJ set)",
+      "start": "2026-11-20T21:00:00-06:00",
+      "url": "https://www.instagram.com/p/Df2nlZ5HZ1d/"
+    },
+    {
+      "id": "54ea2ad656bb",
+      "title": "Foot & The Twinkle Toes, Stumps Duh Clown, Badger the Clown",
       "start": "2026-11-21T21:00:00-06:00",
-      "url": "https://www.instagram.com/p/DfdGZ14ht2p/"
+      "url": "https://www.instagram.com/p/Df56CSptO1o/"
+    },
+    {
+      "id": "6dab387bdfde",
+      "title": "Grannia Griffith, Rosemary Wells",
+      "start": "2026-11-29T21:00:00-06:00",
+      "url": "https://www.instagram.com/p/Df56SVEtuzM/"
     }
   ]
 }
