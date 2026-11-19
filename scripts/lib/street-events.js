@@ -238,7 +238,7 @@ export function mapStreetEvent(e, { from, to }) {
   for (let day = DateTime.fromISO(e.date, { zone: ZONE }); day.toISODate() <= e.end_date; day = day.plus({ days: 1 })) {
     const date = day.toISODate();
     if (date < from || date > to) continue;
-    const item = { id: e.id, n: e.name, c: e.category_label, p: e.point };
+    const item = { id: e.id, n: e.name, p: e.point };
     if (e.street) item.st = e.street;
     if (e.start_time) {
       const [sh, sm] = e.start_time.split(':').map(Number);

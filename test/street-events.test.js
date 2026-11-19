@@ -85,6 +85,6 @@ test('the map gets one item per day, with hours when the city gave them', () => 
   assert.equal(items.length, 1, 'days before the window are left out');
   assert.equal(items[0].s, '2026-11-27T12:00:00-06:00');
   assert.equal(items[0].e, '2026-11-27T20:00:00-06:00');
-  assert.equal(items[0].c, 'Block party');
+  assert.equal(items[0].c, undefined, 'the type only repeats the title, so the map does not get it');
   assert.equal(items[0].st, 'Saint Joseph Street');
 });

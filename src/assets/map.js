@@ -466,7 +466,7 @@
     return ev.a ? '' : timeFmt.format(new Date(Date.parse(ev.s)));
   }
   function streetRow(ev, now) {
-    return { type: 'street', time: streetTime(ev), live: isLive(ev, now) ? 'Happening now' : '', html: esc(ev.c) + (ev.st ? ' on ' + esc(ev.st) : '') };
+    return { type: 'street', time: streetTime(ev), live: isLive(ev, now) ? 'Happening now' : '', html: esc(ev.st || '') };
   }
   function streetModel(ev, now) {
     return { kind: 'street', name: ev.n, href: null, image: null, rows: [streetRow(ev, now)], note: '' };
@@ -558,7 +558,7 @@
         venueModel(slug, venue, byVenue[slug], now, food, street));
     });
     streetAlone.forEach(function (ev) {
-      addMarker('street:' + ev.id, ev.p, 'marker marker--street', ev.n + ': ' + ev.c, streetModel(ev, now));
+      addMarker('street:' + ev.id, ev.p, 'marker marker--street', ev.n + (ev.st ? ', ' + ev.st : ''), streetModel(ev, now));
     });
     Object.keys(foodByPlace).forEach(function (key) {
       var place = (data.foodPlaces || {})[key];
