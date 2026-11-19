@@ -6,10 +6,10 @@ import { foodIcon } from './food-icons.js';
 
 const MAX_LISTED = 120;
 
-export function staticMapUrl(ctx, venue, { theme, width, height, zoom = 14.5, retina = true }) {
+export function staticMapUrl(ctx, venue, { theme, width, height, zoom = 14.5, retina = true, icon = 'music', color }) {
   const { mapbox } = ctx.config;
   const style = theme === 'light' ? mapbox.styleLight : mapbox.styleDark;
-  const pin = `pin-l-music+${theme === 'light' ? 'e8590c' : 'ffa500'}(${venue.lng},${venue.lat})`;
+  const pin = `pin-l-${icon}+${color ?? (theme === 'light' ? 'e8590c' : 'ffa500')}(${venue.lng},${venue.lat})`;
   // Center the camera slightly south so the pin sits in the upper part of the banner, clear of the title.
   return `https://api.mapbox.com/styles/v1/${style}/static/${pin}/${venue.lng},${(venue.lat - 0.0007).toFixed(6)},${zoom},0/${width}x${height}${retina ? '@2x' : ''}?access_token=${mapbox.token}&attribution=false&logo=false`;
 }

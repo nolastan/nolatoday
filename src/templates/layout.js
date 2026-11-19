@@ -12,9 +12,10 @@ export function jsonScript(data) {
   return JSON.stringify(data).replace(/</g, '\\u003c').replace(/-->/g, '--\\u003e');
 }
 
-export function layout(ctx, { title, description, canonical, image, body, bodyClass = '', head = '', scripts = '', noindex = false }) {
+export function layout(ctx, { title, description, canonical, image, imageAlt, body, bodyClass = '', head = '', scripts = '', noindex = false }) {
   const { config, asset } = ctx;
   const ogImage = image ? new URL(image, config.siteUrl).toString() : `${config.siteUrl}/images/og-default.jpg`;
+  const ogTitle = title.replace(/ – NOLA\.Today$/, '');
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -31,11 +32,16 @@ ${config.appStoreId ? `<meta name="apple-itunes-app" content="app-id=${esc(confi
 <meta property="og:site_name" content="${esc(config.siteName)}">
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="website">
-<meta property="og:title" content="${esc(title.replace(/ – NOLA\.Today$/, ''))}">
+<meta property="og:title" content="${esc(ogTitle)}">
 <meta property="og:description" content="${esc(description)}">
 ${canonical ? `<meta property="og:url" content="${esc(canonical)}">` : ''}
 <meta property="og:image" content="${esc(ogImage)}">
+${image ? '' : '<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">'}
+<meta property="og:image:alt" content="${esc(imageAlt ?? ogTitle)}">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="${esc(ogTitle)}">
+<meta name="twitter:description" content="${esc(description)}">
+<meta name="twitter:image" content="${esc(ogImage)}">
 <link rel="icon" href="${asset('/favicon.ico')}" sizes="any">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
