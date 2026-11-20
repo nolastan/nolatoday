@@ -2,6 +2,19 @@
   "venue": "bjs",
   "events": [
     {
+      "id": "40b5b0f9cf7d",
+      "title": "Kumasi Afrobeat Orchestra",
+      "start": "2026-11-21T21:00:00-06:00",
+      "end": "2026-11-22T00:00:00-06:00",
+      "url": "https://www.instagram.com/p/Df8DO11pKUE/"
+    },
+    {
+      "id": "314a1bd3189c",
+      "title": "Tuba Skinny",
+      "start": "2026-11-22T18:00:00-06:00",
+      "url": "https://www.instagram.com/p/Df9_iBRxIQB/"
+    },
+    {
       "id": "53f49ce53c66",
       "title": "Brasinola",
       "start": "2026-11-28T21:00:00-06:00",
