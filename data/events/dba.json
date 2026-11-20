@@ -2,11 +2,6 @@
   "venue": "dba",
   "events": [
     {
-      "id": "c5144ed78922",
-      "title": "Vegas Cola Band",
-      "start": "2026-11-19T21:00:00-06:00"
-    },
-    {
       "id": "24aa169fdc9a",
       "title": "Michael Watson & The Alchemy",
       "start": "2026-11-20T18:00:00-06:00"
@@ -17,9 +12,10 @@
       "start": "2026-11-20T22:00:00-06:00"
     },
     {
-      "id": "276e5297f940",
-      "title": "Young Lion Showcase",
-      "start": "2026-11-21T14:30:00-06:00"
+      "id": "d89870d0a4d5",
+      "title": "A Little Lagniappe Giveback — Young Lion Showcase",
+      "start": "2026-11-21T14:30:00-06:00",
+      "url": "https://www.eventbrite.com/e/a-little-lagniappe-a-holiday-giveback-tickets-2005158416802"
     },
     {
       "id": "3b1259238035",
@@ -125,7 +121,8 @@
     {
       "id": "e686cb2bdf0e",
       "title": "The Soul Rebels",
-      "start": "2026-12-04T22:00:00-06:00"
+      "start": "2026-12-04T22:00:00-06:00",
+      "url": "https://www.eventbrite.com/e/the-soul-rebels-at-dba-tickets-2005161877152"
     },
     {
       "id": "1b7419202ca5",
@@ -146,6 +143,12 @@
       "id": "945cecd7453d",
       "title": "Stella Artois Presents — James Andrews Crescent City All-Stars Band",
       "start": "2026-12-19T22:00:00-06:00"
+    },
+    {
+      "id": "399716ccefd2",
+      "title": "Soulful Christmas: Robin Barnes & Friends — Robin Barnes",
+      "start": "2026-12-24T19:00:00-06:00",
+      "url": "https://www.eventbrite.com/e/2004877116425?aff=oddtdtcreator"
     },
     {
       "id": "85d0f526805b",

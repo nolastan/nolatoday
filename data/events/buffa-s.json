@@ -26,6 +26,12 @@
       "url": "https://www.buffasbar.com/events/traditional-jazz-brunch-with-some-like-it-hot-262211"
     },
     {
+      "id": "b81d730c26ef",
+      "title": "The Pfister Sisters",
+      "start": "2026-11-22T16:00:00-06:00",
+      "url": "https://www.buffasbar.com/events/the-pfister-sisters-262211"
+    },
+    {
       "id": "2f3a68af930c",
       "title": "MidniteWeeks Featuring Mark Johnson",
       "start": "2026-11-22T19:00:00-06:00",
@@ -164,6 +170,12 @@
       "url": "https://www.buffasbar.com/events/traditional-jazz-brunch-w-some-like-it-hot-261312"
     },
     {
+      "id": "12d3137a9a91",
+      "title": "Fa-La-La Mingo",
+      "start": "2026-12-13T15:00:00-06:00",
+      "url": "https://www.buffasbar.com/events/fa-la-la-mingo-261312"
+    },
+    {
       "id": "6ba9ccce456a",
       "title": "David Doucet",
       "start": "2026-12-14T19:00:00-06:00",
@@ -182,10 +194,22 @@
       "url": "https://www.buffasbar.com/events/traditional-jazz-brunch-w-some-like-it-hot-262012"
     },
     {
+      "id": "27d357480e93",
+      "title": "The Pfister Sisters",
+      "start": "2026-12-20T16:00:00-06:00",
+      "url": "https://www.buffasbar.com/events/the-pfister-sisters-262012"
+    },
+    {
       "id": "7dbb6519dff0",
       "title": "David Doucet",
       "start": "2026-12-21T19:00:00-06:00",
       "url": "https://www.buffasbar.com/events/david-doucet-262112"
+    },
+    {
+      "id": "1c9141b91b9d",
+      "title": "Tom McDermott",
+      "start": "2026-12-24T20:00:00-06:00",
+      "url": "https://www.buffasbar.com/events/tom-mcdermott-262412"
     },
     {
       "id": "49442a97e75c",
@@ -198,6 +222,12 @@
       "title": "David Doucet",
       "start": "2026-12-28T19:00:00-06:00",
       "url": "https://www.buffasbar.com/events/david-doucet-262812"
+    },
+    {
+      "id": "1bcdf6625b8e",
+      "title": "Tom McDermott",
+      "start": "2026-12-31T20:00:00-06:00",
+      "url": "https://www.buffasbar.com/events/tom-mcdermott-263112"
     }
   ]
 }
