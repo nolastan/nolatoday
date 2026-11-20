@@ -2,12 +2,6 @@
   "venue": "hi-ho",
   "events": [
     {
-      "id": "b65a7ade521f",
-      "title": "80s night",
-      "start": "2026-11-19T20:00:00-06:00",
-      "end": "2026-11-19T23:00:00-06:00"
-    },
-    {
       "id": "1ca76e52fc9d",
       "title": "Tracorum & Bon Bon Vivant",
       "start": "2026-11-20T20:30:00-06:00",

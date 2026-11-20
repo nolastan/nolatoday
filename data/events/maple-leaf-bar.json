@@ -2,20 +2,6 @@
   "venue": "maple-leaf-bar",
   "events": [
     {
-      "id": "5520ff1c2f9f",
-      "title": "Booker & Beyond - Lilli Lewis",
-      "start": "2026-11-19T18:00:00-06:00",
-      "end": "2026-11-19T19:30:00-06:00",
-      "url": "https://www.mapleleafbar.com/events/booker-beyond-lilli-lewis"
-    },
-    {
-      "id": "bce5c81098ec",
-      "title": "Johnny Vidacovich Trio Ft. Brian Haas & Alex Massa",
-      "start": "2026-11-19T20:00:00-06:00",
-      "end": "2026-11-20T00:00:00-06:00",
-      "url": "https://www.mapleleafbar.com/events/johnny-vidacovich-trio-ft-brian-haas-alex-massa"
-    },
-    {
       "id": "11f3e98a4478",
       "title": "New Orleans Legacy Coalition",
       "start": "2026-11-20T20:00:00-06:00",
@@ -42,6 +28,13 @@
       "start": "2026-11-21T22:00:00-06:00",
       "end": "2026-11-22T00:00:00-06:00",
       "url": "https://www.mapleleafbar.com/events/rebirth-brass-band"
+    },
+    {
+      "id": "2037b6203120",
+      "title": "George Porter Jr. Trio Ft. Chris Adkins (7pm)",
+      "start": "2026-11-23T19:00:00-06:00",
+      "end": "2026-11-23T21:30:00-06:00",
+      "url": "https://www.mapleleafbar.com/events/george-porter-jr-trio-ft-chris-adkins-7pm-6"
     }
   ]
 }

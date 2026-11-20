@@ -2,11 +2,6 @@
   "venue": "dba",
   "events": [
     {
-      "id": "aa230f05d32b",
-      "title": "Ethan Santos",
-      "start": "2026-11-19T18:00:00-06:00"
-    },
-    {
       "id": "c5144ed78922",
       "title": "Vegas Cola Band",
       "start": "2026-11-19T21:00:00-06:00"
@@ -166,6 +161,11 @@
       "id": "ed23657e85e0",
       "title": "The Soul Rebels",
       "start": "2027-01-01T22:00:00-06:00"
+    },
+    {
+      "id": "8fa0c587800b",
+      "title": "Jason Neville Funky Soul Allstars",
+      "start": "2027-01-15T21:00:00-06:00"
     },
     {
       "id": "66026804111d",

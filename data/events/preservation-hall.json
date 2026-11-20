@@ -2,12 +2,6 @@
   "venue": "preservation-hall",
   "events": [
     {
-      "id": "222be85ff770",
-      "title": "Preservation All-Stars ft. Wendell Brunious",
-      "start": "2026-11-19T17:00:00-06:00",
-      "url": "https://www.preservationhall.com/events/june-1st-preservation-all-stars-feat-wendell-brunious/"
-    },
-    {
       "id": "dc82d488aeba",
       "title": "Preservation Hall Matinee Series Presents Clint Maedgen",
       "start": "2026-11-20T14:30:00-06:00",

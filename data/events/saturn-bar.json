@@ -2,20 +2,6 @@
   "venue": "saturn-bar",
   "events": [
     {
-      "id": "b7a6b6abc167",
-      "title": "Gina Leslie and Tom Quell",
-      "start": "2026-11-19T21:00:00-06:00",
-      "end": "2026-11-20T01:00:00-06:00",
-      "url": "https://dice.fm/event/6af560dc20008500018892c8"
-    },
-    {
-      "id": "2b78c1927304",
-      "title": "SLAAP Cabaret",
-      "start": "2026-11-20T21:00:00-06:00",
-      "end": "2026-11-21T01:00:00-06:00",
-      "url": "https://dice.fm/event/6aba922341806b0001f23a9e"
-    },
-    {
       "id": "df18db37a54a",
       "title": "Pleasure Savior's Don't Dance Don't Come",
       "start": "2026-11-21T22:00:00-06:00",

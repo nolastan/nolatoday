@@ -2,16 +2,10 @@
   "venue": "marigny-opera-house",
   "events": [
     {
-      "id": "c806e2b98dbc",
+      "id": "ae00cd8c4766",
       "title": "Marigny Opera Ballet 2026-2027 Encore Subscription",
-      "start": "2026-11-19T12:00:00-06:00",
+      "start": "2026-11-20T12:00:00-06:00",
       "url": "https://marignyoperahouse.org/upcoming-events/marigny-opera-ballet-2026-2027-encore-subscription/"
-    },
-    {
-      "id": "e0866e0f64ca",
-      "title": "The Desanctified Fashion Show",
-      "start": "2026-11-19T20:00:00-06:00",
-      "url": "https://marignyoperahouse.org/upcoming-events/desanctified-fashion-show/"
     },
     {
       "id": "004b44081402",
@@ -71,6 +65,12 @@
       "id": "9dc1b3aa99f5",
       "title": "Seven Deadly Sins (Die Sieben Todsünden)",
       "start": "2026-12-19T20:00:00-06:00",
+      "url": "https://marignyoperahouse.org/upcoming-events/die-sieben-todsunden-the-seven-deadly-sins/"
+    },
+    {
+      "id": "b8c42f9caae8",
+      "title": "Seven Deadly Sins (Die Sieben Todsünden)",
+      "start": "2026-12-20T16:00:00-06:00",
       "url": "https://marignyoperahouse.org/upcoming-events/die-sieben-todsunden-the-seven-deadly-sins/"
     }
   ]

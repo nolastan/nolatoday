@@ -2,27 +2,6 @@
   "venue": "the-allways-lounge",
   "events": [
     {
-      "id": "b84b395b0a89",
-      "title": "Van Ella Bordella (burlesque)",
-      "start": "2026-11-19T19:00:00-06:00",
-      "end": "2026-11-19T21:30:00-06:00",
-      "url": "https://tockify.com/allwayslounge/detail/1768/1795136400000"
-    },
-    {
-      "id": "de2f60351c42",
-      "title": "Blushin' Roulette (Burlesque)",
-      "start": "2026-11-19T22:30:00-06:00",
-      "end": "2026-11-19T23:55:00-06:00",
-      "url": "https://tockify.com/allwayslounge/detail/4510/1795149000000"
-    },
-    {
-      "id": "f895a01d9f59",
-      "title": "Bodice Rippers Burlesque Book Club",
-      "start": "2026-11-19T22:30:00-06:00",
-      "end": "2026-11-19T23:30:00-06:00",
-      "url": "https://tockify.com/allwayslounge/detail/4414/1795149000000"
-    },
-    {
       "id": "1f9f4a0b16d1",
       "title": "Henrietta's Baudy Brothel Sing A-Long",
       "start": "2026-11-20T17:00:00-06:00",
@@ -226,8 +205,8 @@
       "url": "https://tockify.com/allwayslounge/detail/3920/1795917600000"
     },
     {
-      "id": "2e51f265faaf",
-      "title": "KAPOW! (burlesque)",
+      "id": "cf7e4f02f857",
+      "title": "KAPOW! Burlesque & Drag with a BANG!",
       "start": "2026-11-28T22:30:00-06:00",
       "end": "2026-11-29T00:00:00-06:00",
       "url": "https://tockify.com/allwayslounge/detail/1716/1795926600000"
@@ -905,8 +884,8 @@
       "url": "https://tockify.com/allwayslounge/detail/4492/1798345800000"
     },
     {
-      "id": "b0af5015894a",
-      "title": "KAPOW! (burlesque)",
+      "id": "24fd50c88d2c",
+      "title": "KAPOW! Burlesque & Drag with a BANG!",
       "start": "2026-12-26T22:30:00-06:00",
       "end": "2026-12-27T00:00:00-06:00",
       "url": "https://tockify.com/allwayslounge/detail/1716/1798345800000"
@@ -1002,8 +981,8 @@
       "url": "https://tockify.com/allwayslounge/detail/4467/1798777800000"
     },
     {
-      "id": "b0f444d9ee6b",
-      "title": "Cabaret Magnifique (burlesque)",
+      "id": "090ef65befc3",
+      "title": "Cabaret Magnifique NYE (burlesque)",
       "start": "2026-12-31T23:00:00-06:00",
       "end": "2027-01-01T01:00:00-06:00",
       "url": "https://tockify.com/allwayslounge/detail/4639/1798779600000"
@@ -1966,6 +1945,27 @@
       "start": "2027-02-16T21:30:00-06:00",
       "end": "2027-02-16T23:00:00-06:00",
       "url": "https://tockify.com/allwayslounge/detail/2404/1802835000000"
+    },
+    {
+      "id": "7b39f58d4fb5",
+      "title": "Lefty Lucy's Burlesque Bingo",
+      "start": "2027-02-17T18:30:00-06:00",
+      "end": "2027-02-17T20:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/3097/1802910600000"
+    },
+    {
+      "id": "dda36beb68ce",
+      "title": "Brechtfest V111",
+      "start": "2027-02-17T20:00:00-06:00",
+      "end": "2027-02-17T22:00:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/4437/1802916000000/2"
+    },
+    {
+      "id": "dd5ea258839e",
+      "title": "Esoterotica (original erotic readings)",
+      "start": "2027-02-17T21:00:00-06:00",
+      "end": "2027-02-17T22:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/196/1802919600000"
     }
   ]
 }

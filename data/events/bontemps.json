@@ -2,11 +2,6 @@
   "venue": "bontemps",
   "events": [
     {
-      "id": "e64f49065026",
-      "title": "The Soul Rebels",
-      "start": "2026-11-19T23:00:00-06:00"
-    },
-    {
       "id": "79f68414f5ec",
       "title": "Caleb Tokarska",
       "start": "2026-11-20T23:00:00-06:00"
@@ -75,8 +70,7 @@
     {
       "id": "62b3a657a717",
       "title": "Jamie Bernstein and Zen Cowboys",
-      "start": "2026-12-12T16:00:00-06:00",
-      "end": "2026-12-12T23:00:00-06:00"
+      "start": "2026-12-12T16:00:00-06:00"
     },
     {
       "id": "0168b77cd248",

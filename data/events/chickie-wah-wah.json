@@ -2,12 +2,6 @@
   "venue": "chickie-wah-wah",
   "events": [
     {
-      "id": "f6e9c2463e19",
-      "title": "Michelle Shocked",
-      "start": "2026-11-19T20:00:00-06:00",
-      "url": "https://www.jambase.com/show/michelle-shocked-chickie-wah-wah-20261119"
-    },
-    {
       "id": "04d6ada619c9",
       "title": "Robyn Hitchcock",
       "start": "2026-11-20T21:00:00-06:00",
@@ -72,6 +66,12 @@
       "title": "Morning 40 Federation",
       "start": "2026-12-31T21:30:00-06:00",
       "url": "https://www.jambase.com/show/morning-40-federation-chickie-wah-wah-20261231"
+    },
+    {
+      "id": "4b53a480eede",
+      "title": "Rainbow Girls",
+      "start": "2027-01-14T19:00:00-06:00",
+      "url": "https://www.jambase.com/show/rainbow-girls-chickie-wah-wah-20270114"
     },
     {
       "id": "6e1b623ab761",

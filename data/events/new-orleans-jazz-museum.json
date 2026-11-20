@@ -2,13 +2,6 @@
   "venue": "new-orleans-jazz-museum",
   "events": [
     {
-      "id": "08ca4260811c",
-      "title": "Byron Asher’s Skrontch Music",
-      "start": "2026-11-19T18:00:00-06:00",
-      "end": "2026-11-19T20:15:00-06:00",
-      "url": "https://nolajazzmuseum.org/events/2026/11/19/byron-asher-skrontch-performance"
-    },
-    {
       "id": "a47dffe19ba2",
       "title": "Gallatin Street Fridays Presented by The Nathan and Priscilla Gordon Foundation: Piano Hour with Keiko Komaki",
       "start": "2026-11-20T14:00:00-06:00",

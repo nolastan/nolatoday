@@ -2,13 +2,6 @@
   "venue": "rock-n-bowl",
   "events": [
     {
-      "id": "5983d8bab524",
-      "title": "Nathan & the Zydeco Cha Chas",
-      "start": "2026-11-19T20:00:00-06:00",
-      "end": "2026-11-19T23:00:00-06:00",
-      "url": "https://www.rocknbowl.com/event-details/nathan-the-zydeco-cha-chas-11-19-26"
-    },
-    {
       "id": "43c4a47b86b2",
       "title": "Rouge Krewe",
       "start": "2026-11-20T20:30:00-06:00",
