@@ -4,24 +4,16 @@
   "icon": "fries",
   "type": "Food truck",
   "description": "Food truck based at its Terrytown restaurant at 1168 Terry Pkwy, Gretna; it posts a weekly schedule every Monday.",
-  "from": "https://www.instagram.com/p/Df7XLdiMnce/",
-  "updated": "2026-11-19",
+  "from": "https://www.instagram.com/p/Df9vdCWBGoB/",
+  "updated": "2026-11-20",
   "events": [
     {
-      "date": "2026-11-19",
-      "time": "11:00",
-      "end": "13:00",
-      "place": "st-charles-courthouse",
-      "url": "https://www.instagram.com/p/Df7XLdiMnce/",
-      "confirmedOn": "2026-11-19"
-    },
-    {
-      "date": "2026-11-19",
-      "time": "11:00",
-      "end": "13:30",
-      "place": "jefferson-parish-sheriffs-office",
-      "url": "https://www.instagram.com/p/Df7XLdiMnce/",
-      "confirmedOn": "2026-11-19"
+      "date": "2026-11-20",
+      "time": "09:30",
+      "end": "14:00",
+      "place": "marrero-middle-school",
+      "url": "https://www.instagram.com/p/Df9vdCWBGoB/",
+      "confirmedOn": "2026-11-20"
     }
   ]
 }

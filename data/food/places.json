@@ -42,6 +42,12 @@
     "lat": 29.90617,
     "lng": -90.06422
   },
+  "marrero-middle-school": {
+    "name": "Marrero Middle School",
+    "address": "4100 7th St, Marrero, LA 70072",
+    "lat": 29.89924,
+    "lng": -90.09134
+  },
   "peewees-saratoga": {
     "name": "Home base on S Saratoga",
     "address": "3313 S Saratoga St",
