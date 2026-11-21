@@ -7,6 +7,7 @@ import { adapters } from '../scrapers/index.js';
 import { MANUAL_DIR, KINDS, checkManual } from '../scrapers/manual.js';
 import { VENDORS_DIR, loadPlaces, loadFoodSources, checkVendor, checkPlaces } from './lib/food.js';
 import { loadArtists, checkArtists } from './lib/artists.js';
+import { loadArticles, checkArticles } from './lib/articles.js';
 
 const errors = [];
 const err = (slug, msg) => errors.push(`${slug}: ${msg}`);
@@ -154,6 +155,7 @@ for (const [i, s] of loadFoodSources().entries()) {
 
 const artists = loadArtists();
 for (const p of checkArtists(artists)) err(`data/artists/${p.slug}.json`, p.message);
+for (const p of checkArticles(loadArticles(), new Set(artists.map((a) => a.slug)))) err(`data/articles/${p.slug}.md`, p.message);
 
 if (errors.length) {
   console.error(errors.map((e) => `✗ ${e}`).join('\n'));

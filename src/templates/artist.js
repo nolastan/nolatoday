@@ -32,10 +32,21 @@ export function artistLinks(artist) {
   return links;
 }
 
+/** An article about the artist (data/articles/), in full: headline, dek, byline, then the text. */
+export function articleHtml(article) {
+  const date = DateTime.fromISO(article.date, { zone: ZONE });
+  return `<article class="wrap artist-article">
+    <h2>${esc(article.title)}</h2>
+    ${article.dek ? `<p class="lede">${esc(article.dek)}</p>` : ''}
+    <p class="article-byline muted">By ${esc(article.author)} · <time datetime="${esc(article.date)}">${date.toFormat('LLLL d, yyyy')}</time></p>
+    ${article.paragraphs.map((p) => `<p>${esc(p)}</p>`).join('\n    ')}
+  </article>`;
+}
+
 const clock = (e, dt) => (e.allDay ? 'All day' : dt.toFormat(dt.minute ? 'h:mm a' : 'h a').toLowerCase());
 
 /** /artists/<slug>: who they are, where to hear them, and every upcoming show. `shows` is [{ event, venue }], soonest first. */
-export function artistPage(ctx, artist, { shows, meta }) {
+export function artistPage(ctx, artist, { shows, meta, articles = [] }) {
   const { config, url } = ctx;
   const canonical = `${config.siteUrl}/artists/${artist.slug}`;
   const listed = shows.slice(0, MAX_LISTED);
@@ -61,6 +72,17 @@ export function artistPage(ctx, artist, { shows, meta }) {
   if (listed.length) {
     jsonLd.event = listed.slice(0, 50).map(({ event, venue }) => ({ ...eventSchema(ctx, venue, event), performer: { '@id': canonical } }));
   }
+  const articleLd = articles.map((a) => ({
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: a.title,
+    ...(a.dek ? { description: a.dek } : {}),
+    author: { '@type': 'Person', name: a.author },
+    datePublished: a.date,
+    publisher: { '@type': 'Organization', name: config.siteName, url: config.siteUrl },
+    mainEntityOfPage: canonical,
+    about: { '@id': canonical },
+  }));
   const breadcrumbs = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -141,6 +163,7 @@ export function artistPage(ctx, artist, { shows, meta }) {
     ${schedule}
     ${player}
   </div>
+  ${articles.map(articleHtml).join('\n  ')}
   <section class="wrap venue-foot muted">
     <p><a href="${esc(reportUrl)}" rel="noopener">Report a problem with this page</a>.</p>
   </section>
@@ -153,7 +176,9 @@ ${siteFooter(ctx)}`;
     canonical,
     image: meta?.image,
     bodyClass: 'page-artist',
-    head: `<script type="application/ld+json">${jsonScript(jsonLd)}</script>\n<script type="application/ld+json">${jsonScript(breadcrumbs)}</script>`,
+    head: `<script type="application/ld+json">${jsonScript(jsonLd)}</script>\n<script type="application/ld+json">${jsonScript(breadcrumbs)}</script>${articleLd
+      .map((ld) => `\n<script type="application/ld+json">${jsonScript(ld)}</script>`)
+      .join('')}`,
     body,
   });
 }
