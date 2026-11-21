@@ -5,35 +5,17 @@
   "type": "Food truck",
   "description": "Crab cake truck: Wednesdays and Thursdays at home base on S Saratoga St, Fridays at Abita NOLA.",
   "website": "https://peeweescrabcakes.com/",
-  "from": "https://www.instagram.com/p/Df7ixDymud-/",
-  "updated": "2026-11-19",
+  "from": "https://www.instagram.com/p/DgAv97sFX19/",
+  "updated": "2026-11-21",
   "events": [
     {
-      "date": "2026-11-19",
-      "time": "12:00",
-      "end": "18:00",
-      "place": "peewees-saratoga",
-      "url": "https://www.instagram.com/p/Df7ixDymud-/",
-      "confirmedOn": "2026-11-19",
-      "basis": "Weekly schedule posted Nov 16; reconfirmed Nov 19"
-    },
-    {
-      "date": "2026-11-20",
-      "time": "12:00",
-      "end": "18:00",
-      "place": "peewees-saratoga",
-      "url": "https://www.instagram.com/p/Df7ixDymud-/",
-      "confirmedOn": "2026-11-19",
-      "basis": "Weekly schedule posted Nov 16; reconfirmed Nov 19"
-    },
-    {
       "date": "2026-11-21",
-      "time": "12:00",
+      "time": "13:00",
       "end": "18:00",
       "place": "peewees-saratoga",
-      "url": "https://www.instagram.com/p/Df7ixDymud-/",
-      "confirmedOn": "2026-11-19",
-      "basis": "Weekly schedule posted Nov 16; reconfirmed Nov 19"
+      "url": "https://www.instagram.com/p/DgAv97sFX19/",
+      "confirmedOn": "2026-11-21",
+      "basis": "Weekly schedule posted Nov 16; reconfirmed Nov 21"
     }
   ]
 }

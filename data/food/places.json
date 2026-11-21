@@ -54,6 +54,12 @@
     "lat": 29.93333,
     "lng": -90.09293
   },
+  "pepps-pub": {
+    "name": "Pepp's Pub",
+    "address": "706 Franklin Ave, New Orleans, LA 70117",
+    "lat": 29.96513,
+    "lng": -90.0514
+  },
   "petes-out-in-the-cold": {
     "name": "Pete's Out in the Cold",
     "address": "701 Sixth St",
