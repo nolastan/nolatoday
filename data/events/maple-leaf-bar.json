@@ -2,13 +2,6 @@
   "venue": "maple-leaf-bar",
   "events": [
     {
-      "id": "007c941984a0",
-      "title": "Alex Wasily & Enemies",
-      "start": "2026-11-20T23:00:00-06:00",
-      "end": "2026-11-21T02:00:00-06:00",
-      "url": "https://www.mapleleafbar.com/events/alex-wasily-enemies"
-    },
-    {
       "id": "5adb0d00e782",
       "title": "Aliss -A- Fest Birthday Celebration",
       "start": "2026-11-21T19:00:00-06:00",
@@ -35,6 +28,13 @@
       "start": "2026-11-23T22:00:00-06:00",
       "end": "2026-11-24T02:00:00-06:00",
       "url": "https://www.mapleleafbar.com/events/george-porter-jr-trio-ft-chris-adkins-10pm-6"
+    },
+    {
+      "id": "131ab585b305",
+      "title": "Very Good Tuesday Ft. Alex Wasily, Ari Teitel, Aurelien Barnes, Miles Blackwell, & Shea Siraj",
+      "start": "2026-11-24T20:30:00-06:00",
+      "end": "2026-11-25T00:00:00-06:00",
+      "url": "https://www.mapleleafbar.com/events/very-good-tuesday-ft-alex-wasily-ari-teitel-aurelien-barnes-miles-blackwell-shea-siraj"
     }
   ]
 }
