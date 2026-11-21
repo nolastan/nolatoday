@@ -227,3 +227,19 @@ test('genres: broad genres from specific ones and from a band’s name', () => {
   assert.deepEqual(specificGenres({ spotifyGenres: ['brass band'], musicbrainzGenres: ['Brass Band', 'jazz'] }), ['brass band', 'jazz']);
   assert.deepEqual(specificGenres(undefined), []);
 });
+
+test('articles: parsed from front matter, checked, and shown in full on the artist page', async () => {
+  const { parseArticle, checkArticles } = await import('../scripts/lib/articles.js');
+  const { articleHtml } = await import('../src/templates/artist.js');
+  const a = parseArticle('---\ntitle: Red & Green\ndek: A talk\nauthor: Landry von Bohn\ndate: 2022-06-08\nartist: tank-and-the-bangas\n---\n\nFirst line\nsame paragraph.\n\nSecond <one>.\n', 'red');
+  assert.deepEqual(a.paragraphs, ['First line same paragraph.', 'Second <one>.']);
+  assert.deepEqual(checkArticles([a], new Set(['tank-and-the-bangas'])), []);
+  assert.deepEqual(
+    checkArticles([{ ...a, artist: 'nobody', paragraphs: ['R&amp;B**'] }], new Set()).map((p) => p.message),
+    ['artist "nobody" has no file in data/artists/', 'the text has HTML entities or ** left in it'],
+  );
+  const html = articleHtml(a);
+  assert.match(html, /<h2>Red &amp; Green<\/h2>/);
+  assert.match(html, /By Landry von Bohn · <time datetime="2022-06-08">June 8, 2022<\/time>/);
+  assert.match(html, /<p>Second &lt;one&gt;\.<\/p>/);
+});

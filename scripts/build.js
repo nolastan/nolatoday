@@ -17,6 +17,7 @@ import { homePage, venuesPage, redirectPage, notFoundPage, privacyPage, contactP
 import { paradePage, paradesPage } from '../src/templates/parade.js';
 import { artistPage, artistsPage, artistLinks } from '../src/templates/artist.js';
 import { loadArtists, buildMatcher } from './lib/artists.js';
+import { loadArticles } from './lib/articles.js';
 import { specificGenres } from './lib/genres.js';
 import { loadFood } from './lib/food.js';
 import { foodPage, foodVendorPage } from '../src/templates/food.js';
@@ -226,7 +227,11 @@ function main() {
   const artistDirectory = artistsPage(ctx, artists, { showsBySlug: showsByArtist, meta: artistMeta });
   write('artists.html', artistDirectory);
   write('artists/index.html', artistDirectory);
-  for (const a of artists) write(`artists/${a.slug}.html`, artistPage(ctx, a, { shows: showsByArtist.get(a.slug), meta: artistMeta[a.slug] }));
+  const articles = loadArticles();
+  for (const a of artists) {
+    const about = articles.filter((x) => x.artist === a.slug);
+    write(`artists/${a.slug}.html`, artistPage(ctx, a, { shows: showsByArtist.get(a.slug), meta: artistMeta[a.slug], articles: about }));
+  }
   write(
     'artists.json',
     JSON.stringify(
