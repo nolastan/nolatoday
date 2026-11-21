@@ -729,6 +729,12 @@ a.popup-banner:hover h3 { text-decoration: underline; text-underline-offset: 3px
   .artist-columns.has-player .artist-listen { position: sticky; top: 24px; margin-top: 48px; }
 }
 .artist-list { list-style: none; margin: 24px 0 0; padding: 0; display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+.artist-article { margin-top: 64px; }
+.artist-article > * { max-width: 720px; }
+.artist-article h2 { margin-bottom: 8px; }
+.artist-article .lede { margin: 0 0 8px; }
+.article-byline { margin: 0 0 28px; font-size: 0.95rem; }
+.artist-article > p:not(.lede, .article-byline) { font-size: 1.1rem; line-height: 1.7; margin: 0 0 1.1em; }
 .artist-row a {
   display: flex;
   align-items: center;

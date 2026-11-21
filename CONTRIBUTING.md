@@ -179,6 +179,24 @@ Photos and genres go into `data/artist-meta.json`, which is generated: `node scr
 
 The artists directory filters by a dozen broad genres (Traditional jazz, Modern jazz, Brass band…), worked out at build time in `scripts/lib/genres.js` from those specific genres and from words in a band's name that leave no doubt ("Brass Band", "Jazz", "Zydeco"). To file a new specific genre under a broad one, add it to that genre's `match` there, with a test. Photos are linked from Spotify's CDN, never copied into the repo. The weekly "Update artists" workflow runs `discover --write` and `refresh` and commits the result.
 
+### Articles
+
+`data/articles/<slug>.md` is original writing for the site about one artist, shown in full on that artist's page under the shows. Front matter, then plain paragraphs separated by blank lines (no Markdown formatting):
+
+```
+---
+title: The Rise of Red Balloon
+dek: One-line summary under the headline (optional)
+author: Landry von Bohn
+date: 2022-06-08
+artist: tank-and-the-bangas
+---
+
+First paragraph.
+```
+
+`artist` must be a file in `data/artists/`. `node scripts/validate.js` also rejects leftover HTML entities (`&#34;`) and `**`.
+
 ## Food pop-ups
 
 Food trucks and pop-ups move around, so they aren't venues. They get a page each at `/food/<slug>`, a purple marker on the map (a venue with a show and food the same day keeps the music color), and a line on the host venue's page when they're at a venue. Everything lives in `data/food/`:
