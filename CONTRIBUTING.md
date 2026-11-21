@@ -215,6 +215,12 @@ Food trucks and pop-ups move around, so they aren't venues. They get a page each
 | `events[].confirmedOn` | the date of the post that announced the stop, or the weekly schedule it follows. Older than 30 days, the site says "Not confirmed since …" |
 | `events[].price`, `note`, `url`, `basis` | optional; `note` is shown, `basis` (how the stop was worked out) is not |
 
+## Live cameras
+
+`data/cameras.json` lists public live street cameras shown on the map. Each entry has a `name` (what the card lists), `lat`/`lng` (where the camera is mounted) and `embed`, an https player URL that may be framed on another site. Cameras with the same `lat`/`lng` share one marker, and the card lets you switch between them. `node scripts/validate.js` checks the file.
+
+Use the player's own frame URL, not a wrapper page. For EarthCam, the `earthcam.net/projects/common/js/embedviewer.php?...vid=N.flv` link refuses to be framed (`X-Frame-Options: SAMEORIGIN`); the iframe it writes, `https://www.earthcam.com/js/video/embed.php?type=h264&vid=N.flv&requested_version=current`, plays on any site that sends a referrer. Write `&`, not `&amp;`.
+
 ## Parades
 
 Parade data has its own pipeline and stricter sourcing rules than venues: routes and nearly all dates from official City of New Orleans records only, plus dates organizers announce on their own sites (`data/parades/announced.json`). See [docs/parades.md](docs/parades.md) before changing `scripts/parades.js`, `scripts/lib/permits.js`, `scripts/lib/route-trace.js` or anything in `data/parades/`.

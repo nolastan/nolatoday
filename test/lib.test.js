@@ -97,3 +97,14 @@ test('isScheduleUrl drops links to a venue’s general pages, keeps event pages 
   assert.equal(events[0].url, undefined);
   assert.equal(events[1].url, 'https://venue.example/e/b');
 });
+
+test('checkCameras: needs a name, a New Orleans point and a plain https embed', async () => {
+  const { checkCameras, loadCameras } = await import('../scripts/lib/cameras.js');
+  assert.deepEqual(checkCameras(loadCameras()), []);
+  const ok = { name: 'Bourbon Street', lat: 29.9587, lng: -90.0657, embed: 'https://example.com/embed.php?type=h264&vid=1.flv' };
+  assert.deepEqual(checkCameras([ok]), []);
+  assert.equal(checkCameras([{ ...ok, embed: 'http://example.com/x' }]).length, 1);
+  assert.equal(checkCameras([{ ...ok, embed: 'https://example.com/?a=1&amp;b=2' }]).length, 1);
+  assert.equal(checkCameras([{ ...ok, lat: 40.7 }]).length, 1);
+  assert.equal(checkCameras([{ ...ok, name: '' }]).length, 1);
+});
