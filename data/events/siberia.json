@@ -2,13 +2,6 @@
   "venue": "siberia",
   "events": [
     {
-      "id": "d7070cf16c32",
-      "title": "Dance... 4U",
-      "start": "2026-11-20T22:00:00-06:00",
-      "end": "2026-11-21T02:00:00-06:00",
-      "url": "https://dice.fm/event/6abc5c7d4fa5a5000173258d"
-    },
-    {
       "id": "243668fe5c0f",
       "title": "River Shook with Dave Jordan",
       "start": "2026-11-21T21:00:00-06:00",
@@ -42,6 +35,13 @@
       "start": "2026-11-27T21:00:00-06:00",
       "end": "2026-11-28T01:00:00-06:00",
       "url": "https://dice.fm/event/6a986c5373d6c90001f024ef"
+    },
+    {
+      "id": "a67531a899cd",
+      "title": "The Mystic Krewe of The Lords of Leather Presents: Turn-A-Bout",
+      "start": "2026-11-28T19:00:00-06:00",
+      "end": "2026-11-28T21:00:00-06:00",
+      "url": "https://dice.fm/event/6b008de0bafb90000122fbb0"
     },
     {
       "id": "c90a9d825460",

@@ -2,12 +2,6 @@
   "venue": "hi-ho",
   "events": [
     {
-      "id": "1ca76e52fc9d",
-      "title": "Tracorum & Bon Bon Vivant",
-      "start": "2026-11-20T20:30:00-06:00",
-      "end": "2026-11-20T23:30:00-06:00"
-    },
-    {
       "id": "b5797c50a364",
       "title": "Hot 8 Brass Band",
       "start": "2026-11-21T22:00:00-06:00",
@@ -174,6 +168,12 @@
       "title": "Locals Monday",
       "start": "2027-02-15T19:30:00-06:00",
       "end": "2027-02-15T22:00:00-06:00"
+    },
+    {
+      "id": "eadd998f0c75",
+      "title": "80's Night with DJ Shane Love",
+      "start": "2027-02-18T21:00:00-06:00",
+      "end": "2027-02-19T02:00:00-06:00"
     }
   ]
 }

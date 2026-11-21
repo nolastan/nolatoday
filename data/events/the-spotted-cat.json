@@ -2,11 +2,6 @@
   "venue": "the-spotted-cat",
   "events": [
     {
-      "id": "fb6fce89c158",
-      "title": "Paradise Jazz Band",
-      "start": "2026-11-20T14:00:00-06:00"
-    },
-    {
       "id": "1a885535adc3",
       "title": "Dirty Tuba",
       "start": "2026-11-20T22:00:00-06:00"

@@ -2,12 +2,6 @@
   "venue": "the-blue-crab",
   "events": [
     {
-      "id": "35902c9a55b1",
-      "title": "Terrence and the Fortress Band",
-      "start": "2026-11-20T17:00:00-06:00",
-      "end": "2026-11-20T21:00:00-06:00"
-    },
-    {
       "id": "3ca802024b6e",
       "title": "Redline",
       "start": "2026-11-21T12:00:00-06:00",

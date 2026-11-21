@@ -2,12 +2,6 @@
   "venue": "rock-n-bowl",
   "events": [
     {
-      "id": "43c4a47b86b2",
-      "title": "Rouge Krewe",
-      "start": "2026-11-20T20:30:00-06:00",
-      "url": "https://www.rocknbowl.com/event-details/rouge-krewe-11-20-26"
-    },
-    {
       "id": "845286ca6573",
       "title": "Nashville South",
       "start": "2026-11-21T20:30:00-06:00",
