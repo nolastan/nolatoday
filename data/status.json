@@ -99,32 +99,32 @@
     "bar-redux": {
       "ok": true,
       "firstSeen": "2026-11-09T17:58:39.821-06:00",
-      "count": 4,
-      "lastRun": "2026-11-21T01:27:22.742-06:00",
-      "lastSuccess": "2026-11-21T01:27:22.742-06:00",
-      "lastNonEmpty": "2026-11-21T01:27:22.742-06:00",
-      "consecutiveFailures": 0,
-      "sources": [
-        {
-          "type": "manual",
-          "ok": true,
-          "count": 4
-        }
-      ]
-    },
-    "bjs": {
-      "ok": true,
-      "firstSeen": "2026-11-09T18:16:00.481-06:00",
       "count": 3,
-      "lastRun": "2026-11-21T01:27:22.742-06:00",
-      "lastSuccess": "2026-11-21T01:27:22.742-06:00",
-      "lastNonEmpty": "2026-11-21T01:27:22.742-06:00",
+      "lastRun": "2026-11-21T12:17:06.764-06:00",
+      "lastSuccess": "2026-11-21T12:17:06.764-06:00",
+      "lastNonEmpty": "2026-11-21T12:17:06.764-06:00",
       "consecutiveFailures": 0,
       "sources": [
         {
           "type": "manual",
           "ok": true,
           "count": 3
+        }
+      ]
+    },
+    "bjs": {
+      "ok": true,
+      "firstSeen": "2026-11-09T18:16:00.481-06:00",
+      "count": 4,
+      "lastRun": "2026-11-21T12:17:06.764-06:00",
+      "lastSuccess": "2026-11-21T12:17:06.764-06:00",
+      "lastNonEmpty": "2026-11-21T12:17:06.764-06:00",
+      "consecutiveFailures": 0,
+      "sources": [
+        {
+          "type": "manual",
+          "ok": true,
+          "count": 4
         }
       ]
     },
@@ -196,32 +196,32 @@
     "cafe-negril": {
       "ok": true,
       "firstSeen": "2026-11-15T13:41:23.420-06:00",
-      "count": 3,
-      "lastRun": "2026-11-21T01:27:22.742-06:00",
-      "lastSuccess": "2026-11-21T01:27:22.742-06:00",
-      "lastNonEmpty": "2026-11-21T01:27:22.742-06:00",
+      "count": 4,
+      "lastRun": "2026-11-21T12:17:06.764-06:00",
+      "lastSuccess": "2026-11-21T12:17:06.764-06:00",
+      "lastNonEmpty": "2026-11-21T12:17:06.764-06:00",
       "consecutiveFailures": 0,
       "sources": [
         {
           "type": "manual",
           "ok": true,
-          "count": 3
+          "count": 4
         }
       ]
     },
     "carrollton-station": {
       "ok": true,
       "firstSeen": "2026-11-09T18:33:18.846-06:00",
-      "count": 1,
-      "lastRun": "2026-11-21T01:27:22.742-06:00",
-      "lastSuccess": "2026-11-21T01:27:22.742-06:00",
-      "lastNonEmpty": "2026-11-21T01:27:22.742-06:00",
+      "count": 2,
+      "lastRun": "2026-11-21T12:17:06.764-06:00",
+      "lastSuccess": "2026-11-21T12:17:06.764-06:00",
+      "lastNonEmpty": "2026-11-21T12:17:06.764-06:00",
       "consecutiveFailures": 0,
       "sources": [
         {
           "type": "manual",
           "ok": true,
-          "count": 1
+          "count": 2
         }
       ]
     },
@@ -292,16 +292,16 @@
     "domino": {
       "ok": true,
       "firstSeen": "2026-11-09T18:16:00.481-06:00",
-      "count": 9,
-      "lastRun": "2026-11-21T01:27:22.742-06:00",
-      "lastSuccess": "2026-11-21T01:27:22.742-06:00",
-      "lastNonEmpty": "2026-11-21T01:27:22.742-06:00",
+      "count": 8,
+      "lastRun": "2026-11-21T12:17:06.764-06:00",
+      "lastSuccess": "2026-11-21T12:17:06.764-06:00",
+      "lastNonEmpty": "2026-11-21T12:17:06.764-06:00",
       "consecutiveFailures": 0,
       "sources": [
         {
           "type": "manual",
           "ok": true,
-          "count": 9
+          "count": 8
         }
       ]
     },
@@ -586,16 +586,16 @@
     "okay-bar": {
       "ok": true,
       "firstSeen": "2026-11-09T18:33:18.846-06:00",
-      "count": 8,
-      "lastRun": "2026-11-21T01:27:22.742-06:00",
-      "lastSuccess": "2026-11-21T01:27:22.742-06:00",
-      "lastNonEmpty": "2026-11-21T01:27:22.742-06:00",
+      "count": 10,
+      "lastRun": "2026-11-21T12:17:06.764-06:00",
+      "lastSuccess": "2026-11-21T12:17:06.764-06:00",
+      "lastNonEmpty": "2026-11-21T12:17:06.764-06:00",
       "consecutiveFailures": 0,
       "sources": [
         {
           "type": "manual",
           "ok": true,
-          "count": 8
+          "count": 10
         }
       ]
     },
@@ -619,9 +619,9 @@
       "ok": true,
       "firstSeen": "2026-11-09T18:16:00.481-06:00",
       "count": 6,
-      "lastRun": "2026-11-21T01:27:22.742-06:00",
-      "lastSuccess": "2026-11-21T01:27:22.742-06:00",
-      "lastNonEmpty": "2026-11-21T01:27:22.742-06:00",
+      "lastRun": "2026-11-21T12:17:06.764-06:00",
+      "lastSuccess": "2026-11-21T12:17:06.764-06:00",
+      "lastNonEmpty": "2026-11-21T12:17:06.764-06:00",
       "consecutiveFailures": 0,
       "sources": [
         {
@@ -1016,5 +1016,5 @@
       ]
     }
   },
-  "generatedAt": "2026-11-21T01:27:22.742-06:00"
+  "generatedAt": "2026-11-21T12:17:06.764-06:00"
 }
