@@ -21,6 +21,7 @@ import { specificGenres } from './lib/genres.js';
 import { loadFood } from './lib/food.js';
 import { foodPage, foodVendorPage } from '../src/templates/food.js';
 import { FOOD_ICONS } from '../src/templates/food-icons.js';
+import { loadCameras } from './lib/cameras.js';
 import { loadArtistMeta } from './lib/spotify.js';
 import { venueFeed, foodFeed, paradesFeed, artistBroadGenres } from './lib/feeds.js';
 import { PARADES_FILE, SOURCES, loadParades, loadWebsites, loadPhotos, paradeOrgs, mapParade } from './lib/parades.js';
@@ -166,7 +167,7 @@ function main() {
     }
   }
   foodEvents.sort((a, b) => a.s.localeCompare(b.s));
-  write('events.json', JSON.stringify({ generatedAt: now.toISO(), venues: mapVenues, events: mapEvents, parades: mapParades, foodPlaces, food: foodEvents, foodIcons: Object.fromEntries([...new Set(foodEvents.map((e) => e.i))].map((k) => [k, FOOD_ICONS[k]])) }));
+  write('events.json', JSON.stringify({ generatedAt: now.toISO(), venues: mapVenues, events: mapEvents, parades: mapParades, foodPlaces, food: foodEvents, foodIcons: Object.fromEntries([...new Set(foodEvents.map((e) => e.i))].map((k) => [k, FOOD_ICONS[k]])), cameras: loadCameras().map(({ name, lat, lng, embed }) => ({ name, lat, lng, embed })) }));
 
   // Public venue list (handy for anyone building on this data).
   write(

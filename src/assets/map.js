@@ -366,6 +366,66 @@
     return shownParades.length;
   }
 
+  // ---- Cameras: live street feeds, on the map whatever day is picked -----------
+  // Cameras on one corner share a marker. Its card is the feed, with the cameras listed under it
+  // when there is more than one to pick from. The player only loads while the card is open, so a
+  // closed card isn't streaming. Video01Icon from Hugeicons free icons (MIT), like the marks above.
+  var CAMERA_ICON = '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 11C2 7.70017 2 6.05025 3.02513 5.02513C4.05025 4 5.70017 4 9 4H10C13.2998 4 14.9497 4 15.9749 5.02513C17 6.05025 17 7.70017 17 11V13C17 16.2998 17 17.9497 15.9749 18.9749C14.9497 20 13.2998 20 10 20H9C5.70017 20 4.05025 20 3.02513 18.9749C2 17.9497 2 16.2998 2 13V11Z"/><path d="M17 8.90585L17.1259 8.80196C19.2417 7.05623 20.2996 6.18336 21.1498 6.60482C22 7.02628 22 8.42355 22 11.2181V12.7819C22 15.5765 22 16.9737 21.1498 17.3952C20.2996 17.8166 19.2417 16.9438 17.1259 15.198L17 15.0941"/></svg>';
+  function cameraFrame(cam) {
+    // EarthCam's player refuses to be framed when the request carries no referrer, so send the origin.
+    return '<iframe src="' + esc(cam.embed) + '" title="' + esc(cam.name) + ' live camera" allow="autoplay; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin" scrolling="no"></iframe>';
+  }
+  function cameraCardHtml(cams) {
+    var rows = cams.length > 1
+      ? '<ul class="popup-rows">' + cams.map(function (cam, i) {
+        return '<li class="popup-cam-row"><button type="button" class="popup-cam" data-cam="' + i + '" aria-pressed="' + (i === 0) + '">' + esc(cam.name) + '</button></li>';
+      }).join('') + '</ul>'
+      : '<p class="popup-cam-name">' + esc(cams[0].name) + '</p>';
+    return '<div class="popup-feed"></div>' + rows;
+  }
+  function renderCameras() {
+    var groups = {};
+    (data.cameras || []).forEach(function (cam) {
+      var key = cam.lng + ',' + cam.lat;
+      (groups[key] = groups[key] || []).push(cam);
+    });
+    Object.keys(groups).forEach(function (key) {
+      var cams = groups[key];
+      var el = document.createElement('button');
+      el.type = 'button';
+      el.className = 'marker-camera';
+      el.innerHTML = CAMERA_ICON;
+      el.setAttribute('aria-label', 'Live camera: ' + cams.map(function (c) { return c.name; }).join(', '));
+      var popup = new mapboxgl.Popup({ offset: 16, focusAfterOpen: false, maxWidth: '280px' }).setHTML(cameraCardHtml(cams));
+      function show(i) {
+        var root = popup.getElement();
+        if (!root) return;
+        feed.innerHTML = cameraFrame(cams[i]);
+        Array.prototype.forEach.call(root.querySelectorAll('.popup-cam'), function (b) {
+          b.setAttribute('aria-pressed', String(Number(b.dataset.cam) === i));
+        });
+      }
+      var feed = null;
+      popup.on('open', function () {
+        el.classList.add('is-open');
+        var root = popup.getElement();
+        feed = root.querySelector('.popup-feed');
+        root.addEventListener('click', function (e) {
+          var b = e.target.closest && e.target.closest('.popup-cam');
+          if (b && b.getAttribute('aria-pressed') !== 'true') show(Number(b.dataset.cam));
+        });
+        show(0);
+        keepInView(popup);
+      });
+      popup.on('close', function () {
+        el.classList.remove('is-open');
+        // Mapbox keeps the card's content between opens: empty the feed so it doesn't reload with it.
+        if (feed) feed.innerHTML = '';
+      });
+      new mapboxgl.Marker({ element: el }).setLngLat(key.split(',').map(Number)).setPopup(popup).addTo(map);
+    });
+  }
+
   function eventTimes(ev) {
     if (ev.a) {
       var startDay = Date.parse(ev.s + 'T00:00:00-06:00');
@@ -592,7 +652,10 @@
       // A link to a particular day (from a parade page) wins over tonight, then a bookmarked ?when=.
       var linkedWhen = WHEN[params.get('when')];
       if (linkedWhen && button(linkedWhen) && button(linkedWhen).disabled) linkedWhen = null;
-      var start = function () { choose(linkedDate || linkedWhen || (anyToday ? 0 : 1)); };
+      var start = function () {
+        renderCameras();
+        choose(linkedDate || linkedWhen || (anyToday ? 0 : 1));
+      };
       if (map.loaded()) start();
       else map.once('load', start);
     })

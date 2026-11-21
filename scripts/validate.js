@@ -7,6 +7,7 @@ import { adapters } from '../scrapers/index.js';
 import { MANUAL_DIR, KINDS, checkManual } from '../scrapers/manual.js';
 import { VENDORS_DIR, loadPlaces, loadFoodSources, checkVendor, checkPlaces } from './lib/food.js';
 import { loadArtists, checkArtists } from './lib/artists.js';
+import { loadCameras, checkCameras } from './lib/cameras.js';
 
 const errors = [];
 const err = (slug, msg) => errors.push(`${slug}: ${msg}`);
@@ -151,6 +152,8 @@ for (const [i, s] of loadFoodSources().entries()) {
     }
   }
 }
+
+for (const p of checkCameras(loadCameras())) err('data/cameras.json', p);
 
 const artists = loadArtists();
 for (const p of checkArtists(artists)) err(`data/artists/${p.slug}.json`, p.message);

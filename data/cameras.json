@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Bourbon Street",
+    "lat": 29.9587153,
+    "lng": -90.0656751,
+    "embed": "https://www.earthcam.com/js/video/embed.php?type=h264&vid=4280.flv&requested_version=current"
+  },
+  {
+    "name": "Cat's Meow (outside)",
+    "lat": 29.9587153,
+    "lng": -90.0656751,
+    "embed": "https://www.earthcam.com/js/video/embed.php?type=h264&vid=4282.flv&requested_version=current"
+  }
+]
