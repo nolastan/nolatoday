@@ -15,7 +15,7 @@ import { isScheduleUrl, venuePageUrls } from './lib/normalize.js';
 import { venuePage } from '../src/templates/venue.js';
 import { homePage, venuesPage, redirectPage, notFoundPage, privacyPage, contactPage } from '../src/templates/pages.js';
 import { paradePage, paradesPage } from '../src/templates/parade.js';
-import { artistPage, artistsPage, artistLinks } from '../src/templates/artist.js';
+import { artistPage, artistsPage, artistLinks, artistTips } from '../src/templates/artist.js';
 import { loadArtists, buildMatcher } from './lib/artists.js';
 import { loadArticles } from './lib/articles.js';
 import { specificGenres } from './lib/genres.js';
@@ -245,6 +245,8 @@ function main() {
         // The directory's genre filter: slugs from scripts/lib/genres.js GENRES.
         broadGenres: artistBroadGenres(a, artistMeta[a.slug]).length ? artistBroadGenres(a, artistMeta[a.slug]) : undefined,
         links: Object.fromEntries(artistLinks(a).map((l) => [l.key, l.url])),
+        // Tip jars: [{ service: venmo | cashApp | paypal, label, text, url? }]; text is what to show after the label.
+        tips: a.tips?.length ? artistTips(a) : undefined,
       })),
       null,
       1,

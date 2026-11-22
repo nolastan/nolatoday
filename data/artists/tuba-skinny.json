@@ -7,5 +7,19 @@
     "bandcamp": "https://tubaskinny.bandcamp.com/",
     "website": "https://www.tubaskinny.com/",
     "instagram": "https://www.instagram.com/therealtubaskinny/"
-  }
+  },
+  "tips": [
+    {
+      "service": "venmo",
+      "handle": "@Tubaskinny",
+      "url": "https://venmo.com/u/Tubaskinny",
+      "source": "https://www.tubaskinny.com/faq"
+    },
+    {
+      "service": "paypal",
+      "handle": "tubaskinny@gmail.com",
+      "url": "https://paypal.me/tubaskinny",
+      "source": "https://www.tubaskinny.com/faq"
+    }
+  ]
 }

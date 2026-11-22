@@ -19,6 +19,37 @@ export const LINKS = {
   website: 'Website',
 };
 
+/** Tip jar services an artist file may list under `tips`, with the link hosts each may use. */
+export const TIPS = {
+  venmo: { label: 'Venmo', hosts: ['venmo.com', 'account.venmo.com'] },
+  cashApp: { label: 'Cash App', hosts: ['cash.app'] },
+  paypal: { label: 'PayPal', hosts: ['paypal.me', 'paypal.com'] },
+};
+
+/**
+ * A tip jar from a payment link, or null: { service, handle, url }.
+ * Knows venmo.com/u/<name>, cash.app/$<name>, paypal.me/<name> and paypal.com/paypalme/<name>.
+ */
+export function tipFromUrl(url) {
+  let u;
+  try {
+    u = new URL(url);
+  } catch {
+    return null;
+  }
+  const host = u.hostname.replace(/^www\./, '');
+  const path = u.pathname.replace(/\/+$/, '');
+  let m;
+  if ((host === 'venmo.com' || host === 'account.venmo.com') && (m = /^\/u\/([A-Za-z0-9_-]+)$/.exec(path))) {
+    return { service: 'venmo', handle: `@${m[1]}`, url: `https://venmo.com/u/${m[1]}` };
+  }
+  if (host === 'cash.app' && (m = /^\/\$([A-Za-z0-9_-]+)$/.exec(path))) return { service: 'cashApp', handle: `$${m[1]}`, url: `https://cash.app/$${m[1]}` };
+  if ((host === 'paypal.me' && (m = /^\/([A-Za-z0-9_-]+)$/.exec(path))) || (host === 'paypal.com' && (m = /^\/paypalme\/([A-Za-z0-9_-]+)$/.exec(path)))) {
+    return { service: 'paypal', handle: m[1], url: `https://paypal.me/${m[1]}` };
+  }
+  return null;
+}
+
 /** All artists from data/artists/*.json, sorted by name. */
 export function loadArtists(dir = ARTISTS_DIR) {
   if (!fs.existsSync(dir)) return [];
@@ -190,7 +221,7 @@ export function candidates(titles, artists) {
 }
 
 const SLUG = /^[a-z0-9]+(-[a-z0-9]+)*$/;
-const ALLOWED_KEYS = new Set(['slug', 'name', 'aliases', 'spotify', 'musicbrainz', 'links', 'note']);
+const ALLOWED_KEYS = new Set(['slug', 'name', 'aliases', 'spotify', 'musicbrainz', 'links', 'tips', 'note']);
 
 /** Problems with the artist files, as [{ slug, message }]. */
 export function checkArtists(artists) {
@@ -223,6 +254,29 @@ export function checkArtists(artists) {
     for (const [key, value] of Object.entries(a.links ?? {})) {
       if (!(key in LINKS)) err(a.slug, `unknown link "${key}" (use ${Object.keys(LINKS).join(', ')})`);
       if (!/^https:\/\//.test(value ?? '')) err(a.slug, `links.${key} must be an https URL`);
+    }
+    if (a.tips != null && !Array.isArray(a.tips)) err(a.slug, 'tips must be an array');
+    for (const [i, tip] of (Array.isArray(a.tips) ? a.tips : []).entries()) {
+      const where = `tips[${i}]`;
+      if (!tip || typeof tip !== 'object') {
+        err(a.slug, `${where} must be an object`);
+        continue;
+      }
+      for (const key of Object.keys(tip)) if (!['service', 'handle', 'name', 'url', 'source'].includes(key)) err(a.slug, `${where}: unknown field "${key}"`);
+      const service = TIPS[tip.service];
+      if (!service) err(a.slug, `${where}: service must be one of ${Object.keys(TIPS).join(', ')}`);
+      if (typeof tip.handle !== 'string' || !tip.handle.trim()) err(a.slug, `${where}: missing handle`);
+      if (tip.name != null && (typeof tip.name !== 'string' || !tip.name.trim())) err(a.slug, `${where}: name must be text`);
+      if (typeof tip.source !== 'string' || !tip.source.trim()) err(a.slug, `${where}: missing source (where the tip jar was found)`);
+      if (tip.url != null) {
+        let host = '';
+        try {
+          const u = new URL(tip.url);
+          if (u.protocol === 'https:') host = u.hostname.replace(/^www\./, '');
+        } catch {}
+        if (!host) err(a.slug, `${where}: url must be an https URL`);
+        else if (service && !service.hosts.includes(host)) err(a.slug, `${where}: url isn't a ${service.label} link`);
+      }
     }
   }
   return problems;

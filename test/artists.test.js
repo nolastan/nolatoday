@@ -1,6 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { buildMatcher, candidateName, candidates, checkArtists, leadName, nameKey, slugify } from '../scripts/lib/artists.js';
+import { buildMatcher, candidateName, candidates, checkArtists, leadName, nameKey, slugify, tipFromUrl } from '../scripts/lib/artists.js';
+import { artistTips } from '../src/templates/artist.js';
 import { pickArtist, linksFrom } from '../scripts/lib/musicbrainz.js';
 import { metaFromApi, metaFromOEmbed } from '../scripts/lib/spotify.js';
 import { titleHtml, artistPage, artistsPage, artistLinks } from '../src/templates/artist.js';
@@ -101,6 +102,57 @@ test('checkArtists: catches shared names and bad ids', () => {
   ]);
 });
 
+test('checkArtists: tip jars need a known service, a handle, a source and a matching link', () => {
+  const tip = { service: 'venmo', handle: '@Tubaskinny', url: 'https://venmo.com/u/Tubaskinny', source: 'https://www.tubaskinny.com/faq' };
+  assert.deepEqual(checkArtists([{ slug: 'a', name: 'Tuba Skinny', tips: [tip, { service: 'paypal', handle: '@TYRUS CHAPMAN', source: 'Jazz Museum page' }] }]), []);
+  const problems = checkArtists([
+    {
+      slug: 'a',
+      name: 'Tuba Skinny',
+      tips: [
+        { service: 'zelle', handle: 'x', source: 's' },
+        { service: 'venmo', handle: '', url: 'https://cash.app/$x' },
+        { ...tip, url: 'http://venmo.com/u/x', note: 'hi' },
+      ],
+    },
+  ]).map((p) => p.message);
+  assert.deepEqual(problems, [
+    'tips[0]: service must be one of venmo, cashApp, paypal',
+    'tips[1]: missing handle',
+    'tips[1]: missing source (where the tip jar was found)',
+    "tips[1]: url isn't a Venmo link",
+    'tips[2]: unknown field "note"',
+    'tips[2]: url must be an https URL',
+  ]);
+  assert.deepEqual(checkArtists([{ slug: 'a', name: 'Tuba Skinny', tips: {} }]).map((p) => p.message), ['tips must be an array']);
+});
+
+test('tipFromUrl: Venmo, Cash App and PayPal links', () => {
+  assert.deepEqual(tipFromUrl('https://account.venmo.com/u/Tubaskinny'), { service: 'venmo', handle: '@Tubaskinny', url: 'https://venmo.com/u/Tubaskinny' });
+  assert.deepEqual(tipFromUrl('https://cash.app/$tedhefko/'), { service: 'cashApp', handle: '$tedhefko', url: 'https://cash.app/$tedhefko' });
+  assert.deepEqual(tipFromUrl('https://www.paypal.com/paypalme/tubaskinny'), { service: 'paypal', handle: 'tubaskinny', url: 'https://paypal.me/tubaskinny' });
+  assert.deepEqual(tipFromUrl('https://paypal.me/JonClearyNola'), { service: 'paypal', handle: 'JonClearyNola', url: 'https://paypal.me/JonClearyNola' });
+  assert.equal(tipFromUrl('https://www.paypal.com/donate'), null);
+  assert.equal(tipFromUrl('https://venmo.com/about'), null);
+  assert.equal(tipFromUrl('not a url'), null);
+});
+
+test('artistTips: account name when given, else the handle', () => {
+  assert.deepEqual(
+    artistTips({
+      tips: [
+        { service: 'venmo', handle: '@Patricia-Gorman-8', name: 'Jon Cleary FHQ', url: 'https://venmo.com/u/Patricia-Gorman-8', source: 's' },
+        { service: 'paypal', handle: '@TYRUS CHAPMAN', source: 's' },
+      ],
+    }),
+    [
+      { service: 'venmo', label: 'Venmo', text: 'Jon Cleary FHQ', url: 'https://venmo.com/u/Patricia-Gorman-8' },
+      { service: 'paypal', label: 'PayPal', text: '@TYRUS CHAPMAN', url: undefined },
+    ],
+  );
+  assert.deepEqual(artistTips({}), []);
+});
+
 const mb = (name, extra = {}) => ({ id: 'a05add38-ccf0-4e27-a701-d4a09079682e', name, type: 'Group', score: 100, ...extra });
 
 test('pickArtist: exactly one Louisiana act by that exact name', () => {
@@ -136,7 +188,11 @@ test('linksFrom: the artist’s own pages, skipping ended links', () => {
         rel('social network', 'https://www.facebook.com/tubaskinny'),
         rel('youtube', 'https://www.youtube.com/user/tubaskinny'),
         rel('wikidata', 'https://www.wikidata.org/wiki/Q1'),
+        rel('patronage', 'https://www.paypal.com/paypalme/tubaskinny'),
+        rel('patronage', 'https://paypal.me/someoneelse'),
+        rel('patronage', 'https://account.venmo.com/u/Tubaskinny'),
       ],
+      id: 'a05add38-ccf0-4e27-a701-d4a09079682e',
     }),
     {
       spotify: '5Yk2yKWh1jbCJS7gfDyPbK',
@@ -147,6 +203,10 @@ test('linksFrom: the artist’s own pages, skipping ended links', () => {
         instagram: 'https://www.instagram.com/tubaskinny/',
         youtube: 'https://www.youtube.com/user/tubaskinny',
       },
+      tips: [
+        { service: 'paypal', handle: 'tubaskinny', url: 'https://paypal.me/tubaskinny', source: 'https://musicbrainz.org/artist/a05add38-ccf0-4e27-a701-d4a09079682e' },
+        { service: 'venmo', handle: '@Tubaskinny', url: 'https://venmo.com/u/Tubaskinny', source: 'https://musicbrainz.org/artist/a05add38-ccf0-4e27-a701-d4a09079682e' },
+      ],
     },
   );
   assert.deepEqual(linksFrom({}), { links: {} });

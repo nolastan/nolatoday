@@ -2,7 +2,7 @@
  * Reading MusicBrainz answers: which artist (if any) a name surely is, and that artist's own links.
  * Pure functions; scripts/artists.js does the fetching.
  */
-import { nameKey } from './artists.js';
+import { nameKey, tipFromUrl } from './artists.js';
 
 // Where an act has to be from for a bare name match to count. Touring acts come through ticketing data instead.
 const LOUISIANA = new Set(
@@ -27,9 +27,13 @@ export function pickArtist(name, search, { person = false } = {}) {
 
 const https = (url) => url.replace(/^http:\/\//, 'https://');
 
-/** { spotify, links } from a MusicBrainz artist looked up with inc=url-rels. Ended links are skipped. */
+/**
+ * { spotify, links, tips? } from a MusicBrainz artist looked up with inc=url-rels. Ended links are skipped.
+ * Tip jars are Venmo, Cash App and PayPal links on the artist, credited to its MusicBrainz page.
+ */
 export function linksFrom(artist) {
   const out = { links: {} };
+  const tips = [];
   for (const rel of artist?.relations ?? []) {
     const url = rel.url?.resource;
     if (!url || rel.ended) continue;
@@ -42,6 +46,11 @@ export function linksFrom(artist) {
     const set = (key) => {
       if (!out.links[key]) out.links[key] = https(url);
     };
+    const tip = tipFromUrl(url);
+    if (tip) {
+      if (!tips.some((t) => t.service === tip.service)) tips.push({ ...tip, source: `https://musicbrainz.org/artist/${artist.id}` });
+      continue;
+    }
     const spotify = host === 'open.spotify.com' && /^\/artist\/([A-Za-z0-9]{22})\/?$/.exec(new URL(url).pathname);
     if (spotify) out.spotify ??= spotify[1];
     else if (host === 'music.apple.com' && /\/artist\//.test(url)) set('appleMusic');
@@ -51,5 +60,6 @@ export function linksFrom(artist) {
     else if (host === 'instagram.com') set('instagram');
     else if (rel.type === 'official homepage') set('website');
   }
+  if (tips.length) out.tips = tips;
   return out;
 }
