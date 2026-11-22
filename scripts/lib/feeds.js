@@ -46,6 +46,7 @@ export function venueFeed(venue, { siteUrl, image, imageLarge, events = [], rece
     lat: venue.lat,
     lng: venue.lng,
     website: venue.website,
+    liveCamera: venue.liveCamera,
     url: `${siteUrl}/venues/${venue.slug}`,
     image,
     imageLarge,
