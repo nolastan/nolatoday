@@ -119,7 +119,7 @@ export function artistPage(ctx, artist, { shows, meta, articles = [] }) {
     }
     ${
       tips.length
-        ? `<div class="button-row artist-tips"><span class="artist-tips-label">Tip</span>${tips
+        ? `<div class="artist-tips" role="group" aria-label="Tip jar"><span class="artist-tips-label">Tip jar</span>${tips
             .map((t) => `<a class="button provider provider-${esc(t.service)}" href="${esc(t.url)}" title="${esc(`${t.label}: ${t.text}`)}" rel="noopener">${esc(t.label)}</a>`)
             .join('')}</div>`
         : ''

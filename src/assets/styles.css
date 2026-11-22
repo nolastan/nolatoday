@@ -755,8 +755,18 @@ a.popup-banner:hover h3 { text-decoration: underline; text-underline-offset: 3px
 .artist-hero.has-photo { display: flex; align-items: center; gap: 28px; }
 .artist-photo { flex: none; width: 200px; height: 200px; border-radius: 50%; object-fit: cover; background: var(--bg-elev); box-shadow: 0 8px 28px rgb(0 0 0 / 0.18); }
 .artist-genres { margin: 0 0 4px; font-size: 1.05rem; }
-.artist-hero .artist-tips { margin-top: 10px; align-items: center; }
-.artist-tips-label { color: var(--muted); font-weight: 600; margin-right: 2px; }
+.artist-tips {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-top: 22px;
+  padding: 6px 6px 6px 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+.artist-tips-label { color: var(--muted); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; margin-right: 6px; }
+.artist-tips .button { min-height: 32px; padding: 0 12px; border-radius: 8px; font-size: 0.95rem; }
 @media (max-width: 640px) {
   .artist-hero.has-photo { flex-direction: column; align-items: flex-start; gap: 16px; }
   .artist-photo { width: 132px; height: 132px; }
