@@ -1,0 +1,60 @@
+{
+  "slug": "thirdwheel",
+  "name": "ThirdWheel",
+  "icon": "dish",
+  "type": "Pop-up",
+  "description": "Pierogis and brunch; standing Wed/Fri dinner and Sunday brunch at Twelve Mile Limit.",
+  "website": "https://thirdwheelnola.com",
+  "from": "https://www.instagram.com/p/DfKP9dmkVDg/",
+  "updated": "2026-11-22",
+  "events": [
+    {
+      "date": "2026-11-25",
+      "time": null,
+      "place": "twelve-mile-limit",
+      "url": "https://www.instagram.com/p/DfKP9dmkVDg/",
+      "confirmedOn": "2026-10-31",
+      "basis": "Standing Wed/Fri dinner + Sun brunch at Twelve Mile Limit per bio; last post Oct 31."
+    },
+    {
+      "date": "2026-11-27",
+      "time": null,
+      "place": "twelve-mile-limit",
+      "url": "https://www.instagram.com/p/DfKP9dmkVDg/",
+      "confirmedOn": "2026-10-31",
+      "basis": "Standing Wed/Fri dinner + Sun brunch at Twelve Mile Limit per bio; last post Oct 31."
+    },
+    {
+      "date": "2026-11-29",
+      "time": null,
+      "place": "twelve-mile-limit",
+      "url": "https://www.instagram.com/p/DfKP9dmkVDg/",
+      "confirmedOn": "2026-10-31",
+      "basis": "Standing Wed/Fri dinner + Sun brunch at Twelve Mile Limit per bio; last post Oct 31."
+    },
+    {
+      "date": "2026-12-02",
+      "time": null,
+      "place": "twelve-mile-limit",
+      "url": "https://www.instagram.com/p/DfKP9dmkVDg/",
+      "confirmedOn": "2026-10-31",
+      "basis": "Standing Wed/Fri dinner + Sun brunch at Twelve Mile Limit per bio; last post Oct 31."
+    },
+    {
+      "date": "2026-12-04",
+      "time": null,
+      "place": "twelve-mile-limit",
+      "url": "https://www.instagram.com/p/DfKP9dmkVDg/",
+      "confirmedOn": "2026-10-31",
+      "basis": "Standing Wed/Fri dinner + Sun brunch at Twelve Mile Limit per bio; last post Oct 31."
+    },
+    {
+      "date": "2026-12-06",
+      "time": null,
+      "place": "twelve-mile-limit",
+      "url": "https://www.instagram.com/p/DfKP9dmkVDg/",
+      "confirmedOn": "2026-10-31",
+      "basis": "Standing Wed/Fri dinner + Sun brunch at Twelve Mile Limit per bio; last post Oct 31."
+    }
+  ]
+}

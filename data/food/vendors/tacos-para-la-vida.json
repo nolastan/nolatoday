@@ -1,0 +1,74 @@
+{
+  "slug": "tacos-para-la-vida",
+  "name": "Tacos Para La Vida",
+  "icon": "taco",
+  "type": "Pop-up",
+  "description": "Tacos, standing Tue\u2013Fri at Anna's (per bio; not recently confirmed).",
+  "from": "https://www.instagram.com/p/Db5088WOhv1/",
+  "updated": "2026-11-22",
+  "events": [
+    {
+      "date": "2026-11-24",
+      "time": "17:00",
+      "end": "23:00",
+      "place": "annas",
+      "url": "https://www.instagram.com/p/Db5088WOhv1/",
+      "confirmedOn": "2026-08-11",
+      "basis": "Standing Tue\u2013Fri schedule at Anna's per bio; last post Aug 11."
+    },
+    {
+      "date": "2026-11-25",
+      "time": "17:00",
+      "end": "23:00",
+      "place": "annas",
+      "url": "https://www.instagram.com/p/Db5088WOhv1/",
+      "confirmedOn": "2026-08-11",
+      "basis": "Standing Tue\u2013Fri schedule at Anna's per bio; last post Aug 11."
+    },
+    {
+      "date": "2026-11-27",
+      "time": "17:00",
+      "end": "23:00",
+      "place": "annas",
+      "url": "https://www.instagram.com/p/Db5088WOhv1/",
+      "confirmedOn": "2026-08-11",
+      "basis": "Standing Tue\u2013Fri schedule at Anna's per bio; last post Aug 11."
+    },
+    {
+      "date": "2026-12-01",
+      "time": "17:00",
+      "end": "23:00",
+      "place": "annas",
+      "url": "https://www.instagram.com/p/Db5088WOhv1/",
+      "confirmedOn": "2026-08-11",
+      "basis": "Standing Tue\u2013Fri schedule at Anna's per bio; last post Aug 11."
+    },
+    {
+      "date": "2026-12-02",
+      "time": "17:00",
+      "end": "23:00",
+      "place": "annas",
+      "url": "https://www.instagram.com/p/Db5088WOhv1/",
+      "confirmedOn": "2026-08-11",
+      "basis": "Standing Tue\u2013Fri schedule at Anna's per bio; last post Aug 11."
+    },
+    {
+      "date": "2026-12-03",
+      "time": "17:00",
+      "end": "23:00",
+      "place": "annas",
+      "url": "https://www.instagram.com/p/Db5088WOhv1/",
+      "confirmedOn": "2026-08-11",
+      "basis": "Standing Tue\u2013Fri schedule at Anna's per bio; last post Aug 11."
+    },
+    {
+      "date": "2026-12-04",
+      "time": "17:00",
+      "end": "23:00",
+      "place": "annas",
+      "url": "https://www.instagram.com/p/Db5088WOhv1/",
+      "confirmedOn": "2026-08-11",
+      "basis": "Standing Tue\u2013Fri schedule at Anna's per bio; last post Aug 11."
+    }
+  ]
+}

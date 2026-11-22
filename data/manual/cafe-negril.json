@@ -1,1 +1,39 @@
-{"events":[{"date":"2026-11-21","kind":"music","price":"Free","time":"13:30","title":"Orphaned in Storyville","url":"https://www.instagram.com/p/DgAsSGagOy_/"},{"date":"2026-11-22","kind":"music","time":null,"title":"Ado Soul & The Tribe","url":"https://www.instagram.com/reel/DfXHuf5s-t3/"},{"date":"2026-11-26","kind":"music","note":"Thanksgiving","time":null,"title":"Ado Soul & The Tribe","url":"https://www.instagram.com/reel/DfXHuf5s-t3/"},{"date":"2026-11-26","kind":"music","note":"Thanksgiving dinner + live show; seatings 4PM & 6PM","time":null,"title":"Jason Neville Funky Soul Band","url":"https://www.instagram.com/p/Df8i1WARgi_/"}],"from":"https://www.instagram.com/p/DgAsSGagOy_/","updated":"2026-11-21","venue":"cafe-negril"}
+{
+  "events": [
+    {
+      "date": "2026-11-22",
+      "kind": "music",
+      "time": null,
+      "title": "Ado Soul & The Tribe",
+      "url": "https://www.instagram.com/reel/DfXHuf5s-t3/"
+    },
+    {
+      "date": "2026-11-22",
+      "kind": "music",
+      "price": "Free",
+      "time": null,
+      "title": "Preach & Righteous Wrong Reggae Band",
+      "url": "https://www.instagram.com/p/DgDR4AXmtdd/",
+      "note": "Weekly open reggae jam"
+    },
+    {
+      "date": "2026-11-26",
+      "kind": "music",
+      "note": "Thanksgiving",
+      "time": null,
+      "title": "Ado Soul & The Tribe",
+      "url": "https://www.instagram.com/reel/DfXHuf5s-t3/"
+    },
+    {
+      "date": "2026-11-26",
+      "kind": "music",
+      "note": "Thanksgiving dinner + live show; seatings 4PM & 6PM",
+      "time": "16:00",
+      "title": "Jason Neville Funky Soul Band",
+      "url": "https://www.instagram.com/p/Df8i1WARgi_/"
+    }
+  ],
+  "from": "https://www.instagram.com/p/DgDR4AXmtdd/",
+  "updated": "2026-11-22",
+  "venue": "cafe-negril"
+}

@@ -1,87 +1,105 @@
 {
   "1515-poydras": {
-    "name": "1515 Poydras",
     "address": "1515 Poydras St",
     "lat": 29.95256,
-    "lng": -90.07865
+    "lng": -90.07865,
+    "name": "1515 Poydras"
   },
   "abita-nola": {
-    "name": "Abita NOLA",
     "address": "2375 Tchoupitoulas St",
     "lat": 29.92212,
-    "lng": -90.07451
+    "lng": -90.07451,
+    "name": "Abita NOLA"
   },
   "annas": {
-    "name": "Anna's",
     "address": "2601 Royal St",
     "lat": 29.96488,
-    "lng": -90.05128
+    "lng": -90.05128,
+    "name": "Anna's"
   },
   "bayou-beer-garden": {
-    "name": "Bayou Beer Garden",
     "address": "326 N Norman C Francis Pkwy",
     "lat": 29.97205,
-    "lng": -90.0917
+    "lng": -90.0917,
+    "name": "Bayou Beer Garden"
   },
   "boutte-hwy-90": {
-    "name": "Boutte",
     "address": "13491 Hwy 90, Boutte",
+    "approximate": true,
     "lat": 29.9006,
     "lng": -90.3895,
-    "approximate": true
+    "name": "Boutte"
+  },
+  "ccfm-city-park": {
+    "address": "33 Dreyfous Dr",
+    "lat": 29.98599,
+    "lng": -90.09815,
+    "name": "Crescent City Farmers Market at City Park"
   },
   "friendly-bar": {
-    "name": "The Friendly Bar",
     "address": "2301 Chartres St",
     "lat": 29.96381,
-    "lng": -90.05502
+    "lng": -90.05502,
+    "name": "The Friendly Bar"
   },
   "jefferson-parish-sheriffs-office": {
-    "name": "Jefferson Parish Sheriff's Office",
     "address": "1233 Westbank Expy, Harvey",
     "lat": 29.90617,
-    "lng": -90.06422
+    "lng": -90.06422,
+    "name": "Jefferson Parish Sheriff's Office"
   },
   "marrero-middle-school": {
-    "name": "Marrero Middle School",
     "address": "4100 7th St, Marrero, LA 70072",
     "lat": 29.89924,
-    "lng": -90.09134
+    "lng": -90.09134,
+    "name": "Marrero Middle School"
   },
   "peewees-saratoga": {
-    "name": "Home base on S Saratoga",
     "address": "3313 S Saratoga St",
     "lat": 29.93333,
-    "lng": -90.09293
+    "lng": -90.09293,
+    "name": "Home base on S Saratoga"
   },
   "pepps-pub": {
-    "name": "Pepp's Pub",
     "address": "706 Franklin Ave, New Orleans, LA 70117",
     "lat": 29.96513,
-    "lng": -90.0514
+    "lng": -90.0514,
+    "name": "Pepp's Pub"
   },
   "petes-out-in-the-cold": {
-    "name": "Pete's Out in the Cold",
     "address": "701 Sixth St",
     "lat": 29.9221,
-    "lng": -90.08124
+    "lng": -90.08124,
+    "name": "Pete's Out in the Cold"
+  },
+  "rbar": {
+    "address": "1430 Royal St",
+    "lat": 29.96396,
+    "lng": -90.05929,
+    "name": "RBar"
   },
   "skeeta-hawk-brewing": {
-    "name": "Skeeta Hawk Brewing",
     "address": "455 N Dorgenois St",
     "lat": 29.96771,
-    "lng": -90.08341
+    "lng": -90.08341,
+    "name": "Skeeta Hawk Brewing"
   },
   "st-charles-courthouse": {
-    "name": "St. Charles Courthouse",
     "address": "15045 River Rd, Hahnville",
     "lat": 29.96427,
-    "lng": -90.40576
+    "lng": -90.40576,
+    "name": "St. Charles Courthouse"
   },
   "tulane-mcalister-auditorium": {
-    "name": "McAlister Auditorium",
     "address": "6823 St Charles Ave",
     "lat": 29.93499,
-    "lng": -90.12303
+    "lng": -90.12303,
+    "name": "McAlister Auditorium"
+  },
+  "twelve-mile-limit": {
+    "address": "500 Telemachus St",
+    "lat": 29.9683,
+    "lng": -90.09992,
+    "name": "Twelve Mile Limit"
   }
 }

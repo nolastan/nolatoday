@@ -1,0 +1,27 @@
+{
+  "slug": "que-pasta-nola",
+  "name": "Que Pasta Nola",
+  "icon": "noodles",
+  "type": "Pop-up",
+  "description": "Latin street food pop-up; posts a weekly schedule graphic every Monday, with regular stops at the Crescent City Farmers Market and RBar.",
+  "from": "https://www.instagram.com/reel/DfzocklxZS-/",
+  "updated": "2026-11-22",
+  "events": [
+    {
+      "date": "2026-11-22",
+      "time": "08:00",
+      "end": "12:00",
+      "place": "ccfm-city-park",
+      "url": "https://www.instagram.com/reel/DfzocklxZS-/",
+      "confirmedOn": "2026-11-16"
+    },
+    {
+      "date": "2026-11-22",
+      "time": null,
+      "place": "rbar",
+      "note": "During the Saints game",
+      "url": "https://www.instagram.com/reel/DfzocklxZS-/",
+      "confirmedOn": "2026-11-16"
+    }
+  ]
+}
