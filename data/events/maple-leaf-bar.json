@@ -2,20 +2,6 @@
   "venue": "maple-leaf-bar",
   "events": [
     {
-      "id": "5adb0d00e782",
-      "title": "Aliss -A- Fest Birthday Celebration",
-      "start": "2026-11-21T19:00:00-06:00",
-      "end": "2026-11-21T21:00:00-06:00",
-      "url": "https://www.mapleleafbar.com/events/aliss-a-fest-birthday-celebration"
-    },
-    {
-      "id": "d7015623d0d1",
-      "title": "Rebirth Brass Band",
-      "start": "2026-11-21T22:00:00-06:00",
-      "end": "2026-11-22T00:00:00-06:00",
-      "url": "https://www.mapleleafbar.com/events/rebirth-brass-band"
-    },
-    {
       "id": "2037b6203120",
       "title": "George Porter Jr. Trio Ft. Chris Adkins (7pm)",
       "start": "2026-11-23T19:00:00-06:00",
@@ -35,6 +21,20 @@
       "start": "2026-11-24T20:30:00-06:00",
       "end": "2026-11-25T00:00:00-06:00",
       "url": "https://www.mapleleafbar.com/events/very-good-tuesday-ft-alex-wasily-ari-teitel-aurelien-barnes-miles-blackwell-shea-siraj"
+    },
+    {
+      "id": "c2245e0c7f74",
+      "title": "Happy Organ Hour with Joe Ashlar, Stanton Moore, & Danny Abel",
+      "start": "2026-11-25T19:00:00-06:00",
+      "end": "2026-11-25T22:00:00-06:00",
+      "url": "https://www.mapleleafbar.com/events/happy-organ-hour-with-joe-ashlar-stanton-moore-danny-abel-1"
+    },
+    {
+      "id": "c10cfc196abc",
+      "title": "Turkey Jam 2026",
+      "start": "2026-11-27T21:00:00-06:00",
+      "end": "2026-11-28T01:00:00-06:00",
+      "url": "https://www.mapleleafbar.com/events/turkey-jam-2026"
     }
   ]
 }

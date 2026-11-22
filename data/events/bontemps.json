@@ -2,11 +2,6 @@
   "venue": "bontemps",
   "events": [
     {
-      "id": "17a0962dc0f8",
-      "title": "Night Kitchen",
-      "start": "2026-11-21T23:00:00-06:00"
-    },
-    {
       "id": "7a04314cc739",
       "title": "Wednesday Late Night Funbox Karaoke",
       "start": "2026-11-25T22:00:00-06:00"
@@ -65,7 +60,8 @@
     {
       "id": "62b3a657a717",
       "title": "Jamie Bernstein and Zen Cowboys",
-      "start": "2026-12-12T16:00:00-06:00"
+      "start": "2026-12-12T16:00:00-06:00",
+      "end": "2026-12-12T23:00:00-06:00"
     },
     {
       "id": "0168b77cd248",

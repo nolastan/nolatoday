@@ -2,12 +2,6 @@
   "venue": "dos-jefes",
   "events": [
     {
-      "id": "0ea8b89131db",
-      "title": "MISS BETTY SHIRLEY",
-      "start": "2026-11-21T21:00:00-06:00",
-      "url": "https://dosjefes.com/events/betty-shirley-band/"
-    },
-    {
       "id": "d977441f929a",
       "title": "JAVIER GUITERREZ",
       "start": "2026-11-22T20:00:00-06:00",
@@ -114,6 +108,12 @@
       "title": "THE MARK COLEMAN BAND",
       "start": "2026-12-10T20:30:00-06:00",
       "url": "https://dosjefes.com/events/the-mark-coleman-band/"
+    },
+    {
+      "id": "7834d3da8dd6",
+      "title": "Sax and the City featuring Tom Fitzpatrick",
+      "start": "2026-12-11T21:00:00-06:00",
+      "url": "https://dosjefes.com/events/sax-and-the-city-featuring-tom-fitzpatrick/"
     },
     {
       "id": "c539966550f3",

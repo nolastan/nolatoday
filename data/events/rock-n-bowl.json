@@ -2,12 +2,6 @@
   "venue": "rock-n-bowl",
   "events": [
     {
-      "id": "845286ca6573",
-      "title": "Nashville South",
-      "start": "2026-11-21T20:30:00-06:00",
-      "url": "https://www.rocknbowl.com/event-details/nashville-south-11-21-26"
-    },
-    {
       "id": "edad28b29348",
       "title": "Latin Night with DJ Nayo",
       "start": "2026-11-24T19:00:00-06:00",
@@ -64,6 +58,12 @@
       "url": "https://www.rocknbowl.com/event-details/the-mixed-nuts-12-12-26-1"
     },
     {
+      "id": "3c576ac270a1",
+      "title": "Nathan & the Zydeco Cha Chas",
+      "start": "2026-12-17T20:00:00-06:00",
+      "url": "https://www.rocknbowl.com/event-details/nathan-the-zydeco-cha-chas-12-17-26"
+    },
+    {
       "id": "09fccaa8986b",
       "title": "Few Blue",
       "start": "2026-12-18T20:30:00-06:00",
@@ -88,6 +88,12 @@
       "url": "https://www.rocknbowl.com/event-details/bag-of-donuts-12-26-26"
     },
     {
+      "id": "02278c14e577",
+      "title": "Fist Full of Flannel",
+      "start": "2026-12-27T19:30:00-06:00",
+      "url": "https://www.rocknbowl.com/event-details/fist-full-of-flannel-12-27-26"
+    },
+    {
       "id": "ad4130587d71",
       "title": "Bucktown Allstars",
       "start": "2026-12-30T20:30:00-06:00",
@@ -98,6 +104,12 @@
       "title": "The Boogie Men",
       "start": "2026-12-31T20:30:00-06:00",
       "url": "https://www.rocknbowl.com/event-details/the-boogie-men-12-31-26"
+    },
+    {
+      "id": "b343782d4128",
+      "title": "A night of Motown with BRW",
+      "start": "2027-01-01T20:30:00-06:00",
+      "url": "https://www.rocknbowl.com/event-details/a-night-of-motown-with-brw-1-1-27"
     }
   ]
 }

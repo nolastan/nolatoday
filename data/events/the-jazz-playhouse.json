@@ -2,12 +2,6 @@
   "venue": "the-jazz-playhouse",
   "events": [
     {
-      "id": "069ae4960c6c",
-      "title": "The Nayo Jones Experience at The Jazz Playhouse",
-      "start": "2026-11-21T20:00:00-06:00",
-      "url": "https://www.eventbrite.com/e/the-nayo-jones-experience-at-the-jazz-playhouse-tickets-1979622492164"
-    },
-    {
       "id": "4e6dd61371e4",
       "title": "Richard 'Piano' Scott at The Jazz Playhouse",
       "start": "2026-11-22T19:30:00-06:00",
@@ -36,6 +30,12 @@
       "title": "Trixie Minx's 'Tease the Season' Burlesque Ballroom at The Jazz Playhouse feat. Vocals by Romy Kaye",
       "start": "2026-11-27T20:00:00-06:00",
       "url": "https://www.eventbrite.com/e/trixie-minxs-tease-the-season-burlesque-ballroom-at-the-jazz-playhouse-feat-vocals-by-romy-kaye-tickets-83929363987"
+    },
+    {
+      "id": "348a7fdc78a9",
+      "title": "The Nayo Jones Experience at The Jazz Playhouse",
+      "start": "2026-11-28T20:00:00-06:00",
+      "url": "https://www.eventbrite.com/e/the-nayo-jones-experience-at-the-jazz-playhouse-tickets-1979622492164"
     },
     {
       "id": "2c943f18caeb",

@@ -2,16 +2,6 @@
   "venue": "the-spotted-cat",
   "events": [
     {
-      "id": "1b4fbf9727e5",
-      "title": "Twerk Thomson Band",
-      "start": "2026-11-21T14:00:00-06:00"
-    },
-    {
-      "id": "28cc4a1c970a",
-      "title": "Panorama Jazz Band",
-      "start": "2026-11-21T18:00:00-06:00"
-    },
-    {
       "id": "01b6bf993e54",
       "title": "Kortana",
       "start": "2026-11-21T22:00:00-06:00"

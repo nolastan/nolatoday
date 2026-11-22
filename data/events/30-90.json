@@ -2,34 +2,6 @@
   "venue": "30-90",
   "events": [
     {
-      "id": "4aba8df8f5db",
-      "title": "Jeff Chaz Blues Band",
-      "start": "2026-11-21T14:00:00-06:00",
-      "end": "2026-11-21T17:00:00-06:00",
-      "url": "https://www.3090-nola.com/bands/jeff-chaz101125-cyrpg-bj4mm-95wsa-8me48-rypyz-tpj2r-9f8en-b3yw2-pczjc-lb9ap-c6g95-x8zrl-fy59b-glmgf"
-    },
-    {
-      "id": "4897f812b875",
-      "title": "Five Funky Friends",
-      "start": "2026-11-21T17:00:00-06:00",
-      "end": "2026-11-21T20:00:00-06:00",
-      "url": "https://www.3090-nola.com/bands/flowmotion-4c3tk-ye7xk"
-    },
-    {
-      "id": "eb782f7148db",
-      "title": "Hotline",
-      "start": "2026-11-21T20:00:00-06:00",
-      "end": "2026-11-21T23:00:00-06:00",
-      "url": "https://www.3090-nola.com/bands/hotline111525-wtrdn-lgfga-662h2-9kd4f-5a8f4-7w2dc-4a2x9-3296m-mn3z5-cnbel-46p3e"
-    },
-    {
-      "id": "90266d6eca13",
-      "title": "The Kazzettes",
-      "start": "2026-11-21T23:00:00-06:00",
-      "end": "2026-11-21T23:59:00-06:00",
-      "url": "https://www.3090-nola.com/bands/kazzettes-6xz68-7j4bl-ys8ye-jg3ae-gmybx"
-    },
-    {
       "id": "d4ac0254932f",
       "title": "Flowmotion",
       "start": "2026-11-22T15:00:00-06:00",

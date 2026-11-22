@@ -2,18 +2,6 @@
   "venue": "preservation-hall",
   "events": [
     {
-      "id": "baafff385a32",
-      "title": "Leroy Jones and the Preservation Jazz Masters",
-      "start": "2026-11-21T14:30:00-06:00",
-      "url": "https://www.preservationhall.com/events/leroy-jones-and-the-preservation-jazz-masters/"
-    },
-    {
-      "id": "09625aa88a5b",
-      "title": "Preservation All-Stars ft. Shannon Powell",
-      "start": "2026-11-21T17:00:00-06:00",
-      "url": "https://www.preservationhall.com/events/preservation-all-stars-ft-shannon-powell/"
-    },
-    {
       "id": "af2c540a66eb",
       "title": "Leroy Jones and the Preservation Jazz Masters",
       "start": "2026-11-22T14:30:00-06:00",
