@@ -1,1 +1,13 @@
-[]
+[
+  {
+    "vendor": "hatch-and-harvest",
+    "source": { "type": "custom", "name": "hatch-and-harvest", "url": "https://hatchandharvest.net/" },
+    "places": { "^miel brewery": "miel-brewery" }
+  },
+  {
+    "vendor": "buggin-out-boils",
+    "source": { "type": "jsonld", "url": "https://bugginoutboils.com/" },
+    "places": { "^bayou beer garden": "bayou-beer-garden", "^miel brewery": "miel-brewery" },
+    "wallClock": true
+  }
+]

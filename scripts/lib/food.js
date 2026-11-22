@@ -12,8 +12,9 @@ import { FOOD_ICONS } from '../../src/templates/food-icons.js';
  * - data/food/vendors/<slug>.json: one per vendor, its profile and the stops it posted (written by
  *   Meta Muse from Instagram, like data/manual/).
  * - data/food/places.json: where stops happen that aren't venues (bars, breweries, lots).
- * - data/food/sources.json: host calendars scraped for pop-ups by scripts/food.js, which writes
- *   data/food/scraped/<place>.json (generated; don't hand-edit).
+ * - data/food/sources.json: calendars scraped for pop-ups by scripts/food.js, which writes
+ *   data/food/scraped/<place>.json for a host's calendar and data/food/scraped/vendor-<slug>.json for
+ *   a vendor's own schedule page (generated; don't hand-edit).
  *
  * A stop's `place` is a venue slug when the host is a venue, otherwise a key in places.json.
  * `confirmedOn` is the date the stop was last posted; a stop not confirmed in the last 30 days is
@@ -121,6 +122,37 @@ export function foodFromCalendar(raw, config) {
   return out;
 }
 
+/**
+ * Stops on a vendor's own schedule page. Every event is the vendor's; its place comes from the event's
+ * location name through `places` (regex → place key), never from an address on the page. Events whose
+ * location matches no entry are returned in `unmapped` and left out. With `wallClock`, a timestamp's UTC
+ * offset is ignored and its clock time read as New Orleans time (for pages that stamp every date -05:00).
+ */
+export function foodFromVendorSite(raw, config) {
+  const places = Object.entries(config.places ?? {}).map(([re, key]) => [new RegExp(re, 'i'), key]);
+  const events = [];
+  const unmapped = [];
+  for (const e of raw) {
+    const title = decode(e.title ?? '').trim();
+    if (/cancel+ed|postponed/i.test(title)) continue;
+    const location = decode(e.location ?? '').trim();
+    const place = places.find(([re]) => re.test(location))?.[1];
+    if (!place) {
+      unmapped.push(location || title);
+      continue;
+    }
+    const time = (t) => (t && config.wallClock && !e.allDay ? wallClock(t) : t ?? null);
+    events.push({ place, title, start: time(e.start), end: time(e.end), allDay: !!e.allDay, url: e.url ?? config.source?.url ?? null });
+  }
+  return { events, unmapped };
+}
+
+function wallClock(t) {
+  const local = String(t).replace(/(Z|[+-]\d{2}:?\d{2})$/, '');
+  const dt = DateTime.fromISO(local, { zone: ZONE });
+  return dt.isValid ? dt.toISO({ suppressMilliseconds: true }) : t;
+}
+
 function decode(s) {
   return s
     .replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(Number(n)))
@@ -155,8 +187,27 @@ export function loadFood(venues, { today = DateTime.now().setZone(ZONE).toISODat
     byName.set(nameKey(vendor.name), vendor);
   }
 
+  const toZone = (t) => DateTime.fromISO(t).setZone(ZONE).toISO({ suppressMilliseconds: true });
+  // The vendor posted the same stop itself (place and day): keep the vendor's.
+  const posted = (vendor, place, start) => vendor.events.some((e) => e.place.key === place.key && e.start.slice(0, 10) === start.slice(0, 10));
+
+  const scraped = readScraped();
+  // Vendor schedule pages: stops for a vendor that has a file, at mapped places.
+  for (const cal of scraped.filter((c) => c.vendor)) {
+    const vendor = vendors.get(cal.vendor);
+    if (!vendor) throw new Error(`data/food/scraped/vendor-${cal.vendor}.json: no vendor file for "${cal.vendor}"`);
+    const checked = (cal.scrapedAt ?? '').slice(0, 10);
+    for (const s of cal.events ?? []) {
+      const place = resolve(s.place, `data/food/scraped/vendor-${cal.vendor}.json`);
+      const start = s.allDay ? s.start : toZone(s.start);
+      if (posted(vendor, place, start)) continue;
+      const end = s.end && !s.allDay ? toZone(s.end) : undefined;
+      vendor.events.push({ start, end, allDay: !!s.allDay, url: s.url ?? undefined, confirmedOn: checked, stale: stale(checked), place, vendor: vendor.slug });
+    }
+  }
+
   // Host calendars: a vendor with no file of its own gets a plain profile from its name.
-  for (const cal of readScraped()) {
+  for (const cal of scraped.filter((c) => !c.vendor)) {
     const place = resolve(cal.place, `data/food/scraped/${cal.place}.json`);
     const checked = (cal.scrapedAt ?? '').slice(0, 10);
     for (const s of cal.events ?? []) {
@@ -166,10 +217,9 @@ export function loadFood(venues, { today = DateTime.now().setZone(ZONE).toISODat
         vendors.set(vendor.slug, vendor);
         byName.set(nameKey(vendor.name), vendor);
       }
-      const start = s.allDay ? s.start : DateTime.fromISO(s.start).setZone(ZONE).toISO({ suppressMilliseconds: true });
-      const end = s.end ? DateTime.fromISO(s.end).setZone(ZONE).toISO({ suppressMilliseconds: true }) : undefined;
-      // The same stop posted by the vendor and listed by the host: keep the vendor's.
-      if (vendor.events.some((e) => e.place.key === place.key && e.start.slice(0, 10) === start.slice(0, 10))) continue;
+      const start = s.allDay ? s.start : toZone(s.start);
+      const end = s.end ? toZone(s.end) : undefined;
+      if (posted(vendor, place, start)) continue;
       vendor.events.push({ start, end, allDay: s.allDay, url: s.url ?? undefined, confirmedOn: checked, stale: stale(checked), place, vendor: vendor.slug });
     }
   }
