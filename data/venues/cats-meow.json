@@ -1,0 +1,13 @@
+{
+  "slug": "cats-meow",
+  "name": "Cat's Meow",
+  "status": "active",
+  "address": "701 Bourbon Street",
+  "lat": 29.958715,
+  "lng": -90.065675,
+  "website": "https://catsmeow.com",
+  "liveCamera": "https://www.earthcam.com/usa/louisiana/neworleans/bourbonstreet/?cam=bourbonstreet",
+  "image": null,
+  "aliases": [],
+  "sources": []
+}

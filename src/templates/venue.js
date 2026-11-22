@@ -220,6 +220,7 @@ export function venuePage(ctx, venue, { events, recent = [], status, food = [] }
       <div class="button-row">
         ${venue.website && !closed ? `<a class="button primary" href="${esc(venue.website)}" rel="noopener">Visit website</a>` : ''}
         <a class="button" href="${esc(mapsLink(venue))}" rel="noopener">Directions</a>
+        ${venue.liveCamera && !closed ? `<a class="button" href="${esc(venue.liveCamera)}" rel="noopener">Live camera</a>` : ''}
       </div>
     </div>
     ${

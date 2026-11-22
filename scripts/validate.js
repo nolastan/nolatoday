@@ -15,7 +15,7 @@ const err = (slug, msg) => errors.push(`${slug}: ${msg}`);
 const STATUSES = new Set(['active', 'closed']);
 // Generous box around greater New Orleans.
 const BOUNDS = { latMin: 29.8, latMax: 30.2, lngMin: -90.35, lngMax: -89.85 };
-const ALLOWED_KEYS = new Set(['slug', 'name', 'status', 'address', 'lat', 'lng', 'website', 'image', 'imageCredit', 'aliases', 'sources', 'note', 'stories']);
+const ALLOWED_KEYS = new Set(['slug', 'name', 'status', 'address', 'lat', 'lng', 'website', 'liveCamera', 'image', 'imageCredit', 'aliases', 'sources', 'note', 'stories']);
 
 const venues = loadVenues();
 const slugs = new Set(venues.map((v) => v.slug));
@@ -31,6 +31,7 @@ for (const v of venues) {
   if (typeof v.lat !== 'number' || v.lat < BOUNDS.latMin || v.lat > BOUNDS.latMax) err(v.slug, `lat ${v.lat} is outside New Orleans`);
   if (typeof v.lng !== 'number' || v.lng < BOUNDS.lngMin || v.lng > BOUNDS.lngMax) err(v.slug, `lng ${v.lng} is outside New Orleans`);
   if (v.website != null && !/^https?:\/\//.test(v.website)) err(v.slug, 'website must be an http(s) URL or null');
+  if (v.liveCamera != null && !/^https:\/\//.test(v.liveCamera)) err(v.slug, 'liveCamera must be an https URL');
   if (v.image) {
     for (const f of [v.image, v.image.replace(/\.jpg$/, '-600.jpg')]) {
       if (!fs.existsSync(path.join(ROOT, 'public/images/venues', f))) err(v.slug, `image public/images/venues/${f} not found`);
