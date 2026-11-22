@@ -56,7 +56,8 @@ export function artistPage(ctx, artist, { shows, meta, articles = [] }) {
   const canonical = `${config.siteUrl}/artists/${artist.slug}`;
   const listed = shows.slice(0, MAX_LISTED);
   const links = artistLinks(artist);
-  const tips = artistTips(artist);
+  // Only tip jars with a link make a button; a bare handle or email stays in the data.
+  const tips = artistTips(artist).filter((t) => t.url);
   const venueNames = [...new Set(listed.map((s) => s.venue.name))];
   const genres = specificGenres(meta);
   const broad = shownGenres(broadGenres(artist, genres));
@@ -118,9 +119,9 @@ export function artistPage(ctx, artist, { shows, meta, articles = [] }) {
     }
     ${
       tips.length
-        ? `<p class="artist-tips">Tip jar: ${tips
-            .map((t) => `<span>${t.url ? `<a href="${esc(t.url)}" rel="noopener">${esc(t.label)} ${esc(t.text)}</a>` : `${esc(t.label)} ${esc(t.text)}`}</span>`)
-            .join(' · ')}</p>`
+        ? `<div class="button-row artist-tips"><span class="artist-tips-label">Tip</span>${tips
+            .map((t) => `<a class="button provider provider-${esc(t.service)}" href="${esc(t.url)}" title="${esc(`${t.label}: ${t.text}`)}" rel="noopener">${esc(t.label)}</a>`)
+            .join('')}</div>`
         : ''
     }
     </div>
