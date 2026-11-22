@@ -143,9 +143,19 @@ for (const f of fs.existsSync(VENDORS_DIR) ? fs.readdirSync(VENDORS_DIR) : []) {
 }
 for (const [i, s] of loadFoodSources().entries()) {
   const where = `data/food/sources.json [${i}]`;
-  if (!placeKeys.has(s.place)) err(where, `place "${s.place}" is not a venue slug or a key in data/food/places.json`);
-  if (!s.source || !adapters[s.source.type]) err(where, `"source.type" must be one of ${Object.keys(adapters).join(', ')}`);
-  for (const re of [s.include, s.exclude, ...Object.keys(s.rename ?? {})].filter(Boolean)) {
+  if (s.vendor != null) {
+    // A vendor's own schedule page: the vendor needs a file, and each mapped place must exist.
+    if (s.place != null) err(where, 'give "vendor" or "place", not both');
+    if (!fs.existsSync(path.join(VENDORS_DIR, `${s.vendor}.json`))) err(where, `vendor "${s.vendor}" has no file in data/food/vendors/`);
+    if (!s.places || !Object.keys(s.places).length) err(where, '"places" (location regex → place) is required for a vendor source');
+    for (const key of Object.values(s.places ?? {})) {
+      if (!placeKeys.has(key)) err(where, `place "${key}" is not a venue slug or a key in data/food/places.json`);
+    }
+  } else if (!placeKeys.has(s.place)) err(where, `place "${s.place}" is not a venue slug or a key in data/food/places.json`);
+  const custom = s.source?.type === 'custom';
+  if (custom && !fs.existsSync(path.join('scrapers', 'custom', `${s.source.name}.js`))) err(where, `no scrapers/custom/${s.source.name}.js`);
+  if (!s.source || (!custom && !adapters[s.source.type])) err(where, `"source.type" must be custom or one of ${Object.keys(adapters).join(', ')}`);
+  for (const re of [s.include, s.exclude, ...Object.keys(s.rename ?? {}), ...Object.keys(s.places ?? {})].filter(Boolean)) {
     try {
       new RegExp(re);
     } catch {

@@ -55,3 +55,40 @@ test('food: checkPlaces catches venue keys and coordinates outside New Orleans',
   assert.match(problems, /"swapped": lat\/lng/);
   assert.doesNotMatch(problems, /friendly-bar/);
 });
+
+test('food: Hatch+Harvest schedule lines become stops with a year and the right meridiem', async () => {
+  const { DateTime } = await import('luxon');
+  const { parseHatchAndHarvest } = await import('../scrapers/custom/hatch-and-harvest.js');
+  const html = fs.readFileSync(new URL('./fixtures/hatch-and-harvest.html', import.meta.url), 'utf8');
+  const reference = DateTime.fromISO('2026-11-10T12:00:00', { zone: 'America/Chicago' });
+  const events = parseHatchAndHarvest(html, { url: 'https://hatchandharvest.net/', reference });
+  assert.deepEqual(
+    events.map((e) => [e.location, e.start, e.end]),
+    [
+      ['Miel Brewery', '2026-11-12T17:00:00-06:00', '2026-11-12T21:00:00-06:00'],
+      ['Miel Brewery', '2026-11-14T12:00:00-06:00', '2026-11-14T18:00:00-06:00'],
+      ["Farmer's Butcher & Farm stop", '2026-11-15T11:00:00-06:00', '2026-11-15T15:00:00-06:00'],
+      ['Miel Brewery', '2026-12-03T17:00:00-06:00', '2026-12-03T21:00:00-06:00'],
+    ],
+  );
+  // Read in January, "December 3rd" (a Thursday) is still last year's, not a Thursday-less 2027 date.
+  const january = parseHatchAndHarvest(html, { reference: DateTime.fromISO('2027-01-05', { zone: 'America/Chicago' }) });
+  assert.equal(january.at(-1).start.slice(0, 10), '2026-12-03');
+});
+
+test('food: a vendor site maps location names to places, never addresses', async () => {
+  const { extractEvents } = await import('../scrapers/jsonld.js');
+  const { foodFromVendorSite } = await import('../scripts/lib/food.js');
+  const html = fs.readFileSync(new URL('./fixtures/food-vendor-jsonld.html', import.meta.url), 'utf8');
+  const raw = extractEvents(html, 'https://bugginoutboils.com/');
+  assert.equal(raw[0].location, 'Bayou Beer Garden');
+  const config = { places: { '^bayou beer garden': 'bayou-beer-garden' }, wallClock: true };
+  const { events, unmapped } = foodFromVendorSite(raw, config);
+  assert.deepEqual(unmapped, ['Somewhere New']);
+  assert.equal(events.length, 1);
+  assert.equal(events[0].place, 'bayou-beer-garden');
+  // The page stamps -05:00 in November; with wallClock the 12:00 is New Orleans noon (CST, -06:00).
+  assert.equal(events[0].start, '2026-11-22T12:00:00-06:00');
+  assert.equal(events[0].end, '2026-11-22T16:00:00-06:00');
+  assert.equal(foodFromVendorSite(raw, { ...config, wallClock: false }).events[0].start, '2026-11-22T12:00:00-05:00');
+});

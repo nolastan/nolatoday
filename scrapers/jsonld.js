@@ -56,6 +56,7 @@ export function extractEvents(html, pageUrl, { location } = {}) {
       url: e.url ? safeUrl(Array.isArray(e.url) ? e.url[0] : e.url, pageUrl) : undefined,
       description: typeof e.description === 'string' ? decode(e.description) : undefined,
       image: imageUrl(e.image),
+      location: placeName(e),
       status: e.eventStatus,
     }))
     .filter((e) => !String(e.status ?? '').includes('Cancelled'));
@@ -79,6 +80,13 @@ function locationName(e) {
   if (!loc) return '';
   if (typeof loc === 'string') return loc;
   return [loc.name, typeof loc.address === 'string' ? loc.address : loc.address?.streetAddress].filter(Boolean).join(' ');
+}
+
+// The location's name alone, for food sources that map it to a place (never its address).
+function placeName(e) {
+  const loc = [].concat(e.location ?? [])[0];
+  if (!loc) return undefined;
+  return typeof loc === 'string' ? decode(loc) : loc.name ? decode(loc.name) : undefined;
 }
 
 function imageUrl(img) {
