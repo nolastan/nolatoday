@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { buildMatcher, candidateName, candidates, checkArtists, leadName, nameKey, slugify, tipFromUrl } from '../scripts/lib/artists.js';
+import { buildMatcher, candidateName, candidates, checkArtists, leadName, nameKey, slugify } from '../scripts/lib/artists.js';
 import { artistTips } from '../src/templates/artist.js';
 import { pickArtist, linksFrom } from '../scripts/lib/musicbrainz.js';
 import { metaFromApi, metaFromOEmbed } from '../scripts/lib/spotify.js';
@@ -127,16 +127,6 @@ test('checkArtists: tip jars need a known service, a handle, a source and a matc
   assert.deepEqual(checkArtists([{ slug: 'a', name: 'Tuba Skinny', tips: {} }]).map((p) => p.message), ['tips must be an array']);
 });
 
-test('tipFromUrl: Venmo, Cash App and PayPal links', () => {
-  assert.deepEqual(tipFromUrl('https://account.venmo.com/u/Tubaskinny'), { service: 'venmo', handle: '@Tubaskinny', url: 'https://venmo.com/u/Tubaskinny' });
-  assert.deepEqual(tipFromUrl('https://cash.app/$tedhefko/'), { service: 'cashApp', handle: '$tedhefko', url: 'https://cash.app/$tedhefko' });
-  assert.deepEqual(tipFromUrl('https://www.paypal.com/paypalme/tubaskinny'), { service: 'paypal', handle: 'tubaskinny', url: 'https://paypal.me/tubaskinny' });
-  assert.deepEqual(tipFromUrl('https://paypal.me/JonClearyNola'), { service: 'paypal', handle: 'JonClearyNola', url: 'https://paypal.me/JonClearyNola' });
-  assert.equal(tipFromUrl('https://www.paypal.com/donate'), null);
-  assert.equal(tipFromUrl('https://venmo.com/about'), null);
-  assert.equal(tipFromUrl('not a url'), null);
-});
-
 test('artistTips: account name when given, else the handle', () => {
   assert.deepEqual(
     artistTips({
@@ -188,11 +178,7 @@ test('linksFrom: the artist’s own pages, skipping ended links', () => {
         rel('social network', 'https://www.facebook.com/tubaskinny'),
         rel('youtube', 'https://www.youtube.com/user/tubaskinny'),
         rel('wikidata', 'https://www.wikidata.org/wiki/Q1'),
-        rel('patronage', 'https://www.paypal.com/paypalme/tubaskinny'),
-        rel('patronage', 'https://paypal.me/someoneelse'),
-        rel('patronage', 'https://account.venmo.com/u/Tubaskinny'),
       ],
-      id: 'a05add38-ccf0-4e27-a701-d4a09079682e',
     }),
     {
       spotify: '5Yk2yKWh1jbCJS7gfDyPbK',
@@ -203,10 +189,6 @@ test('linksFrom: the artist’s own pages, skipping ended links', () => {
         instagram: 'https://www.instagram.com/tubaskinny/',
         youtube: 'https://www.youtube.com/user/tubaskinny',
       },
-      tips: [
-        { service: 'paypal', handle: 'tubaskinny', url: 'https://paypal.me/tubaskinny', source: 'https://musicbrainz.org/artist/a05add38-ccf0-4e27-a701-d4a09079682e' },
-        { service: 'venmo', handle: '@Tubaskinny', url: 'https://venmo.com/u/Tubaskinny', source: 'https://musicbrainz.org/artist/a05add38-ccf0-4e27-a701-d4a09079682e' },
-      ],
     },
   );
   assert.deepEqual(linksFrom({}), { links: {} });

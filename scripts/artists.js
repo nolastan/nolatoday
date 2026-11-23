@@ -71,14 +71,13 @@ async function discover() {
     if (!hit) continue;
     const slug = slugify(hit.name);
     if (!slug || slugs.has(slug) || mbids.has(hit.id)) continue;
-    const { spotify, links, tips } = linksFrom(await musicbrainz(`artist/${hit.id}?inc=url-rels&fmt=json`));
+    const { spotify, links } = linksFrom(await musicbrainz(`artist/${hit.id}?inc=url-rels&fmt=json`));
     const artist = { slug, name: hit.name };
     if (nameKey(c.name) !== nameKey(hit.name)) artist.aliases = [c.name];
     if (spotify && !spotifyIds.has(spotify)) artist.spotify = spotify;
     artist.musicbrainz = hit.id;
     if (Object.keys(links).length) artist.links = links;
-    if (tips) artist.tips = tips;
-    console.log(`+ ${hit.name} (${c.count} shows)${artist.spotify ? ' spotify' : ''}${Object.keys(links).map((k) => ` ${k}`).join('')}${(tips ?? []).map((t) => ` ${t.service}`).join('')}`);
+    console.log(`+ ${hit.name} (${c.count} shows)${artist.spotify ? ' spotify' : ''}${Object.keys(links).map((k) => ` ${k}`).join('')}`);
     if (flag('write')) writeJSON(path.join(ARTISTS_DIR, `${slug}.json`), artist);
     slugs.add(slug);
     mbids.add(hit.id);

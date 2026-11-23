@@ -26,30 +26,6 @@ export const TIPS = {
   paypal: { label: 'PayPal', hosts: ['paypal.me', 'paypal.com'] },
 };
 
-/**
- * A tip jar from a payment link, or null: { service, handle, url }.
- * Knows venmo.com/u/<name>, cash.app/$<name>, paypal.me/<name> and paypal.com/paypalme/<name>.
- */
-export function tipFromUrl(url) {
-  let u;
-  try {
-    u = new URL(url);
-  } catch {
-    return null;
-  }
-  const host = u.hostname.replace(/^www\./, '');
-  const path = u.pathname.replace(/\/+$/, '');
-  let m;
-  if ((host === 'venmo.com' || host === 'account.venmo.com') && (m = /^\/u\/([A-Za-z0-9_-]+)$/.exec(path))) {
-    return { service: 'venmo', handle: `@${m[1]}`, url: `https://venmo.com/u/${m[1]}` };
-  }
-  if (host === 'cash.app' && (m = /^\/\$([A-Za-z0-9_-]+)$/.exec(path))) return { service: 'cashApp', handle: `$${m[1]}`, url: `https://cash.app/$${m[1]}` };
-  if ((host === 'paypal.me' && (m = /^\/([A-Za-z0-9_-]+)$/.exec(path))) || (host === 'paypal.com' && (m = /^\/paypalme\/([A-Za-z0-9_-]+)$/.exec(path)))) {
-    return { service: 'paypal', handle: m[1], url: `https://paypal.me/${m[1]}` };
-  }
-  return null;
-}
-
 /** All artists from data/artists/*.json, sorted by name. */
 export function loadArtists(dir = ARTISTS_DIR) {
   if (!fs.existsSync(dir)) return [];
