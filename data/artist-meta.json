@@ -1,6 +1,31 @@
 {
+  "alex-mcmurray": {
+    "image": "https://i.scdn.co/image/ab67616d0000b273498ea3eca6198d8eeeb8fef1",
+    "imageSmall": "https://i.scdn.co/image/ab67616d00001e02498ea3eca6198d8eeeb8fef1"
+  },
+  "big-joe-kennedy": {
+    "image": "https://i.scdn.co/image/ab67616d0000b273aadf1c1745b52c96a3d93bab",
+    "imageSmall": "https://i.scdn.co/image/ab67616d00001e02aadf1c1745b52c96a3d93bab",
+    "spotifyGenres": [
+      "blues"
+    ]
+  },
+  "big-sams-funky-nation": {
+    "musicbrainzGenres": [
+      "funk",
+      "jazz",
+      "rock"
+    ]
+  },
   "boogie-t": {
-    "image": "https://image-cdn-ak.spotifycdn.com/image/ab67616100005174830745c7b90cace9c0d6c1e1"
+    "image": "https://i.scdn.co/image/ab6761610000e5eb830745c7b90cace9c0d6c1e1",
+    "imageSmall": "https://i.scdn.co/image/ab6761610000f178830745c7b90cace9c0d6c1e1",
+    "spotifyGenres": [
+      "dubstep",
+      "riddim",
+      "bass music",
+      "edm"
+    ]
   },
   "charmaine-neville": {
     "musicbrainzGenres": [
@@ -21,7 +46,8 @@
     ]
   },
   "ethan-santos": {
-    "image": "https://image-cdn-fa.spotifycdn.com/image/ab67616100005174004732f2b38c3349047c73db"
+    "image": "https://i.scdn.co/image/ab6761610000e5eb004732f2b38c3349047c73db",
+    "imageSmall": "https://i.scdn.co/image/ab6761610000f178004732f2b38c3349047c73db"
   },
   "hash-cabbage": {
     "musicbrainzGenres": [
@@ -32,7 +58,11 @@
     ]
   },
   "hot-8-brass-band": {
-    "image": "https://image-cdn-fa.spotifycdn.com/image/ab67616100005174f4fbebe55e887531bb6b9433",
+    "image": "https://i.scdn.co/image/ab6761610000e5ebf4fbebe55e887531bb6b9433",
+    "imageSmall": "https://i.scdn.co/image/ab6761610000f178f4fbebe55e887531bb6b9433",
+    "spotifyGenres": [
+      "brass band"
+    ],
     "musicbrainzGenres": [
       "brass band",
       "jazz",
@@ -41,6 +71,14 @@
     ]
   },
   "iguanas": {
+    "image": "https://i.scdn.co/image/0a3dbab65c9a43fe73c36a2808080239ace9fd15",
+    "imageSmall": "https://i.scdn.co/image/ff1661ba7f27ceaac290af48f73950f75ebbfc8c",
+    "spotifyGenres": [
+      "proto-punk",
+      "garage rock",
+      "zydeco",
+      "cajun"
+    ],
     "musicbrainzGenres": [
       "rock"
     ]
@@ -51,6 +89,12 @@
     ]
   },
   "kermit-ruffins": {
+    "image": "https://i.scdn.co/image/ab67616d0000b2738f6b5bea93c2bc7122daa0f9",
+    "imageSmall": "https://i.scdn.co/image/ab67616d00001e028f6b5bea93c2bc7122daa0f9",
+    "spotifyGenres": [
+      "brass band",
+      "cajun"
+    ],
     "musicbrainzGenres": [
       "jazz",
       "dixieland",
@@ -58,10 +102,17 @@
     ]
   },
   "kota-dosa": {
-    "image": "https://image-cdn-fa.spotifycdn.com/image/ab6761610000517445c08a20be586024e71e64b2"
+    "image": "https://i.scdn.co/image/ab6761610000e5eb45c08a20be586024e71e64b2",
+    "imageSmall": "https://i.scdn.co/image/ab6761610000f17845c08a20be586024e71e64b2"
   },
   "lauren-daigle": {
-    "image": "https://image-cdn-ak.spotifycdn.com/image/ab6761610000517414db2d3b15632705e2a11357",
+    "image": "https://i.scdn.co/image/ab6761610000e5eb14db2d3b15632705e2a11357",
+    "imageSmall": "https://i.scdn.co/image/ab6761610000f17814db2d3b15632705e2a11357",
+    "spotifyGenres": [
+      "christian",
+      "worship",
+      "ccm"
+    ],
     "musicbrainzGenres": [
       "contemporary christian",
       "gospel",
@@ -70,15 +121,29 @@
     ]
   },
   "leroy-jones": {
+    "image": "https://i.scdn.co/image/6841892cb3409cb70c597fd9aeac520e3501417b",
+    "imageSmall": "https://i.scdn.co/image/cc8cb3116a5740fed06056855293ae0e4448a9a3",
+    "spotifyGenres": [
+      "brass band",
+      "ragtime"
+    ],
     "musicbrainzGenres": [
       "jazz"
     ]
   },
   "lily-unless-and-the-if-onlys": {
-    "image": "https://image-cdn-fa.spotifycdn.com/image/ab6761610000517456009c94aaa495746dd00a1d"
+    "image": "https://i.scdn.co/image/ab6761610000e5eb56009c94aaa495746dd00a1d",
+    "imageSmall": "https://i.scdn.co/image/ab6761610000f17856009c94aaa495746dd00a1d"
   },
   "mary-gauthier": {
-    "image": "https://image-cdn-ak.spotifycdn.com/image/ab67616100005174c6708af5301835351fb813fd",
+    "image": "https://i.scdn.co/image/ab6761610000e5ebc6708af5301835351fb813fd",
+    "imageSmall": "https://i.scdn.co/image/ab6761610000f178c6708af5301835351fb813fd",
+    "spotifyGenres": [
+      "americana",
+      "alt country",
+      "folk",
+      "singer-songwriter"
+    ],
     "musicbrainzGenres": [
       "country",
       "folk"
@@ -90,16 +155,47 @@
     ]
   },
   "new-breed-brass-band": {
-    "image": "https://image-cdn-ak.spotifycdn.com/image/ab676161000051746033394f82f5ee73f80ecada"
+    "image": "https://i.scdn.co/image/ab6761610000e5eb6033394f82f5ee73f80ecada",
+    "imageSmall": "https://i.scdn.co/image/ab6761610000f1786033394f82f5ee73f80ecada",
+    "spotifyGenres": [
+      "brass band",
+      "cajun"
+    ]
   },
   "rebirth-brass-band": {
+    "image": "https://i.scdn.co/image/0ea485197dec96d671340a52f05e1cc4f99a3d00",
+    "imageSmall": "https://i.scdn.co/image/32e98fb3696259af8a64af3a6f9f65327b3491bc",
+    "spotifyGenres": [
+      "brass band",
+      "zydeco",
+      "cajun",
+      "new orleans bounce"
+    ],
     "musicbrainzGenres": [
       "brass band",
       "jazz"
     ]
   },
+  "sasha-masakowski": {
+    "image": "https://i.scdn.co/image/ab6761610000e5ebdfb0175db121bd158592639b",
+    "imageSmall": "https://i.scdn.co/image/ab6761610000f178dfb0175db121bd158592639b"
+  },
+  "shotgun-jazz-band": {
+    "image": "https://i.scdn.co/image/ab67616d0000b273c600b1d65c15063e50f3f420",
+    "imageSmall": "https://i.scdn.co/image/ab67616d00001e02c600b1d65c15063e50f3f420",
+    "spotifyGenres": [
+      "swing music",
+      "ragtime"
+    ]
+  },
   "soul-rebels": {
-    "image": "https://image-cdn-fa.spotifycdn.com/image/ab67616100005174b3a51831210bf818e2238a8a",
+    "image": "https://i.scdn.co/image/ab6761610000e5ebb3a51831210bf818e2238a8a",
+    "imageSmall": "https://i.scdn.co/image/ab6761610000f178b3a51831210bf818e2238a8a",
+    "spotifyGenres": [
+      "brass band",
+      "new orleans bounce",
+      "cajun"
+    ],
     "musicbrainzGenres": [
       "jazz"
     ]
@@ -111,8 +207,27 @@
       "jazz-funk"
     ]
   },
+  "tank-and-the-bangas": {
+    "image": "https://i.scdn.co/image/ab6761610000e5ebb86bc662a2f3d09834069c28",
+    "imageSmall": "https://i.scdn.co/image/ab6761610000f178b86bc662a2f3d09834069c28",
+    "spotifyGenres": [
+      "alternative r&b"
+    ],
+    "musicbrainzGenres": [
+      "contemporary r&b",
+      "hip hop",
+      "jazz",
+      "neo soul"
+    ]
+  },
   "ted-hefko-and-the-thousandaires": {
-    "image": "https://image-cdn-ak.spotifycdn.com/image/ab67616100005174888c820bffcd7421c6f0bc41"
+    "image": "https://i.scdn.co/image/ab6761610000e5eb888c820bffcd7421c6f0bc41",
+    "imageSmall": "https://i.scdn.co/image/ab6761610000f178888c820bffcd7421c6f0bc41"
+  },
+  "tom-mcdermott": {
+    "musicbrainzGenres": [
+      "jazz"
+    ]
   },
   "treme-brass-band": {
     "musicbrainzGenres": [
@@ -120,7 +235,13 @@
     ]
   },
   "tuba-skinny": {
-    "image": "https://image-cdn-fa.spotifycdn.com/image/ab67616100005174cca3d46d53a0b4e34b49c0e0",
+    "image": "https://i.scdn.co/image/ab6761610000e5ebcca3d46d53a0b4e34b49c0e0",
+    "imageSmall": "https://i.scdn.co/image/ab6761610000f178cca3d46d53a0b4e34b49c0e0",
+    "spotifyGenres": [
+      "ragtime",
+      "swing music",
+      "jazz"
+    ],
     "musicbrainzGenres": [
       "dixieland",
       "jazz"
