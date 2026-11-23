@@ -1,6 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { buildMatcher, candidateName, candidates, checkArtists, leadName, nameKey, slugify } from '../scripts/lib/artists.js';
+import { artistTips } from '../src/templates/artist.js';
 import { pickArtist, linksFrom } from '../scripts/lib/musicbrainz.js';
 import { metaFromApi, metaFromOEmbed } from '../scripts/lib/spotify.js';
 import { titleHtml, artistPage, artistsPage, artistLinks } from '../src/templates/artist.js';
@@ -99,6 +100,47 @@ test('checkArtists: catches shared names and bad ids', () => {
     'unknown link "myspace" (use appleMusic, bandcamp, youtube, soundcloud, instagram, website)',
     'links.website must be an https URL',
   ]);
+});
+
+test('checkArtists: tip jars need a known service, a handle, a source and a matching link', () => {
+  const tip = { service: 'venmo', handle: '@Tubaskinny', url: 'https://venmo.com/u/Tubaskinny', source: 'https://www.tubaskinny.com/faq' };
+  assert.deepEqual(checkArtists([{ slug: 'a', name: 'Tuba Skinny', tips: [tip, { service: 'paypal', handle: '@TYRUS CHAPMAN', source: 'Jazz Museum page' }] }]), []);
+  const problems = checkArtists([
+    {
+      slug: 'a',
+      name: 'Tuba Skinny',
+      tips: [
+        { service: 'zelle', handle: 'x', source: 's' },
+        { service: 'venmo', handle: '', url: 'https://cash.app/$x' },
+        { ...tip, url: 'http://venmo.com/u/x', note: 'hi' },
+      ],
+    },
+  ]).map((p) => p.message);
+  assert.deepEqual(problems, [
+    'tips[0]: service must be one of venmo, cashApp, paypal',
+    'tips[1]: missing handle',
+    'tips[1]: missing source (where the tip jar was found)',
+    "tips[1]: url isn't a Venmo link",
+    'tips[2]: unknown field "note"',
+    'tips[2]: url must be an https URL',
+  ]);
+  assert.deepEqual(checkArtists([{ slug: 'a', name: 'Tuba Skinny', tips: {} }]).map((p) => p.message), ['tips must be an array']);
+});
+
+test('artistTips: account name when given, else the handle', () => {
+  assert.deepEqual(
+    artistTips({
+      tips: [
+        { service: 'venmo', handle: '@Patricia-Gorman-8', name: 'Jon Cleary FHQ', url: 'https://venmo.com/u/Patricia-Gorman-8', source: 's' },
+        { service: 'paypal', handle: '@TYRUS CHAPMAN', source: 's' },
+      ],
+    }),
+    [
+      { service: 'venmo', label: 'Venmo', text: 'Jon Cleary FHQ', url: 'https://venmo.com/u/Patricia-Gorman-8' },
+      { service: 'paypal', label: 'PayPal', text: '@TYRUS CHAPMAN', url: undefined },
+    ],
+  );
+  assert.deepEqual(artistTips({}), []);
 });
 
 const mb = (name, extra = {}) => ({ id: 'a05add38-ccf0-4e27-a701-d4a09079682e', name, type: 'Group', score: 100, ...extra });

@@ -5,5 +5,24 @@
   "musicbrainz": "a13d7621-b81c-4cf5-87ac-eb7e86dda70f",
   "links": {
     "website": "https://www.hot8brassband.com/"
-  }
+  },
+  "tips": [
+    {
+      "service": "venmo",
+      "handle": "@TYRUS-CHAPMAN",
+      "url": "https://venmo.com/u/TYRUS-CHAPMAN",
+      "source": "New Orleans Jazz Museum virtual concert pages, 2020–21"
+    },
+    {
+      "service": "cashApp",
+      "handle": "$HOT8BRASSBAND",
+      "url": "https://cash.app/$HOT8BRASSBAND",
+      "source": "New Orleans Jazz Museum virtual concert pages, 2020–21"
+    },
+    {
+      "service": "paypal",
+      "handle": "@TYRUS CHAPMAN",
+      "source": "New Orleans Jazz Museum virtual concert pages, 2020–21"
+    }
+  ]
 }

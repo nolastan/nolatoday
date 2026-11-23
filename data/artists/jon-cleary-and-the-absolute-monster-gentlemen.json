@@ -1,5 +1,24 @@
 {
   "slug": "jon-cleary-and-the-absolute-monster-gentlemen",
   "name": "Jon Cleary and the Absolute Monster Gentlemen",
-  "musicbrainz": "13c39eaa-e46c-4e66-a84d-a534f804e450"
+  "musicbrainz": "13c39eaa-e46c-4e66-a84d-a534f804e450",
+  "links": {
+    "instagram": "https://www.instagram.com/jonclearymusic/",
+    "website": "https://www.joncleary.com/"
+  },
+  "tips": [
+    {
+      "service": "venmo",
+      "handle": "@Patricia-Gorman-8",
+      "name": "Jon Cleary FHQ",
+      "url": "https://venmo.com/u/Patricia-Gorman-8",
+      "source": "https://www.joncleary.com/ (donate button)"
+    },
+    {
+      "service": "paypal",
+      "handle": "JonClearyNola",
+      "url": "https://paypal.me/JonClearyNola",
+      "source": "Stan, 2026-11-22"
+    }
+  ]
 }

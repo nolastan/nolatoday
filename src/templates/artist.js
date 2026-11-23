@@ -1,7 +1,7 @@
 import { DateTime } from 'luxon';
 import { esc, jsonScript, layout, siteHeader, siteFooter } from './layout.js';
 import { ZONE } from '../../scripts/lib/time.js';
-import { LINKS } from '../../scripts/lib/artists.js';
+import { LINKS, TIPS } from '../../scripts/lib/artists.js';
 import { eventSchema } from './venue.js';
 import { GENRES, broadGenres, specificGenres, shownGenres, genreLabel } from '../../scripts/lib/genres.js';
 
@@ -32,6 +32,11 @@ export function artistLinks(artist) {
   return links;
 }
 
+/** The artist's tip jars as shown: [{ service, label, text, url? }]. `text` is the account name if given, else the handle. */
+export function artistTips(artist) {
+  return (artist.tips ?? []).map((t) => ({ service: t.service, label: TIPS[t.service].label, text: t.name ?? t.handle, url: t.url }));
+}
+
 /** An article about the artist (data/articles/), in full: headline, dek, byline, then the text. */
 export function articleHtml(article) {
   const date = DateTime.fromISO(article.date, { zone: ZONE });
@@ -51,6 +56,8 @@ export function artistPage(ctx, artist, { shows, meta, articles = [] }) {
   const canonical = `${config.siteUrl}/artists/${artist.slug}`;
   const listed = shows.slice(0, MAX_LISTED);
   const links = artistLinks(artist);
+  // Only tip jars with a link make a button; a bare handle or email stays in the data.
+  const tips = artistTips(artist).filter((t) => t.url);
   const venueNames = [...new Set(listed.map((s) => s.venue.name))];
   const genres = specificGenres(meta);
   const broad = shownGenres(broadGenres(artist, genres));
@@ -107,6 +114,13 @@ export function artistPage(ctx, artist, { shows, meta, articles = [] }) {
       links.length
         ? `<div class="button-row">${links
             .map((l) => `<a class="button provider provider-${esc(l.key)}" href="${esc(l.url)}" rel="noopener">${esc(l.label)}</a>`)
+            .join('')}</div>`
+        : ''
+    }
+    ${
+      tips.length
+        ? `<div class="artist-tips" role="group" aria-label="Tip jar"><span class="artist-tips-label">Tip jar</span>${tips
+            .map((t) => `<a class="button provider provider-${esc(t.service)}" href="${esc(t.url)}" title="${esc(`${t.label}: ${t.text}`)}" rel="noopener">${esc(t.label)}</a>`)
             .join('')}</div>`
         : ''
     }

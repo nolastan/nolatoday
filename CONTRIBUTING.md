@@ -165,7 +165,10 @@ Return an array of `{ title, start, end?, allDay?, url? }`. `start`/`end` may be
   "aliases": ["Kermit Ruffins & the BBQ Swingers"],
   "spotify": "22-character Spotify artist id",
   "musicbrainz": "MusicBrainz artist id",
-  "links": { "appleMusic": "https://…", "bandcamp": "https://…", "youtube": "https://…", "soundcloud": "https://…", "instagram": "https://…", "website": "https://…" }
+  "links": { "appleMusic": "https://…", "bandcamp": "https://…", "youtube": "https://…", "soundcloud": "https://…", "instagram": "https://…", "website": "https://…" },
+  "tips": [
+    { "service": "venmo", "handle": "@kermitruffins", "url": "https://venmo.com/u/kermitruffins", "source": "https://kermitruffins.com/faq" }
+  ]
 }
 ```
 
@@ -173,6 +176,7 @@ Return an array of `{ title, start, end?, allDay?, url? }`. `start`/`end` may be
 - A name matches only as whole words, longest name first, and not after phrases like "tribute to" or "music of". Two artists can't share a name or alias (`node scripts/validate.js` checks).
 - Like venues, an artist's `slug` is a live URL: don't change or delete it.
 - Not every act needs a page. A wrong match is worse than a missing one, so add an artist only when you're sure who it is, and a link only when it's the artist's own.
+- `tips` are the artist's tip jars, shown on their page as small brand-colored buttons in a "Tip jar" box under the music links (only entries with a `url` get a button). `service` is `venmo`, `cashApp` or `paypal`; `handle` is the account as the artist published it (`@Tubaskinny`, `$tedhefko`, `tubaskinny@gmail.com`); `url` is the payment link (`https://venmo.com/u/<name>`, `https://cash.app/$<name>`, `https://paypal.me/<name>`), left out when there's none; `name` is optional and shown instead of the handle when the account's display name differs from it (an account in a manager's name). `source` is required: the page where the artist published it, as a URL, or a short note when there is no URL ("OffBeat listing, 2020"). Tip jars are added by hand after a person has checked them, never by a script or agent on its own, since a wrong handle sends fans' money to a stranger. Use only the artist's own site or social profiles, or a page that clearly names the artist, never a guessed handle.
 
 `node scripts/artists.js candidates` lists names on the schedules with no artist file. `node scripts/artists.js discover --write` looks them up on MusicBrainz and creates a file only when exactly one Louisiana act has that exact name, taking its Spotify id and links from MusicBrainz. Everything else is skipped.
 

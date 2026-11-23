@@ -8,5 +8,25 @@
     "website": "https://www.ted.hefko.net/",
     "instagram": "https://www.instagram.com/officialtedhefko/",
     "youtube": "https://www.youtube.com/channel/UCqOOsL-2bBt9Y30gCWGw2rA"
-  }
+  },
+  "tips": [
+    {
+      "service": "venmo",
+      "handle": "@ted-hefko",
+      "url": "https://venmo.com/u/ted-hefko",
+      "source": "https://app.igotagig.com/artists/ted-hefko"
+    },
+    {
+      "service": "cashApp",
+      "handle": "$tedhefko",
+      "url": "https://cash.app/$tedhefko",
+      "source": "https://app.igotagig.com/artists/ted-hefko"
+    },
+    {
+      "service": "paypal",
+      "handle": "tedhefko",
+      "url": "https://paypal.me/tedhefko",
+      "source": "OffBeat listing, 2020"
+    }
+  ]
 }

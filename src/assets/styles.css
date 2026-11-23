@@ -755,6 +755,18 @@ a.popup-banner:hover h3 { text-decoration: underline; text-underline-offset: 3px
 .artist-hero.has-photo { display: flex; align-items: center; gap: 28px; }
 .artist-photo { flex: none; width: 200px; height: 200px; border-radius: 50%; object-fit: cover; background: var(--bg-elev); box-shadow: 0 8px 28px rgb(0 0 0 / 0.18); }
 .artist-genres { margin: 0 0 4px; font-size: 1.05rem; }
+.artist-tips {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-top: 22px;
+  padding: 6px 6px 6px 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+.artist-tips-label { color: var(--muted); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; margin-right: 6px; }
+.artist-tips .button { min-height: 32px; padding: 0 12px; border-radius: 8px; font-size: 0.95rem; }
 @media (max-width: 640px) {
   .artist-hero.has-photo { flex-direction: column; align-items: flex-start; gap: 16px; }
   .artist-photo { width: 132px; height: 132px; }
@@ -790,6 +802,9 @@ a.popup-banner:hover h3 { text-decoration: underline; text-underline-offset: 3px
 .provider-bandcamp, .provider-bandcamp:hover { background: #1da0c3; color: #04222b; }
 .provider-youtube, .provider-youtube:hover { background: #ff0000; color: #fff; }
 .provider-soundcloud, .provider-soundcloud:hover { background: #ff5500; color: #1a0a00; }
+.provider-venmo, .provider-venmo:hover { background: #008cff; color: #fff; }
+.provider-cashApp, .provider-cashApp:hover { background: #00d64f; color: #002b10; }
+.provider-paypal, .provider-paypal:hover { background: #ffc439; color: #111; }
 .provider-instagram, .provider-instagram:hover { background: linear-gradient(45deg, #f58529, #dd2a7b 50%, #8134af 80%, #515bd4); color: #fff; }
 
 /* ---- Food pop-ups (prototype) ------------------------------------------------ */
