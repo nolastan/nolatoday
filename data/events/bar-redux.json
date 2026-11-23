@@ -2,6 +2,13 @@
   "venue": "bar-redux",
   "events": [
     {
+      "id": "9aa1828484df",
+      "title": "Hobo Gadget Junk Band",
+      "start": "2026-11-27",
+      "allDay": true,
+      "url": "https://www.instagram.com/p/DgEhcckh8T5/"
+    },
+    {
       "id": "6dab387bdfde",
       "title": "Grannia Griffith, Rosemary Wells",
       "start": "2026-11-29T21:00:00-06:00",

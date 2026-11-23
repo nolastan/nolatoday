@@ -1,0 +1,53 @@
+{
+  "venue": "balcony-music-club",
+  "events": [
+    {
+      "id": "8f3529877867",
+      "title": "Electric Barrelhouse",
+      "start": "2026-11-27T18:00:00-06:00",
+      "url": "https://www.instagram.com/p/DgEGR1GzoFy/"
+    },
+    {
+      "id": "58fa605cef81",
+      "title": "Keep It Rolling Brass Band",
+      "start": "2026-11-27T21:00:00-06:00",
+      "url": "https://www.instagram.com/p/DgEGR1GzoFy/"
+    },
+    {
+      "id": "c1aab243d22a",
+      "title": "Andre Lovett Band",
+      "start": "2026-11-28T15:00:00-06:00",
+      "url": "https://www.instagram.com/p/DgEGR1GzoFy/"
+    },
+    {
+      "id": "a15ea5a16ba6",
+      "title": "Maurice Cade & ESS",
+      "start": "2026-11-28T18:00:00-06:00",
+      "url": "https://www.instagram.com/p/DgEGR1GzoFy/"
+    },
+    {
+      "id": "72aee808f3f2",
+      "title": "The Essentials",
+      "start": "2026-11-28T21:00:00-06:00",
+      "url": "https://www.instagram.com/p/DgEGR1GzoFy/"
+    },
+    {
+      "id": "706fff1f44d2",
+      "title": "Deej Flava & Mother Ruckus",
+      "start": "2026-11-29T15:00:00-06:00",
+      "url": "https://www.instagram.com/p/DgEGR1GzoFy/"
+    },
+    {
+      "id": "f8ac972415cf",
+      "title": "Jam Brass Band",
+      "start": "2026-11-29T18:00:00-06:00",
+      "url": "https://www.instagram.com/p/DgEGR1GzoFy/"
+    },
+    {
+      "id": "5b7a6682067f",
+      "title": "Kim In Da Wind",
+      "start": "2026-11-29T21:00:00-06:00",
+      "url": "https://www.instagram.com/p/DgEGR1GzoFy/"
+    }
+  ]
+}
