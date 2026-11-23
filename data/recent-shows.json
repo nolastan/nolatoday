@@ -19,70 +19,70 @@
     ],
     "21-amendment": [
       {
+        "id": "33c6eb2dd138",
+        "title": "Big Mike and the R&B Kings",
+        "start": "2026-11-22T20:00:00-06:00"
+      },
+      {
+        "id": "aab7761b0a98",
+        "title": "Lobelia Jazz Band",
+        "start": "2026-11-22T15:00:00-06:00"
+      },
+      {
         "id": "2175287d11ab",
         "title": "John Lisi & The Delta Funk",
         "start": "2026-11-21T15:00:00-06:00"
-      },
-      {
-        "id": "eda1c49ad80d",
-        "title": "Dr. Sick & the Late Greats",
-        "start": "2026-11-20T20:00:00-06:00"
-      },
-      {
-        "id": "ed477dfb3e81",
-        "title": "John Lisi & The Delta Funk",
-        "start": "2026-11-20T15:00:00-06:00"
       }
     ],
     "30-90": [
       {
-        "id": "90266d6eca13",
-        "title": "The Kazzettes",
-        "start": "2026-11-21T23:00:00-06:00"
+        "id": "5beb6ece3c2a",
+        "title": "Manic Mixtape",
+        "start": "2026-11-22T21:00:00-06:00"
       },
       {
-        "id": "eb782f7148db",
-        "title": "Hotline",
-        "start": "2026-11-21T20:00:00-06:00"
+        "id": "fcd54f695a08",
+        "title": "The Andre Lovett Band",
+        "start": "2026-11-22T18:00:00-06:00"
       },
       {
-        "id": "4897f812b875",
-        "title": "Five Funky Friends",
-        "start": "2026-11-21T17:00:00-06:00"
+        "id": "d4ac0254932f",
+        "title": "Flowmotion",
+        "start": "2026-11-22T15:00:00-06:00"
       }
     ],
     "bacchanal": [
       {
+        "id": "667544f3629b",
+        "title": "Noah Young",
+        "start": "2026-11-22T19:00:00-06:00"
+      },
+      {
+        "id": "a05363436f41",
+        "title": "Miles Berry",
+        "start": "2026-11-22T13:00:00-06:00"
+      },
+      {
         "id": "63095c4bf0da",
         "title": "Pete Olynciw",
         "start": "2026-11-21T19:00:00-06:00"
-      },
-      {
-        "id": "984e2013bee6",
-        "title": "Steve Lands",
-        "start": "2026-11-21T14:00:00-06:00"
-      },
-      {
-        "id": "8a95b8aa6802",
-        "title": "Willie Green",
-        "start": "2026-11-20T19:00:00-06:00"
       }
     ],
     "bamboulas": [
       {
-        "id": "5ea74522e715",
-        "title": "JOHNNY MASTRO",
-        "start": "2026-11-21T18:30:00-06:00"
+        "id": "7a3259146685",
+        "title": "kat kiley EXPERIENCE",
+        "start": "2026-11-22T21:00:00-06:00"
       },
       {
-        "id": "f1e81247b1bd",
-        "title": "james mCclaskey & the rhythm band",
-        "start": "2026-11-21T14:15:00-06:00"
+        "id": "97239ca287e9",
+        "title": "the midnight brawlers",
+        "start": "2026-11-22T17:30:00-06:00"
       },
       {
-        "id": "933b80ad3be7",
-        "title": "KAT KILEY EXPERIENCE",
-        "start": "2026-11-20T22:00:00-06:00"
+        "id": "9b7c7edb4461",
+        "title": "lAURA Doyle Quartet",
+        "start": "2026-11-22T13:30:00-06:00"
       }
     ],
     "banks-street-bar": [
@@ -121,6 +121,11 @@
     ],
     "bjs": [
       {
+        "id": "314a1bd3189c",
+        "title": "Tuba Skinny",
+        "start": "2026-11-22T18:00:00-06:00"
+      },
+      {
         "id": "40b5b0f9cf7d",
         "title": "Kumasi Afrobeat Orchestra",
         "start": "2026-11-21T21:00:00-06:00"
@@ -130,28 +135,23 @@
         "title": "Sally Baby's Silver Dollars",
         "start": "2026-11-19",
         "allDay": true
-      },
-      {
-        "id": "85d451e81844",
-        "title": "Leonie Evans, Meagan Gillis, Matt Bell",
-        "start": "2026-11-18T21:00:00-06:00"
       }
     ],
     "blue-nile": [
       {
+        "id": "c082c8253960",
+        "title": "Street Legends Brass Band",
+        "start": "2026-11-22T22:30:00-06:00"
+      },
+      {
+        "id": "dcd442f04cd0",
+        "title": "Juice presents Sypher Sundays",
+        "start": "2026-11-22T21:00:00-06:00"
+      },
+      {
         "id": "d31f1270fa29",
         "title": "AFROBEAT NOLA",
         "start": "2026-11-21T22:00:00-06:00"
-      },
-      {
-        "id": "fc0d9bd18008",
-        "title": "The Next Level Band (Balcony Room)",
-        "start": "2026-11-21T22:00:00-06:00"
-      },
-      {
-        "id": "473138d7ae54",
-        "title": "The Caesar Brothers' FunkBox",
-        "start": "2026-11-21T19:30:00-06:00"
       }
     ],
     "bontemps": [
@@ -173,19 +173,19 @@
     ],
     "buffa-s": [
       {
-        "id": "b663697b9cf4",
-        "title": "Black Dog",
-        "start": "2026-11-21T20:00:00-06:00"
+        "id": "2f3a68af930c",
+        "title": "MidniteWeeks Featuring Mark Johnson",
+        "start": "2026-11-22T19:00:00-06:00"
       },
       {
-        "id": "b1d189ec0272",
-        "title": "Tuba Skinny",
-        "start": "2026-11-20T19:00:00-06:00"
+        "id": "b81d730c26ef",
+        "title": "The Pfister Sisters",
+        "start": "2026-11-22T16:00:00-06:00"
       },
       {
-        "id": "b9cd06ba9ca6",
-        "title": "Tom McDermott w/ Susanne Ortner",
-        "start": "2026-11-19T20:00:00-06:00"
+        "id": "8ab0a0036327",
+        "title": "Traditional Jazz Brunch with Some Like It Hot!",
+        "start": "2026-11-22T11:00:00-06:00"
       }
     ],
     "cafe-istanbul": [
@@ -207,15 +207,21 @@
     ],
     "cafe-negril": [
       {
+        "id": "374a0fb493a0",
+        "title": "Ado Soul & The Tribe",
+        "start": "2026-11-22",
+        "allDay": true
+      },
+      {
+        "id": "7551f05e4f54",
+        "title": "Preach & Righteous Wrong Reggae Band",
+        "start": "2026-11-22",
+        "allDay": true
+      },
+      {
         "id": "6bd2e8c4b583",
         "title": "Orphaned in Storyville",
         "start": "2026-11-21T13:30:00-06:00"
-      },
-      {
-        "id": "c75abacd5a57",
-        "title": "Preach & Righteous Wrong Reggae Band",
-        "start": "2026-11-15",
-        "allDay": true
       }
     ],
     "carrollton-station": [
@@ -254,6 +260,11 @@
     ],
     "civic-theater": [
       {
+        "id": "4f82ebf2b923",
+        "title": "The Last Waltz - New Orleans",
+        "start": "2026-11-22T20:00:00-06:00"
+      },
+      {
         "id": "2c5e460f1673",
         "title": "Hot Mulligan North American Fall Tour",
         "start": "2026-11-17T19:00:00-06:00"
@@ -262,11 +273,6 @@
         "id": "e50685a81041",
         "title": "The Renaissance Room with The Renaissance Orchestra",
         "start": "2026-11-14T20:00:00-06:00"
-      },
-      {
-        "id": "44fed48170dd",
-        "title": "Bitch Cabal feat. Mannequin Pussy & Wednesday",
-        "start": "2026-11-10T19:00:00-06:00"
       }
     ],
     "culture-park": [
@@ -278,22 +284,27 @@
     ],
     "dba": [
       {
+        "id": "0585c030ac66",
+        "title": "The Jump Hounds",
+        "start": "2026-11-22T21:30:00-06:00"
+      },
+      {
+        "id": "f7f3a0236a49",
+        "title": "Paradise Jazz Band",
+        "start": "2026-11-22T18:00:00-06:00"
+      },
+      {
         "id": "655ab1f562c0",
         "title": "Dwayne Dopsie + the Zydeco Hellraisers",
         "start": "2026-11-21T22:00:00-06:00"
-      },
-      {
-        "id": "3b1259238035",
-        "title": "Tuba Skinny",
-        "start": "2026-11-21T18:00:00-06:00"
-      },
-      {
-        "id": "d89870d0a4d5",
-        "title": "A Little Lagniappe Giveback — Young Lion Showcase",
-        "start": "2026-11-21T14:30:00-06:00"
       }
     ],
     "domino": [
+      {
+        "id": "d629a76e1af4",
+        "title": "Donny's Demeanor, Shidded, Big Red",
+        "start": "2026-11-22T21:00:00-06:00"
+      },
       {
         "id": "fc21f28643cd",
         "title": "Grocery Bag, Across Phoenix, Timeout Room",
@@ -303,14 +314,14 @@
         "id": "7a4fe55fff25",
         "title": "Cypriestess, DJ Krewe, Zevi, Slug Club",
         "start": "2026-11-20T22:00:00-06:00"
-      },
-      {
-        "id": "dc07f0dd1f63",
-        "title": "Brysin Woodz, C4shh__, Shrddr_5150, Jadedband_",
-        "start": "2026-11-19T20:00:00-06:00"
       }
     ],
     "dos-jefes": [
+      {
+        "id": "d977441f929a",
+        "title": "JAVIER GUITERREZ",
+        "start": "2026-11-22T20:00:00-06:00"
+      },
       {
         "id": "0ea8b89131db",
         "title": "MISS BETTY SHIRLEY",
@@ -320,11 +331,6 @@
         "id": "faedaae91c60",
         "title": "Sax and the City featuring Tom Fitzpatrick",
         "start": "2026-11-20T21:00:00-06:00"
-      },
-      {
-        "id": "e0cf5761c445",
-        "title": "MR. KOHL",
-        "start": "2026-11-19T20:30:00-06:00"
       }
     ],
     "fillmore-new-orleans": [
@@ -397,6 +403,11 @@
     ],
     "howlin-wolf": [
       {
+        "id": "abc6332a004a",
+        "title": "Hot 8 Brass Band",
+        "start": "2026-11-22T22:30:00-06:00"
+      },
+      {
         "id": "3d08a4b7550a",
         "title": "Hot 8 Brass Band",
         "start": "2026-11-15T22:30:00-06:00"
@@ -405,11 +416,6 @@
         "id": "115b0d6d6255",
         "title": "Hot 8 Brass Band",
         "start": "2026-11-08T22:30:00-06:00"
-      },
-      {
-        "id": "fb10390b1043",
-        "title": "Honey Island Swamp Band",
-        "start": "2026-11-05T21:00:00-06:00"
       }
     ],
     "joy-theater": [
@@ -451,6 +457,11 @@
     ],
     "maison": [
       {
+        "id": "22fa48a8a888",
+        "title": "Open Mic From Hell: The WILDEST comedy show in New Orleans",
+        "start": "2026-11-22T19:30:00-06:00"
+      },
+      {
         "id": "126cd426cb21",
         "title": "Open Mic From Hell: The WILDEST comedy show in New Orleans",
         "start": "2026-11-15T19:30:00-06:00"
@@ -459,11 +470,6 @@
         "id": "c315f959e7c3",
         "title": "Open Mic From Hell: The WILDEST comedy show in New Orleans",
         "start": "2026-11-08T19:30:00-06:00"
-      },
-      {
-        "id": "80c8aeb60717",
-        "title": "Open Mic From Hell: The WILDEST comedy show in New Orleans",
-        "start": "2026-11-01T19:30:00-06:00"
       }
     ],
     "maple-leaf-bar": [
@@ -502,6 +508,11 @@
     ],
     "marigny-opera-house": [
       {
+        "id": "b5ad4db85628",
+        "title": "Marigny Opera Ballet 2026-2027 Encore Subscription",
+        "start": "2026-11-22T12:00:00-06:00"
+      },
+      {
         "id": "b3e1780b6dfe",
         "title": "Marigny Opera Ballet 2026-2027 Encore Subscription",
         "start": "2026-11-21T12:00:00-06:00"
@@ -510,14 +521,14 @@
         "id": "ae00cd8c4766",
         "title": "Marigny Opera Ballet 2026-2027 Encore Subscription",
         "start": "2026-11-20T12:00:00-06:00"
-      },
-      {
-        "id": "e0866e0f64ca",
-        "title": "The Desanctified Fashion Show",
-        "start": "2026-11-19T20:00:00-06:00"
       }
     ],
     "neutral-ground-coffee-house": [
+      {
+        "id": "a42e51974256",
+        "title": "Open Mic Night!!",
+        "start": "2026-11-22T19:30:00-06:00"
+      },
       {
         "id": "d49ba8891618",
         "title": "Spoken Word: Open Poet’s Mic Night",
@@ -527,11 +538,6 @@
         "id": "cc9c2dfb1ba0",
         "title": "Open Mic Night!!",
         "start": "2026-11-15T19:30:00-06:00"
-      },
-      {
-        "id": "ce00ac2520ba",
-        "title": "Spoken Word: Open Poet’s Mic Night",
-        "start": "2026-11-12T19:30:00-06:00"
       }
     ],
     "new-orleans-jazz-market": [
@@ -553,6 +559,11 @@
     ],
     "new-orleans-jazz-museum": [
       {
+        "id": "8adcecbb6916",
+        "title": "YALA Baby Artsplay!™ Workshop: Express Yourself!",
+        "start": "2026-11-22T10:30:00-06:00"
+      },
+      {
         "id": "e777425a347f",
         "title": "Friends of the Cabildo Concert Series Present The Walrus - New Orleans Beatles Tribute SOLD OUT",
         "start": "2026-11-20T19:00:00-06:00"
@@ -561,11 +572,6 @@
         "id": "a47dffe19ba2",
         "title": "Gallatin Street Fridays Presented by The Nathan and Priscilla Gordon Foundation: Piano Hour with Keiko Komaki",
         "start": "2026-11-20T14:00:00-06:00"
-      },
-      {
-        "id": "08ca4260811c",
-        "title": "Byron Asher’s Skrontch Music",
-        "start": "2026-11-19T18:00:00-06:00"
       }
     ],
     "nola-brewing": [
@@ -587,6 +593,11 @@
     ],
     "okay-bar": [
       {
+        "id": "4b5c3456640c",
+        "title": "Panorama Brass Band",
+        "start": "2026-11-22T20:00:00-06:00"
+      },
+      {
         "id": "f0160805e86b",
         "title": "Rotten Milk, Mr. Thursday Afternoon, Berbere Superstar",
         "start": "2026-11-20T18:00:00-06:00"
@@ -595,12 +606,6 @@
         "id": "69653c756213",
         "title": "Weezer Sucks Official, Honajonipar, Bored Shortz NOLA, Prey for Neighbors, Punani Tsunami 504",
         "start": "2026-11-20",
-        "allDay": true
-      },
-      {
-        "id": "9fd3f8cc0130",
-        "title": "Tchotchkele, Pesca DJ",
-        "start": "2026-11-19",
         "allDay": true
       }
     ],
@@ -640,19 +645,19 @@
     ],
     "preservation-hall": [
       {
+        "id": "f05778607703",
+        "title": "Preservation Legacy Band ft. Gregg Stafford",
+        "start": "2026-11-22T17:00:00-06:00"
+      },
+      {
+        "id": "af2c540a66eb",
+        "title": "Leroy Jones and the Preservation Jazz Masters",
+        "start": "2026-11-22T14:30:00-06:00"
+      },
+      {
         "id": "09625aa88a5b",
         "title": "Preservation All-Stars ft. Shannon Powell",
         "start": "2026-11-21T17:00:00-06:00"
-      },
-      {
-        "id": "baafff385a32",
-        "title": "Leroy Jones and the Preservation Jazz Masters",
-        "start": "2026-11-21T14:30:00-06:00"
-      },
-      {
-        "id": "60464c2cda33",
-        "title": "Preservation All-Stars ft. Mark Braud",
-        "start": "2026-11-20T17:00:00-06:00"
       }
     ],
     "republic-nola": [
@@ -708,6 +713,11 @@
     ],
     "santos-bar": [
       {
+        "id": "afb618654d00",
+        "title": "DEFEND DECATUR 2: ROCK THE BLOCK PARTY with THE SHITTY STONES, D. SABLU, 50 CENT MILLIONAIRE & MORE!",
+        "start": "2026-11-22T13:00:00-06:00"
+      },
+      {
         "id": "a73a2bc7b909",
         "title": "THE GREAT NOLA TRENDKILL AFTER-PARTY FEAT. SPIRIT IN THE ROOM & THE UNNATURALS",
         "start": "2026-11-21T23:45:00-06:00"
@@ -716,14 +726,14 @@
         "id": "b0ffc20e9aa8",
         "title": "THE GREAT NOLA TRENDKILL AFTER-PARTY FEAT. NEST & THE PALLBEARERS",
         "start": "2026-11-20T23:45:00-06:00"
-      },
-      {
-        "id": "ef96e75c3213",
-        "title": "CHAMBRE NOIR",
-        "start": "2026-11-18T21:00:00-06:00"
       }
     ],
     "saturn-bar": [
+      {
+        "id": "5993ed0f6cad",
+        "title": "Slow Motion Cowboys, Kalinders, Clare Doyle",
+        "start": "2026-11-22T21:00:00-06:00"
+      },
       {
         "id": "df18db37a54a",
         "title": "Pleasure Savior's Don't Dance Don't Come",
@@ -733,14 +743,14 @@
         "id": "b7a6b6abc167",
         "title": "Gina Leslie and Tom Quell",
         "start": "2026-11-19T21:00:00-06:00"
-      },
-      {
-        "id": "5e0855442de4",
-        "title": "Toothbug, URQ, Fiddler's Green",
-        "start": "2026-11-18T21:00:00-06:00"
       }
     ],
     "siberia": [
+      {
+        "id": "f60326480356",
+        "title": "Fanger Lis with Crawdaddy Issues and Ponch Bueller",
+        "start": "2026-11-22T21:00:00-06:00"
+      },
       {
         "id": "243668fe5c0f",
         "title": "River Shook with Dave Jordan",
@@ -750,11 +760,6 @@
         "id": "d7070cf16c32",
         "title": "Dance... 4U",
         "start": "2026-11-20T22:00:00-06:00"
-      },
-      {
-        "id": "07e275e64f7f",
-        "title": "The Handgrenades with Neon 3dcd Party and Giovanni Ventello",
-        "start": "2026-11-19T21:00:00-06:00"
       }
     ],
     "sidneys-saloon": [
@@ -812,22 +817,27 @@
     ],
     "the-allways-lounge": [
       {
-        "id": "3f73b6a8ff6e",
-        "title": "Crossroads Cabaret",
-        "start": "2026-11-21T23:00:00-06:00"
+        "id": "1e163406e85f",
+        "title": "Rocky Horror Striptease Show",
+        "start": "2026-11-22T22:30:00-06:00"
       },
       {
-        "id": "7f875ec13814",
-        "title": "Vampyre Cabaret (burlesque,camp & live music)",
-        "start": "2026-11-21T22:30:00-06:00"
+        "id": "762cc7b0343d",
+        "title": "Swing Night (live music & dance lessons)",
+        "start": "2026-11-22T20:00:00-06:00"
       },
       {
-        "id": "5ae9bc4b7c7c",
-        "title": "Broadville Follies (musical theater variety)",
-        "start": "2026-11-21T19:30:00-06:00"
+        "id": "c2b22e574fcd",
+        "title": "Van Ella Bordella (burlesque)",
+        "start": "2026-11-22T19:00:00-06:00"
       }
     ],
     "the-blue-crab": [
+      {
+        "id": "3adeaa66b060",
+        "title": "Time Zone Band",
+        "start": "2026-11-22T15:30:00-06:00"
+      },
       {
         "id": "9b9adf4f98cf",
         "title": "Monkey Hill",
@@ -837,14 +847,14 @@
         "id": "24d4723f0a20",
         "title": "Redline",
         "start": "2026-11-21T11:00:00-06:00"
-      },
-      {
-        "id": "35902c9a55b1",
-        "title": "Terrence and the Fortress Band",
-        "start": "2026-11-20T17:00:00-06:00"
       }
     ],
     "the-broadside": [
+      {
+        "id": "f17ce18a3c0f",
+        "title": "Chorino & Samba",
+        "start": "2026-11-22T14:00:00-06:00"
+      },
       {
         "id": "36b6ad196363",
         "title": "Sober Fest 2026",
@@ -854,14 +864,14 @@
         "id": "65a4877b087e",
         "title": "The Desert Nudes",
         "start": "2026-11-13T20:00:00-06:00"
-      },
-      {
-        "id": "6baf64893066",
-        "title": "TERROR OPTICS",
-        "start": "2026-11-13T18:00:00-06:00"
       }
     ],
     "the-carousel-bar-lounge": [
+      {
+        "id": "c92d821973c1",
+        "title": "THE IGUANAS",
+        "start": "2026-11-22T19:00:00-06:00"
+      },
       {
         "id": "8b0517c5c1cf",
         "title": "LENA PRIMA & BAND",
@@ -871,11 +881,6 @@
         "id": "40b4cdcc365a",
         "title": "AL “LIL’ FATS” JACKSON TRIO",
         "start": "2026-11-21T17:30:00-06:00"
-      },
-      {
-        "id": "e7c9f80bf543",
-        "title": "BIG JOE KENNEDY",
-        "start": "2026-11-21T14:00:00-06:00"
       }
     ],
     "the-columns": [
@@ -897,6 +902,11 @@
     ],
     "the-jazz-playhouse": [
       {
+        "id": "4e6dd61371e4",
+        "title": "Richard 'Piano' Scott at The Jazz Playhouse",
+        "start": "2026-11-22T19:30:00-06:00"
+      },
+      {
         "id": "069ae4960c6c",
         "title": "The Nayo Jones Experience at The Jazz Playhouse",
         "start": "2026-11-21T20:00:00-06:00"
@@ -905,11 +915,6 @@
         "id": "ab2f94b06c40",
         "title": "Trixie Minx's Burlesque Ballroom at The Jazz Playhouse, feat. Romy Kaye",
         "start": "2026-11-20T20:00:00-06:00"
-      },
-      {
-        "id": "188ef59794af",
-        "title": "Brass-A-Holics at The Jazz Playhouse",
-        "start": "2026-11-19T19:30:00-06:00"
       }
     ],
     "the-kingpin": [
@@ -955,22 +960,27 @@
     ],
     "the-spotted-cat": [
       {
-        "id": "01b6bf993e54",
-        "title": "Kortana",
-        "start": "2026-11-21T22:00:00-06:00"
+        "id": "0d45cfa60f1c",
+        "title": "Pat Casey & The New Sound",
+        "start": "2026-11-22T21:00:00-06:00"
       },
       {
-        "id": "28cc4a1c970a",
-        "title": "Panorama Jazz Band",
-        "start": "2026-11-21T18:00:00-06:00"
+        "id": "f29da53c77cb",
+        "title": "Treme Brass Band",
+        "start": "2026-11-22T18:00:00-06:00"
       },
       {
-        "id": "1b4fbf9727e5",
-        "title": "Twerk Thomson Band",
-        "start": "2026-11-21T14:00:00-06:00"
+        "id": "771ec7e68d82",
+        "title": "Jacky Blaire & The Hot Biscuits",
+        "start": "2026-11-22T14:00:00-06:00"
       }
     ],
     "three-muses": [
+      {
+        "id": "c6e85428b45a",
+        "title": "New Orleans Rug Cutters",
+        "start": "2026-11-22T19:30:00-06:00"
+      },
       {
         "id": "394dc7f80600",
         "title": "Jelly Roll Stompers",
@@ -980,14 +990,14 @@
         "id": "875b3f9ad7a7",
         "title": "Bad Penny Pleasure Makers",
         "start": "2026-11-20T19:30:00-06:00"
-      },
-      {
-        "id": "0209e8595c88",
-        "title": "Johanna Rose",
-        "start": "2026-11-19T19:30:00-06:00"
       }
     ],
     "tips": [
+      {
+        "id": "9c832a1b239c",
+        "title": "Jagged Little Pill: UNPLUGGED",
+        "start": "2026-11-22T20:00:00-06:00"
+      },
       {
         "id": "aa88edde686b",
         "title": "Jagged Little Pill - An Alanis Morissette Tribute",
@@ -997,11 +1007,6 @@
         "id": "0dfec015cd83",
         "title": "Fruit Bats",
         "start": "2026-11-20T20:00:00-06:00"
-      },
-      {
-        "id": "b8bd46fb2a95",
-        "title": "The Great NOLA Trendkill Official Kick-Off Party with Suplecs",
-        "start": "2026-11-19T19:00:00-06:00"
       }
     ],
     "vaughan-s-lounge": [

@@ -2,18 +2,6 @@
   "venue": "preservation-hall",
   "events": [
     {
-      "id": "af2c540a66eb",
-      "title": "Leroy Jones and the Preservation Jazz Masters",
-      "start": "2026-11-22T14:30:00-06:00",
-      "url": "https://www.preservationhall.com/events/leroy-jones-and-the-preservation-jazz-masters/"
-    },
-    {
-      "id": "f05778607703",
-      "title": "Preservation Legacy Band ft. Gregg Stafford",
-      "start": "2026-11-22T17:00:00-06:00",
-      "url": "https://www.preservationhall.com/events/preservation-legacy-band-ft-gregg-stafford/"
-    },
-    {
       "id": "ccce98ed4d54",
       "title": "Preservation Brass",
       "start": "2026-11-23T17:00:00-06:00",

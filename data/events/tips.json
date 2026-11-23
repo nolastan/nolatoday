@@ -2,12 +2,6 @@
   "venue": "tips",
   "events": [
     {
-      "id": "9c832a1b239c",
-      "title": "Jagged Little Pill: UNPLUGGED",
-      "start": "2026-11-22T20:00:00-06:00",
-      "url": "https://tipitinas.com/event/14351394/jagged-little-pill-unplugged"
-    },
-    {
       "id": "e52a7c67bba0",
       "title": "A Tribute To Louis Prima and Lee Dorsey",
       "start": "2026-11-25T19:30:00-06:00",
@@ -162,6 +156,12 @@
       "title": "Tab Benoit w/ Duane Betts",
       "start": "2027-02-05T22:00:00-06:00",
       "url": "https://tipitinas.com/event/15008633/tab-benoit-w-duane-betts"
+    },
+    {
+      "id": "7ceccb7dd752",
+      "title": "John Craigie",
+      "start": "2027-02-20T20:00:00-06:00",
+      "url": "https://tipitinas.com/event/14222734/john-craigie"
     }
   ]
 }

@@ -2,24 +2,6 @@
   "venue": "buffa-s",
   "events": [
     {
-      "id": "8ab0a0036327",
-      "title": "Traditional Jazz Brunch with Some Like It Hot!",
-      "start": "2026-11-22T11:00:00-06:00",
-      "url": "https://www.buffasbar.com/events/traditional-jazz-brunch-with-some-like-it-hot-262211"
-    },
-    {
-      "id": "b81d730c26ef",
-      "title": "The Pfister Sisters",
-      "start": "2026-11-22T16:00:00-06:00",
-      "url": "https://www.buffasbar.com/events/the-pfister-sisters-262211"
-    },
-    {
-      "id": "2f3a68af930c",
-      "title": "MidniteWeeks Featuring Mark Johnson",
-      "start": "2026-11-22T19:00:00-06:00",
-      "url": "https://www.buffasbar.com/events/midniteweeks-262211"
-    },
-    {
       "id": "09370cbe98c3",
       "title": "David Doucet",
       "start": "2026-11-23T19:00:00-06:00",

@@ -2,34 +2,6 @@
   "venue": "the-allways-lounge",
   "events": [
     {
-      "id": "7f875ec13814",
-      "title": "Vampyre Cabaret (burlesque,camp & live music)",
-      "start": "2026-11-21T22:30:00-06:00",
-      "end": "2026-11-22T00:30:00-06:00",
-      "url": "https://tockify.com/allwayslounge/detail/3705/1795321800000/38"
-    },
-    {
-      "id": "3f73b6a8ff6e",
-      "title": "Crossroads Cabaret",
-      "start": "2026-11-21T23:00:00-06:00",
-      "end": "2026-11-22T01:30:00-06:00",
-      "url": "https://tockify.com/allwayslounge/detail/4406/1795323600000/3"
-    },
-    {
-      "id": "c2b22e574fcd",
-      "title": "Van Ella Bordella (burlesque)",
-      "start": "2026-11-22T19:00:00-06:00",
-      "end": "2026-11-22T21:30:00-06:00",
-      "url": "https://tockify.com/allwayslounge/detail/1997/1795395600000/96"
-    },
-    {
-      "id": "762cc7b0343d",
-      "title": "Swing Night (live music & dance lessons)",
-      "start": "2026-11-22T20:00:00-06:00",
-      "end": "2026-11-22T23:30:00-06:00",
-      "url": "https://tockify.com/allwayslounge/detail/1860/1795399200000"
-    },
-    {
       "id": "1e163406e85f",
       "title": "Rocky Horror Striptease Show",
       "start": "2026-11-22T22:30:00-06:00",
@@ -1945,6 +1917,34 @@
       "start": "2027-02-19T23:00:00-06:00",
       "end": "2027-02-20T01:30:00-06:00",
       "url": "https://tockify.com/allwayslounge/detail/4535/1803099600000"
+    },
+    {
+      "id": "4a3fdde4806d",
+      "title": "Hollywood Babylon",
+      "start": "2027-02-20T19:00:00-06:00",
+      "end": "2027-02-20T20:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/4566/1803171600000/1"
+    },
+    {
+      "id": "27e6dfbcba51",
+      "title": "Broadville Follies (musical theater variety)",
+      "start": "2027-02-20T19:30:00-06:00",
+      "end": "2027-02-20T21:00:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/4161/1803173400000"
+    },
+    {
+      "id": "525e3eb8020d",
+      "title": "Appletini Revue (Drag)",
+      "start": "2027-02-20T22:30:00-06:00",
+      "end": "2027-02-21T01:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/4543/1803184200000"
+    },
+    {
+      "id": "e04dab58bb56",
+      "title": "Bri & The Sparkling Diamonds “New Orleans Burlesque”",
+      "start": "2027-02-20T22:30:00-06:00",
+      "end": "2027-02-21T01:00:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/3788/1803184200000/39"
     }
   ]
 }

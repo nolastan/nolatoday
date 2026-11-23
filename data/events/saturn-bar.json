@@ -2,13 +2,6 @@
   "venue": "saturn-bar",
   "events": [
     {
-      "id": "5993ed0f6cad",
-      "title": "Slow Motion Cowboys, Kalinders, Clare Doyle",
-      "start": "2026-11-22T21:00:00-06:00",
-      "end": "2026-11-23T01:00:00-06:00",
-      "url": "https://dice.fm/event/6af229e8dc27ff0001437ed1"
-    },
-    {
       "id": "4e45130ea479",
       "title": "Piano Night w BC Coogan",
       "start": "2026-11-23T20:30:00-06:00",
@@ -161,6 +154,13 @@
       "start": "2026-12-21T20:30:00-06:00",
       "end": "2026-12-22T00:30:00-06:00",
       "url": "https://dice.fm/event/6afa25934360570001bfcdfd"
+    },
+    {
+      "id": "c8929252c52d",
+      "title": "fiddler's green, hemlock, big leather",
+      "start": "2026-12-22T21:00:00-06:00",
+      "end": "2026-12-23T01:00:00-06:00",
+      "url": "https://dice.fm/event/6b038a4c8d6c820001ffbf24"
     }
   ]
 }

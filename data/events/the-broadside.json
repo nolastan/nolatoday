@@ -2,12 +2,6 @@
   "venue": "the-broadside",
   "events": [
     {
-      "id": "f17ce18a3c0f",
-      "title": "Chorino & Samba",
-      "start": "2026-11-22T14:00:00-06:00",
-      "url": "https://www.simpletix.com/e/chorino-samba-tickets-301296"
-    },
-    {
       "id": "85092bffd728",
       "title": "Mr. Chris Sings",
       "start": "2026-11-24T16:00:00-06:00",
@@ -72,6 +66,12 @@
       "title": "Free Screening: HUNDREDS OF BEAVERS",
       "start": "2026-12-23T19:00:00-06:00",
       "url": "https://www.simpletix.com/e/free-screening-hundreds-of-beavers-tickets-301439"
+    },
+    {
+      "id": "9e0a9d0fa182",
+      "title": "Marcus Machado & Friends New Years Eve Bash",
+      "start": "2026-12-31T20:00:00-06:00",
+      "url": "https://www.simpletix.com/e/marcus-machado-friends-new-years-eve-bash-tickets-302928"
     },
     {
       "id": "a8381ce5589b",
