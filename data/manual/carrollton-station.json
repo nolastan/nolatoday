@@ -1,1 +1,15 @@
-{"events":[{"date":"2026-11-21","doors":"20:00","kind":"music","note":"21+","price":"$10","time":"21:00","title":"Renée Gros, Surco, The Dewdrops","url":"https://www.instagram.com/p/DfqtIS-DdZp/"},{"date":"2026-11-23","kind":"music","note":"Biscuits N' Jam","time":"22:00","title":"Meryl Zimmerman & Friends","url":"https://www.instagram.com/p/Df2nxjXGV4o/"}],"from":"https://www.instagram.com/p/Df2nxjXGV4o/","updated":"2026-11-21","venue":"carrollton-station"}
+{
+  "venue": "carrollton-station",
+  "updated": "2026-11-23",
+  "from": "https://www.instagram.com/p/Df2nxjXGV4o/",
+  "events": [
+    {
+      "date": "2026-11-23",
+      "kind": "music",
+      "note": "Biscuits N' Jam",
+      "time": "22:00",
+      "title": "Meryl Zimmerman & Friends",
+      "url": "https://www.instagram.com/p/Df2nxjXGV4o/"
+    }
+  ]
+}

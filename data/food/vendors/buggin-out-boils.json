@@ -6,17 +6,6 @@
   "description": "Traditional and Viet-Cajun crawfish boils, mostly at Bayou Beer Garden for Saints and LSU games.",
   "website": "https://bugginoutboils.com",
   "from": "https://www.instagram.com/p/Df7h10LO9ex/",
-  "updated": "2026-11-22",
-  "events": [
-    {
-      "date": "2026-11-22",
-      "time": "12:00",
-      "end": "16:00",
-      "place": "bayou-beer-garden",
-      "price": "$10\u2013$12/lb",
-      "note": "Traditional crawfish $10/lb, Viet-Cajun $12/lb.",
-      "url": "https://bugginoutboils.com",
-      "confirmedOn": "2026-11-15"
-    }
-  ]
+  "updated": "2026-11-23",
+  "events": []
 }

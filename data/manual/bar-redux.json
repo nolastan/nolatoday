@@ -1,5 +1,16 @@
 {
+  "venue": "bar-redux",
+  "updated": "2026-11-23",
+  "from": "https://www.instagram.com/p/DgEhcckh8T5/",
   "events": [
+    {
+      "date": "2026-11-27",
+      "kind": "music",
+      "price": "No Cover",
+      "time": null,
+      "title": "Hobo Gadget Junk Band",
+      "url": "https://www.instagram.com/p/DgEhcckh8T5/"
+    },
     {
       "date": "2026-11-29",
       "doors": "20:00",
@@ -18,8 +29,5 @@
       "title": "Dirty Rotten Snake In The Grass, Stumps Duh Clown",
       "url": "https://www.instagram.com/p/Df8N_r9ogsw/"
     }
-  ],
-  "from": "https://www.instagram.com/p/Df8N_r9ogsw/",
-  "updated": "2026-11-22",
-  "venue": "bar-redux"
+  ]
 }

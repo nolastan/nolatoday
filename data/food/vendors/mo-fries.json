@@ -4,7 +4,16 @@
   "icon": "fries",
   "type": "Food truck",
   "description": "Food truck based at its Terrytown restaurant at 1168 Terry Pkwy, Gretna; it posts a weekly schedule every Monday.",
-  "from": "https://www.instagram.com/p/Df9vdCWBGoB/",
-  "updated": "2026-11-22",
-  "events": []
+  "from": "https://www.instagram.com/p/DgFocnNhfW7/",
+  "updated": "2026-11-23",
+  "events": [
+    {
+      "date": "2026-11-23",
+      "time": "11:00",
+      "end": "17:00",
+      "place": "boutte-hwy-90",
+      "url": "https://www.instagram.com/p/DgFocnNhfW7/",
+      "confirmedOn": "2026-11-23"
+    }
+  ]
 }

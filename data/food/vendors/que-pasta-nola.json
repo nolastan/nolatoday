@@ -4,24 +4,32 @@
   "icon": "noodles",
   "type": "Pop-up",
   "description": "Latin street food pop-up; posts a weekly schedule graphic every Monday, with regular stops at the Crescent City Farmers Market and RBar.",
-  "from": "https://www.instagram.com/reel/DfzocklxZS-/",
-  "updated": "2026-11-22",
+  "from": "https://www.instagram.com/reel/DgFmdtcRq7A/",
+  "updated": "2026-11-23",
   "events": [
     {
-      "date": "2026-11-22",
+      "date": "2026-11-24",
+      "time": "08:00",
+      "end": "12:00",
+      "place": "the-batture",
+      "url": "https://www.instagram.com/reel/DgFmdtcRq7A/",
+      "confirmedOn": "2026-11-23"
+    },
+    {
+      "date": "2026-11-29",
       "time": "08:00",
       "end": "12:00",
       "place": "ccfm-city-park",
-      "url": "https://www.instagram.com/reel/DfzocklxZS-/",
-      "confirmedOn": "2026-11-16"
+      "url": "https://www.instagram.com/reel/DgFmdtcRq7A/",
+      "confirmedOn": "2026-11-23"
     },
     {
-      "date": "2026-11-22",
+      "date": "2026-11-29",
       "time": null,
       "place": "rbar",
-      "note": "During the Saints game",
-      "url": "https://www.instagram.com/reel/DfzocklxZS-/",
-      "confirmedOn": "2026-11-16"
+      "note": "Saints game",
+      "url": "https://www.instagram.com/reel/DgFmdtcRq7A/",
+      "confirmedOn": "2026-11-23"
     }
   ]
 }

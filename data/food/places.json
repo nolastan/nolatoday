@@ -107,5 +107,11 @@
     "lat": 29.9683,
     "lng": -90.09992,
     "name": "Twelve Mile Limit"
+  },
+  "the-batture": {
+    "name": "Crescent City Farmers Market at The Batture",
+    "address": "25 Walnut St",
+    "lat": 29.92498,
+    "lng": -90.13485
   }
 }

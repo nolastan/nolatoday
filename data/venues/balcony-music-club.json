@@ -8,5 +8,10 @@
   "website": null,
   "image": "balcony-music-club.jpg",
   "aliases": [],
-  "sources": []
+  "sources": [
+    {
+      "type": "manual",
+      "url": "https://www.instagram.com/balconymusicclub_504/"
+    }
+  ]
 }

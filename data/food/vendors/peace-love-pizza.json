@@ -5,16 +5,6 @@
   "type": "Pop-up",
   "description": "Pizza pop-up, most often at The Friendly Bar and Pepp's Pub. Posts a new schedule graphic each week.",
   "from": "https://www.instagram.com/p/Df29ue9gxT2/",
-  "updated": "2026-11-21",
-  "events": [
-    {
-      "date": "2026-11-22",
-      "time": "17:00",
-      "place": "pepps-pub",
-      "note": "Saints at Bears",
-      "url": "https://www.instagram.com/p/Df29ue9gxT2/",
-      "confirmedOn": "2026-11-17",
-      "basis": "Weekly graphic posted Nov 17 (prints 'SUN 24'; Saints at Bears is Sun Nov 22)"
-    }
-  ]
+  "updated": "2026-11-23",
+  "events": []
 }
