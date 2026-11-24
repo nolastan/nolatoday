@@ -6,10 +6,28 @@
   "description": "Brazilian street food, Saturday through Monday at Anna's.",
   "website": "https://tropicaliakitchen.com",
   "from": "https://www.instagram.com/p/DfdIFijvDjl/",
-  "updated": "2026-11-23",
+  "updated": "2026-11-24",
   "events": [
     {
-      "date": "2026-11-23",
+      "date": "2026-11-28",
+      "time": "17:00",
+      "end": "23:00",
+      "place": "annas",
+      "url": "https://www.instagram.com/p/DfdIFijvDjl/",
+      "confirmedOn": "2026-11-07",
+      "basis": "From the stated Sat–Mon schedule; last confirmed Nov 7."
+    },
+    {
+      "date": "2026-11-29",
+      "time": "17:00",
+      "end": "23:00",
+      "place": "annas",
+      "url": "https://www.instagram.com/p/DfdIFijvDjl/",
+      "confirmedOn": "2026-11-07",
+      "basis": "From the stated Sat–Mon schedule; last confirmed Nov 7."
+    },
+    {
+      "date": "2026-11-30",
       "time": "17:00",
       "end": "23:00",
       "place": "annas",

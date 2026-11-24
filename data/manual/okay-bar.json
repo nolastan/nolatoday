@@ -1,15 +1,8 @@
 {
   "venue": "okay-bar",
-  "updated": "2026-11-23",
-  "from": "https://www.instagram.com/p/Df-aSzQyJzP/",
+  "updated": "2026-11-24",
+  "from": "https://www.instagram.com/p/DgG90Pkh8J8/",
   "events": [
-    {
-      "date": "2026-11-23",
-      "kind": "music",
-      "time": "20:00",
-      "title": "NOPGO, Nick Benoit, Sebastian's Luminance Spectra",
-      "url": "https://www.instagram.com/p/Dfz6CS2vy4C/"
-    },
     {
       "date": "2026-11-27",
       "kind": "music",
@@ -18,6 +11,16 @@
       "time": "20:00",
       "title": "Dagger Wound, Barbie AI, Blood of Akasha, Red Faced White Man, Flowers",
       "url": "https://www.instagram.com/p/DfFjK8nJqZY/"
+    },
+    {
+      "date": "2026-11-28",
+      "end": "01:00",
+      "kind": "music",
+      "note": "Heat Wave Thanksgiving recovery party; local rare & sentimental records 1957-1974; adults only",
+      "price": "Free",
+      "time": "21:00",
+      "title": "DJ Ann Glaviano",
+      "url": "https://www.instagram.com/p/DgG90Pkh8J8/"
     },
     {
       "date": "2026-11-30",

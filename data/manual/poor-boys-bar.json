@@ -1,4 +1,7 @@
 {
+  "venue": "poor-boys-bar",
+  "updated": "2026-11-24",
+  "from": "https://www.instagram.com/p/DgITlQiFbn5/",
   "events": [
     {
       "date": "2026-11-26",
@@ -26,6 +29,14 @@
       "url": "https://www.instagram.com/reel/Df8Mj3gJMTV/"
     },
     {
+      "date": "2026-12-03",
+      "kind": "music",
+      "note": "Whole Lotta White — curated set of The Weeknd & Playboi Carti; presented by Coca-Cola",
+      "time": "22:00",
+      "title": "Satanista",
+      "url": "https://www.instagram.com/p/DgGNtKtFi_W/"
+    },
+    {
       "date": "2026-12-11",
       "kind": "music",
       "note": "Booty Bounce To This; hosted by Motha Nola",
@@ -33,9 +44,14 @@
       "time": "23:00",
       "title": "Hoodbabyblu, DJ Rakimbeau, Wannie Nextdoor, Kilo Bauud",
       "url": "https://www.instagram.com/p/Df7k4j6oOmf/"
+    },
+    {
+      "date": "2026-12-17",
+      "kind": "music",
+      "note": "Monthly vinyl night; first lineup TBA",
+      "time": "22:00",
+      "title": "Perennial",
+      "url": "https://www.instagram.com/p/DgITlQiFbn5/"
     }
-  ],
-  "from": "https://www.instagram.com/reel/Df8Mj3gJMTV/",
-  "updated": "2026-11-22",
-  "venue": "poor-boys-bar"
+  ]
 }

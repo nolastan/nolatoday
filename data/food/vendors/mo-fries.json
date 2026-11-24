@@ -5,16 +5,24 @@
   "type": "Food truck",
   "description": "Food truck based at its Terrytown restaurant at 1168 Terry Pkwy, Gretna; it posts a weekly schedule every Monday.",
   "website": "https://mofriesnola.com",
-  "from": "https://www.instagram.com/p/DgFocnNhfW7/",
-  "updated": "2026-11-23",
+  "from": "https://www.instagram.com/p/DgHzm2NPAd6/",
+  "updated": "2026-11-24",
   "events": [
     {
-      "date": "2026-11-23",
+      "date": "2026-11-24",
+      "time": "11:00",
+      "end": "14:00",
+      "place": "1515-poydras",
+      "url": "https://www.instagram.com/p/DgHzm2NPAd6/",
+      "confirmedOn": "2026-11-24"
+    },
+    {
+      "date": "2026-11-25",
       "time": "11:00",
       "end": "17:00",
       "place": "boutte-hwy-90",
-      "url": "https://www.instagram.com/p/DgFocnNhfW7/",
-      "confirmedOn": "2026-11-23"
+      "url": "https://www.instagram.com/p/DgHzm2NPAd6/",
+      "confirmedOn": "2026-11-24"
     }
   ]
 }

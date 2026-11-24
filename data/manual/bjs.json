@@ -1,14 +1,8 @@
 {
+  "venue": "bjs",
+  "updated": "2026-11-24",
+  "from": "https://www.instagram.com/p/DgF_n6xB5zK/",
   "events": [
-    {
-      "date": "2026-11-22",
-      "kind": "music",
-      "note": "Backyard evening show",
-      "price": "$10",
-      "time": "18:00",
-      "title": "Tuba Skinny",
-      "url": "https://www.instagram.com/p/Df9_iBRxIQB/"
-    },
     {
       "date": "2026-11-25",
       "kind": "music",
@@ -26,8 +20,5 @@
       "title": "Brasinola",
       "url": "https://www.instagram.com/p/DfxjEJyv1BH/"
     }
-  ],
-  "from": "https://www.instagram.com/p/Df-DbluJJmW/",
-  "updated": "2026-11-22",
-  "venue": "bjs"
+  ]
 }
