@@ -2,12 +2,6 @@
   "venue": "preservation-hall",
   "events": [
     {
-      "id": "ccce98ed4d54",
-      "title": "Preservation Brass",
-      "start": "2026-11-23T17:00:00-06:00",
-      "url": "https://www.preservationhall.com/events/preservation-brass/"
-    },
-    {
       "id": "b78e1c1e94ce",
       "title": "Preservation All-Stars",
       "start": "2026-11-24T17:00:00-06:00",

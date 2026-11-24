@@ -2,20 +2,6 @@
   "venue": "maple-leaf-bar",
   "events": [
     {
-      "id": "2037b6203120",
-      "title": "George Porter Jr. Trio Ft. Chris Adkins (7pm)",
-      "start": "2026-11-23T19:00:00-06:00",
-      "end": "2026-11-23T21:30:00-06:00",
-      "url": "https://www.mapleleafbar.com/events/george-porter-jr-trio-ft-chris-adkins-7pm-6"
-    },
-    {
-      "id": "05e55ba6ddf7",
-      "title": "George Porter Jr. Trio Ft. Chris Adkins (10pm)",
-      "start": "2026-11-23T22:00:00-06:00",
-      "end": "2026-11-24T02:00:00-06:00",
-      "url": "https://www.mapleleafbar.com/events/george-porter-jr-trio-ft-chris-adkins-10pm-6"
-    },
-    {
       "id": "131ab585b305",
       "title": "Very Good Tuesday Ft. Alex Wasily, Ari Teitel, Aurelien Barnes, Miles Blackwell, & Shea Siraj",
       "start": "2026-11-24T20:30:00-06:00",
@@ -42,6 +28,20 @@
       "start": "2026-11-28T14:00:00-06:00",
       "end": "2026-11-28T18:00:00-06:00",
       "url": "https://www.mapleleafbar.com/events/red-light-art-market"
+    },
+    {
+      "id": "0337b2665271",
+      "title": "Soul Brass Band",
+      "start": "2026-11-28T20:00:00-06:00",
+      "end": "2026-11-28T22:00:00-06:00",
+      "url": "https://www.mapleleafbar.com/events/soul-brass-band-1"
+    },
+    {
+      "id": "d22d52995f12",
+      "title": "Isaac Eady & Friends",
+      "start": "2026-11-28T23:00:00-06:00",
+      "end": "2026-11-29T01:00:00-06:00",
+      "url": "https://www.mapleleafbar.com/events/isaac-eady-friends"
     }
   ]
 }

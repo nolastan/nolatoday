@@ -2,34 +2,6 @@
   "venue": "the-allways-lounge",
   "events": [
     {
-      "id": "1e163406e85f",
-      "title": "Rocky Horror Striptease Show",
-      "start": "2026-11-22T22:30:00-06:00",
-      "end": "2026-11-23T01:30:00-06:00",
-      "url": "https://tockify.com/allwayslounge/detail/3127/1795408200000/36"
-    },
-    {
-      "id": "0b28a8b97d6f",
-      "title": "Betsy Propane Smoke Show (live music & burlesque)",
-      "start": "2026-11-23T19:00:00-06:00",
-      "end": "2026-11-23T20:30:00-06:00",
-      "url": "https://tockify.com/allwayslounge/detail/2864/1795482000000"
-    },
-    {
-      "id": "eb56cbf57b9b",
-      "title": "Grape Culture",
-      "start": "2026-11-23T19:30:00-06:00",
-      "end": "2026-11-23T21:30:00-06:00",
-      "url": "https://tockify.com/allwayslounge/detail/4424/1795483800000"
-    },
-    {
-      "id": "ee89d9b9116f",
-      "title": "Almost Naked Karaoke",
-      "start": "2026-11-23T21:30:00-06:00",
-      "end": "2026-11-23T23:30:00-06:00",
-      "url": "https://tockify.com/allwayslounge/detail/2269/1795491000000"
-    },
-    {
       "id": "2e097edb1a3b",
       "title": "On a TUESDAY?! (drag /burlesque/ sideshow)",
       "start": "2026-11-24T19:30:00-06:00",
@@ -1966,6 +1938,20 @@
       "start": "2027-02-21T16:00:00-06:00",
       "end": "2027-02-21T17:30:00-06:00",
       "url": "https://tockify.com/allwayslounge/detail/4566/1803247200000/2"
+    },
+    {
+      "id": "44565cfd9ec1",
+      "title": "Noobs (burlesque newbies)",
+      "start": "2027-02-21T18:30:00-06:00",
+      "end": "2027-02-21T19:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/3989/1803256200000"
+    },
+    {
+      "id": "9e2448edd617",
+      "title": "Swing Night (live music & dance lessons)",
+      "start": "2027-02-21T20:00:00-06:00",
+      "end": "2027-02-21T23:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/1860/1803261600000"
     }
   ]
 }

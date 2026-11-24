@@ -2,20 +2,6 @@
   "venue": "30-90",
   "events": [
     {
-      "id": "bec1a6503209",
-      "title": "The Dapper Dandies",
-      "start": "2026-11-23T18:00:00-06:00",
-      "end": "2026-11-23T21:00:00-06:00",
-      "url": "https://www.3090-nola.com/bands/dapper-dandies100825-9k2en-hmm7r-hk62a-8g3aj-sm2fw-4m76t-nxxes-lc4f8-wma8j-kebwp"
-    },
-    {
-      "id": "ab96f40c4fab",
-      "title": "The Litt Band",
-      "start": "2026-11-23T21:00:00-06:00",
-      "end": "2026-11-23T23:59:00-06:00",
-      "url": "https://www.3090-nola.com/bands/litt-band-lah2l-cctz8-smnze"
-    },
-    {
       "id": "cd265f91fea5",
       "title": "Justin Donovan",
       "start": "2026-11-24T18:00:00-06:00",
