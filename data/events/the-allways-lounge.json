@@ -79,11 +79,11 @@
       "url": "https://tockify.com/allwayslounge/detail/4512/1795840200000"
     },
     {
-      "id": "18ecbefaeb07",
-      "title": "hot box?",
+      "id": "5d6972ea17e2",
+      "title": "Le Vampyre Cabaret presents: Vamp Lounge",
       "start": "2026-11-27T23:00:00-06:00",
-      "end": "2026-11-27T23:30:00-06:00",
-      "url": "https://tockify.com/allwayslounge/detail/4244/1795842000000"
+      "end": "2026-11-28T01:00:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/4023/1795842000000/34"
     },
     {
       "id": "4900a48dc8f8",
@@ -247,25 +247,11 @@
       "url": "https://tockify.com/allwayslounge/detail/4228/1796515200000"
     },
     {
-      "id": "316324a8b9ef",
-      "title": "Chanukah Show",
-      "start": "2026-12-05T19:00:00-06:00",
-      "end": "2026-12-05T21:00:00-06:00",
-      "url": "https://tockify.com/allwayslounge/detail/4464/1796518800000"
-    },
-    {
       "id": "3fce09ff6b6a",
       "title": "The New Orleans High Society (live jazz & burlesque)",
       "start": "2026-12-05T20:00:00-06:00",
       "end": "2026-12-05T21:30:00-06:00",
       "url": "https://tockify.com/allwayslounge/detail/3475/1796522400000"
-    },
-    {
-      "id": "370ca983951a",
-      "title": "Chanukah After Dark (burlesque)",
-      "start": "2026-12-05T22:30:00-06:00",
-      "end": "2026-12-05T23:30:00-06:00",
-      "url": "https://tockify.com/allwayslounge/detail/4465/1796531400000"
     },
     {
       "id": "639d3927dc7f",
@@ -842,6 +828,13 @@
       "url": "https://tockify.com/allwayslounge/detail/4619/1798596000000"
     },
     {
+      "id": "6d8927a54aa8",
+      "title": "Garden Variety- A Botanical Cabaret",
+      "start": "2026-12-29T22:00:00-06:00",
+      "end": "2026-12-29T23:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/4504/1798603200000/5"
+    },
+    {
       "id": "4968e4e1df6d",
       "title": "Lefty Lucy's Burlesque Bingo",
       "start": "2026-12-30T18:30:00-06:00",
@@ -854,6 +847,13 @@
       "start": "2026-12-30T20:30:00-06:00",
       "end": "2026-12-30T22:00:00-06:00",
       "url": "https://tockify.com/allwayslounge/detail/3681/1798684200000"
+    },
+    {
+      "id": "f1659bc04405",
+      "title": "Imani Vilianiiii",
+      "start": "2026-12-30T21:30:00-06:00",
+      "end": "2026-12-30T23:00:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/4646/1798687800000"
     },
     {
       "id": "4810b2f784ed",
@@ -944,6 +944,13 @@
       "start": "2027-01-02T23:00:00-06:00",
       "end": "2027-01-03T01:00:00-06:00",
       "url": "https://tockify.com/allwayslounge/detail/4209/1798952400000"
+    },
+    {
+      "id": "5cd55768da5e",
+      "title": "Imani Vilianiiii",
+      "start": "2027-01-03T19:00:00-06:00",
+      "end": "2027-01-03T20:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/4646/1799024400000/1"
     },
     {
       "id": "cd9884dfb5aa",
@@ -1261,6 +1268,13 @@
       "url": "https://tockify.com/allwayslounge/detail/2864/1800320400000"
     },
     {
+      "id": "1a91dd99e7a7",
+      "title": "Imani Vilianiiii",
+      "start": "2027-01-18T20:00:00-06:00",
+      "end": "2027-01-18T21:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/4646/1800324000000/2"
+    },
+    {
       "id": "cf67931bb0f8",
       "title": "Almost Naked Karaoke",
       "start": "2027-01-18T21:30:00-06:00",
@@ -1268,8 +1282,8 @@
       "url": "https://tockify.com/allwayslounge/detail/2269/1800329400000"
     },
     {
-      "id": "fc1ec93b6176",
-      "title": "Galaxi Mi",
+      "id": "468de1469b61",
+      "title": "Galaxi Mi's Barely in Brass",
       "start": "2027-01-19T20:00:00-06:00",
       "end": "2027-01-19T22:00:00-06:00",
       "url": "https://tockify.com/allwayslounge/detail/4630/1800410400000"
@@ -1385,6 +1399,13 @@
       "start": "2027-01-25T19:00:00-06:00",
       "end": "2027-01-25T20:30:00-06:00",
       "url": "https://tockify.com/allwayslounge/detail/2864/1800925200000"
+    },
+    {
+      "id": "fe984b3be77d",
+      "title": "Divas Bday",
+      "start": "2027-01-25T20:00:00-06:00",
+      "end": "2027-01-25T22:00:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/4645/1800928800000"
     },
     {
       "id": "fb823347e0d7",
@@ -1674,13 +1695,6 @@
       "url": "https://tockify.com/allwayslounge/detail/4427/1802152800000"
     },
     {
-      "id": "e84d473c1a9b",
-      "title": "Bri & the diamonds presents: Everyone, Everywhere, All At Once",
-      "start": "2027-02-09T20:00:00-06:00",
-      "end": "2027-02-09T22:00:00-06:00",
-      "url": "https://tockify.com/allwayslounge/detail/4643/1802224800000"
-    },
-    {
       "id": "88b38be08b83",
       "title": "Lefty Lucy's Burlesque Bingo",
       "start": "2027-02-10T18:00:00-06:00",
@@ -1945,6 +1959,13 @@
       "start": "2027-02-20T22:30:00-06:00",
       "end": "2027-02-21T01:00:00-06:00",
       "url": "https://tockify.com/allwayslounge/detail/3788/1803184200000/39"
+    },
+    {
+      "id": "feb493591725",
+      "title": "Hollywood Babylon",
+      "start": "2027-02-21T16:00:00-06:00",
+      "end": "2027-02-21T17:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/4566/1803247200000/2"
     }
   ]
 }

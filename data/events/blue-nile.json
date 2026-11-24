@@ -2,13 +2,6 @@
   "venue": "blue-nile",
   "events": [
     {
-      "id": "c082c8253960",
-      "title": "Street Legends Brass Band",
-      "start": "2026-11-22T22:30:00-06:00",
-      "end": "2026-11-23T00:30:00-06:00",
-      "url": "https://www.bluenilelive.com/calendar-tickets-/crz3mtnyjlmsdmx-5k75k-9sskg-xd836-nfzjp-5s3kl-wm37a-wlx4f-wjdn2-35tbj-wlykm-kr92g-524mt-w3kb5-4s9t6"
-    },
-    {
       "id": "74c6c696069b",
       "title": "New Breed Brass Band",
       "start": "2026-11-25T21:00:00-06:00",
@@ -119,6 +112,13 @@
       "start": "2026-12-18T22:00:00-06:00",
       "end": "2026-12-19T00:01:00-06:00",
       "url": "https://www.bluenilelive.com/calendar-tickets-/dj-ftk-s2csm-9bx6m-b37nl-2ct9r-9r7rt-4zw3n-6w8e6-5ylkl-32arw-4nx58-wrrle-gp8np"
+    },
+    {
+      "id": "5d02103967d6",
+      "title": "Kermit's Crazy Cool Christmas with Kermit Ruffins and the BBQ Swingers",
+      "start": "2026-12-25T21:00:00-06:00",
+      "end": "2026-12-25T23:15:00-06:00",
+      "url": "https://www.bluenilelive.com/calendar-tickets-/kermits-crazy-cool-christmas-with-kermit-ruffins-and-the-bbq-swingers"
     },
     {
       "id": "e3747687a693",
