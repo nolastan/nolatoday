@@ -5,7 +5,17 @@
   "type": "Food truck",
   "description": "Seasonal food truck; Thursdays and Saturdays at Miel Brewery, plus Tuesday prepared-meal pickup. Its website also posts a weekly schedule.",
   "website": "https://hatchandharvest.net/",
-  "from": "https://www.instagram.com/p/Dfw-ziUIPN5/",
-  "updated": "2026-11-22",
-  "events": []
+  "from": "https://www.instagram.com/p/Df00QgWsQ_u/",
+  "updated": "2026-11-25",
+  "events": [
+    {
+      "date": "2026-12-17",
+      "time": "17:00",
+      "end": "21:00",
+      "place": "miel-brewery",
+      "url": "https://www.instagram.com/p/Df00QgWsQ_u/",
+      "confirmedOn": "2026-11-16",
+      "note": "Holiday Market"
+    }
+  ]
 }

@@ -113,5 +113,11 @@
     "address": "25 Walnut St",
     "lat": 29.92498,
     "lng": -90.13485
+  },
+  "rooted-on-magazine": {
+    "name": "Rooted on Magazine",
+    "address": "4826 Magazine St",
+    "lat": 29.92026,
+    "lng": -90.10686
   }
 }

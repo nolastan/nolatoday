@@ -4,15 +4,17 @@
   "icon": "pig",
   "type": "Pop-up",
   "description": "Porchetta pop-up: Tuesdays at The Kingpin, Saturdays at The Friendly Bar.",
-  "from": "https://www.instagram.com/p/DfQd3Edq56M/",
-  "updated": "2026-11-23",
+  "from": "https://www.instagram.com/p/DgGQ2SQjS9Y/",
+  "updated": "2026-11-25",
   "events": [
     {
-      "date": "2026-11-24",
-      "time": "18:00",
-      "place": "the-kingpin",
-      "url": "https://www.instagram.com/p/DfQd3Edq56M/",
-      "confirmedOn": "2026-11-02"
+      "date": "2026-11-28",
+      "time": "12:00",
+      "end": "17:00",
+      "place": "rooted-on-magazine",
+      "note": "Holiday Market",
+      "url": "https://www.instagram.com/p/DgGQ2SQjS9Y/",
+      "confirmedOn": "2026-11-23"
     },
     {
       "date": "2026-11-28",

@@ -5,17 +5,8 @@
   "type": "Pop-up",
   "description": "Kitchen inside Carrollton Station with fixed weekly hours and late-night musubi.",
   "from": "https://www.instagram.com/p/DgGgmNBs0zI/",
-  "updated": "2026-11-24",
+  "updated": "2026-11-25",
   "events": [
-    {
-      "date": "2026-11-24",
-      "time": "17:00",
-      "end": "23:00",
-      "place": "carrollton-station",
-      "url": "https://www.instagram.com/p/DfsVHzTAgCi/",
-      "confirmedOn": "2026-11-13",
-      "basis": "Standing Mon–Fri hours at Carrollton Station; last confirmed Nov 13."
-    },
     {
       "date": "2026-11-25",
       "time": "17:00",

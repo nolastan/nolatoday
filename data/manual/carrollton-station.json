@@ -1,15 +1,32 @@
 {
   "venue": "carrollton-station",
-  "updated": "2026-11-23",
-  "from": "https://www.instagram.com/p/Df2nxjXGV4o/",
+  "updated": "2026-11-25",
+  "from": "https://www.instagram.com/p/DgInkdQmUTZ/",
   "events": [
     {
-      "date": "2026-11-23",
+      "date": "2026-11-28",
+      "doors": "19:00",
+      "kind": "music",
+      "price": "$10",
+      "time": "20:00",
+      "title": "Lenny Zenith Band, Zoom",
+      "url": "https://www.instagram.com/p/DgInkdQmUTZ/"
+    },
+    {
+      "date": "2026-11-30",
       "kind": "music",
       "note": "Biscuits N' Jam",
       "time": "22:00",
       "title": "Meryl Zimmerman & Friends",
-      "url": "https://www.instagram.com/p/Df2nxjXGV4o/"
+      "url": "https://www.instagram.com/p/DgInkdQmUTZ/"
+    },
+    {
+      "date": "2026-12-06",
+      "doors": "19:00",
+      "kind": "music",
+      "time": "20:00",
+      "title": "Lily, Left Hook, The Cicadas",
+      "url": "https://www.instagram.com/p/Df-iCsvICCB/"
     }
   ]
 }

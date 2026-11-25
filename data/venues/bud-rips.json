@@ -8,5 +8,10 @@
   "website": null,
   "image": "bud-rips.jpg",
   "aliases": [],
-  "sources": []
+  "sources": [
+    {
+      "type": "manual",
+      "url": "https://www.instagram.com/budripsnola/"
+    }
+  ]
 }

@@ -1,7 +1,7 @@
 {
   "venue": "okay-bar",
-  "updated": "2026-11-24",
-  "from": "https://www.instagram.com/p/DgG90Pkh8J8/",
+  "updated": "2026-11-25",
+  "from": "https://www.instagram.com/p/DgJM5z0iM6N/",
   "events": [
     {
       "date": "2026-11-27",
@@ -21,6 +21,14 @@
       "time": "21:00",
       "title": "DJ Ann Glaviano",
       "url": "https://www.instagram.com/p/DgG90Pkh8J8/"
+    },
+    {
+      "date": "2026-11-29",
+      "kind": "music",
+      "note": "Gumbo Night",
+      "time": "20:00",
+      "title": "Foot E. the Clown, Rosie's Rabbit Fangs, Rocket Montana",
+      "url": "https://www.instagram.com/p/DgItYyfFtfS/"
     },
     {
       "date": "2026-11-30",
@@ -63,8 +71,8 @@
       "note": "Community Kitchen 15th birthday fundraiser, all ages (under 18 with parent)",
       "price": "$15 suggested donation",
       "time": "18:00",
-      "title": "Tasche de la Rocha, Sabine Annamaryse, Little Death Sounds, Strictly Brucey, The Phoenix Phantasma, Laveau Contraire",
-      "url": "https://www.instagram.com/p/Dfic2NQiv_Z/"
+      "title": "Tasche de la Rocha, Sabine Annamaryse, Strictly Brucey, Willy Gantrim",
+      "url": "https://www.instagram.com/p/DgJM5z0iM6N/"
     },
     {
       "date": "2026-12-16",

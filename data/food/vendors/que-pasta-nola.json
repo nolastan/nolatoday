@@ -6,16 +6,8 @@
   "description": "Latin street food pop-up; posts a weekly schedule graphic every Monday, with regular stops at the Crescent City Farmers Market and RBar.",
   "website": "https://quepastanola.com",
   "from": "https://www.instagram.com/reel/DgFmdtcRq7A/",
-  "updated": "2026-11-23",
+  "updated": "2026-11-25",
   "events": [
-    {
-      "date": "2026-11-24",
-      "time": "08:00",
-      "end": "12:00",
-      "place": "the-batture",
-      "url": "https://www.instagram.com/reel/DgFmdtcRq7A/",
-      "confirmedOn": "2026-11-23"
-    },
     {
       "date": "2026-11-29",
       "time": "08:00",
