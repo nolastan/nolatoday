@@ -176,6 +176,22 @@
         }
       ]
     },
+    "bud-rips": {
+      "ok": true,
+      "firstSeen": "2026-11-25T13:14:35.451-06:00",
+      "count": 1,
+      "lastRun": "2026-11-25T13:14:35.451-06:00",
+      "lastSuccess": "2026-11-25T13:14:35.451-06:00",
+      "lastNonEmpty": "2026-11-25T13:14:35.451-06:00",
+      "consecutiveFailures": 0,
+      "sources": [
+        {
+          "type": "manual",
+          "ok": true,
+          "count": 1
+        }
+      ]
+    },
     "buffa-s": {
       "ok": true,
       "firstSeen": "2026-11-07T00:16:20.904-06:00",
@@ -227,16 +243,16 @@
     "carrollton-station": {
       "ok": true,
       "firstSeen": "2026-11-09T18:33:18.846-06:00",
-      "count": 0,
-      "lastRun": "2026-11-25T02:54:19.543-06:00",
-      "lastSuccess": "2026-11-25T02:54:19.543-06:00",
-      "lastNonEmpty": "2026-11-24T16:38:19.334-06:00",
+      "count": 3,
+      "lastRun": "2026-11-25T13:14:35.451-06:00",
+      "lastSuccess": "2026-11-25T13:14:35.451-06:00",
+      "lastNonEmpty": "2026-11-25T13:14:35.451-06:00",
       "consecutiveFailures": 0,
       "sources": [
         {
           "type": "manual",
           "ok": true,
-          "count": 0
+          "count": 3
         }
       ]
     },
@@ -307,16 +323,16 @@
     "domino": {
       "ok": true,
       "firstSeen": "2026-11-09T18:16:00.481-06:00",
-      "count": 10,
-      "lastRun": "2026-11-25T02:54:19.543-06:00",
-      "lastSuccess": "2026-11-25T02:54:19.543-06:00",
-      "lastNonEmpty": "2026-11-25T02:54:19.543-06:00",
+      "count": 11,
+      "lastRun": "2026-11-25T13:14:35.451-06:00",
+      "lastSuccess": "2026-11-25T13:14:35.451-06:00",
+      "lastNonEmpty": "2026-11-25T13:14:35.451-06:00",
       "consecutiveFailures": 0,
       "sources": [
         {
           "type": "manual",
           "ok": true,
-          "count": 10
+          "count": 11
         }
       ]
     },
@@ -600,16 +616,16 @@
     "okay-bar": {
       "ok": true,
       "firstSeen": "2026-11-09T18:33:18.846-06:00",
-      "count": 9,
-      "lastRun": "2026-11-25T02:54:19.543-06:00",
-      "lastSuccess": "2026-11-25T02:54:19.543-06:00",
-      "lastNonEmpty": "2026-11-25T02:54:19.543-06:00",
+      "count": 10,
+      "lastRun": "2026-11-25T13:14:35.451-06:00",
+      "lastSuccess": "2026-11-25T13:14:35.451-06:00",
+      "lastNonEmpty": "2026-11-25T13:14:35.451-06:00",
       "consecutiveFailures": 0,
       "sources": [
         {
           "type": "manual",
           "ok": true,
-          "count": 9
+          "count": 10
         }
       ]
     },
@@ -633,9 +649,9 @@
       "ok": true,
       "firstSeen": "2026-11-09T18:16:00.481-06:00",
       "count": 6,
-      "lastRun": "2026-11-25T02:54:19.543-06:00",
-      "lastSuccess": "2026-11-25T02:54:19.543-06:00",
-      "lastNonEmpty": "2026-11-25T02:54:19.543-06:00",
+      "lastRun": "2026-11-25T13:14:35.451-06:00",
+      "lastSuccess": "2026-11-25T13:14:35.451-06:00",
+      "lastNonEmpty": "2026-11-25T13:14:35.451-06:00",
       "consecutiveFailures": 0,
       "sources": [
         {
@@ -1030,5 +1046,5 @@
       ]
     }
   },
-  "generatedAt": "2026-11-25T02:54:19.543-06:00"
+  "generatedAt": "2026-11-25T13:14:35.451-06:00"
 }
