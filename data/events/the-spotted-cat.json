@@ -2,11 +2,6 @@
   "venue": "the-spotted-cat",
   "events": [
     {
-      "id": "b37143b61cd9",
-      "title": "Smoking Time Jazz Club",
-      "start": "2026-11-24T21:30:00-06:00"
-    },
-    {
       "id": "bf94e47fafc2",
       "title": "Chris Christy Band",
       "start": "2026-11-25T14:00:00-06:00"
@@ -147,6 +142,16 @@
       "start": "2026-12-04T22:00:00-06:00"
     },
     {
+      "id": "ad87ff7d1612",
+      "title": "Twerk Thomson Band",
+      "start": "2026-12-05T14:00:00-06:00"
+    },
+    {
+      "id": "5c6a15c895c0",
+      "title": "Panorama Jazz Band",
+      "start": "2026-12-05T18:00:00-06:00"
+    },
+    {
       "id": "b102d85f74da",
       "title": "Stella Artois Presents — James Andrews Crescent City All-Stars Band",
       "start": "2026-12-05T22:00:00-06:00"
@@ -242,6 +247,16 @@
       "start": "2026-12-11T22:00:00-06:00"
     },
     {
+      "id": "7448c140b6c1",
+      "title": "Popcorn",
+      "start": "2026-12-12T14:00:00-06:00"
+    },
+    {
+      "id": "485a7e024000",
+      "title": "Shake'em Up Jazz Band",
+      "start": "2026-12-12T18:00:00-06:00"
+    },
+    {
       "id": "7273ee92fe77",
       "title": "Kid Chocolate & The Free POC",
       "start": "2026-12-12T22:00:00-06:00"
@@ -332,6 +347,16 @@
       "start": "2026-12-18T22:00:00-06:00"
     },
     {
+      "id": "b9b111ae1229",
+      "title": "Twerk Thomson Band",
+      "start": "2026-12-19T14:00:00-06:00"
+    },
+    {
+      "id": "5d5184a31040",
+      "title": "Panorama Jazz Band",
+      "start": "2026-12-19T18:00:00-06:00"
+    },
+    {
       "id": "154a9273abff",
       "title": "Jacky Blaire & The Hot Biscuits",
       "start": "2026-12-20T14:00:00-06:00"
@@ -395,6 +420,21 @@
       "id": "c515e73db950",
       "title": "Jumbo Shrimp",
       "start": "2026-12-24T22:00:00-06:00"
+    },
+    {
+      "id": "f91b3cc6ebfd",
+      "title": "Popcorn",
+      "start": "2026-12-26T14:00:00-06:00"
+    },
+    {
+      "id": "3de1b1759502",
+      "title": "Shake'em Up Jazz Band",
+      "start": "2026-12-26T18:00:00-06:00"
+    },
+    {
+      "id": "69a178e45c45",
+      "title": "Dominick Grillo & The Frenchmen Street All-Stars",
+      "start": "2026-12-26T22:00:00-06:00"
     },
     {
       "id": "d56a60690543",
@@ -472,6 +512,16 @@
       "start": "2027-01-01T14:00:00-06:00"
     },
     {
+      "id": "9ae9b4466e7b",
+      "title": "Twerk Thomson Band",
+      "start": "2027-01-02T14:00:00-06:00"
+    },
+    {
+      "id": "87580d04e9b2",
+      "title": "Panorama Jazz Band",
+      "start": "2027-01-02T18:00:00-06:00"
+    },
+    {
       "id": "7a315f8f48f7",
       "title": "Jacky Blaire & The Hot Biscuits",
       "start": "2027-01-03T14:00:00-06:00"
@@ -520,6 +570,11 @@
       "id": "b6877a00f31f",
       "title": "New Orleans Cottonmouth Kings",
       "start": "2027-01-08T22:00:00-06:00"
+    },
+    {
+      "id": "d88330a278ac",
+      "title": "Shake'em Up Jazz Band",
+      "start": "2027-01-09T18:00:00-06:00"
     },
     {
       "id": "54b53b63ac7a",
@@ -582,6 +637,16 @@
       "start": "2027-01-14T22:00:00-06:00"
     },
     {
+      "id": "8fbf7de85612",
+      "title": "Twerk Thomson Band",
+      "start": "2027-01-16T14:00:00-06:00"
+    },
+    {
+      "id": "7f92ffef8924",
+      "title": "Panorama Jazz Band",
+      "start": "2027-01-16T18:00:00-06:00"
+    },
+    {
       "id": "c04a04665f5e",
       "title": "Jacky Blaire & The Hot Biscuits",
       "start": "2027-01-17T14:00:00-06:00"
@@ -640,6 +705,11 @@
       "id": "43b970b4a7c6",
       "title": "Jumbo Shrimp",
       "start": "2027-01-21T22:00:00-06:00"
+    },
+    {
+      "id": "3870422e4029",
+      "title": "Dominick Grillo & The Frenchmen Street All-Stars",
+      "start": "2027-01-23T22:00:00-06:00"
     },
     {
       "id": "6ec3989bc1d1",
