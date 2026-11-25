@@ -2,11 +2,6 @@
   "venue": "dba",
   "events": [
     {
-      "id": "4c71b4e813cc",
-      "title": "Nat & Kat Cajun String Band",
-      "start": "2026-11-24T18:00:00-06:00"
-    },
-    {
       "id": "3982deeba6c9",
       "title": "Bras Band Brass Band",
       "start": "2026-11-24T21:00:00-06:00"
@@ -67,15 +62,120 @@
       "start": "2026-11-30T21:30:00-06:00"
     },
     {
+      "id": "1f7440f89b5a",
+      "title": "Gal Holiday & The Honky Tonk Review",
+      "start": "2026-12-01T18:00:00-06:00"
+    },
+    {
+      "id": "eda37d2ffaf3",
+      "title": "Bras Band Brass Band",
+      "start": "2026-12-01T21:00:00-06:00"
+    },
+    {
+      "id": "8ad9f66ab8fc",
+      "title": "Jenavieve & The Winding Boys",
+      "start": "2026-12-02T18:00:00-06:00"
+    },
+    {
       "id": "ecbb6519e4c9",
       "title": "The Next Level Band",
       "start": "2026-12-02T21:00:00-06:00"
+    },
+    {
+      "id": "4cad9f671c32",
+      "title": "Ethan Santos",
+      "start": "2026-12-03T18:00:00-06:00"
+    },
+    {
+      "id": "93bdfbf955d5",
+      "title": "Vegas Cola Band",
+      "start": "2026-12-03T21:00:00-06:00"
+    },
+    {
+      "id": "78ad802f1d66",
+      "title": "Michael Watson & The Alchemy",
+      "start": "2026-12-04T18:00:00-06:00"
     },
     {
       "id": "e686cb2bdf0e",
       "title": "The Soul Rebels",
       "start": "2026-12-04T22:00:00-06:00",
       "url": "https://www.eventbrite.com/e/the-soul-rebels-at-dba-tickets-2005161877152"
+    },
+    {
+      "id": "feccca8805ff",
+      "title": "Young Lion Showcase",
+      "start": "2026-12-05T14:30:00-06:00"
+    },
+    {
+      "id": "9cb2195de35d",
+      "title": "Zena Moses & Rue Fiya Allstars",
+      "start": "2026-12-05T21:30:00-06:00"
+    },
+    {
+      "id": "3c66dbfe0bc2",
+      "title": "Paradise Jazz Band",
+      "start": "2026-12-06T18:00:00-06:00"
+    },
+    {
+      "id": "ba4281b660e0",
+      "title": "The Jump Hounds",
+      "start": "2026-12-06T21:30:00-06:00"
+    },
+    {
+      "id": "7ee02dd3408c",
+      "title": "Secret Six Jazz Band",
+      "start": "2026-12-07T18:00:00-06:00"
+    },
+    {
+      "id": "67f0d9baf314",
+      "title": "Corey Henry & the Treme Funktet : Red Beans & Ricely Yours",
+      "start": "2026-12-07T21:30:00-06:00"
+    },
+    {
+      "id": "9ff71524f4cc",
+      "title": "Les Femmes Farouches",
+      "start": "2026-12-08T18:00:00-06:00"
+    },
+    {
+      "id": "94cb97e18be3",
+      "title": "Bras Band Brass Band",
+      "start": "2026-12-08T21:00:00-06:00"
+    },
+    {
+      "id": "a738a06043c7",
+      "title": "Jenavieve & The Winding Boys",
+      "start": "2026-12-09T18:00:00-06:00"
+    },
+    {
+      "id": "1dd27cd34f6c",
+      "title": "The Next Level Band",
+      "start": "2026-12-09T21:00:00-06:00"
+    },
+    {
+      "id": "bce19945e4e3",
+      "title": "Ethan Santos",
+      "start": "2026-12-10T18:00:00-06:00"
+    },
+    {
+      "id": "bbe21c552264",
+      "title": "Vegas Cola Band",
+      "start": "2026-12-10T21:00:00-06:00"
+    },
+    {
+      "id": "643157711b7d",
+      "title": "Michael Watson & The Alchemy",
+      "start": "2026-12-11T18:00:00-06:00"
+    },
+    {
+      "id": "52b505c0d58c",
+      "title": "New Breed Brass Band",
+      "start": "2026-12-11T22:00:00-06:00"
+    },
+    {
+      "id": "6f541cdd727a",
+      "title": "Young Lion Showcase",
+      "start": "2026-12-12T14:30:00-06:00"
     },
     {
       "id": "1b7419202ca5",
@@ -88,6 +188,67 @@
       "start": "2026-12-12T22:00:00-06:00"
     },
     {
+      "id": "b7f66b11b38a",
+      "title": "Christmas Market Fundraiser",
+      "start": "2026-12-13T17:30:00-06:00",
+      "url": "https://www.eventbrite.com/e/asian-christmas-market-fundraiser-tickets-2005436041184?aff=oddtdtcreator"
+    },
+    {
+      "id": "abc5d01b14bf",
+      "title": "Paradise Jazz Band",
+      "start": "2026-12-13T18:00:00-06:00"
+    },
+    {
+      "id": "eb336845329a",
+      "title": "The Jump Hounds",
+      "start": "2026-12-13T21:30:00-06:00"
+    },
+    {
+      "id": "b44d9c314c92",
+      "title": "Secret Six Jazz Band",
+      "start": "2026-12-14T18:00:00-06:00"
+    },
+    {
+      "id": "6fbde67d001b",
+      "title": "Corey Henry & the Treme Funktet : Red Beans & Ricely Yours",
+      "start": "2026-12-14T21:30:00-06:00"
+    },
+    {
+      "id": "2e163a6f1f63",
+      "title": "T Marie + Bayou JuJu",
+      "start": "2026-12-15T18:00:00-06:00"
+    },
+    {
+      "id": "40f64f9fe44b",
+      "title": "Bras Band Brass Band",
+      "start": "2026-12-15T21:00:00-06:00"
+    },
+    {
+      "id": "085e3a3fc5d6",
+      "title": "Jenavieve & The Winding Boys",
+      "start": "2026-12-16T18:00:00-06:00"
+    },
+    {
+      "id": "c827e8f240ff",
+      "title": "The Next Level Band",
+      "start": "2026-12-16T21:00:00-06:00"
+    },
+    {
+      "id": "bf8b5d67c245",
+      "title": "Vegas Cola Band",
+      "start": "2026-12-17T21:00:00-06:00"
+    },
+    {
+      "id": "274429980fee",
+      "title": "Michael Watson & The Alchemy",
+      "start": "2026-12-18T18:00:00-06:00"
+    },
+    {
+      "id": "4281b306deac",
+      "title": "Young Lion Showcase",
+      "start": "2026-12-19T14:30:00-06:00"
+    },
+    {
       "id": "fe769386d5f1",
       "title": "Tuba Skinny",
       "start": "2026-12-19T18:00:00-06:00"
@@ -98,10 +259,55 @@
       "start": "2026-12-19T22:00:00-06:00"
     },
     {
+      "id": "68702d911a9b",
+      "title": "Paradise Jazz Band",
+      "start": "2026-12-20T18:00:00-06:00"
+    },
+    {
+      "id": "e96444bdf5f1",
+      "title": "The Jump Hounds",
+      "start": "2026-12-20T21:30:00-06:00"
+    },
+    {
+      "id": "31595be484d1",
+      "title": "Secret Six Jazz Band",
+      "start": "2026-12-21T18:00:00-06:00"
+    },
+    {
+      "id": "f40a33d8ad96",
+      "title": "Corey Henry & the Treme Funktet : Red Beans & Ricely Yours",
+      "start": "2026-12-21T21:30:00-06:00"
+    },
+    {
+      "id": "a89cfb1e5718",
+      "title": "Nat & Kat Cajun String Band",
+      "start": "2026-12-22T18:00:00-06:00"
+    },
+    {
+      "id": "677eda31fb25",
+      "title": "Bras Band Brass Band",
+      "start": "2026-12-22T21:00:00-06:00"
+    },
+    {
+      "id": "3a6e6c0d7bf5",
+      "title": "Jenavieve & The Winding Boys",
+      "start": "2026-12-23T18:00:00-06:00"
+    },
+    {
+      "id": "a1b0d9ea6407",
+      "title": "The Next Level Band",
+      "start": "2026-12-23T21:00:00-06:00"
+    },
+    {
       "id": "399716ccefd2",
       "title": "Soulful Christmas: Robin Barnes & Friends — Robin Barnes",
       "start": "2026-12-24T19:00:00-06:00",
       "url": "https://www.eventbrite.com/e/2004877116425?aff=oddtdtcreator"
+    },
+    {
+      "id": "640fe3b4e11f",
+      "title": "Young Lion Showcase",
+      "start": "2026-12-26T14:30:00-06:00"
     },
     {
       "id": "85d0f526805b",
@@ -114,9 +320,149 @@
       "start": "2026-12-26T21:30:00-06:00"
     },
     {
+      "id": "703a42b7a865",
+      "title": "Paradise Jazz Band",
+      "start": "2026-12-27T18:00:00-06:00"
+    },
+    {
+      "id": "f563ee81ee7f",
+      "title": "The Jump Hounds",
+      "start": "2026-12-27T21:30:00-06:00"
+    },
+    {
+      "id": "ecc66d99751b",
+      "title": "Secret Six Jazz Band",
+      "start": "2026-12-28T18:00:00-06:00"
+    },
+    {
+      "id": "bfa7887b5b40",
+      "title": "Corey Henry & the Treme Funktet : Red Beans & Ricely Yours",
+      "start": "2026-12-28T21:30:00-06:00"
+    },
+    {
+      "id": "2991b0e70637",
+      "title": "Miss Martha & Her Good Time Gang",
+      "start": "2026-12-29T18:00:00-06:00"
+    },
+    {
+      "id": "3251774dc191",
+      "title": "Bras Band Brass Band",
+      "start": "2026-12-29T21:00:00-06:00"
+    },
+    {
+      "id": "b48269e4e0d0",
+      "title": "Jenavieve & The Winding Boys",
+      "start": "2026-12-30T18:00:00-06:00"
+    },
+    {
+      "id": "d01a07079e2c",
+      "title": "The Next Level Band",
+      "start": "2026-12-30T21:00:00-06:00"
+    },
+    {
+      "id": "4b294fd86fb1",
+      "title": "Michael Watson & The Alchemy",
+      "start": "2027-01-01T18:00:00-06:00"
+    },
+    {
       "id": "ed23657e85e0",
       "title": "The Soul Rebels",
       "start": "2027-01-01T22:00:00-06:00"
+    },
+    {
+      "id": "a70cf95dae12",
+      "title": "Paradise Jazz Band",
+      "start": "2027-01-03T18:00:00-06:00"
+    },
+    {
+      "id": "b6d0edefed09",
+      "title": "The Jump Hounds",
+      "start": "2027-01-03T21:30:00-06:00"
+    },
+    {
+      "id": "e679128dc5db",
+      "title": "Secret Six Jazz Band",
+      "start": "2027-01-04T18:00:00-06:00"
+    },
+    {
+      "id": "bf2af332b6af",
+      "title": "Corey Henry & the Treme Funktet : Red Beans & Ricely Yours",
+      "start": "2027-01-04T21:30:00-06:00"
+    },
+    {
+      "id": "e11cd80027a6",
+      "title": "Jenavieve & The Winding Boys",
+      "start": "2027-01-06T18:00:00-06:00"
+    },
+    {
+      "id": "c567c86b3315",
+      "title": "The Next Level Band",
+      "start": "2027-01-06T21:00:00-06:00"
+    },
+    {
+      "id": "5c939b86455d",
+      "title": "Ethan Santos",
+      "start": "2027-01-07T18:00:00-06:00"
+    },
+    {
+      "id": "9a0a7ce2107a",
+      "title": "Vegas Cola Band",
+      "start": "2027-01-07T21:00:00-06:00"
+    },
+    {
+      "id": "224b3c919bd9",
+      "title": "Michael Watson & The Alchemy",
+      "start": "2027-01-08T18:00:00-06:00"
+    },
+    {
+      "id": "e8755ad9a458",
+      "title": "Young Lion Showcase",
+      "start": "2027-01-09T14:30:00-06:00"
+    },
+    {
+      "id": "21b1f55da946",
+      "title": "Paradise Jazz Band",
+      "start": "2027-01-10T18:00:00-06:00"
+    },
+    {
+      "id": "9f47586d78dc",
+      "title": "The Jump Hounds",
+      "start": "2027-01-10T21:30:00-06:00"
+    },
+    {
+      "id": "62539169a3c6",
+      "title": "Secret Six Jazz Band",
+      "start": "2027-01-11T18:00:00-06:00"
+    },
+    {
+      "id": "62dea729a265",
+      "title": "Corey Henry & the Treme Funktet : Red Beans & Ricely Yours",
+      "start": "2027-01-11T21:30:00-06:00"
+    },
+    {
+      "id": "484cdc170883",
+      "title": "Jenavieve & The Winding Boys",
+      "start": "2027-01-13T18:00:00-06:00"
+    },
+    {
+      "id": "895a777b57e5",
+      "title": "The Next Level Band",
+      "start": "2027-01-13T21:00:00-06:00"
+    },
+    {
+      "id": "421362aa75ac",
+      "title": "Ethan Santos",
+      "start": "2027-01-14T18:00:00-06:00"
+    },
+    {
+      "id": "e90c45c2cbad",
+      "title": "Vegas Cola Band",
+      "start": "2027-01-14T21:00:00-06:00"
+    },
+    {
+      "id": "8af771276ec7",
+      "title": "Michael Watson & The Alchemy",
+      "start": "2027-01-15T18:00:00-06:00"
     },
     {
       "id": "8fa0c587800b",
@@ -124,9 +470,84 @@
       "start": "2027-01-15T21:00:00-06:00"
     },
     {
+      "id": "0c7c498c5026",
+      "title": "Young Lion Showcase",
+      "start": "2027-01-16T14:30:00-06:00"
+    },
+    {
+      "id": "1dd284f00706",
+      "title": "Paradise Jazz Band",
+      "start": "2027-01-17T18:00:00-06:00"
+    },
+    {
+      "id": "1e3eec328c70",
+      "title": "The Jump Hounds",
+      "start": "2027-01-17T21:30:00-06:00"
+    },
+    {
+      "id": "bc2cc5bba4a7",
+      "title": "Secret Six Jazz Band",
+      "start": "2027-01-18T18:00:00-06:00"
+    },
+    {
+      "id": "94d892133310",
+      "title": "Corey Henry & the Treme Funktet : Red Beans & Ricely Yours",
+      "start": "2027-01-18T21:30:00-06:00"
+    },
+    {
+      "id": "2a3f8346c919",
+      "title": "Jenavieve & The Winding Boys",
+      "start": "2027-01-20T18:00:00-06:00"
+    },
+    {
+      "id": "b2d924f21e0b",
+      "title": "Ethan Santos",
+      "start": "2027-01-21T18:00:00-06:00"
+    },
+    {
+      "id": "ee28f0d75fbe",
+      "title": "Vegas Cola Band",
+      "start": "2027-01-21T21:00:00-06:00"
+    },
+    {
+      "id": "34c965b3e31f",
+      "title": "Young Lion Showcase",
+      "start": "2027-01-23T14:30:00-06:00"
+    },
+    {
+      "id": "28d997d6209d",
+      "title": "Paradise Jazz Band",
+      "start": "2027-01-24T18:00:00-06:00"
+    },
+    {
+      "id": "1191d009fb40",
+      "title": "The Jump Hounds",
+      "start": "2027-01-24T21:30:00-06:00"
+    },
+    {
+      "id": "1f4a092f3055",
+      "title": "Secret Six Jazz Band",
+      "start": "2027-01-25T18:00:00-06:00"
+    },
+    {
+      "id": "9ea86f8847c4",
+      "title": "Corey Henry & the Treme Funktet : Red Beans & Ricely Yours",
+      "start": "2027-01-25T21:30:00-06:00"
+    },
+    {
       "id": "66026804111d",
       "title": "Toyesauce",
       "start": "2027-01-28T22:00:00-06:00"
+    },
+    {
+      "id": "50e8ddaf0788",
+      "title": "Michael Watson & The Alchemy",
+      "start": "2027-02-05T18:00:00-06:00"
+    },
+    {
+      "id": "5cf177b21582",
+      "title": "Vegas Cola Band",
+      "start": "2027-02-11T21:00:00-06:00"
     }
   ]
 }

@@ -2,16 +2,6 @@
   "venue": "the-spotted-cat",
   "events": [
     {
-      "id": "13fed5bfdaa3",
-      "title": "Chris Christy Band",
-      "start": "2026-11-24T14:00:00-06:00"
-    },
-    {
-      "id": "151537d446c6",
-      "title": "Sweetie Pies of New Orleans",
-      "start": "2026-11-24T18:00:00-06:00"
-    },
-    {
       "id": "b37143b61cd9",
       "title": "Smoking Time Jazz Club",
       "start": "2026-11-24T21:30:00-06:00"
@@ -132,6 +122,16 @@
       "start": "2026-12-03T14:00:00-06:00"
     },
     {
+      "id": "79245b931be3",
+      "title": "Jenavieve Cooke & The Winding Boys",
+      "start": "2026-12-03T18:00:00-06:00"
+    },
+    {
+      "id": "950899142e29",
+      "title": "Jumbo Shrimp",
+      "start": "2026-12-03T22:00:00-06:00"
+    },
+    {
       "id": "1d5ccef73bb7",
       "title": "Paradise Jazz Band",
       "start": "2026-12-04T14:00:00-06:00"
@@ -152,6 +152,21 @@
       "start": "2026-12-05T22:00:00-06:00"
     },
     {
+      "id": "6fdb46ae67d4",
+      "title": "Jacky Blaire & The Hot Biscuits",
+      "start": "2026-12-06T14:00:00-06:00"
+    },
+    {
+      "id": "e38d0bfce635",
+      "title": "Treme Brass Band",
+      "start": "2026-12-06T18:00:00-06:00"
+    },
+    {
+      "id": "5292fe3ad635",
+      "title": "Pat Casey & The New Sound",
+      "start": "2026-12-06T21:00:00-06:00"
+    },
+    {
       "id": "15cb7d481242",
       "title": "Jenavieve Cooke & The Winding Boys",
       "start": "2026-12-07T14:00:00-06:00"
@@ -167,9 +182,49 @@
       "start": "2026-12-07T21:30:00-06:00"
     },
     {
+      "id": "c0ea020160f9",
+      "title": "Chris Christy Band",
+      "start": "2026-12-08T14:00:00-06:00"
+    },
+    {
+      "id": "e7dfa475ac40",
+      "title": "Sweetie Pies of New Orleans",
+      "start": "2026-12-08T18:00:00-06:00"
+    },
+    {
+      "id": "255941cc9ed5",
+      "title": "Smoking Time Jazz Club",
+      "start": "2026-12-08T21:30:00-06:00"
+    },
+    {
+      "id": "b9005f40d415",
+      "title": "Chris Christy Band",
+      "start": "2026-12-09T14:00:00-06:00"
+    },
+    {
+      "id": "50764349c640",
+      "title": "Shotgun Jazz Band",
+      "start": "2026-12-09T18:00:00-06:00"
+    },
+    {
+      "id": "3f0abfbcc6ce",
+      "title": "Marty Peters & The Party Meters",
+      "start": "2026-12-09T21:30:00-06:00"
+    },
+    {
+      "id": "111a02a049c5",
+      "title": "Chris Christy Band",
+      "start": "2026-12-10T14:00:00-06:00"
+    },
+    {
       "id": "5d7a5d167053",
       "title": "Miss Sophie Lee",
       "start": "2026-12-10T18:00:00-06:00"
+    },
+    {
+      "id": "495532c1d3cf",
+      "title": "Jumbo Shrimp",
+      "start": "2026-12-10T22:00:00-06:00"
     },
     {
       "id": "b349b6d043af",
@@ -192,6 +247,21 @@
       "start": "2026-12-12T22:00:00-06:00"
     },
     {
+      "id": "0bede15a891f",
+      "title": "Jacky Blaire & The Hot Biscuits",
+      "start": "2026-12-13T14:00:00-06:00"
+    },
+    {
+      "id": "a616ab7703d1",
+      "title": "Treme Brass Band",
+      "start": "2026-12-13T18:00:00-06:00"
+    },
+    {
+      "id": "b844a3930b7b",
+      "title": "Pat Casey & The New Sound",
+      "start": "2026-12-13T21:00:00-06:00"
+    },
+    {
       "id": "18d6ee2b65d2",
       "title": "Jenavieve Cooke & The Winding Boys",
       "start": "2026-12-14T14:00:00-06:00"
@@ -207,6 +277,51 @@
       "start": "2026-12-14T21:30:00-06:00"
     },
     {
+      "id": "3753a018147f",
+      "title": "Chris Christy Band",
+      "start": "2026-12-15T14:00:00-06:00"
+    },
+    {
+      "id": "15fec5dbfbb8",
+      "title": "Sweetie Pies of New Orleans",
+      "start": "2026-12-15T18:00:00-06:00"
+    },
+    {
+      "id": "6b4c6668d3d5",
+      "title": "Smoking Time Jazz Club",
+      "start": "2026-12-15T21:30:00-06:00"
+    },
+    {
+      "id": "edd4979f9065",
+      "title": "Chris Christy Band",
+      "start": "2026-12-16T14:00:00-06:00"
+    },
+    {
+      "id": "4d02afc78345",
+      "title": "Shotgun Jazz Band",
+      "start": "2026-12-16T18:00:00-06:00"
+    },
+    {
+      "id": "f05536434b73",
+      "title": "Marty Peters & The Party Meters",
+      "start": "2026-12-16T21:30:00-06:00"
+    },
+    {
+      "id": "48601c097fd2",
+      "title": "Chris Christy Band",
+      "start": "2026-12-17T14:00:00-06:00"
+    },
+    {
+      "id": "d4776214ce6f",
+      "title": "Jenavieve Cooke & The Winding Boys",
+      "start": "2026-12-17T18:00:00-06:00"
+    },
+    {
+      "id": "961157e1ea0e",
+      "title": "Jumbo Shrimp",
+      "start": "2026-12-17T22:00:00-06:00"
+    },
+    {
       "id": "cc8cd8d5c03a",
       "title": "Paradise Jazz Band",
       "start": "2026-12-18T14:00:00-06:00"
@@ -215,6 +330,21 @@
       "id": "f7f26fbdd8bc",
       "title": "New Orleans Cottonmouth Kings",
       "start": "2026-12-18T22:00:00-06:00"
+    },
+    {
+      "id": "154a9273abff",
+      "title": "Jacky Blaire & The Hot Biscuits",
+      "start": "2026-12-20T14:00:00-06:00"
+    },
+    {
+      "id": "73e7aa229d4f",
+      "title": "Treme Brass Band",
+      "start": "2026-12-20T18:00:00-06:00"
+    },
+    {
+      "id": "4d20cf92825b",
+      "title": "Pat Casey & The New Sound",
+      "start": "2026-12-20T21:00:00-06:00"
     },
     {
       "id": "950cad101a99",
@@ -227,6 +357,61 @@
       "start": "2026-12-21T18:00:00-06:00"
     },
     {
+      "id": "167d47ddfdc9",
+      "title": "Chris Christy Band",
+      "start": "2026-12-22T14:00:00-06:00"
+    },
+    {
+      "id": "7d7836cc06ea",
+      "title": "Sweetie Pies of New Orleans",
+      "start": "2026-12-22T18:00:00-06:00"
+    },
+    {
+      "id": "80a4658e3237",
+      "title": "Smoking Time Jazz Club",
+      "start": "2026-12-22T21:30:00-06:00"
+    },
+    {
+      "id": "f592e9bfba67",
+      "title": "Chris Christy Band",
+      "start": "2026-12-23T14:00:00-06:00"
+    },
+    {
+      "id": "af4d4d4c2dc2",
+      "title": "Shotgun Jazz Band",
+      "start": "2026-12-23T18:00:00-06:00"
+    },
+    {
+      "id": "5edbc48cd0ad",
+      "title": "Marty Peters & The Party Meters",
+      "start": "2026-12-23T21:30:00-06:00"
+    },
+    {
+      "id": "f3f659d6748b",
+      "title": "Chris Christy Band",
+      "start": "2026-12-24T14:00:00-06:00"
+    },
+    {
+      "id": "c515e73db950",
+      "title": "Jumbo Shrimp",
+      "start": "2026-12-24T22:00:00-06:00"
+    },
+    {
+      "id": "d56a60690543",
+      "title": "Jacky Blaire & The Hot Biscuits",
+      "start": "2026-12-27T14:00:00-06:00"
+    },
+    {
+      "id": "cd1b55559769",
+      "title": "Treme Brass Band",
+      "start": "2026-12-27T18:00:00-06:00"
+    },
+    {
+      "id": "8b0141b7ec66",
+      "title": "Pat Casey & The New Sound",
+      "start": "2026-12-27T21:00:00-06:00"
+    },
+    {
       "id": "588f5ac988bb",
       "title": "Jenavieve Cooke & The Winding Boys",
       "start": "2026-12-28T14:00:00-06:00"
@@ -237,9 +422,304 @@
       "start": "2026-12-28T18:00:00-06:00"
     },
     {
+      "id": "cc9824a4a52f",
+      "title": "Chris Christy Band",
+      "start": "2026-12-29T14:00:00-06:00"
+    },
+    {
+      "id": "d1015b0d3d79",
+      "title": "Sweetie Pies of New Orleans",
+      "start": "2026-12-29T18:00:00-06:00"
+    },
+    {
+      "id": "c1ac17b42ee3",
+      "title": "Smoking Time Jazz Club",
+      "start": "2026-12-29T21:30:00-06:00"
+    },
+    {
+      "id": "8c065d60178e",
+      "title": "Chris Christy Band",
+      "start": "2026-12-30T14:00:00-06:00"
+    },
+    {
+      "id": "48e6238e9c71",
+      "title": "Shotgun Jazz Band",
+      "start": "2026-12-30T18:00:00-06:00"
+    },
+    {
+      "id": "eb9ac60ec118",
+      "title": "Marty Peters & The Party Meters",
+      "start": "2026-12-30T21:30:00-06:00"
+    },
+    {
+      "id": "0d0926c2def3",
+      "title": "Chris Christy Band",
+      "start": "2026-12-31T14:00:00-06:00"
+    },
+    {
+      "id": "609bc25464aa",
+      "title": "Jenavieve Cooke & The Winding Boys",
+      "start": "2026-12-31T18:00:00-06:00"
+    },
+    {
+      "id": "4427ea3edf45",
+      "title": "Jumbo Shrimp",
+      "start": "2026-12-31T22:00:00-06:00"
+    },
+    {
+      "id": "e15e0be2000d",
+      "title": "Paradise Jazz Band",
+      "start": "2027-01-01T14:00:00-06:00"
+    },
+    {
+      "id": "7a315f8f48f7",
+      "title": "Jacky Blaire & The Hot Biscuits",
+      "start": "2027-01-03T14:00:00-06:00"
+    },
+    {
+      "id": "9d01f473fa5a",
+      "title": "Treme Brass Band",
+      "start": "2027-01-03T18:00:00-06:00"
+    },
+    {
+      "id": "82c062b0c1d2",
+      "title": "Pat Casey & The New Sound",
+      "start": "2027-01-03T21:00:00-06:00"
+    },
+    {
+      "id": "55ebd69622d1",
+      "title": "Smoking Time Jazz Club",
+      "start": "2027-01-05T21:30:00-06:00"
+    },
+    {
+      "id": "f58dcb580c76",
+      "title": "Chris Christy Band",
+      "start": "2027-01-06T14:00:00-06:00"
+    },
+    {
+      "id": "1e1c5f097bde",
+      "title": "Marty Peters & The Party Meters",
+      "start": "2027-01-06T21:30:00-06:00"
+    },
+    {
+      "id": "1c484b98bcfb",
+      "title": "Chris Christy Band",
+      "start": "2027-01-07T14:00:00-06:00"
+    },
+    {
+      "id": "b8fc41a87fa4",
+      "title": "Jenavieve Cooke & The Winding Boys",
+      "start": "2027-01-07T18:00:00-06:00"
+    },
+    {
+      "id": "55fcf5a93420",
+      "title": "Jumbo Shrimp",
+      "start": "2027-01-07T22:00:00-06:00"
+    },
+    {
       "id": "b6877a00f31f",
       "title": "New Orleans Cottonmouth Kings",
       "start": "2027-01-08T22:00:00-06:00"
+    },
+    {
+      "id": "54b53b63ac7a",
+      "title": "Jacky Blaire & The Hot Biscuits",
+      "start": "2027-01-10T14:00:00-06:00"
+    },
+    {
+      "id": "623ef8290775",
+      "title": "Treme Brass Band",
+      "start": "2027-01-10T18:00:00-06:00"
+    },
+    {
+      "id": "d57ef4467909",
+      "title": "Pat Casey & The New Sound",
+      "start": "2027-01-10T21:00:00-06:00"
+    },
+    {
+      "id": "b87a276cc75a",
+      "title": "Chris Christy Band",
+      "start": "2027-01-12T14:00:00-06:00"
+    },
+    {
+      "id": "58d2aa7724eb",
+      "title": "Sweetie Pies of New Orleans",
+      "start": "2027-01-12T18:00:00-06:00"
+    },
+    {
+      "id": "c6cd2eceb952",
+      "title": "Smoking Time Jazz Club",
+      "start": "2027-01-12T21:30:00-06:00"
+    },
+    {
+      "id": "18558220fe79",
+      "title": "Chris Christy Band",
+      "start": "2027-01-13T14:00:00-06:00"
+    },
+    {
+      "id": "dd4f2adc88fc",
+      "title": "Shotgun Jazz Band",
+      "start": "2027-01-13T18:00:00-06:00"
+    },
+    {
+      "id": "b7d96a5dd72f",
+      "title": "Marty Peters & The Party Meters",
+      "start": "2027-01-13T21:30:00-06:00"
+    },
+    {
+      "id": "4825e1ee9147",
+      "title": "Chris Christy Band",
+      "start": "2027-01-14T14:00:00-06:00"
+    },
+    {
+      "id": "77151f72f0f2",
+      "title": "Miss Sophie Lee",
+      "start": "2027-01-14T18:00:00-06:00"
+    },
+    {
+      "id": "1119f4fa9131",
+      "title": "Jumbo Shrimp",
+      "start": "2027-01-14T22:00:00-06:00"
+    },
+    {
+      "id": "c04a04665f5e",
+      "title": "Jacky Blaire & The Hot Biscuits",
+      "start": "2027-01-17T14:00:00-06:00"
+    },
+    {
+      "id": "0e676fb9cc33",
+      "title": "Treme Brass Band",
+      "start": "2027-01-17T18:00:00-06:00"
+    },
+    {
+      "id": "615f9ea680bd",
+      "title": "Pat Casey & The New Sound",
+      "start": "2027-01-17T21:00:00-06:00"
+    },
+    {
+      "id": "c316e29f16bf",
+      "title": "Chris Christy Band",
+      "start": "2027-01-19T14:00:00-06:00"
+    },
+    {
+      "id": "057dfa5f5192",
+      "title": "Sweetie Pies of New Orleans",
+      "start": "2027-01-19T18:00:00-06:00"
+    },
+    {
+      "id": "1980346ff132",
+      "title": "Smoking Time Jazz Club",
+      "start": "2027-01-19T21:30:00-06:00"
+    },
+    {
+      "id": "e4140bbb1ce7",
+      "title": "Chris Christy Band",
+      "start": "2027-01-20T14:00:00-06:00"
+    },
+    {
+      "id": "8f6c4e785815",
+      "title": "Shotgun Jazz Band",
+      "start": "2027-01-20T18:00:00-06:00"
+    },
+    {
+      "id": "3ea86f484abc",
+      "title": "Marty Peters & The Party Meters",
+      "start": "2027-01-20T21:30:00-06:00"
+    },
+    {
+      "id": "63d1ca2229ae",
+      "title": "Chris Christy Band",
+      "start": "2027-01-21T14:00:00-06:00"
+    },
+    {
+      "id": "3a996ea9fe49",
+      "title": "Jenavieve Cooke & The Winding Boys",
+      "start": "2027-01-21T18:00:00-06:00"
+    },
+    {
+      "id": "43b970b4a7c6",
+      "title": "Jumbo Shrimp",
+      "start": "2027-01-21T22:00:00-06:00"
+    },
+    {
+      "id": "6ec3989bc1d1",
+      "title": "Jacky Blaire & The Hot Biscuits",
+      "start": "2027-01-24T14:00:00-06:00"
+    },
+    {
+      "id": "10b180e6842e",
+      "title": "Treme Brass Band",
+      "start": "2027-01-24T18:00:00-06:00"
+    },
+    {
+      "id": "6b68d4e8e055",
+      "title": "Pat Casey & The New Sound",
+      "start": "2027-01-24T21:00:00-06:00"
+    },
+    {
+      "id": "4f9cd5e549bd",
+      "title": "Chris Christy Band",
+      "start": "2027-01-26T14:00:00-06:00"
+    },
+    {
+      "id": "e2e135a84dc7",
+      "title": "Sweetie Pies of New Orleans",
+      "start": "2027-01-26T18:00:00-06:00"
+    },
+    {
+      "id": "925fc5124eae",
+      "title": "Smoking Time Jazz Club",
+      "start": "2027-01-26T21:30:00-06:00"
+    },
+    {
+      "id": "3ab12e7f6d65",
+      "title": "Chris Christy Band",
+      "start": "2027-01-27T14:00:00-06:00"
+    },
+    {
+      "id": "327733584380",
+      "title": "Shotgun Jazz Band",
+      "start": "2027-01-27T18:00:00-06:00"
+    },
+    {
+      "id": "6ca5db7ffd88",
+      "title": "Marty Peters & The Party Meters",
+      "start": "2027-01-27T21:30:00-06:00"
+    },
+    {
+      "id": "0ef499b3feb7",
+      "title": "Chris Christy Band",
+      "start": "2027-01-28T14:00:00-06:00"
+    },
+    {
+      "id": "95a0567d8e4a",
+      "title": "Jumbo Shrimp",
+      "start": "2027-01-28T22:00:00-06:00"
+    },
+    {
+      "id": "ed378ba255e5",
+      "title": "Smoking Time Jazz Club",
+      "start": "2027-02-09T21:30:00-06:00"
+    },
+    {
+      "id": "b2a97a94f208",
+      "title": "Marty Peters & The Party Meters",
+      "start": "2027-02-10T21:30:00-06:00"
+    },
+    {
+      "id": "72e183060161",
+      "title": "Chris Christy Band",
+      "start": "2027-02-11T14:00:00-06:00"
+    },
+    {
+      "id": "92081398fa2e",
+      "title": "Jumbo Shrimp",
+      "start": "2027-02-11T22:00:00-06:00"
+    },
+    {
+      "id": "03f09256b91a",
+      "title": "Jumbo Shrimp",
+      "start": "2027-02-18T22:00:00-06:00"
     }
   ]
 }

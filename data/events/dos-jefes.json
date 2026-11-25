@@ -2,12 +2,6 @@
   "venue": "dos-jefes",
   "events": [
     {
-      "id": "827bba209937",
-      "title": "JOE KROWN",
-      "start": "2026-11-24T21:00:00-06:00",
-      "url": "https://dosjefes.com/events/joe-krown-2/"
-    },
-    {
       "id": "830fb2a45a10",
       "title": "THE MARK COLEMAN BAND",
       "start": "2026-11-25T20:30:00-06:00",
@@ -110,6 +104,12 @@
       "url": "https://dosjefes.com/events/bassx-2/"
     },
     {
+      "id": "7bb2f5bc63ea",
+      "title": "Ethan Winogard",
+      "start": "2026-12-13T20:00:00-06:00",
+      "url": "https://dosjefes.com/events/ethan-winogard-3/"
+    },
+    {
       "id": "ecd276bc2a3e",
       "title": "JOHN FOHL",
       "start": "2026-12-14T20:30:00-06:00",
@@ -128,10 +128,34 @@
       "url": "https://dosjefes.com/events/the-kris-tokarski-trio/"
     },
     {
+      "id": "c6a71f001b85",
+      "title": "Anna Laura Quinn",
+      "start": "2026-12-17T20:30:00-06:00",
+      "url": "https://dosjefes.com/events/anna-laura-quinn/"
+    },
+    {
+      "id": "fb8e3b67b2e4",
+      "title": "¡Vivaz!",
+      "start": "2026-12-18T21:00:00-06:00",
+      "url": "https://dosjefes.com/events/vivaz-trio/"
+    },
+    {
+      "id": "14e6b2f2d0ba",
+      "title": "Piano Bob",
+      "start": "2026-12-20T20:00:00-06:00",
+      "url": "https://dosjefes.com/events/piano-bob/"
+    },
+    {
       "id": "7f611bd427bd",
       "title": "JOHN FOHL",
       "start": "2026-12-21T20:30:00-06:00",
       "url": "https://dosjefes.com/events/john-fohl-2-2026-12-21/"
+    },
+    {
+      "id": "a1ce4ee11a73",
+      "title": "TOM HOOK",
+      "start": "2026-12-22T20:30:00-06:00",
+      "url": "https://dosjefes.com/events/tom-hook-4-2026-12-22/"
     },
     {
       "id": "0d166817a24c",
@@ -140,10 +164,16 @@
       "url": "https://dosjefes.com/events/mark-coleman-todd-duke-2-2021-12-23/"
     },
     {
-      "id": "17211b5fb3e0",
-      "title": "JOHN FOHL",
-      "start": "2026-12-28T20:30:00-06:00",
-      "url": "https://dosjefes.com/events/john-fohl-2-2026-12-28/"
+      "id": "c0f25b0ff645",
+      "title": "Joplin Parnell",
+      "start": "2026-12-25T20:30:00-06:00",
+      "url": "https://dosjefes.com/events/joplin-parnell/"
+    },
+    {
+      "id": "a0585f05f22d",
+      "title": "MISS BETTY SHIRLEY",
+      "start": "2026-12-26T21:00:00-06:00",
+      "url": "https://dosjefes.com/events/betty-shirley-band/"
     }
   ]
 }

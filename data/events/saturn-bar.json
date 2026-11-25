@@ -2,13 +2,6 @@
   "venue": "saturn-bar",
   "events": [
     {
-      "id": "37aa35c3299e",
-      "title": "North by North, The Pause, The Bomb Pulse, Mango",
-      "start": "2026-11-24T21:00:00-06:00",
-      "end": "2026-11-25T01:00:00-06:00",
-      "url": "https://dice.fm/event/6aba932f4479fc0001693a08"
-    },
-    {
       "id": "558dc91c382a",
       "title": "Thanksgiving Eve Bash with Basher + Chore Boys",
       "start": "2026-11-25T20:00:00-06:00",

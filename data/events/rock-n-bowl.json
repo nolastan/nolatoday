@@ -2,13 +2,6 @@
   "venue": "rock-n-bowl",
   "events": [
     {
-      "id": "edad28b29348",
-      "title": "Latin Night with DJ Nayo",
-      "start": "2026-11-24T19:00:00-06:00",
-      "end": "2026-11-24T23:00:00-06:00",
-      "url": "https://www.rocknbowl.com/event-details/latin-night-with-dj-nayo-2026-11-24-19-00"
-    },
-    {
       "id": "3ed37f1ca46b",
       "title": "Neutral Snap",
       "start": "2026-11-25T20:30:00-06:00",
@@ -109,6 +102,12 @@
       "title": "A night of Motown with BRW",
       "start": "2027-01-01T20:30:00-06:00",
       "url": "https://www.rocknbowl.com/event-details/a-night-of-motown-with-brw-1-1-27"
+    },
+    {
+      "id": "8b7b756cefb1",
+      "title": "The Topcats",
+      "start": "2027-01-02T20:30:00-06:00",
+      "url": "https://www.rocknbowl.com/event-details/the-topcats-1-2-27"
     }
   ]
 }

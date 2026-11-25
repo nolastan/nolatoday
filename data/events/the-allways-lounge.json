@@ -2,20 +2,6 @@
   "venue": "the-allways-lounge",
   "events": [
     {
-      "id": "2e097edb1a3b",
-      "title": "On a TUESDAY?! (drag /burlesque/ sideshow)",
-      "start": "2026-11-24T19:30:00-06:00",
-      "end": "2026-11-24T21:00:00-06:00",
-      "url": "https://tockify.com/allwayslounge/detail/2539/1795570200000"
-    },
-    {
-      "id": "8386203e268e",
-      "title": "Vaudevilliannce (burlesque & variety)",
-      "start": "2026-11-24T20:00:00-06:00",
-      "end": "2026-11-24T23:00:00-06:00",
-      "url": "https://tockify.com/allwayslounge/detail/4537/1795572000000"
-    },
-    {
       "id": "74051ba7f680",
       "title": "The Show That Is Tonight",
       "start": "2026-11-25T19:00:00-06:00",
@@ -1945,6 +1931,20 @@
       "start": "2027-02-21T20:00:00-06:00",
       "end": "2027-02-21T23:30:00-06:00",
       "url": "https://tockify.com/allwayslounge/detail/1860/1803261600000"
+    },
+    {
+      "id": "cbb544d0da75",
+      "title": "Betsy Propane Smoke Show (live music & burlesque)",
+      "start": "2027-02-22T19:00:00-06:00",
+      "end": "2027-02-22T20:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/2864/1803344400000"
+    },
+    {
+      "id": "adf8d93d99b9",
+      "title": "Almost Naked Karaoke",
+      "start": "2027-02-22T21:30:00-06:00",
+      "end": "2027-02-22T23:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/2269/1803353400000"
     }
   ]
 }
