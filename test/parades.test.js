@@ -313,6 +313,27 @@ test('site: parades group by organization, and pages show the city record honest
   assert.equal(routeSvg(features.find((f) => f.id === 'nine-times-2026-11-22')), null);
 });
 
+test('site: the directory is a schedule by day, with last Carnival season until the city lists the next', () => {
+  const { features } = build();
+  const ctx = { config: { siteName: 'NOLA.Today', siteUrl: 'https://nola.today', repo: 'x/y', mapbox: {} }, url: (p) => p, asset: (p) => p };
+  const orgs = paradeOrgs(features, '2026-11-12');
+  const page = paradesPage(ctx, orgs, { today: '2026-11-12', sources: [] });
+  assert.match(page, /<title>New Orleans Parade Schedule – Mardi Gras 2027 Parades &amp; Second Lines – NOLA\.Today<\/title>/);
+  assert.match(page, /<h1>New Orleans parade schedule<\/h1>/);
+  assert.match(page, /<h2>Mardi Gras 2027 parade schedule<\/h2>/);
+  assert.match(page, /Mardi Gras day is Tuesday, February 9, 2027\./);
+  // A permit for one walking krewe isn't the season: last season's schedule stays until the city's Carnival layers have the new one.
+  assert.match(page, /<h2>Mardi Gras 2026 parade schedule<\/h2>/);
+  assert.match(page, /<a href="\/parades\/mosaique">Krewe Mosaique<\/a>/);
+  assert.match(page, /<a href="\/parades\/muses">[^<]+<\/a><\/span><span class="event-meta muted">Starts at /);
+  assert.doesNotMatch(page, /venue-card/);
+  // Every organization is linked from the index by name.
+  for (const o of orgs) assert.ok(page.includes(`<li><a href="/parades/${o.slug}">`), o.slug);
+  const ld = JSON.parse(page.match(/<script type="application\/ld\+json">(.+?)<\/script>/s)[1]);
+  assert.ok(ld['@graph'].some((n) => n['@type'] === 'Event' && n.name.includes('Mosaique')));
+  assert.ok(ld['@graph'].some((n) => n['@type'] === 'ItemList'));
+});
+
 test('site: a start address is shown as its street, without the number or place name', () => {
   assert.equal(startStreet('3301 Higgins Blvd (Thrive 9th Ward)'), 'Higgins Blvd');
   assert.equal(startStreet('1738 Washington Ave - Verret Lounge'), 'Washington Ave');
@@ -354,8 +375,6 @@ test('site: map pictures, the street line and the website button', () => {
   assert.match(nine, /Map of the area where/);
 
   const directory = paradesPage(ctx, orgs, { today: '2026-11-12', sources: [] });
-  assert.match(directory, /<div class="card-media"><img class="only-dark" src="https:\/\/api\.mapbox\.com/);
-  assert.doesNotMatch(directory, /route-thumb/);
   const address = unrouted.properties.start_address;
   assert.ok(/^\d/.test(address));
   assert.ok(!directory.includes(address) && !nine.includes(address));
@@ -367,7 +386,7 @@ test('websites.json: every entry is an https address for an organization in the 
   for (const slug of Object.keys(sites)) assert.ok(slugs.has(slug), `${slug} is not a parade organization`);
 });
 
-test('site: photos show beside the name with their credit, and the directory card leads with the first one', () => {
+test('site: photos show beside the name with their credit', () => {
   const { features } = build();
   const credit = { author: 'A. Photographer', license: 'CC BY-SA 4.0', licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0', source: 'https://commons.wikimedia.org/wiki/File:Example.jpg', via: 'Wikimedia Commons' };
   const photo = (n) => ({ file: `mosaique-${n}.jpg`, width: 1200, height: 800, alt: `Photo ${n}`, credit });
@@ -396,13 +415,6 @@ test('site: photos show beside the name with their credit, and the directory car
 
   // No photos: the page is as it was.
   assert.doesNotMatch(pageFor({}).page, /parade-photos|photo-slide/);
-
-  // The directory shows the first photo where there is one, and the map where there is not.
-  const directory = paradesPage(ctx, one.orgs, { today: '2026-11-12', sources: [] });
-  const cardOf = (slug) => directory.split('<li class="venue-card').find((c) => c.includes(`href="/parades/${slug}"`));
-  assert.match(cardOf('mosaique'), /<div class="card-media"><img src="\/images\/parades\/mosaique-1-600\.jpg"/);
-  assert.doesNotMatch(cardOf('mosaique'), /api\.mapbox\.com/);
-  assert.match(cardOf('nine-times'), /<div class="card-media"><img class="only-dark" src="https:\/\/api\.mapbox\.com/);
 });
 
 test('photos.json: every photo is on disk with a credit, for an organization in the data', () => {
