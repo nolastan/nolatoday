@@ -327,8 +327,10 @@ test('site: the directory is a schedule by day, with last Carnival season until 
   assert.match(page, /<a href="\/parades\/mosaique">Krewe Mosaique<\/a>/);
   assert.match(page, /<a href="\/parades\/muses">[^<]+<\/a><\/span><span class="event-meta muted">Starts at /);
   assert.doesNotMatch(page, /venue-card/);
-  // Every organization is linked from the index by name.
-  for (const o of orgs) assert.ok(page.includes(`<li><a href="/parades/${o.slug}">`), o.slug);
+  // Every organization is linked from the schedule, the ones not otherwise on it under recent parades.
+  for (const o of orgs) assert.ok(page.includes(`<a href="/parades/${o.slug}">`), o.slug);
+  assert.match(page, /<h2>Recent second lines and parades<\/h2>/);
+  assert.doesNotMatch(page, /Krewes and clubs/);
   const ld = JSON.parse(page.match(/<script type="application\/ld\+json">(.+?)<\/script>/s)[1]);
   assert.ok(ld['@graph'].some((n) => n['@type'] === 'Event' && n.name.includes('Mosaique')));
   assert.ok(ld['@graph'].some((n) => n['@type'] === 'ItemList'));

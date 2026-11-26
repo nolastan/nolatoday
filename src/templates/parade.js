@@ -370,13 +370,19 @@ export function paradesPage(ctx, orgs, { today, sources = [] }) {
   </section>`
     : '';
 
-  const byName = [...orgs].sort((a, b) => a.name.localeCompare(b.name));
-  const index = `<section class="schedule parade-index" id="krewes-and-clubs">
-    <h2>Krewes and clubs</h2>
-    <ul class="parade-index-list">
-      ${byName.map((o) => `<li><a href="${url(`/parades/${o.slug}`)}">${esc(o.name)}</a></li>`).join('\n      ')}
-    </ul>
-  </section>`;
+  // Every krewe or club not already on the page appears once more, by its latest parade, newest first,
+  // so each organization's page has a link from here.
+  const shown = new Set([...upcoming, ...lastSeason].map(({ org }) => org.slug));
+  const recent = orgs
+    .filter((o) => !shown.has(o.slug) && o.past.length)
+    .map((org) => ({ org, feature: org.past[0] }))
+    .sort((a, b) => b.feature.properties.date.localeCompare(a.feature.properties.date));
+  const index = recent.length
+    ? `<section class="schedule parade-schedule parade-schedule--past" id="recent">
+    <h2>Recent second lines and parades</h2>
+    ${scheduleDays(ctx, recent, today)}
+  </section>`
+    : '';
 
   const body = `${siteHeader(ctx, { current: 'parades' })}
 <main class="wrap parades-page">
