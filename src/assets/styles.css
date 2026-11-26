@@ -692,6 +692,21 @@ a.popup-banner:hover h3 { text-decoration: underline; text-underline-offset: 3px
 /* The parades index is a schedule: a day, then a time and a krewe or club with where it starts. */
 .parades-page { max-width: 860px; }
 .event-meta { display: block; margin-top: 2px; font-size: 0.95rem; }
+.parade-event { grid-template-columns: 5.5em 1fr 112px; align-items: center; }
+.parade-event .event-time { align-self: start; padding-top: 2px; }
+.parade-thumb {
+  position: relative;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 8px;
+  background: var(--bg-elev-2);
+  color: var(--marker);
+}
+.parade-thumb img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.parade-thumb .route-thumb { padding: 4px; }
+@media (max-width: 480px) { .parade-event { grid-template-columns: 4.5em 1fr 80px; gap: 10px; } }
 .parade-schedule--past .event-time { color: var(--muted); }
 .parade-index-list { list-style: none; margin: 16px 0 0; padding: 0; columns: 3 220px; column-gap: 24px; }
 .parade-index-list li { break-inside: avoid; padding: 4px 0; }
