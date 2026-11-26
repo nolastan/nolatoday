@@ -526,7 +526,7 @@ test('site: a parade page shows where it starts and ends, and the other parades 
   assert.ok(formation && disband);
   assert.ok(page.includes(`<p class="venue-address">Starts at ${formation.replace(/\.$/, '')}, ends at ${disband.replace(/\.$/, '')}</p>`));
   // The other krewes that day are named under the parade, linked to their pages.
-  assert.match(page, /<span class="event-meta muted same-day">Same day as <a href="\/parades\/chaos">Knights of Chaos<\/a><\/span>/);
+  assert.match(page, /<span class="event-meta muted same-day">Same day as <a href="\/parades\/chaos">Chaos<\/a><\/span>/);
   // Alone that day: nothing added.
   const alone = paradePage(ctx, orgs.find((o) => o.slug === 'nine-times'), { today: '2026-11-12', orgs });
   assert.doesNotMatch(alone, /Same day as/);

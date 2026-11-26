@@ -231,7 +231,9 @@ export function paradePage(ctx, org, { today, orgs = [] }) {
     .filter((o) => o.slug !== org.slug)
     .flatMap((o) => o.parades.filter((f) => f.properties.date === key.properties.date).map((feature) => ({ org: o, feature })))
     .sort((a, b) => (a.feature.properties.start_time ?? '').localeCompare(b.feature.properties.start_time ?? '') || a.org.name.localeCompare(b.org.name));
-  const links = others.map(({ org: o }) => `<a href="${url(`/parades/${o.slug}`)}">${esc(o.name)}</a>`);
+  // Short names, as the parade list above shows Carnival krewes: "Chaos", not "Knights of Chaos".
+  const shortName = (name) => name.replace(/^(the )?(mystic )?(intergalactic )?(krewe|knights) of /i, '');
+  const links = others.map(({ org: o }) => `<a href="${url(`/parades/${o.slug}`)}">${esc(shortName(o.name))}</a>`);
   const sameDay = links.length
     ? { id: key.id, html: `<span class="event-meta muted same-day">Same day as ${links.length > 1 ? `${links.slice(0, -1).join(', ')} and ${links.at(-1)}` : links[0]}</span>` }
     : null;
