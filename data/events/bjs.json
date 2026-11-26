@@ -2,16 +2,46 @@
   "venue": "bjs",
   "events": [
     {
-      "id": "9e2840355653",
-      "title": "Lily Unless & The If Onlys",
-      "start": "2026-11-25T21:00:00-06:00",
-      "url": "https://www.instagram.com/p/Df-DbluJJmW/"
+      "id": "f59f53f1bd4e",
+      "title": "Horace Trahan & The Ossun Express",
+      "start": "2026-11-27T21:00:00-06:00",
+      "url": "https://www.instagram.com/p/DgNhvNlBCeo/"
     },
     {
       "id": "53f49ce53c66",
       "title": "Brasinola",
       "start": "2026-11-28T21:00:00-06:00",
       "url": "https://www.instagram.com/p/DfxjEJyv1BH/"
+    },
+    {
+      "id": "8d1ea4fa6f9e",
+      "title": "James McClaskey and the Rhythm Band",
+      "start": "2026-11-29T21:30:00-06:00",
+      "url": "https://www.instagram.com/p/DgF_n6xB5zK/"
+    },
+    {
+      "id": "bcdb32c60ea3",
+      "title": "The Rump Shakers",
+      "start": "2026-11-30T21:00:00-06:00",
+      "url": "https://www.instagram.com/p/DgF_n6xB5zK/"
+    },
+    {
+      "id": "5d0669ebd38e",
+      "title": "Sally Baby's Silver Dollars",
+      "start": "2026-12-03T21:00:00-06:00",
+      "url": "https://www.instagram.com/p/DgF_n6xB5zK/"
+    },
+    {
+      "id": "1108f6c0efb0",
+      "title": "Ronnie, Dummy Plug, Avian TV",
+      "start": "2026-12-04T21:00:00-06:00",
+      "url": "https://www.instagram.com/p/DgF_n6xB5zK/"
+    },
+    {
+      "id": "44080faa8d2b",
+      "title": "Klezmer Allstars",
+      "start": "2026-12-05T21:00:00-06:00",
+      "url": "https://www.instagram.com/p/DgF_n6xB5zK/"
     }
   ]
 }
