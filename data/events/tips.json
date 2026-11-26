@@ -2,12 +2,6 @@
   "venue": "tips",
   "events": [
     {
-      "id": "e52a7c67bba0",
-      "title": "A Tribute To Louis Prima and Lee Dorsey",
-      "start": "2026-11-25T19:30:00-06:00",
-      "url": "https://tipitinas.com/event/14337244/a-tribute-to-louis-prima-and-lee-dorsey"
-    },
-    {
       "id": "0455008908d3",
       "title": "Love In The Club",
       "start": "2026-11-27T21:00:00-06:00",
@@ -150,6 +144,12 @@
       "title": "An Evening With Railroad Earth",
       "start": "2027-01-24T20:00:00-06:00",
       "url": "https://tipitinas.com/event/14385524/an-evening-with-railroad-earth"
+    },
+    {
+      "id": "62e4f25e6680",
+      "title": "Founders Ball - TIPS50 Anniversary Celebration",
+      "start": "2027-01-28T19:14:00-06:00",
+      "url": "https://tipitinas.com/event/15073223/founders-ball-tips50-anniversary-celebration"
     },
     {
       "id": "9845cb9ac4df",

@@ -2,12 +2,6 @@
   "venue": "rock-n-bowl",
   "events": [
     {
-      "id": "3ed37f1ca46b",
-      "title": "Neutral Snap",
-      "start": "2026-11-25T20:30:00-06:00",
-      "url": "https://www.rocknbowl.com/event-details/neutral-snap-11-25-26"
-    },
-    {
       "id": "3050e296ca40",
       "title": "Bucktown Allstars",
       "start": "2026-11-27T20:30:00-06:00",
@@ -108,6 +102,12 @@
       "title": "The Topcats",
       "start": "2027-01-02T20:30:00-06:00",
       "url": "https://www.rocknbowl.com/event-details/the-topcats-1-2-27"
+    },
+    {
+      "id": "9f22ac0aff34",
+      "title": "Ryan Foret & Foret Tradition",
+      "start": "2027-01-08T20:30:00-06:00",
+      "url": "https://www.rocknbowl.com/event-details/ryan-foret-foret-tradition-1-8-27"
     }
   ]
 }

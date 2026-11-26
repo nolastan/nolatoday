@@ -2,16 +2,6 @@
   "venue": "bontemps",
   "events": [
     {
-      "id": "7a04314cc739",
-      "title": "Wednesday Late Night Funbox Karaoke",
-      "start": "2026-11-25T22:00:00-06:00"
-    },
-    {
-      "id": "de02a8733281",
-      "title": "Steve Kelly",
-      "start": "2026-11-25T23:00:00-06:00"
-    },
-    {
       "id": "514b5a66aaa7",
       "title": "Thanksgiving",
       "start": "2026-11-26T11:00:00-06:00",
@@ -31,6 +21,11 @@
       "id": "aea30b323290",
       "title": "Jelly Biscuit",
       "start": "2026-11-28T23:00:00-06:00"
+    },
+    {
+      "id": "5083fef2836f",
+      "title": "Wednesday Late Night Funbox Karaoke",
+      "start": "2026-12-02T22:00:00-06:00"
     },
     {
       "id": "72ebb72b125a",
@@ -60,8 +55,7 @@
     {
       "id": "62b3a657a717",
       "title": "Jamie Bernstein and Zen Cowboys",
-      "start": "2026-12-12T16:00:00-06:00",
-      "end": "2026-12-12T23:00:00-06:00"
+      "start": "2026-12-12T16:00:00-06:00"
     },
     {
       "id": "0168b77cd248",

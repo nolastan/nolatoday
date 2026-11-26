@@ -2,13 +2,6 @@
   "venue": "the-allways-lounge",
   "events": [
     {
-      "id": "74051ba7f680",
-      "title": "The Show That Is Tonight",
-      "start": "2026-11-25T19:00:00-06:00",
-      "end": "2026-11-25T21:00:00-06:00",
-      "url": "https://tockify.com/allwayslounge/detail/4299/1795654800000"
-    },
-    {
       "id": "724f4440f146",
       "title": "Shuttered for deviled eggs & the racetrack… Go enjoy a great locals day out in the world. See you tomorrow.!",
       "start": "2026-11-26",
@@ -212,6 +205,13 @@
       "url": "https://tockify.com/allwayslounge/detail/3475/1796522400000"
     },
     {
+      "id": "a8a031a6f58a",
+      "title": "Christmas Evil: A Krampus Cabaret",
+      "start": "2026-12-05T22:30:00-06:00",
+      "end": "2026-12-06T01:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/4647/1796531400000"
+    },
+    {
       "id": "639d3927dc7f",
       "title": "Secrets : Drag & Burlesque",
       "start": "2026-12-05T23:00:00-06:00",
@@ -331,8 +331,8 @@
       "url": "https://tockify.com/allwayslounge/detail/4432/1796961600000"
     },
     {
-      "id": "1b5efe2f8d56",
-      "title": "Daniel Bulllard dsa benefit burlesque",
+      "id": "7f2bc713c69a",
+      "title": "Health Bar",
       "start": "2026-12-10T22:30:00-06:00",
       "end": "2026-12-11T01:30:00-06:00",
       "url": "https://tockify.com/allwayslounge/detail/4614/1796963400000"
@@ -1226,8 +1226,8 @@
       "url": "https://tockify.com/allwayslounge/detail/2864/1800320400000"
     },
     {
-      "id": "1a91dd99e7a7",
-      "title": "Imani Vilianiiii",
+      "id": "6868587d6629",
+      "title": "The Scarlet Laugh",
       "start": "2027-01-18T20:00:00-06:00",
       "end": "2027-01-18T21:30:00-06:00",
       "url": "https://tockify.com/allwayslounge/detail/4646/1800324000000/2"
@@ -1945,6 +1945,27 @@
       "start": "2027-02-22T21:30:00-06:00",
       "end": "2027-02-22T23:30:00-06:00",
       "url": "https://tockify.com/allwayslounge/detail/2269/1803353400000"
+    },
+    {
+      "id": "5551e6dd42be",
+      "title": "On a TUESDAY?! (drag /burlesque/ sideshow)",
+      "start": "2027-02-23T19:30:00-06:00",
+      "end": "2027-02-23T21:00:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/2539/1803432600000"
+    },
+    {
+      "id": "2b8f50a35a27",
+      "title": "Trixie Minxs' ENCORE Graduate Showcase (burlesque)",
+      "start": "2027-02-23T20:00:00-06:00",
+      "end": "2027-02-23T22:00:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/4582/1803434400000"
+    },
+    {
+      "id": "fcf162b5a224",
+      "title": "Nicolita Capdevielle (burlesque storytelling,dance,drag)",
+      "start": "2027-02-23T22:00:00-06:00",
+      "end": "2027-02-23T23:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/4433/1802232000000"
     }
   ]
 }

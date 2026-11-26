@@ -2,12 +2,6 @@
   "venue": "preservation-hall",
   "events": [
     {
-      "id": "959b98cf37bf",
-      "title": "Preservation All-Stars ft. Branden Lewis",
-      "start": "2026-11-25T17:00:00-06:00",
-      "url": "https://www.preservationhall.com/events/preservation-all-stars-ft-branden-lewis/"
-    },
-    {
       "id": "4d6f2edc6395",
       "title": "Preservation All-Stars ft. Wendell Brunious",
       "start": "2026-11-26T17:00:00-06:00",

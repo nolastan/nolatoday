@@ -2,12 +2,6 @@
   "venue": "dos-jefes",
   "events": [
     {
-      "id": "830fb2a45a10",
-      "title": "THE MARK COLEMAN BAND",
-      "start": "2026-11-25T20:30:00-06:00",
-      "url": "https://dosjefes.com/events/mark-coleman-todd-duke-2-2021-05-27/"
-    },
-    {
       "id": "03691192f694",
       "title": "Jay Dufour & the Strange Gang",
       "start": "2026-11-26T20:30:00-06:00",
@@ -174,6 +168,12 @@
       "title": "MISS BETTY SHIRLEY",
       "start": "2026-12-26T21:00:00-06:00",
       "url": "https://dosjefes.com/events/betty-shirley-band/"
+    },
+    {
+      "id": "17211b5fb3e0",
+      "title": "JOHN FOHL",
+      "start": "2026-12-28T20:30:00-06:00",
+      "url": "https://dosjefes.com/events/john-fohl-2-2026-12-28/"
     }
   ]
 }

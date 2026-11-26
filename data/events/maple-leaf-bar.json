@@ -2,13 +2,6 @@
   "venue": "maple-leaf-bar",
   "events": [
     {
-      "id": "c2245e0c7f74",
-      "title": "Happy Organ Hour with Joe Ashlar, Stanton Moore, & Danny Abel",
-      "start": "2026-11-25T19:00:00-06:00",
-      "end": "2026-11-25T22:00:00-06:00",
-      "url": "https://www.mapleleafbar.com/events/happy-organ-hour-with-joe-ashlar-stanton-moore-danny-abel-1"
-    },
-    {
       "id": "c10cfc196abc",
       "title": "Turkey Jam 2026",
       "start": "2026-11-27T21:00:00-06:00",
@@ -42,6 +35,13 @@
       "start": "2026-11-29T21:00:00-06:00",
       "end": "2026-11-30T00:00:00-06:00",
       "url": "https://www.mapleleafbar.com/events/papa-mali-the-instigators"
+    },
+    {
+      "id": "2d07ee55d137",
+      "title": "George Porter Jr. Trio Ft. Chris Adkins (7pm)",
+      "start": "2026-11-30T19:00:00-06:00",
+      "end": "2026-11-30T23:00:00-06:00",
+      "url": "https://www.mapleleafbar.com/events/george-porter-jr-trio-ft-chris-adkins-7pm-7"
     }
   ]
 }
