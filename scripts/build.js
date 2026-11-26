@@ -265,7 +265,7 @@ function main() {
   const paradeDirectory = paradesPage(ctx, orgs, { today: startOfToday, sources: paradeSources });
   write('parades.html', paradeDirectory);
   write('parades/index.html', paradeDirectory);
-  for (const org of orgs) write(`parades/${org.slug}.html`, paradePage(ctx, org, { today: startOfToday }));
+  for (const org of orgs) write(`parades/${org.slug}.html`, paradePage(ctx, org, { today: startOfToday, orgs }));
   if (fs.existsSync(PARADES_FILE)) fs.copyFileSync(PARADES_FILE, path.join(OUT, 'parades.geojson'));
   write('parades.json', JSON.stringify(paradesFeed(orgs, { siteUrl: config.siteUrl, photoUrl: (file) => ctx.asset(`/images/parades/${file}`), generatedAt: now.toISO() })));
 
@@ -317,7 +317,8 @@ function main() {
     ...food.map((v) => ({ loc: `${config.siteUrl}/food/${v.slug}`, lastmod: v.updated ?? today, priority: '0.6' })),
     ...orgs.map((o) => ({
       loc: `${config.siteUrl}/parades/${o.slug}`,
-      lastmod: (o.featured.properties.first_seen ?? today).slice(0, 10),
+      // The latest day any of its parades was first listed or edited by the city.
+      lastmod: o.parades.flatMap((f) => [f.properties.first_seen, f.properties.last_modified]).filter(Boolean).map((d) => d.slice(0, 10)).sort().pop() ?? today,
       priority: o.upcoming.length ? '0.8' : '0.4',
     })),
   ];
