@@ -335,12 +335,12 @@ export function paradesPage(ctx, orgs, { today, sources = [] }) {
   const mardiGrasDate = mardiGrasDay.toFormat('cccc, LLLL d, yyyy');
   const carnivalSection = `<section class="schedule parade-schedule" id="mardi-gras">
     <h2>Mardi Gras ${season} parade schedule</h2>
-    <p class="schedule-meta muted">Mardi Gras day is ${esc(mardiGrasDate)}.${cityListed ? '' : ' The city publishes Carnival routes and start times each January, and they appear here as soon as it does.'}</p>
+    <p class="schedule-meta muted">Mardi Gras day is ${esc(mardiGrasDate)}.</p>
     ${scheduleDays(ctx, carnival, today)}
   </section>`;
   const othersSection = `<section class="schedule parade-schedule" id="second-lines">
     <h2>Second lines and other parades</h2>
-    ${others.length ? scheduleDays(ctx, others, today) : '<p class="muted">None listed right now. Second lines usually appear a few weeks before they roll.</p>'}
+    ${others.length ? scheduleDays(ctx, others, today) : '<p class="muted">None listed right now.</p>'}
   </section>`;
   // Whichever rolls first comes first: second lines through the fall, Carnival from January.
   const firstDate = (items) => items[0]?.feature.properties.date ?? '9999';
@@ -348,7 +348,6 @@ export function paradesPage(ctx, orgs, { today, sources = [] }) {
   const lastSeasonSection = lastSeason.length
     ? `<section class="schedule parade-schedule parade-schedule--past" id="mardi-gras-${season - 1}">
     <h2>Mardi Gras ${season - 1} parade schedule</h2>
-    <p class="schedule-meta muted">Last season, for the order the krewes roll in. Most keep their place from year to year.</p>
     ${scheduleDays(ctx, sorted(lastSeason), today)}
   </section>`
     : '';
@@ -365,7 +364,6 @@ export function paradesPage(ctx, orgs, { today, sources = [] }) {
 <main class="wrap parades-page">
   <div class="page-intro">
     <h1>New Orleans parade schedule</h1>
-    <p class="lede">Mardi Gras parades, second lines and walking krewes by day, with start times and routes from City of New Orleans records.</p>
   </div>
   ${sections.join('\n  ')}
   ${lastSeasonSection}
