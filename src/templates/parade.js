@@ -115,29 +115,20 @@ function photoStrip(ctx, org) {
 }
 
 /** Parades as a schedule, the way a venue's shows are listed: a day heading, then a time and a title. */
-function paradeList(ctx, features, today, sameDay = null) {
-  const row = (time, title, current = false) => `<li class="event${current ? ' is-current' : ''}">
-            <time class="event-time" datetime="${esc(time ?? '')}">${time?.includes('T') ? clock(time) : ''}</time>
-            <span class="event-title">${title}</span>
-          </li>`;
+function paradeList(ctx, features, today) {
   return features
     .map((f) => {
       const p = f.properties;
       const dt = day(p.date);
       const onMap = p.date >= today && (f.geometry || p.start_point);
       const title = onMap ? `<a href="${ctx.url(`/?date=${p.date}&parade=${encodeURIComponent(p.id)}`)}">${esc(p.name)}</a>` : esc(p.name);
-      // On the day of the featured parade, the other krewes and clubs that roll that day, in order around it.
-      const others = sameDay?.id === f.id ? sameDay.others : [];
-      const rows = others.length
-        ? [{ time: p.start_time, html: row(p.start_time ?? p.date, title, true) }, ...others.map(({ org, feature }) => ({ time: feature.properties.start_time, html: row(feature.properties.start_time ?? feature.properties.date, `<a href="${ctx.url(`/parades/${org.slug}`)}">${esc(org.name)}</a>`) }))]
-            .sort((a, b) => (a.time ?? '').localeCompare(b.time ?? ''))
-            .map((r) => r.html)
-            .join('')
-        : row(p.start_time ?? p.date, title);
       return `<div class="day" id="${esc(p.id)}">
         <h3 class="day-heading"><span class="day-name">${dt.toFormat('cccc')}</span> <span class="day-date">${dt.toFormat(dt.year === day(today).year ? 'LLLL d' : 'LLLL d, yyyy')}</span></h3>
         <ul class="event-list">
-          ${rows}
+          <li class="event">
+            <time class="event-time" datetime="${esc(p.start_time ?? p.date)}">${p.start_time ? clock(p.start_time) : ''}</time>
+            <span class="event-title">${title}</span>
+          </li>
         </ul>
       </div>`;
     })
@@ -235,14 +226,18 @@ export function paradePage(ctx, org, { today, orgs = [] }) {
 
   // The day's other parades, shown with this organization's next (or latest) one: krewes that share a route roll one after another.
   const key = org.upcoming[0] ?? org.past[0];
-  const sameDay = {
-    id: key.id,
-    others: orgs.filter((o) => o.slug !== org.slug).flatMap((o) => o.parades.filter((f) => f.properties.date === key.properties.date).map((feature) => ({ org: o, feature }))),
-  };
+  const others = orgs.filter((o) => o.slug !== org.slug).flatMap((o) => o.parades.filter((f) => f.properties.date === key.properties.date).map((feature) => ({ org: o, feature })));
+  const keyDay = day(key.properties.date);
+  const sameDay = others.length
+    ? `<section class="wrap schedule same-day">
+      <h2>Also on ${esc(keyDay.toFormat(keyDay.year === day(today).year ? 'cccc, LLLL d' : 'cccc, LLLL d, yyyy'))}</h2>
+      <ul class="event-list">${scheduleRows(ctx, others)}</ul>
+    </section>`
+    : '';
   const upcoming = org.upcoming.length
     ? `<section class="wrap schedule">
       <h2>Upcoming parades</h2>
-      ${paradeList(ctx, org.upcoming, today, sameDay)}
+      ${paradeList(ctx, org.upcoming, today)}
     </section>`
     : '';
 
@@ -250,7 +245,7 @@ export function paradePage(ctx, org, { today, orgs = [] }) {
   const past = shownPast.length
     ? `<section class="wrap schedule">
       <h2>Recent parades</h2>
-      ${paradeList(ctx, shownPast, today, sameDay)}
+      ${paradeList(ctx, shownPast, today)}
     </section>`
     : '';
 
@@ -274,7 +269,9 @@ export function paradePage(ctx, org, { today, orgs = [] }) {
   ${bannerHtml}
   ${hero}
   ${upcoming}
+  ${org.upcoming.length ? sameDay : ''}
   ${past}
+  ${org.upcoming.length ? '' : sameDay}
   <section class="wrap venue-foot muted">
     <p>Source: ${sourceLine([...org.upcoming, ...shownPast])}. <a href="${esc(reportUrl)}" rel="noopener">Report a problem with this page</a>.</p>
   </section>
@@ -332,6 +329,22 @@ function thumbnail(ctx, org, feature) {
   return routeSvg(mapped) ?? MASK_ICON;
 }
 
+/** Schedule rows in time order: a time, the krewe or club linked to its page, where it starts and a picture. */
+function scheduleRows(ctx, items) {
+  return items
+    .sort((a, b) => (a.feature.properties.start_time ?? '').localeCompare(b.feature.properties.start_time ?? '') || a.org.name.localeCompare(b.org.name))
+    .map(({ org, feature }) => {
+      const p = feature.properties;
+      const start = startLine(p);
+      return `<li class="event parade-event">
+        <time class="event-time" datetime="${esc(p.start_time ?? p.date)}">${p.start_time ? clock(p.start_time) : ''}</time>
+        <span><span class="event-title"><a href="${ctx.url(`/parades/${org.slug}`)}">${esc(org.name)}</a></span>${start ? `<span class="event-meta muted">${esc(start)}</span>` : ''}</span>
+        <a class="parade-thumb" href="${ctx.url(`/parades/${org.slug}`)}" tabindex="-1" aria-hidden="true">${thumbnail(ctx, org, feature)}</a>
+      </li>`;
+    })
+    .join('');
+}
+
 /** Parades grouped under one heading per day, each row a time and the krewe or club, linked to its page. */
 function scheduleDays(ctx, items, today) {
   const days = new Map();
@@ -343,18 +356,7 @@ function scheduleDays(ctx, items, today) {
   return [...days]
     .map(([date, list]) => {
       const dt = day(date);
-      const rows = list
-        .sort((a, b) => (a.feature.properties.start_time ?? '').localeCompare(b.feature.properties.start_time ?? '') || a.org.name.localeCompare(b.org.name))
-        .map(({ org, feature }) => {
-          const p = feature.properties;
-          const start = startLine(p);
-          return `<li class="event parade-event">
-            <time class="event-time" datetime="${esc(p.start_time ?? p.date)}">${p.start_time ? clock(p.start_time) : ''}</time>
-            <span><span class="event-title"><a href="${ctx.url(`/parades/${org.slug}`)}">${esc(org.name)}</a></span>${start ? `<span class="event-meta muted">${esc(start)}</span>` : ''}</span>
-            <a class="parade-thumb" href="${ctx.url(`/parades/${org.slug}`)}" tabindex="-1" aria-hidden="true">${thumbnail(ctx, org, feature)}</a>
-          </li>`;
-        })
-        .join('');
+      const rows = scheduleRows(ctx, list);
       return `<div class="day">
         <h3 class="day-heading"><span class="day-name">${dt.toFormat('cccc')}</span> <span class="day-date">${dt.toFormat(dt.year === day(today).year ? 'LLLL d' : 'LLLL d, yyyy')}</span></h3>
         <ul class="event-list">${rows}</ul>

@@ -525,14 +525,13 @@ test('site: a parade page shows where it starts and ends, and the other parades 
   const { formation, disband } = muses.properties;
   assert.ok(formation && disband);
   assert.ok(page.includes(`<p class="venue-address">Starts at ${formation.replace(/\.$/, '')}, ends at ${disband.replace(/\.$/, '')}</p>`));
-  // The other krewes that day sit in the same day's list, in order, with this one marked.
+  // The other krewes that day get their own section, named for the day.
+  assert.match(page, /<h2>Also on Thursday, February 12<\/h2>/);
   assert.match(page, /<a href="\/parades\/chaos">Knights of Chaos<\/a>/);
-  assert.match(page, /<li class="event is-current">/);
-  // Chaos rolls first.
-  assert.ok(page.indexOf('/parades/chaos') < page.indexOf('is-current'));
-  // Alone that day: nothing marked.
+  assert.ok(page.indexOf('Recent parades') < page.indexOf('Also on'));
+  // Alone that day: no section.
   const alone = paradePage(ctx, orgs.find((o) => o.slug === 'nine-times'), { today: '2026-11-12', orgs });
-  assert.doesNotMatch(alone, /is-current/);
+  assert.doesNotMatch(alone, /Also on/);
 });
 
 test('site: event data gives the start street, coordinates from a start address, and an image', () => {

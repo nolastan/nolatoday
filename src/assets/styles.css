@@ -708,8 +708,7 @@ a.popup-banner:hover h3 { text-decoration: underline; text-underline-offset: 3px
 .parade-thumb .route-thumb { padding: 4px; }
 @media (max-width: 480px) { .parade-event { grid-template-columns: 4.5em 1fr 80px; gap: 10px; } }
 .parade-schedule--past .event-time { color: var(--muted); }
-.event.is-current .event-title, .event.is-current .event-title a { color: var(--marker); }
-@media (prefers-color-scheme: light) { .event.is-current .event-title, .event.is-current .event-title a { color: var(--teal-deep); } }
+.same-day .event-list { margin-top: 16px; border-top: 1px solid var(--line); }
 .parade-attribution { margin: 56px 0 0; max-width: 760px; font-size: 0.95rem; }
 .parade-attribution h2 { font-size: 1.3rem; }
 /* A parade's starting point on the map: a ring, to tell it from a venue's dot. */
