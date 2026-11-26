@@ -514,3 +514,35 @@ test('site: a date from the organizer is credited to its site, and the page keep
   assert.match(page, /Source: City of New Orleans, <a [^>]*>permit application 26-00042-SPMA<\/a>; <a href="https:\/\/joanofarcparade\.org\/who-we-are\/parade-route\/"[^>]*>the organizer’s website<\/a>/);
   assert.match(page, /Date from the organizer’s own website/);
 });
+
+test('site: a parade page shows where it starts and ends, and the other parades that day', () => {
+  const { features } = build();
+  const ctx = { config: { siteName: 'NOLA.Today', siteUrl: 'https://nola.today', repo: 'x/y', mapbox: {} }, url: (p) => p, asset: (p) => p };
+  const muses = features.find((f) => f.properties.krewe_slug === 'muses');
+  const twin = { ...muses, id: 'chaos-2026', properties: { ...muses.properties, id: 'chaos-2026', name: 'Chaos', krewe: 'Knights of Chaos', krewe_slug: 'chaos', start_time: muses.properties.start_time.replace(/T\d\d:\d\d/, 'T16:30') } };
+  const orgs = paradeOrgs([...features, twin], '2026-11-12');
+  const page = paradePage(ctx, orgs.find((o) => o.slug === 'muses'), { today: '2026-11-12', orgs });
+  const { formation, disband } = muses.properties;
+  assert.ok(formation && disband);
+  assert.ok(page.includes(`<p class="venue-address">Starts at ${formation.replace(/\.$/, '')}, ends at ${disband.replace(/\.$/, '')}</p>`));
+  // The other krewes that day sit in the same day's list, in order, with this one marked.
+  assert.match(page, /<a href="\/parades\/chaos">Knights of Chaos<\/a>/);
+  assert.match(page, /<li class="event is-current">/);
+  // Chaos rolls first.
+  assert.ok(page.indexOf('/parades/chaos') < page.indexOf('is-current'));
+  // Alone that day: nothing marked.
+  const alone = paradePage(ctx, orgs.find((o) => o.slug === 'nine-times'), { today: '2026-11-12', orgs });
+  assert.doesNotMatch(alone, /is-current/);
+});
+
+test('site: event data gives the start street, coordinates from a start address, and an image', () => {
+  const { features } = build();
+  const ctx = { config: { siteName: 'NOLA.Today', siteUrl: 'https://nola.today', repo: 'x/y', mapbox: { token: 'pk.test', styleDark: 'u/dark', styleLight: 'u/light' } }, url: (p) => p, asset: (p) => p };
+  const orgs = paradeOrgs(features, '2026-11-12');
+  const page = paradePage(ctx, orgs.find((o) => o.slug === 'mosaique'), { today: '2026-11-12', orgs });
+  const ld = JSON.parse(page.match(/<script type="application\/ld\+json">(.+?)<\/script>/s)[1]);
+  const event = ld['@graph'].find((n) => n['@type'] === 'Event');
+  assert.equal(event.location.address.streetAddress, 'N Rampart');
+  assert.equal(typeof event.location.geo.latitude, 'number');
+  assert.match(event.image[0], /^https:\/\/api\.mapbox\.com\/.+\/1200x630\?/);
+});

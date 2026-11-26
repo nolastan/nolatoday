@@ -115,20 +115,29 @@ function photoStrip(ctx, org) {
 }
 
 /** Parades as a schedule, the way a venue's shows are listed: a day heading, then a time and a title. */
-function paradeList(ctx, features, today) {
+function paradeList(ctx, features, today, sameDay = null) {
+  const row = (time, title, current = false) => `<li class="event${current ? ' is-current' : ''}">
+            <time class="event-time" datetime="${esc(time ?? '')}">${time?.includes('T') ? clock(time) : ''}</time>
+            <span class="event-title">${title}</span>
+          </li>`;
   return features
     .map((f) => {
       const p = f.properties;
       const dt = day(p.date);
       const onMap = p.date >= today && (f.geometry || p.start_point);
       const title = onMap ? `<a href="${ctx.url(`/?date=${p.date}&parade=${encodeURIComponent(p.id)}`)}">${esc(p.name)}</a>` : esc(p.name);
+      // On the day of the featured parade, the other krewes and clubs that roll that day, in order around it.
+      const others = sameDay?.id === f.id ? sameDay.others : [];
+      const rows = others.length
+        ? [{ time: p.start_time, html: row(p.start_time ?? p.date, title, true) }, ...others.map(({ org, feature }) => ({ time: feature.properties.start_time, html: row(feature.properties.start_time ?? feature.properties.date, `<a href="${ctx.url(`/parades/${org.slug}`)}">${esc(org.name)}</a>`) }))]
+            .sort((a, b) => (a.time ?? '').localeCompare(b.time ?? ''))
+            .map((r) => r.html)
+            .join('')
+        : row(p.start_time ?? p.date, title);
       return `<div class="day" id="${esc(p.id)}">
         <h3 class="day-heading"><span class="day-name">${dt.toFormat('cccc')}</span> <span class="day-date">${dt.toFormat(dt.year === day(today).year ? 'LLLL d' : 'LLLL d, yyyy')}</span></h3>
         <ul class="event-list">
-          <li class="event">
-            <time class="event-time" datetime="${esc(p.start_time ?? p.date)}">${p.start_time ? clock(p.start_time) : ''}</time>
-            <span class="event-title">${title}</span>
-          </li>
+          ${rows}
         </ul>
       </div>`;
     })
@@ -164,17 +173,25 @@ function eventSchema(ctx, org, f) {
     url: `${ctx.config.siteUrl}/parades/${org.slug}#${p.id}`,
     location: {
       '@type': 'Place',
-      name: startStreet(p.start_address) ?? p.formation ?? p.area ?? 'New Orleans',
+      name: startStreet(p.start_address) ?? clean(p.formation) ?? p.area ?? 'New Orleans',
       address: { '@type': 'PostalAddress', addressLocality: 'New Orleans', addressRegion: 'LA', addressCountry: 'US' },
     },
     organizer: { '@type': 'Organization', name: org.name },
   };
+  const street = startStreet(p.start_address) ?? clean(p.formation);
+  if (street) schema.location.address.streetAddress = street;
+  // Coordinates only where the city gives a start address. A route line's first point isn't always its start:
+  // some of the city's Carnival lines are drawn from the end.
+  if (p.start_point) schema.location.geo = { '@type': 'GeoCoordinates', latitude: p.start_point[1], longitude: p.start_point[0] };
+  const photo = org.photos?.[0];
+  const image = photo ? `${ctx.config.siteUrl}/images/parades/${photo.file}` : paradeMapUrl(ctx, f, 'dark', 'share');
+  if (image) schema.image = [image];
   if (p.end_time) schema.endDate = p.end_time;
   return schema;
 }
 
 /** One organization's page: its next parade, the route, and what it has rolled before. */
-export function paradePage(ctx, org, { today }) {
+export function paradePage(ctx, org, { today, orgs = [] }) {
   const { config, url } = ctx;
   const canonical = `${config.siteUrl}/parades/${org.slug}`;
   const kind = KIND[org.category] ?? KIND.other;
@@ -204,29 +221,36 @@ export function paradePage(ctx, org, { today }) {
     ? `<div class="map-banner map-banner--route" role="img" aria-label="${esc(bannerLabel)}">${banner('dark', 'eager')}${banner('light', 'lazy')}</div>`
     : '<div class="map-banner map-banner--empty" aria-hidden="true"></div>';
 
-  const street = startStreet(fp.start_address);
+  const where = startAndEnd(fp);
   const photos = photoStrip(ctx, org);
   const hero = `<section class="venue-hero parade-hero${hasBanner ? ' parade-hero--below' : ''}${photos ? ' parade-hero--photos' : ''} wrap">
     <div class="venue-hero-text">
       <span class="badge">${esc(kind)}</span>
       <h1>${esc(org.name)}</h1>
-      ${street ? `<p class="venue-address">Starts on ${esc(street)}</p>` : ''}
+      ${where ? `<p class="venue-address">${esc(where)}</p>` : ''}
       ${org.website ? `<div class="button-row"><a class="button primary" href="${esc(org.website)}" rel="noopener">Visit website</a></div>` : ''}
     </div>
     ${photos}
   </section>`;
 
+  // The day's other parades, shown with this organization's next (or latest) one: krewes that share a route roll one after another.
+  const key = org.upcoming[0] ?? org.past[0];
+  const sameDay = {
+    id: key.id,
+    others: orgs.filter((o) => o.slug !== org.slug).flatMap((o) => o.parades.filter((f) => f.properties.date === key.properties.date).map((feature) => ({ org: o, feature }))),
+  };
   const upcoming = org.upcoming.length
     ? `<section class="wrap schedule">
       <h2>Upcoming parades</h2>
-      ${paradeList(ctx, org.upcoming, today)}
+      ${paradeList(ctx, org.upcoming, today, sameDay)}
     </section>`
     : '';
+
   const shownPast = org.past.slice(0, MAX_PAST);
   const past = shownPast.length
     ? `<section class="wrap schedule">
       <h2>Recent parades</h2>
-      ${paradeList(ctx, shownPast, today)}
+      ${paradeList(ctx, shownPast, today, sameDay)}
     </section>`
     : '';
 
@@ -272,6 +296,16 @@ ${siteFooter(ctx)}`;
 export function carnivalSeason(iso) {
   const year = Number(iso.slice(0, 4));
   return iso <= mardiGras(year) ? year : year + 1;
+}
+
+const clean = (text) => text?.trim().replace(/\.$/, '') || null;
+
+/** Where a parade starts and, when the city says, where it ends: "Starts at Jefferson and Magazine, ends at Poydras and Tchoupitoulas". */
+function startAndEnd(p) {
+  const start = startLine(p);
+  const end = clean(p.disband);
+  if (!start) return end ? `Ends at ${end}` : '';
+  return end ? `${start}, ends at ${end}` : start;
 }
 
 /** Where a parade sets off, in a few words: the start street, else the city's formation point. */
