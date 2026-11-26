@@ -1,7 +1,7 @@
 import { DateTime } from 'luxon';
 import { esc, jsonScript, layout, siteHeader, siteFooter } from './layout.js';
 import { ZONE } from '../../scripts/lib/time.js';
-import { SOURCES, encodePolyline, linesOf, simplify, startStreet } from '../../scripts/lib/parades.js';
+import { SOURCES, encodePolyline, linesOf, mardiGras, simplify, startStreet } from '../../scripts/lib/parades.js';
 
 const KIND = { mardi_gras: 'Carnival parade', second_line: 'Second line', other: 'Parade' };
 const MAX_PAST = 10;
@@ -268,53 +268,130 @@ ${siteFooter(ctx)}`;
   });
 }
 
-/** The parades directory: every krewe and club the city has listed, in the order they're next likely to roll (see paradeOrgs). */
+/** The Carnival season a date belongs to: the year of the Mardi Gras on or after it. */
+export function carnivalSeason(iso) {
+  const year = Number(iso.slice(0, 4));
+  return iso <= mardiGras(year) ? year : year + 1;
+}
+
+/** Where a parade sets off, in a few words: the start street, else the city's formation point. */
+function startLine(p) {
+  const street = startStreet(p.start_address);
+  if (street) return `Starts on ${street}`;
+  return p.formation ? `Starts at ${p.formation.replace(/\.$/, '')}` : '';
+}
+
+// Hugeicons MaskTheater02Icon (MIT, https://hugeicons.com), the parade mark the map cards use when there's no photo.
+const MASK_ICON = '<svg class="thumb-mark" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5.44505 14.2749C5.60832 13.9695 5.88358 13.7462 6.22227 13.6851C6.56095 13.624 6.89427 13.7375 7.14978 13.9674M11.2356 17.2768C10.909 17.8876 10.3585 18.3342 9.68113 18.4564C9.00377 18.5786 8.33713 18.3516 7.82611 17.8919M10.5592 13.3523C10.7225 13.0469 10.9978 12.8235 11.3365 12.7624C11.6751 12.7013 12.0085 12.8149 12.264 13.0447M13.0697 7.14205C11.9191 8.2281 10.171 9.09181 8.13072 9.45991C6.09043 9.828 4.15906 9.6281 2.7148 9.01019C2.62237 8.97065 2.52281 8.95715 2.42629 8.97456C2.14172 9.0259 1.95507 9.32308 2.0094 9.63832L2.94728 15.0805C3.64672 19.1391 7.04654 21.0881 8.62355 21.7854C9.14604 22.0165 9.72177 22.046 10.2823 21.9449C10.8429 21.8437 11.374 21.6145 11.7877 21.2146C13.0366 20.0074 15.5798 16.9863 14.8804 12.9276L13.9425 7.48545C13.8882 7.1702 13.6135 6.95627 13.3289 7.00761C13.2324 7.02502 13.1433 7.07255 13.0697 7.14205Z"/><path d="M14.3157 17C14.6792 16.9998 15.039 16.9347 15.3764 16.7854C16.9535 16.0881 20.3533 14.1391 21.0527 10.0805L21.9906 4.63832C22.0449 4.32308 21.8583 4.0259 21.5737 3.97456C21.4772 3.95715 21.3776 3.97065 21.2852 4.01019C19.8409 4.6281 17.9096 4.828 15.8693 4.45991C13.829 4.09181 12.0809 3.2281 10.9303 2.14205C10.8567 2.07255 10.7676 2.02502 10.6711 2.00761C10.3865 1.95627 10.1118 2.1702 10.0575 2.48545L9.1196 7.92763C9.0374 8.40465 8.99998 8.86734 9 9.31444"/></svg>';
+
+/**
+ * A schedule row's picture, as the directory cards had: the organization's first photo, else a map of this
+ * parade's route (or the area it starts in, or its latest mapped parade), else the bare route shape, else the mask mark.
+ */
+function thumbnail(ctx, org, feature) {
+  const photo = org.photos?.[0];
+  if (photo) return `<img src="${photoUrl(ctx, smallPhoto(photo.file))}" alt="" loading="lazy" decoding="async">`;
+  const mapped = feature.geometry || feature.properties.start_point ? feature : org.featured;
+  if (paradeMapUrl(ctx, mapped, 'dark', 'card')) {
+    return ['dark', 'light'].map((theme) => `<img class="only-${theme}" src="${esc(paradeMapUrl(ctx, mapped, theme, 'card'))}" alt="" width="400" height="225" loading="lazy" decoding="async">`).join('');
+  }
+  return routeSvg(mapped) ?? MASK_ICON;
+}
+
+/** Parades grouped under one heading per day, each row a time and the krewe or club, linked to its page. */
+function scheduleDays(ctx, items, today) {
+  const days = new Map();
+  for (const item of items) {
+    const date = item.feature.properties.date;
+    if (!days.has(date)) days.set(date, []);
+    days.get(date).push(item);
+  }
+  return [...days]
+    .map(([date, list]) => {
+      const dt = day(date);
+      const rows = list
+        .sort((a, b) => (a.feature.properties.start_time ?? '').localeCompare(b.feature.properties.start_time ?? '') || a.org.name.localeCompare(b.org.name))
+        .map(({ org, feature }) => {
+          const p = feature.properties;
+          const start = startLine(p);
+          return `<li class="event parade-event">
+            <time class="event-time" datetime="${esc(p.start_time ?? p.date)}">${p.start_time ? clock(p.start_time) : ''}</time>
+            <span><span class="event-title"><a href="${ctx.url(`/parades/${org.slug}`)}">${esc(org.name)}</a></span>${start ? `<span class="event-meta muted">${esc(start)}</span>` : ''}</span>
+            <a class="parade-thumb" href="${ctx.url(`/parades/${org.slug}`)}" tabindex="-1" aria-hidden="true">${thumbnail(ctx, org, feature)}</a>
+          </li>`;
+        })
+        .join('');
+      return `<div class="day">
+        <h3 class="day-heading"><span class="day-name">${dt.toFormat('cccc')}</span> <span class="day-date">${dt.toFormat(dt.year === day(today).year ? 'LLLL d' : 'LLLL d, yyyy')}</span></h3>
+        <ul class="event-list">${rows}</ul>
+      </div>`;
+    })
+    .join('\n');
+}
+
+/**
+ * The parades directory, laid out as a schedule: coming second lines and other parades, the coming
+ * Mardi Gras season by day (or, until the city lists it each January, the season just past), then
+ * every krewe and club by name so each one's page is a click away.
+ */
 export function paradesPage(ctx, orgs, { today, sources = [] }) {
   const { config, url } = ctx;
-  const coming = orgs.filter((o) => o.upcoming.length);
+  const all = orgs.flatMap((org) => org.parades.map((feature) => ({ org, feature })));
+  const isCarnival = ({ feature }) => feature.properties.category === 'mardi_gras';
+  const sorted = (items) => items.sort((a, b) => a.feature.properties.date.localeCompare(b.feature.properties.date));
+  const upcoming = sorted(all.filter(({ feature }) => feature.properties.date >= today));
 
-  const card = (org) => {
-    const f = org.featured;
-    const p = f.properties;
-    const upcoming = org.upcoming.length > 0;
-    const dt = day(p.date);
-    const whenText = upcoming
-      ? `${p.date === today ? 'Today' : dt.toFormat(dt.year === day(today).year ? 'ccc, LLL d' : 'ccc, LLL d, yyyy')}${p.start_time ? ` · ${clock(p.start_time)}` : ''}`
-      : `Last listed ${dt.toFormat('LLL d, yyyy')}`;
-    const where = startStreet(p.start_address) ?? p.area;
-    const mapImg = (theme) => `<img class="only-${theme}" src="${esc(paradeMapUrl(ctx, f, theme, 'card'))}" alt="" width="400" height="225" loading="lazy" decoding="async">`;
-    // The organization's first photo. Without one, a map of the route or of the area it starts in, and without a map token, the bare route shape.
-    const photo = org.photos?.[0];
-    let media;
-    if (photo) media = `<img src="${photoUrl(ctx, smallPhoto(photo.file))}" alt="" loading="lazy" decoding="async">`;
-    else if (paradeMapUrl(ctx, f, 'dark', 'card')) media = `${mapImg('dark')}${mapImg('light')}`;
-    else media = routeSvg(f) ?? `<span class="card-placeholder" aria-hidden="true">♪</span>`;
-    return `<li class="venue-card parade-card" data-name="${esc(`${org.name} ${p.name} ${where ?? ''}`.toLowerCase())}">
-      <a href="${url(`/parades/${org.slug}`)}">
-        <div class="card-media">${media}</div>
-        <div class="card-body">
-          <h2>${esc(org.name)}</h2>
-          <p class="card-address muted">${esc(KIND[org.category] ?? KIND.other)}${where ? ` · ${esc(where)}` : ''}</p>
-          <p class="card-next${upcoming ? '' : ' muted'}">${esc(whenText)}</p>
-          ${f.geometry ? '' : '<p class="card-count muted">No route published</p>'}
-        </div>
-      </a>
-    </li>`;
-  };
+  const season = carnivalSeason(today);
+  const mardiGrasDay = day(mardiGras(season));
+  const carnival = upcoming.filter((i) => isCarnival(i) && carnivalSeason(i.feature.properties.date) === season);
+  // Until the city publishes the season's Carnival routes (its Mardi Gras layers, not a single permit),
+  // last season shows the order krewes roll in.
+  const cityListed = carnival.some(({ feature }) => ['open_data', 'routewise'].includes(feature.properties.field_sources?.schedule));
+  const lastSeason = cityListed ? [] : all.filter((i) => isCarnival(i) && i.feature.properties.date < today && carnivalSeason(i.feature.properties.date) === season - 1);
+  const others = upcoming.filter((i) => !carnival.includes(i));
+
+  const mardiGrasDate = mardiGrasDay.toFormat('cccc, LLLL d, yyyy');
+  const carnivalSection = `<section class="schedule parade-schedule" id="mardi-gras">
+    <h2>Mardi Gras ${season} parade schedule</h2>
+    <p class="schedule-meta muted">Mardi Gras day is ${esc(mardiGrasDate)}.</p>
+    ${scheduleDays(ctx, carnival, today)}
+  </section>`;
+  const othersSection = `<section class="schedule parade-schedule" id="second-lines">
+    <h2>Second lines and other parades</h2>
+    ${others.length ? scheduleDays(ctx, others, today) : '<p class="muted">None listed right now.</p>'}
+  </section>`;
+  // Whichever rolls first comes first: second lines through the fall, Carnival from January.
+  const firstDate = (items) => items[0]?.feature.properties.date ?? '9999';
+  const sections = firstDate(carnival) < firstDate(others) ? [carnivalSection, othersSection] : [othersSection, carnivalSection];
+  const lastSeasonSection = lastSeason.length
+    ? `<section class="schedule parade-schedule parade-schedule--past" id="mardi-gras-${season - 1}">
+    <h2>Mardi Gras ${season - 1} parade schedule</h2>
+    ${scheduleDays(ctx, sorted(lastSeason), today)}
+  </section>`
+    : '';
+
+  // Every krewe or club not already on the page appears once more, by its latest parade, newest first,
+  // so each organization's page has a link from here.
+  const shown = new Set([...upcoming, ...lastSeason].map(({ org }) => org.slug));
+  const recent = orgs
+    .filter((o) => !shown.has(o.slug) && o.past.length)
+    .map((org) => ({ org, feature: org.past[0] }))
+    .sort((a, b) => b.feature.properties.date.localeCompare(a.feature.properties.date));
+  const index = recent.length
+    ? `<section class="schedule parade-schedule parade-schedule--past" id="recent">
+    <h2>Recent second lines and parades</h2>
+    ${scheduleDays(ctx, recent, today)}
+  </section>`
+    : '';
 
   const body = `${siteHeader(ctx, { current: 'parades' })}
-<main class="wrap venues-page parades-page">
+<main class="wrap parades-page">
   <div class="page-intro">
-    <span class="badge">Directory</span>
-    <h1>New Orleans parades</h1>
-    <p class="lede">Second lines, walking krewes and Carnival parades, with routes and start times from City of New Orleans records. Tap a parade for its route.</p>
-    <label class="search"><span class="visually-hidden">Filter parades</span><input type="search" placeholder="Filter by name or street" data-venue-filter autocomplete="off"></label>
+    <h1>New Orleans parade schedule</h1>
   </div>
-  ${coming.length ? '' : '<div class="notice"><p>No coming parades are listed by the city right now. Second lines usually appear a few weeks ahead, and Carnival routes each January.</p></div>'}
-  <ul class="venue-grid" data-venue-grid>
-    ${orgs.map(card).join('')}
-  </ul>
-  <p class="muted" data-venue-empty hidden>No parades match that search.</p>
+  ${sections.join('\n  ')}
+  ${lastSeasonSection}
+  ${index}
   <section class="parade-attribution muted" id="sources">
     <h2>Where this comes from</h2>
     <p>Routes, and nearly every date and time, come from records the City of New Orleans publishes. When a krewe or club announces a parade on its own website before the city has a record of it, the date and time are shown from that site until the city’s record appears. Routes never come from anywhere but the city.</p>
@@ -327,14 +404,20 @@ export function paradesPage(ctx, orgs, { today, sources = [] }) {
 ${siteFooter(ctx)}`;
 
   return layout(ctx, {
-    title: `New Orleans Parades & Second Lines – Routes and Start Times – NOLA.Today`,
-    description: `Routes and start times for ${orgs.length} New Orleans second lines, walking krewes and Carnival parades, from City of New Orleans records.`,
+    title: `New Orleans Parade Schedule – Mardi Gras ${season} Parades & Second Lines – NOLA.Today`,
+    description: `Mardi Gras ${season} parade schedule and New Orleans second lines by day, with start times and routes from City of New Orleans records. Mardi Gras day is ${mardiGrasDate}.`,
     canonical: `${config.siteUrl}/parades`,
-    bodyClass: 'page-venues page-parades',
+    bodyClass: 'page-parades',
     head: `<script type="application/ld+json">${jsonScript({
       '@context': 'https://schema.org',
-      '@type': 'ItemList',
-      itemListElement: orgs.map((o, i) => ({ '@type': 'ListItem', position: i + 1, url: `${config.siteUrl}/parades/${o.slug}`, name: o.name })),
+      '@graph': [
+        {
+          '@type': 'ItemList',
+          name: 'New Orleans parade schedule',
+          itemListElement: orgs.map((o, i) => ({ '@type': 'ListItem', position: i + 1, url: `${config.siteUrl}/parades/${o.slug}`, name: o.name })),
+        },
+        ...upcoming.slice(0, 50).map(({ org, feature }) => eventSchema(ctx, org, feature)),
+      ],
     })}</script>`,
     body,
   });

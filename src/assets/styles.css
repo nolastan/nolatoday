@@ -688,8 +688,26 @@ a.popup-banner:hover h3 { text-decoration: underline; text-underline-offset: 3px
   .photo-dots span, .photo-step { transition: none; }
 }
 .parade-hero .button-row { margin-top: 16px; }
-.parade-card .card-media { color: var(--marker); background: var(--bg-elev-2); }
 .route-thumb { position: absolute; inset: 0; width: 100%; height: 100%; }
+/* The parades index is a schedule: a day, then a time and a krewe or club with where it starts. */
+.parades-page { max-width: 860px; }
+.event-meta { display: block; margin-top: 2px; font-size: 0.95rem; }
+.parade-event { grid-template-columns: 5.5em 1fr 112px; align-items: center; }
+.parade-event .event-time { align-self: start; padding-top: 2px; }
+.parade-thumb {
+  position: relative;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 8px;
+  background: var(--bg-elev-2);
+  color: var(--marker);
+}
+.parade-thumb img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.parade-thumb .route-thumb { padding: 4px; }
+@media (max-width: 480px) { .parade-event { grid-template-columns: 4.5em 1fr 80px; gap: 10px; } }
+.parade-schedule--past .event-time { color: var(--muted); }
 .parade-attribution { margin: 56px 0 0; max-width: 760px; font-size: 0.95rem; }
 .parade-attribution h2 { font-size: 1.3rem; }
 /* A parade's starting point on the map: a ring, to tell it from a venue's dot. */
