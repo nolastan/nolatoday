@@ -1,17 +1,4 @@
 {
   "venue": "cafe-negril",
-  "events": [
-    {
-      "id": "d86c4281e901",
-      "title": "Jason Neville Funky Soul Band",
-      "start": "2026-11-26T16:00:00-06:00",
-      "url": "https://www.instagram.com/p/Df8i1WARgi_/"
-    },
-    {
-      "id": "43bf9ecb806e",
-      "title": "Ado Soul & The Tribe",
-      "start": "2026-11-26T20:00:00-06:00",
-      "url": "https://www.instagram.com/p/DgJLPtzB89p/"
-    }
-  ]
+  "events": []
 }

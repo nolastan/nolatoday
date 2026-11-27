@@ -2,12 +2,6 @@
   "venue": "12-mile-limit",
   "events": [
     {
-      "id": "055632c609ed",
-      "title": "Purrsday Karaoke!",
-      "start": "2026-11-26T21:00:00-06:00",
-      "url": "https://twelvemilelimit.com/events/purrsday-karaoke?date=2026-11-26"
-    },
-    {
       "id": "0c88ddbdd7cf",
       "title": "Bing-Oh!",
       "start": "2026-11-28T20:00:00-06:00",
@@ -120,6 +114,12 @@
       "title": "Trivia Night!",
       "start": "2026-12-30T20:00:00-06:00",
       "url": "https://twelvemilelimit.com/events/trivia-night?date=2026-12-30"
+    },
+    {
+      "id": "283a19e4b8ca",
+      "title": "Purrsday Karaoke!",
+      "start": "2026-12-31T21:00:00-06:00",
+      "url": "https://twelvemilelimit.com/events/purrsday-karaoke?date=2026-12-31"
     }
   ]
 }

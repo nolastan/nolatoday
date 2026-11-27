@@ -2,12 +2,6 @@
   "venue": "preservation-hall",
   "events": [
     {
-      "id": "4d6f2edc6395",
-      "title": "Preservation All-Stars ft. Wendell Brunious",
-      "start": "2026-11-26T17:00:00-06:00",
-      "url": "https://www.preservationhall.com/events/june-1st-preservation-all-stars-feat-wendell-brunious/"
-    },
-    {
       "id": "90881d7019cf",
       "title": "Preservation All-Stars ft Aurélien Barnes",
       "start": "2026-11-27T17:00:00-06:00",

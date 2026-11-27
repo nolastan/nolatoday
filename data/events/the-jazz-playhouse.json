@@ -2,12 +2,6 @@
   "venue": "the-jazz-playhouse",
   "events": [
     {
-      "id": "853e20234bf2",
-      "title": "Brass-A-Holics at The Jazz Playhouse",
-      "start": "2026-11-26T19:30:00-06:00",
-      "url": "https://www.eventbrite.com/e/brass-a-holics-at-the-jazz-playhouse-tickets-1980262460326"
-    },
-    {
       "id": "4737cc96d568",
       "title": "Trixie Minx's 'Tease the Season' Burlesque Ballroom at The Jazz Playhouse feat. Vocals by Romy Kaye",
       "start": "2026-11-27T20:00:00-06:00",
@@ -36,6 +30,12 @@
       "title": "Funkin' It Up with Big Sam at the Jazz Playhouse",
       "start": "2026-12-02T19:30:00-06:00",
       "url": "https://www.eventbrite.com/e/funkin-it-up-with-big-sam-at-the-jazz-playhouse-tickets-1721312755789"
+    },
+    {
+      "id": "cb7403b2c8c8",
+      "title": "Brass-A-Holics at The Jazz Playhouse",
+      "start": "2026-12-03T19:30:00-06:00",
+      "url": "https://www.eventbrite.com/e/brass-a-holics-at-the-jazz-playhouse-tickets-1980262460326"
     },
     {
       "id": "2c943f18caeb",
