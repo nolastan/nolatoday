@@ -2,12 +2,6 @@
   "venue": "orpheum-theater",
   "events": [
     {
-      "id": "2f0de64df773",
-      "title": "PJ Morton: Annual Black Friday Show",
-      "start": "2026-11-27T20:00:00-06:00",
-      "url": "https://www.ticketmaster.com/pj-morton-annual-black-friday-show-new-orleans-louisiana-11-27-2026/event/1B0064947BA9443A"
-    },
-    {
       "id": "c3862bfd0d3c",
       "title": "New Orleans Ballet Theatre: The Nutcracker",
       "start": "2026-12-12T14:00:00-06:00",

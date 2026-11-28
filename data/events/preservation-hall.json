@@ -2,12 +2,6 @@
   "venue": "preservation-hall",
   "events": [
     {
-      "id": "90881d7019cf",
-      "title": "Preservation All-Stars ft Aurélien Barnes",
-      "start": "2026-11-27T17:00:00-06:00",
-      "url": "https://www.preservationhall.com/events/preservation-all-stars-ft-aurelien-barnes/"
-    },
-    {
       "id": "0e876b2948c3",
       "title": "Wendell Brunious and the Preservation Hall Legacy Band",
       "start": "2026-11-28T14:30:00-06:00",

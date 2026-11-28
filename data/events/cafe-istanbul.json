@@ -2,13 +2,6 @@
   "venue": "cafe-istanbul",
   "events": [
     {
-      "id": "70ad896ebf86",
-      "title": "Beyonce Dance Night",
-      "start": "2026-11-27T22:00:00-06:00",
-      "end": "2026-11-27T23:00:00-06:00",
-      "url": "https://www.cafeistanbulnola.com/upcoming-events/beyonce-dance-night"
-    },
-    {
       "id": "9d329bdc920c",
       "title": "Lavender & Velvet",
       "start": "2026-12-04T21:00:00-06:00",

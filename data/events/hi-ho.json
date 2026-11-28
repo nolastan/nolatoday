@@ -2,12 +2,6 @@
   "venue": "hi-ho",
   "events": [
     {
-      "id": "44a0cd2a4893",
-      "title": "Neighborhood Watch Party by Neighborhood Indigo",
-      "start": "2026-11-27T19:00:00-06:00",
-      "end": "2026-11-27T22:00:00-06:00"
-    },
-    {
       "id": "24dc2db45a9d",
       "title": "No Skips - DJ Kelly Green",
       "start": "2026-11-28T22:00:00-06:00",
@@ -156,6 +150,12 @@
       "title": "Locals Monday",
       "start": "2027-02-22T19:30:00-06:00",
       "end": "2027-02-22T22:00:00-06:00"
+    },
+    {
+      "id": "f195ae4ab58e",
+      "title": "80's Night with DJ Shane Love",
+      "start": "2027-02-25T21:00:00-06:00",
+      "end": "2027-02-26T02:00:00-06:00"
     }
   ]
 }

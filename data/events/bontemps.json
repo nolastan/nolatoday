@@ -2,11 +2,6 @@
   "venue": "bontemps",
   "events": [
     {
-      "id": "6aefd989caec",
-      "title": "Bearded Chieftains",
-      "start": "2026-11-27T23:00:00-06:00"
-    },
-    {
       "id": "aea30b323290",
       "title": "Jelly Biscuit",
       "start": "2026-11-28T23:00:00-06:00"

@@ -2,16 +2,16 @@
   "venue": "marigny-opera-house",
   "events": [
     {
-      "id": "d5b27bd56350",
-      "title": "Marigny Opera Ballet 2026-2027 Encore Subscription",
-      "start": "2026-11-27T12:00:00-06:00",
-      "url": "https://marignyoperahouse.org/upcoming-events/marigny-opera-ballet-2026-2027-encore-subscription/"
-    },
-    {
       "id": "004b44081402",
       "title": "21st Annual DRAWATHON",
       "start": "2026-11-28T12:00:00-06:00",
       "url": "https://marignyoperahouse.org/upcoming-events/drawathon/"
+    },
+    {
+      "id": "0e0c8c508e64",
+      "title": "Marigny Opera Ballet 2026-2027 Encore Subscription",
+      "start": "2026-11-28T12:00:00-06:00",
+      "url": "https://marignyoperahouse.org/upcoming-events/marigny-opera-ballet-2026-2027-encore-subscription/"
     },
     {
       "id": "80c37909e3f7",

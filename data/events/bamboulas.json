@@ -2,30 +2,6 @@
   "venue": "bamboulas",
   "events": [
     {
-      "id": "49a0d60100eb",
-      "title": "WOLFE JOHNS BAND",
-      "start": "2026-11-26T21:00:00-06:00",
-      "end": "2026-11-27T00:00:00-06:00"
-    },
-    {
-      "id": "00d238cf650e",
-      "title": "THE NEW ORLEANS RUG CUTTERS",
-      "start": "2026-11-27T11:00:00-06:00",
-      "end": "2026-11-27T13:45:00-06:00"
-    },
-    {
-      "id": "2bf94dd304cc",
-      "title": "FELIPE ANTONIO'S QUINTETO",
-      "start": "2026-11-27T14:15:00-06:00",
-      "end": "2026-11-27T18:00:00-06:00"
-    },
-    {
-      "id": "fc0895770e8d",
-      "title": "LES GETREX AND CREOLE COOKIN'",
-      "start": "2026-11-27T18:30:00-06:00",
-      "end": "2026-11-27T21:30:00-06:00"
-    },
-    {
       "id": "fc5945d6f7f8",
       "title": "james mCclaskey & the rhythm band",
       "start": "2026-11-28T14:15:00-06:00",

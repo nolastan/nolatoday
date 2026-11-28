@@ -2,20 +2,6 @@
   "venue": "the-allways-lounge",
   "events": [
     {
-      "id": "2a68ac58484a",
-      "title": "Illuminations: Burlesque In the Dark",
-      "start": "2026-11-27T19:00:00-06:00",
-      "end": "2026-11-27T21:00:00-06:00",
-      "url": "https://tockify.com/allwayslounge/detail/4236/1795827600000/7"
-    },
-    {
-      "id": "072a19ece7fc",
-      "title": "The New Orleans High Society (live jazz & burlesque)",
-      "start": "2026-11-27T20:00:00-06:00",
-      "end": "2026-11-27T21:30:00-06:00",
-      "url": "https://tockify.com/allwayslounge/detail/3475/1795831200000"
-    },
-    {
       "id": "744b19cdf08a",
       "title": "Tenacious D:The Pick of Destiny 20th TRIBUTE SHADOWCAST”",
       "start": "2026-11-27T22:30:00-06:00",
@@ -189,6 +175,13 @@
       "start": "2026-12-05T18:00:00-06:00",
       "end": "2026-12-05T19:00:00-06:00",
       "url": "https://tockify.com/allwayslounge/detail/4228/1796515200000"
+    },
+    {
+      "id": "bdea13d716f7",
+      "title": "Pink Show (burlesque)",
+      "start": "2026-12-05T19:00:00-06:00",
+      "end": "2026-12-05T20:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/4397/1796518800000/10"
     },
     {
       "id": "3fce09ff6b6a",
@@ -1973,6 +1966,27 @@
       "start": "2027-02-24T20:30:00-06:00",
       "end": "2027-02-24T22:00:00-06:00",
       "url": "https://tockify.com/allwayslounge/detail/3681/1803522600000"
+    },
+    {
+      "id": "facd1aa8fb37",
+      "title": "Van Ella Bordella (burlesque)",
+      "start": "2027-02-25T19:00:00-06:00",
+      "end": "2027-02-25T21:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/1768/1803603600000"
+    },
+    {
+      "id": "71dabc4baa37",
+      "title": "LEGS: Stand-Up Comedy & Burlesque",
+      "start": "2027-02-25T19:30:00-06:00",
+      "end": "2027-02-25T21:00:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/4227/1803605400000"
+    },
+    {
+      "id": "d171dfab1607",
+      "title": "Harlot's Hush (burlesque & live music)",
+      "start": "2027-02-25T22:30:00-06:00",
+      "end": "2027-02-26T00:30:00-06:00",
+      "url": "https://tockify.com/allwayslounge/detail/4413/1803616200000"
     }
   ]
 }

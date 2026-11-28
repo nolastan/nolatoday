@@ -2,12 +2,6 @@
   "venue": "southport-hall",
   "events": [
     {
-      "id": "7b16003a4b03",
-      "title": "Friendsgiving Party",
-      "start": "2026-11-27T20:00:00-06:00",
-      "url": "https://www.eventbrite.com/e/friendsgiving-party-tickets-2004249404923"
-    },
-    {
       "id": "f7b2d19097c8",
       "title": "The Bunny The Bear",
       "start": "2026-12-16T19:00:00-06:00",

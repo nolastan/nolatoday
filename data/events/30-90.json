@@ -2,34 +2,6 @@
   "venue": "30-90",
   "events": [
     {
-      "id": "d7151cd6a6ef",
-      "title": "The Red Clovers",
-      "start": "2026-11-27T14:00:00-06:00",
-      "end": "2026-11-27T17:00:00-06:00",
-      "url": "https://www.3090-nola.com/bands/red-clovers"
-    },
-    {
-      "id": "86bc94a849f1",
-      "title": "KreweDeBauchery",
-      "start": "2026-11-27T17:00:00-06:00",
-      "end": "2026-11-27T20:00:00-06:00",
-      "url": "https://www.3090-nola.com/bands/krewedebauchery-2ctga-pl659-5ycfg-egtnh"
-    },
-    {
-      "id": "bccb13da4cb6",
-      "title": "OTRA",
-      "start": "2026-11-27T20:00:00-06:00",
-      "end": "2026-11-27T23:00:00-06:00",
-      "url": "https://www.3090-nola.com/bands/otra"
-    },
-    {
-      "id": "201af9401b0a",
-      "title": "The Soulcial Club",
-      "start": "2026-11-27T23:00:00-06:00",
-      "end": "2026-11-27T23:59:00-06:00",
-      "url": "https://www.3090-nola.com/bands/under-the-covers101825-dx6f6-3y6ag-fa2dn-e6wfy-2msld-5j6zk-3mk6y-s2ytr-2frwh-5f4f8-pw72e-xlybp"
-    },
-    {
       "id": "31f8cb078e16",
       "title": "Organami",
       "start": "2026-11-28T14:00:00-06:00",

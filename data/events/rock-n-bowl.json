@@ -2,12 +2,6 @@
   "venue": "rock-n-bowl",
   "events": [
     {
-      "id": "3050e296ca40",
-      "title": "Bucktown Allstars",
-      "start": "2026-11-27T20:30:00-06:00",
-      "url": "https://www.rocknbowl.com/event-details/bucktown-allstars-11-27-26"
-    },
-    {
       "id": "2783e65d3865",
       "title": "Rock, Ride & Rescue with Bag of Donuts",
       "start": "2026-11-28T20:30:00-06:00",
@@ -108,6 +102,12 @@
       "title": "Ryan Foret & Foret Tradition",
       "start": "2027-01-08T20:30:00-06:00",
       "url": "https://www.rocknbowl.com/event-details/ryan-foret-foret-tradition-1-8-27"
+    },
+    {
+      "id": "238f0d8dc4af",
+      "title": "Rockin' Dopsie Jr",
+      "start": "2027-01-09T20:30:00-06:00",
+      "url": "https://www.rocknbowl.com/event-details/rockin-dopsie-jr-1-9-27"
     }
   ]
 }
